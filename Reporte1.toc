@@ -1,0 +1,54 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Resumen}{7}{section.1}%
+\contentsline {section}{\numberline {2}Introducci\'on}{8}{section.2}%
+\contentsline {section}{\numberline {3}Justificaci\'on}{9}{section.3}%
+\contentsline {section}{\numberline {4}Estado del arte}{10}{section.4}%
+\contentsline {section}{\numberline {5}Objetivos}{15}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Objetivo general}{15}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Objetivos espec\IeC {\'\i }ficos}{15}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Objetivos ponderados}{15}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Marco te\'orico}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Mecanismos de cadena cinem\'atica abierta}{17}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Cinem\'atica directa}{18}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Cinem\'atica inversa}{19}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Ecuaciones de movimiento de Euler-Lagrange}{21}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Representaci\'on matricial de un manipulador rob\'otico}{21}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Planificaci\'on del TT}{23}{section.7}%
+\contentsline {section}{\numberline {8}Planteamiento del problema}{27}{section.8}%
+\contentsline {section}{\numberline {9}Soluciones propuestas}{28}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Manipuladores}{29}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Efector final}{32}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Soluci\'on elegida}{35}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Dise\~no y construcci\'on de la banda transportadora}{40}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Subsistema de clasificaci\'on}{43}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Subsistema de paletizaci\'on}{48}{subsection.10.3}%
+\contentsline {subsubsection}{\numberline {10.3.1}Articulaciones}{48}{subsubsection.10.3.1}%
+\contentsline {subsubsection}{\numberline {10.3.2}Espacio de trabajo }{49}{subsubsection.10.3.2}%
+\contentsline {subsubsection}{\numberline {10.3.3}Actuadores}{54}{subsubsection.10.3.3}%
+\contentsline {paragraph}{Selecci\'on del actuador para el brazo }{54}{section*.4}%
+\contentsline {paragraph}{Selecci\'on del actuador para el antebrazo}{55}{section*.5}%
+\contentsline {subsubsection}{\numberline {10.3.4}Sistema sensorial}{56}{subsubsection.10.3.4}%
+\contentsline {subsubsection}{\numberline {10.3.5}Transmisiones}{59}{subsubsection.10.3.5}%
+\contentsline {subsubsection}{\numberline {10.3.6}Tercer eslab\'on}{65}{subsubsection.10.3.6}%
+\contentsline {subsubsection}{\numberline {10.3.7}Efector final}{65}{subsubsection.10.3.7}%
+\contentsline {subsubsection}{\numberline {10.3.8}Materiales}{66}{subsubsection.10.3.8}%
+\contentsline {subsection}{\numberline {10.4}Modelado del robot SCARA}{68}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {10.4.1}Par\'ametros de Denavit-Hartemberg (cinem\'atica directa)}{68}{subsubsection.10.4.1}%
+\contentsline {subsubsection}{\numberline {10.4.2}Cinem\'atica inversa}{70}{subsubsection.10.4.2}%
+\contentsline {subsubsection}{\numberline {10.4.3}Modelo din\'amico de los dos primeros eslabones robot SCARA}{72}{subsubsection.10.4.3}%
+\contentsline {subsection}{\numberline {10.5}Control del robot SCARA}{77}{subsection.10.5}%
+\contentsline {subsubsection}{\numberline {10.5.1}Din\'amica inversa}{77}{subsubsection.10.5.1}%
+\contentsline {subsubsection}{\numberline {10.5.2}Alternativas de control}{79}{subsubsection.10.5.2}%
+\contentsline {paragraph}{PD+Control}{79}{section*.6}%
+\contentsline {paragraph}{Control PD + Feedforward }{79}{section*.7}%
+\contentsline {section}{\numberline {11}Simulaciones}{82}{section.11}%
+\contentsline {section}{\numberline {12}Implementaci\'on}{94}{section.12}%
+\contentsline {section}{\numberline {13}An\'alisis de esfuerzos robot SCARA}{96}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Eslabones perpendiculares}{96}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}M\'axima extensi\'on}{98}{subsection.13.2}%
+\contentsline {section}{\numberline {14}Conclusiones}{101}{section.14}%
+\contentsline {section}{\numberline {15}Bibliografia}{102}{section.15}%
+\contentsline {section}{\numberline {16}Ap\'endice A: C\'odigos fuente}{103}{section.16}%
+\contentsline {section}{\numberline {17}Ap\'endice B: Planos de manufactura}{104}{section.17}%
+\contentsline {section}{\numberline {18}Ap\'endice C: Datasheets}{104}{section.18}%
+\contentsline {section}{\numberline {19}Ap\'endice D: Piezas f\IeC {\'\i }sicas}{104}{section.19}%
