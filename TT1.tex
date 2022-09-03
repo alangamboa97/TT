@@ -1,0 +1,2931 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{anysize}
+\usepackage{array}
+
+\marginsize{2cm}{2cm}{2cm}{2cm}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize UPIITA}
+%\fancyfoot[R]{\footnotesize Diseño}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{\footnotesize Trabajo terminal 1}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{graphics}
+\usepackage{capt-of}
+\usepackage[pdftex=false,colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+\setlength\parindent{0pt}
+\usepackage[usenames]{color}
+\usepackage[]{mcode}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{shapepar}
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+\input{imagenes/portada}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+
+\newpage
+\section{Resumen}
+
+
+El presente trabajo reporta el proceso de diseño e implementación del proyecto titulado ``Diseño, manufactura y control de un robot paletizador articulado de cuatro grados de libertad asistido por un sistema de visión artificial'' como Trabajo Terminal para que cada uno de los integrantes del equipo obtenga el título de Ingeniero en Mecatrónica en la Unidad Profesional Interdisciplinaria en Ingenierías y Tecnologías Avanzadas (UPIITA).
+\\\\
+Este Trabajo Terminal consiste en el diseño y construcción de un sistema para la clasificación y paletización de llaves como proceso posterior al troquelado de estas en distintas lineas de 
+producción.
+En esta entrega final del reporte se detalla el proceso de diseño y re-diseño de los elementos y subsistemas pertenecientes al proyecto.El sistema se divide en varios subsistemas, siendo los más importantes el subsistema de clasificación, que contará con una interfaz en SimpleCV\footnote{Software de código abierto para el desarrolo de sistemas de visión artificial} para la clasificación de llaves utilizando técnicas de visión artificial,  el transporte de las llaves  se basa en una banda transportadora y el subsistema de paletización
+para el que se diseñará y constuirá un robot SCARA de 4 grados de libertad controlado por computadora.
+\\\\
+El sistema planteado debe ser capaz de operar de manera autónoma y continua con un mínimo de errores, el usuario será capaz de modificar la velocidad de trabajo y cargar algunas rutinas de tiempos, esto debido a que se plantea construir un sistema flexible, que pueda ser fácilmente adaptado a tareas diversas.
+\\\\
+La primera parte de este escrito consiste en los antecedentes necesarios y el planteamiento del problema asi como la metodología utilizada para la selección de la mejor solución. Posteriormente se describirá el diseño y modelado de los subsistemas que integran la solución escogida. Se reportan así mismo las simulaciones correspondientes al control propuesto para el subsistema de paletizado, los análisis de esfuerzos en la estructura mecánica, así como los resultados experimentales de la integración completa del sistema de manera virtual.
+\\\\
+La última parte del documento corresponde a la conclusión del diseño y re-diseño de elementos y evidencias de implementación  del sistema 
+
+
+\newpage
+\section{Introducción}
+
+El presente trabajo integra las cuatro disciplinas de la mecatrónica para generar un sistema que ayude a eficientar procesos repetitivos, se plantea un primer acercamiento a la optimización del proceso antes mencionado, sentar las bases para futuros trabajos a realizarse en la UPIITA, así como para fomentar nuevas aplicaciones y mejoras a este prototipo.\\
+
+Tomando como base los fundamentos educativos adquiridos durante nuestra estancia en la Unidad y la experiencia de nuestros asesores, se plantea buscar las mejor solución y con ello las herramientas y procesos necesarios para lograrla.\\
+
+En el año 2005 en la UPIITA se realizó un trabajo parecido a nuestro proyecto en el sentido de presentar un brazo robótico, este para realizar prueba de trayectorias en aplicaciones didácticas.\\
+
+En el ámbito de la visión artificial, se han realizado diversos proyectos, entre los cuales destacan un sistema de visión artificial para la navegación de un robot móvil (2005), un dispositivo automatizado para el control de posición de una marcadora mediante visión artificial (2009) y un prototipo de un roboconstructor autónomo con visión artificial para el concurso EUROBOT 2009.\\
+
+El proyecto está pensado para ser lo más económico posible para poder implementarse en pequeña y mediana industria, ya que los modelos comerciales oscilan entre los 21,000 y 50,600 euros.\\
+
+Se espera sentar un precedente en cuanto a proyectos que tengan como objetivos la clasificación y paletización de objetos.\\
+
+A continuación se muestra un robot SCARA en una aplicación industrial:
+\begin{center}
+  \includegraphics[scale=.9]{imagenes/scaraindust1}
+\captionof{figure}{Aplicaciones industriales del robot SCARA}
+ \label{fig:scaraindust}
+\end{center}
+
+
+\newpage
+\section{Justificación}
+
+El desarrollo económico de un país está directamente ligado a la independencia tecnológica de éste, en un país emergente como México, es de suma importancia la investigación, el diseño y la construcción de prototipos que propongan mejoras a artefactos y optimización de procesos industriales.
+\\\\
+El diseño e  implementación de tecnología en la industria e investigación agiliza los procesos, convirtiéndolos en automáticos o autónomos y garantizando la precisión de estos.
+\\\\
+El proceso de paletización es  requerido en todos los niveles de la industria, en ocasiones como proceso intermedio o bien de almacenaje, en específico para la industria mediana se realiza esta tarea de forma manual. Usualmente al proceso de paletizado lo antecede un proceso de separación o clasificación de elementos, este por requerir el discernimiento de forma, color, materiales, etc es comunmente realizado de por una persona o grupo de personas.
+\\\\
+El proceso de fabricación de llaves para cerradura consiste basicamente en uno o varios sistemas de troquelado seriados con un proceso de paletizado, que a su vez está seriado con un proceso de control numérico. Usualmente los procesos de clasificación y paletizado son realizados de forma manual, lo que acarrea retardos e incremento de costos.
+\\\\
+Para el continuo funcionamiento, la precisión y la reducción de costos en en la fabricación de llaves de cerradura se propone el diseño y construcción de un sistema integral, compuesto por un sistema de visión artificial para la clasificación de las llaves, una banda transportadora y un robot SCARA de 4 grados de libertad para el proceso de paletizado.
+
+
+
+
+
+\newpage
+\section{Estado del arte}
+El término robot abarca ideas de instrumentos para realizar trabajos productivos e imitar movimientos y comportamientos de seres vivos. Los robots actuales son concebidos para producir trabajos, bienes y servicios. Son máquinas que realizan actividades que se remontan a los orígenes de la humanidad y desde la época histórica del Renacimiento su construcción se ha fundamentado principalmente en conocimientos científicos.\\
+
+Desde la antigüedad, el hombre ha tratado de recrear e imitar la figura y movimientos de los seres vivos. Existen autómatas desde el mundo griego, pasando por artesanos franceses y suizos en el siglo XVIII, que ya utilizaban dispositivos mecánicos para el control automático de movimientos.\\
+
+En nuestro siglo el crecimiento en la producción e innovación de estas máquinas ha estado fuertemente impulsado por el progreso tecnológico, evolucionando de ser instrumentos para la amplificación de la capacidad del hombre para realizar trabajos a sustituirlo en su trabajo físico, a ser instrumentos capaces de procesar información, complementando o sustituyendo de igual manera al hombre en actividades intelectuales.\\
+
+La primera aparición del termino robot es en 1921, en la obra teatral Rosum's Universal Robots del novelista checo Karel Capek, en cuyo idioma la palabra \textbf{``robotova''} significa fuerza de trabajo o servidumbre. En el contexto histórico de la obra, la producción en gran escala se había implementado en varias fábricas. El término nace asociado a la idea de trabajo y producción. En 1915, Leonardo Torres Quevedo declaró para ``Scientific American'':
+
+\begin{quote}
+\textit{``Los antiguos autómatas imitaban la apariencia y movimientos de los seres vivos, lo cual no tiene mucho interés práctico; lo que yo busco es una clase de aparatos que, sin necesidad de reproducir los gestos más visibles del hombre, intentan obtener los mismos resultados que una persona.''}
+\end{quote}
+
+
+Los robots industriales surgen de la unión de aplicaciones de control automático, el control de herramientas, manipuladores y aplicación de procesadores en tiempo real. Mediante el control automático se busca realizar procesos que permitan gobernar un proceso sin la intervención de agentes externos. El uso de la automatización industrial con sistemas de control automático comienza en el siglo XIX, pero no es hasta después de la Segunda Guerra mundial, cuando comienza a implementarse en todos los sectores industriales. Así, se generalizan los sistemas de control automático de variables de procesos industriales, en particular, sistemas de control de posición y velocidad.\\
+
+En el uso de sistemas de control automático se ha utilizado diferentes tecnologías como la neumática, hidráulica y, finalmente, la eléctrica. A finales de los años sesenta y comienzos de los setenta, los microcontroladores son usados ampliamente en procesos de control. En 1972, el desarrollo del microprocesador da un impulso importante en el control por computadora, haciendo rentables numerosas aplicaciones, entre ellas el control de robots. En los años ochenta, los avances en microelectrónica, con la tecnología de los circuitos a gran escala de integración, acentúan esta tendencia.\\
+
+Los robots manipuladores son esencialmente brazos articulados. Según la definición del ``Robot Institute of America'', un robot industrial es un manipulador programable diseñado para mover materiales, piezas, herramientas o dispositivos especiales, mediante movimientos variados, programados para la ejecución de distintas tareas. Estos manipuladores se clasifican en:\\
+
+\begin{itemize}
+\item Articulados(RRR)
+\item Esféricos (RRP)
+\item SCARA (RRP)
+\item Cilíndricos (RPP)
+\item Cartesiano (PPP)
+\end{itemize}
+
+El término SCARA (Selective-Compliance Assembly Robot Arm) fue acuñado en 1980 por el inventor de este tipo de robots, Hiroshi Makino. La propuesta del diseño provee capacidad de movimiento al efector final que se requiere en el ensamble de piezas con una geometría plana. El movimiento consiste en tres movimientos de traslación independientes y un eje de rotación, generalmente vertical. Estos robots han recibido especial atención debido a su estructura especial, ofreciendo una rigidez en dos ejes de inclinación, los ejes normales al eje de rotación. Los primeros robots tuvieron una arquitectura en serie, tres revolutas y una unión prismática, que se colocaban, en la base o en el efector final. Estos robots han demostrado un increíble rendimiento, capaces de ciclos de 500ms o menores para una operación standard pick-and-place que consiste en:
+
+\begin{enumerate}
+\item Traslación ascendente.
+\item Traslación horizontal, rotando concurrentemente en un ángulo de 180°.
+\item Traslación descendente.
+\end{enumerate}
+
+El ciclo se cierra al regresar a la posición original con los mismos pasos, en orden contrario.\\
+
+Debido a la arquitectura, es difícil reducir los ciclos de trabajo y aumentar la carga es igualmente difícil de incrementar. Este problema ha motivado que emerjan arquitecturas alternativas, como la paralela o la híbrida (serie-paralelo).\\
+
+Por ejemplo, el robot M410iB de Fanuc y el robot IRB 660 de ABB Robotics tienen una arquitectura híbrida con largo alcance, alrededor de 3 m y cargas superiores a los 2000 N. Los fabricantes lograron esto por medio de enlaces en paralelogramo capaces de transmitir par torsor y movimiento de una base en común, girando en un eje vertical, a dos uniones horizontales de revoluta, donde la cuarta revoluta tiene un eje vertical. Aunque estos robots son de uso medio a pesado, los fabricantes los enlistan como robots paletizadores, que no tienen relación con los SCARAs. Los sistemas SCARA entran en la clasificación de Schönflies-motion generators. El sistema serie-paralelo se introdujo en 2000 por Angeles et al. En otro intento por superar las limitaciones de los SCARAs, varias arquitecturas en paralelo se han propuesto: H4, en 2001, un Schönflies-motion generator se desarrolló en Université de Montpellier, en Francia. En 2004, un robot de 4 extremidades dirigido por uniones prismáticas se desarrolló en Institut Français de Mécanique Avanceé y el McGill SMG desarrollado en McGill University por Al-Widyan y Angeles que tiene como innovación dos extremidades.\\
+
+
+El robot TS60 SCARA de alta velocidad y carga pesada presenta características y ventajas exclusivas diseñadas para optimizar la eficiencia y productividad en todos los entornos, que se derivan en una elevada calidad consistente junto con un drástico aumento del rendimiento. Tiene una capacidad de hasta 100 recogidas por minuto, sin tiempo de interrupción. El diámetro de 25mm estándar de la pluma permite al TS60 transportar una carga pesada (superior a 2 kg) mientras mantiene una elevada velocidad. A continuación se presentan las características principales de este robot.\\
+
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{|l | l|}
+\hline
+\textbf{Modelo} &  \textbf{TS60}\\
+\hline
+Grados de libertad & 4\\
+\hline
+Capacidad de carga máxima & 8 kg\\
+\hline
+Capacidad de carga nominal & 2kg\\
+\hline
+Alcance & 600 mm\\
+\hline
+Repetibilidad & $\pm0.01$ mm\\
+\hline
+Carrera & 200 o 400 mm\\
+\hline
+Métodos de fijación & Suelo o pared   \\
+\hline
+Controlador de la serie CS2 de Staubli &  CS8C \\
+\hline
+\end{tabular}
+\caption{Caracteristicas del modelo TS60}
+\label{tabla:Caracteristicas del modelo TS60}
+\end{center}
+\end{table}
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/TS60}
+\captionof{figure}{Robot SCARA TS60}
+ \label{fig:r}
+\end{center}
+
+El KR 10 scara R850, un robot muy rápido, tiene un alcance de 850 mm con una capacidad de carga de 10 kg y una alta exactitud de posicionamiento de menos de 0,02 mm. Este robot compacto de 4 ejes combina ciclos altos de trabajo y exactitudes con la probada unidad de control KUKA basada en técnica del PC, de fácil manejo.\\
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l | l|}
+\hline
+Carga & 10 kg\\
+\hline
+z-movimiento & 300mm/400mm\\
+\hline
+Número de ejes & 4\\
+\hline
+Repetibilidad & $<\pm0.025$ mm\\
+\hline
+Peso & 50 kg\\
+\hline
+Posiciones de montaje & Suelo\\
+\hline
+Unidades de control & KR C2sr \\
+\hline
+Velocidad &  Máx. 11 m/s\\
+\hline
+\end{tabular}
+\caption{Caracteristicas del modelo KR 10 R850}
+\label{tabla:Caracteristicas del modelo KR 10 R850}
+\end{center}
+\end{table}
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/r850}
+\captionof{figure}{Robot SCARA R850}
+ \label{fig:r}
+\end{center}
+
+El Adept CobraS600 SCARA es un SCARA de alto rendimiento para operaciones que requieren una automatización rápida y precisa. Los robots Adept Cobra de serie S incluyen el SmartController para control de movimiento, el cual provee capacidad de rendimiento únicas en la industria.\\
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/s6000}
+\captionof{figure}{Robot SCARA S6000}
+ \label{fig:r}
+\end{center}
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l | l|}
+\hline
+\textbf{Adept Cycle-Burst} & \textbf{Moment of Inertia}\\
+\hline
+2 kg-0.42 sec & Joint 4- 450 kg-cm$^{2}$ max\\
+\hline
+\textbf{Adept Cycle-Sustained} & \textbf{Pass-through User Connections}\\
+\hline
+2 kg - 0.45 sec & Electrical: 24(12 twisted pairs)\\ &Pneumatic: 6mm (x2), 4 mm (x3)\\
+\hline
+\textbf{Digital I/O Channels} & \textbf{Power Requirements}\\
+\hline
+AIB: 12 inputs, 8 outputs & 24: VDC 6 A\\
+Controller: 12 inputs, 8 outputs & 200-240 VAC: 10 A, single-phase\\
+\hline
+\textbf{Joint Ranges} & \textbf{Repeatability} \\
+\hline
+Joint 1: $\pm$ 105° Joint 2:$\pm$ 105° & XY: $\pm$0.017 mm Z: $\pm$ 0.003 mm\\
+Joint 3: 210 mm Joint 4:$\pm$ 360° & Theta:$\pm$ 0.019°\\
+\hline
+\textbf{Joint Speed} & \textbf{Weight} \\
+\hline
+Joint 1: 386°/sec Joint 2: 720°/sec & 41 kg\\
+Joint 3: 1100mm/sec Joint 4: 1200°/sec &\\
+\hline
+\textbf{Payload} & \\
+\hline
+Rated: 2.0 kg & \\
+Max: 5.5 kg & \\
+\hline
+\end{tabular}
+\caption{Caracteristicas del modelo  Adept CobraS600 SCARA}
+\label{tabla:Caracteristicas del modelo  Adept CobraS600 SCARA}
+\end{center}
+\end{table}
+
+\section{Objetivos}
+\subsection{Objetivo general}
+
+
+Diseñar y construir un robot articulado de cuatro grados de libertad asistido por un sistema de visión artificial capaz de identificar dos tipos de llaves para cerradura que circulan aleatoriamente sobre una banda transportadora, separarlas y  apilarlas para su almacenaje o inserción a un sistema de control numérico (CNC) para su procesado, mediante elementos seleccionados para optimizar costos, apoyado de la metodología de Despliegue de la Función de Calidad (QFD) y tablas de ponderación.
+
+\subsection{Objetivos específicos}
+
+Para Trabajo Terminal 1:\\\\
+1.Diseñar y construir  la banda transportadora correspondiente a la linea de producción.\\
+2.Diseñar e implementar el sistema de visión artificial para la clasificación de objetos\\
+3.Obtener el modelo cinemático y dinámico general del robot articulado\\
+4.Realizar diseño CAD del robot articulado.\\
+5.Diseñar y comprobar mediante software el sistema de control.\\
+6.Seleccionar los elementos mecánicos para la construcción del robot\\
+7.Seleccionar los motores\\
+8.Diseñar y simular los circuitos electrónicos.
+\\\\
+Para Trabajo Terminal 2:\\\\
+1.Construir el robot articulado.\\
+2.Implementar los circuitos electrónicos.\\
+3.Implementar el sistema de control.\\
+4.Implementar interfaz hombre-máquina.\\
+5.Comprobar la correcta operación del prototipo con los elementos a seleccionar
+
+\subsection{Objetivos ponderados}
+
+A continuación se realizará un análisis de los objetivos específicos planteados en el protocolo aprobado, estos se dividieron en objetivos para Trabajo Terminal 1 y objetivos para trabajo terminal 2.
+\\\\
+Hasta este punto se han alcanzado en lo general los objetivos planteados para Trabajo Terminal 1, de manera complementaria a los resultados reportados, para la próxima entrega se presentará:
+
+
+\begin{itemize}
+\item En cuanto a control: se realizó una prueba básica de estabilidad queda pendiente para el trabajo terminal 2 realizar pruebas de estabilidad con el criterio de Lyapunov, además se realizará un mapeo par torsor-tensión, para implementar en el modelo físico.
+
+\item En cuanto al sistema de clasificación: desplegar de manera gráfica información sobre el estado del sistema de visión artificial.
+
+\item En cuanto a los circuitos electrónicos para potencia e instrumentación: Definir claramente la ubicación de los circuitos electrónicos en el sistema.
+
+\item Como adelanto de TT 2, se han realizado ya las compras de algunos de los elementos mecánicos para la construcción del robot, ya se cuenta con piezas clave, como las poleas, bandas de transmisión, así como las partes clave para el efector final.
+
+\item Se ha diseñado y construido el tercer eslabón del robot SCARA, eslabón de articulación cilíndrica que fue construido en una impresora 3D.
+\end{itemize}
+
+ Con respecto a los objetivos planteados para trabajo terminal 2, los principales retos serán los relacionados la la construcción del robot SCARA y la integración de los areas funcionales del sistema.
+ \\\\
+ Varios de los elementos para la construcción del robot han sido ordenados, se estima contar con la totalidad de los de los a principios de julio.\\\\
+ Se pretende detallar de manera más explícita la selección de componentes y la metodologia utilizada para la entrega final del documento de trabajo terminal 2.
+
+
+
+
+\newpage
+\section{Marco teórico}
+
+A continuación se presentarán algunos conceptos previos para entender el desarrollo y diseño del sistema que se propone, se comienza acotando el tipo de mecanismo que se utilizará, se continúa describiendo brevemente  la cinemática directa e inversa y se termina con algunos conceptos correspondientes a las ecuaciones de movimiento de Euler-Lagrange, las cuales serán utilizadas en el modelo dinámico del manipulador.
+
+\subsection{Mecanismos de cadena cinemática abierta}
+
+Los manipuladores robóticos, desde el enfoque mecánico son mecanismos formados generalmente por elementos en serie conectados entre sí por articulaciones, destinadas a aplicaciones industriales.
+
+\vspace{0.4cm}
+
+Los eslabones de un mecanismo se conectan entre sí de manera tal que transmitan movimiento del impulsor, o eslabón de entrada, al seguidor, o eslabón de salida. Estas conexiones, articulaciones entre los eslabones, se llaman pares cinemáticos (o simplemente pares) porque cada articulación se compone de dos superficies pareadas, dos elementos, con cada superficie o elemento pareado formando parte de cada uno de los eslabones articulados. Por ende, un eslabón se puede definir como la conexión rígida entre dos o más elementos de diferentes pares cinemáticos. Cuando varios eslabones están conectados móvilmente por medio de pares cinemáticos, se dice que constituyen una cadena cinemática. Si cada eslabón de la cadena se conecta por lo menos con otros dos, ésta forma uno o más circuitos cerrados y, en tal caso, recibe el nombre de cadena cinemática cerrada; de no ser así, es decir hay un eslabón con un punto de conexión libre, la cadena se llama abierta. (Shigley,Uicker, 1998)
+\\\\
+A continuación se ilustran estos 2 tipos de cadena cinemática, denotando los eslabones por líneas y las articulaciones por círculos:
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/cadenas}
+\captionof{figure}{Ilustración de los tipos de cadena cinemática}
+ \label{fig:r}
+\end{center}
+
+Los mecanismos de interés para el diseño del manipulador son los mecanismos de cadena cinemática abierta con eslabones rígidos.
+\subsection{Cinemática directa}
+
+Cinemática directa se refiere al problema cinematico de relacionar los eslabones y articulaciones de un mecanismo con la orientación y posición del efector final, generalemente se busca una función $\phi$ que relacione la posición del efector final y los ángulos y desplazamientos respectivos entre los eslabones del mecanismo.
+
+
+$$\left[
+\begin{array}{c}
+x  \\
+y  \\
+\end{array} \right]=\phi(q_1,q_2,...,q_n)$$
+
+Para lograr establecer dicha relación, se han definido matrices que representan movimientos de traslación y rotación entre ejes coordenados ubicados en el principio y final de los eslabones de un mecanismo.
+\\
+
+A tal matriz se le conoce como matriz de transformación homogenea y está dada por:
+
+\begin{equation}
+\label{eqn:cindirec}
+A_i^{i-1}=\left[
+\begin{array}{cc}
+R^{3 \times 3} & P^{3 \times 1} \\
+p^{1 \times 3} & W^{1 \times 1}
+
+\end{array} \right]
+\end{equation}
+
+
+
+$R$ es la relación de orientación del marco $i-1$ al marco $i$\\
+$P$ es la posición del origen del marco $i-1$ respecto al marco $i$\\
+$W$ es el factor de escala, para fines de robótica $W=1$.
+\\
+$p$ es la perspectiva entre los marcos de referencia, por lo general $p=\left[
+\begin{array}{ccc}
+0 & 0 & 0
+\end{array} \right]$
+
+\vspace{0.4cm}
+
+Para realizar el modelo cinemático se realiza una serie de transformaciones homogeneas desde el origen o referencia del mecanismo, hasta la ubicación del efector final, dichas transformaciones están dadas por la multiplicación de las matrices de transformación homogenea desde la referencia al marco coordenado 1, del marco coordenado 1 al marco coordenado dos, etc, matemáticamente:
+
+
+
+$$A_n^0=A_1^0A_2^1...A_n^{n-1}$$
+
+Para la obtención de las matrices, se utiliza los parámetros de Denavit-Hartemberg, que de manera gráfica se presentan. Dado un mecanismo cualquiera:
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/denhar}
+\captionof{figure}{Ilustración gráfica de los parámetros de Denavit-Hartemberg}
+ \label{fig:r}
+\end{center}
+
+De manera desglozada:
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/denavit}
+\captionof{figure}{Ilustración gráfica de los parámetros de Denavit-Hartemberg}
+ \label{fig:r}
+\end{center}
+
+
+La transformación homgenea desde el eslabón $i$ al eslabón $i-1$, está dada por:
+
+\begin{equation}
+\label{eqn:cindirec}
+A_i^{i-1}=\left[
+\begin{array}{cccc}
+C\theta_i & -S\theta_iC\alpha_i & S\theta_i S\alpha_i  & a_iC\theta_i \\
+S\theta_i & C\theta_i C\alpha_i & -C\theta_i S\alpha_i & a_iS\theta_i \\
+0& S\alpha_i & C\alpha_i & d_i\\
+0& 0 & 0 & 1
+
+\end{array} \right]
+\end{equation}
+
+
+
+\subsection{Cinemática inversa}
+
+Como se mencionó en el apartado dedicado a la cinemática directa, para ese problema cinemático, dados ángulos y/o desplazamientos $q_1$, $q_2$,...$q_n$ podemos determinar la posición del efector final, o bien el extremo último del último eslabón, para el problema cinemático inverso se procede de manera contraria: dada la posición del efector final en un punto en el espacio, debemos determinar los ángulos y desplazamientos necesarios de cada eslabón con respecto al anterior, matemáticamente:
+
+$$\left[
+\begin{array}{c}
+q_1  \\
+q_2  \\
+\vdots\\
+q_n
+\end{array} \right]=\phi^{-1}(x,y)$$
+
+\vspace{.4cm}
+A diferencia del enfoque cinemático directo, en la cinemática inversa al no conocer los ángulos para lograr llegar a las coordenadas deseadas $(x_d,y_d)$, no se cuenta con una solución única. Usualmente se nombra a las soluciones ``de codo arriba'' y ``de codo abajo'', a continuación se ilustra lo enunciado:
+
+
+\begin{center}
+  \includegraphics[scale=0.75]{imagenes/inversa2sol}
+\captionof{figure}{Distintas configuraciones para el mismo punto en el plano xy}
+ \label{fig:r}
+\end{center}
+Para realizar el modelo cinemático inverso de un mecanismo, se utilizan herramientas de geometria y trigonometría, para describir la relación entre los eslabones y los ángulos respectivos entre ellos, comunmente se utilizan la ley de los senos y la ley de los cosenos para triángulos formados por eslabones:
+
+\begin{center}
+  \includegraphics[scale=0.75]{imagenes/senos}
+\captionof{figure}{Ilustración de triangulo escaleno}
+ \label{fig:senos}
+\end{center}
+
+Para el triángulo escaleno mostrado en (\ref{fig:senos}), la ley de los senos se enuncia como se muestra a continuación:
+$$\frac{a}{sin{\alpha}}=\frac{b}{sin{\beta}}=\frac{c}{sin{\gamma}}$$
+
+La ley de los cosenos establece:
+$$c^2=a^2+b^2+2abcos(\gamma)$$
+
+
+
+
+
+
+\subsection{Ecuaciones de movimiento de Euler-Lagrange}
+
+
+Mientras que la ecuaciones cinemáticas describen el movimiento del robot sin tener en cuenta
+las fuerzas y pares torsores que producen el movimiento, las ecuaciones dinámicas describen de manera explícita la relación entre la fuerza y el movimiento. Las ecuaciones dinámicas de movimiento
+son importantes en el diseño de robots, en la simulación y la animación
+de movimiento del robot, y en el diseño de algoritmos de control.(Spong, Hutchinso, Vidyasagar, 2005 )
+\\\\
+Para realizar un modelo que relacione las fuerzas y pares torsores por el movimiento producido, nos valemos de las ecuaciones de Euler Lagrange.
+\\\\
+En el caso unidimensional se derivan de la segunda ley de Newton $$F=ma$$
+ Para el caso multidimensional del concepto de trabajo virtual:
+
+ \vspace{0.5cm}
+
+``\emph{El trabajo realizado por las fuerzas externas que corresponden a cualquier conjunto de desplazamientos virtuales
+es cero}''
+
+ $$\sum_i^k F_i^T \delta r_i=0$$
+
+Donde $F$ es la fuerza total en la particula $i$, $\delta$ es el desplazamiento de las partículas.
+\\\\
+Para definir las ecucaciones de Euler Lagrange, se definde primeramente la función de Lagrange, mejor conocido como el Lagrangiano:
+
+$$\mathcal{L}=k-u$$
+
+donde $k$ es la energía cinética, y $u$ es la energía potencial del sistema.
+\\\\
+
+A continuación se presentan la ecuación de Euler-Lagrange:
+
+\begin{equation}
+\label{eqn:eulag0}
+\frac{d}{dt}\left(\frac{\partial \mathcal{L}}
+{\partial \dot{q_i}}\right)-\frac{\partial \mathcal{L}}
+{\partial q_i}=\tau_i
+\end{equation}
+
+
+
+\subsection{Representación matricial de un manipulador robótico}
+
+Si se desea simular el movimiento de un robot considerando las fuerzas que lo ocasionan, es necesario obtener el modelo dinámico del mismo. Para esto, se analizan y calculan las ecuaciones de movimiento correspondientes a los eslabones del robot.\\\\
+Para cualquier manipulador, se puede definir el modelo dinámico como:
+
+
+\begin{equation}
+\label{formatricial0}
+M(q)\ddot{q}+C(q,\dot{q})\dot{q}+F(\dot{q})+G(q)=\tau
+\end{equation}
+
+Donde:\\\\
+
+$C(q,\dot{q})$ son los pares torsores debidos a fuerzas centrífugas y de Coriolis. Puede ser despreciada en caso de que las velocidades sean muy pequeñas.\\\\
+ $F(\dot{q})$ es el vector de fricciones, el cual complejo y en muchos casos, difícil de aproximar. Al depender de variables articulares se propone un modelo y se verifica si se acerca al comportamiento real. Para nuestro modelo se desprecia este término.\\\\
+ $G(q)$ simboliza los efectos debidos a la gravedad y depende de las variables articulares.\\\\
+La matriz $M(q)$ es simétrica, definida positiva, invertible y acotada superiormente e inferiormente debido a que depende de las variables $q$ a través de funciones trigonométricas.
+
+\newpage
+\section{Planificación del TT}
+
+El 28 de octubre de 2013 fue entregado el protocolo de trabajo terminal para la segunda revisión, en él fueron agregados algunos diagramas de Gantt para esquematizar la planificación.\\\\
+El equipo se percató pronto de que habían ocurrido algunas confusiones en cuanto al periodo efectivo en que se podria trabajar en los avances y el documento de trabajo terminal 1, esto se hace evidente al revisar los diagramas agregados al protocolo de trabajo terminal. El periodo efectivo de trabajo para TT1 fue inicialmente contemplado de enero a junio y el periodo efectivo de trabajo para TT2 fue contemplado de agosto a diciembre.\\\
+A continuación se muestran los diagramas contemplados en la entrega del protocolo de trabajo terminal, donde se ve notoriamente la confusión mencionada:
+
+
+
+\begin{center}
+  \includegraphics[scale=.8,angle=90]{imagenes/gantprotocolo}
+\captionof{figure}{Diagrama preliminares de Gantt para trabajo terminal 1 y 2}
+ \label{fig:gp1}
+\end{center}
+
+El equipo debió adapatarse a los periodos reales, enero-mayo para TT1, y la planificación de las actividades para TT2 en el periodo agosto-diciembre. Se realizaron modificaciones en el diagrama de Gantt, respetando las tareas programadas, acotando en el plazo requerido la duración asignada a cada tarea.
+\\\\A continuación se muestran los diagramas adecuados al periodo real, tanto para trabajo terminal 1:
+
+\begin{center}
+  \includegraphics[scale=.65,angle=90]{imagenes/gptt1}
+\captionof{figure}{Diagrams de Gantt para trabajo terminal 1}
+ \label{fig:gptt1}
+\end{center}
+
+Las tareas asignadas para TT1 y TT2 en lo general fueron respetadas, se realizaron adecuaciones más que nada en fechas, el diagrama mostrado en la figura (\ref{fig:gptt1})
+fue seguido en lo general, salvo incidencias, pero sirvió como una guia de como administrar el trabajo.\\\\
+A continuación se muestra en diagrama de Gantt propuesto para trabajo terminal 2:
+
+
+
+\begin{center}
+  \includegraphics[scale=.7,angle=90]{imagenes/gptt2}
+\captionof{figure}{Diagrams de Gantt para trabajo terminal 2}
+ \label{fig:gptt1}
+\end{center}
+
+
+
+
+\section{Planteamiento del problema}
+
+En un sistema de producción lineal, los tiempos en cada estación de trabajo son cruciales para poder generar un producto final en el menor tiempo posible. Para reducir estos tiempos, no se debe minimizar la calidad en el producto o generar errores que resulten en más tiempo para arreglar estos, al contrario, se debe buscar minimizar tiempo y error.
+\\\\
+Al investigar sobre diferentes tipos de producción para el implemento de la robótica con el fin de ayudar a mejorar los aspectos mencionados anteriormente, se encontró la fabricación de llaves y cerraduras. Este proceso tiene una estación de troquelado, en el cual se generan las  llaves vírgenes, las cuales son transportadas en una banda hasta otra estación de trabajo donde se realiza una selección manual de estas para después ser depositadas en contenedores, dependiendo de la forma de la llave para posteriormente ser tomada por un robot y grabar la combinación única de cada llave y cerradura.\\
+
+Este proceso puede generar errores en la separación de llaves, así como la necesidad de tener varios seleccionadores si se quiere tener un  proceso de selección rápido y no hacer la producción más lenta. La solución propuesta pretende ayudar a mejorar los tiempos de producción, minimizar errores y costos en el proceso de producción.\\
+
+Hay que poner especial atención en el número de piezas que se tienen en la banda en un espacio de tiempo, así como la velocidad de la misma, la distancia entre ellos. Para este proyecto, se establecen dos tipos de piezas a identificar, con una tolerancia de 25\% en las dimensiones para poder ajustarse a otros perfiles de llaves.
+
+
+
+\begin{center}
+  \includegraphics[scale=0.8]{imagenes/sistemapropuesto}
+\captionof{figure}{Diagrama del proceso a optimizar}
+ \label{fig:sisprop}
+\end{center}
+
+\section{Soluciones propuestas}
+
+Como guía en la selección de la mejor solución al problema, se utilizó la metodologia QFD (Despliege de la Función de Calidad), que consiste en relacionar las necesidades del cliente o usuario, con la factibilidad técnica y posibilidad económica, usualmente se dice que es una relación entre los Qué´s y los Cómo´s.
+\\\\
+Para cuantificar la relación entre los Qué´s y los Como´se utilizará una ponderación entre 0 y 5, donde 0 corresponde a ``nada importante'' y 5 a ``muy importante''.
+\\\\
+Para estructurar la Matriz de Despliegue de la función de calidad, se ponen los requerimientos del cliente en las filas, y los requisitos técnicos para que se cumplan los requisitos en las columnas, dada la ponderación antes mencionada, se asignan puntajes a estas relaciones.
+
+\vspace{0.5cm}
+A continuación se presenta de manera gráfica la matriz del despliegue de la función de calidad:
+
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{|l | l|c|c|c|c|c|c|c|}
+\hline
+& & &\rotatebox{90}{Área de trabajo}
+  & \rotatebox{90}{Materiales}& \rotatebox{90}{No. de actuadores} & \rotatebox{90}{Disponibilidad comercial} & \rotatebox{90}{Dimensiones del sistema} & \rotatebox{90}{Tiempo de ejecución}\\
+\hline
+
+
+Funcionamiento &  Autonomo & 5 & 1 & 1 & 3 & 2 & 2  & 4   \\
+ \hline
+ &   Facilidad de puesta a punto  & 3 & 2 & 4 & 4 & 3 & 5 & 1 \\
+ \hline
+&    Operación continua (8 horas)  & 5 & 2 & 4 & 4 & 2 & 3 & 3 \\
+ \hline
+&   Precisión de 2mm  & 4 & 3 & 2 & 4 & 3 & 3 & 4 \\
+ \hline
+ &   Paletización mínima 10 llaves/min  & 4 & 3 & 2 & 4 & 2 & 3 & 5 \\
+
+ \hline
+ &   Selección confiable 90\%  & 4 & 2 & 1 & 4 & 2 & 3 & 5 \\
+  \hline
+ &   Seguridad de operación  & 5 & 5 & 4 & 4 & 1 & 4 & 3 \\
+  \hline
+  Dimensiones &  Optimizar espacio    & 4 & 5 & 4 & 3 & 2 & 5 & 2  \\
+   \hline
+ &   Transportabilidad  & 2 & 5 & 4 & 3 & 2 & 5 & 1 \\
+  \hline
+Coste y mantenimiento &  Costo competitivo   & 3 & 1 & 4 & 4 & 2 & 4 & 1 \\
+   \hline
+ &  Monitoreo continuo del estado del sistema  & 5 & 3  & 4 & 4 & 4 & 4 & 3 \\
+  \hline
+  & Reposición de piezas & 4 & 2  & 3 & 4 & 1 & 3 & 3 \\
+  \hline
+Apariencia &  Diseño estético   & 3 & 3 & 4 & 2 & 3 & 4 & 1 \\
+\hline
+\hline
+  &    & 51 & 37 & 41  & 47 & 29  & 48  & 36  \\
+\hline
+\end{tabular}
+\caption{Matriz de despliegue de la función de calidad}
+\label{tabla:QFD}
+\end{center}
+\end{table}
+
+De acuerdo a la tabla, nuestro primer requerimiento es el tamaño del sistema, del cual dependerá el correcto funcionamiento del ensamble que se realizará. Si se tiene un sistema muy grande, es necesario más energía, recursos y tiempo para realizar una operación, si es muy pequeño, no se tiene el alcance deseado. El segundo punto a considerar es el número de actuadores y la complejidad de estos. En caso de tener una cantidad grande de actuadores que requieran tiempo de procesamiento, el sistema se hace lento. Se debe mantener lo más simple posible el sistema.\\
+Los materiales juegan un papel importante al darle rigidez y al mismo tiempo ser liviano para poder relizar las tareas con la velocidad adecuada.\\
+El área de trabajo se enfocará principalmente en la optimización de espacios con los que se cuenta para la instalación.\\
+Para los requerimientos mencionados, los tiempos de ejecución juegan un papel importante solo para la cantidad de piezas seleccionadas por minuto.\\
+Todos estos requerimientos nos ayudarán a hacer una selección apropiada de los elementos antes propuestos para buscar el más óptimo.\\\\
+
+
+\subsection{Manipuladores}
+\textbf{Robot Cartesiano}\\
+Este tipo de robot se caracteriza por tener un espacio de trabajo rectangular. Es quizá la estructura cinemática más simple de un robot. Este tipo de robot tiene tres uniones prismáticas perpendiculares entre ellas. Este tipo de robots necesita un amplio espacio de trabajo para operar. Tiene, además, una estructura rígida que provee una precisa posición del efector final. Esta misma estructura permite al manipulador trabajar con cargas pesadas, dando un soporte para el trabajo. Otra ventaja que ofrece este tipo de robots es el control de posición relativamente sencillo, pues se opera bajo las coordenadas x, y, z. Esta configuración no resulta apropiada para acceder a puntos situados en espacios relativamente cerrados, por lo que su uso se extiende a aplicaciones donde la precisión es más importante que la flexibilidad. El movimiento lineal de estos robots es dado por elementos rotatorios, a través de una transmisión.
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/robot_cartesiano}
+\captionof{figure}{Robot cartesiano y Espacio de trabajo}
+ \label{fig:r}
+\end{center}
+
+\textbf{Robot Delta}\\
+El robot Delta es un tipo de robot paralelo que consiste en tres brazos conectados a una articulación universal en la base. La clave de este diseño es el uso de paralelogramos en los brazos, que mantienen la orientación del efector final. Los robots delta son usados ampliamente en la industria para recoger y empaquetar, pues pueden ser suficientemente rápidos como para recoger 200 elementos por minuto. El primer robot Delta se inventó en 1980 por Reymond Clavel en el EPFL, Suiza. El propósito de este nuevo robot era manipular objetos ligeros y pequeños a una gran velocidad. En 1987, la compañía Demaurex compró la licencia para el robot Delta y comenzó la producción la producción de robots Delta para empacar en la industria. En 1991, Reymond Clavel presentó su tesis doctoral y recibió el Golden Robot Award en 1999 por su trabajo y mejora en el robot Delta. El robot Delta es un robot paralelo, que también puede ser estudiado como una generalización espacial de un mecanismo planar de cuatro barras. Tiene cuatro grados de libertad: Tres traslacionales y uno rotacional. (Taghirad, 2013) El paralelogramo permite que un eslabón de salida se mantenga en una posición fija con respecto un eslabón de entrada. El uso de estos tres paralelogramos definen por completo la orientación de la plataforma movible, quedando solo con 3 grados de libertad que son solamente traslacionales. La base del robot es montada sobre el espacio de trabajo, los actuadores se localizan en la misma base. De la base, 3 brazos con articulación al centro se extienden hasta una conexión a ua base de forma triangular. Los actuadores en los eslabones de entrada moverán la base triangular en direcciones x, y o z. Desde la base, el último actuador transmite el movimiento de rotación hasta el efector final localizado en la base triangular.\\
+
+Debido a que los actuadores están localizados en la base, los brazos deben ser fabricados de un material compuesto. Las partes móviles del robot Delta deben tener una inercia pequeña para permitir aceleraciones grandes. Se han logrado acelearaciones de hasta 30 g y velocidades de 10m/s. Esto hace al robot Delta un candidato perfecto para operaciones pick-and-place de objetos pequeños (de 10g hasta 1kg) El espacio de trabajo de los robots delta comerciales laboran en un espacio cilíndrico de hasta 1m de diámetro y 0.2m de altura.
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/Delta}
+\captionof{figure}{Robot delta}
+ \label{fig:r}
+\end{center}
+
+\textbf{Robot SCARA}\\
+El brazo SCARA (Selective Compliant Articulated Robot for Assembly) es un manipulador usado ampliamente en usos de ensamble. Aunque este robot tiene una estructura RRP, es diferente de un robot esférico, tanto en apariencia como en rango de aplicación. En el diseño esférico, el eje z$_{0}$ es perpendicular a z$_{1}$ y z$_{1}$ perpendicular a z$_{2}$; en el diseño del robot SCARA, los ejes z$_{0}$, z$_{1}$ y z$_{2}$ son paralelos entre ellos. Debido a que los ejes del robot son independientes uno del otro, se pueden eliminar ``zonas muertas'', reduciendo el espacio requerido para la instalación del robot y logrando realizar un trabajo con menos invasión. Los robots SCARA son ideales para aplicaciones de propósito general que requieren movimientos punto a punto rápidos, repetitivos, como pick-and-place, paletización y despaletización, carga y descarga y ensamblaje.\\
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/Scara_solucion}
+\captionof{figure}{Configuración típica del robot SCARA}
+ \label{fig:r}
+\end{center}
+
+
+Al realizarse una comparación entre MEPs (Robot Motion Economy Principles) encontramos lo siguiente:\\
+
+\begin{itemize}
+\item Para trabajos en superficies planas, los robots verticales tienen ventaja en posición comparados con los robots cilíndricos, esféricos y SCARA.
+\item No importa el volumen del robot, el área de trabajo siempre va a estar limitada, por lo que una selección adecuada de localización y orientación es crítica para el desempeño de cualquier robot.
+\item Para una misma tarea, el robot SCARA realiza el trabajo más rápidamente sobre todos los demás robots, el cilíndrico  es el más lento.
+\item El robot SCARA tiene el mejor uso de articulaciones para trabajos de posición, seguido del robot articulado verticalmente.
+\end{itemize}
+
+
+
+\subsection{Efector final}
+\textbf{Gripper Mecánico}\\
+Los grippers son uniones activas entre el equipo manipulador y la pieza de trabajo. Sus funciones dependen de aplicaciones específicas e incluyen:
+
+\begin{itemize}
+\item Mantención temporal en una posición y orientación definida de una pieza de trabajo relativa al gripper y el equipo manipulador.
+\item Determinar y cambiar la posición y orientación de una pieza de trabajo relativa al equipo manipulador respecto al eje de la muñeca.
+\item Operaciones técnicas específicas realizadas con, o en conjunto con, el gripper.
+\end{itemize}
+
+Los grippers no son requeridos solo por robots industriales, son un componente universal en la automatización, lo cuales pueden operar con:
+
+\begin{itemize}
+\item Robots industriales (Manejo y manipulación de objetos).
+\item Automatización (Ensambles, microensambles, maquinado y empaquetamiento).
+\item Maquinas NC (cambio de herramienta) y máquinas de propósito especial.
+
+\item Manipuladores guiados (Prensión remota, medicina, aeroespacial, náutica)
+
+\item Herramientas para alzar cuerdas y cadenas (Carga y desplazamiento de equipo)
+
+\item Robots de servicio (Prensión de herramientas similar a prótesis de manos)
+\end{itemize}
+
+En robótica, los grippers pertenecen a las unidades funcionales que tienen una gran variedad de diseños, debido a que, aunque el robot es una máquina flexible, el gripper realiza una función muy específica, sin embargo, estas tareas no están limitadas a solo prensión, por lo que el término ``efector final'' es generalmente usado. El proceso de ensamble no solo se limita a prensión, también se extiende a operaciones de presión, acoplamiento y unión. Una de las principales desventajas de este efector es la dificultad para tomar piezas largas y/o muy delgadas y la personalización de estos es muy cara (Monkman, 2004)
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/tipo_gripper}
+\captionof{figure}{Diversos tipos de grippers mecánicos}
+ \label{fig:r}
+\end{center}
+
+\textbf{Ventosa}\\
+Se llama generalmente vacío a los estados de presión de aire que se encuentran por debajo de la presión atmosférica. El uso del vacío en procesos industriales está cada vez más extendido, sobre todo en manipuladores diversos, robótica y transporte interno de distintos materiales. Los medios para producir vacío son diversos: extractores clásicos para depresiones muy pequeñas, bombas de vacío accionadas con motor eléctrico y, los ya más modernos, generadores de vacío de aire comprimido. En la técnica de vacío, la ventosa es el elemento activo o el que realiza la función útil. La depresión producida en el interior de la ventosa cuando ésta se encuentra herméticamente cerrada, crea una fuerza que es capaz de suspender objetos donde la superficie no sea excesivamente rugosa y peso limitado. Las aplicaciones de esta técnica son muy numerosas y su uso sigue en aumento, sobre todo en procesos industriales automatizados o semiautomatizados. Cabe mencionar que las ventosas también pueden ser llamadas grippers neumáticos o de vacío.\\
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/ventosa}
+\captionof{figure}{Ejemplo de una ventosa y composición interna}
+ \label{fig:r}
+\end{center}
+
+En la figura (\ref{fig:Robot_valvula}) puede verse una aplicación diferente donde, en un proceso robotizado, una de estas máquinas traslada piezas desde una cinta transportadora a otro puesto de trabajo próximo para realizar en ellas una determinada operación. (Serrano, 2009)\\
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/Robot_valvula}
+\captionof{figure}{Ejemplo de aplicación de válvulas en robótica}
+ \label{fig:Robot_valvula}
+\end{center}
+
+En base a la tabla del QFD y en las soluciones propuestas, se considera que el robot SCARA es el más adecuado y el que se adapta mejor a las requerimientos, debido a las principales características como son uso eficiente de sus articulaciones y velocidad, así como el error mínimo entre punto y punto. La ventosa es el efector final que se considera indicado, debido a que no presenta actuadores que necesiten un control complejo y las piezas a seleccionar se adaptan a los requerimientos para poder usar este actuador. En la siguiente sección se describe a detalle cada uno de estos elementos.\\
+
+\section{Solución elegida}
+En la primera etapa de este trabajo terminal, se abarca el diseño y control de un robot SCARA de cuatro grados de libertad asistido por un sistema de visión artificial, esto como sistema integral. La integración del robot SCARA y el sistema de visión artificial conforma el eje del proyecto, sin embargo para el funcionamiento conjunto y solución del problema planteado se requiere del acople de múltiples áreas funcionales.
+\\\\
+De manera general, el sistema recibe como entradas:
+
+\begin{itemize}
+\item Piezas sobre la banda (llaves)
+\item Consignas de selección
+\end{itemize}
+
+Como salidas posibles:
+
+\begin{itemize}
+\item Pieza paletizada correctamente
+\item Pieza paletizada erróneamente
+\item Pieza no paletizada
+\end{itemize}
+
+Como alimentación del sistema, se tienen dos fuentes:
+
+\begin{itemize}
+\item Energía eléctrica
+\item Aire a presión
+\end{itemize}
+
+Viendo al sistema propuesto como una caja negra:
+
+\begin{center}
+  \includegraphics[scale=0.70]{imagenes/funcionamientocajanegra}
+\captionof{figure}{Diagrama de funcionamiento detallado con caja negra}
+ \label{fig:funcdetcn}
+\end{center}
+
+El problema a resolver, como fue mencionado antes, es clasificar y paletizar llaves que van sobre una banda transportadora, para estos fines se propone la siguiente descomposición en áreas funcionales:
+
+\begin{center}
+  \includegraphics[scale=0.75]{imagenes/funcionamientodetallado}
+\captionof{figure}{Diagrama de funcionamiento detallado}
+ \label{fig:funcdet}
+\end{center}
+
+Se mencionó antes en el texto que se proponen dos subsistemas para el sistema integral que realizará la tarea de clasificar y paletizar, el subsistema de clasificación y el subsistema de paletización, a continuación se ilustran estos en
+
+
+\begin{center}
+  \includegraphics[scale=0.75]{imagenes/funcionamientodetalladosub}
+\captionof{figure}{Diagrama de funcionamiento detallado con subsistemas}
+ \label{fig:funcdetsub}
+\end{center}
+
+Para ilustrar el proceso de manera secuencial, se agrega un diagrama de flujo del funcionamiento:
+
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/diagramadeflujo1}
+\captionof{figure}{Primera parte del diagrama de flujo del funcionamiento general del sistema}
+ \label{fig:diagflu1}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/diagramadeflujo2}
+\captionof{figure}{Primera parte del diagrama de flujo del funcionamiento general del sistema}
+ \label{fig:diagflu2}
+\end{center}
+
+Como se aprecia en el diagrama de flujo en las imágenes (\ref{fig:diagflu1}) y (\ref{fig:diagflu2}), una falla en el subsistema de clasificación, acarrea un error que puede traducirse en 2 posibilidades, que la pieza no sea reconocida y por tanto no sea paletizada y que la pieza sea mal clasificada y por lo tanto, mal paletizada.\\\\
+Dado que son sistemas seriados, un error en la clasificación puede acarrear un error en la paletización, si la pieza es mal clasificada, puede ser ``correctamente" paletizada. Como error propio del subsistema de paletizado se tiene la posibilidad de fallar en la intercepción de la trayectoria, y con ello dejar pasar la pieza, por lo que la salida sería una pieza no paletizada.
+\\\\
+La salida deseada del sistema es una pieza correctamente paletizada, así que se busca minimizar las salidas "erróneamente paletizada" y "mal clasificada".
+Se estima que puede lograrse al menos un 90\% de salidas deseadas.
+
+
+
+
+
+\subsection{Diseño y construcción de la banda transportadora}
+
+Requisitos del elemento:
+
+\begin{itemize}
+\item Longitud de 1.5m
+\item Superficie para sistema de visión 25x25
+\item Velocidad nominal 0.1m/s
+\item Superficie antiderrapante
+\item Facilidad para el ensamble y desensamble
+\end{itemize}
+
+\textbf{Selección de los materiales}\\\\
+Para la estructura de la banda se seleccionó un perfil IPS rectangular de aluminio con ranuras de 8 mm, debido a la facilidad para ensamblar dicho perfil. Otros parámetros para la selección fueron lo económico del material, la facilidad para maquinarse y la estética del mismo.
+\\\\
+La selección del material para los rodillos y de la cinta transportadora está íntimamente ligados por el coeficiente de fricción entre ambos materiales. En los catálogos de fabricantes de bandas ligeras se encontró que el mejor coeficiente de fricción para los materiales PVC, poliuretano y cauchos se daba para rodillos de materiales plásticos, por lo tanto se decidió elaborar los rodillos con barras de Nylacero \textregistered y provocar una textura rugosa con el torno para aumentar este coeficiente. Para determinar el radio de los rodillos se usó el radio correspondiente para bandas de caucho de hasta 3mm de espesor, estas son las bandas que requieres una mayor longitud de arco para su funcionamiento por lo que otorga flexibilidad a la estructura para montar bandas plásticas de diversos materiales en diferentes espesores.
+\\\\
+Para la los soportes de los rodillos se seleccionaron chumaceras con dimensiones acorde al diámetro de los ejes. Para el eje motriz se seleccionó una chumacera de piso y para el eje tensor una chumacera de pared.\\\\
+Se elaboró el diseño CAD sobre SolidWorks (ver figura \ref{fig:rasp1}).
+
+
+\begin{center}
+\includegraphics[scale=1]{imagenes/bandaf}
+\captionof{figure}{Diseño CAD de la banda transportadora.}
+ \label{fig:rasp1}
+ \end{center}
+
+
+ Ya que los elementos a transportar son tan ligeros, incluso con la densidad máxima de llaves de cerradura estipulada por el protocolo (4 llaves por $dcm^2$) no hay riesgo de deflexión. Por esta misma razón la fuerza de pandeo en el eje tirante es propiamente la de la banda únicamente.\\\\
+ Evidencias del trabajo realizado:
+
+ \begin{center}
+ \includegraphics[scale=0.9]{imagenes/bandafis}
+ \captionof{figure}{Fotografía de la banda trasportadora.}
+  \label{fig:rasp11}
+  \end{center}
+
+  \begin{center}
+  \includegraphics[scale=.8]{imagenes/bandafis1}
+  \captionof{figure}{Detalle del eje motriz de la banda transportadora}
+   \label{fig:rasp12}
+   \end{center}
+
+    \begin{center}
+    \includegraphics[scale=.9]{imagenes/bandafis2}
+    \captionof{figure}{Vista lateral de la banda donde se aprecian soporte motriz y tensor.}
+     \label{fig:rasp12}
+     \end{center}
+
+
+  \begin{table}[H]
+  \begin{center}
+  \begin{tabular}{|p{5cm}|l|l|}
+
+  \hline
+Elemento &  Medidas & Cantidad \\
+\hline
+Corte de IPS 28x28 & 1300 mm & 4 \\
+\hline
+Corte de IPS 28x28 & 500 mm & 2\\
+\hline
+Corte de IPS 28x28 & 380mm & 2\\
+\hline
+Corte de IPS 28x28 & 250mm & 8 \\
+\hline
+Corte de IPS 28x28 & 150mm & 2 \\
+\hline
+Corte de IPS 28x28 & 64mm & 4 \\
+\hline
+Chumacera de piso & 1 in & 2\\
+\hline
+ Chumacera de pared & 1/2 in & 2\\
+  \hline
+Soporte tensor en lámina negra & calibre 10 & 2\\
+ \hline
+ Tornillo cabeza de botón (Allen) con tuerca y arandela de presión & M8x1 in & 4\\
+  \hline
+ Tornillo cabeza de botón (Allen) & M8x3/4 in & 30\\
+   \hline
+   Tornillo cabeza de botón (Allen) con tuerca y arandela de presión & M8x 1/2 in & 8 \\
+   \hline
+ Tornillo cabeza hexagonal con tuerca & M8x1 in & 4
+  \end{tabular}
+\caption{Listado de los materiales utilizados para la construcción.}
+  \label{tabla:banda}
+  \end{center}
+  \end{table}
+
+
+
+\subsection{Subsistema de clasificación}
+
+Se contemplaron dos soluciones para el sistema de visión, un sistema embebido en un ordenador de placa reducida o placa única (SBC: single-board computer) de bajo costo (RaspberryPi, S.O. Linux) ver figura (\ref{fig:rasp} A) y un ordenador de gama media (Procesador: Intel Celeron Dual-Core T3100, S.O: Linux) ver figura (\ref{fig:rasp} B)
+
+\begin{center}
+\includegraphics[scale=1]{imagenes/rasp}
+\captionof{figure}{A) RaspberryPi B)}
+ \label{fig:rasp}
+ \end{center}
+
+ Con base en la tabla de ponderación \ref{tabla:tablac}, se concluyó que la mejor elección para el procesamiento de datos es la computadora de gama media por haber obtenido una mejor puntuación en el mayor número de parámetros en comparación. Sin embargo al ser tan estrecha la diferencia se optó por adquirir el ordenador ``RaspberryPi'' para observar su rendimiento en la adquisición y procesamiento de datos.\\\\
+ La adquisición de imágenes con este dispositivo se llevó a cabo sin ningún problema, sin embargo fue al momento que comenzar con la etapa de procesamiento que se observó una gran diferencia entre ambos ordenadores, por lo que quedó completamente descartada la posibilidad de utilizar la ``RaspberryPi''.
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+
+\hline
+   & \footnotesize Raspberry Pi & \footnotesize dv4-1622la \\
+\hline
+\footnotesize Precio & \footnotesize 780 pesos [5]& \footnotesize 2,800 pesos [3] \\
+ \hline
+\footnotesize CPU & \footnotesize ARM1176JZF-S core a700 MHz  [3]& \footnotesize Procesador Intel Celeron T3100 a 1,9 GHz [5] \\
+ \hline
+GPU & VideoCore IV, OpenGL ES 2,0 1080p Full HD  [3]& Intel Graphics Media Accelerator 4500MHD [5] \\
+ \hline
+Memoria & 256 MB SDRAM  [1]& 2 GB DDR3  [5] \\
+  \hline
+Puertos USB & 2 USB 2.0  [4]& 3 USB 2.0  [5] \\
+  \hline
+Salidas de video & RCA compuesto
+HDMI
+ [4]& Pantalla ancha de alta definición 14,1 pulgadas (1280 x 800)
+ HDMI
+ 1 VGA (15 pines)
+  [5] \\
+  \hline
+Perifericos de bajo nivel & Conector de GPIO, SPI, I2C, UART  [5]& - [0] \\
+  \hline
+Conexiones de red & 10/100 Ethernet (RJ45) [4]& LAN integrada
+10/100 Ethernet (RJ45)
+ [5] \\
+   \hline
+Fuente de alimentación & 5 Volts vía MicroUSB [5]&Batería de ion de litio de 6 celdas
+Adaptador de alimentación de 65 W
+ [5] \\
+ \hline
+Dimensiones & 85.6 mm x 53.98 mm [5]& 335 mm x 240 mm [2] \\
+ \hline
+Sistema operativo & Debian GNU/Linux, Fedora, Arch Linux [4]& Windows, Debian GNU/Linux, Fedora, Arch Linux [5] \\
+ \hline
+ \hline
+ Total & 43 & 45 \\
+  \hline
+\end{tabular}
+\caption{Tabla de ponderación}
+\label{tabla:tablac}
+\end{center}
+\end{table}
+
+
+A continuación se muestra el código base (ver figura \ref{fig:vacb}) para el cálculo de áreas, ángulos y centroides.
+
+
+\begin{center}
+\includegraphics[scale=1]{imagenes/vacb}
+\captionof{figure}{Código sobre SimpleCV para generar áreas, ángulos y centroide}
+ \label{fig:vacb}
+\end{center}
+
+Descripción del código:
+
+Líneas 3,4: Se importan las librerías para retrasos y todas las funciones de SimpleCV\\
+Línea 6: Se abre la cámara correspondiente al puerto 0\\
+Línea 8: Se inicia el bucle\\
+Línea 9: Se realiza una captura \\
+Línea 10: Se binariza\\
+Línea 11:\textbf{findBlobs()} es una función  integrada de SimpleCV que gracias al gradiente en los bordes de las imágenes y a una máscara logra identificar los diferentes objetos numerándolos en orden ascendente según los va identificando.\\
+Línea 12: Este retardo se integró para poder visualizar la información debido a la alta velocidad de procesamiento alcanzada. Durante la operación normal se eliminará.\\
+Línea 13,14,15: \textbf{blobs.area()} , \textbf{blobs.angle()}  y  \textbf{blobs.coordinates()} son otras funciones integradas las cuales nos devuelven área, ángulo y coordenadas de los centros geométricos en manera de arreglos, tal y como se muestra en la figura (\ref{fig:res5c})
+
+
+\begin{center}
+\includegraphics[scale=1]{imagenes/res5c}
+\captionof{figure}{Resultados para cinco ciclos de procesamiento}
+ \label{fig:res5c}
+\end{center}
+
+En la figura anterior se muestran los resultados para cinco ciclos de procesamiento continuo.\\\\
+Se observa que si se toman en cuenta dos decimales después del punto las áreas permanecen constantes (Las áreas se dan en número de pixeles). Respecto a los ángulos, existe una valor que es presumiblemente falso en la tercer muestra, pues la diferencia es de 15°, esto se evitará posteriormente encerrando las llaves en rectángulos antes de llamar a la función \textbf{angle()}.\\
+Finalmente el cálculo de los centroides no presenta mayor inconveniente, esta es la información más importante pues de ella depende que el robot logre interceptar y sujetar correctamente la llave.
+\\\\
+A continuación se muestra una captura realizada por la cámara:
+
+
+\begin{center}
+\includegraphics[scale=1]{imagenes/capcam}
+\captionof{figure}{Vista de las llaves después del primer procesamiento de imagen.}
+ \label{fig:capcam}
+\end{center}
+
+Dentro de los objetivos de TT2 está la optimización del sistema de visión, para poder mostrar al usuario continuamente la ejecución paso a paso en el reconocimiento de los objetos sobre un monitor que se integrará a la banda transportadora. Tal y como sucede en los escáneres de rayos x en los aeropuertos. Esto con el fin de que en caso de presentarse un error el operario pueda identificar fácilmente la causa del mismo.
+\\\\
+A continuación se ilustran los vectores que proporciona el sistema de visión artificial para n piezas sobre la banda, se comienza con el vector de áreas:
+
+
+\[
+A_{VA}=\left[
+\begin{array}{c}
+A_1\\
+A_2\\
+\vdots\\
+A_n
+\end{array}
+\right]
+\]
+
+El vector de inclinación con resecto a la horizontal:
+
+\[
+\alpha_{VA}=\left[
+\begin{array}{c}
+
+\alpha_1\\
+\alpha_2\\
+\vdots\\
+\alpha_n
+\end{array}
+\right]
+\]
+
+La matriz de coordenadas del centroide de cada llave:
+
+\[
+C_{VA}=\left[
+\begin{array}{cccc}
+x_1 & x_2 & \dots & x_n \\
+y_1 & y_2 & \dots & y_n
+\end{array}
+\right]
+\]
+
+
+
+
+\subsection{Subsistema de paletización}
+
+
+\subsubsection{Articulaciones}
+
+Los robots manipuladores se componen de eslabones conectados por articulaciones para formar una cadena cinemática. Las articulaciones son típicamente rotatorias (de revolución) o lineales (prismática). la
+articulación de revolución es como una bisagra y permite la rotación relativa entre dos enlaces.la
+articulación prismática permite un movimiento relativo lineal entre dos enlaces.(Spong et al, 2005)
+\\\\
+Cada uno de los movimientos independientes que puede realizar cada articulación con respecto a la anterior, se denomina Grado De Libertad (GDL).(Barrientos et al,1997)
+\\\\
+Como se mencionó previamente, los manipuladores son generalmente clasificados cinemáticamente con base en las tres primeras articulaciones del brazo, con lo que el robot SCARA entra en la clasificación RRP.
+\\\\
+Los grados de libertad de un manipulador robótico, están dados por las articulaciones que unen a sus eslabones, en el caso del Robot SCARA se utilizan dos articulaciones rotacionales y una cilíndrica, como las que se muestrán a continuación.
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/articulaciones}
+\captionof{figure}{Ilustración de los grados de libertad de las articulaciones de un robot SCARA}
+ \label{fig:r}
+\end{center}
+
+
+
+
+
+
+
+
+\subsubsection{Espacio de trabajo }
+
+El espacio de trabajo de un manipulador es el volumen total barrido por el efector final del manipulador que ejecuta todos los movimientos posibles. El espacio de trabajo es limitado por la geometría del manipulador así como las limitaciones mecánicas en las articulaciones (Spong,2005)
+\\\\
+La configuración clásica del SCARA (RRP), tiene un espacio de trabajo como el que se muestra a continuación:
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/Articulacionconv}
+\captionof{figure}{Diagrama de un robot SCARA con ejes de movimiento convencionales}
+ \label{fig:artconv}
+\end{center}
+
+El espacio de trabajo para la configuración de articulaciones mostrados en (\ref{fig:artconv}) se muestra a continuación:
+
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/workspace3d}
+\captionof{figure}{Ilustración del espacio de trabajo en 3D de un SCARA}
+ \label{fig:wss}
+\end{center}
+
+La configuración típica de articulaciones del robot SCARA, permite la manipulación de objetos en el plano $xy$ y el eje $z$, sin embargo para múltiples procesos industriales, se requiere la re-orientación de los objetos tomados. Para el proceso de paletizado planteado
+se requiere que las llaves sean tomadas de la banda sea cual sea su orientación, una vez interceptada, se requiere re-orientar para que sea colocada correctamente en el area de almacenaje.
+\\\\
+Por lo que se propone utilizar una articulación cilíndrica reemplazando a la articulación prismática, esquemáticamente:
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/Articulacionprop}
+\captionof{figure}{Diagrama de un robot SCARA con ejes de movimiento propuestos}
+ \label{fig:r}
+\end{center}
+
+Donde la utima articulación se descompone en 2 articualciones con un grado de libertad cada una, esto no alterará el modelo del manipulador, ya que la distancia entre las dos articulaciones será la distancia del desplazamiento del eslabón 3 y la longitud del eslabón 4 será de 0. De manera gráfica:
+
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/Articulacion4art}
+\captionof{figure}{Diagrama de un robot SCARA con articulaciones deglosadas}
+ \label{fig:r}
+\end{center}
+
+
+
+Dado que el último eslabón es de longitud cero, y que el efector final tiene un movimiento lineal, es espacio de trabajo queda sin modifcicaciones, como se ilustra en la figura (\ref{fig:wss}).
+\\\\
+Por recomendación del manual de criterios de seguridad para el uso de robots, emitido en el 8º CONGRESO IBEROAMERICANO DE INGENIERIA MECANICA, se realizan algunas consideraciones para la modificación del espacio de trabajo, esto con el fin de evitar potenciales accidentes, como el que se ilustra a continuación:
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/accidentes}
+\captionof{figure}{Ilustración de accidentes comunes}
+ \label{fig:r}
+\end{center}
+
+Las recomendaciones del manual mencionado, hablan del espacio controlado de trabajo, es decir el espacio y restricciones que aseguran no ocurran accidentes en la cercanía de operación del robot:
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/workseguridad}
+\captionof{figure}{Ilustración del espacio controlado de trabajo}
+ \label{fig:recs}
+\end{center}
+
+Para limitar el espacio de trabajo, se plantea introducir topes físicos que limiten el movimiento en el plano $xy$, para la completa seguridad en la operación, se requiere que en la instalación del robot se acoten las zonas restringidas.
+\\\\
+A continuacón se ilustra el espacio de trabajo acotado por los topes físico agregado:
+\begin{center}
+  \includegraphics[scale=0.7]{imagenes/espacio_trabajo2}
+\captionof{figure}{Ilustración del espacio controlado de trabajo del robot SCARA}
+ \label{fig:espacio de t}
+\end{center}
+
+Dadas las dimensiones de la banda transportadora, se decidió que el brazo totalmente extendido debía cubrir alrededor del 70\% de la banda, con lo que los eslabones fueron definidos de longitud 30 cm para el eslabón 1 y 17.5cm para el eslabón 2.
+
+\begin{center}
+  \includegraphics[scale=0.7]{imagenes/espacioconbanda}
+\captionof{figure}{Ilustración del espacio controlado de trabajo del robot SCARA sobre la banda transportadora}
+ \label{fig:espaciobanda}
+\end{center}
+
+
+Las medidas finales de los eslabones se detallan en el apéndice ''Planos de manufactura''.
+
+\subsubsection{Actuadores}
+Para la selección de los tres motores candidatos para ser actuadores de los dos primeros grados de libertad se consideró un límite de costo de 40 dólares para respetar el presupuesto y la accesibilidad para comprarlos o sustituirlos posteriormente en caso de avería.
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{4cm}|p{5cm}|p{3cm}|}
+
+\hline
+  Parámetros &  MOTOR A PASOS
+  23HS8430
+   & MOTOR A PASOS
+   (REDUCTOR 15:1)
+   23HS8430AG15
+    & MOTOR DE CD
+    (REDUCTOR 131:1)
+     \\
+\hline
+  &  \includegraphics[scale=0.25]{imagenes/motoreslabon2}& \includegraphics[scale=0.25]{imagenes/motoreslabon1} & \includegraphics[scale=1]{imagenes/motordescartado}\\
+ \hline
+ Costo & US \$25.54& US \$39.99 & US \$39.95 \\
+ \hline
+Par torsor & 1.8 N.m & 6.8 N.m & 1.76 N.m \\
+ \hline
+Tensión de operación & 3.5 V & 3.5 V & 12V \\
+ \hline
+ Corriente máxima & 3.0 A/fase & 3.0 A/fase & 5A \\
+  \hline
+ Masa & 1050g & 1350g & 230g \\
+  \hline
+\end{tabular}
+\caption{Tabla de Comparación de motores}
+\label{tabla:tablamot}
+\end{center}
+\end{table}
+\paragraph{Selección del actuador para el brazo }
+Para actuar la unión entre la base y el brazo quedan descartados el motor a pasos sin reductor y el motor de CD con reductor debido a que el par torsor de ambos motores está por debajo del par necesario para romper la inercia de la posición de reposo del primer grado de libertad. Esto se probó para varias trayectorias, como se muestra en la figura (\ref{fig:motoreslabon1}).
+\begin{center}
+  \includegraphics[scale=.9]{imagenes/trayectoriastorque}
+\captionof{figure}{Par torsor para actuar el brazo}
+ \label{fig:motoreslabon1}
+\end{center}
+
+\paragraph{Selección del actuador para el antebrazo}
+Para actuar la unión entre el brazo y el antebrazo, se descarta el motor a pasos con reductor por el exceso de dimensiones en longitud. En este caso, es la masa el factor decisivo para la selección por la manera en la que se plantea colocar el motor (ver figura \ref{fig:motoreslabon2}). Una masa grande sobre el brazo al extremo opuesto de la unión con el antebrazo provoca un desplazamiento del centro de masa del brazo, alineándolo verticalmente con el centro de masa del robot completo. Finalmente se confirma la decisión tomando en cuenta el factor costo y el hecho de unificar el tipo de motor para actuar ambas articulaciones.
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/colocacionmotor2}
+\captionof{figure}{Colocación del actuador para el antebrazo}
+ \label{fig:motoreslabon2}
+\end{center}
+
+\subsubsection{Sistema sensorial}
+\textbf{Criterios para la selección}
+
+
+\begin{itemize}
+\item Conocer en todo momento la posición de los eslabones, incluso después de un corte en el subministro de energía eléctrica.
+\item Con una resolución tal que el error en el posicionamiento permanezca dentro de una circunferencia de 2 mm de diámetro, siendo el centro la posición deseada.
+\end{itemize}
+
+
+A partir del primer criterio de selección se decidió usar encoders absolutos, pues no es necesario almacenar la última posición en memoria.
+\\\\
+Haciendo el análisis geométrico mostrado en la figura \ref{fig:angeo}, se determinó la resolución mínima para cumplir con el segundo criterio de selección. Y se determinó que la resolución mínima es de 12 bits, la cual corresponde a un error máximo de 0.73mm en el posicionamiento final.
+\begin{center}
+  \includegraphics[scale=1]{imagenes/angeo}
+\captionof{figure}{Análisis geométrico de los errores}
+ \label{fig:angeo}
+\end{center}
+
+Finalmente el encoder seleccionado fue de tipo absoluto, con 12 bits de resolución (de 0 a 360°) y el cual otorga la salida con un PWM (con frecuencia de 1kHz), la matrícula es XYK-BMJ-38Z6-P12 (ver figura \ref{fig:encoder}), las tablas \ref{tabla:encoderselm} y \ref{tabla:encodersele} muestran las características mecánicas y eléctricas del elemento.
+
+
+\begin{center}
+  \includegraphics[scale=0.70]{imagenes/encoder}
+\captionof{figure}{Encoder XYK-BMJ-38Z6-P12}
+ \label{fig:encoder}
+\end{center}
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+
+\hline
+  Parámetro &  Valor & Unidad \\
+\hline
+ Par de inicio&  $<6\times 10^{-3} $ & Nm \\
+ \hline
+ Inercia del rotor & $<3\times 10^{-6}$ & $Kgm^2$ \\
+ \hline
+Carga radial máxima& 60& N \\
+ \hline
+Carga axial máxima & 80& N   \\
+
+ \hline
+ Velocidad máxima & $<1600$ & rpm \\
+  \hline
+\end{tabular}
+\caption{Tabla de Parámetros mecánicos del encoder seleccionado}
+\label{tabla:encoderselm}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+
+\hline
+  Parámetro &  Valor & Unidad \\
+\hline
+ Tensión de alimentación&  4{.}75-5{.}25 & V \\
+ \hline
+ Consumo de corriente & 20 & mA \\
+ \hline
+Frecuencia de PWM & 1000& Hz \\
+ \hline
+Resolución & 12 & Bits   \\
+
+ \hline
+ Velocidad de respuesta & 2 & ms \\
+  \hline
+\end{tabular}
+\caption{Tabla de Parámetros eléctricos del encoder seleccionado}
+\label{tabla:encodersele}
+\end{center}
+\end{table}
+
+\textbf{Drivers para motores a pasos}
+\\\\
+Criterios para la selección:
+
+
+\begin{itemize}
+\item Corriente de salida.
+\item Capacidad para manejar micro-pasos, para aumentar la resolución de 200 pasos/rev del motor.
+\end{itemize}
+
+La selección resultó sencilla pues el distribuidor de los motores nos sugirió el driver correspondiente (DM542 ver figura \ref{fig:driver}), y nos proporcionó el manual de usuario en el cual encontramos características, configuraciones y diagramas de conexión.
+
+\begin{center}
+  \includegraphics[scale=0.90]{imagenes/driver}
+\captionof{figure}{Driver DM542}
+ \label{fig:driver}
+\end{center}
+
+Las características del driver se muestran en la tabla \ref{tabla:cardri}.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+
+\hline
+  Parámetros &  Mínima & Típica & Máxima \\
+\hline
+ Corriente de salida (A)& 1 & - & 4.2 (3 RMS) \\
+ \hline
+ Tensión de alimentación (VDC)& 20 & 36 & 50 \\
+ \hline
+Corriente de la señal lógica (mA) &  7 & 10 & 16 \\
+ \hline
+Frecuencia del pulso de entrada (KHz) & 0 & - & 200   \\
+
+ \hline
+ Ancho de pulso ($\mu s$) & 2.5 & - & - \\
+  \hline
+Tensión de pulso (VDC) & 5 & - & 24 \\
+  \hline
+\end{tabular}
+\caption{Características eléctricas del driver seleccionado}
+\label{tabla:cardri}
+\end{center}
+\end{table}
+
+Para la conexión del driver con nuestro controlador el fabricante propone dos configuraciones: colector abierto (ánodo común) o conexión a señal PNP (cátodo común). Se decidió trabajar en colector abierto pues es la conexión típica (ver imagen \ref{fig:colab}).
+
+\begin{center}
+  \includegraphics[scale=0.70]{imagenes/colab}
+\captionof{figure}{Diagrama típico de conexión driver DM542}
+ \label{fig:colab}
+\end{center}
+
+
+\subsubsection{Transmisiones}
+
+
+\textbf{Transmisión  primer grado de libertad (brazo)}
+\\\\
+Criterios para la selección:
+
+\begin{itemize}
+\item Fácil ajuste al diámetro del eje del brazo (50mm) y al eje del motor (8mm)
+\item Alto rendimiento
+\item Provocar cargas bajas en rodamientos
+\item Precisión
+\end{itemize}
+
+Debido al diámetro del eje del brazo (50mm) tanto engranaje como polea deberán ser barrenados (ver figura \ref{fig:engrane1} B) para introducirse en el eje. La distancia entre ejes puede variar entre 70 y 80 mm esto se determinó tomando en cuenta las dimensiones del motor seleccionado.
+\\\\
+Los elementos que cumplen con estos diámetros son:
+
+
+
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/engrane1}
+\captionof{figure}{Vista isométrica de los elementos seleccionados A) sin modificación B) elementos modificados}
+ \label{fig:engrane1}
+\end{center}
+
+Respondiendo al primer criterio se considera que el mejor ajuste se obtendrá con el engrane, tanto para el eje por el escalón proporcionado que nos ayuda a mantener ambos elementos concéntricos como para el rotor del motor donde no será necesaria modificación alguna.\\\\
+El rendimiento de un engrane es superior al de una polea dentada. Ambos elementos ofrecen cargas bajas a los rodamientos. Por precisión, el engrane reitera su superioridad frente a la polea, por consiguiente se determinó que el mejor elemento para esta transmisión es el engrane A 1M 2MYZ10075A.
+
+
+\textbf{Transmisión  segundo grado de libertad (brazo)}
+\\\\
+Criterios para la selección:
+\begin{itemize}
+\item Rendimiento superior al 95\% en transmisión de potencia entre ejes
+\item -	Transmitir dicha potencia a una distancia de 300mm en un área no superior a la del primer eslabón.
+\item Alto sincronismo en la marcha
+\item Mantenimiento sencillo
+\end{itemize}
+
+Tanto un tren de engranajes como una transmisión polea-correa cumplen sin dificultad con el primero, el tercero y el cuarto criterio. El criterio decisivo es la distancia de transmisión, al utilizar un tren de engranajes necesitaríamos disponer de manera lineal al menos cuatro engranes para transmitir potencia en la longitud deseada. Lo cual tendría como consecuencia una transmisión menos silenciosa y menos suave. Dicho lo anterior se decidió usar una transmisión por polea-correa síncrona, la cual tiene como principales características:
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{7cm} p{7cm}}
+
+
+\begin{itemize}
+\item Transmiten altas cargas.
+\item Bajo ruido.
+\item No necesitan lubricación.
+\item Gran sincronismo en la marcha.
+\end{itemize}
+ &
+\begin{itemize}
+\item Alto rendimiento, superior al 96\%.
+\item Transmiten potencia con un tamaño compacto.
+\item Los dientes de caucho absorben impactos en los arranques y/o paradas.
+
+\end{itemize}
+\end{tabular}
+
+\end{center}
+\end{table}
+
+La trasmisión se realizará en dos secciones (cada una de 150mm) las cuales corresponden a la mitad de la longitud. Para evitar que la banda tome holgura extrema como consecuencia del envejecimiento natural.\\\\
+Las poleas y las bandas seleccionadas son de denominación MXL (Mini Extra Light) la figura \ref{fig:copo} muestra ambos elementos.
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/copo}
+\captionof{figure}{ Correa A 6Z16M208080 y polea A 6A16M060DF9506}
+ \label{fig:copo}
+\end{center}
+
+La trasmisión propuesta requiere de 4 poleas y dos bandas, esto se ilustra de mejor manera con las figuras \ref{fig:vss} y \ref{fig:vls}:
+
+
+\begin{center}
+  \includegraphics[scale=.8]{imagenes/vss}
+\captionof{figure}{Vista superior de la transmisión para el segundo grado de libertad (antebrazo).}
+ \label{fig:vss}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.7]{imagenes/vls}
+\captionof{figure}{Vista lateral de la transmisión para el segundo grado de libertad (antebrazo).}
+ \label{fig:vls}
+\end{center}
+
+\textbf{Transmisión  tercer grado de libertad (desplazamiento vertical)}
+\\\\
+Criterios para la selección:
+\begin{itemize}
+\item Actuador de peso ligero
+\item Capacidad para hacer un ciclo de subida y bajada en aproximadamente 1 segundo.
+\item Capacidad de carga mínima de 200g
+\end{itemize}
+
+Por tener ya un controlador integrado y la sencillez para su manipulación se eligió como actuador el servomotor Hitec HS422 (ver figura \ref{fig:servos}), el cual tiene una masa de 45.5 gramos y una desplazamiento angular de 60° en 0.16 segundos (6.545 rad/s).
+\begin{center}
+  \includegraphics[scale=1]{imagenes/servos}
+\captionof{figure}{Servomotor seleccionado como actuador para el tercer grado de libertad.}
+ \label{fig:servos}
+\end{center}
+
+Para lograr el segundo criterio de selección se diseñó un sistema de biela-manivela para transformar el desplazamiento rotacional en desplazamiento lineal y se corroboró su funcionamiento elaborando el mecanismo en WorkingModel (ver figura \ref{fig:biela}), posteriormente se exportaron los datos a Matlab, para comprobar que efectivamente se completaba un ciclo en un segundo (ver figura \ref{fig:resob}).
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/biela}
+\captionof{figure}{Simulación del mecanismo biela-manivela}
+ \label{fig:biela}
+\end{center}
+
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/resob}
+\captionof{figure}{Evidencia del desplazamiento obtenido (Un ciclo de bajada y subida toma 1.042 segundos).}
+ \label{fig:resob}
+\end{center}
+
+La transmisión para el tercer grado de libertad (engranes rectos) se imprimió en polímero PLA. A continuación se muestra el modelo del mecanismo (ver figura \ref{fig:mecbie}):
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/mecbie}
+\captionof{figure}{Mecanismo biela manivela.}
+ \label{fig:mecbie}
+\end{center}
+
+donde los colores corresponde a:
+
+Rojo: Piñón (Acoplado al servomotor con el tornillo proporcionado por el fabricante.
+\\\\
+Verde: Manivela.
+\\\\
+Azul: Biela.
+\\\\
+Gris: Cuerpo del mecanismo.
+\\\\
+El mecanismo biela-manivela se repite de manera simétrica al otro lado del cuerpo.
+
+
+
+
+\subsubsection{Tercer eslabón}
+El diseño realizado para trabajo terminal 1 concluyó con la impresión de piezas en ABS por medio de impresión 3D para la construcción de un eslabón con 2 grados de libertad, uno prismático y otro rotacional, losm cuales se ilustran en la figura: (\ref{fig:efector}), las primeras pruebas que se realizaron demostraron que las piezas impresas no permitirían alcanzar el grado de precisión que se busca, por tanto se optó por rediseñar el tercer eslabón.
+
+
+\begin{center}
+  \includegraphics[scale=0.70]{imagenes/efector}
+\captionof{figure}{Eslabón diseñado con grados de libertad ilustrados}
+ \label{fig:efector}
+\end{center}
+
+En la sección de implementación se detalla el rediseño de este eslabón.
+
+\subsubsection{Efector final}
+Para la ventosa se consideró la fuerza de aspiración, el diámetro de la ventosa, su forma para poder tener un acoplamiento correcto al eslabón 3, así como su peso.\\
+
+La ventosa PFYN 3.5 SI-55 M3-AG por Schmalz, cubre estos requerimientos es la opción más viable que se encontró de manera electrónica, con la cual tenemos parámetros para hacer una búsqueda de más cercana a nuestra localidad. Las características de esta ventosa se mencionan en la tabla \ref{tabla:Ventosa PFYN}.
+
+
+\begin{center}
+  \includegraphics[scale=0.50]{imagenes/ventosa_elegida}
+\captionof{figure}{Ventosa PFYN 3.5 SI-55 M3-AG}
+ \label{fig:efector}
+\end{center}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l | l|}
+\hline
+Tamaño & 3.5 null\\
+\hline
+Material & Silicona SI\\
+\hline
+Fuerza Aspiración[N] & 0.42N\\
+\hline
+Volumen[cm$^{3}$] & 0.0020 cm$^{3}$\\
+\hline
+Diametro interior tubo recom. d [mm]& 2.0 mm\\
+\hline
+Radio de curvatura min [mm] & 7.5 mm\\
+\hline
+Dureza del material & 55.0° Sh \\
+\hline
+Peso [g] & 1.0 g\\
+\hline
+\end{tabular}
+\caption{Características de la ventosa PFYN 3.5 SI-55 M3-AG}
+\label{tabla:Ventosa PFYN}
+\end{center}
+\end{table}
+
+
+\subsubsection{Materiales}
+La selección de materiales para el robot artículado contempló inicialmente dos posibilidades, aluminio 6061 y nylacero mecánico, esto debido a la relativa ligereza de los materiales.
+\\\\
+Se evaluaron algunas de las propiedades más importantes a cubrir dadas las tareas del manipulador, se llegó a la conclusión de que las más importantes son las que se muestran en la siguiente tabla:
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+
+\hline
+   &  Alumnino 6061 & Nylacero mecánico \\
+\hline
+ Densidad &  2.7g/$cm^3$ [2]&  1.14 g/$cm^3$ [5] \\
+ \hline
+ Costo aproximado $in^3$ & 1.5 \$ [5]&  7\$ [1] \\
+ \hline
+Módulo de flexión & 69500 Mpa  [5]& 27900 Mpa [3] \\
+ \hline
+Elongación & 16\% [5]& 27\%   [3] \\
+ \hline
+ \hline
+ Total & 17 & 12 \\
+  \hline
+\end{tabular}
+\caption{Tabla de ponderación de materiales}
+\label{tabla:tablamat}
+\end{center}
+\end{table}
+
+
+Se utiliza la elongación, debido a que los fabricantes de nylacero mecánico no proveen de datos como el esfuerzo de fluencia, se pondera el módulo de flexión debido a que los elementos del brazo manipulador estarán sometidos en su mayoría a esfuerzos causados por la flexión.\\\\
+En un principio se pensó en el nylacero debido a su baja densidad (menos de la mitad del aluminio), pero al realizar algunas simulaciones, el módulo de tensión resultaba insuficiente, por lo que había que incrementar la sección, lo que igualaba prácticamente el peso con la alternativa utilizando aluminio 6061, sumado a esto, el costo arpoximado del nylacero es bastante más elevador que el del aluminio\\\\
+Como se aprecia en la tabla (\ref{tabla:tablamat}), el aluminio resulta superior al nylacero mecánico dadas las ponderaciones.
+
+\newpage
+
+\subsection{Modelado del robot SCARA}
+
+Una de las más grandes ventajas del robot SCARA es la configuración sus articulaciones, dado que estas se encuentran con el eje $z$ alineado, sumado a esto, el seguimiento de trayectorias esta dado, en el plano xy por los dos primeros eslabones, por lo que se propone realizar el modelo dinámico únicamente para los dos primeros eslabones y para los restantes se planea obtener únicamente el modelo cinemático.
+\\\\
+A continuación se presenta el modelo cinématico y cinematico inverso del robot SCARA de 4 GDL, sin contar el efector final, en especial se hace enfasis en la cinemática inversa debido a que esta es parte medular en el control del sistema.
+
+\subsubsection{Parámetros de Denavit-Hartemberg (cinemática directa)}
+
+A continuación se muestra un representación esquemática del robot SCARA con los respectivos marcos de referencia a los eslabones, las articulaciones de revoluta se denotan por puntos y la articulación prismática por un rectángulo:
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/scaracineinv}
+\captionof{figure}{Representación esquemática del robot SCARA}
+ \label{fig:cd}
+\end{center}
+
+
+Se presentan a continuación los parámetros de Denavit-Hartemberg asociados al robot SCARA de 4 GDL.
+
+
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{c|c c c c}
+
+$i$ \hspace{0.5cm} & \hspace{0.5cm} $a_i$  &\hspace{0.5cm}  $\alpha_i$& \hspace{0.5cm} $\theta_i$ \hspace{0.5cm} & \hspace{0.5cm} $d_i$  \\
+\hline
+1 \hspace{0.5cm} & \hspace{0.5cm} $a_1$ & \hspace{0.5cm} 0  &\hspace{0.5cm}$\theta_1$ & \hspace{0.5cm} 0 \\
+2 \hspace{0.5cm} & \hspace{0.5cm} $a_2$ & \hspace{0.5cm} 180  &\hspace{0.5cm}$\theta_2$ & \hspace{0.5cm} 0 \\
+3 \hspace{0.5cm} & \hspace{0.5cm} 0 & \hspace{0.5cm} 0  &\hspace{0.5cm} 0 & \hspace{0.5cm} $d_3$\\
+4 \hspace{0.5cm} & \hspace{0.5cm} 0 & \hspace{0.5cm} 0  &\hspace{0.5cm} $\theta_4$ & \hspace{0.5cm} $d_4$
+
+\end{tabular}
+\caption{Tabla de parámetros de Denavit-Hartemberg}
+\label{tabla:sencilla}
+\end{center}
+\end{table}
+
+
+A continuación se muestran las matrices referidas a los eslabones del robot mostrado en la figura (\ref{fig:cd}).
+
+\[
+A_0^1=\left[
+\begin{array}{cccc}
+c\theta_1 & -s\theta_1 & 0 & a_1c\theta_1 \\
+s\theta_1 & c\theta_1 & 0 & a_1s\theta_1 \\
+0& 0 & 1 & 0\\
+0& 0 & 0 & 1
+
+\end{array}
+\right]
+\]
+
+\[
+A_1^2=\left[
+\begin{array}{cccc}
+c\theta_2 & s\theta_2 & 0 & a_2c\theta_2\\
+s\theta_2 & -c\theta_2 & 0 & a_2s\theta_2 \\
+0& 0 & -1 & 0\\
+0& 0 & 0 & 1
+
+\end{array}
+\right]
+\]
+
+\[
+A_2^3=\left[
+\begin{array}{cccc}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0& 0 & 1 & d_3\\
+0& 0 & 0 & 1
+
+\end{array}
+\right]
+\]
+
+
+\[
+A_3^4=\left[
+\begin{array}{cccc}
+c\theta_4 & -s\theta_4 & 0 & 0\\
+s\theta_4 & c\theta_4 & 0 & 0 \\
+0& 0 & 1 & d_4\\
+0& 0 & 0 & 1
+
+\end{array}
+\right]
+\]
+
+Como se expuso en el marco teórico:
+
+$$A_0^4= A_0^1A_1^2A_2^3A_3^4$$
+
+Una vez realizada las operaciones, la matriz que describe las transformaciones de rotación y traslación desde el sistema coordenado $0$ hasta el sistema coordenado $4$ (coincide con el sistema coordenado $3$), como se aprecia, el sistema coordenado $3$ influye únicamente en la orientación, no así en posición:
+
+
+$$A_0^4= \left[
+\begin{array}{cccc}
+c(\theta_1)c(\theta_2-\theta_4)-s(\theta_1)s(\theta_2+\theta_4) & c(\theta_1-\theta_4)s(\theta_2)-c(\theta_2)s(\theta_1+\theta_4) & 0 & a_1c(\theta_1)+ a_2c(\theta_1+\theta_2)\\
+c(\theta_1-\theta_4)s(\theta_2)+c(\theta_2)s(\theta_1+\theta_4) & c(\theta_1-\theta_2)c(\theta_4)-s(\theta_1+\theta_2)s(\theta_4) & 0 & a_1s(\theta_1)+ a_2s(\theta_1+\theta_2) \\
+0& 0 & -1 & -d_3-d_4\\
+0& 0 & 0 & 1
+
+\end{array}
+\right]$$
+
+
+\subsubsection{Cinemática inversa}
+
+A continuación se muestra la vista superior del manipulador mostrado en (\ref{fig:cd}):
+
+
+
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/cineinvsup}
+\captionof{figure}{Vista superior del robot SCARA}
+ \label{fig:cis}
+\end{center}
+
+
+De la figura (\ref{fig:cis}), se observa el punto $p=(p_x,p_y)$ donde se ubicaría el efector final, precisamente donde se debe calcular la cinemática inversa. Se observa que el ángulo $\theta_1$ está dado por:
+
+
+$$\theta_1=\phi-\alpha$$
+
+Por ley de cosenos:
+
+$$p_x^2+p_y^2=a_1^2+a_2^2-2a_1a_2cos(180-\theta_2)$$
+
+despejando $cos(\theta_2)$
+
+$$cos(\theta_2)=\frac{p_x^2+p_y^2-a_1^2-a_2^2}{2a_1a_2}:=D$$
+
+Por identidad trigonométrica:
+
+$$sen(\theta_2)=\sqrt{1-D^2}$$
+
+
+por lo que se puede expresar $\theta_2$ como:
+
+$$\theta_2=\arctan\left( \frac{\sqrt{1-D^2}}{D}\right)$$
+
+El ángulo $\phi$ mide la inclinación de la resultante de la suma de los eslabones $a_1$ y $a_2$, por tanto podemos expresarlo como:
+
+$$\phi=\arctan\left( \frac{p_y}{p_x} \right) $$
+
+El ángulo $\alpha$, representa la diferncia angular entre la resultante de la suma vectorial de los eslabones $a_1+a_2$ y el eslabon $a_1$, utilizando la ley de senos:
+
+$$\frac{sen(\alpha)}{a_2}=\frac{sen(\theta_2-\alpha)}{a_1}$$
+
+Utilizando identidades trigonométricas:
+
+
+$$\frac{sen(\alpha)}{a_2}=\frac{sen(\theta_2)cos(\alpha)-sen(\alpha)cos(\theta_2)}{a_1}$$
+
+despejando $\alpha$:
+
+$$\alpha=\arctan\left( \frac{a_2sen(\theta_2)}{a_1+a_2cos(\theta_2)} \right)$$
+
+$$\alpha=\arctan\left( \frac{a_1\sqrt{1-D^2}}{a_1+a_2D} \right)$$
+
+El ángulo $\theta_3$ se mide con respecto a los ángulos anteriores, dado que el eslabón $a_3$ es de longitud 0, con lo que:
+
+$$\theta_4=\mu-\theta_1-\theta_2$$
+
+A continuación se muestra la vista frontal del manipulador:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/cineinvfront}
+\captionof{figure}{Vista frontra del robot SCARA}
+ \label{fig:cif}
+\end{center}
+
+De donde se observa:
+
+
+$$d_3=d_1-p_z$$
+
+
+
+\subsubsection{Modelo dinámico de los dos primeros eslabones robot SCARA}
+
+Como se mencionó en el marco teórico, el modelo cinemático no contempla las fuerzas que originan el movimiento, por tanto, para lograr un seguimiento de trayectoria más confiable, se opta por realizar el modelo dinámico de los eslabones que trabajan en el plano $xy$.
+\\\\
+A continuación se muestra el diagrama de los dos primero eslabones del robot SCARA, se hace una reducción de sección para asegurar un centro de masa más cercano al origen, con lo que se logra menos brazo de palanca con respecto a la masa de los eslabones, y una menor inercia:
+
+\begin{center}
+  \includegraphics[scale=0.75]{imagenes/Robot}
+\captionof{figure}{Diagrama de los dos primeros eslabones del robot SCARA}
+ \label{fig:r}
+\end{center}
+
+Inicialmente se realiza el modelo contemplando la fuerza de la gravedad, sin embargo puesto que dicha fuerz no actua en el plano $g=0$.
+\\\\
+La posición del centro de masa del primer eslabón está dado por:
+
+\begin{equation}
+\label{eqn:pos1x}
+x_{c1}=\ell_{c1}sen(q_1)
+\end{equation}
+
+\begin{equation}
+\label{eqn:pos1y}
+y_{c1}=-\ell_{c1}cos(q_1)
+\end{equation}
+
+Para el eslabón 2:
+
+\begin{equation}
+\label{eqn:pos2x}
+x_{c2}=\ell_{1}sen(q_1)+\ell_{c2}sen(q_1+q_2)
+\end{equation}
+
+\begin{equation}
+\label{eqn:pos2y}
+y_{c2}=-\ell_{1}cos(q_1)-\ell_{c2}cos(q_1+q_2)
+\end{equation}
+
+
+La velocidad del centro de masa se obtiene derivando las ecuaciones (\ref{eqn:pos1x}),  (\ref{eqn:pos1y}), (\ref{eqn:pos2x}) y (\ref{eqn:pos2y}):
+
+\begin{equation}
+\label{eqn:vel1x}
+\dot{x_{c1}}=\ell_{c1}\dot{q_1}cos(q_1)
+\end{equation}
+
+\begin{equation}
+\label{eqn:vel1y}
+\dot{y_{c1}}=\ell_{c1}\dot{q_1}sen(q_1)
+\end{equation}
+
+\begin{equation}
+\label{eqn:vel2x}
+\dot{x_{c2}}=\ell_{1}\dot{q_1}cos(q_1)+\ell_{c2}(\dot{q_1}+\dot{q_2})cos(q_1+q_2)
+\end{equation}
+
+\begin{equation}
+\label{eqn:vel2y}
+\dot{y_{c2}}=\ell_{1}\dot{q_1}sen(q_1)+\ell_{c2}(\dot{q_1}+\dot{q_2})sen(q_1+q_2)
+\end{equation}
+
+
+Obtenemos la energía cinética.
+
+\begin{equation}
+\label{eqn:ec1}
+k_1=\frac{1}{2}m_1v_1^2 + \frac{1}{2}I_1\dot{q_1}^2
+\end{equation}
+\begin{equation}
+\label{eqn:ec2}
+k_2=\frac{1}{2}m_2v_2^2 + \frac{1}{2}I_2(\dot{q_1}^2+\dot{q_2}^2)
+\end{equation}
+
+donde
+$m_1$ es la masa del eslabón 1, $m_2$ es la masa del eslabón 2, $I_1$ es el momento de inercia del eslabón 1,$I_2$ es el momento de inercia del eslabón 2, y
+\begin{center}
+$v_1=\begin{bmatrix}{\dot{x_{c1}}}\\{\dot{y_{c1}}}\end{bmatrix}$
+\\
+$ v_1^2=v_1^Tv_1=\dot{x_{c1}^2}+\dot{y_{c1}^2}=\ell_{c1}^2\dot{q_1}^2[cos^2(q_1)+sen^2(q_1)]$
+\\
+$v_2=\begin{bmatrix}{\dot{x_{c2}}}\\{\dot{y_{c2}}}\end{bmatrix}$
+
+$v_2^2=v_2^Tv_2=\dot{x_{c2}}^2+\dot{y_{c2}}^2=
+{\ell_{1}}^2{\dot{q_1}}^2{cos}^2(q_1)+{\ell_{c2}}^2{(\dot{q_1}+\dot{q_2})}^2{cos}^2(q_1+q_2)+2\ell_{1}\dot{q_1}cos(q_1)\ell_{c2}(\dot{q_1}+\dot{q_2})cos(q_1+q_2)
++{\ell_{1}}^2{\dot{q_1}}^2{sen}^2(q_1)+{\ell_{c2}}^2{(\dot{q_1}+\dot{q_2})}^2{sen}^2(q_1+q_2)+2\ell_{1}\dot{q_1}sen(q_1)\ell_{c2}(\dot{q_1}+\dot{q_2})sen(q_1+q_2)$
+
+
+\end{center}
+
+Dada la identidad trigonométrica $cos^2(x)+sen^2(x)=1$, se tiene
+
+
+
+\begin{equation}
+\label{eqn:vv1}
+v_1^2=\ell_{c1}^2\dot{q_1}^2
+\end{equation}
+
+\begin{equation}
+\label{eqn:vv2}
+v_2^2=\ell_1^2\dot{q_1}^2+\ell_{c2}^2(\dot{q_1}^2+2\dot{q_1}\dot{q_2}+\dot{q_2}^2)+2\ell_1\ell_{c2}\dot{q_1}(\dot{q_1}+\dot{q_2})cos(q_2)
+\end{equation}
+
+
+sustituyendo (\ref{eqn:vv1}) en (\ref{eqn:ec1}):
+
+\begin{equation}
+\label{eqn:ec11}
+k_1=\frac{1}{2}m_1\ell_{c1}^2\dot{q_1}^2 + \frac{1}{2}I_1\dot{q_1}^2
+\end{equation}
+
+sustituyendo (\ref{eqn:vv2}) en (\ref{eqn:ec2}):
+
+
+\begin{align}
+ \label{eqn:ec21}
+ \nonumber
+k_2
+&=\frac{1}{2}m_2[\ell_1^2\dot{q_1}^2+\ell_{c2}^2(\dot{q_1}^2+2\dot{q_1}\dot{q_2}+\dot{q_2}^2)+2\ell_1\ell_{c2}\dot{q_1}(\dot{q_1}+\dot{q_2})cos(q_2)]+\frac{1}{2}I_2(\dot{q_1}^2+\dot{q_2}^2)
+\end{align}
+
+Procedemos a obtener la energia potencial:
+
+\begin{equation}
+\label{eqn:ep}
+u=mgh
+\end{equation}
+
+donde g es la fuerza de la gravedad y $h$ es la altura del centro de masa del eslabón con respecto al origen:
+
+%\textcolor{LimeRed}{Aquí va una imagen ilustrativa}
+
+\begin{center}
+$h_1=\ell_{c1}-\ell_{c1}cos(q_1)$
+\end{center}
+
+\begin{center}
+$h_2=\ell_{1}(1-cos(q_1))+\ell_{c2}(1-cos(q_1+q_2))$
+\end{center}
+
+
+sustituyendo en (\ref{eqn:ep}):
+
+
+\begin{equation}
+\label{eqn:ep1}
+u_1=m_1g\ell_{c1}(1-cos(q_1))
+\end{equation}
+
+\begin{equation}
+\label{eqn:ep2}
+u_2=m_2g(\ell_{1}(1-cos(q_1))+\ell_{c2}(1-cos(q_1+q_2)))
+\end{equation}
+
+
+Vamos a proceder a construir el Lagragiano:
+
+\begin{center}
+$\mathcal{L}=k-u$
+\end{center}
+
+donde $k=k_1+k_2$ y $u=u_1+u_2$
+
+\begin{align}
+ \label{eqn:kT}
+ \nonumber
+k
+=&\frac{1}{2}(m_1\ell_{c1}^2\dot{q_1}^2+m_2[\ell_1^2\dot{q_1}^2+\ell_{c2}(\dot{q_1}^2+2\dot{q_1}\dot{q_2}+\dot{q_2}^2)+\\
+&2\ell_1\ell_{c2}\dot{q_1}(\dot{q_1}+\dot{q_2})[cos(q_1)cos(q_1+q_2)+sen(q_1)sen(q_1+q_2)]])
+&+\frac{1}{2}(I_1\dot{q_1}^2+I_2(\dot{q_1}^2+\dot{q_2}^2))
+\end{align}
+  %y &= (x+1)^2 \\
+   % &= x^2+2x+1
+\begin{equation}
+\label{eqn:epT}
+u=m_1g\ell_{c1}(1-cos(q_1))+m_2g(\ell_{1}(1-cos(q_1))+\ell_{c2}(1-cos(q_1+q_2)))
+\end{equation}
+
+Se sustituye (\ref{eqn:kT})y (\ref{eqn:epT})en las ecuaciones de movimiento de Euler-Lagrange:
+
+\begin{equation}
+\label{eqn:eulag1}
+\frac{d}{dt}\left(\frac{\partial \mathcal{L}}
+{\partial \dot{q_1}}\right)-\frac{\partial \mathcal{L}}
+{\partial q_1}=\tau_1
+\end{equation}
+
+\begin{equation}
+\label{eqn:eulag2}
+\frac{d}{dt}\left(\frac{\partial \mathcal{L}}
+{\partial \dot{q_2}}\right)-\frac{\partial \mathcal{L}}
+{\partial q_2}=\tau_2
+\end{equation}
+
+
+Quedando:
+
+
+
+
+\begin{align}
+\label{eqn:tao1}
+\nonumber
+&(m_1\ell_{c1}^2+m_2\ell_{1}^2+m_2\ell_{c2}^2+2m_2\ell_{1}\ell_{c2}cos(q2) + I_1 + I_2)\ddot{q_1}+(m_2\ell_{c2}^2+m_2\ell_{1}\ell_{c2}cos(q2)+I_2)\ddot{q_2}\\
+&-2m_2\ell_{1}\ell_{c2}sen(q_2)\dot{q_1}\dot{q_2}+m_2\ell_{1}\ell_{c2}sen(q_2)\dot{q_2}^2+(m_1\ell_{c1}+m_2\ell_{1})gsen(q_1)+m_2g\ell_{c2}sen(q_1+q_2)=\tau_1
+\end{align}
+
+\begin{equation}
+\label{eqn:tao2}
+(m_2\ell_{c2}^2+m_2\ell_{1}\ell_{c2}cos(q_2)+I_2)\ddot{q_1}+(m_2\ell_{c2}^2+I_2)\ddot{q_2}+m_2\ell_{1}\ell_{c2}\dot{q_1}^2sen(q_2)+m_2g\ell_{c2}sen(q_1+q_2)=\tau_2
+\end{equation}
+
+Denominamos los coeficientes:
+
+
+\begin{align*}
+\label{eqn:coef1}
+A_1&=(m_1\ell_{c1}^2+m_2\ell_{1}^2+m_2\ell_{c2}^2+2m_2\ell_{1}\ell_{c2}cos(q2) + I_1 + I_2)\\
+A_2&=(m_2\ell_{c2}^2+m_2\ell_{1}\ell_{c2}cos(q2)+I_2)\\
+A_3&=-2m_2\ell_{1}\ell_{c2}sen(q_2)\dot{q_1}\dot{q_2}\\
+A_4&=m_2\ell_{1}\ell_{c2}sen(q_2)\dot{q_2}^2\\
+A_5&=(m_1\ell_{c1}+m_2\ell_{1})gsen(q_1)+m_2g\ell_{c2}sen(q_1+q_2)\\\\
+B_1&=(m_2\ell_{c2}^2+m_2\ell_{1}\ell_{c2}cos(q_2)+I_2)\\
+B_2&=(m_2\ell_{c2}^2+I_2)\\
+B_3&=m_2\ell_{1}\ell_{c2}\dot{q_1}^2sen(q_2)\\
+B_4&=m_2g\ell_{c2}sen(q_1+q_2)
+\end{align*}
+
+Quedando los torques como:
+
+
+
+\begin{equation}
+\label{eqn:tau1A}
+\tau_1=A_1\ddot{q_1}+A_2\ddot{q_2}+A_3+A_4+A_5
+\end{equation}
+
+\begin{equation}
+\label{eqn:tau2A}
+\tau_2=B_1\ddot{q_1}+B_2\ddot{q_2}+B_3+B_4
+\end{equation}
+
+
+Una vez que se tiene el modelo dinámico, se lleva a la forma matricial, ilustrada anteriormente en (\ref{formatricial0}):
+
+
+\begin{equation}
+\label{formatricial}
+M(q)\ddot{q}+C(q,\dot{q})\dot{q}+G(q)=\tau
+\end{equation}
+
+donde
+
+$$M(q)=\left[
+\begin{array}{cc}
+(m_1\ell_{c1}^2+m_2\ell_{1}^2+m_2\ell_{c2}^2+2m_2\ell_{1}\ell_{c2}cos(q2) + I_1 + I_2) & (m_2\ell_{c2}^2+m_2\ell_{1}\ell_{c2}cos(q2)+I_2)\\
+(m_2\ell_{c2}^2+m_2\ell_{1}\ell_{c2}cos(q_2)+I_2) & (m_2\ell_{c2}^2+I_2)
+\end{array}
+\right]
+$$
+
+La matriz de coriolis queda:
+
+$$C(q,\dot{q})=\left[
+\begin{array}{cc}
+-2m_2\ell_{1}\ell_{c2}sen(q_2)\dot{q_1}\dot{q_2} & m_2\ell_{1}\ell_{c2}sen(q_2)\dot{q_2}^2\\
+m_2\ell_{1}\ell_{c2}\dot{q_1}^2sen(q_2) & 0
+\end{array}
+\right]
+$$
+
+Se genera el vector de gravedad:
+
+$$G(q)=\left[
+\begin{array}{c}
+(m_1\ell_{c1}+m_2\ell_{1})gsen(q_1)+m_2g\ell_{c2}sen(q_1+q_2)\\
+m_2g\ell_{c2}sen(q_1+q_2)
+\end{array}
+\right]
+$$
+
+$$\tau=\left[
+\begin{array}{c}
+\tau_1 \\
+\tau_2
+\end{array}
+\right]
+$$
+\\
+
+$$q=\left[
+\begin{array}{c}
+q_1\\
+q_2
+\end{array}
+\right]
+$$
+
+\newpage
+
+\subsection{Control del robot SCARA}
+
+Como fue mostrado en la sección de modelado, se realizaó el modelo dinámico únicamente de los dos primeros eslabones, estos debido a que en el plano $xy$ es donde se realiza el seguimiento de trayectoria, si al modelo se le agrega el tercer eslabón, se aumenta el tiempo de procesamiento, por lo que la resolución del control seria más lenta y robusta.\\\\
+Para el eslabón 3 se propone un control On-Off para la articuolación prismática   debido a que se conocen las dos posiciones necesarias para alcanzar las llaves en el eje $z$.
+\\\\
+Por otro lado, para la articulación rotacional del eslabón 3, se conoce la orientación de la llave con respecto a la horizontal y se conoce a su vez la orientación necesaria para paletizar la llave, con lo que se resuelve la orientación del tercer eje. Así mismo, se conocen las dos posiciones para el actuador lineal, con lo que basta un control on-of para controlar el eslabón 3.
+\\\\
+A continuación se presenta el control propuesto para los dos primeros eslabones:
+
+
+
+
+\subsubsection{Dinámica inversa}
+
+De la ecuación (\ref{formatricial}), es posible conocer las constantes del sistema, (masa de los eslabones, longitud al centro de masa, momentos de inercia, etc), podemos medir la posición y la velocidad por medio de sensores, sin emabargo, realizar mediciones de aceleración es un poco mas complicado. Por tanto, se porpone una aceleración deseada:
+
+\begin{equation}
+\label{Vaux}
+V_{aux}=\left[
+\begin{array}{c}
+V_{aux1}\\
+V_{aux2}
+\end{array}
+\right]
+\end{equation}
+
+Sustituyendo (\ref{Vaux}) en (\ref{formatricial}) tenemos:
+
+\begin{equation}
+\label{formatricialpdg}
+M(q)V_{aux}+C(q,\dot{q})\dot{q}+G(q)=\tau
+\end{equation}
+
+ Dado que M es invertible, despejamos $\ddot{q}$ de (\ref{formatricial}):
+
+
+ \begin{equation}
+ \label{q2ppm}
+ \ddot{q}=M^{-1}(q)\left\lbrace \tau-C(q,\dot{q})\dot{q}- G(q) \right\rbrace
+ \end{equation}
+
+
+  Combinamos las ecuaciones  (\ref{formatricial}) y (\ref{formatricialpdg}):
+
+ \begin{equation}
+ \label{inversepdg}
+ \left[
+ \begin{array}{c}
+ \ddot{q_1}\\
+ \ddot{q_2}
+ \end{array}
+ \right]=M^{-1}(q)\left\lbrace M(q)Vaux+C(q,\dot{q})\dot{q}+G(q)-C(q,\dot{q})\dot{q}- G(q) \right\rbrace
+ \end{equation}
+
+ Con lo que obtenemos:
+
+ \begin{equation}
+ \label{estabi}
+ \left[
+ \begin{array}{c}
+ \ddot{q_1}\\
+ \ddot{q_2}
+ \end{array}
+ \right]=\left[
+ \begin{array}{c}
+ V_{aux1}\\
+ V_{aux2}
+ \end{array}
+ \right]
+ \end{equation}
+
+Se propone un control Proporcional-Derivativo más compensación en graverdad para la aceleración deseada, $V_aux$:
+\begin{equation}
+\label{controlpdg}
+V_{aux}=\left[
+\begin{array}{c}
+V_{aux1}\\
+V_{aux2}
+\end{array}
+\right]=\left[
+\begin{array}{c}
+\ddot{q_{1d}}+k_{d1}(\dot{q_{1d}}-\dot{q_{1}})+k_{p1}(q_{1d}-q_{1})\\
+\ddot{q_{2d}}+k_{d2}(\dot{q_{2d}}-\dot{q_{2}})+k_{p2}(q_{2d}-q_{2})
+\end{array}
+\right]
+\end{equation}
+
+Donde $q_{1d}$ , $q_{2d}$ son trayectorias deseadas en posición,$\dot{q_{1d}}$ , $\dot{q_{2d}}$ son trayectorias deseadas de velocidad, $\ddot{q_{1d}}$ , $\ddot{q_{2d}}$ son trayectorias deseadas de aceleración y $K_d$ y $K_p$ son matrices diagonales.
+
+Definimos
+\begin{equation}
+\label{errorp}
+e=\left[
+\begin{array}{c}
+q_{1d}-q_1\\
+q_{2d}-q_2
+\end{array}
+\right]
+\end{equation}
+
+\begin{equation}
+\label{errorv}
+\dot{e}=\left[
+\begin{array}{c}
+\dot{q_{1d}}-\dot{q_1}\\
+\dot{q_{2d}}-\dot{q_2}
+\end{array}
+\right]
+\end{equation}
+
+
+
+Con lo que $V_aux$ puede expresarse de la siguiente manera:
+
+
+$$V_{aux}=\ddot{q}+K_d\dot{e}+K_pe$$
+
+Para seleccionar $K_v$ y $K_p$ igualamos $V_{aux}$ con un polinomio de orden 2 con raíces conocidas, quedando:
+
+\[
+K_p=\left[
+\begin{array}{cc}
+\omega_{1n}^2 & 0\\
+0 & \omega_{2n}^2
+\end{array}
+\right]
+\]
+
+\[
+K_d=\left[
+\begin{array}{cc}
+2\zeta_1\omega_{1n} & 0\\
+0 & 2\zeta_2\omega_{2n}
+\end{array}
+\right]
+\]
+
+
+
+Donde $\zeta$ es el Factor de amortiguamiento, y $\omega_n$ es la frecuencia natural del sistema.
+
+A continuación el diagrama a bloques del control PD+G:
+
+\begin{center}
+  \includegraphics[scale=.75]{imagenes/pdplusg}
+\captionof{figure}{Diagrama a bloques: Dinámica inversa}
+ \label{fig:r}
+\end{center}
+
+
+\subsubsection{Alternativas de control}
+
+Adicional al método de control expuesto, se realizaron algunas pruebas con dos métodos adicionales, a continuación se exponen.
+
+\paragraph{PD+Control}
+
+PD+Control es una de las leyes de control más simples, se basa en la representación de la dinámica inversa del sistema, y está dada por:
+
+
+
+\begin{equation}
+\label{formatricial2}
+\tau=K_p e+K_d \dot{e}+ M(q)\ddot{q_d}+C(q,\dot{q_d})+G(q)
+\end{equation}
+
+
+
+donde $K_p$ y $K_v$ $\epsilon$ $\mathbb{R}^{n \times n}$  son matrices simétricas
+positivas, $e=$ y $\dot{e}$ son definidos en (\ref{eqn:errorp}) y (\ref{eqn:errorv})
+\\\\
+Como se puede observar en la ecuación \ref{formatricial2}, la retroalimentación del sistema no se realiza en la dinámica inversa, sino en los factores proporcionales y derivativos.
+\\
+La implementación práctica del PD+Control requiere del total conocimiento del modelo del manipulador, esto implica conocer las Matrices M, C, G, asi como las trayectorias deseadas $q_d$, $\dot{q_d}$ y $\ddot{q_d}$.(Santibañez, 2005)
+\\\\
+A continuación se presenta el diagrama a bloques de la ley de control PD+Control:
+
+
+
+\begin{center}
+  \includegraphics[scale=.75]{imagenes/pdpluscontrol}
+\captionof{figure}{Diagrama a bloques: PD+Control}
+ \label{fig:r}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+\paragraph{Control PD + Feedforward }
+
+El término ``Feedforward'' en el nombre del controlador resulta de el hecho de que la ley de control usa la dinámica del manipulador evaluada explicitamente en las trayectorias deseadas de movimiento.(Santibañez, 2005)
+\\\\
+La ley de control de feedforward o pre-alimentación  está dada por:
+
+\begin{equation}
+\label{formatricial3}
+\tau=M(q_d)\ddot{q_d}+C(q_d,\dot{q_d})+G(q_d)
+\end{equation}
+
+Como se observa, no existe retroalimentación en la ley de control, por lo que se trata de un control de lazo abierto, que no realiza mediciones en posición o velocidad, entonces debemos tener perfectamente definida la dinámica del sistema, así como las trayectorias deseadas de movimiento.\\\\
+
+A continuación se muestra el diagrama a bloques del Control Feedforward:
+
+\begin{center}
+  \includegraphics[scale=.75]{imagenes/feedforward}
+\captionof{figure}{Diagrama a bloques: Feedforward}
+ \label{fig:r}
+\end{center}
+
+De manera práctica, es muy complicado tener un modelo tan fiable de un robot que no necesite retroalimentación, por lo que suele agregarse términos proporcionales y derivativos a la ley de control, quedando esta como se muestra a continuación:
+
+
+
+\begin{equation}
+\label{formatricial3p}
+\tau=K_p e+K_d \dot{e}+ M(q_d)\ddot{q_d}+C(q_d,\dot{q_d})+G(q_d)
+\end{equation}
+
+donde $K_p$ y $K_v$ $\epsilon$ $\mathbb{R}^{n \times n}$  son matrices simétricas
+positivas, $e=$ y $\dot{e}$ son definidos en (\ref{eqn:errorp}) y (\ref{eqn:errorv})
+\\\\
+
+\begin{center}
+  \includegraphics[scale=.75]{imagenes/feedforwardpluspd}
+\captionof{figure}{Diagrama a bloques: PD+Feedforward}
+ \label{fig:r}
+\end{center}
+
+Que puede ser vista como una generalización de Control más compensación en gravedad.
+
+Como se mencionó antes, la tarea de la banda transportadora....
+
+\newpage
+
+\section{Simulaciones}
+De manera general, sin contemplar retroalimentaciones, el proceso para la obtención de la simulaciones se ilustra a continuación:
+
+
+\begin{center}
+  \includegraphics[scale=.7]{imagenes/secuencial}
+\captionof{figure}{Diagrama a bloques }
+ \label{fig:secuen}
+\end{center}
+
+A manera de esbozo, se muestra el diagrama de simulación completo, dada su extensión, se realizará el desglose de funciones:
+
+\begin{center}
+  \includegraphics[angle=0,scale=.7]{imagenes/bloquescompleto}
+\captionof{figure}{Diagrama de Simulink completo}
+ \label{fig:blogen}
+\end{center}
+
+A continuación se muestran los bloques correspondientes a las trayectorias deseadas en posición, velocidad y aceleración, dentro de este grupo de bloques se encuentra el bloque de cinemática inversa. La trayectoria deseada en posición está marcada como un elipse, para ejemplificar el area de trabajo del robot SCARA, esta trayectoria pasa por la cinemática inversa que pone la trayectoria en función de ángulos $q_{1d}$ y $q_{2d}$ que posteriormente son derivados dos veces para obtener las trayectorias deseadas en velocidad y aceleración:
+
+
+\begin{center}
+  \includegraphics[angle=0,scale=.8]{imagenes/bloquestrayectoria}
+\captionof{figure}{Bloques correspondientes a la generación de trayectorias deseadas}
+ \label{fig:blotray}
+\end{center}
+
+Del multiplexor que se nota en el extremo derecho de la imagen (\ref{fig:blotray}) se alimenta al control que se encargará de realizar el seguimiento de trayectoria, a continuación se ilustra el bloque de control:
+
+\begin{center}
+  \includegraphics[angle=0,scale=.7]{imagenes/bloquescontrol}
+\captionof{figure}{Bloque correspondiente al control}
+ \label{fig:blocontrol}
+\end{center}
+
+De la imagen (\ref{fig:blocontrol}) se aprecia que el control se alimenta de la salida de los sensores de articulación, de donde obtiene los valores medidos en posición y velocidad angular para el eslabón 1 y 2, con estos datos y las trayectorias deseadas en posición, velocidad y aceleración realiza el proceso de seguimiento de trayectoria y manda alimentación a los actuadores de articulación de los eslabones 1 y 2.\\\\
+Los bloques correspondientes a los eslabones 1, 2 y 3 fueron generados exportando un dibujo tridimensional desde SolidWorks a SimMechanics. A continuación se muestra los bloques correspondientes al eslabón 1 y 2, con sus respectivos sensores y actuadores:
+
+\begin{center}
+  \includegraphics[angle=0,scale=.7]{imagenes/bloqueseslabon1}
+\captionof{figure}{Bloque correspondiente al eslabón 1}
+ \label{fig:bloes1}
+\end{center}
+
+\begin{center}
+  \includegraphics[angle=0,scale=.7]{imagenes/bloqueseslabon2}
+\captionof{figure}{Bloque correspondiente al eslabón 2}
+ \label{fig:bloes2}
+\end{center}
+
+A diferencia de los eslabones 1 y 2 que realizan el seguimiento de trayectoria en el plano $xy$, el eslabón 3 se desplaza y gira en torno al eje z. El sistema de visión artificial nos da la orientación de las llaves, y la orientación final es siempre la misma, por tanto basta con un control articular para alcanzar un objetivo en el eje z, a continuación se presenta el conjunto de bloques que conforman el eslabón 3:
+
+\begin{center}
+  \includegraphics[angle=0,scale=.7]{imagenes/bloqueseslabon3}
+\captionof{figure}{Bloque correspondiente al eslabón
+3}
+ \label{fig:bloes3}
+\end{center}
+
+Se muestra en la imagen (\ref{fig:bloes3}) el respectivo conjunto de bloques que generan la trayectoria deseada que parte de un control on-off suavizado.
+\\\\
+Una vez que ejecutamos nuestro diagrama de Simulink, se abre instantáneamente una ventana que nos muestra el movimiento de los 3 eslabones ensamblados, con el control realizando el seguimiento de trayectoria. A continuación se muestran algunas capturas de pantalla del movimiento del ensamble:
+
+\begin{center}
+  \includegraphics[angle=0,scale=.6]{imagenes/3ejes1}
+\captionof{figure}{Capturas de movimiento del ensamble}
+ \label{fig:cap1}
+\end{center}
+
+La vista superior sugiere que la trayectoria es una curva:
+
+\begin{center}
+  \includegraphics[angle=0,scale=.6]{imagenes/3ejes2}
+\captionof{figure}{Capturas de movimiento del ensamble vista superior}
+ \label{fig:cap2}
+\end{center}
+
+El eslabón 3 se comporta según la trayectoria cargada (senoidal):
+
+\begin{center}
+  \includegraphics[angle=0,scale=.6]{imagenes/3ejes3}
+\captionof{figure}{Capturas de movimiento del  efector final}
+ \label{fig:cap3}
+\end{center}
+
+De manera más ilustrativa, se realiza una gráfica de la trayectoria descrita en el plano $xy$:
+
+
+\begin{center}
+  \includegraphics[angle=0,scale=.7]{imagenes/3seg_trayectoria}
+\captionof{figure}{Seguimiento de trayectoria en el eje xy}
+ \label{fig:seg1}
+\end{center}
+
+Se grafica también la trayectoria del efector final:
+
+
+\begin{center}
+  \includegraphics[angle=0,scale=.6]{imagenes/3seguimiento}
+\captionof{figure}{Trayectoria descrita por el efector final}
+ \label{fig:seg2}
+\end{center}
+
+En el apéndice A, se agregan los códigos correspondientes a los bloques mostrados.
+\\\\
+Como se comentó en la sección de control, se realiza el seguimiento de trayectoria ajustado el par torsor con que se alimentan los actuadores, estos se realiza poniendo este par torsor en función de la trayectorias deseadas y las trayectorias medidas. A continuación se muestran los bloques correspondientes a la medición (diferencia) entre las trayectorias deseadas y las trayectorias medidas tanto en posición como velocidad, para comenzar se muestran los bloques correspondientes a la diferencia en el eslabón 1:
+
+\begin{center}
+  \includegraphics[angle=0,scale=.6]{imagenes/error1}
+\captionof{figure}{Bloques correspondientes a la medición del eror en posición y velocidad para el elabón 1}
+ \label{fig:error1}
+\end{center}
+
+
+estas diferencias fueron definida en las ecuaciones (\ref{errorp}) y (\ref{errorv}), continuación se muestran los respectivos bloques para la medición del error en posición y velocidad para el eslabón 2:
+\begin{center}
+  \includegraphics[angle=0,scale=.6]{imagenes/error1}
+\captionof{figure}{Bloques correspondientes a la medición del eror en posición y velocidad para el elabón 1}
+ \label{fig:error2}
+\end{center}
+
+
+A continuación se mostrarán las gráficas obtenidas para el error en posición y velocidad para el eslabón 1. Se exportaron los errores al \emph{Worwkspace} de Matlab y se realizaron ahí las gráficas para tener una más clara apreciación del comportamiento:
+
+
+
+\begin{center}
+  \includegraphics[angle=0,scale=.8]{imagenes/ep1}
+\captionof{figure}{Gráfica del error en posición para el eslabón 1}
+ \label{fig:ep1}
+\end{center}
+
+
+\begin{center}
+  \includegraphics[angle=0,scale=.8]{imagenes/ev1}
+\captionof{figure}{Gráfica del error en velocidad para el eslabón 1}
+ \label{fig:ev1}
+\end{center}
+
+Se muestra un acercamiento, para el error en posición y velocidad en el eslabón 1:
+
+\begin{center}
+  \includegraphics[angle=0,scale=.5]{imagenes/ep1acercamiento}
+\captionof{figure}{Ampliación de gráfica de error en posición para el eslabón 1}
+ \label{fig:ep1a}
+\end{center}
+
+\begin{center}
+  \includegraphics[angle=0,scale=.8]{imagenes/ev1acercamiento}
+\captionof{figure}{Ampliación de gráfica de error en velocidad para el eslabón 1}
+ \label{fig:ev1a}
+\end{center}
+
+
+Se muestran las gráficas obtenidas para el eslabón 2:
+
+\begin{center}
+  \includegraphics[angle=0,scale=.8]{imagenes/ep2}
+\captionof{figure}{Gráfica del error en posición para el eslabón 2}
+ \label{fig:ep2}
+\end{center}
+
+
+\begin{center}
+  \includegraphics[angle=0,scale=.5]{imagenes/ev2}
+\captionof{figure}{Gráfica del error en velocidad para el eslabón 2}
+ \label{fig:ev2}
+\end{center}
+
+\begin{center}
+  \includegraphics[angle=0,scale=.5]{imagenes/ep2acercamiento}
+\captionof{figure}{Ampliación de gráfica de error en posición para el eslabón 2}
+ \label{fig:ep1a}
+\end{center}
+
+\begin{center}
+  \includegraphics[angle=0,scale=.8]{imagenes/ev2acercamiento}
+\captionof{figure}{Ampliación de gráfica de error en velocidad para el eslabón 2}
+ \label{fig:ev1a}
+\end{center}
+
+
+De las gráficas del error de posición, tanto para el eslabón 1 como para el 2, se aprecia como el error en posición se acerca rápidamente (alrededor de 0.4s), para el error en velocidad se observa que hay una convergencia rápida hacia cero pero posteriormente
+se presentan oscilaciones, esto debido a la compensación requerida para el seguimiento de trayectoria.
+\\\\Se observa que los errores convergen a cero, en posición se tienen errores de 0.02 rad para el eslabón 1, para el eslabón 2 existe errores de 0.1 rad.
+
+Se realizaron las ampliaciones para verificar el error máximo después de haber alcanzado la convergencia.
+
+\section{Implementación}
+\begin{center}
+  \includegraphics[scale=0.65]{imagenes/eje_motor}
+\captionof{figure}{Acoplamiento de eje y motot 1}
+ \label{fig:em}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.65]{imagenes/eje_motor1}
+\captionof{figure}{Acoplamiento de eje y motot 2}
+ \label{fig:em1}
+\end{center}
+
+
+\newpage
+\section{Análisis de esfuerzos robot SCARA}
+
+Se presentan los análisis de esfuerzos para las  condiciones críticas del robot, es decir cuando el ángulo entre los eslabones es de $90°$ y $180°$, debido a que cuando los eslabones están a $90$grados respectivamente se presentan esfuerzos combinados máximos y cuando están a $180$ grados se presenta el máximo brazo de palanca.
+\\\\
+De soportar el manipulador los esfuerzos que se presentan en estas dos condiciones, no tendrá problema con las demás configuraciones.
+
+
+\subsection{Eslabones perpendiculares}
+De manera gráfica, podemos representar los dos eslabnes como se muestra a continuación:
+
+
+
+\begin{center}
+  \includegraphics[scale=0.65]{imagenes/perpendicular}
+\captionof{figure}{Configuración con eslabones perpendiculares}
+ \label{fig:r}
+\end{center}
+
+
+Se realiza el análisis de esfuerzos en esta posición, debido a que se producen esfuerzos combinados, se presentan flexión y torsión, para el caso de la torsión se debe contemplar que la sección transversal del elemento a analizar es no circular, por lo para obtener el esfuerzo cortante máximo y el ángulo de torsión debemos obtener algunos parámetros, el esfuerzo cortante máximo debido a la torsión en estos elementos está dado por:
+
+\begin{equation}
+\label{cortantemax}
+\tau_T=T/Q
+\end{equation}
+
+El ángulo de torsión está dado por:
+
+\begin{equation}
+\label{defang}
+\theta_T=\frac{TL}{GK}
+\end{equation}
+
+donde $L$ es la longitud del elemento a torsión, $G$ es el módulo de rigidez,  $K$ y $Q$ se obtienen de la siguiente tabla:
+
+
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ Forma dela sección trasnversal& K & Q \\
+\hline
+
+ \includegraphics[scale=.5]{imagenes/rectangulo}
+& $K=bh^3\left[ \frac{1}{3}-0{.}21\left( 1-\frac{h}{b} \frac{(h / b)^4}{12}  \right)  \right]$& $Q=\frac{bh^3}{[3+1{.}8(h/b)]}$ \\
+ \hline
+\end{tabular}
+\caption{Tabla de parámetros para elementos con sección transversal no circular sometidos a torsión}
+\label{tabla:sectransnocir}
+\end{center}
+\end{table}
+
+Se realizó la simulación de estas fuerzas en el software ANSYS 14.0, en el cual obtuvimos los siguientes resultados.
+
+\begin{center}
+  \includegraphics[scale=.75]{imagenes/deformacionz2}
+\captionof{figure}{Deformación del brazo en el eje z}
+ \label{fig:secuen}
+\end{center}
+
+Se puede apreciar que la deformación máxima es de 0.26 mm, lo cual podemos considerar despreciable, pues no representa una distancia que afecte en el resultado del sistema.
+
+De igual manera, al realizar un análisis de esfuerzos, podemos ver que en el punto máximo, el esfuerzo máximo es de 4.9 MPa, lo cual no representa un esfuerzo que afecte a la pieza.
+
+\begin{center}
+  \includegraphics[scale=.75]{imagenes/VonMisses2}
+\captionof{figure}{Análisis de esfuerzos en el brazo de forma perpendicular}
+ \label{fig:secuen}
+\end{center}
+
+
+
+
+
+
+\subsection{Máxima extensión}
+En esta configuración, se tiene un brazo de palanca máximo, lo cual genera la reacción máxima en la base del antebrazo. Si la pieza no presenta un daño o impedimento en esta posición, en las demás configuraciones no tendrá problema.
+
+
+
+
+Al realizar el análisis en ANSYS 14.0, obtuvimos los resultados mostrados en las figuras (\ref{fig:defz2}) y (\ref{fig:esf2}), las cuales muestran la deformación en el eje z y los esfuerzos generados respectivamente
+
+\begin{center}
+  \includegraphics[scale=.75]{imagenes/deformacionz}
+\captionof{figure}{Deformación en el eje z}
+ \label{fig:defz2}
+\end{center}
+
+
+\begin{center}
+  \includegraphics[scale=.75]{imagenes/VonMisses}
+\captionof{figure}{Análisis de esfuerzos en el brazo de manera extendida}
+ \label{fig:esf2}
+\end{center}
+\newpage
+\section{Conclusiones}
+
+El trabajo que se ha presentado en este documento ha sido resultado de varios meses de planeación y trabajo conjunto de quienes elaboraron y sus asesores, quienes orientaron el trabajo hacia la factibilidad y practicidad.\\\\
+En el documento se detalla de manera especialmente exhaustiva el diseño detallado del robot SCARA de cuatro grados de libertad, debido a que este involucra diseño mecánico, electrónico, implementación de leyes de control y simulación.\\\\
+En cuanto al sistema de visión artificial se requiere únicamente del desarrollo en software de la interfaz y la selección definitiva de la cámara de video para la captura; respecto a la banda transportadora no fue posible concluir con la construcción sin embargo el gran porcentaje de avance nos permitirá concluir la construcción durante las primeras dos semanas del periodo para trabajo terminal dos ya que se cuenta con todos los materiales necesarios y solo falta la manufactura de elementos sencillos.
+\\\\
+De manera ideal, para la implementación de un control óptimo del robot SCARA se debe describir el sistema de manera completa, es decir los cuatro grados de libertad y las propiedades de los eslabones respectivos, sin embargo esto eleva  el costo computacional lo que podría derivar en un tiempo más elevado para la solución de las ecuaciones correspondientes a la ley de control a implementar.
+\\\\Es por esto, que analizando los requerimientos de la tarea a realizar, se decidió realizar el modelo dinámico de los primeros dos eslabones y un control cinemático de los últimos dos. Lo anterior es posible  debido a que el tercer y cuarto eslabón se pueden considerar independientes, pues se mueven linealmente y rotacionalmente sobre el eje (z) respectivamente y las posibilidades de posicionamiento son muy reducidas en comparación al posicionamiento XY.
+\\\\
+En cuanto a los objetivos planteados para TT1 y TT2, como se mencionó en la planificación, se presentó una confusión en cuanto al periodo efectivo de trabajo, por lo cual se tuvieron que realizar adaptaciones en tanto a fechas, aun así los objetivos planteados se han alcanzado en lo general, tomando en cuenta el desarrollo durante este semestre, tenemos una noción más real del tiempo que se necesitará para poder realizar el proyecto y cumplir con los objetivos de manera definitiva.
+
+
+
+
+\section{Bibliografia}
+%\bibliographystyle{apacite}
+
+\begin{thebibliography}{10} %10 significa el número máximo de items
+%Aquí ponga la bibliografía y referencias usadas
+
+%Artículo:
+\bibitem{Referencia1} Rafael Kelly, Victor Santibáñez Davila, Antonio Loría, \emph{Control of Robot Manipulators in Joint Space}, Segunda edición ,Springer, 2005
+%Libro
+\bibitem{Referencia2}
+Mark W. Spong, Seth Hutchinso y M. Vidyasagar, \emph{Robot Modeling and
+Control}, primera edición, JOHN WILEY \& SONS, INC, 2005.
+
+\bibitem{Referencia3} Antonio Barrientos, Luís Felipe Peñinm Carlos Balaguer, Rafael Aracil , \emph{Fundamentos de robótica}, Primera edición , McGraw-Hill, 1997
+
+\bibitem{Referencia4} Joseph  E Shigley, John  J Uicker  Jr, \emph{Teoria  de Máquinas  y Mecanismos}, Primera edicicón , McGraw-Hill, 1998
+
+\bibitem{Referencia5} Robert L. Mott, \emph{Diseño de elementos de máquinas}, Cuarta edición , Pearson, 2006
+
+
+\bibitem{Referencia6} Javier Echávarri Otero,  Giuseppe Carbone, Marco Ceccarelli, José Luis Muñoz Sanz, \emph{CRITERIOS PARA LA SEGURIDAD EN EL USO DE ROBOTS}, 8º CONGRESO IBEROAMERICANO DE INGENIERIA MECANICA, 2007
+
+\bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with SimpleCV}, Primera edición, O'REILLY, 2012
+
+\bibitem{Referencia8} A. Serrano Nicolás \emph{Neumática Práctica}, Primera edición, Paraninfo , 2009
+
+\bibitem{Referencia9} Gareth J. Monkman, Stefan Hesse, Ralf Steinmann, Henrik Schunk \emph{Robot Grippers}, Primera edición, Wiley-VCH , 2007
+
+
+Cibergrafía:
+
+\url{http://web.ing.puc.cl/~mtorrest/downloads/robotics_tutorial/pres_robotics_summer_school_111214.pdf}
+
+
+
+\url{http://www.pdcahome.com/1932/qfd-despliegue-calidad/}
+
+\newpage
+\end{thebibliography}
+
+
+\section{Apéndice A: Códigos fuente}
+
+Como se mencionó en la sección de simulaciones, las primeras simulaciones fueron realizadas sin el modelo importado de \emph{SolidWorks} a \emph{SimMechanics}, se utilizó en su lugar una bloque de Simulik llamado planta para cada eslabón del manipulador robótico.\\\\
+A continuación se presenta el código correspondiente al bloque de planta del eslabón 1:
+
+
+\begin{lstlisting}
+function salidap1=planta1(a)
+Tau1=a(1);
+q1=a(2);
+q2=a(3);
+q1p=a(4);
+q2p=a(5);
+q2pp=a(6);
+
+%%%
+m1=0.599444;
+m2=0.302077;
+l1=.3;
+l2=.175;
+lc1=.15;
+lc2=.0875;
+g=0;
+I1=0;
+I2=0;
+%%%
+
+A1=(m1*lc1^2+m2*l1^2+m2*lc2^2+2*m2*l1*lc2*cos(q2)+I1+I2);
+A2=(m2*lc2^2+m2*l1*lc2*cos(q2)+I2);
+A3=-(2*m2*l1*lc2*sin(q2))*q1p*q2p;
+A4=-(m2*l1*lc2)*sin(q2)*q2p^2;
+A5=(m1*lc1+m2*l1)*g*sin(q1);
+A6=m2*g*lc2*sin(q1+q2);
+
+
+q1pp=(Tau1-(A2*q2pp+A3+A4+A5+A6))/A1;
+
+salidap1=q1pp;
+\end{lstlisting}
+
+Para el bloque de planta para el eslabón 2:
+
+\begin{lstlisting}
+function salidap2=planta2(a)
+Tau2=a(1);
+q1=a(2);
+q2=a(3);
+q1p=a(4);
+q1pp=a(5);
+
+%%%
+m1=0.599444;
+m2=0.302077;
+l1=.3;
+l2=.175;
+lc1=.15;
+lc2=.0875;
+g=0;
+I1=0;
+I2=0;
+%%%
+
+B1=(m2*lc2^2+m2*l1*lc2*cos(q2)+I2);
+B2=(m2*lc2^2+I2);
+B3=(m2*l1*lc2)*sin(q2)*q1p^2;
+B4=(m2*g*lc2)*sin(q1+q2);
+
+q2pp=(Tau2-(B1*q1pp+B3+B3+B4))/B2;
+
+salidap2=q2pp;
+\end{lstlisting}
+
+El bloque utilizado para el control (Tanto en el modelo de Simulink como SimMechanics):
+
+\begin{lstlisting}
+function output=control_c(in)
+q1=in(1);
+q1p=in(2);
+q2=in(3);
+q2p=in(4);
+q1d=in(5);
+q2d=in(6);
+q1pd=in(7);
+q2pd=in(8);
+q1ppd=in(9);
+q2ppd=in(10);
+
+
+%%%
+m1=0.599444;
+m2=0.302077;
+l1=.3;
+l2=.175;
+lc1=.15;
+lc2=.0875;
+g=0;
+I1=0;
+I2=0;
+%%%
+zeta=0.7071;
+wn=20;
+Kd=2*zeta*wn;
+Kp=wn^2;
+
+A1=(m1*lc1^2+m2*l1^2+m2*lc2^2+2*m2*l1*lc2*cos(q2)+I1+I2);
+A2=(m2*lc2^2+m2*l1*lc2*cos(q2)+I2);
+A3=-(2*m2*l1*lc2*sin(q2))*q1p*q2p;
+A4=-(m2*l1*lc2)*sin(q2)*q2p^2;
+A5=(m1*lc1+m2*l1)*g*sin(q1)+m2*g*lc2*sin(q1+q2);
+
+
+B1=(m2*lc2^2+m2*l1*lc2*cos(q2)+I2);
+B2=(m2*lc2^2+I2);
+B3=(m2*l1*lc2)*sin(q2)*q1p^2;
+B4=(m2*g*lc2)*sin(q1+q2);
+
+M=[A1 A2;B1 B2];
+
+C=[A3 A4; B3 0];
+
+G=[A5;B4];
+
+Vaux1=q1ppd+Kd*(q1pd-q1p)+Kp*(q1d-q1);
+Vaux2=q2ppd+Kd*(q2pd-q2p)+Kp*(q2d-q2)
+Vaux=[Vaux1;Vaux2];
+
+qp=[q1p;q2p];
+
+
+%%%%PD+G
+Tau=M*Vaux+C*qp+G;
+
+Tau1=Tau(1,:);
+Tau2=Tau(2,:);
+
+%%%PD+Control
+% Tau=Kp*(qpd-qp)+Kp*(qd-q)+M*qppd+C*qpd+G;
+%
+% Tau1=Tau(1,:);
+% Tau2=Tau(2,:);
+
+
+output=[Tau1 Tau2];
+\end{lstlisting}
+
+El bloque correspondiente a la cinemática inversa:
+\begin{lstlisting}
+function cine_inversa=CinematicaInversa_2GDL_c(a)
+xd=a(1);
+yd=a(2);
+l1=.3;
+l2=.175;
+q2=-2*atan2(sqrt((l1+l2)^2-(xd^2+yd^2)),sqrt((xd^2+yd^2)-(l1-l2)^2));
+q1=atan2(yd,xd)-atan2((l2*sin(q2)),(l1+(l2*cos(q2))))+(pi/2);
+cine_inversa=[q1 q2];
+\end{lstlisting}
+
+El bloque correspondiente a la trayectoria deseada:
+\begin{lstlisting}
+thetad=[0:0.1:10];
+a=.4;
+b=.2;
+%elipse
+ xdes=a*sin(thetad);
+ ydes=b*sin(thetad);
+ plot(xdes,ydes)
+ \end{lstlisting}
+
+El código que se usa para graficar los eslabones siguiendo la trayectoria en xy:
+\begin{lstlisting}
+function salida=grafica_2GDL_c(u)
+%recibo datos
+theta1=u(1);
+theta1p=u(2);
+theta2=u(3);
+theta2p=u(4);
+
+r1=.3;
+r2=.1;
+T=2*pi;
+f=1/T;
+t=[0:0.01:2*pi];
+thetad=2*pi*f*t;
+
+
+xdes=r1*sin(thetad);
+ydes=-r2*cos(thetad)-.25;
+
+
+
+%a=.4;
+%b=.2;
+%elipse
+ %xdes=a*sin(thetad);
+ %ydes=b*sin(thetad);
+
+
+
+% plot(xdes,ydes);
+l1=.3;
+l2=.175;
+xm=l1*sin(theta1);
+ym=-l1*cos(theta1);
+xm1=l1*sin(theta1)+l2*sin(theta1+theta2);
+ym1=-l1*cos(theta1)-l2*cos(theta1+theta2);
+
+figure(1)
+plot([0,xm],[0,ym],'-bo')
+hold on
+plot([xm,xm1],[ym,ym1],'-ro')
+hold on
+plot(xdes,ydes);
+hold off
+axis([-0.4 0.4 -0.4 0.4])
+grid
+salida=[xm1 ym1];
+\end{lstlisting}
+\newpage
+\section{Apéndice B: Planos de manufactura}
+
+\includepdf[pages=-]{planos_finales_SCARA}
+
+\includepdf[pages=-]{joined_document}
+
+\section{Apéndice C: Datasheets}
+
+A continuación se presentan las hojas de especificación de los motores, elementos de transmisión (engranes, poleas, bandas) y sensores (encoders).
+\includepdf[pages=-]{Nuevo_documento_datasheets}
+
+\section{Apéndice D: Piezas físicas}
+En esta sección se muestran las piezas físicas con las que se cuentan hasta el momento en tanto al eslabón 3 y el antebrazo.
+
+
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/SAM_0679}
+\captionof{figure}{Base del eslabón 3}
+ \label{fig:base3}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/SAM_0681}
+\captionof{figure}{Émbolo del eslabón 3}
+ \label{fig:embolo3}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/SAM_0682}
+\captionof{figure}{Volantes del eslabón 3}
+ \label{fig:volantes3}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/SAM_0683}
+\captionof{figure}{Bielas y tapa del eslabón 3}
+ \label{fig:biela3}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/SAM_0684}
+\captionof{figure}{Soporte para motor y elemento rotatorio del eslabón 3}
+ \label{fig:biela3}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/SAM_0678}
+\captionof{figure}{Soporte del actuador del antebrazo}
+ \label{fig:soporteantebrazo}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/SAM_0680}
+\captionof{figure}{Soporte para el encoder del antebrazo}
+ \label{fig:encoderantebrazo}
+\end{center}
+
+
+\heartpar{ Robot
+$F=m\frac{d \dot{x}}{dt}$
+grados  de libertad
+IPN  Visión artificial
+$\frac{d}{dt}\left(\frac{\partial \mathcal{L}}
+{\partial \dot{q_i}}\right)-\frac{\partial \mathcal{L}}
+{\partial q_i}=\tau_i$
+$x_{c1}=\ell_{c1}sen(q_1)$ IPN
+$A_n^0=A_1^0A_2^1...A_n^{n-1}$  SCARA
+$\phi=\arctan\left( \frac{p_y}{p_x} \right)$
+Mecatrónica
+$k_2=\frac{1}{2}m_2v_2^2 + \frac{1}{2}I_2(\dot{q_1}^2+\dot{q_2}^2)$
+Dinámica inversa
+$\mathcal{L}=k-u$
+$\sum_i^k F_i^T \delta r_i=0$
+upiita} %sas línea que va en el cuerpo
+
+$$\ddot{e}+K_d\dot{e}+K_pe=0$$
+
+$$\tau=M(q)V_{aux}+C(q,\dot{q})\dot{q}+G(q)$$
+
+\end{document}
+
+
