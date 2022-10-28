@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{anysize}
 \usepackage{array}
+\usepackage{lmodern}
 
 \marginsize{2cm}{2cm}{2cm}{2cm}
 \usepackage{fancyhdr}
@@ -57,12 +58,12 @@
 \begin{itemize}
 \item Diseño del Módulo Central de procesamiento
 \item Diseño del Submódulo de Procesamiento de Imágenes 
-\item Diseño de la unidad contenedora del módulo central de procesamiento
-\item Búsqueda de Lenguajes de programación para el microordenador
+\item Diseño de la unidad contenedora del Módulo central de Procesamiento
+\item Búsqueda de Lenguajes de Programación para el Microordenador
 \item Investigación de Estándares y Protocolos de Comunicación Inalámbricas 
 \item Búsqueda de Interfaces de Comunicación Inalámbrica 
 \item Elección de Interfaces de Comunicación Inalámbrica 
-\item Búsqueda de Tecnologías de geolocalización\\
+\item Búsqueda de Tecnologías de Geolocalización\\
 
 \end{itemize}
 \end{verse}
@@ -88,7 +89,7 @@ Dr. Rodolfo Vera Amaro\\
 
 \vfill
 
-{\large \today}
+31 de Octubre 2022
 
 \end{center}
 
@@ -163,18 +164,36 @@ Para el continuo funcionamiento, la precisión y la reducción de costos en en la 
 \section{Búsqueda de Lenguajes de Programación para el Microordenador}
 
 
+
 Lo primero que debemos de tener claro, es que la programación orientada a la inteligencia artificial es diferente al paradigma de la programación convencional. En esta última, el usuario le indica a la máquina exactamente lo que tiene que hacer, mientras que en Machine learning, se le enseña a programarse sola. Lo cúal se ejemplifica en el siguiente gráfico:
 \\
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/programaclasico}
+\captionof{figure}{Programa clásico vs Machine Learning}
+ \label{fig:pcvsml}
+\end{center}
 
-Desde la antigüedad, el hombre ha tratado de recrear e imitar la figura y movimientos de los seres vivos. Existen autómatas desde el mundo griego, pasando por artesanos franceses y suizos en el siglo XVIII, que ya utilizaban dispositivos mecánicos para el control automático de movimientos.\\
 
-En nuestro siglo el crecimiento en la producción e innovación de estas máquinas ha estado fuertemente impulsado por el progreso tecnológico, evolucionando de ser instrumentos para la amplificación de la capacidad del hombre para realizar trabajos a sustituirlo en su trabajo físico, a ser instrumentos capaces de procesar información, complementando o sustituyendo de igual manera al hombre en actividades intelectuales.\\
+El proceso de trabajo para aprendizaje automático es muy diferente a la construcción de una aplicación convencional. Por este motivo, la manera de utilizar los lenguajes de programación es diferente. Se deben de tomar en cuenta las características que estos utilizan, así como sus enfoques y paradigmas.\\
 
-La primera aparición del termino robot es en 1921, en la obra teatral Rosum's Universal Robots del novelista checo Karel Capek, en cuyo idioma la palabra \textbf{``robotova''} significa fuerza de trabajo o servidumbre. En el contexto histórico de la obra, la producción en gran escala se había implementado en varias fábricas. El término nace asociado a la idea de trabajo y producción. En 1915, Leonardo Torres Quevedo declaró para ``Scientific American'':
+Uno de los factores importantes a considerar al momento de elegir un lenguaje de programación orientado a machine learning, es la popularidad el mismo, ya que esta es una señal de la aceptación por parte de la comunidad. A su vez, su ecosistema es tanto o mas importante, ya que podemos darnos una idea si dicho lenguaje posee las herramientas adecuadas que se acoplan a nuestras necesidades. Finalmente, la ideonidad del lenguaje es otro factor relevante, ya que, si el lenguaje fue diseñado con una determinada tarea o propósito en mente, este será mucho más eficiente y productivo.\\
 
-\begin{quote}
-\textit{``Los antiguos autómatas imitaban la apariencia y movimientos de los seres vivos, lo cual no tiene mucho interés práctico; lo que yo busco es una clase de aparatos que, sin necesidad de reproducir los gestos más visibles del hombre, intentan obtener los mismos resultados que una persona.''}
-\end{quote}
+A continuación, se listan algunos de los lenguajes de programación más populares en el campo de machine learning:\\
+
+\begin{itemize}
+\item \textbf{Python} \\
+Python se ha convertido en el lenguaje de programación más popular del mundo, esto gracias a su sencillez aunado a una gran versatilidad. Sus utilidades abarcan desde desarrollo web, hasta la inteligencia artificial. Uno de los principales factores de esta popularidad, es el enorme ecosistema de herramientas desarrolladas específicamente para machine learning tales como: Pandas, Numpy, Tensorflow, Keras, entre otras.
+A pesar de no ser el lenguaje más rápido o potente, lo anterior lo hace uno de los lenguajes indispensables si se piensa trabajar en el campo de machine learning.
+
+\item \textbf{C++}\\
+
+A menudo hemos escuchado que C++ se aborda más cuando se trata de desarrollar juegos y sistemas grandes. Esto se debe a su característica de portabilidad y también proporciona una comprensión básica de la construcción lógica. Sin embargo, Algunos de los paquetes compatibles con C++ incluyen: Microsoft Cognitive Toolkit (CNTK) para aprendizaje profundo; Tensorflow para aprendizaje profundo; OpenCV para visión artificial; MLPack para aprendizaje automático; DyNet para redes neuronales; OpenNN para redes neuronales; Shogun para aprendizaje automático y FANN para redes neuronales.\\
+Sin embargo, C++ también tiene sus propias deficiencias. Está muy orientado a la sintaxis, a diferencia de Python, que es realmente amigable para los principiantes. Adempas de no contar con un gran soporte de bibliotecas.
+
+
+\end{itemize}
+
+
 
 
 Los robots industriales surgen de la unión de aplicaciones de control automático, el control de herramientas, manipuladores y aplicación de procesadores en tiempo real. Mediante el control automático se busca realizar procesos que permitan gobernar un proceso sin la intervención de agentes externos. El uso de la automatización industrial con sistemas de control automático comienza en el siglo XIX, pero no es hasta después de la Segunda Guerra mundial, cuando comienza a implementarse en todos los sectores industriales. Así, se generalizan los sistemas de control automático de variables de procesos industriales, en particular, sistemas de control de posición y velocidad.\\

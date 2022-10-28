@@ -1,94 +1,95 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Aplicaciones industriales del robot SCARA}}{8}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Robot SCARA TS60}}{12}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Robot SCARA R850}}{13}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Robot SCARA S6000}}{14}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Diagrama del proceso a optimizar}}{18}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Robot cartesiano y Espacio de trabajo}}{21}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Robot delta}}{22}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Configuraci\'on t\IeC {\'\i }pica del robot SCARA}}{23}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Diversos tipos de grippers mec\'anicos}}{24}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Ejemplo de una ventosa y composici\'on interna}}{25}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Ejemplo de aplicaci\'on de v\'alvulas en rob\'otica}}{25}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de funcionamiento detallado con caja negra}}{26}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de funcionamiento detallado}}{27}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de funcionamiento detallado con subsistemas}}{28}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Primera parte del diagrama de flujo del funcionamiento general del sistema}}{29}{figure.15}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Programa cl\'asico vs Machine Learning}}{10}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Robot SCARA TS60}}{13}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Robot SCARA R850}}{14}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Robot SCARA S6000}}{15}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama del proceso a optimizar}}{19}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Robot cartesiano y Espacio de trabajo}}{22}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Robot delta}}{23}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Configuraci\'on t\IeC {\'\i }pica del robot SCARA}}{24}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Diversos tipos de grippers mec\'anicos}}{25}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Ejemplo de una ventosa y composici\'on interna}}{26}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Ejemplo de aplicaci\'on de v\'alvulas en rob\'otica}}{26}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de funcionamiento detallado con caja negra}}{27}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de funcionamiento detallado}}{28}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de funcionamiento detallado con subsistemas}}{29}{figure.15}%
 \contentsline {figure}{\numberline {16}{\ignorespaces Primera parte del diagrama de flujo del funcionamiento general del sistema}}{30}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Dise\~no CAD de la banda transportadora.}}{32}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Fotograf\IeC {\'\i }a de la banda trasportadora.}}{32}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Detalle del eje motriz de la banda transportadora}}{33}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Vista lateral de la banda donde se aprecian soporte motriz y tensor.}}{33}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces A) RaspberryPi B)}}{35}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces C\'odigo sobre SimpleCV para generar \'areas, \'angulos y centroide}}{37}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Resultados para cinco ciclos de procesamiento}}{38}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Vista de las llaves despu\'es del primer procesamiento de imagen.}}{38}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Ilustraci\'on de los grados de libertad de las articulaciones de un robot SCARA}}{40}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Diagrama de un robot SCARA con ejes de movimiento convencionales}}{40}{figure.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Ilustraci\'on del espacio de trabajo en 3D de un SCARA}}{41}{figure.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Diagrama de un robot SCARA con ejes de movimiento propuestos}}{41}{figure.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Diagrama de un robot SCARA con articulaciones deglosadas}}{42}{figure.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Ilustraci\'on de accidentes comunes}}{43}{figure.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Ilustraci\'on del espacio controlado de trabajo}}{43}{figure.31}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Ilustraci\'on del espacio controlado de trabajo del robot SCARA}}{44}{figure.32}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Ilustraci\'on del espacio controlado de trabajo del robot SCARA sobre la banda transportadora}}{44}{figure.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Par torsor para actuar el brazo}}{46}{figure.34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Colocaci\'on del actuador para el antebrazo}}{46}{figure.35}%
-\contentsline {figure}{\numberline {36}{\ignorespaces An\'alisis geom\'etrico de los errores}}{47}{figure.36}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Encoder XYK-BMJ-38Z6-P12}}{48}{figure.37}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Driver DM542}}{49}{figure.38}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Diagrama t\IeC {\'\i }pico de conexi\'on driver DM542}}{49}{figure.39}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Vista isom\'etrica de los elementos seleccionados A) sin modificaci\'on B) elementos modificados}}{50}{figure.40}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Correa A 6Z16M208080 y polea A 6A16M060DF9506}}{52}{figure.41}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Vista superior de la transmisi\'on para el segundo grado de libertad (antebrazo).}}{52}{figure.42}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Vista lateral de la transmisi\'on para el segundo grado de libertad (antebrazo).}}{53}{figure.43}%
-\contentsline {figure}{\numberline {44}{\ignorespaces Servomotor seleccionado como actuador para el tercer grado de libertad.}}{54}{figure.44}%
-\contentsline {figure}{\numberline {45}{\ignorespaces Simulaci\'on del mecanismo biela-manivela}}{54}{figure.45}%
-\contentsline {figure}{\numberline {46}{\ignorespaces Evidencia del desplazamiento obtenido (Un ciclo de bajada y subida toma 1.042 segundos).}}{55}{figure.46}%
-\contentsline {figure}{\numberline {47}{\ignorespaces Mecanismo biela manivela.}}{55}{figure.47}%
-\contentsline {figure}{\numberline {48}{\ignorespaces Eslab\'on dise\~nado con grados de libertad ilustrados}}{56}{figure.48}%
-\contentsline {figure}{\numberline {49}{\ignorespaces Ventosa PFYN 3.5 SI-55 M3-AG}}{57}{figure.49}%
-\contentsline {figure}{\numberline {50}{\ignorespaces Representaci\'on esquem\'atica del robot SCARA}}{59}{figure.50}%
-\contentsline {figure}{\numberline {51}{\ignorespaces Vista superior del robot SCARA}}{61}{figure.51}%
-\contentsline {figure}{\numberline {52}{\ignorespaces Vista frontra del robot SCARA}}{62}{figure.52}%
-\contentsline {figure}{\numberline {53}{\ignorespaces Diagrama de los dos primeros eslabones del robot SCARA}}{63}{figure.53}%
-\contentsline {figure}{\numberline {54}{\ignorespaces Diagrama a bloques: Din\'amica inversa}}{69}{figure.54}%
-\contentsline {figure}{\numberline {55}{\ignorespaces Diagrama a bloques: PD+Control}}{70}{figure.55}%
-\contentsline {figure}{\numberline {56}{\ignorespaces Diagrama a bloques: Feedforward}}{71}{figure.56}%
-\contentsline {figure}{\numberline {57}{\ignorespaces Diagrama a bloques: PD+Feedforward}}{71}{figure.57}%
-\contentsline {figure}{\numberline {58}{\ignorespaces Diagrama a bloques }}{73}{figure.58}%
-\contentsline {figure}{\numberline {59}{\ignorespaces Diagrama de Simulink completo}}{73}{figure.59}%
-\contentsline {figure}{\numberline {60}{\ignorespaces Bloques correspondientes a la generaci\'on de trayectorias deseadas}}{74}{figure.60}%
-\contentsline {figure}{\numberline {61}{\ignorespaces Bloque correspondiente al control}}{74}{figure.61}%
-\contentsline {figure}{\numberline {62}{\ignorespaces Bloque correspondiente al eslab\'on 1}}{75}{figure.62}%
-\contentsline {figure}{\numberline {63}{\ignorespaces Bloque correspondiente al eslab\'on 2}}{75}{figure.63}%
-\contentsline {figure}{\numberline {64}{\ignorespaces Bloque correspondiente al eslab\'on 3}}{76}{figure.64}%
-\contentsline {figure}{\numberline {65}{\ignorespaces Capturas de movimiento del ensamble}}{77}{figure.65}%
-\contentsline {figure}{\numberline {66}{\ignorespaces Capturas de movimiento del ensamble vista superior}}{77}{figure.66}%
-\contentsline {figure}{\numberline {67}{\ignorespaces Capturas de movimiento del efector final}}{78}{figure.67}%
-\contentsline {figure}{\numberline {68}{\ignorespaces Seguimiento de trayectoria en el eje xy}}{79}{figure.68}%
-\contentsline {figure}{\numberline {69}{\ignorespaces Trayectoria descrita por el efector final}}{79}{figure.69}%
-\contentsline {figure}{\numberline {70}{\ignorespaces Bloques correspondientes a la medici\'on del eror en posici\'on y velocidad para el elab\'on 1}}{80}{figure.70}%
-\contentsline {figure}{\numberline {71}{\ignorespaces Bloques correspondientes a la medici\'on del eror en posici\'on y velocidad para el elab\'on 1}}{80}{figure.71}%
-\contentsline {figure}{\numberline {72}{\ignorespaces Gr\'afica del error en posici\'on para el eslab\'on 1}}{81}{figure.72}%
-\contentsline {figure}{\numberline {73}{\ignorespaces Gr\'afica del error en velocidad para el eslab\'on 1}}{81}{figure.73}%
-\contentsline {figure}{\numberline {74}{\ignorespaces Ampliaci\'on de gr\'afica de error en posici\'on para el eslab\'on 1}}{82}{figure.74}%
-\contentsline {figure}{\numberline {75}{\ignorespaces Ampliaci\'on de gr\'afica de error en velocidad para el eslab\'on 1}}{82}{figure.75}%
-\contentsline {figure}{\numberline {76}{\ignorespaces Gr\'afica del error en posici\'on para el eslab\'on 2}}{83}{figure.76}%
-\contentsline {figure}{\numberline {77}{\ignorespaces Gr\'afica del error en velocidad para el eslab\'on 2}}{83}{figure.77}%
-\contentsline {figure}{\numberline {78}{\ignorespaces Ampliaci\'on de gr\'afica de error en posici\'on para el eslab\'on 2}}{84}{figure.78}%
-\contentsline {figure}{\numberline {79}{\ignorespaces Ampliaci\'on de gr\'afica de error en velocidad para el eslab\'on 2}}{84}{figure.79}%
-\contentsline {figure}{\numberline {80}{\ignorespaces Acoplamiento de eje y motot 1}}{85}{figure.80}%
-\contentsline {figure}{\numberline {81}{\ignorespaces Acoplamiento de eje y motot 2}}{86}{figure.81}%
-\contentsline {figure}{\numberline {82}{\ignorespaces Configuraci\'on con eslabones perpendiculares}}{87}{figure.82}%
-\contentsline {figure}{\numberline {83}{\ignorespaces Deformaci\'on del brazo en el eje z}}{88}{figure.83}%
-\contentsline {figure}{\numberline {84}{\ignorespaces An\'alisis de esfuerzos en el brazo de forma perpendicular}}{89}{figure.84}%
-\contentsline {figure}{\numberline {85}{\ignorespaces Deformaci\'on en el eje z}}{90}{figure.85}%
-\contentsline {figure}{\numberline {86}{\ignorespaces An\'alisis de esfuerzos en el brazo de manera extendida}}{91}{figure.86}%
-\contentsline {figure}{\numberline {87}{\ignorespaces Base del eslab\'on 3}}{95}{figure.87}%
-\contentsline {figure}{\numberline {88}{\ignorespaces \'Embolo del eslab\'on 3}}{95}{figure.88}%
-\contentsline {figure}{\numberline {89}{\ignorespaces Volantes del eslab\'on 3}}{96}{figure.89}%
-\contentsline {figure}{\numberline {90}{\ignorespaces Bielas y tapa del eslab\'on 3}}{96}{figure.90}%
-\contentsline {figure}{\numberline {91}{\ignorespaces Soporte para motor y elemento rotatorio del eslab\'on 3}}{97}{figure.91}%
-\contentsline {figure}{\numberline {92}{\ignorespaces Soporte del actuador del antebrazo}}{97}{figure.92}%
-\contentsline {figure}{\numberline {93}{\ignorespaces Soporte para el encoder del antebrazo}}{98}{figure.93}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Primera parte del diagrama de flujo del funcionamiento general del sistema}}{31}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Dise\~no CAD de la banda transportadora.}}{33}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Fotograf\IeC {\'\i }a de la banda trasportadora.}}{33}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Detalle del eje motriz de la banda transportadora}}{34}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Vista lateral de la banda donde se aprecian soporte motriz y tensor.}}{34}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces A) RaspberryPi B)}}{36}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces C\'odigo sobre SimpleCV para generar \'areas, \'angulos y centroide}}{38}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Resultados para cinco ciclos de procesamiento}}{39}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Vista de las llaves despu\'es del primer procesamiento de imagen.}}{39}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Ilustraci\'on de los grados de libertad de las articulaciones de un robot SCARA}}{41}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de un robot SCARA con ejes de movimiento convencionales}}{41}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Ilustraci\'on del espacio de trabajo en 3D de un SCARA}}{42}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Diagrama de un robot SCARA con ejes de movimiento propuestos}}{42}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Diagrama de un robot SCARA con articulaciones deglosadas}}{43}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Ilustraci\'on de accidentes comunes}}{44}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Ilustraci\'on del espacio controlado de trabajo}}{44}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Ilustraci\'on del espacio controlado de trabajo del robot SCARA}}{45}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Ilustraci\'on del espacio controlado de trabajo del robot SCARA sobre la banda transportadora}}{45}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Par torsor para actuar el brazo}}{47}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Colocaci\'on del actuador para el antebrazo}}{47}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces An\'alisis geom\'etrico de los errores}}{48}{figure.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Encoder XYK-BMJ-38Z6-P12}}{49}{figure.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Driver DM542}}{50}{figure.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Diagrama t\IeC {\'\i }pico de conexi\'on driver DM542}}{50}{figure.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Vista isom\'etrica de los elementos seleccionados A) sin modificaci\'on B) elementos modificados}}{51}{figure.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Correa A 6Z16M208080 y polea A 6A16M060DF9506}}{53}{figure.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Vista superior de la transmisi\'on para el segundo grado de libertad (antebrazo).}}{53}{figure.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Vista lateral de la transmisi\'on para el segundo grado de libertad (antebrazo).}}{54}{figure.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Servomotor seleccionado como actuador para el tercer grado de libertad.}}{55}{figure.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Simulaci\'on del mecanismo biela-manivela}}{55}{figure.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Evidencia del desplazamiento obtenido (Un ciclo de bajada y subida toma 1.042 segundos).}}{56}{figure.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Mecanismo biela manivela.}}{56}{figure.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Eslab\'on dise\~nado con grados de libertad ilustrados}}{57}{figure.49}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Ventosa PFYN 3.5 SI-55 M3-AG}}{58}{figure.50}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Representaci\'on esquem\'atica del robot SCARA}}{60}{figure.51}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Vista superior del robot SCARA}}{62}{figure.52}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Vista frontra del robot SCARA}}{63}{figure.53}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Diagrama de los dos primeros eslabones del robot SCARA}}{64}{figure.54}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Diagrama a bloques: Din\'amica inversa}}{70}{figure.55}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Diagrama a bloques: PD+Control}}{71}{figure.56}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Diagrama a bloques: Feedforward}}{72}{figure.57}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Diagrama a bloques: PD+Feedforward}}{72}{figure.58}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Diagrama a bloques }}{74}{figure.59}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Diagrama de Simulink completo}}{74}{figure.60}%
+\contentsline {figure}{\numberline {61}{\ignorespaces Bloques correspondientes a la generaci\'on de trayectorias deseadas}}{75}{figure.61}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Bloque correspondiente al control}}{75}{figure.62}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Bloque correspondiente al eslab\'on 1}}{76}{figure.63}%
+\contentsline {figure}{\numberline {64}{\ignorespaces Bloque correspondiente al eslab\'on 2}}{76}{figure.64}%
+\contentsline {figure}{\numberline {65}{\ignorespaces Bloque correspondiente al eslab\'on 3}}{77}{figure.65}%
+\contentsline {figure}{\numberline {66}{\ignorespaces Capturas de movimiento del ensamble}}{78}{figure.66}%
+\contentsline {figure}{\numberline {67}{\ignorespaces Capturas de movimiento del ensamble vista superior}}{78}{figure.67}%
+\contentsline {figure}{\numberline {68}{\ignorespaces Capturas de movimiento del efector final}}{79}{figure.68}%
+\contentsline {figure}{\numberline {69}{\ignorespaces Seguimiento de trayectoria en el eje xy}}{80}{figure.69}%
+\contentsline {figure}{\numberline {70}{\ignorespaces Trayectoria descrita por el efector final}}{80}{figure.70}%
+\contentsline {figure}{\numberline {71}{\ignorespaces Bloques correspondientes a la medici\'on del eror en posici\'on y velocidad para el elab\'on 1}}{81}{figure.71}%
+\contentsline {figure}{\numberline {72}{\ignorespaces Bloques correspondientes a la medici\'on del eror en posici\'on y velocidad para el elab\'on 1}}{81}{figure.72}%
+\contentsline {figure}{\numberline {73}{\ignorespaces Gr\'afica del error en posici\'on para el eslab\'on 1}}{82}{figure.73}%
+\contentsline {figure}{\numberline {74}{\ignorespaces Gr\'afica del error en velocidad para el eslab\'on 1}}{82}{figure.74}%
+\contentsline {figure}{\numberline {75}{\ignorespaces Ampliaci\'on de gr\'afica de error en posici\'on para el eslab\'on 1}}{83}{figure.75}%
+\contentsline {figure}{\numberline {76}{\ignorespaces Ampliaci\'on de gr\'afica de error en velocidad para el eslab\'on 1}}{83}{figure.76}%
+\contentsline {figure}{\numberline {77}{\ignorespaces Gr\'afica del error en posici\'on para el eslab\'on 2}}{84}{figure.77}%
+\contentsline {figure}{\numberline {78}{\ignorespaces Gr\'afica del error en velocidad para el eslab\'on 2}}{84}{figure.78}%
+\contentsline {figure}{\numberline {79}{\ignorespaces Ampliaci\'on de gr\'afica de error en posici\'on para el eslab\'on 2}}{85}{figure.79}%
+\contentsline {figure}{\numberline {80}{\ignorespaces Ampliaci\'on de gr\'afica de error en velocidad para el eslab\'on 2}}{85}{figure.80}%
+\contentsline {figure}{\numberline {81}{\ignorespaces Acoplamiento de eje y motot 1}}{86}{figure.81}%
+\contentsline {figure}{\numberline {82}{\ignorespaces Acoplamiento de eje y motot 2}}{87}{figure.82}%
+\contentsline {figure}{\numberline {83}{\ignorespaces Configuraci\'on con eslabones perpendiculares}}{88}{figure.83}%
+\contentsline {figure}{\numberline {84}{\ignorespaces Deformaci\'on del brazo en el eje z}}{89}{figure.84}%
+\contentsline {figure}{\numberline {85}{\ignorespaces An\'alisis de esfuerzos en el brazo de forma perpendicular}}{90}{figure.85}%
+\contentsline {figure}{\numberline {86}{\ignorespaces Deformaci\'on en el eje z}}{91}{figure.86}%
+\contentsline {figure}{\numberline {87}{\ignorespaces An\'alisis de esfuerzos en el brazo de manera extendida}}{92}{figure.87}%
+\contentsline {figure}{\numberline {88}{\ignorespaces Base del eslab\'on 3}}{96}{figure.88}%
+\contentsline {figure}{\numberline {89}{\ignorespaces \'Embolo del eslab\'on 3}}{96}{figure.89}%
+\contentsline {figure}{\numberline {90}{\ignorespaces Volantes del eslab\'on 3}}{97}{figure.90}%
+\contentsline {figure}{\numberline {91}{\ignorespaces Bielas y tapa del eslab\'on 3}}{97}{figure.91}%
+\contentsline {figure}{\numberline {92}{\ignorespaces Soporte para motor y elemento rotatorio del eslab\'on 3}}{98}{figure.92}%
+\contentsline {figure}{\numberline {93}{\ignorespaces Soporte del actuador del antebrazo}}{98}{figure.93}%
+\contentsline {figure}{\numberline {94}{\ignorespaces Soporte para el encoder del antebrazo}}{99}{figure.94}%
