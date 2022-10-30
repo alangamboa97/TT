@@ -1,46 +1,15 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Dise\~no del M\'odulo Central de Procesamiento}{7}{section.1}%
-\contentsline {section}{\numberline {2}Dise\~no del Subm\'odulo de Procesamiento de Im\'agenes}{8}{section.2}%
-\contentsline {section}{\numberline {3}Dise\~no de la Unidad Contenedora del M\'odulo Central de Procesamiento}{9}{section.3}%
-\contentsline {section}{\numberline {4}B\'usqueda de Lenguajes de Programaci\'on para el Microordenador}{10}{section.4}%
-\contentsline {section}{\numberline {5}Investigaci\'on de Est\'andares y Protocolos de Comunicaci\'on Inal\'ambricas}{16}{section.5}%
-\contentsline {section}{\numberline {6}B\'usqueda de Interfaces de Comunicaci\'on Inal\'ambrica}{17}{section.6}%
-\contentsline {section}{\numberline {7}Elecci\'on de Interfaces de Comunicaci\'on Inal\'ambrica}{18}{section.7}%
-\contentsline {section}{\numberline {8}B\'usqueda de Tecnolog\IeC {\'\i }as de Geolocalizaci\'on}{19}{section.8}%
-\contentsline {section}{\numberline {9}Soluciones propuestas}{20}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Manipuladores}{21}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Efector final}{24}{subsection.9.2}%
-\contentsline {section}{\numberline {10}Soluci\'on elegida}{27}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Dise\~no y construcci\'on de la banda transportadora}{32}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Subsistema de clasificaci\'on}{35}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Subsistema de paletizaci\'on}{40}{subsection.10.3}%
-\contentsline {subsubsection}{\numberline {10.3.1}Articulaciones}{40}{subsubsection.10.3.1}%
-\contentsline {subsubsection}{\numberline {10.3.2}Espacio de trabajo }{41}{subsubsection.10.3.2}%
-\contentsline {subsubsection}{\numberline {10.3.3}Actuadores}{46}{subsubsection.10.3.3}%
-\contentsline {paragraph}{Selecci\'on del actuador para el brazo }{46}{section*.4}%
-\contentsline {paragraph}{Selecci\'on del actuador para el antebrazo}{47}{section*.5}%
-\contentsline {subsubsection}{\numberline {10.3.4}Sistema sensorial}{48}{subsubsection.10.3.4}%
-\contentsline {subsubsection}{\numberline {10.3.5}Transmisiones}{51}{subsubsection.10.3.5}%
-\contentsline {subsubsection}{\numberline {10.3.6}Tercer eslab\'on}{57}{subsubsection.10.3.6}%
-\contentsline {subsubsection}{\numberline {10.3.7}Efector final}{57}{subsubsection.10.3.7}%
-\contentsline {subsubsection}{\numberline {10.3.8}Materiales}{58}{subsubsection.10.3.8}%
-\contentsline {subsection}{\numberline {10.4}Modelado del robot SCARA}{60}{subsection.10.4}%
-\contentsline {subsubsection}{\numberline {10.4.1}Par\'ametros de Denavit-Hartemberg (cinem\'atica directa)}{60}{subsubsection.10.4.1}%
-\contentsline {subsubsection}{\numberline {10.4.2}Cinem\'atica inversa}{62}{subsubsection.10.4.2}%
-\contentsline {subsubsection}{\numberline {10.4.3}Modelo din\'amico de los dos primeros eslabones robot SCARA}{64}{subsubsection.10.4.3}%
-\contentsline {subsection}{\numberline {10.5}Control del robot SCARA}{69}{subsection.10.5}%
-\contentsline {subsubsection}{\numberline {10.5.1}Din\'amica inversa}{69}{subsubsection.10.5.1}%
-\contentsline {subsubsection}{\numberline {10.5.2}Alternativas de control}{71}{subsubsection.10.5.2}%
-\contentsline {paragraph}{PD+Control}{71}{section*.6}%
-\contentsline {paragraph}{Control PD + Feedforward }{71}{section*.7}%
-\contentsline {section}{\numberline {11}Simulaciones}{74}{section.11}%
-\contentsline {section}{\numberline {12}Implementaci\'on}{86}{section.12}%
-\contentsline {section}{\numberline {13}An\'alisis de esfuerzos robot SCARA}{88}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Eslabones perpendiculares}{88}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}M\'axima extensi\'on}{90}{subsection.13.2}%
-\contentsline {section}{\numberline {14}Conclusiones}{93}{section.14}%
-\contentsline {section}{\numberline {15}Bibliografia}{94}{section.15}%
-\contentsline {section}{\numberline {16}Ap\'endice A: C\'odigos fuente}{95}{section.16}%
-\contentsline {section}{\numberline {17}Ap\'endice B: Planos de manufactura}{96}{section.17}%
-\contentsline {section}{\numberline {18}Ap\'endice C: Datasheets}{96}{section.18}%
-\contentsline {section}{\numberline {19}Ap\'endice D: Piezas f\IeC {\'\i }sicas}{96}{section.19}%
+\contentsline {section}{\numberline {1}Dise\~no del M\'odulo Central de Procesamiento}{4}{section.1}%
+\contentsline {section}{\numberline {2}Dise\~no del Subm\'odulo de Procesamiento de Im\'agenes}{5}{section.2}%
+\contentsline {section}{\numberline {3}Dise\~no de la Unidad Contenedora del M\'odulo Central de Procesamiento}{6}{section.3}%
+\contentsline {section}{\numberline {4}B\'usqueda de Lenguajes de Programaci\'on para el Microordenador}{7}{section.4}%
+\contentsline {section}{\numberline {5}Investigaci\'on de Est\'andares y Protocolos de Comunicaci\'on Inal\'ambricas}{10}{section.5}%
+\contentsline {section}{\numberline {6}B\'usqueda de Interfaces de Comunicaci\'on Inal\'ambrica}{13}{section.6}%
+\contentsline {section}{\numberline {7}Elecci\'on de Interfaces de Comunicaci\'on Inal\'ambrica}{16}{section.7}%
+\contentsline {section}{\numberline {8}B\'usqueda de Tecnolog\IeC {\'\i }as de Geolocalizaci\'on}{18}{section.8}%
+\contentsline {section}{\numberline {9}Conclusiones}{19}{section.9}%
+\contentsline {section}{\numberline {10}Bibliografia}{20}{section.10}%
+\contentsline {section}{\numberline {11}Ap\'endice A: C\'odigos fuente}{21}{section.11}%
+\contentsline {section}{\numberline {12}Ap\'endice B: Planos de manufactura}{22}{section.12}%
+\contentsline {section}{\numberline {13}Ap\'endice C: Datasheets}{22}{section.13}%
+\contentsline {section}{\numberline {14}Ap\'endice D: Piezas f\IeC {\'\i }sicas}{22}{section.14}%
