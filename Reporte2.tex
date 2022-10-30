@@ -180,24 +180,29 @@ Javascript        & Moderada             & Moderada              & Baja         
 \end{tabular}
 \end{table}
 
+Python es un lenguaje que permite trabajar más de un paradigma (programación estructurada y orientada a objetos).
+Normalmente cuando programamos un script sencillo aplicamos solo el paradigma de programación estructurada (Secuencia, selección e iteración), y cuando necesitamos programar un proyecto  más complejo y queremos incluir los beneficios del paradigma orientado a objetos (reutilización de los componentes, facilidad de mantenimiento y modificación de objetos) utilizamos clases (POO).\\
+Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje nos permite desarrollar ambos ámbitos. Por lo que se tomó la decisión de ser utilizado a lo largo de este proyecto. 
 
 
 \newpage
 \section{Diseño del Módulo Central de Procesamiento}
 
 
-El presente trabajo reporta el proceso de diseño e implementación del proyecto titulado ``Diseño, manufactura y control de un robot paletizador articulado de cuatro grados de libertad asistido por un sistema de visión artificial'' como Trabajo Terminal para que cada uno de los integrantes del equipo obtenga el título de Ingeniero en Mecatrónica en la Unidad Profesional Interdisciplinaria en Ingenierías y Tecnologías Avanzadas (UPIITA).
-\\\\
-Este Trabajo Terminal consiste en el diseño y construcción de un sistema para la clasificación y paletización de llaves como proceso posterior al troquelado de estas en distintas lineas de 
-producción.
-En esta entrega final del reporte se detalla el proceso de diseño y re-diseño de los elementos y subsistemas pertenecientes al proyecto.El sistema se divide en varios subsistemas, siendo los más importantes el subsistema de clasificación, que contará con una interfaz en SimpleCV\footnote{Software de código abierto para el desarrolo de sistemas de visión artificial} para la clasificación de llaves utilizando técnicas de visión artificial,  el transporte de las llaves  se basa en una banda transportadora y el subsistema de paletización
-para el que se diseñará y constuirá un robot SCARA de 4 grados de libertad controlado por computadora.
-\\\\
-El sistema planteado debe ser capaz de operar de manera autónoma y continua con un mínimo de errores, el usuario será capaz de modificar la velocidad de trabajo y cargar algunas rutinas de tiempos, esto debido a que se plantea construir un sistema flexible, que pueda ser fácilmente adaptado a tareas diversas.
-\\\\
-La primera parte de este escrito consiste en los antecedentes necesarios y el planteamiento del problema asi como la metodología utilizada para la selección de la mejor solución. Posteriormente se describirá el diseño y modelado de los subsistemas que integran la solución escogida. Se reportan así mismo las simulaciones correspondientes al control propuesto para el subsistema de paletizado, los análisis de esfuerzos en la estructura mecánica, así como los resultados experimentales de la integración completa del sistema de manera virtual.
-\\\\
-La última parte del documento corresponde a la conclusión del diseño y re-diseño de elementos y evidencias de implementación  del sistema 
+
+Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y que estaremos utilizando de manera frecuente a lo largo de este proyecto, es la modularidad. Que no es más que dividir nuestros programas en partes más pequeñas (sub-programas), que habitualmente son llamados módulos. Las cuales deben tener un grado de independencia de la aplicación o programa principal. Cuando hablamos de independencia, nos referimos a que pueden ser utilizados por otras aplicaciones y no dependen de la aplicación original en sí. 
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/modularidad}
+\captionof{figure}{Modularidad}
+ \label{fig:modul}
+\end{center}
+
+
+Estós módulos son archivos que alojan código independiente con una determinada función.  Python cuenta con diversos módulos que podemos agregar a nuestro código y utilizarlo para facilitar y acortar el 
+código, de manera que sea mas legible y ordenado.
+
+
 
 
 \newpage
@@ -531,21 +536,19 @@ Tecnología                                 & Descripción                        
 %Aquí ponga la bibliografía y referencias usadas
 
 %Artículo:
-\bibitem{Referencia1} Rafael Kelly, Victor Santibáñez Davila, Antonio Loría, \emph{Control of Robot Manipulators in Joint Space}, Segunda edición ,Springer, 2005
+\bibitem{Referencia1} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
 %Libro
 \bibitem{Referencia2}
 V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
 
-\bibitem{Referencia3} Antonio Barrientos, Luís Felipe Peñinm Carlos Balaguer, Rafael Aracil , \emph{Fundamentos de robótica}, Primera edición , McGraw-Hill, 1997
+\bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
 
-\bibitem{Referencia4} Joseph  E Shigley, John  J Uicker  Jr, \emph{Teoria  de Máquinas  y Mecanismos}, Primera edicicón , McGraw-Hill, 1998
+\bibitem{Referencia4} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
 
-\bibitem{Referencia5} Robert L. Mott, \emph{Diseño de elementos de máquinas}, Cuarta edición , Pearson, 2006
+\bibitem{Referencia5} Aurélien Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow}, Segunda Edición , O'Reilly, 2009
 
 
-\bibitem{Referencia6} Javier Echávarri Otero,  Giuseppe Carbone, Marco Ceccarelli, José Luis Muñoz Sanz, \emph{CRITERIOS PARA LA SEGURIDAD EN EL USO DE ROBOTS}, 8º CONGRESO IBEROAMERICANO DE INGENIERIA MECANICA, 2007
-
-\bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with SimpleCV}, Primera edición, O'REILLY, 2012
+\bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with OpenCV}, Tercera Edición, O'Reilly, 2017
 
 \bibitem{Referencia8} A. Serrano Nicolás \emph{Neumática Práctica}, Primera edición, Paraninfo , 2009
 
