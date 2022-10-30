@@ -417,6 +417,18 @@ Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las vel
 
 Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto.
 
+Dado que el presente proyecto será desarrollado para funcionar en una Raspberry Pi 4 modelo B, procederemos a comparar distintos módulos compatibles para Rasperry Pi que nos permita utilizar y conectarlos a la red LTE-M
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Modelo          & Voltaje de Operación & Redes Soportadas & \begin{tabular}[c]{@{}l@{}}Dificultad\\ de Integración\end{tabular} & Costo  \\ \hline
+SixFab Base Hat & 5V                   & 3G/4G/LTE        & Bajo                                                                & \$2500 \\ \hline
+SIM7600A-H      & 3-5V                 & 3G/4G/LTE        & Bajo                                                                & \$1436 \\ \hline
+SIM800C-G       & 3.3 - 5V             & 3G/4G/LTE        & Alta                                                                & \$508  \\ \hline
+SIM7600CE       & 3.3-5V               & 2G/3G/4G/LTE     & Bajo                                                                & \$2134 \\ \hline
+\end{tabular}
+\end{table}
 \end{itemize}
 
 

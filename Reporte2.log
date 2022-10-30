@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  29 OCT 2022 20:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  29 OCT 2022 20:43
 entering extended mode
 **./Reporte2.tex
 (Reporte2.tex
@@ -831,18 +831,18 @@ l.418 P
        or lo anterior, se decidió a utilizar el estándar LTE-M para nuestro ...
  <./imagenes/lte-mcobertura.png>] [17] [18] [19]
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-470.
+482.
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 470--471
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
 [][][]$\OT1/lmtt/m/n/12 http : / / web . ing . puc . cl / []mtorrest / download
 s / robotics _ tutorial / pres _ robotics _
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 482--484
+Underfull \hbox (badness 10000) in paragraph at lines 494--496
 
  []
 
@@ -850,75 +850,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 482--484
 <imagenes/SAM_0679.jpg, id=228, 1529.715pt x 863.47594pt>
 File: imagenes/SAM_0679.jpg Graphic file (type jpg)
 <use imagenes/SAM_0679.jpg>
-Package pdftex.def Info: imagenes/SAM_0679.jpg  used on input line 499.
+Package pdftex.def Info: imagenes/SAM_0679.jpg  used on input line 511.
 (pdftex.def)             Requested size: 305.93758pt x 172.69212pt.
 <imagenes/SAM_0681.jpg, id=229, 1876.00874pt x 754.31813pt>
 File: imagenes/SAM_0681.jpg Graphic file (type jpg)
 <use imagenes/SAM_0681.jpg>
-Package pdftex.def Info: imagenes/SAM_0681.jpg  used on input line 505.
+Package pdftex.def Info: imagenes/SAM_0681.jpg  used on input line 517.
 (pdftex.def)             Requested size: 375.1951pt x 150.86095pt.
 <imagenes/SAM_0682.jpg, id=230, 1679.52469pt x 580.41844pt>
 File: imagenes/SAM_0682.jpg Graphic file (type jpg)
 <use imagenes/SAM_0682.jpg>
-Package pdftex.def Info: imagenes/SAM_0682.jpg  used on input line 511.
+Package pdftex.def Info: imagenes/SAM_0682.jpg  used on input line 523.
 (pdftex.def)             Requested size: 335.89899pt x 116.08162pt.
  [22pdfTeX warning (ext4): destination with the same identifier (name{figure.6}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.512 \captionof{figure}{Volantes del eslabón 3}
+l.524 \captionof{figure}{Volantes del eslabón 3}
                                                 pdfTeX warning (ext4): destinat
 ion with the same identifier (name{figure.7}) has been already used, duplicate 
 ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.512 \captionof{figure}{Volantes del eslabón 3}
+l.524 \captionof{figure}{Volantes del eslabón 3}
                                                  <./imagenes/SAM_0679.jpg> <./i
 magenes/SAM_0681.jpg>]
 <imagenes/SAM_0683.jpg, id=235, 2175.62813pt x 849.1725pt>
 File: imagenes/SAM_0683.jpg Graphic file (type jpg)
 <use imagenes/SAM_0683.jpg>
-Package pdftex.def Info: imagenes/SAM_0683.jpg  used on input line 517.
+Package pdftex.def Info: imagenes/SAM_0683.jpg  used on input line 529.
 (pdftex.def)             Requested size: 435.11792pt x 169.83148pt.
 <imagenes/SAM_0684.jpg, id=236, 1662.96281pt x 1742.76094pt>
 File: imagenes/SAM_0684.jpg Graphic file (type jpg)
 <use imagenes/SAM_0684.jpg>
-Package pdftex.def Info: imagenes/SAM_0684.jpg  used on input line 523.
+Package pdftex.def Info: imagenes/SAM_0684.jpg  used on input line 535.
 (pdftex.def)             Requested size: 332.58667pt x 348.54602pt.
  [23pdfTeX warning (ext4): destination with the same identifier (name{figure.8}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.524 ...motor y elemento rotatorio del eslabón 3}
+l.536 ...motor y elemento rotatorio del eslabón 3}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{figure.9}) has been already used, duplicat
 e ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.524 ...motor y elemento rotatorio del eslabón 3}
+l.536 ...motor y elemento rotatorio del eslabón 3}
                                                    <./imagenes/SAM_0682.jpg> <.
 /imagenes/SAM_0683.jpg>]
 <imagenes/SAM_0678.jpg, id=241, 1459.70343pt x 1016.29688pt>
 File: imagenes/SAM_0678.jpg Graphic file (type jpg)
 <use imagenes/SAM_0678.jpg>
-Package pdftex.def Info: imagenes/SAM_0678.jpg  used on input line 529.
+Package pdftex.def Info: imagenes/SAM_0678.jpg  used on input line 541.
 (pdftex.def)             Requested size: 291.93552pt x 203.25577pt.
 <imagenes/SAM_0680.jpg, id=242, 1460.45625pt x 1072.75781pt>
 File: imagenes/SAM_0680.jpg Graphic file (type jpg)
 <use imagenes/SAM_0680.jpg>
-Package pdftex.def Info: imagenes/SAM_0680.jpg  used on input line 535.
+Package pdftex.def Info: imagenes/SAM_0680.jpg  used on input line 547.
 (pdftex.def)             Requested size: 292.08607pt x 214.54776pt.
  [24pdfTeX warning (ext4): destination with the same identifier (name{figure.10
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.536 ...e}{Soporte para el encoder del antebrazo}
+l.548 ...e}{Soporte para el encoder del antebrazo}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{figure.11}) has been already used, duplica
 te ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.536 ...e}{Soporte para el encoder del antebrazo}
+l.548 ...e}{Soporte para el encoder del antebrazo}
                                                    <./imagenes/SAM_0684.jpg> <.
 /imagenes/SAM_0678.jpg>] (0) Try shape with scale 6.04417pt.  (Delta = 0.0).  
 . . . . . . . . . . . Formatting.  Expected 11 lines; got 12 lines
@@ -929,7 +929,7 @@ n with the same identifier (name{figure.12}) has been already used, duplicate i
 gnored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.562 \end{document}
+l.574 \end{document}
                      <./imagenes/SAM_0680.jpg>] (Reporte2.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
@@ -969,7 +969,7 @@ AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/alang/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/alang/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/alang/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Reporte2.pdf (26 pages, 4666357 bytes).
+Output written on Reporte2.pdf (26 pages, 4667790 bytes).
 PDF statistics:
  340 PDF objects out of 1000 (max. 8388607)
  66 named destinations out of 1000 (max. 500000)
