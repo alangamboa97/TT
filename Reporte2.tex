@@ -134,7 +134,31 @@ A continuación se muestra el diagrama de actividades para el Submódulo de Proces
  \label{fig:scaraindust}
 \end{center}
 
+Para el presente proyecto, se utilizará el esquema de detección de rostros Haar-Adaboost.
+.
 
+\begin{center}
+  \includegraphics[scale=.42]{imagenes/landmark}
+\captionof{figure}{Puntos de referencia}
+ \label{fig:landmark}
+\end{center}
+
+
+A su vez, se utilizaran puntos de referencia con la ayuda de el software OpenCV para dividir las características que posteriormente serán extraídas y clasificadas.
+\begin{center}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+Partes        & \multicolumn{1}{l|}{Puntos de Referencia} \\ \hline
+Boca          & {[}48-67{]}                               \\ \hline
+Ojo Derecho   & {[}36-41{]}                               \\ \hline
+Ojo Izquierdo & {[}42-46{]}                               \\ \hline
+\end{tabular}
+\end{table}
+
+
+\end{center}
 A continuación se muestra el diagrama de casos de uso para el Submódulo de Procesamiento de Imágenes
 \begin{center}
   \includegraphics[scale=.65]{imagenes/Casos de usos Procesamiento de imagenes}
