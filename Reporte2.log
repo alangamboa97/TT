@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  30 OCT 2022 16:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  30 OCT 2022 16:43
 entering extended mode
 **./Reporte2.tex
 (Reporte2.tex
@@ -500,7 +500,7 @@ LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 
 
-LaTeX Warning: Label `fig:modul' multiply defined.
+LaTeX Warning: Label `fig:casosusomc' multiply defined.
 
 
 LaTeX Warning: Label `fig:scaraindust' multiply defined.
@@ -510,9 +510,6 @@ LaTeX Warning: Label `fig:scaraindust' multiply defined.
 
 
 LaTeX Warning: Label `fig:prot' multiply defined.
-
-
-LaTeX Warning: Label `fig:biela3' multiply defined.
 
 )
 \openout1 = `Reporte2.aux'.
@@ -592,12 +589,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-<imagenes/ipn.jpg, id=59, 180.675pt x 232.87pt>
+<imagenes/ipn.jpg, id=43, 180.675pt x 232.87pt>
 File: imagenes/ipn.jpg Graphic file (type jpg)
 <use imagenes/ipn.jpg>
 Package pdftex.def Info: imagenes/ipn.jpg  used on input line 39.
 (pdftex.def)             Requested size: 81.303pt x 104.79051pt.
-<imagenes/upiita.png, id=60, 722.7pt x 568.1225pt>
+<imagenes/upiita.png, id=44, 722.7pt x 568.1225pt>
 File: imagenes/upiita.png Graphic file (type png)
 <use imagenes/upiita.png>
 Package pdftex.def Info: imagenes/upiita.png  used on input line 41.
@@ -676,7 +673,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--114
 
  []
 
-<imagenes/programaclasico.png, id=135, 770.88pt x 578.16pt>
+<imagenes/programaclasico.png, id=105, 770.88pt x 578.16pt>
 File: imagenes/programaclasico.png Graphic file (type png)
 <use imagenes/programaclasico.png>
 Package pdftex.def Info: imagenes/programaclasico.png  used on input line 115.
@@ -722,12 +719,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--162
  []
 
 [6] [7]
-<imagenes/modularidad.png, id=154, 350.81062pt x 225.84375pt>
+<imagenes/modularidad.png, id=124, 350.81062pt x 225.84375pt>
 File: imagenes/modularidad.png Graphic file (type png)
 <use imagenes/modularidad.png>
 Package pdftex.def Info: imagenes/modularidad.png  used on input line 196.
 (pdftex.def)             Requested size: 210.48799pt x 135.50728pt.
-<imagenes/diagrama_casosusomc.png, id=155, 671.50874pt x 589.20125pt>
+<imagenes/diagrama_casosusomc.png, id=125, 671.50874pt x 589.20125pt>
 File: imagenes/diagrama_casosusomc.png Graphic file (type png)
 <use imagenes/diagrama_casosusomc.png>
 Package pdftex.def Info: imagenes/diagrama_casosusomc.png  used on input line 2
@@ -737,278 +734,197 @@ Package pdftex.def Info: imagenes/diagrama_casosusomc.png  used on input line 2
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.211 ...de Uso - Modulo Central de Procesamiento}
+l.211 ...de Uso - Módulo Central de Procesamiento}
                                                    <./imagenes/modularidad.png>
 ]
-<imagenes/diagrama_secuenciamc.png, id=161, 964.60374pt x 583.17876pt>
+<imagenes/diagrama_activiadesmc.png, id=131, 1176.395pt x 1065.9825pt>
+File: imagenes/diagrama_activiadesmc.png Graphic file (type png)
+<use imagenes/diagrama_activiadesmc.png>
+Package pdftex.def Info: imagenes/diagrama_activiadesmc.png  used on input line
+ 218.
+(pdftex.def)             Requested size: 470.54967pt x 426.38545pt.
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.219 ...idades - Módulo Central de Procesamiento}
+                                                   <./imagenes/diagrama_casosus
+omc.png>]
+<imagenes/diagrama_secuenciamc.png, id=137, 964.60374pt x 583.17876pt>
 File: imagenes/diagrama_secuenciamc.png Graphic file (type png)
 <use imagenes/diagrama_secuenciamc.png>
 Package pdftex.def Info: imagenes/diagrama_secuenciamc.png  used on input line 
-216.
-(pdftex.def)             Requested size: 578.76672pt x 349.90996pt.
-
-Overfull \hbox (78.28273pt too wide) in paragraph at lines 216--217
- [] 
- []
-
-[9pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
-has been already used, duplicate ignored
+226.
+(pdftex.def)             Requested size: 482.30069pt x 291.58867pt.
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
+) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.217 ...uencia - Modulo Central de Procesamiento}
-                                                   <./imagenes/diagrama_casosus
-omc.png>] [10pdfTeX warning (ext4): destination with the same identifier (name{
-figure.4}) has been already used, duplicate ignored
+l.227 ...uencia - Módulo Central de Procesamiento}
+                                                   <./imagenes/diagrama_activia
+desmc.png>] [11pdfTeX warning (ext4): destination with the same identifier (nam
+e{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.227 \newpage
+l.239 \newpage
                <./imagenes/diagrama_secuenciamc.png>]
 <imagenes/Diagrama de actividad submodulo de procesamiento d eimagenes.png, id=
-172, 884.30376pt x 1386.17876pt>
+148, 884.30376pt x 1386.17876pt>
 File: imagenes/Diagrama de actividad submodulo de procesamiento d eimagenes.png
  Graphic file (type png)
 <use imagenes/Diagrama de actividad submodulo de procesamiento d eimagenes.png>
 
 Package pdftex.def Info: imagenes/Diagrama de actividad submodulo de procesamie
-nto d eimagenes.png  used on input line 236.
+nto d eimagenes.png  used on input line 248.
 (pdftex.def)             Requested size: 371.40504pt x 582.19112pt.
- [11] [12pdfTeX warning (ext4): destination with the same identifier (name{figu
-re.5}) has been already used, duplicate ignored
+ [12] [13pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.244 \begin{center}
+l.256 \begin{center}
                      <./imagenes/Diagrama de actividad submodulo de procesamien
 to d eimagenes.png>]
-<imagenes/landmark.png, id=183, 415.5525pt x 395.4775pt>
+<imagenes/landmark.png, id=159, 415.5525pt x 395.4775pt>
 File: imagenes/landmark.png Graphic file (type png)
 <use imagenes/landmark.png>
-Package pdftex.def Info: imagenes/landmark.png  used on input line 245.
+Package pdftex.def Info: imagenes/landmark.png  used on input line 257.
 (pdftex.def)             Requested size: 174.53085pt x 166.09941pt.
-<imagenes/Casos de usos Procesamiento de imagenes.png, id=184, 745.78625pt x 72
+<imagenes/Casos de usos Procesamiento de imagenes.png, id=160, 745.78625pt x 72
 7.71875pt>
 File: imagenes/Casos de usos Procesamiento de imagenes.png Graphic file (type p
 ng)
 <use imagenes/Casos de usos Procesamiento de imagenes.png>
 Package pdftex.def Info: imagenes/Casos de usos Procesamiento de imagenes.png  
-used on input line 272.
+used on input line 284.
 (pdftex.def)             Requested size: 484.75533pt x 473.01158pt.
- [13pdfTeX warning (ext4): destination with the same identifier (name{figure.6}
+ [14pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.273 \captionof{figure}{Diagrama de casos de uso}
+l.285 \captionof{figure}{Diagrama de casos de uso}
                                                    <./imagenes/landmark.png (PN
-G copy)>] [14pdfTeX warning (ext4): destination with the same identifier (name{
-figure.7}) has been already used, duplicate ignored
+G copy)>] [15pdfTeX warning (ext4): destination with the same identifier (name{
+figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.278 \newpage
+l.290 \newpage
                <./imagenes/Casos de usos Procesamiento de imagenes.png>]
-<imagenes/Espeificaciones fisicas Raspberry Pi.jpg, id=194, 923.70094pt x 576.6
+<imagenes/Espeificaciones fisicas Raspberry Pi.jpg, id=170, 923.70094pt x 576.6
 5437pt>
 File: imagenes/Espeificaciones fisicas Raspberry Pi.jpg Graphic file (type jpg)
 
 <use imagenes/Espeificaciones fisicas Raspberry Pi.jpg>
 Package pdftex.def Info: imagenes/Espeificaciones fisicas Raspberry Pi.jpg  use
-d on input line 291.
+d on input line 303.
 (pdftex.def)             Requested size: 369.47383pt x 230.65765pt.
 
-[15pdfTeX warning (ext4): destination with the same identifier (name{figure.8})
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.9})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.309 \end{itemize}
+l.321 \end{itemize}
                     <./imagenes/Espeificaciones fisicas Raspberry Pi.jpg>]
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-53.
+64.
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<imagenes/protocolos.jpg, id=203, 443.40656pt x 372.64218pt>
-File: imagenes/protocolos.jpg Graphic file (type jpg)
-<use imagenes/protocolos.jpg>
-Package pdftex.def Info: imagenes/protocolos.jpg  used on input line 364.
-(pdftex.def)             Requested size: 443.40547pt x 372.64127pt.
- [17]
-<imagenes/cdmx.png, id=209, 543.02875pt x 735.74875pt>
+<imagenes/redes.jpg, id=179, 443.40656pt x 374.90062pt>
+File: imagenes/redes.jpg Graphic file (type jpg)
+<use imagenes/redes.jpg>
+Package pdftex.def Info: imagenes/redes.jpg  used on input line 375.
+(pdftex.def)             Requested size: 443.40547pt x 374.8997pt.
+ [18]
+<imagenes/cdmx.png, id=186, 543.02875pt x 735.74875pt>
 File: imagenes/cdmx.png Graphic file (type png)
 <use imagenes/cdmx.png>
-Package pdftex.def Info: imagenes/cdmx.png  used on input line 372.
+Package pdftex.def Info: imagenes/cdmx.png  used on input line 383.
 (pdftex.def)             Requested size: 108.60382pt x 147.14714pt.
 
-[18pdfTeX warning (ext4): destination with the same identifier (name{figure.9})
- has been already used, duplicate ignored
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.10}
+) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.373 ...onof{figure}{Mapa de la Ciudad de México}
-                                                   <./imagenes/protocolos.jpg> 
-<./imagenes/cdmx.png>]
+l.384 ...onof{figure}{Mapa de la Ciudad de México}
+                                                   <./imagenes/redes.jpg> <./im
+agenes/cdmx.png>]
 LaTeX Font Info:    Trying to load font information for OML+lmr on input line 3
-85.
+96.
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmr.fd
 File: omllmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <12> not available
-(Font)              Font shape `OML/lmm/m/it' tried instead on input line 385.
- [19pdfTeX warning (ext4): destination with the same identifier (name{figure.10
+(Font)              Font shape `OML/lmm/m/it' tried instead on input line 396.
+ [20pdfTeX warning (ext4): destination with the same identifier (name{figure.11
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.395 \newpage
+l.406 \newpage
               ]
-Underfull \hbox (badness 10000) in paragraph at lines 398--400
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 439--440
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
-[21] [22]
-Overfull \hbox (51.7574pt too wide) in paragraph at lines 489--495
-[][] 
- []
-
-<imagenes/lte-mcobertura.png, id=233, 459.96844pt x 348.55219pt>
+[22] [23]
+<imagenes/lte-mcobertura.png, id=209, 459.96844pt x 348.55219pt>
 File: imagenes/lte-mcobertura.png Graphic file (type png)
 <use imagenes/lte-mcobertura.png>
-Package pdftex.def Info: imagenes/lte-mcobertura.png  used on input line 507.
+Package pdftex.def Info: imagenes/lte-mcobertura.png  used on input line 520.
 (pdftex.def)             Requested size: 229.98366pt x 174.27565pt.
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.11}
-) has been already used, duplicate ignored
+ [24pdfTeX warning (ext4): destination with the same identifier (name{figure.12
+}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.516 P
+l.529 P
        or lo anterior, se decidió a utilizar el estándar LTE-M para nuestro ...
- <./imagenes/lte-mcobertura.png>] [24] [25] [26]
+ <./imagenes/lte-mcobertura.png>] [25] [26] [27]
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-579.
+592.
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 579--580
+Underfull \hbox (badness 10000) in paragraph at lines 592--593
 [][][]$\OT1/lmtt/m/n/12 http : / / web . ing . puc . cl / []mtorrest / download
 s / robotics _ tutorial / pres _ robotics _
  []
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 591--593
-
- []
-
-[28]
-<imagenes/SAM_0679.jpg, id=273, 1529.715pt x 863.47594pt>
-File: imagenes/SAM_0679.jpg Graphic file (type jpg)
-<use imagenes/SAM_0679.jpg>
-Package pdftex.def Info: imagenes/SAM_0679.jpg  used on input line 608.
-(pdftex.def)             Requested size: 305.93758pt x 172.69212pt.
-<imagenes/SAM_0681.jpg, id=274, 1876.00874pt x 754.31813pt>
-File: imagenes/SAM_0681.jpg Graphic file (type jpg)
-<use imagenes/SAM_0681.jpg>
-Package pdftex.def Info: imagenes/SAM_0681.jpg  used on input line 614.
-(pdftex.def)             Requested size: 375.1951pt x 150.86095pt.
-<imagenes/SAM_0682.jpg, id=275, 1679.52469pt x 580.41844pt>
-File: imagenes/SAM_0682.jpg Graphic file (type jpg)
-<use imagenes/SAM_0682.jpg>
-Package pdftex.def Info: imagenes/SAM_0682.jpg  used on input line 620.
-(pdftex.def)             Requested size: 335.89899pt x 116.08162pt.
- [29pdfTeX warning (ext4): destination with the same identifier (name{figure.12
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.621 \captionof{figure}{Volantes del eslabón 3}
-                                                pdfTeX warning (ext4): destinat
-ion with the same identifier (name{figure.13}) has been already used, duplicate
- ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.621 \captionof{figure}{Volantes del eslabón 3}
-                                                 <./imagenes/SAM_0679.jpg> <./i
-magenes/SAM_0681.jpg>]
-<imagenes/SAM_0683.jpg, id=280, 2175.62813pt x 849.1725pt>
-File: imagenes/SAM_0683.jpg Graphic file (type jpg)
-<use imagenes/SAM_0683.jpg>
-Package pdftex.def Info: imagenes/SAM_0683.jpg  used on input line 626.
-(pdftex.def)             Requested size: 435.11792pt x 169.83148pt.
-<imagenes/SAM_0684.jpg, id=281, 1662.96281pt x 1742.76094pt>
-File: imagenes/SAM_0684.jpg Graphic file (type jpg)
-<use imagenes/SAM_0684.jpg>
-Package pdftex.def Info: imagenes/SAM_0684.jpg  used on input line 632.
-(pdftex.def)             Requested size: 332.58667pt x 348.54602pt.
- [30pdfTeX warning (ext4): destination with the same identifier (name{figure.14
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.633 ...motor y elemento rotatorio del eslabón 3}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.15}) has been already used, duplica
-te ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.633 ...motor y elemento rotatorio del eslabón 3}
-                                                   <./imagenes/SAM_0682.jpg> <.
-/imagenes/SAM_0683.jpg>]
-<imagenes/SAM_0678.jpg, id=287, 1459.70343pt x 1016.29688pt>
-File: imagenes/SAM_0678.jpg Graphic file (type jpg)
-<use imagenes/SAM_0678.jpg>
-Package pdftex.def Info: imagenes/SAM_0678.jpg  used on input line 638.
-(pdftex.def)             Requested size: 291.93552pt x 203.25577pt.
-<imagenes/SAM_0680.jpg, id=288, 1460.45625pt x 1072.75781pt>
-File: imagenes/SAM_0680.jpg Graphic file (type jpg)
-<use imagenes/SAM_0680.jpg>
-Package pdftex.def Info: imagenes/SAM_0680.jpg  used on input line 644.
-(pdftex.def)             Requested size: 292.08607pt x 214.54776pt.
- [31pdfTeX warning (ext4): destination with the same identifier (name{figure.16
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.645 ...e}{Soporte para el encoder del antebrazo}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.17}) has been already used, duplica
-te ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.645 ...e}{Soporte para el encoder del antebrazo}
-                                                   <./imagenes/SAM_0684.jpg> <.
-/imagenes/SAM_0678.jpg>] (0) Try shape with scale 6.04417pt.  (Delta = 0.0).  
-. . . . . . . . . . . Formatting.  Expected 11 lines; got 12 lines
-(1) Try shape with scale 6.3393pt.  (Delta = 0.29512).   . . . . . . . . . . .
-. . Formatting.  Expected 13 lines; got 13 lines
-Reformat paragraph with \rightskip= 0.0pt. [32pdfTeX warning (ext4): destinatio
-n with the same identifier (name{figure.18}) has been already used, duplicate i
-gnored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.671 \end{document}
-                     <./imagenes/SAM_0680.jpg>] (Reporte2.aux
+[28] (0) Try shape with scale 5.97711pt.  (Delta = 0.0).   . . . . . . . . . .
+. Formatting.  Expected 11 lines; got 12 lines
+(1) Try shape with scale 6.25728pt.  (Delta = 0.28017).   . . . . . . . . . .
+. . . Formatting.  Expected 13 lines; got 13 lines
+Reformat paragraph with \rightskip= 0.0pt. [29] (Reporte2.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
@@ -1016,13 +932,13 @@ LaTeX Info: Redefining \% on input line 26.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Reporte2.out' has not changed.
-(rerunfilecheck)             Checksum: DE178D6220BB3F4A2409F74C12EA630C;3676.
+(rerunfilecheck)             Checksum: B70A2F34ADA480184B88B0F2F22229CE;2907.
  ) 
 Here is how much of TeX's memory you used:
- 13235 strings out of 478927
- 205583 string characters out of 2852536
- 523101 words of memory out of 3000000
- 30735 multiletter control sequences out of 15000+600000
+ 13131 strings out of 478927
+ 203403 string characters out of 2852536
+ 522880 words of memory out of 3000000
+ 30650 multiletter control sequences out of 15000+600000
  451260 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,17n,66p,635b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1046,9 +962,9 @@ g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/alan
 g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/alan
 g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/alang
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Reporte2.pdf (33 pages, 4756333 bytes).
+Output written on Reporte2.pdf (30 pages, 1287191 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 500000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 
