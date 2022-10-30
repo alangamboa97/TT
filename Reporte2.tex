@@ -123,22 +123,22 @@ La última parte del documento corresponde a la conclusión del diseño y re-diseño
 \newpage
 \section{Diseño del Submódulo de Procesamiento de Imágenes}
 
-El presente trabajo integra las cuatro disciplinas de la mecatrónica para generar un sistema que ayude a eficientar procesos repetitivos, se plantea un primer acercamiento a la optimización del proceso antes mencionado, sentar las bases para futuros trabajos a realizarse en la UPIITA, así como para fomentar nuevas aplicaciones y mejoras a este prototipo.\\
 
-Tomando como base los fundamentos educativos adquiridos durante nuestra estancia en la Unidad y la experiencia de nuestros asesores, se plantea buscar las mejor solución y con ello las herramientas y procesos necesarios para lograrla.\\
 
-En el año 2005 en la UPIITA se realizó un trabajo parecido a nuestro proyecto en el sentido de presentar un brazo robótico, este para realizar prueba de trayectorias en aplicaciones didácticas.\\
 
-En el ámbito de la visión artificial, se han realizado diversos proyectos, entre los cuales destacan un sistema de visión artificial para la navegación de un robot móvil (2005), un dispositivo automatizado para el control de posición de una marcadora mediante visión artificial (2009) y un prototipo de un roboconstructor autónomo con visión artificial para el concurso EUROBOT 2009.\\
 
-El proyecto está pensado para ser lo más económico posible para poder implementarse en pequeña y mediana industria, ya que los modelos comerciales oscilan entre los 21,000 y 50,600 euros.\\
-
-Se espera sentar un precedente en cuanto a proyectos que tengan como objetivos la clasificación y paletización de objetos.\\
-
-A continuación se muestra un robot SCARA en una aplicación industrial:
+A continuación se muestra el diagrama de actividades para el Submódulo de Procesamiento de Imágenes
 \begin{center}
-  \includegraphics[scale=.9]{imagenes/scaraindust1}
-\captionof{figure}{Aplicaciones industriales del robot SCARA}
+  \includegraphics[scale=.42]{imagenes/Diagrama de actividad submodulo de procesamiento d eimagenes}
+\captionof{figure}{Diagrama de actividades}
+ \label{fig:scaraindust}
+\end{center}
+
+
+A continuación se muestra el diagrama de casos de uso para el Submódulo de Procesamiento de Imágenes
+\begin{center}
+  \includegraphics[scale=.65]{imagenes/Casos de usos Procesamiento de imagenes}
+\captionof{figure}{Diagrama de casos de uso}
  \label{fig:scaraindust}
 \end{center}
 
@@ -146,17 +146,38 @@ A continuación se muestra un robot SCARA en una aplicación industrial:
 \newpage
 \section{Diseño de la Unidad Contenedora del Módulo Central de Procesamiento}
 
-El desarrollo económico de un país está directamente ligado a la independencia tecnológica de éste, en un país emergente como México, es de suma importancia la investigación, el diseño y la construcción de prototipos que propongan mejoras a artefactos y optimización de procesos industriales.
-\\\\
-El diseño e  implementación de tecnología en la industria e investigación agiliza los procesos, convirtiéndolos en automáticos o autónomos y garantizando la precisión de estos.
-\\\\
-El proceso de paletización es  requerido en todos los niveles de la industria, en ocasiones como proceso intermedio o bien de almacenaje, en específico para la industria mediana se realiza esta tarea de forma manual. Usualmente al proceso de paletizado lo antecede un proceso de separación o clasificación de elementos, este por requerir el discernimiento de forma, color, materiales, etc es comunmente realizado de por una persona o grupo de personas.
-\\\\
-El proceso de fabricación de llaves para cerradura consiste basicamente en uno o varios sistemas de troquelado seriados con un proceso de paletizado, que a su vez está seriado con un proceso de control numérico. Usualmente los procesos de clasificación y paletizado son realizados de forma manual, lo que acarrea retardos e incremento de costos.
-\\\\
-Para el continuo funcionamiento, la precisión y la reducción de costos en en la fabricación de llaves de cerradura se propone el diseño y construcción de un sistema integral, compuesto por un sistema de visión artificial para la clasificación de las llaves, una banda transportadora y un robot SCARA de 4 grados de libertad para el proceso de paletizado.
+Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
+\\
+Elementos físicos que contendrá la unidad:
+
+\begin{itemize}
+
+\item Raspberry Pi 4 Modelo B\\
+De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
+Dimensiones 85 x 53mm. 
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
+\captionof{figure}{Especificaciones Físicas}
+ \label{fig:scaraindust}
+\end{center}
+
+\item Zumbador Pasivo KY-006\\
+Dimensiones 18 x 15mm. 
+
+\item Cámara Pivariety IMX230\\
+Dimensiones de la placa: 38 x 38mm. 
+
+\item Cable macho-hembra\\
+Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
+Largo 10 cm. 
+
+\item Micro SD\\  
+Dimensiones: 15 x 11 x 1 mm. 
+
+\end{itemize}
 
 
+Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
 
 
 
@@ -417,18 +438,6 @@ Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las vel
 
 Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto.
 
-Dado que el presente proyecto será desarrollado para funcionar en una Raspberry Pi 4 modelo B, procederemos a comparar distintos módulos compatibles para Rasperry Pi que nos permita utilizar y conectarlos a la red LTE-M
-
-\begin{table}[h]
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-Modelo          & Voltaje de Operación & Redes Soportadas & \begin{tabular}[c]{@{}l@{}}Dificultad\\ de Integración\end{tabular} & Costo  \\ \hline
-SixFab Base Hat & 5V                   & 3G/4G/LTE        & Bajo                                                                & \$2500 \\ \hline
-SIM7600A-H      & 3-5V                 & 3G/4G/LTE        & Bajo                                                                & \$1436 \\ \hline
-SIM800C-G       & 3.3 - 5V             & 3G/4G/LTE        & Alta                                                                & \$508  \\ \hline
-SIM7600CE       & 3.3-5V               & 2G/3G/4G/LTE     & Bajo                                                                & \$2134 \\ \hline
-\end{tabular}
-\end{table}
 \end{itemize}
 
 

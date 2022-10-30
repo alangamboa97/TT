@@ -15,7 +15,7 @@
 \fancyhead[L]{\footnotesize UPIITA}
 %\fancyfoot[R]{\footnotesize Diseño}
 \fancyfoot[R]{\thepage}
-\fancyfoot[L]{\footnotesize Trabajo terminal 1}
+\fancyfoot[L]{\footnotesize Reporte Parcial 2 }
 \renewcommand{\footrulewidth}{0.4pt}
 \usepackage{graphics}
 \usepackage{capt-of}
@@ -57,7 +57,7 @@
 \begin{flushleft} \large
 \emph{Autores:}\\
 Alan Eduardo Gamboa Del Ángel\\
-Maite Paulette Díaz Martínez:3\\
+Maite Paulette Díaz Martínez\\
 Nilsen Alfaro Parra\\
 
 %Grupo:4MM6\\
@@ -88,24 +88,70 @@ Dr. Rodolfo Vera Amaro\\
 \listoftables
 
 \newpage
-\section{Resumen}
+\section{Análisis del módulo Central de Procesamiento }
+
+Requerimientos Funcionales 
+%\usepackage{tabularx}
+
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{|m{0.05\linewidth}|m{0.95\linewidth}|}
+\hline
+\textbf{RF} &  \textbf{Descripción}\\
+\hline
+RF1 & Realizar la comunicación con el módulo de procesamiento de imágenes.\\
+\hline
+RF2 & Realizar la intercomunicación con los periféricos conectados al microprocesador. \\
+\hline
+RF3 & Clasificar los datos proporcionados por el módulo de procesamiento de imágenes. \\
+\hline
+RF4 & Realizar la comunicación del módulo de procesamiento de imágenes con el módulo de telemetría. \\
+\hline
+RF5 & Determinar el estado del conductor. \\
+\hline
+RF6 & Activar alarma. \\
+\hline
+RF7 & Establecer comunicación con la Estación Base.    \\
+\hline
+RF8 & Almacenar información en la unidad externa del almacenamiento en caso de que haya una pérdida de comunicación con la Estación Base. \\
+\hline
+\end{tabular}
+\caption{Requerimientos Funcionales del Módulo Central de Procesamiento}
+\label{tabla:Requerimientos Funcionales del Módulo Central de Procesamiento}
+\end{center}
+\end{table}
+
+Requerimientos No Funcionales 
+
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{|m{0.05\linewidth}|m{0.95\linewidth}|}
+\hline
+\textbf{RF} &  \textbf{Descripción}\\
+\hline
+Grados de libertad & 4\\
+\hline
+Capacidad de carga máxima & 8 kg\\
+\hline
+Capacidad de carga nominal & 2kg\\
+\hline
+Alcance & 600 mm\\
+\hline
+Repetibilidad & $\pm0.01$ mm\\
+\hline
+Carrera & 200 o 400 mm\\
+\hline
+Métodos de fijación & Suelo o pared \\
+\hline
+Controlador de la serie CS2 de Staubli &  CS8C \\
+\hline
+\end{tabular}
+\caption{Requerimientos No Funcionales del Módulo Central de Procesamiento}
+\label{tabla:Requerimientos No Funcionales del Módulo Central de Procesamiento}
+\end{center}
+\end{table}
 
 
-El presente trabajo reporta el proceso de diseño e implementación del proyecto titulado ``Diseño, manufactura y control de un robot paletizador articulado de cuatro grados de libertad asistido por un sistema de visión artificial'' como Trabajo Terminal para que cada uno de los integrantes del equipo obtenga el título de Ingeniero en Mecatrónica en la Unidad Profesional Interdisciplinaria en Ingenierías y Tecnologías Avanzadas (UPIITA).
-\\\\
-Este Trabajo Terminal consiste en el diseño y construcción de un sistema para la clasificación y paletización de llaves como proceso posterior al troquelado de estas en distintas lineas de 
-producción.
-En esta entrega final del reporte se detalla el proceso de diseño y re-diseño de los elementos y subsistemas pertenecientes al proyecto.El sistema se divide en varios subsistemas, siendo los más importantes el subsistema de clasificación, que contará con una interfaz en SimpleCV\footnote{Software de código abierto para el desarrolo de sistemas de visión artificial} para la clasificación de llaves utilizando técnicas de visión artificial,  el transporte de las llaves  se basa en una banda transportadora y el subsistema de paletización
-para el que se diseñará y constuirá un robot SCARA de 4 grados de libertad controlado por computadora.
-\\\\
-El sistema planteado debe ser capaz de operar de manera autónoma y continua con un mínimo de errores, el usuario será capaz de modificar la velocidad de trabajo y cargar algunas rutinas de tiempos, esto debido a que se plantea construir un sistema flexible, que pueda ser fácilmente adaptado a tareas diversas.
-\\\\
-La primera parte de este escrito consiste en los antecedentes necesarios y el planteamiento del problema asi como la metodología utilizada para la selección de la mejor solución. Posteriormente se describirá el diseño y modelado de los subsistemas que integran la solución escogida. Se reportan así mismo las simulaciones correspondientes al control propuesto para el subsistema de paletizado, los análisis de esfuerzos en la estructura mecánica, así como los resultados experimentales de la integración completa del sistema de manera virtual.
-\\\\
-La última parte del documento corresponde a la conclusión del diseño y re-diseño de elementos y evidencias de implementación  del sistema 
-
-
-\newpage
 \section{Introducción}
 
 El presente trabajo integra las cuatro disciplinas de la mecatrónica para generar un sistema que ayude a eficientar procesos repetitivos, se plantea un primer acercamiento a la optimización del proceso antes mencionado, sentar las bases para futuros trabajos a realizarse en la UPIITA, así como para fomentar nuevas aplicaciones y mejoras a este prototipo.\\
