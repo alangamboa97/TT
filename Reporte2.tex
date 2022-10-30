@@ -212,6 +212,12 @@ código, de manera que sea mas legible y ordenado.
  \label{fig:casosusomc}
 \end{center}
 
+En el  siguiente diagrama, se pueden observar las distintas tareas así como las interacciones entre estas y el Submódulo de Procesamiento de Imágenes. 
+
+Cabe recalcar, que para el presente reporte no se han determinado el diseño del Módulo de Telemetría, ni el de la Estación Base, por lo que se puede esperar el rediseño de este diagrama en un posterior reporte.Por esta misma razón, se decicidó no incluir el diagrama de clases hasta que los Módulos faltantes estén diseñados.
+
+
+
 
 \begin{center}
 
@@ -221,6 +227,13 @@ código, de manera que sea mas legible y ordenado.
 
 \end{center}
 
+En el siguiente Diagrama de Actividades se describen las actividades y sus interacciones con el Submódulo de Procesamiento de Imágenes y la Estación Base. Para que el sistema principal pueda iniciar, se necesita que el conductor encienda el auto, ya que este sistema funcionará utilzando la alimentación electrica.\\ 
+El sistema principal comenzará por verificar el estado del Submódulo de Procesamiento de Imágenes, así como el de Telemetría y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Procesamiento de Imáganes. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
+Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Telemetría.se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
+
+
+
+\newpage
 
 \begin{center}
   \includegraphics[scale=.5]{imagenes/diagrama_secuenciamc}
@@ -228,8 +241,7 @@ código, de manera que sea mas legible y ordenado.
  \label{fig:secuenciamc}
 \end{center}
 
-
-
+Siguiendo los procesos del diagrama anterior, se procede a dar un enfásis en la duración de los mismos, así como las peticiones y respuestas de los distintos submódulos y sistemas.
 
 
 
