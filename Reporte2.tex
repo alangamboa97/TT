@@ -7,6 +7,7 @@
 \usepackage{anysize}
 \usepackage{array}
 \usepackage{lmodern}
+\usepackage{adjustbox}
 
 \marginsize{2cm}{2cm}{2cm}{2cm}
 \usepackage{fancyhdr}
@@ -102,108 +103,6 @@ Dr. Rodolfo Vera Amaro\\
 \newpage
 \listoftables
 
-\newpage
-\section{Diseño del Módulo Central de Procesamiento}
-
-
-El presente trabajo reporta el proceso de diseño e implementación del proyecto titulado ``Diseño, manufactura y control de un robot paletizador articulado de cuatro grados de libertad asistido por un sistema de visión artificial'' como Trabajo Terminal para que cada uno de los integrantes del equipo obtenga el título de Ingeniero en Mecatrónica en la Unidad Profesional Interdisciplinaria en Ingenierías y Tecnologías Avanzadas (UPIITA).
-\\\\
-Este Trabajo Terminal consiste en el diseño y construcción de un sistema para la clasificación y paletización de llaves como proceso posterior al troquelado de estas en distintas lineas de 
-producción.
-En esta entrega final del reporte se detalla el proceso de diseño y re-diseño de los elementos y subsistemas pertenecientes al proyecto.El sistema se divide en varios subsistemas, siendo los más importantes el subsistema de clasificación, que contará con una interfaz en SimpleCV\footnote{Software de código abierto para el desarrolo de sistemas de visión artificial} para la clasificación de llaves utilizando técnicas de visión artificial,  el transporte de las llaves  se basa en una banda transportadora y el subsistema de paletización
-para el que se diseñará y constuirá un robot SCARA de 4 grados de libertad controlado por computadora.
-\\\\
-El sistema planteado debe ser capaz de operar de manera autónoma y continua con un mínimo de errores, el usuario será capaz de modificar la velocidad de trabajo y cargar algunas rutinas de tiempos, esto debido a que se plantea construir un sistema flexible, que pueda ser fácilmente adaptado a tareas diversas.
-\\\\
-La primera parte de este escrito consiste en los antecedentes necesarios y el planteamiento del problema asi como la metodología utilizada para la selección de la mejor solución. Posteriormente se describirá el diseño y modelado de los subsistemas que integran la solución escogida. Se reportan así mismo las simulaciones correspondientes al control propuesto para el subsistema de paletizado, los análisis de esfuerzos en la estructura mecánica, así como los resultados experimentales de la integración completa del sistema de manera virtual.
-\\\\
-La última parte del documento corresponde a la conclusión del diseño y re-diseño de elementos y evidencias de implementación  del sistema 
-
-
-\newpage
-\section{Diseño del Submódulo de Procesamiento de Imágenes}
-
-
-
-
-
-A continuación se muestra el diagrama de actividades para el Submódulo de Procesamiento de Imágenes
-\begin{center}
-  \includegraphics[scale=.42]{imagenes/Diagrama de actividad submodulo de procesamiento d eimagenes}
-\captionof{figure}{Diagrama de actividades}
- \label{fig:scaraindust}
-\end{center}
-
-Para el presente proyecto, se utilizará el esquema de detección de rostros Haar-Adaboost.
-.
-
-\begin{center}
-  \includegraphics[scale=.42]{imagenes/landmark}
-\captionof{figure}{Puntos de referencia}
- \label{fig:landmark}
-\end{center}
-
-
-A su vez, se utilizaran puntos de referencia con la ayuda de el software OpenCV para dividir las características que posteriormente serán extraídas y clasificadas.
-\begin{center}
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|c|}
-\hline
-Partes        & \multicolumn{1}{l|}{Puntos de Referencia} \\ \hline
-Boca          & {[}48-67{]}                               \\ \hline
-Ojo Derecho   & {[}36-41{]}                               \\ \hline
-Ojo Izquierdo & {[}42-46{]}                               \\ \hline
-\end{tabular}
-\end{table}
-
-
-\end{center}
-A continuación se muestra el diagrama de casos de uso para el Submódulo de Procesamiento de Imágenes
-\begin{center}
-  \includegraphics[scale=.65]{imagenes/Casos de usos Procesamiento de imagenes}
-\captionof{figure}{Diagrama de casos de uso}
- \label{fig:scaraindust}
-\end{center}
-
-
-\newpage
-\section{Diseño de la Unidad Contenedora del Módulo Central de Procesamiento}
-
-Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
-\\
-Elementos físicos que contendrá la unidad:
-
-\begin{itemize}
-
-\item Raspberry Pi 4 Modelo B\\
-De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
-Dimensiones 85 x 53mm. 
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
-\captionof{figure}{Especificaciones Físicas}
- \label{fig:scaraindust}
-\end{center}
-
-\item Zumbador Pasivo KY-006\\
-Dimensiones 18 x 15mm. 
-
-\item Cámara Pivariety IMX230\\
-Dimensiones de la placa: 38 x 38mm. 
-
-\item Cable macho-hembra\\
-Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
-Largo 10 cm. 
-
-\item Micro SD\\  
-Dimensiones: 15 x 11 x 1 mm. 
-
-\end{itemize}
-
-
-Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
-
-
 
 \newpage
 \section{Búsqueda de Lenguajes de Programación para el Microordenador}
@@ -259,11 +158,159 @@ MATLAB también viene con algunas restricciones. El lenguaje de programación no e
 JavaScript no será tu lenguaje principal para desarrollo en Inteligencia Artificial, pero sí que es un gran complemento para hacer muchas cosas, especialmente visualización, y conviene aprenderlo porque te va a servir para todo un poco. Si quieres exponer tus modelos hacia el exterior, seguramente lo acabarás haciendo a través de alguna interfaz web. 
 El hecho de que TensorFlow.js se ejecute dentro del navegador abre una gama de posibilidades interesantes tanto para empresas como para desarrolladores.
 Como los navegadores son un espacio interactivo: ofrece acceso a varios sensores, incluidas cámaras web y micrófonos, que pueden proporcionar imágenes y sonidos como entrada a cualquier modelo de aprendizaje automático.
-A pesar de todos los aspectos positivos, TensorFlow.js no tiene acceso predeterminado al sistema de archivos en el entorno del host del navegador. Esto limita los recursos de datos disponibles y puede imponer restricciones en el tamaño de los archivos.
+A pesar de todos los aspectos positivos, TensorFlow.js no tiene acceso predeterminado al sistema de archivos en el entorno del host del navegador. Esto limita los recursos de datos disponibles y puede imponer restricciones en el tamaño de los archivos.\\
+
 
 
 
 \end{itemize}
+
+A continuación se presenta una tabla comparativa de las características que se tomaron en cuenta para tomar una decisión sobre que lenguaje utilizar.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Lenguaje} & \textbf{Popularidad} & \textbf{Versatilidad} & \textbf{Velocidad} & \textbf{Soporte} \\ \hline
+Python            & Alta                 & Alta                  & Moderada           & Alta             \\ \hline
+C++               & Baja                 & Alta                  & Alta               & Moderado         \\ \hline
+R                 & Alta                 & Moderada                  & Moderado           & Bajo             \\ \hline
+Matlab            & Baja                 & Moderada              & Moderada           & Bajo             \\ \hline
+Javascript        & Moderada             & Moderada              & Baja               & Moderado         \\ \hline
+\end{tabular}
+\end{table}
+
+Python es un lenguaje que permite trabajar más de un paradigma (programación estructurada y orientada a objetos).
+Normalmente cuando programamos un script sencillo aplicamos solo el paradigma de programación estructurada (Secuencia, selección e iteración), y cuando necesitamos programar un proyecto  más complejo y queremos incluir los beneficios del paradigma orientado a objetos (reutilización de los componentes, facilidad de mantenimiento y modificación de objetos) utilizamos clases (POO).\\
+Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje nos permite desarrollar ambos ámbitos. Por lo que se tomó la decisión de ser utilizado a lo largo de este proyecto. 
+
+
+\newpage
+\section{Diseño del Módulo Central de Procesamiento}
+
+
+
+Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y que estaremos utilizando de manera frecuente a lo largo de este proyecto, es la modularidad. Que no es más que dividir nuestros programas en partes más pequeñas (sub-programas), que habitualmente son llamados módulos. Las cuales deben tener un grado de independencia de la aplicación o programa principal. Cuando hablamos de independencia, nos referimos a que pueden ser utilizados por otras aplicaciones y no dependen de la aplicación original en sí. 
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/modularidad}
+\captionof{figure}{Modularidad}
+ \label{fig:modul}
+\end{center}
+
+
+
+
+
+Estós módulos son archivos que alojan código independiente con una determinada función.  Python cuenta con diversos módulos que podemos agregar a nuestro código y utilizarlo para facilitar y acortar el 
+código, de manera que sea mas legible y ordenado.
+
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/diagrama_casosusomc}
+\captionof{figure}{Diagrama de Casos de Uso - Módulo Central de Procesamiento}
+ \label{fig:casosusomc}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/diagrama_secuenciamc}
+\captionof{figure}{Diagrama de Secuencia - Módulo Central de Procesamiento}
+ \label{fig:secuenciamc}
+\end{center}
+
+
+
+
+
+
+
+\newpage
+\section{Diseño del Submódulo de Procesamiento de Imágenes}
+
+
+
+
+
+A continuación se muestra el diagrama de actividades para el Submódulo de Procesamiento de Imágenes
+\begin{center}
+  \includegraphics[scale=.42]{imagenes/Diagrama de actividad submodulo de procesamiento d eimagenes}
+\captionof{figure}{Diagrama de actividades}
+ \label{fig:scaraindust}
+\end{center}
+
+Para el presente proyecto, se utilizará el esquema de detección de rostros Haar-Adaboost.
+.
+
+\begin{center}
+  \includegraphics[scale=.42]{imagenes/landmark}
+\captionof{figure}{Puntos de referencia}
+ \label{fig:landmark}
+\end{center}
+
+
+A su vez, se utilizaran puntos de referencia con la ayuda de el software OpenCV para dividir las características que posteriormente serán extraídas y clasificadas.
+\begin{center}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+Partes        & \multicolumn{1}{l|}{Puntos de Referencia} \\ \hline
+Boca          & {[}48-67{]}                               \\ \hline
+Ojo Derecho   & {[}36-41{]}                               \\ \hline
+Ojo Izquierdo & {[}42-46{]}                               \\ \hline
+\end{tabular}
+\end{table}
+
+
+\end{center}
+
+
+
+
+A continuación se muestra el diagrama de casos de uso para el Submódulo de Procesamiento de Imágenes
+\begin{center}
+  \includegraphics[scale=.65]{imagenes/Casos de usos Procesamiento de imagenes}
+\captionof{figure}{Diagrama de casos de uso}
+ \label{fig:scaraindust}
+\end{center}
+
+
+\newpage
+\section{Diseño de la Unidad Contenedora del Módulo Central de Procesamiento}
+
+Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
+\\
+Elementos físicos que contendrá la unidad:
+
+\begin{itemize}
+
+\item Raspberry Pi 4 Modelo B\\
+De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
+Dimensiones 85 x 53mm. 
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
+\captionof{figure}{Especificaciones Físicas}
+ \label{fig:scaraindust}
+\end{center}
+
+\item Zumbador Pasivo KY-006\\
+Dimensiones 18 x 15mm. 
+
+\item Cámara Pivariety IMX230\\
+Dimensiones de la placa: 38 x 38mm. 
+
+\item Cable macho-hembra\\
+Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
+Largo 10 cm. 
+
+\item Micro SD\\  
+Dimensiones: 15 x 11 x 1 mm. 
+
+\end{itemize}
+
+
+Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
+
 
 
 
@@ -477,8 +524,22 @@ Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto.
 \newpage
 \section{Búsqueda de Tecnologías de Geolocalización}
 
+La geolocalización implica el posicionamiento que define la localización de un objeto en un sistema de coordenadas determinado.
 
-
+Los datos para la geolocalización se pueden obtener mediante la dirección IP de un usuario, su dirección MAC, el uso del RFID, la ubicación de la conexión WIFI o las coordenadas de GPS de su dispositivo.\\
+Entre las diferentes tecnologías para la geolocalización, para este proyecto se destacan:
+\begin{table}[h]
+\begin{adjustbox}{width=\columnwidth,center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Tecnología                                 & Descripción                                                                                                                                                                                                                                                                                            & Exactitud                                                                                                                                & \begin{tabular}[c]{@{}l@{}}Utilización\\ Principal\end{tabular}          \\ \hline
+\textit{GPS(Global Positioning System)}    & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento global formado por \\ una red de más de 30 satélites \\ que orbitan alrededor de la tierra. \\ Cada navegador GPS está conectado a \\ diferentes satélites\\  para tener los datos reales de\\  la geolocalización en todo momento.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Es un sistema de\\ geolocalización muy preciso, \\ obteniendo la \\ ubicación de manera\\ exacta\end{tabular} & \begin{tabular}[c]{@{}l@{}}Telefono móvil \\ o en vehículos\end{tabular} \\ \hline
+\textit{GSM(Global System for Mobile)}     & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento \\ formado por las torres y \\ antenas de telefonía\end{tabular}                                                                                                                                                                                 & \begin{tabular}[c]{@{}l@{}}Es un sistema de geolocalización\\ impreciso. Tiene un \\ margen de error\\ de hasta 200 metros\end{tabular}  & \begin{tabular}[c]{@{}l@{}}Comunicación\\ móvil\end{tabular}             \\ \hline
+\textit{GPRS(General Packet Radio System)} & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento de \\ segunda generación GSM, \\ proporciona servicios de alta velocidad\end{tabular}                                                                                                                                                            & \begin{tabular}[c]{@{}l@{}}Es un sistema de geolocalización\\ preciso pero limitado en área de\\ cobertura\end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Solo disponible\\ en tierra\end{tabular}      \\ \hline
+\textit{Wi-Fi}                             & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento   \\ en el que todas las redes \\ WIFI encendidas emiten una \\ señal identificativa,   \\ comúnmente llamada dirección MAC. \\ Este sistema usa 3 o más puntos de\\  referencia para calcular la ubicación.\end{tabular}                        & \begin{tabular}[c]{@{}l@{}}Es un sistema de geolocalización\\ impreciso, \\ presenta grandes margenes\\ de error\end{tabular}            & Interiores                                                               \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
 
 
 \newpage
@@ -494,26 +555,23 @@ Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto.
 %Aquí ponga la bibliografía y referencias usadas
 
 %Artículo:
-\bibitem{Referencia1} Rafael Kelly, Victor Santibáñez Davila, Antonio Loría, \emph{Control of Robot Manipulators in Joint Space}, Segunda edición ,Springer, 2005
+\bibitem{Referencia1} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
 %Libro
 \bibitem{Referencia2}
-Mark W. Spong, Seth Hutchinso y M. Vidyasagar, \emph{Robot Modeling and
-Control}, primera edición, JOHN WILEY \& SONS, INC, 2005.
+V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
 
-\bibitem{Referencia3} Antonio Barrientos, Luís Felipe Peñinm Carlos Balaguer, Rafael Aracil , \emph{Fundamentos de robótica}, Primera edición , McGraw-Hill, 1997
+\bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
 
-\bibitem{Referencia4} Joseph  E Shigley, John  J Uicker  Jr, \emph{Teoria  de Máquinas  y Mecanismos}, Primera edicicón , McGraw-Hill, 1998
+\bibitem{Referencia4} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
 
-\bibitem{Referencia5} Robert L. Mott, \emph{Diseño de elementos de máquinas}, Cuarta edición , Pearson, 2006
+\bibitem{Referencia5} Aurélien Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow}, Segunda Edición , O'Reilly, 2009
 
 
-\bibitem{Referencia6} Javier Echávarri Otero,  Giuseppe Carbone, Marco Ceccarelli, José Luis Muñoz Sanz, \emph{CRITERIOS PARA LA SEGURIDAD EN EL USO DE ROBOTS}, 8º CONGRESO IBEROAMERICANO DE INGENIERIA MECANICA, 2007
-
-\bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with SimpleCV}, Primera edición, O'REILLY, 2012
+\bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with OpenCV}, Tercera Edición, O'Reilly, 2017
 
 \bibitem{Referencia8} A. Serrano Nicolás \emph{Neumática Práctica}, Primera edición, Paraninfo , 2009
 
-\bibitem{Referencia9} Gareth J. Monkman, Stefan Hesse, Ralf Steinmann, Henrik Schunk \emph{Robot Grippers}, Primera edición, Wiley-VCH , 2007
+\bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
 
 
 Cibergrafía:
