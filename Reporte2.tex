@@ -256,7 +256,10 @@ Siguiendo los procesos de la [Figura 4], se procede a dar un análisis superficia
 \section{Diseño del Submódulo de Procesamiento de Imágenes}
 
 
-A continuación se muestra el diagrama de casos de uso para el Submódulo de Procesamiento de Imágenes
+Para el diseño de la unidad de procesamiento nos apoyamos en la metodología UML, iniciando con un diagrama de casos de usos.
+Un modelo de casos de uso muestra una vista del sistema desde la perspectiva del usuario, por lo cual describe qué hace el sistema sin describir cómo lo hace. 
+El siguiente diagrama muestra las funciones del Submódulo de Procesamiento de Imágenes basado en los requerimientos del sistema, así como la interacción con el Módulo Central de Procesamiento y el conductor, el cual es indispensable para poder realizar la detección de somnolencia.
+
 \begin{center}
   \includegraphics[scale=.65]{imagenes/casosdeusospi}
 \captionof{figure}{Diagrama de Casos de Uso - Submódulo de Procesamiento de Imágenes}
@@ -272,8 +275,6 @@ A continuación se muestra el diagrama de actividades para el Submódulo de Proces
 \end{center}
 El diagrama de actividades muestra el flujo de las actividades en general, para que el sistema pueda funcionar requiere que el automóvil le proporcione una fuente de alimentación hacia el ordenador, el cual iniciara el sistema para la detección de somnolencia. Una condición importante es que el conductor se encuentre dentro del rango visual de la cámara y permanezca dentro del mismo al mismo tiempo que el Submódulo de Procesamiento de Imágenes realiza la captura de video utilizando una cámara digital. Posteriormente se realizará la detección del rostro utilizando el método Haar-Adaboost. También se utilizarán librerías como Dlib OpenCV para entrenar al sistema, y que este sea capaz de detectar el rostro con condiciones de poca luz.
 
-Como proceso paralelo a la detección de signos de somnolencia, la Identificación de una posible incidencia será la encargada de iniciar la grabación de video, con el fin de tener un fragmento de video segundos antes de detectar si el conductor presenta somnolencia. En caso de que el conductor presente somnolencia el video será detenido hasta detectar que el conductor mantiene los ojos abiertos por un intervalo de tiempo definido. En caso de que el sistema indique que el conductor no presenta somnolencia el video será detenido y posteriormente eliminado de la memoria externa, con el fin de no saturar el espacio en la memoria.
-
 
 Se hará uso de una Red Neuronal Convolucional para clasificar los ojos (abierto o cerrado) y así determinar el estado de somnolencia del conductor. Cabe mencionar, que el diseño de esta red se retomará en un reporte posterior, cuando se determine la resolución de óptima para detectar el rostro en tiempo real. 
 
@@ -284,7 +285,8 @@ En caso de que el conductor presente somnolencia, el video será detenido hasta d
 
  En caso de que el sistema indique que el conductor no presenta somnolencia el video será detenido y posteriormente eliminado de la memoria externa, con el fin de no saturar el espacio en la memoria.
  Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. 
- 
+
+\newpage
  \textbf{Puntos de Referencia}
 
 \begin{center}
