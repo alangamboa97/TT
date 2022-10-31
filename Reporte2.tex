@@ -205,6 +205,9 @@ Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y q
 Estós módulos son archivos que alojan código independiente con una determinada función.  Python cuenta con diversos módulos que podemos agregar a nuestro código y utilizarlo para facilitar y acortar el 
 código, de manera que sea mas legible y ordenado.
 
+Otro de los factores que consideramos al desarrollar este proyecto, es el de concurrencia de procesos. La concucrrencia aparece cuando dos o más procesos ocurren al mismo tiempo.
+Estos procesos pueden "competir" o colaborar entre sí por los recursos del sistema. \\
+Los temás de colaboración, sincronización, hilos y paralelismo se abordarán de una manera más profunda en el tercer reporte, cuando se tenga el diseño de los módulos faltantes.
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/diagrama_casosusomc}
@@ -252,15 +255,28 @@ Siguiendo los procesos del diagrama anterior, se procede a dar un enfásis en la 
 \section{Diseño del Submódulo de Procesamiento de Imágenes}
 
 
-
+A continuación se muestra el diagrama de casos de uso para el Submódulo de Procesamiento de Imágenes
+\begin{center}
+  \includegraphics[scale=.65]{imagenes/casosdeusospi}
+\captionof{figure}{Diagrama de Casos de Uso - Submódulo de Procesamiento de Imágenes}
+ \label{fig:csspi}
+\end{center}
 
 
 A continuación se muestra el diagrama de actividades para el Submódulo de Procesamiento de Imágenes
 \begin{center}
-  \includegraphics[scale=.42]{imagenes/Diagrama de actividad submodulo de procesamiento d eimagenes}
-\captionof{figure}{Diagrama de actividades}
- \label{fig:scaraindust}
+  \includegraphics[scale=.3]{imagenes/Diagramadeactividadspi}
+\captionof{figure}{Diagrama de Actividades - Submódulo de Procesamiento de Imágenes}
+ \label{fig:actspi}
 \end{center}
+
+
+\begin{center}
+  \includegraphics[scale=.42]{imagenes/diagramadesecuenciaspi}
+\captionof{figure}{Diagrama de Secuencia - Submódulo de Procesamiento de Imágenes}
+ \label{fig:secspi}
+\end{center}
+\newpage	
 
 Para el presente proyecto, se utilizará el esquema de detección de rostros Haar-Adaboost.
 .
@@ -291,12 +307,7 @@ Ojo Izquierdo & {[}42-46{]}                               \\ \hline
 
 
 
-A continuación se muestra el diagrama de casos de uso para el Submódulo de Procesamiento de Imágenes
-\begin{center}
-  \includegraphics[scale=.65]{imagenes/Casos de usos Procesamiento de imagenes}
-\captionof{figure}{Diagrama de casos de uso}
- \label{fig:scaraindust}
-\end{center}
+
 
 
 \newpage
@@ -319,16 +330,42 @@ Dimensiones 85 x 53mm.
 
 \item Zumbador Pasivo KY-006\\
 Dimensiones 18 x 15mm. 
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/KY-006}
+\captionof{figure}{Zumbador Pasivo KY-006}
+ \label{fig:scaraindust}
+\end{center}
 
-\item Cámara Pivariety IMX230\\
-Dimensiones de la placa: 38 x 38mm. 
+\item Cámara Arducam Pivariety IMX230\\
+Dimensiones de la placa: 38 x 38mm.
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/camara}
+\captionof{figure}{Cámara Pivariety IMX230}
+ \label{fig:scaraindust}
+\end{center}
+ 
 
 \item Cable macho-hembra\\
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Jumpers}
+\captionof{figure}{Jumpers}
+ \label{fig:scaraindust}
+\end{center}
+
 Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
 Largo 10 cm. 
 
 \item Micro SD\\  
 Dimensiones: 15 x 11 x 1 mm. 
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/MicroSD}
+\captionof{figure}{Micro SD}
+ \label{fig:scaraindust}
+\end{center}
+
 
 \end{itemize}
 
