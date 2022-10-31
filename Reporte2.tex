@@ -120,7 +120,7 @@ Lo primero que debemos de tener claro, es que la programación orientada a la int
 
 El proceso de trabajo para aprendizaje automático es muy diferente a la construcción de una aplicación convencional. Por este motivo, la manera de utilizar los lenguajes de programación es diferente. Se deben de tomar en cuenta las características que estos utilizan, así como sus enfoques y paradigmas.\\
 
-Uno de los factores importantes a considerar al momento de elegir un lenguaje de programación orientado a machine learning, es la popularidad el mismo, ya que esta es una señal de la aceptación por parte de la comunidad. A su vez, su ecosistema es tanto o mas importante, ya que podemos darnos una idea si dicho lenguaje posee las herramientas adecuadas que se acoplan a nuestras necesidades. Finalmente, la ideonidad del lenguaje es otro factor relevante, ya que, si el lenguaje fue diseñado con una determinada tarea o propósito en mente, este será mucho más eficiente y productivo.\\
+Uno de los factores importantes a considerar al momento de elegir un lenguaje de programación orientado a machine learning, es la popularidad el mismo, ya que esta es una señal de la aceptación por parte de la comunidad. A su vez, su el soporte es tanto o mas importante, ya que podemos darnos una idea si dicho lenguaje posee las herramientas adecuadas que se acoplan a nuestras necesidades. La velocidad de ejecución es otro factor importante, sobre todo cuando se requiere una minusiocidad en la ejecución de procesos y el cuidado de la memoria .Finalmente, la versatilidad del lenguaje es otro factor relevante, ya que, si el lenguaje fue diseñado con una determinada tarea o propósito en mente, este será mucho más eficiente y productivo.\\
 
 A continuación, se listan algunos de los lenguajes de programación más populares en el campo de machine learning:\\
 
@@ -155,10 +155,10 @@ MATLAB también viene con algunas restricciones. El lenguaje de programación no e
 
 \item \textbf{Javascript}
 
-JavaScript no será tu lenguaje principal para desarrollo en Inteligencia Artificial, pero sí que es un gran complemento para hacer muchas cosas, especialmente visualización, y conviene aprenderlo porque te va a servir para todo un poco. Si quieres exponer tus modelos hacia el exterior, seguramente lo acabarás haciendo a través de alguna interfaz web. 
+JavaScript puede no ser el lenguaje principal para desarrollo en Inteligencia Artificial, pero es gran complemento para utilizar herramientas relacionadas con Machine Learning, especialmente visualización de datos o procesos,
 El hecho de que TensorFlow.js se ejecute dentro del navegador abre una gama de posibilidades interesantes tanto para empresas como para desarrolladores.
 Como los navegadores son un espacio interactivo: ofrece acceso a varios sensores, incluidas cámaras web y micrófonos, que pueden proporcionar imágenes y sonidos como entrada a cualquier modelo de aprendizaje automático.
-A pesar de todos los aspectos positivos, TensorFlow.js no tiene acceso predeterminado al sistema de archivos en el entorno del host del navegador. Esto limita los recursos de datos disponibles y puede imponer restricciones en el tamaño de los archivos.\\
+A pesar de todos los aspectos positivos, TensorFlow.js no tiene acceso predeterminado al sistema de archivos en el entorno del host del navegador. Esto limita los recursos de datos disponibles y puede imponer restricciones en el tamaño de los archivos y procesos.\\
 
 
 
@@ -178,6 +178,7 @@ R                 & Alta                 & Moderada                  & Moderado 
 Matlab            & Baja                 & Moderada              & Moderada           & Bajo             \\ \hline
 Javascript        & Moderada             & Moderada              & Baja               & Moderado         \\ \hline
 \end{tabular}
+\caption{\label{tab:lenguajes} Tabla Comparativa Lenguajes de Programación}
 \end{table}
 
 Python es un lenguaje que permite trabajar más de un paradigma (programación estructurada y orientada a objetos).
@@ -244,7 +245,7 @@ Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de T
  \label{fig:secuenciamc}
 \end{center}
 
-Siguiendo los procesos del diagrama anterior, se procede a dar un enfásis en la duración de los mismos, así como las peticiones y respuestas de los distintos submódulos y sistemas.
+Siguiendo los procesos de la [Figura 4], se procede a dar un análisis superficial en la concurrencia de los mismos. También se detallan las peticiones y respuestas de los distintos submódulos y sistemas.
 
 
 
@@ -299,6 +300,7 @@ Boca          & {[}48-67{]}                               \\ \hline
 Ojo Derecho   & {[}36-41{]}                               \\ \hline
 Ojo Izquierdo & {[}42-46{]}                               \\ \hline
 \end{tabular}
+\caption{\label{tab:landmakrs} Agrupación de Puntos de Referencia}
 \end{table}
 
 
@@ -385,6 +387,7 @@ NB-IoT  & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 433 MHz\end{tabular}        
 SigFox  & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 200kHz                                                   & Bajo     & 100bps & Baja          & Baja                                                                    \\ \hline
 LoraWan & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 1.4MHz                                                   & Bajo     & 10kbps  & Moderada      & Muy Alta                                                                \\ \hline
 \end{tabular}
+\caption{\label{tab:redes} Comparación entre Redes Inalámbricas}
 \end{table}
 
 Ya que una parte fundamental del proyecto es la transferencia de contenido multimedia, se requiere un bitrate mínimo de 0.5 Mbps.\\
@@ -493,6 +496,7 @@ LTE-M  & 1Mbps                                                                 &
 NB-IoT & 127 kbit                                                              & 159 kbit                                                                & 1.6-10s  & 164                                                                           & 180KHz         \\ \hline
 \end{tabular}
 \end{adjustbox}
+\caption{\label{tab:interfaces} Comparación entre LTE-M y NB-IoT}
 \end{table}
 
 Después de la investigación realizada, encontramos las siguientes ventajas de LTE-M sobre NB-IoT:
@@ -531,6 +535,7 @@ SIM7600A-H      & 3-5V                 & 3G/4G/LTE                              
 SIM800C-G       & 3.3 - 5V             & 3G/4G/LTE                                                   & Alta                                                                 & \$508  \\ \hline
 SIM7600CE       & 3.3-5V               & 2G/3G/4G/LTE                                                & Alta                                                                 & \$2100 \\ \hline
 \end{tabular}
+\caption{\label{tab:interfaces}Comparación entre distintos módulos de LTE-M}
 \end{table}
 
 Dado que el módulo SixFab es el de menor dificultad de integración, se decidió utilizar este módulo para poder utilizar la interfaz de LTE-M. Además SixFab ofrece un kit dónde de se incluyen todos los componentes necesarios para utilizar dicha interfaz.\\
@@ -668,6 +673,7 @@ Tecnología                                 & Descripción                        
 \textit{Wi-Fi}                             & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento   \\ en el que todas las redes \\ WIFI encendidas emiten una \\ señal identificativa,   \\ comúnmente llamada dirección MAC. \\ Este sistema usa 3 o más puntos de\\  referencia para calcular la ubicación.\end{tabular}                        & \begin{tabular}[c]{@{}l@{}}Es un sistema de geolocalización\\ impreciso, \\ presenta grandes margenes\\ de error\end{tabular}            & Interiores                                                               \\ \hline
 \end{tabular}
 \end{adjustbox}
+\caption{\label{tab:interfaces}Tecnologías de Geolocalización}
 \end{table}
 
 
@@ -698,18 +704,26 @@ V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,
 
 \bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with OpenCV}, Tercera Edición, O'Reilly, 2017
 
-\bibitem{Referencia8} A. Serrano Nicolás \emph{Neumática Práctica}, Primera edición, Paraninfo , 2009
 
 \bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
 
 
 Cibergrafía:
 
-\url{http://web.ing.puc.cl/~mtorrest/downloads/robotics_tutorial/pres_robotics_summer_school_111214.pdf}
+\url{https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-4-Product-Brief.pdff¿}
 
 
 
-\url{http://www.pdcahome.com/1932/qfd-despliegue-calidad/}
+\url{https://www.amazon.com/-/es/Raspberry-programable-motorizado-Pivariety-compatible/dp/B092LHFG6P}
+
+\url {https://uelectronics.com/producto/zumbador-buzzer-pasivo-modulo-ky-006/}
+
+\url{https://articulo.mercadolibre.com.mx/MLM-656378857-cable-jumpers-dupont-hembra-hembra-10cm-40pzas-arduino-_JM}
+
+\url{https://sixfab.com/product/raspberry-pi-4g-lte-modem-kit/}
+\url {https://sixfab.com/wp-content/uploads/2020/03/Sixfab_3G-4G-LTE_Base_HAT_Datasheet_V1.0.pdf}
+
+\url{https://www.amazon.com.mx/Raspberry-SIM7600A-H-comunicaci%C3%B3n-4G-posicionamiento/dp/B07PRMMG68?th=1&psc=1}
 
 \newpage
 \end{thebibliography}
@@ -738,7 +752,7 @@ $k_2=\frac{1}{2}m_2v_2^2 + \frac{1}{2}I_2(\dot{q_1}^2+\dot{q_2}^2)$
 Machine Learning
 $\mathcal{L}=k-u$
 $\sum_i^k F_i^T \delta r_i=0$
-upiita} %sas línea que va en el cuerpo
+upiita} 
 \end{center}
 
 
