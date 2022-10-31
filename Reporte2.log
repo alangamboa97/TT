@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  30 OCT 2022 20:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  30 OCT 2022 20:58
 entering extended mode
 **./Reporte2.tex
 (Reporte2.tex
@@ -538,95 +538,6 @@ LaTeX Warning: Label `fig:scaraindust' multiply defined.
 
 LaTeX Warning: Label `tab:interfaces' multiply defined.
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.98 ...ngs},Primera Edici\'on, O'Reilly,2011 }{7}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.98 ...ngs},Primera Edici\'on, O'Reilly,2011 }{7}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.98 ...ngs},Primera Edici\'on, O'Reilly,2011 }{7}
-                                                  
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Extra \endcsname.
-\@namedef ...xpandafter \def \csname #1\endcsname 
-                                                  
-l.98 ...ngs},Primera Edici\'on, O'Reilly,2011 }{7}
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Use of \hyper@link@ doesn't match its definition.
-\text@command #1->\def \reserved@a {
-                                    #1}\ifx \reserved@a \@empty \let \check@...
-l.98 ...ngs},Primera Edici\'on, O'Reilly,2011 }{7}
-                                                  
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-! Extra }, or forgotten \endgroup.
-<recently read> \egroup 
-                        
-l.98 ...ngs},Primera Edici\'on, O'Reilly,2011 }{7}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten \endgroup.
-<argument> ...'on, O'Reilly,2011 \@extra@b@citeb }
-                                                  \ifx \Hy@tempa \ltx@empty ...
-l.98 ...ngs},Primera Edici\'on, O'Reilly,2011 }{7}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.98 ...ngs},Primera Edici\'on, O'Reilly,2011 }{7}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.98 ...ngs},Primera Edici\'on, O'Reilly,2011 }{7}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 )
 \openout1 = `Reporte2.aux'.
 
@@ -653,11 +564,6 @@ LaTeX Info: Redefining \% on input line 31.
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
-Overfull \hbox (21.87747pt too wide) in paragraph at lines 98--13
-[]\OT1/lmr/m/n/12 ,Primera Edi-cion, O'Reilly,2011 \OT1/lmr/m/it/12 Get-ting S
-tar-ted with In-ter-net of Things,Primera Edi-cion, O'Reilly,2011
- []
-
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count294
 \scratchdimen=\dimen184
@@ -710,15 +616,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-[1{C:/Users/alang/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
-
-]
-<imagenes/ipn.jpg, id=53, 180.675pt x 232.87pt>
+<imagenes/ipn.jpg, id=43, 180.675pt x 232.87pt>
 File: imagenes/ipn.jpg Graphic file (type jpg)
 <use imagenes/ipn.jpg>
 Package pdftex.def Info: imagenes/ipn.jpg  used on input line 39.
 (pdftex.def)             Requested size: 81.303pt x 104.79051pt.
-<imagenes/upiita.png, id=54, 722.7pt x 568.1225pt>
+<imagenes/upiita.png, id=44, 722.7pt x 568.1225pt>
 File: imagenes/upiita.png Graphic file (type png)
 <use imagenes/upiita.png>
 Package pdftex.def Info: imagenes/upiita.png  used on input line 41.
@@ -762,13 +665,11 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.98 \end{titlepage}
-                     [1 <./imagenes/ipn.jpg> <./imagenes/upiita.png>]
-(Reporte2.toc
+)
+[1
+
+{C:/Users/alang/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./imagenes/ipn.
+jpg> <./imagenes/upiita.png>] (Reporte2.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -799,7 +700,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--114
 
  []
 
-<imagenes/programaclasico.png, id=142, 770.88pt x 578.16pt>
+<imagenes/programaclasico.png, id=137, 770.88pt x 578.16pt>
 File: imagenes/programaclasico.png Graphic file (type png)
 <use imagenes/programaclasico.png>
 Package pdftex.def Info: imagenes/programaclasico.png  used on input line 115.
@@ -850,12 +751,12 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.187 
       ] [7]
-<imagenes/modularidad.png, id=161, 350.81062pt x 225.84375pt>
+<imagenes/modularidad.png, id=156, 350.81062pt x 225.84375pt>
 File: imagenes/modularidad.png Graphic file (type png)
 <use imagenes/modularidad.png>
 Package pdftex.def Info: imagenes/modularidad.png  used on input line 197.
 (pdftex.def)             Requested size: 210.48799pt x 135.50728pt.
-<imagenes/diagrama_casosusomc.png, id=162, 671.50874pt x 589.20125pt>
+<imagenes/diagrama_casosusomc.png, id=157, 671.50874pt x 589.20125pt>
 File: imagenes/diagrama_casosusomc.png Graphic file (type png)
 <use imagenes/diagrama_casosusomc.png>
 Package pdftex.def Info: imagenes/diagrama_casosusomc.png  used on input line 2
@@ -868,7 +769,7 @@ Package pdftex.def Info: imagenes/diagrama_casosusomc.png  used on input line 2
 l.215 ...de Uso - Módulo Central de Procesamiento}
                                                    <./imagenes/modularidad.png>
 ]
-<imagenes/diagrama_activiadesmc.png, id=169, 1176.395pt x 1065.9825pt>
+<imagenes/diagrama_activiadesmc.png, id=164, 1176.395pt x 1065.9825pt>
 File: imagenes/diagrama_activiadesmc.png Graphic file (type png)
 <use imagenes/diagrama_activiadesmc.png>
 Package pdftex.def Info: imagenes/diagrama_activiadesmc.png  used on input line
@@ -886,7 +787,7 @@ figure.4}) has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.237 
        <./imagenes/diagrama_activiadesmc.png>] [11]
-<imagenes/diagrama_secuenciamc.png, id=185, 964.60374pt x 583.17876pt>
+<imagenes/diagrama_secuenciamc.png, id=179, 964.60374pt x 583.17876pt>
 File: imagenes/diagrama_secuenciamc.png Graphic file (type png)
 <use imagenes/diagrama_secuenciamc.png>
 Package pdftex.def Info: imagenes/diagrama_secuenciamc.png  used on input line 
@@ -898,12 +799,12 @@ Package pdftex.def Info: imagenes/diagrama_secuenciamc.png  used on input line
                                                   \__shipout_drop_firstpage_...
 l.255 \newpage
                <./imagenes/diagrama_secuenciamc.png>]
-<imagenes/casosdeusospi.png, id=191, 745.78625pt x 727.71875pt>
+<imagenes/casosdeusospi.png, id=186, 745.78625pt x 727.71875pt>
 File: imagenes/casosdeusospi.png Graphic file (type png)
 <use imagenes/casosdeusospi.png>
 Package pdftex.def Info: imagenes/casosdeusospi.png  used on input line 261.
 (pdftex.def)             Requested size: 484.75533pt x 473.01158pt.
-<imagenes/Diagramadeactividadspi.png, id=192, 884.30376pt x 1386.17876pt>
+<imagenes/Diagramadeactividadspi.png, id=187, 884.30376pt x 1386.17876pt>
 File: imagenes/Diagramadeactividadspi.png Graphic file (type png)
 <use imagenes/Diagramadeactividadspi.png>
 Package pdftex.def Info: imagenes/Diagramadeactividadspi.png  used on input lin
@@ -916,7 +817,7 @@ e 269.
 l.270 ...- Submódulo de Procesamiento de Imágenes}
                                                    <./imagenes/casosdeusospi.pn
 g>]
-<imagenes/diagramadesecuenciaspi.png, id=198, 893.3375pt x 1325.95375pt>
+<imagenes/diagramadesecuenciaspi.png, id=193, 893.3375pt x 1325.95375pt>
 File: imagenes/diagramadesecuenciaspi.png Graphic file (type png)
 <use imagenes/diagramadesecuenciaspi.png>
 Package pdftex.def Info: imagenes/diagramadesecuenciaspi.png  used on input lin
@@ -934,7 +835,7 @@ me{figure.8}) has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.280 \newpage
               	 <./imagenes/diagramadesecuenciaspi.png>]
-<imagenes/landmark.png, id=209, 415.5525pt x 395.4775pt>
+<imagenes/landmark.png, id=204, 415.5525pt x 395.4775pt>
 File: imagenes/landmark.png Graphic file (type png)
 <use imagenes/landmark.png>
 Package pdftex.def Info: imagenes/landmark.png  used on input line 286.
@@ -969,13 +870,13 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<imagenes/redes.jpg, id=214, 443.40656pt x 374.90062pt>
+<imagenes/redes.jpg, id=209, 443.40656pt x 374.90062pt>
 File: imagenes/redes.jpg Graphic file (type jpg)
 <use imagenes/redes.jpg>
 Package pdftex.def Info: imagenes/redes.jpg  used on input line 365.
 (pdftex.def)             Requested size: 443.40547pt x 374.8997pt.
  [17]
-<imagenes/cdmx.png, id=221, 543.02875pt x 735.74875pt>
+<imagenes/cdmx.png, id=215, 543.02875pt x 735.74875pt>
 File: imagenes/cdmx.png Graphic file (type png)
 <use imagenes/cdmx.png>
 Package pdftex.def Info: imagenes/cdmx.png  used on input line 373.
@@ -1027,7 +928,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 453--454
  []
 
 [21] [22]
-<imagenes/lte-mcobertura.png, id=244, 459.96844pt x 348.55219pt>
+<imagenes/lte-mcobertura.png, id=239, 459.96844pt x 348.55219pt>
 File: imagenes/lte-mcobertura.png Graphic file (type png)
 <use imagenes/lte-mcobertura.png>
 Package pdftex.def Info: imagenes/lte-mcobertura.png  used on input line 512.
@@ -1047,7 +948,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 541--542
 
  []
 
-<imagenes/sixfabcomp.png, id=251, 360.59718pt x 301.8778pt>
+<imagenes/sixfabcomp.png, id=245, 360.59718pt x 301.8778pt>
 File: imagenes/sixfabcomp.png Graphic file (type png)
 <use imagenes/sixfabcomp.png>
 Package pdftex.def Info: imagenes/sixfabcomp.png  used on input line 546.
@@ -1063,7 +964,7 @@ l.554 \newpage
                                                   \__shipout_drop_firstpage_...
 l.554 \newpage
                <./imagenes/sixfabcomp.png>]
-<imagenes/Espeificaciones fisicas Raspberry Pi.jpg, id=257, 923.70094pt x 576.6
+<imagenes/Espeificaciones fisicas Raspberry Pi.jpg, id=252, 923.70094pt x 576.6
 5437pt>
 File: imagenes/Espeificaciones fisicas Raspberry Pi.jpg Graphic file (type jpg)
 
@@ -1071,7 +972,7 @@ File: imagenes/Espeificaciones fisicas Raspberry Pi.jpg Graphic file (type jpg)
 Package pdftex.def Info: imagenes/Espeificaciones fisicas Raspberry Pi.jpg  use
 d on input line 567.
 (pdftex.def)             Requested size: 369.47383pt x 230.65765pt.
-<imagenes/KY-006.jpg, id=258, 803.0pt x 803.0pt>
+<imagenes/KY-006.jpg, id=253, 803.0pt x 803.0pt>
 File: imagenes/KY-006.jpg Graphic file (type jpg)
 <use imagenes/KY-006.jpg>
 Package pdftex.def Info: imagenes/KY-006.jpg  used on input line 575.
@@ -1083,7 +984,7 @@ Package pdftex.def Info: imagenes/KY-006.jpg  used on input line 575.
 l.576 \captionof{figure}{Zumbador Pasivo KY-006}
                                                  <./imagenes/Espeificaciones fi
 sicas Raspberry Pi.jpg>]
-<imagenes/camara.jpg, id=263, 368.37625pt x 351.3125pt>
+<imagenes/camara.jpg, id=258, 368.37625pt x 351.3125pt>
 File: imagenes/camara.jpg Graphic file (type jpg)
 <use imagenes/camara.jpg>
 Package pdftex.def Info: imagenes/camara.jpg  used on input line 584.
@@ -1093,7 +994,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 590--591
 
  []
 
-<imagenes/Jumpers.jpg, id=264, 570.13pt x 503.8825pt>
+<imagenes/Jumpers.jpg, id=259, 570.13pt x 503.8825pt>
 File: imagenes/Jumpers.jpg Graphic file (type jpg)
 <use imagenes/Jumpers.jpg>
 Package pdftex.def Info: imagenes/Jumpers.jpg  used on input line 593.
@@ -1110,7 +1011,7 @@ me identifier (name{figure.16}) has been already used, duplicate ignored
 l.594 \captionof{figure}{Jumpers}
                                   <./imagenes/KY-006.jpg> <./imagenes/camara.jp
 g>]
-<imagenes/MicroSD.png, id=269, 220.825pt x 91.34125pt>
+<imagenes/MicroSD.png, id=264, 220.825pt x 91.34125pt>
 File: imagenes/MicroSD.png Graphic file (type png)
 <use imagenes/MicroSD.png>
 Package pdftex.def Info: imagenes/MicroSD.png  used on input line 605.
@@ -1126,12 +1027,12 @@ l.609 \newpage
                                                   \__shipout_drop_firstpage_...
 l.609 \newpage
                <./imagenes/Jumpers.jpg> <./imagenes/MicroSD.png>]
-<imagenes/sixfabhat.png, id=275, 353.82187pt x 319.94531pt>
+<imagenes/sixfabhat.png, id=270, 353.82187pt x 319.94531pt>
 File: imagenes/sixfabhat.png Graphic file (type png)
 <use imagenes/sixfabhat.png>
 Package pdftex.def Info: imagenes/sixfabhat.png  used on input line 613.
 (pdftex.def)             Requested size: 141.52623pt x 127.97585pt.
-<imagenes/LE910.png, id=276, 258.9675pt x 280.79906pt>
+<imagenes/LE910.png, id=271, 258.9675pt x 280.79906pt>
 File: imagenes/LE910.png Graphic file (type png)
 <use imagenes/LE910.png>
 Package pdftex.def Info: imagenes/LE910.png  used on input line 623.
@@ -1147,7 +1048,7 @@ l.633 \newpage
                                                   \__shipout_drop_firstpage_...
 l.633 \newpage
                <./imagenes/sixfabhat.png> <./imagenes/LE910.png>]
-<imagenes/lteantena.png, id=283, 411.03563pt x 415.5525pt>
+<imagenes/lteantena.png, id=278, 411.03563pt x 415.5525pt>
 File: imagenes/lteantena.png Graphic file (type png)
 <use imagenes/lteantena.png>
 Package pdftex.def Info: imagenes/lteantena.png  used on input line 637.
@@ -1158,7 +1059,7 @@ Package pdftex.def Info: imagenes/lteantena.png  used on input line 637.
                                                   \__shipout_drop_firstpage_...
 l.647 \newpage
                <./imagenes/lteantena.png>]
-<imagenes/unidadcontenedora.png, id=290, 1627.07875pt x 1569.865pt>
+<imagenes/unidadcontenedora.png, id=284, 1627.07875pt x 1569.865pt>
 File: imagenes/unidadcontenedora.png Graphic file (type png)
 <use imagenes/unidadcontenedora.png>
 Package pdftex.def Info: imagenes/unidadcontenedora.png  used on input line 652
@@ -1176,26 +1077,9 @@ cate ignored
                                                   \__shipout_drop_firstpage_...
 l.680 \newpage
               ] [32]
-! Extra }, or forgotten \endgroup.
-l.708 }
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten \endgroup.
-l.711 ...ivos GPS en una empresa logística}, 2007}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 716.
+
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1238,41 +1122,36 @@ Package rerunfilecheck Info: File `Reporte2.out' has not changed.
 (rerunfilecheck)             Checksum: 78A10727960E2F9D48A80F806CC095D6;2907.
  ) 
 Here is how much of TeX's memory you used:
- 13280 strings out of 478927
- 206197 string characters out of 2852536
- 523698 words of memory out of 3000000
- 30767 multiletter control sequences out of 15000+600000
+ 13278 strings out of 478927
+ 206036 string characters out of 2852536
+ 523401 words of memory out of 3000000
+ 30766 multiletter control sequences out of 15000+600000
  451260 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,17n,66p,781b,577s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.\040Cuno\040Plister,\040\\protect\040\\unhbo
-x\040\\voidb@x\040\\bgroup\040\\def\040Getting\040Started\040with\040Internet\0
-40of\040Things} has been referenced but does not exist, replaced by a fixed one
-
-
-{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}
-{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}
-{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}
-{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C
-:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/U
-sers/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users
-/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}<C:/Users/a
-lang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/a
-lang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/
-alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/
-alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/
-alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/a
-lang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/al
-ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/ala
-ng/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/alan
-g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/alang/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/alang/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/alang/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/alang/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Reporte2.pdf (36 pages, 2415549 bytes).
+{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
+c}{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
+c}{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
+c}{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}
+{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:
+/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Use
+rs/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}<C:/Users
+/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users
+/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/User
+s/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/User
+s/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/User
+s/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users
+/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/
+alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/a
+lang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/al
+ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/alan
+g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/alan
+g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/alan
+g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/alang
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Reporte2.pdf (35 pages, 2413331 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
+ 418 PDF objects out of 1000 (max. 8388607)
+ 85 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
