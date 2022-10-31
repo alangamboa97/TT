@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  30 OCT 2022 21:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  30 OCT 2022 21:12
 entering extended mode
 **./Reporte2.tex
 (Reporte2.tex
@@ -1093,28 +1093,28 @@ t-[]briefs / Raspberry-[]Pi-[]4-[]Product-[]Brief .
  []
 
 
-Overfull \hbox (32.51915pt too wide) in paragraph at lines 722--723
+Overfull \hbox (32.51915pt too wide) in paragraph at lines 720--721
 [][][]$\OT1/lmtt/m/n/12 https : / / www . amazon . com / -[] / es / Raspberry-[
 ]programable-[]motorizado-[]Pivariety-[]compatible /
  []
 
 
-Overfull \hbox (189.38022pt too wide) in paragraph at lines 726--727
+Overfull \hbox (189.38022pt too wide) in paragraph at lines 724--725
 [][][]$\OT1/lmtt/m/n/12 https : / / articulo . mercadolibre . com . mx / MLM-[]
 656378857-[]cable-[]jumpers-[]dupont-[]hembra-[]hembra-[]10cm-[]40pzas-[]arduin
 o-[] _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--732
+Underfull \hbox (badness 10000) in paragraph at lines 729--730
 [][][]$\OT1/lmtt/m/n/12 https : / / www . amazon . com . mx / Raspberry-[]SIM76
 00A-[]H-[]comunicaci % C3 %
  []
 
-[33] (0) Try shape with scale 5.97711pt.  (Delta = 0.0).   . . . . . . . . . .
-. Formatting.  Expected 11 lines; got 12 lines
-(1) Try shape with scale 6.25728pt.  (Delta = 0.28017).   . . . . . . . . . .
-. . . Formatting.  Expected 13 lines; got 13 lines
+[33] (0) Try shape with scale 6.10336pt.  (Delta = 0.0).   . . . . . . . . . .
+. . . Formatting.  Expected 13 lines; got 14 lines
+(1) Try shape with scale 6.34177pt.  (Delta = 0.2384).   . . . . . . . . . . .
+. . Formatting.  Expected 13 lines; got 13 lines
 Reformat paragraph with \rightskip= 0.0pt. [34] (Reporte2.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
@@ -1128,7 +1128,7 @@ Package rerunfilecheck Info: File `Reporte2.out' has not changed.
 Here is how much of TeX's memory you used:
  13280 strings out of 478927
  206065 string characters out of 2852536
- 523401 words of memory out of 3000000
+ 523434 words of memory out of 3000000
  30767 multiletter control sequences out of 15000+600000
  451260 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1153,9 +1153,9 @@ g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/alan
 g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/alan
 g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/alang
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Reporte2.pdf (35 pages, 2414109 bytes).
+Output written on Reporte2.pdf (35 pages, 2414624 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
+ 421 PDF objects out of 1000 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
