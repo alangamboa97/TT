@@ -310,67 +310,6 @@ Ojo Izquierdo & {[}42-46{]}                               \\ \hline
 
 
 
-\newpage
-\section{Diseño de la Unidad Contenedora del Módulo Central de Procesamiento}
-
-Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
-\\
-Elementos físicos que contendrá la unidad:
-
-\begin{itemize}
-
-\item Raspberry Pi 4 Modelo B\\
-De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
-Dimensiones 85 x 53mm. 
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
-\captionof{figure}{Especificaciones Físicas}
- \label{fig:scaraindust}
-\end{center}
-
-\item Zumbador Pasivo KY-006\\
-Dimensiones 18 x 15mm. 
-\begin{center}
-  \includegraphics[scale=.2]{imagenes/KY-006}
-\captionof{figure}{Zumbador Pasivo KY-006}
- \label{fig:scaraindust}
-\end{center}
-
-\item Cámara Arducam Pivariety IMX230\\
-Dimensiones de la placa: 38 x 38mm.
-
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/camara}
-\captionof{figure}{Cámara Pivariety IMX230}
- \label{fig:scaraindust}
-\end{center}
- 
-
-\item Cable macho-hembra\\
-
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/Jumpers}
-\captionof{figure}{Jumpers}
- \label{fig:scaraindust}
-\end{center}
-
-Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
-Largo 10 cm. 
-
-\item Micro SD\\  
-Dimensiones: 15 x 11 x 1 mm. 
-
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/MicroSD}
-\captionof{figure}{Micro SD}
- \label{fig:scaraindust}
-\end{center}
-
-
-\end{itemize}
-
-
-Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
 
 
 
@@ -575,13 +514,141 @@ Actualemente, la compañia Telcel cuenta con la mayor cobertura de tecnología LTE
 
 Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las velocidades de datos más bajas de NB-IoT requieren estos permanezcan en línea por más tiempo, lo que resulta en un mayor consumo de energía. En casos de uso móvil, NB-IoT también usa más energía
 
-Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto.
 
 \end{itemize}
 
+Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto. Se investigaron distintos módulos que sean compatibles con la Rasperry Pi 4 Modelo B, y acontinuación se muestran una comparación entre ellas. 
 
 
 
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Modelo          & Voltaje de Operación & \begin{tabular}[c]{@{}l@{}}Redes que\\ Soporta\end{tabular} & \begin{tabular}[c]{@{}l@{}}Dificultad de \\ Integración\end{tabular} & Costo  \\ \hline
+SixFab Base Hat & 5V                   & 3G/4G/LTE                                                   & Bajo                                                                 & \$2500 \\ \hline
+SIM7600A-H      & 3-5V                 & 3G/4G/LTE                                                   & Alta                                                                 & \$1435 \\ \hline
+SIM800C-G       & 3.3 - 5V             & 3G/4G/LTE                                                   & Alta                                                                 & \$508  \\ \hline
+SIM7600CE       & 3.3-5V               & 2G/3G/4G/LTE                                                & Alta                                                                 & \$2100 \\ \hline
+\end{tabular}
+\end{table}
+
+Dado que el módulo SixFab es el de menor dificultad de integración, se decidió utilizar este módulo para poder utilizar la interfaz de LTE-M. Además SixFab ofrece un kit dónde de se incluyen todos los componentes necesarios para utilizar dicha interfaz.\\
+
+\textbf{Raspberry Pi 4G/LTE Cellular Modem Kit}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/sixfabcomp}
+\captionof{figure}{Raspberry Pi 4G/LTE Cellular Modem Kit}
+ \label{fig:scaraindust}
+\end{center}
+
+El kit de módem celular para Raspberry Pi permite desplazarse de forma libre y segura con una conexión de datos móviles.
+Ya sea que esté configurando una Raspberry Pi como un servidor web móvil o buscando acceder a Internet en ubicaciones remotas, nos brindará conectividad con nulos problemas.
+
+\newpage
+\section{Diseño de la Unidad Contenedora del Módulo Central de Procesamiento}
+
+Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
+\\
+Elementos físicos que contendrá la unidad:
+
+\begin{itemize}
+
+\item Raspberry Pi 4 Modelo B\\
+De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
+Dimensiones 85 x 53mm. 
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
+\captionof{figure}{Especificaciones Físicas}
+ \label{fig:scaraindust}
+\end{center}
+
+\item Zumbador Pasivo KY-006\\
+Dimensiones 18 x 15mm. 
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/KY-006}
+\captionof{figure}{Zumbador Pasivo KY-006}
+ \label{fig:scaraindust}
+\end{center}
+
+\item Cámara Arducam Pivariety IMX230\\
+Dimensiones de la placa: 38 x 38mm.
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/camara}
+\captionof{figure}{Cámara Pivariety IMX230}
+ \label{fig:scaraindust}
+\end{center}
+ 
+
+\item Cable macho-hembra\\
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Jumpers}
+\captionof{figure}{Jumpers}
+ \label{fig:scaraindust}
+\end{center}
+
+Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
+Largo 10 cm. 
+
+\item Micro SD\\  
+Dimensiones: 15 x 11 x 1 mm. 
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/MicroSD}
+\captionof{figure}{Micro SD}
+ \label{fig:scaraindust}
+\end{center}
+\newpage
+\item \textbf{RasperryPi 3G/4G/ LTE Base HAT}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/sixfabhat}
+\captionof{figure}{RasperryPi 3G/4G/ LTE Base HAT}
+ \label{fig:scaraindust}
+\end{center}
+
+Este HAT celular proporciona una conexión de datos simplificada para proyectos de IoT remotos, en el campo, en todo el mundo, en todas partes. Comience a usar una conexión LTE de alta velocidad con bajo consumo de energía en un factor de forma delgado con todo el software necesario para Raspberry Pi.
+
+\item \textbf{LE 910Cx Mini PCIe Series Linux}
+
+\begin{center}
+  \includegraphics[scale=.7]{imagenes/LE910}
+\captionof{figure}{LE 910Cx Mini PCIe Series Linux}
+ \label{fig:scaraindust}
+\end{center}
+
+
+Los módulos Mini PCIe (mPCIe) de la serie LE910Cx son
+optimizadas para redes LTE de baja categoría y están disponibles
+en modo único de LTE o con opciones de respaldo 3G/2G.
+
+\newpage
+\item \textbf{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/lteantena}
+\captionof{figure}{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
+ \label{fig:scaraindust}
+\end{center}
+
+
+Antenas LTE principal y Diversity combinadas con una antena GNSS en una sola antena formada. Ajuste directo para el módulo Mini PCIe LTE de Quectel EC25, Telit LE910C1 y Telit LE910C4.
+
+\end{itemize}
+
+\newpage
+
+Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño modular para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
+
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/unidadcontenedora}
+\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento}
+ \label{fig:scaraindust}
+\end{center}
+ 
 
 \newpage
 \section{Búsqueda de Tecnologías de Geolocalización}
