@@ -90,7 +90,7 @@ Dr. Rodolfo Vera Amaro\\
 
 \vfill
 
-31 de Octubre 2022
+03 de Noviembre 2022
 
 \end{center}
 
@@ -189,8 +189,6 @@ Debido a que en el presente proyecto se realizará la integración de sistemas enf
 \newpage
 \section{Diseño del Módulo Central de Procesamiento}
 
-
-
 Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y que estaremos utilizando de manera frecuente a lo largo de este proyecto, es la modularidad. Que no es más que dividir nuestros programas en partes más pequeñas (sub-programas), que habitualmente son llamados módulos. Las cuales deben tener un grado de independencia de la aplicación o programa principal. Cuando hablamos de independencia, nos referimos a que pueden ser utilizados por otras aplicaciones y no dependen de la aplicación original en sí. 
 
 \begin{center}
@@ -198,9 +196,6 @@ Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y q
 \captionof{figure}{Modularidad}
  \label{fig:modul}
 \end{center}
-
-
-
 
 
 Estós módulos son archivos que alojan código independiente con una determinada función.  Python cuenta con diversos módulos que podemos agregar a nuestro código y utilizarlo para facilitar y acortar el 
@@ -216,11 +211,8 @@ Los temás de colaboración, sincronización, hilos y paralelismo se abordarán de u
  \label{fig:casosusomc}
 \end{center}
 
-En el  siguiente diagrama, se pueden observar las distintas tareas así como las interacciones entre estas y el Submódulo de Procesamiento de Imágenes. 
-
+En el  siguiente diagrama, se pueden observar las distintas tareas así como las interacciones entre estas y el Submódulo de Procesamiento de Imágenes. \\
 Cabe recalcar, que para el presente reporte no se han determinado el diseño del Módulo de Telemetría, ni el de la Estación Base, por lo que se puede esperar el rediseño de este diagrama en un posterior reporte.Por esta misma razón, se decicidó no incluir el diagrama de clases hasta que los Módulos faltantes estén diseñados.
-
-
 
 
 \begin{center}
@@ -231,13 +223,11 @@ Cabe recalcar, que para el presente reporte no se han determinado el diseño del 
 
 \end{center}
 
-En el siguiente Diagrama de Actividades se describen las actividades y sus interacciones con el Submódulo de Procesamiento de Imágenes y la Estación Base. Para que el sistema principal pueda iniciar, se necesita que el conductor encienda el auto, ya que este sistema funcionará utilzando la alimentación electrica.\\ 
+En el siguiente Diagrama de Actividades se describen las actividades y sus interacciones con el Submódulo de Procesamiento de Imágenes y la Estación Base. Para que el sistema principal pueda iniciar, se necesita que el conductor encienda el auto, ya que este sistema funcionará utilzando la alimentación electrica.
+\\\\ 
 El sistema principal comenzará por verificar el estado del Submódulo de Procesamiento de Imágenes, así como el de Telemetría y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Procesamiento de Imáganes. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
 Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Telemetría.se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
-Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. 
-
-
-\newpage
+Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. \\\\
 
 \begin{center}
   \includegraphics[scale=.5]{imagenes/diagrama_secuenciamc}
@@ -245,43 +235,40 @@ Como se indicó inicialmente el sistema estará disponible mientras el sistema se 
  \label{fig:secuenciamc}
 \end{center}
 
-Siguiendo los procesos de la [Figura 4], se procede a dar un análisis superficial en la concurrencia de los mismos. También se detallan las peticiones y respuestas de los distintos submódulos y sistemas.
-
-
-
+Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial en la concurrencia de los mismos. También se detallan las peticiones y respuestas de los distintos submódulos y sistemas.
 
 
 
 \newpage
 \section{Diseño del Submódulo de Procesamiento de Imágenes}
 
-
-Para el diseño de la unidad de procesamiento nos apoyamos en la metodología UML, iniciando con un diagrama de casos de usos.\\
-Un modelo de casos de uso muestra una vista del sistema desde la perspectiva del usuario, por lo cual describe qué hace el sistema sin describir cómo lo hace.\\
+Para el diseño de la unidad de procesamiento nos apoyamos en la metodología UML, iniciando con un diagrama de casos de usos. Un modelo de casos de uso muestra una vista del sistema desde la perspectiva del usuario, por lo cual describe qué hace el sistema sin describir cómo lo hace.\\
 El siguiente diagrama muestra las funciones del Submódulo de Procesamiento de Imágenes basado en los requerimientos del sistema, así como la interacción con el Módulo Central de Procesamiento y el conductor, el cual es indispensable para poder realizar la detección de somnolencia.
 
 \begin{center}
-  \includegraphics[scale=.65]{imagenes/casosdeusospi}
+  \includegraphics[scale=.62]{imagenes/casosdeusospi}
 \captionof{figure}{Diagrama de Casos de Uso - Submódulo de Procesamiento de Imágenes}
  \label{fig:csspi}
 \end{center}
 
 
-A continuación se muestra el diagrama de actividades para el Submódulo de Procesamiento de Imágenes
+A continuación se muestra el diagrama de actividades para el Submódulo de Procesamiento de Imágenes:
 \begin{center}
-  \includegraphics[scale=.3]{imagenes/Diagramadeactividadspi}
+  \includegraphics[scale=.4]{imagenes/Diagramadeactividadspi}
 \captionof{figure}{Diagrama de Actividades - Submódulo de Procesamiento de Imágenes}
  \label{fig:actspi}
 \end{center}
-El diagrama de actividades muestra el flujo de las actividades en general, para que el sistema pueda funcionar requiere que el automóvil le proporcione una fuente de alimentación hacia el ordenador, el cual iniciara el sistema para la detección de somnolencia. Una condición importante es que el conductor se encuentre dentro del rango visual de la cámara y permanezca dentro del mismo al mismo tiempo que el Submódulo de Procesamiento de Imágenes realiza la captura de video utilizando una cámara digital. Posteriormente se realizará la detección del rostro utilizando el método Haar-Adaboost. También se utilizarán librerías como Dlib OpenCV para entrenar al sistema, y que este sea capaz de detectar el rostro con condiciones de poca luz.\\
+El diagrama de actividades muestra el flujo de las actividades en general, para que el sistema pueda funcionar requiere que el automóvil le proporcione una fuente de alimentación hacia el ordenador, el cual iniciara el sistema para la detección de somnolencia. Una condición importante es que el conductor se encuentre dentro del rango visual de la cámara y permanezca dentro del mismo al mismo tiempo que el Submódulo de Procesamiento de Imágenes realiza la captura de video utilizando una cámara digital. Posteriormente se realizará la detección del rostro utilizando el método Haar-Adaboost. También se utilizarán librerías como Dlib en OpenCV para entrenar al sistema, y que este sea capaz de detectar el rostro con condiciones de poca luz.\\
 
-
-Se hará uso de una Red Neuronal Convolucional para clasificar los ojos (abierto o cerrado) y así determinar el estado de somnolencia del conductor. Cabe mencionar, que el diseño de esta red se retomará en un reporte posterior, cuando se determine la resolución de óptima para detectar el rostro en tiempo real. 
+Se hará uso de una Red Neuronal Convolucional para clasificar los ojos (abierto o cerrado) y así determinar el estado de somnolencia del conductor. Cabe mencionar, que el diseño de esta red se retomará en un reporte posterior, cuando se determine la resolución de óptima para detectar el rostro en tiempo real. \\
 
 Mientras que para la boca se tomara la Relación de apertura de la boca (MOR).\\
 En caso de que el sistema detecte somnolencia en el conductor se enviará una señal de alerta hacia el Módulo Central de Procesamiento el cual será el encargado de activar la alarma.\\ 
+
 Como proceso paralelo a la detección de signos de somnolencia, la Identificación de una posible incidencia será la encargada de iniciar la grabación de video, con el fin de tener un fragmento de video segundos antes de detectar si el conductor presenta somnolencia.\\
+
 En caso de que el conductor presente somnolencia, el video será detenido hasta detectar que el conductor mantiene los ojos abiertos por un intervalo de tiempo definido. Posteriormente el video de incidencia será guardado en la memoria y se notificará al Módulo Central de Procesamiento.\\
+
 En caso de que el sistema indique que el conductor no presenta somnolencia el video será detenido y posteriormente eliminado de la memoria externa, con el fin de no saturar el espacio en la memoria.
  Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. 
 
@@ -339,32 +326,12 @@ MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-
 \end{equation}
 
 
-
-
-
-
 \begin{center}
   \includegraphics[scale=.42]{imagenes/diagramadesecuenciaspi}
 \captionof{figure}{Diagrama de Secuencia - Submódulo de Procesamiento de Imágenes}
  \label{fig:secspi}
 \end{center}
 \newpage	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -379,30 +346,73 @@ Para transferir datos o información de un punto a otro sin la utilización de cab
 
 \item \textbf{La red de área personal inalámbrica (WPAN)}\\
 
-Son redes de corto alcance utilizando tecnología Bluetooth. Interconectan dispositivos compatibles como teléfonos cerca de una ubicación central.
-Son conocidas como redes de corto alcance, con cobertura de 10 a 100 metros
+Son redes de corto alcance que utilizan tecnología Bluetooth, HomeRF (\emph{Home Radio Frecuency}), Zigbee y las conexiones infrarrojas. Interconectan dispositivos compatibles como teléfonos móviles, electrodomésticos, impresoras o asistentes personales digitales (PDA) cerca de una ubicación central. 
+
+Utilizada para periféricos de tamaño pequeño, son conocidas como redes de corto alcance, con cobertura de 10 a 100 metros. 
 
 \item \textbf{La red de área local inalámbrica (WLAN)}\\
 
-Viene como resultado de las señales de teléfonos móviles proporcionadas por los proveedores de servicios móviles.
-Son conocidas como redes de corto/mediano alcance alcanzando de 100 a 1000 metros.
+Es una red de intercambio de datos a través de ondas electromagnéticas que se propagan en el aire, en ella se crea una red de área local con un determinado número de dispositivos conectados a un enrutador o punto de acceso que proporcionará acceso a Internet. 
 
+Son conocidas como redes de corto/mediano alcance alcanzando de 100 a 1000 metros.\\
+Estándares usados en WLAN: 
+\begin{itemize}
 
+\item IEEE 802.11 \\
+Es la forma más apropiada de referirnos a la tecnología Wi-Fi, especifica las normas de funcionamiento en una WLAN. \\
+
+\item IEEE 802.11a/b/g  \\
+Estándares identificadores de canales y frecuencias por donde se conectan los hosts a la WLAN. Con 802.11a se opera sobre las bandas de 5 GHz a 20 MHz y 2,4 GHz mientras que en la 802.11 b y g operan solamente en la banda de 2,4 GHz a una frecuencia de 25 MHz como ancho de banda.\\
+
+\item IEEE 802.11n\\
+Fue el primero en implementar la tecnología MIMO (\emph{Multiple Input - Multiple Output}) que permite usar varios canales a la vez para el envío y recepción de datos. \\
+
+\item IEEE 802.11ac \\
+Se denomina WiFi 5 y la gran mayoría de aparatos trabajan sobre esta versión. Es una versión que?solo opera en la banda de 5 GHz para proporcionar velocidades desde los 433 Mbps, dependiendo de la cantidad de antenas que utilice. \\
+ 
+\item IEEE 802.11ax \\
+Es la nueva versión conocida como WiFi 6 o WiFi de 6ª generación en ella se introduce la nueva tecnología OFDMA? que mejora la eficiencia espectral de la red para WLAN en donde haya gran cantidad de usuarios conectados.\\
+Opera sobre las frecuencias de 2,4 GHz y 5 GHz. \\
+\end{itemize}
 
 \item \textbf{La red de inalámbrica de area amplia (WWAN)}\\
 
-Usan ondas de radio pero transmite a uno o varios puntos de acceso inalámbrico donde un usuario inalámbrico puede conectarse a la red.\\
+Usan ondas de radio pero transmite a uno o varios puntos de acceso inalámbrico donde un usuario inalámbrico puede conectarse a la red, al disponer de un ancho de banda más elevado ofrece una mejor cobertura. \\\\
+Como ejemplo de estas redes tenemos la tecnología 4G y 5G. 
+Son conocidas como redes de largo alcance con cobertura de hasta 100km, pueden dar soporte a gran parte del territorio geográfico. 
+
 En esta red se incluye:
-
 \begin{itemize}
-\item \textbf{LPWAN(Low Power Wide Area Network): Red de Área Amplia de Baja Frecuencia}\\
-Son conocidas como redes de largo alcance con cobertura de hasta 100km
+\item \textbf{LPWAN(\emph{Low Power Wide Area Network}): Red de Área Amplia de Baja Frecuencia}\\
+Son conocidas como redes de largo alcance con cobertura de hasta 100km.
+\end{itemize}
+Ventajas, Desventajas y Aplicaciones de las LPWAN:
 \end{itemize}
 
 
+\begin{table}[]
+\begin{tabular}{|m{0.30\linewidth}|m{0.30\linewidth}|m{0.30\linewidth}|}
+\hline
+ Ventajas & Desventajas  &Aplicaciones   \\ \hline
+ Baja Potencia. 
+Minimiza el costo de energía lo que hace que los dispositivos remotos funcionen durante largos periodos de tiempo. & Baja velocidad de transmisión. 
+No puede manejar grandes volúmenes de datos.  &  IoT. 
+Satisfacer los desafíos de los dispositivos y sensores a pila. \\ \hline
+ Amplia cobertura. 
+Ofrecen largo alcance sin mucha interferencia. & Problemas de atenuación de las señales. 
+Funcionan de forma más eficiente en espacios abiertos que en zonas urbanas.  &Aplicaciones de ciudades inteligentes. 
+-Medidores de agua inteligentes 
+-Iluminación inteligente   \\ \hline
+ Bajo Ancho de Banda. 
+Destinadas a aplicaciones con mensajes pequeños pocas veces por hora. & Confiabilidad en las transmisiones.  &  -\\ \hline
+ Bajo Coste. 
+Al tener un bajo ancho de banda reduce su costo también muchos usan el rango sin licencia en las bandas ISM. & Conectividad no constante. 
+Dificulta actividades como el control de movimiento.  & - \\ \hline
+\end{tabular}
+\caption{\label{tab:LPWAN} Ventajas, Desventajas y Aplicaciones de las LPWAN}
+\end{table}
 
-\end{itemize}
-
+\newpage
 A continuación, se muestra de manera gráfica los tipos de redes antes mencionadas, así como algunos de sus protocolos y tecnologías.
 
 \begin{center}
@@ -420,7 +430,6 @@ Dado que para el presente proyecto tiene contemplado funcionar dentro de la Ciud
 \end{center}
 
 A continuación, se muestra un cuadro comparativo con estos tipos de redes.
-
 
 \begin{table}[h]
 \begin{tabular}{|l|l|l|l|l|l|l|}
@@ -484,9 +493,9 @@ Las redes 4G se construyeron principalmente para teléfonos inteligentes. Las red
 
 Es un protocolo inalámbrico de Internet de las cosas (IoT) que utiliza tecnología de red de área amplia de baja potencia (LPWAN). Fue desarrollado por 3GPP para comunicación inalámbrica celular que permite una amplia gama de nuevos dispositivos y servicios NB-IoT. NB-IoT es uno de los tres principales estándares 3GPP LPWAN.\\
 
-El estándar de comunicación NB-IoT tiene como objetivo permitir que los dispositivos IoT funcionen a través de redes de operador, ya sea dentro de una onda portadora de comunicación del Sistema Global para Móviles (GSM) existente, en una "banda de protección" no utilizada entre canales LTE o de forma independiente.
+El estándar de comunicación NB-IoT tiene como objetivo permitir que los dispositivos IoT funcionen a través de redes de operador, ya sea dentro de una onda portadora de comunicación del Sistema Global para Móviles (GSM) existente, en una "banda de protección" no utilizada entre canales LTE o de forma independiente.\\
 
-Uno de los objetivos de NB-IoT es impulsar la extensión de la cobertura más allá de lo que ofrecen las tecnologías celulares existentes. Para ello, NB-IoT ofrece repeticiones de transmisión y diferentes configuraciones de asignación de ancho de banda en la transmisión de enlace ascendente.
+Uno de los objetivos de NB-IoT es impulsar la extensión de la cobertura más allá de lo que ofrecen las tecnologías celulares existentes. Para ello, NB-IoT ofrece repeticiones de transmisión y diferentes configuraciones de asignación de ancho de banda en la transmisión de enlace ascendente.\\
 
 La tecnología NB-IoT utiliza señales de bajo ancho de banda para comunicarse dentro de las tecnologías GSM y LTE existentes.
 
@@ -645,7 +654,7 @@ Largo 10 cm.
 Dimensiones: 15 x 11 x 1 mm. 
 
 \begin{center}
-  \includegraphics[scale=.4]{imagenes/MicroSD}
+  \includegraphics[scale=.5]{imagenes/MicroSD}
 \captionof{figure}{Micro SD}
  \label{fig:scaraindust}
 \end{center}
@@ -729,9 +738,6 @@ En el caso del Submódulo de Procesamiento de imágenes, se tenía contemplado desa
 Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, sin embargo, se tiene contemplado rediseñar el modelo con el fin de mejorar y adaptarla los cambios del sistema a futuro.
 
 
-
-
-
 \newpage
 \section{Bibliografia}
 %\bibliographystyle{apacite}
@@ -759,44 +765,43 @@ V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,
 
 \bibitem{Referncia8}Cuno Plister, \emph{Getting Started with Internet of Things},Primera Edición, O'Reilly, 2011
 
-
-
 \bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
 
+\bibitem{Referencia10} S. Pachouly, N. Bhondve, A. Dalvi, V. Dhande y N. Bhamare. "Driver drowsiness detection using machine learning with visual behaviour". https://ijcrt.org/papers/IJCRT2006408.pdf (accedido el 2 de noviembre de 2022).
 
-Cibergrafía:
+\bibitem{Referencia11} R. T. Puteri. "Micro-sleep detection using combination of haar cascade and convolutional neural network". https://lppm.ub.ac.id/wp-content/uploads/formidable/29/p130-puteri.pdf (accedido el 2 de noviembre de 2022).
 
-\url{https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-4-Product-Brief.pdf}
+\bibitem{Referencia12} M. K. S. a. T. Annamani. "Driver drowsiness detection system using convolutional neural networks". https://ijarsct.co.in/Paper3399.pdf (accedido el 2 de noviembre de 2022).
 
-\url{https://www.amazon.com/-/es/Raspberry-programable-motorizado-Pivariety-compatible/dp/B092LHFG6P}
+\bibitem{Referencia13} Moko Lora. "Comparación entre LoRa y otras tecnologías inalámbricas". https://www.mokolora.com/es/lora-and-wireless-technologies/?fbclid=IwAR1kRuShLFIHTOBs_9-pzyt3p6x5tpNE-Lfny6gSofWJ-TVSPV-PwGDixOE(accedido el 2 de noviembre de 2022).
 
-\url {https://uelectronics.com/producto/zumbador-buzzer-pasivo-modulo-ky-006/}
+\bibitem{Referencia14} C. López Jurado. "¿Qué es una red WPAN?" https://es.ccm.net/contents/821-wpan-wireless-personal-area-network (accedido el 2 de noviembre de 2022).
 
-\url{https://articulo.mercadolibre.com.mx/MLM-656378857-cable-jumpers-dupont-hembra-hembra-10cm-40pzas-arduino-_JM}
+\bibitem{Referencia15} J. A. Castillo. "WLAN: Qué es, definición, estándar 802.11 y diferencias con LAN". https://www.profesionalreview.com/2020/03/07/wlan-que-es/ (accedido el 2 de noviembre de 2022).
 
-\url{https://sixfab.com/product/raspberry-pi-4g-lte-modem-kit/}
-\url {https://sixfab.com/wp-content/uploads/2020/03/Sixfab_3G-4G-LTE_Base_HAT_Datasheet_V1.0.pdf}
+\bibitem{Referencia16} Library. "Estándares de wlan". https://1library.co/article/estándares-de-wlan-redes-wlan-wireless-lan.y6em7mnz (accedido el 2 de noviembre de 2022).
 
-\url{https://www.amazon.com.mx/Raspberry-SIM7600A-H-comunicaci%C3%B3n-4G-posicionamiento/dp/B07PRMMG68?th=1&psc=1}
+\bibitem{Referencia17} Tarify.Win! "Red WWAN ¿Qué es, para qué sirve y cómo funcionan?" https://tarify.win/definiciones/red-wwan/ (accedido el 2 de noviembre de 2022).
 
-\url{https://www.mokolora.com/es/lora-and-wireless-technologies/}
+\bibitem{Referencia18} Zoo stock. "Todo lo que debemos saber sobre redes WMAN y WWAN". https://www.zoostock.com/redes-y-sistemas/todo-lo-que-debemos-saber-sobre-redes-wman-y-wwan (accedido el 2 de noviembre de 2022).
 
-\url{https://sixfab.com/product/raspberry-pi-4g-lte-modem-kit/}
-\url{https://ijcrt.org/papers/IJCRT2006408.pdf}
+\bibitem{Referencia19} Altium. "Los pros y los contras de diferentes redes LPWAN para tu aplicación iot". https://resources.altium.com/es/p/the-pros-and-cons-of-different-lpwan-networks-for-your-iot-application (accedido el 2 de noviembre de 2022).
 
-\url{https://lppm.ub.ac.id/wp-content/uploads/formidable/29/p130-puteri.pdf}
+\bibitem{Referencia20} Raspberry Pi Trading Ltd. "Raspberry pi 4 computer model B". https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-4-Product-Brief.pdf (accedido el 2 de noviembre de 2022).
 
-\url{https://ijarsct.co.in/Paper3399.pdf}
+\bibitem{Referencia21} Amazon. "Arducam para cámara raspberry pi, 21MP IMX230 programable motorizado focus pivariety, compatible con raspberry pi ISP y gstreamer plugin". https://www.amazon.com/-/es/Raspberry-programable-motorizado-Pivariety-compatible/dp/B092LHFG6P (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia22} Unit Electronics. "Zumbador Buzzer Pasivo M?Dulo KY-006". https://uelectronics.com/producto/zumbador-buzzer-pasivo-modulo-ky-006/ (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia23} Mercado Libre. "Cable jumpers dupont hembra hembra 10cm 40pzas arduino". https://articulo.mercadolibre.com.mx/MLM-656378857-cable-jumpers-dupont-hembra-hembra-10cm-40pzas-arduino-_JM (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia24} Sixfab. "Raspberry pi 4G/LTE cellular modem kit". https://sixfab.com/product/raspberry-pi-4g-lte-modem-kit/ (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia25} Sixfab. "Datasheet (v1.o) sixfab raspberry pi 3G-4G/LTE base HAT". https://sixfab.com/wp-content/uploads/2020/03/Sixfab_3G-4G-LTE_Base_HAT_Datasheet_V1.0.pdf (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia26} Amazon. "Módulo de Sombrero para Raspberry Pi Zero/Zero W/Zero WH/2B/3B/3B+ basado en SIM7600A-H, comunicación 4G y módulo de posicionamiento GNSS soporta LTE CAT4 hasta 150 Mbps, GSM/GPRS/". https://www.amazon.com.mx/Raspberry-SIM7600A-H-comunicación-4G-posicionamiento/dp/B07PRMMG68?th=1&amp;psc=1 (accedido el 2 de noviembre de 2022).
+
 \end{thebibliography}
-
-
-
-
-
-
-
-
-
 
 \end{document}
 
