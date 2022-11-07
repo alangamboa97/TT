@@ -1,0 +1,824 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{anysize}
+\usepackage{array}
+\usepackage{lmodern}
+\usepackage{adjustbox}
+
+\marginsize{2cm}{2cm}{2cm}{2cm}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize UPIITA}
+%\fancyfoot[R]{\footnotesize Diseño}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{\footnotesize Proyecto Terminal 1}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{graphics}
+\usepackage{capt-of}
+\usepackage[pdftex=false,colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+\setlength\parindent{0pt}
+\usepackage[usenames]{color}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{shapepar}
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+
+\includegraphics[scale=0.45]{imagenes/ipn}
+\hspace{10cm}
+\includegraphics[scale=0.15]{imagenes/upiita}
+\\
+
+
+\begin{center}
+
+
+\textsc{\Large ``Sistema para el monitoreo, detección y alerta de somnolencia del conductor mediante visión artificial, comunicación inalámbrica y geolocalización''}\\[0.5cm]
+
+
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Tercer Reporte Parcial}\\[0.4cm]
+
+\HRule \\[1.5cm]
+
+\begin{verse}\center
+ Lista de actividades
+\begin{itemize}
+\item Búsqueda de manejadores de bases de datos
+\item Elección del manejador de bases de datos
+\item Modelado de la base de datos
+\item Análisis del Módulo de Telemetría
+\item Diseño del Módulo de Telemetría
+\item Investigación de Servidores de alojamiento
+\item Elección del Servidor de Alojamiento
+\item Análisis del Módulo de Estación Base
+\item Diseño del Módulo de Estación Base
+\item Análisis de la aplicación Web
+\item Búsqueda Lenguajes de programación web
+\item Elección del lenguaje de programación para la aplicación web
+\item Diseño de la aplicación web
+\item Cotización de materiales \\
+
+\end{itemize}
+\end{verse}
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{\\Autores:}\\
+Alan Eduardo Gamboa Del Ángel\\
+Maite Paulette Díaz Martínez\\
+Nilsen Alfaro Parra\\
+
+%Grupo:4MM6\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{flushright} \large
+\emph{Asesores:} \\
+M.en C. Niels Henrik Navarrete Manzanilla\\
+Dr. Rodolfo Vera Amaro\\
+
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+30 de Noviembre 2022
+
+\end{center}
+
+
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+
+
+\newpage
+\section{Búsqueda de manejadores de bases de datos}
+
+Un Sistema Gestor de Base de Datos (SGBD) o \emph{DataBase Managenent System} (DBMS) es un sistema que permite la creación, gestión y administración de bases de datos, así como la elección y manejo de las estructuras necesarias para el almacenamiento y búsqueda de información del modo más eficiente posible. [1]\\
+
+Los sistemas gestores de bases de datos son clasificados según la forma en que administran los datos en: 
+\begin{itemize}
+\item Relacionales (SQL)
+\item No relacionales (NoSQL)
+\end{itemize}
+
+
+\textbf{Sistemas Gestores de bases de datos Relacionales (SQL)}\\
+
+SQL es un lenguaje estándar de consultas o \emph{queries} a bases de datos. La programación o consultas en SQL sirve para almacenar, manipular y recuperar datos de bases de datos relacionales. [2]\\
+
+La información que almacena la BBDD (base de datos) está relacionada entre sí. Los datos relacionados (registros o filas) son almacenados en tablas que constan de varios campos (columnas). \\
+
+\textbf{Características:}
+
+\begin{itemize}
+\item Integridad de los datos\\ Asegura que los datos sean válidos, correctos y completos. SQL y las bases de datos relacionales tienen la función de preservar esta integridad. 
+
+\item Lenguaje estandarizado  \\SQL es un lenguaje estandarizado, esto quiere decir que se pueden desplegar implementaciones del mismo lenguaje SQL en diferentes sistemas. De esta manera se puede utilizar el mismo código para todos ellos.
+
+\item Sencillez y claridad \\SQL es un lenguaje integral desde el punto de vista conceptual, esto quiere decir que SQL es un lenguaje unificado, claro y simple, de fácil comprensión. 
+
+\item Flexibilidad \\ Una de las razones por las que SQL es un lenguaje tan utilizado es por su flexibilidad, dada su versatilidad a la hora de implantar soluciones y por permitir definir diferentes formas de ver los datos para satisfacer las especificaciones requeridas por parte del usuario. [2] 
+
+\end{itemize}
+
+\textbf{Ventajas:}
+
+
+\begin{itemize}
+
+\item Opción segura \\ 
+Las tablas y datos permanecen protegidos con los nombres de usuario y sus contraseñas. Por lo tanto, solo una persona autorizada puede acceder a esas tablas y datos para trabajar. 
+
+\item Fácil de usar \\
+No existe ningún proceso de procesamiento de consultas y, por lo tanto, las bases de datos relacionales son simples. El usuario no está obligado a pasar ninguna consulta compleja para acceder a los datos. 
+
+
+\item Rendimiento rápido\\
+Fáciles de usar y también son simples por su estructura. Permite al usuario obtener una experiencia rápida. El usuario obtiene muchos filtros de optimización u opciones para aumentar la velocidad de acceso a los datos.
+ 
+\item Presenta datos con precisión \\
+Las bases de datos contienen tablas precisas e interrelacionadas. Usa las claves primaria y externa para establecer la relación entre el archivo \emph{raw}. Por lo tanto, los usuarios no tienen ningún problema con la reputación de los datos anteriores que ya han recibido. Además, hay cero posibilidades de duplicación de datos en bases de datos relacionales. 
+
+\item Accesible en cualquier momento \\
+El usuario no necesita ninguna ruta predefinida. Por lo tanto, la accesibilidad en el RDBMS es más fácil en comparación con otras bases de datos. Además, los usuarios también pueden modificar los datos rápidamente. 
+
+\item Puede tener varios usuarios \\
+Muchos usuarios pueden acceder a la base de datos al mismo tiempo. Incluso si los datos ya están actualizados, también muchos usuarios pueden visitar sin ningún problema. Por lo tanto, se puede evitar el bloqueo causado principalmente al obtener un inicio de sesión de múltiples usuarios en la base de datos. [3] 
+\end{itemize}
+
+\textbf{Desventajas:}
+
+\begin{itemize}
+
+\item Incrementa el gasto 
+
+Estas bases de datos son bastante caras de usar. Además, la empresa o el usuario deben comprar el software y las herramientas para obtener el resultado completo de RDBMS. Por lo tanto, si se tiene un presupuesto bajo, puede resultar difícil obtener una base de datos de este tipo. 
+
+\item Se puede perder información 
+
+El RDBMS contiene el espacio limitado y estos dispositivos de almacenamiento no pueden almacenar más datos si no hay espacio. Como no hay más almacenamiento, estos datos se pueden perder y crear problemas en el futuro. 
+
+\item Requerido para el uso de dispositivos de almacenamiento físico 
+
+Requiere importantes dispositivos de almacenamiento, especialmente dispositivos de memoria física. 
+
+\item Problema de rendimiento 
+
+El nivel de rendimiento puede ser bajo en las bases de datos relacionales porque depende de filas y columnas. Por lo tanto, si hay muchos filas y tablas, la consulta tardará más en procesar el resultado. Además, si hay una cantidad considerable de datos en la máquina, puede ralentizar el proceso de trabajo.  
+
+\item Puede ser complejo de entender 
+
+Cuando aumenta la cantidad de datos almacenados, se vuelve complicado comprender esos datos de forma simplificada. Sucede porque todos los datos han seguido utilizando la función particular que genera grandes conjuntos de datos para filtrar. [3] 
+
+\end{itemize}
+
+\textbf{Principales sistemas de gestión de bases de datos relacionales} \\
+
+A continuación, se muestra una tabla comparativa de los principales sistemas de gestión de bases de datos relacionales: 
+
+
+
+
+\textbf{Sistemas Gestores de bases de datos No Relacionales (SQL)}\\
+
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/programaclasico}
+\captionof{figure}{Programa clásico vs Machine Learning}
+ \label{fig:pcvsml}
+\end{center}
+
+
+
+
+A continuación se presenta una tabla comparativa de las características que se tomaron en cuenta para tomar una decisión sobre que lenguaje utilizar.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Lenguaje} & \textbf{Popularidad} & \textbf{Versatilidad} & \textbf{Velocidad} & \textbf{Soporte} \\ \hline
+Python            & Alta                 & Alta                  & Moderada           & Alta             \\ \hline
+C++               & Baja                 & Alta                  & Alta               & Moderado         \\ \hline
+R                 & Alta                 & Moderada                  & Moderado           & Bajo             \\ \hline
+Matlab            & Baja                 & Moderada              & Moderada           & Bajo             \\ \hline
+Javascript        & Moderada             & Moderada              & Baja               & Moderado         \\ \hline
+\end{tabular}
+\caption{\label{tab:lenguajes} Tabla Comparativa Lenguajes de Programación}
+\end{table}
+
+Python es un lenguaje que permite trabajar más de un paradigma (programación estructurada y orientada a objetos).
+Normalmente cuando programamos un script sencillo aplicamos solo el paradigma de programación estructurada (Secuencia, selección e iteración), y cuando necesitamos programar un proyecto  más complejo y queremos incluir los beneficios del paradigma orientado a objetos (reutilización de los componentes, facilidad de mantenimiento y modificación de objetos) utilizamos clases (POO).\\
+Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje nos permite desarrollar ambos ámbitos. Por lo que se tomó la decisión de ser utilizado a lo largo de este proyecto. 
+
+
+\newpage
+\section{Elección del manejador de bases de datos}
+
+Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y que estaremos utilizando de manera frecuente a lo largo de este proyecto, es la modularidad. Que no es más que dividir nuestros programas en partes más pequeñas (sub-programas), que habitualmente son llamados módulos. Las cuales deben tener un grado de independencia de la aplicación o programa principal. Cuando hablamos de independencia, nos referimos a que pueden ser utilizados por otras aplicaciones y no dependen de la aplicación original en sí. 
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/modularidad}
+\captionof{figure}{Modularidad}
+ \label{fig:modul}
+\end{center}
+
+
+Estós módulos son archivos que alojan código independiente con una determinada función.  Python cuenta con diversos módulos que podemos agregar a nuestro código y utilizarlo para facilitar y acortar el 
+código, de manera que sea mas legible y ordenado.
+
+Otro de los factores que consideramos al desarrollar este proyecto, es el de concurrencia de procesos. La concucrrencia aparece cuando dos o más procesos ocurren al mismo tiempo.
+Estos procesos pueden "competir" o colaborar entre sí por los recursos del sistema. \\
+Los temás de colaboración, sincronización, hilos y paralelismo se abordarán de una manera más profunda en el tercer reporte, cuando se tenga el diseño de los módulos faltantes.
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/diagrama_casosusomc}
+\captionof{figure}{Diagrama de Casos de Uso - Módulo Central de Procesamiento}
+ \label{fig:casosusomc}
+\end{center}
+
+En el  siguiente diagrama, se pueden observar las distintas tareas así como las interacciones entre estas y el Submódulo de Procesamiento de Imágenes. \\
+Cabe recalcar, que para el presente reporte no se han determinado el diseño del Módulo de Telemetría, ni el de la Estación Base, por lo que se puede esperar el rediseño de este diagrama en un posterior reporte.Por esta misma razón, se decicidó no incluir el diagrama de clases hasta que los Módulos faltantes estén diseñados.
+
+
+\begin{center}
+
+  \includegraphics[scale=.4]{imagenes/diagrama_activiadesmc}
+\captionof{figure}{Diagrama de Actividades - Módulo Central de Procesamiento}
+ \label{fig:casosusomc}
+
+\end{center}
+
+En el siguiente Diagrama de Actividades se describen las actividades y sus interacciones con el Submódulo de Procesamiento de Imágenes y la Estación Base. Para que el sistema principal pueda iniciar, se necesita que el conductor encienda el auto, ya que este sistema funcionará utilzando la alimentación electrica.
+\\\\ 
+El sistema principal comenzará por verificar el estado del Submódulo de Procesamiento de Imágenes, así como el de Telemetría y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Procesamiento de Imáganes. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
+Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Telemetría.se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
+Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. \\\\
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/diagrama_secuenciamc}
+\captionof{figure}{Diagrama de Secuencia - Módulo Central de Procesamiento}
+ \label{fig:secuenciamc}
+\end{center}
+
+Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial en la concurrencia de los mismos. También se detallan las peticiones y respuestas de los distintos submódulos y sistemas.
+
+
+
+\newpage
+\section{Modelado de la base de datos}
+
+Para el diseño de la unidad de procesamiento nos apoyamos en la metodología UML, iniciando con un diagrama de casos de usos. Un modelo de casos de uso muestra una vista del sistema desde la perspectiva del usuario, por lo cual describe qué hace el sistema sin describir cómo lo hace.\\
+El siguiente diagrama muestra las funciones del Submódulo de Procesamiento de Imágenes basado en los requerimientos del sistema, así como la interacción con el Módulo Central de Procesamiento y el conductor, el cual es indispensable para poder realizar la detección de somnolencia.
+
+\begin{center}
+  \includegraphics[scale=.62]{imagenes/casosdeusospi}
+\captionof{figure}{Diagrama de Casos de Uso - Submódulo de Procesamiento de Imágenes}
+ \label{fig:csspi}
+\end{center}
+
+
+A continuación se muestra el diagrama de actividades para el Submódulo de Procesamiento de Imágenes:
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Diagramadeactividadspi}
+\captionof{figure}{Diagrama de Actividades - Submódulo de Procesamiento de Imágenes}
+ \label{fig:actspi}
+\end{center}
+El diagrama de actividades muestra el flujo de las actividades en general, para que el sistema pueda funcionar requiere que el automóvil le proporcione una fuente de alimentación hacia el ordenador, el cual iniciara el sistema para la detección de somnolencia. Una condición importante es que el conductor se encuentre dentro del rango visual de la cámara y permanezca dentro del mismo al mismo tiempo que el Submódulo de Procesamiento de Imágenes realiza la captura de video utilizando una cámara digital. Posteriormente se realizará la detección del rostro utilizando el método Haar-Adaboost. También se utilizarán librerías como Dlib en OpenCV para entrenar al sistema, y que este sea capaz de detectar el rostro con condiciones de poca luz.\\
+
+Se hará uso de una Red Neuronal Convolucional para clasificar los ojos (abierto o cerrado) y así determinar el estado de somnolencia del conductor. Cabe mencionar, que el diseño de esta red se retomará en un reporte posterior, cuando se determine la resolución de óptima para detectar el rostro en tiempo real. \\
+
+Mientras que para la boca se tomara la Relación de apertura de la boca (MOR).\\
+En caso de que el sistema detecte somnolencia en el conductor se enviará una señal de alerta hacia el Módulo Central de Procesamiento el cual será el encargado de activar la alarma.\\ 
+
+Como proceso paralelo a la detección de signos de somnolencia, la Identificación de una posible incidencia será la encargada de iniciar la grabación de video, con el fin de tener un fragmento de video segundos antes de detectar si el conductor presenta somnolencia.\\
+
+En caso de que el conductor presente somnolencia, el video será detenido hasta detectar que el conductor mantiene los ojos abiertos por un intervalo de tiempo definido. Posteriormente el video de incidencia será guardado en la memoria y se notificará al Módulo Central de Procesamiento.\\
+
+En caso de que el sistema indique que el conductor no presenta somnolencia el video será detenido y posteriormente eliminado de la memoria externa, con el fin de no saturar el espacio en la memoria.
+ Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. 
+
+\newpage
+ \textbf{Puntos de Referencia}
+
+\begin{center}
+  \includegraphics[scale=.42]{imagenes/landmark}
+\captionof{figure}{Puntos de referencia}
+ \label{fig:landmark}
+\end{center}
+
+
+
+A su vez, se utilizarán puntos de referencia con la ayuda de el software OpenCV y el modelo iBUG 300-W de delimitación de rostro para dividir las características que posteriormente serán extraídas y clasificadas.
+
+En la siguiente tabla se muestra la delimitación y agrupación de los puntos de interés, tales como: ojo derecho, ojo izquierdo y boca.
+\begin{center}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+Partes        & \multicolumn{1}{l|}{Puntos de Referencia} \\ \hline
+Boca          & {[}48-67{]}                               \\ \hline
+Ojo Derecho   & {[}36-41{]}                               \\ \hline
+Ojo Izquierdo & {[}42-46{]}                               \\ \hline
+\end{tabular}
+\caption{\label{tab:landmakrs} Agrupación de Puntos de Referencia}
+\end{table}
+
+
+\newpage
+\end{center}
+\textbf{\emph{Mouth Opening Ratio}}
+
+Bostezar es un signo cansancio. El bostezo se caracteriza por una apertura lenta y amplia de la boca. Por lo que se necesita medir el tamaño y la forma de la boca es necesario para identificar un bostezo. Para esto, se utilizara el \emph{Mouth Opening Ratio} que es un método que utiliza puntos de referencia para medir la apertura de la boca. Entre más grande sea este valor, más es la aperatura de la boca, por lo tanto se considera como un bostezo.
+
+
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/MOR}
+\captionof{figure}{\emph{Mouth Opening Ratio}}
+ \label{fig:landmark}
+\end{center}
+
+La formula general para calular el \emph{MOR} es la siguiente:
+\begin{equation}
+MOR = \frac{\left \|p_{2}-p_{8}  \right \| +\left \|p_{3}-p_{7}  \right \|+\left \| p_{4}-p_{6} \right \|}{2\left \| p_{1}-p_{5}\right \|}
+\end{equation}
+
+Utilizando nuestros puntos de referencia, se podría calcular el MOR de la siguiente manera:
+
+\begin{equation}
+MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-P55 \right \|}{2\left \| P48-P54\right \|}
+\end{equation}
+
+
+\begin{center}
+  \includegraphics[scale=.42]{imagenes/diagramadesecuenciaspi}
+\captionof{figure}{Diagrama de Secuencia - Submódulo de Procesamiento de Imágenes}
+ \label{fig:secspi}
+\end{center}
+\newpage	
+
+
+
+
+\newpage
+\section{Análisis del Módulo de Telemetría }
+
+Para transferir datos o información de un punto a otro sin la utilización de cableado o algún medio físico, tenemos las redes inalámbricas; y se dividen en 3 diferentes tipos dependiendo del alcance requerido:
+
+
+\begin{itemize}
+
+\item \textbf{La red de área personal inalámbrica (WPAN)}\\
+
+Son redes de corto alcance que utilizan tecnología Bluetooth, HomeRF (\emph{Home Radio Frecuency}), Zigbee y las conexiones infrarrojas. Interconectan dispositivos compatibles como teléfonos móviles, electrodomésticos, impresoras o asistentes personales digitales (PDA) cerca de una ubicación central. 
+
+Utilizada para periféricos de tamaño pequeño, son conocidas como redes de corto alcance, con cobertura de 10 a 100 metros. 
+
+\item \textbf{La red de área local inalámbrica (WLAN)}\\
+
+Es una red de intercambio de datos a través de ondas electromagnéticas que se propagan en el aire, en ella se crea una red de área local con un determinado número de dispositivos conectados a un enrutador o punto de acceso que proporcionará acceso a Internet. 
+
+Son conocidas como redes de corto/mediano alcance alcanzando de 100 a 1000 metros.\\
+Estándares usados en WLAN: 
+\begin{itemize}
+
+\item IEEE 802.11 \\
+Es la forma más apropiada de referirnos a la tecnología Wi-Fi, especifica las normas de funcionamiento en una WLAN. \\
+
+\item IEEE 802.11a/b/g  \\
+Estándares identificadores de canales y frecuencias por donde se conectan los hosts a la WLAN. Con 802.11a se opera sobre las bandas de 5 GHz a 20 MHz y 2,4 GHz mientras que en la 802.11 b y g operan solamente en la banda de 2,4 GHz a una frecuencia de 25 MHz como ancho de banda.\\
+
+\item IEEE 802.11n\\
+Fue el primero en implementar la tecnología MIMO (\emph{Multiple Input - Multiple Output}) que permite usar varios canales a la vez para el envío y recepción de datos. \\
+
+\item IEEE 802.11ac \\
+Se denomina WiFi 5 y la gran mayoría de aparatos trabajan sobre esta versión. Es una versión que?solo opera en la banda de 5 GHz para proporcionar velocidades desde los 433 Mbps, dependiendo de la cantidad de antenas que utilice. \\
+ 
+\item IEEE 802.11ax \\
+Es la nueva versión conocida como WiFi 6 o WiFi de 6ª generación en ella se introduce la nueva tecnología OFDMA? que mejora la eficiencia espectral de la red para WLAN en donde haya gran cantidad de usuarios conectados.\\
+Opera sobre las frecuencias de 2,4 GHz y 5 GHz. \\
+\end{itemize}
+
+\item \textbf{La red de inalámbrica de area amplia (WWAN)}\\
+
+Usan ondas de radio pero transmite a uno o varios puntos de acceso inalámbrico donde un usuario inalámbrico puede conectarse a la red, al disponer de un ancho de banda más elevado ofrece una mejor cobertura. \\\\
+Como ejemplo de estas redes tenemos la tecnología 4G y 5G. 
+Son conocidas como redes de largo alcance con cobertura de hasta 100km, pueden dar soporte a gran parte del territorio geográfico. 
+
+En esta red se incluye:
+\begin{itemize}
+\item \textbf{LPWAN(\emph{Low Power Wide Area Network}): Red de Área Amplia de Baja Frecuencia}\\
+Son conocidas como redes de largo alcance con cobertura de hasta 100km.
+\end{itemize}
+Ventajas, Desventajas y Aplicaciones de las LPWAN:
+\end{itemize}
+
+
+\begin{table}[]
+\begin{tabular}{|m{0.30\linewidth}|m{0.30\linewidth}|m{0.30\linewidth}|}
+\hline
+ Ventajas & Desventajas  &Aplicaciones   \\ \hline
+ Baja Potencia. 
+Minimiza el costo de energía lo que hace que los dispositivos remotos funcionen durante largos periodos de tiempo. & Baja velocidad de transmisión. 
+No puede manejar grandes volúmenes de datos.  &  IoT. 
+Satisfacer los desafíos de los dispositivos y sensores a pila. \\ \hline
+ Amplia cobertura. 
+Ofrecen largo alcance sin mucha interferencia. & Problemas de atenuación de las señales. 
+Funcionan de forma más eficiente en espacios abiertos que en zonas urbanas.  &Aplicaciones de ciudades inteligentes. 
+-Medidores de agua inteligentes 
+-Iluminación inteligente   \\ \hline
+ Bajo Ancho de Banda. 
+Destinadas a aplicaciones con mensajes pequeños pocas veces por hora. & Confiabilidad en las transmisiones.  &  -\\ \hline
+ Bajo Coste. 
+Al tener un bajo ancho de banda reduce su costo también muchos usan el rango sin licencia en las bandas ISM. & Conectividad no constante. 
+Dificulta actividades como el control de movimiento.  & - \\ \hline
+\end{tabular}
+\caption{\label{tab:LPWAN} Ventajas, Desventajas y Aplicaciones de las LPWAN}
+\end{table}
+
+\newpage
+A continuación, se muestra de manera gráfica los tipos de redes antes mencionadas, así como algunos de sus protocolos y tecnologías.
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/redes}
+\captionof{figure}{Tipos de Redes Inalámbricas}
+ \label{fig:prot}
+\end{center}
+
+Dado que para el presente proyecto tiene contemplado funcionar dentro de la Ciudad de México y considerando que esta tiene una extensión de 1485 km2, el tipo de red mas viable a utilizar es la LPWAN.
+
+\begin{center}
+  \includegraphics[scale=0.2]{imagenes/cdmx}
+\captionof{figure}{Mapa de la Ciudad de México}
+ \label{fig:cd}
+\end{center}
+
+A continuación, se muestra un cuadro comparativo con estos tipos de redes.
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+        & Espectro                                                                 & \begin{tabular}[c]{@{}l@{}}Ancho de\\ Banda\end{tabular} & Costo    & BitRate & Escalabilidad & \begin{tabular}[c]{@{}l@{}}Inmunidad a \\ la Interferencia\end{tabular} \\ \hline
+LTE-M   & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 869 MHz\\ 915 MHz\end{tabular} & 100kHz                                                   & Moderado & 1Mbps   & Alta          & Moderada                                                                \\ \hline
+NB-IoT  & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 433 MHz\end{tabular}           & \textless{}500kHz                                        & Moderado & 200kbps & Alta          & Baja                                                                    \\ \hline
+SigFox  & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 200kHz                                                   & Bajo     & 100bps & Baja          & Baja                                                                    \\ \hline
+LoraWan & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 1.4MHz                                                   & Bajo     & 10kbps  & Moderada      & Muy Alta                                                                \\ \hline
+\end{tabular}
+\caption{\label{tab:redes} Comparación entre Redes Inalámbricas}
+\end{table}
+
+Ya que una parte fundamental del proyecto es la transferencia de contenido multimedia, se requiere un bitrate mínimo de 0.5 Mbps.\\
+Tomando esto en consideración, podemos observar que tanto SigFox y LoraWan no cumplen con este requisito, por lo tanto quedan descartadas para ser utilizadas. \\
+Por lo tanto, las tecnologías que cumplen estás características son LTE-M y NB-IoT, por lo que en la siguiente sección se procede a hacer un análsis y comparación de estas dos tipos de redes inalámbricas para corrobar cual de las dos es la más óptima para ser utilizada en este proyecto.
+
+\newpage
+\section{Diseño del Módulo de Telemetría}
+
+\textbf{LTE-M}
+LTE-M es el término simplificado de la industria para el estándar tecnológico de Área Amplia de Baja Potencia (LPWA por sus siglas en inglés). Se refiere específicamente a la tecnología LTE CatM1, que es el estándar más adecuado para su uso con el IoT.\\
+
+Es una tecnología de área amplia de baja potencia que admite IoT a través de dispositivos poco complejos y proporciona una cobertura extendida, al tiempo que permite la reutilización de la base instalada de LT\\
+
+Las redes LTE-M coexistirán con las redes móviles 2G, 3G y 4G y se beneficiarán de todas las características de seguridad y privacidad de las redes móviles, como la confidencialidad de la identidad del usuario, la autenticación de la entidad, la privacidad, la integridad de los datos y la identificación del equipo móvil.
+
+A continuación se describen las ventajas principales de LTE-M
+
+\begin{itemize}
+\item \textbf{Ahorro de Energía}
+
+LTE-M permite que los dispositivos IoT usen un modo de ahorro de energía, que les permite "ir a dormir" cuando no están en uso. Y tampoco tienen que despertarse para enviar solo la actualización de ubicación, sino que pueden extender los tiempos de suspensión por un período de tiempo más largo. LTE-M también permite que los dispositivos usen recepción discontinua extendida (eDRX). Cuando el dispositivo está fuera del modo suspendido, verifica periódicamente la información del enlace descendente. Con eDRX, se aumenta el tiempo de verificación de la radio, lo que reduce el consumo de energía.
+
+\item \textbf{Cobertura}
+
+
+Las redes LTE-M/Cat-M1/Cat-M2 pueden utilizar la infraestructura 4G LTE existente. Esta es una ventaja significativa, ya que más del 50 por ciento de las conexiones móviles globales se realizan en redes 4G. 
+
+Con una pérdida de acoplamiento máxima (MCL) de 156 decibelios (dB), 14 dB más alta que LTE, las redes LTE-M también ofrecen mayor cobertura y mejor penetración en interiores. La señal puede manejar muchas interferencias de edificios y otras estructuras que obstruyen su camino.
+
+\item \textbf{Velocidad de Transferencia}
+
+
+Comparado con LTE, LTE-M no es particularmente rápido. Pero 1 megabit por segundo para transmisiones de enlace ascendente y descendente es excepcional en comparación con redes más antiguas como 2G y 3G (UMTS) y otras LPWAN. (Es varias veces más rápido que NB-IoT). Y eso es más que suficiente para la mayoría de las aplicaciones de IoT. Es factible para aplicaciones con necesidades de datos pequeñas e incluso casos de uso que involucran transmisión de video.
+
+
+En el contexto de IoT, el alto rendimiento de datos significa que los dispositivos que usan LTE-M pueden recibir fácilmente actualizaciones por aire (OTA), y las transmisiones de datos consumirán menos energía, porque el dispositivo puede volver al modo de ahorro de energía más rápido.
+
+
+\item \textbf{Costo}
+
+Las redes 4G se construyeron principalmente para teléfonos inteligentes. Las redes LTE-M se construyeron principalmente para dispositivos IoT. Como tal, los componentes necesarios para los dispositivos LTE-M son menos complejos y más asequibles que los componentes que necesitaría para un dispositivo 4G tradicional, aunque ambos utilizan la infraestructura 4G LTE.
+
+
+
+
+\end{itemize}
+
+\textbf{NB-IoT}
+
+Es un protocolo inalámbrico de Internet de las cosas (IoT) que utiliza tecnología de red de área amplia de baja potencia (LPWAN). Fue desarrollado por 3GPP para comunicación inalámbrica celular que permite una amplia gama de nuevos dispositivos y servicios NB-IoT. NB-IoT es uno de los tres principales estándares 3GPP LPWAN.\\
+
+El estándar de comunicación NB-IoT tiene como objetivo permitir que los dispositivos IoT funcionen a través de redes de operador, ya sea dentro de una onda portadora de comunicación del Sistema Global para Móviles (GSM) existente, en una "banda de protección" no utilizada entre canales LTE o de forma independiente.\\
+
+Uno de los objetivos de NB-IoT es impulsar la extensión de la cobertura más allá de lo que ofrecen las tecnologías celulares existentes. Para ello, NB-IoT ofrece repeticiones de transmisión y diferentes configuraciones de asignación de ancho de banda en la transmisión de enlace ascendente.\\
+
+La tecnología NB-IoT utiliza señales de bajo ancho de banda para comunicarse dentro de las tecnologías GSM y LTE existentes.
+
+Los dispositivos y sensores especialmente diseñados son los componentes básicos de los sistemas NB-IoT. Estos dispositivos recopilan información de su entorno y la transmiten a estaciones base NB-IoT o nodos de transmisión.
+
+Las estaciones base individuales están conectadas a una puerta de enlace de IoT y servidores de aplicaciones en la nube de IoT para el monitoreo centralizado y el análisis de datos.
+
+NB-IoT emplea una nueva capa física con señales y canales para cumplir con los requisitos de cobertura extendida en áreas rurales e interiores profundos, al tiempo que permite una complejidad de dispositivo muy baja. La tecnología subyacente es mucho menos compleja que la de los módulos GSM/GPRS.\\
+
+A continuación se describen las ventajas más importantes de NB-IoT:
+\begin{itemize}
+
+\item \textbf{ Ahorro de Energía}
+
+NB-IoT no necesita ejecutar un sistema operativo pesado, como Linux, ni hacer mucho procesamiento de señales, lo que lo hace más eficiente en términos de energía en comparación con otras tecnologías celulares.
+
+\item \textbf{Cobertura}
+
+
+NB-IoT puede ayudar a admitir una gran cantidad de dispositivos mediante el establecimiento de redes NB-IoT que pueden conectarse a miles de millones de nodos. Diseñado para cobertura extendida en interiores, la menor complejidad de los dispositivos proporciona conectividad y comunicación de largo alcance.
+
+\item \textbf{Costo}
+
+Debido a que es más fácil crear dispositivos con menor complejidad, el costo de los dispositivos es significativamente bajo, alrededor de 5 dolares por módulo.
+
+\item \textbf{Seguridad}
+
+
+NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones de autenticación basadas en cifrado y SIM.
+
+
+ 
+\end{itemize}
+
+\newpage
+\section{Investigación de Servidores de alojamiento}
+
+\textbf{LTE-M vs. NB-IoT}
+
+Comparado a NB-IoT las velocidades de transferencia de datos de LTE-M son más de 10 veces más rápidas, su latencia es de 10 a 100 veces menor y cuenta con una cobertura mucho mayor, ya que utiliza la infraestructura 4G LTE existente. Sin embargo, aunque ambas LPWAN funcionan bien en interiores, NB-IoT tiene una pérdida máxima de acoplamiento (MCL) ligeramente más alta, lo que significa que puede manejar un poco más de interferencia.
+
+LTE-M también puede usar una gama más amplia de frecuencias, aunque, como su nombre lo indica, Narrowband-IoT usa bandas de frecuencia más estrechas, lo que permite que esta tecnología use el espectro de radiofrecuencia (RF) de manera más eficiente.
+
+\begin{table}[h]
+\begin{adjustbox}{width=\columnwidth,center}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+       & \begin{tabular}[c]{@{}l@{}}Velocidad \\ Máxima de Subida\end{tabular} & \begin{tabular}[c]{@{}l@{}}Velocidad Máxima \\ de Descarga\end{tabular} & Latencia & \begin{tabular}[c]{@{}l@{}}Perdida Máxima\\ de Acoplamiento(dBs)\end{tabular} & Ancho de Banda \\ \hline
+LTE-M  & 1Mbps                                                                 & 1Mps                                                                    & 10-15 ms & 156                                                                           & 1.4MHz a 5MHz  \\ \hline
+NB-IoT & 127 kbit                                                              & 159 kbit                                                                & 1.6-10s  & 164                                                                           & 180KHz         \\ \hline
+\end{tabular}
+\end{adjustbox}
+\caption{\label{tab:interfaces} Comparación entre LTE-M y NB-IoT}
+\end{table}
+
+Después de la investigación realizada, encontramos las siguientes ventajas de LTE-M sobre NB-IoT:
+
+\begin{itemize}
+
+\item \textbf{LTE-M tiene más redes de roaming disponibles}
+
+Pocos operadores han establecido acuerdos de roaming para sus redes NB-IoT, por lo que LTE-M ofrece una mejor cobertura y tiene menos circunstancias en las que necesita cambiar de SIM.
+Actualemente, la compañia Telcel cuenta con la mayor cobertura de tecnología LTE en México.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/lte-mcobertura}
+\captionof{figure}{Mapa de Cobertura LTE-Telcel}
+ \label{fig:prot}
+\end{center}
+\newpage
+\item\textbf{NB-IoT consume más energía en algunos casos}
+
+Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las velocidades de datos más bajas de NB-IoT requieren estos permanezcan en línea por más tiempo, lo que resulta en un mayor consumo de energía. En casos de uso móvil, NB-IoT también usa más energía
+
+
+\end{itemize}
+
+Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto. Se investigaron distintos módulos que sean compatibles con la Rasperry Pi 4 Modelo B, y acontinuación se muestran una comparación entre ellas. 
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Modelo          & Voltaje de Operación & \begin{tabular}[c]{@{}l@{}}Redes que\\ Soporta\end{tabular} & \begin{tabular}[c]{@{}l@{}}Dificultad de \\ Integración\end{tabular} & Costo  \\ \hline
+SixFab Base Hat & 5V                   & 3G/4G/LTE                                                   & Bajo                                                                 & \$2500 \\ \hline
+SIM7600A-H      & 3-5V                 & 3G/4G/LTE                                                   & Alta                                                                 & \$1435 \\ \hline
+SIM800C-G       & 3.3 - 5V             & 3G/4G/LTE                                                   & Alta                                                                 & \$508  \\ \hline
+SIM7600CE       & 3.3-5V               & 2G/3G/4G/LTE                                                & Alta                                                                 & \$2100 \\ \hline
+\end{tabular}
+\caption{\label{tab:interfaces}Comparación entre distintos módulos de LTE-M}
+\end{table}
+
+Dado que el módulo SixFab es el de menor dificultad de integración, se decidió utilizar este módulo para poder utilizar la interfaz de LTE-M. Además SixFab ofrece un kit dónde de se incluyen todos los componentes necesarios para utilizar dicha interfaz.\\
+
+\textbf{Raspberry Pi 4G/LTE Cellular Modem Kit}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/sixfabcomp}
+\captionof{figure}{Raspberry Pi 4G/LTE Cellular Modem Kit}
+ \label{fig:scaraindust}
+\end{center}
+
+El kit de módem celular para Raspberry Pi permite desplazarse de forma libre y segura con una conexión de datos móviles.
+Ya sea que esté configurando una Raspberry Pi como un servidor web móvil o buscando acceder a Internet en ubicaciones remotas, nos brindará conectividad con nulos problemas.
+
+\newpage
+\section{Elección del Servidor de Alojamiento }
+
+Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
+\\
+Elementos físicos que contendrá la unidad:
+
+\begin{itemize}
+
+\item Raspberry Pi 4 Modelo B\\
+De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
+Dimensiones 85 x 53mm. 
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
+\captionof{figure}{Especificaciones Físicas}
+ \label{fig:scaraindust}
+\end{center}
+
+\item Zumbador Pasivo KY-006\\
+Dimensiones 18 x 15mm. 
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/KY-006}
+\captionof{figure}{Zumbador Pasivo KY-006}
+ \label{fig:scaraindust}
+\end{center}
+
+\item Cámara Arducam Pivariety IMX230\\
+Dimensiones de la placa: 38 x 38mm.
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/camara}
+\captionof{figure}{Cámara Pivariety IMX230}
+ \label{fig:scaraindust}
+\end{center}
+ 
+
+\item Cable macho-hembra\\
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Jumpers}
+\captionof{figure}{Jumpers}
+ \label{fig:scaraindust}
+\end{center}
+
+Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
+Largo 10 cm. 
+
+\item Micro SD\\  
+Dimensiones: 15 x 11 x 1 mm. 
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/MicroSD}
+\captionof{figure}{Micro SD}
+ \label{fig:scaraindust}
+\end{center}
+\newpage
+\item \textbf{RasperryPi 3G/4G/ LTE Base HAT}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/sixfabhat}
+\captionof{figure}{RasperryPi 3G/4G/ LTE Base HAT}
+ \label{fig:scaraindust}
+\end{center}
+
+Este HAT celular proporciona una conexión de datos simplificada para proyectos de IoT remotos, en el campo, en todo el mundo, en todas partes. Comience a usar una conexión LTE de alta velocidad con bajo consumo de energía en un factor de forma delgado con todo el software necesario para Raspberry Pi.
+
+\item \textbf{LE 910Cx Mini PCIe Series Linux}
+
+\begin{center}
+  \includegraphics[scale=.7]{imagenes/LE910}
+\captionof{figure}{LE 910Cx Mini PCIe Series Linux}
+ \label{fig:scaraindust}
+\end{center}
+
+
+Los módulos Mini PCIe (mPCIe) de la serie LE910Cx son
+optimizadas para redes LTE de baja categoría y están disponibles
+en modo único de LTE o con opciones de respaldo 3G/2G.
+
+\newpage
+\item \textbf{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/lteantena}
+\captionof{figure}{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
+ \label{fig:scaraindust}
+\end{center}
+
+
+Antenas LTE principal y Diversity combinadas con una antena GNSS en una sola antena formada. Ajuste directo para el módulo Mini PCIe LTE de Quectel EC25, Telit LE910C1 y Telit LE910C4.
+
+\end{itemize}
+
+\newpage
+
+Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño modular para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
+
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/unidadcontenedora}
+\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento}
+ \label{fig:scaraindust}
+\end{center}
+ 
+
+\newpage
+\section{Análisis del Módulo de Estación Base }
+
+
+
+\newpage
+\section{Diseño del Módulo de Estación Base}
+
+
+
+\newpage
+\section{Análisis de la aplicación Web}
+
+\newpage
+\section{Búsqueda Lenguajes de programación web}
+\newpage
+\section{Elección del lenguaje de programación para la aplicación web}
+
+\newpage
+\section{Diseño de la aplicación web}
+
+\newpage
+\section{Cotización de materiales}
+
+\newpage
+\section{Conclusiones}
+En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades investigación, nos dimos cuenta de que esta opción no era viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, así como una buena integración con la Rasperry Pi 4.\\
+
+En el caso del Submódulo de Procesamiento de imágenes, se tenía contemplado desarrollarlo de manera separada del submódulo de \emph{machine learning } pero después de haber realizado un análisis más profundo, se decidió integrarlo dentro de este mismo. Esto para el ahorro de recursos de procesamiento y conseguir una mejor comunicación entre procesos. En un siguiente reporte, se terminará por diseñar la Red Neuronal Convolucional, así como el diseño del Módulo de Telemetría y de la Estación Base.\\
+
+Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, sin embargo, se tiene contemplado rediseñar el modelo con el fin de mejorar y adaptarla los cambios del sistema a futuro.
+
+
+\newpage
+\section{Bibliografia}
+%\bibliographystyle{apacite}
+
+\begin{thebibliography}{10} %10 significa el número máximo de items
+%Aquí ponga la bibliografía y referencias usadas
+
+%Artículo:
+
+\bibitem{Referencia0} Gupta  , S. (2022) \emph{ Best language for machine learning: Which should you learn?}, Springboard Blog. Springboard . Available at: https://www.springboard.com/blog/data-science/best-language-for-machine-learning/ (Accessed: October 30, 2022). 
+
+\bibitem{Referencia1} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
+%Libro
+\bibitem{Referencia2}
+V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
+
+\bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
+
+\bibitem{Referencia4} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
+
+\bibitem{Referencia5} Aurélien Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow}, Segunda Edición , O'Reilly, 2009
+
+
+\bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with OpenCV}, Tercera Edición, O'Reilly, 2017
+
+\bibitem{Referncia8}Cuno Plister, \emph{Getting Started with Internet of Things},Primera Edición, O'Reilly, 2011
+
+\bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
+
+
+
+
+\end{thebibliography}
+
+\end{document}
+
+
