@@ -50,21 +50,27 @@
 
 
 \HRule \\[0.4cm]
-{ \huge \bfseries Segundo Reporte Parcial}\\[0.4cm]
+{ \huge \bfseries Tercer Reporte Parcial}\\[0.4cm]
 
 \HRule \\[1.5cm]
 
 \begin{verse}\center
  Lista de actividades
 \begin{itemize}
-\item Diseño del Módulo Central de procesamiento
-\item Diseño del Submódulo de Procesamiento de Imágenes 
-\item Diseño de la unidad contenedora del Módulo central de Procesamiento
-\item Búsqueda de Lenguajes de Programación para el Microordenador
-\item Investigación de Estándares y Protocolos de Comunicación Inalámbricas 
-\item Búsqueda de Interfaces de Comunicación Inalámbrica 
-\item Elección de Interfaces de Comunicación Inalámbrica 
-\item Búsqueda de Tecnologías de Geolocalización\\
+\item Búsqueda de manejadores de bases de datos
+\item Elección del manejador de bases de datos
+\item Modelado de la base de datos
+\item Análisis del Módulo de Telemetría
+\item Diseño del Módulo de Telemetría
+\item Investigación de Servidores de alojamiento
+\item Elección del Servidor de Alojamiento
+\item Análisis del Módulo de Estación Base
+\item Diseño del Módulo de Estación Base
+\item Análisis de la aplicación Web
+\item Búsqueda Lenguajes de programación web
+\item Elección del lenguaje de programación para la aplicación web
+\item Diseño de la aplicación web
+\item Cotización de materiales \\
 
 \end{itemize}
 \end{verse}
@@ -90,7 +96,7 @@ Dr. Rodolfo Vera Amaro\\
 
 \vfill
 
-03 de Noviembre 2022
+30 de Noviembre 2022
 
 \end{center}
 
@@ -105,12 +111,96 @@ Dr. Rodolfo Vera Amaro\\
 
 
 \newpage
-\section{Búsqueda de Lenguajes de Programación para el Microordenador}
+\section{Búsqueda de manejadores de bases de datos}
+
+Un Sistema Gestor de Base de Datos (SGBD) o \emph{DataBase Managenent System} (DBMS) es un sistema que permite la creación, gestión y administración de bases de datos, así como la elección y manejo de las estructuras necesarias para el almacenamiento y búsqueda de información del modo más eficiente posible. [1]\\
+
+Los sistemas gestores de bases de datos son clasificados según la forma en que administran los datos en: 
+\begin{itemize}
+\item Relacionales (SQL)
+\item No relacionales (NoSQL)
+\end{itemize}
+
+
+\textbf{Sistemas Gestores de bases de datos Relacionales (SQL)}\\
+
+SQL es un lenguaje estándar de consultas o \emph{queries} a bases de datos. La programación o consultas en SQL sirve para almacenar, manipular y recuperar datos de bases de datos relacionales. [2]\\
+
+La información que almacena la BBDD (base de datos) está relacionada entre sí. Los datos relacionados (registros o filas) son almacenados en tablas que constan de varios campos (columnas). \\
+
+\textbf{Características:}
+
+\begin{itemize}
+\item Integridad de los datos\\ Asegura que los datos sean válidos, correctos y completos. SQL y las bases de datos relacionales tienen la función de preservar esta integridad. 
+
+\item Lenguaje estandarizado  \\SQL es un lenguaje estandarizado, esto quiere decir que se pueden desplegar implementaciones del mismo lenguaje SQL en diferentes sistemas. De esta manera se puede utilizar el mismo código para todos ellos.
+
+\item Sencillez y claridad \\SQL es un lenguaje integral desde el punto de vista conceptual, esto quiere decir que SQL es un lenguaje unificado, claro y simple, de fácil comprensión. 
+
+\item Flexibilidad \\ Una de las razones por las que SQL es un lenguaje tan utilizado es por su flexibilidad, dada su versatilidad a la hora de implantar soluciones y por permitir definir diferentes formas de ver los datos para satisfacer las especificaciones requeridas por parte del usuario. [2] 
+
+\end{itemize}
+
+\textbf{Ventajas:}
+
+
+\begin{itemize}
+
+\item Opción segura \\ 
+Las tablas y datos permanecen protegidos con los nombres de usuario y sus contraseñas. Por lo tanto, solo una persona autorizada puede acceder a esas tablas y datos para trabajar. 
+
+\item Fácil de usar \\
+No existe ningún proceso de procesamiento de consultas y, por lo tanto, las bases de datos relacionales son simples. El usuario no está obligado a pasar ninguna consulta compleja para acceder a los datos. 
+
+
+\item Rendimiento rápido\\
+Fáciles de usar y también son simples por su estructura. Permite al usuario obtener una experiencia rápida. El usuario obtiene muchos filtros de optimización u opciones para aumentar la velocidad de acceso a los datos.
+ 
+\item Presenta datos con precisión \\
+Las bases de datos contienen tablas precisas e interrelacionadas. Usa las claves primaria y externa para establecer la relación entre el archivo \emph{raw}. Por lo tanto, los usuarios no tienen ningún problema con la reputación de los datos anteriores que ya han recibido. Además, hay cero posibilidades de duplicación de datos en bases de datos relacionales. 
+
+\item Accesible en cualquier momento \\
+El usuario no necesita ninguna ruta predefinida. Por lo tanto, la accesibilidad en el RDBMS es más fácil en comparación con otras bases de datos. Además, los usuarios también pueden modificar los datos rápidamente. 
+
+\item Puede tener varios usuarios \\
+Muchos usuarios pueden acceder a la base de datos al mismo tiempo. Incluso si los datos ya están actualizados, también muchos usuarios pueden visitar sin ningún problema. Por lo tanto, se puede evitar el bloqueo causado principalmente al obtener un inicio de sesión de múltiples usuarios en la base de datos. [3] 
+\end{itemize}
+
+\textbf{Desventajas:}
+
+\begin{itemize}
+
+\item Incrementa el gasto 
+
+Estas bases de datos son bastante caras de usar. Además, la empresa o el usuario deben comprar el software y las herramientas para obtener el resultado completo de RDBMS. Por lo tanto, si se tiene un presupuesto bajo, puede resultar difícil obtener una base de datos de este tipo. 
+
+\item Se puede perder información 
+
+El RDBMS contiene el espacio limitado y estos dispositivos de almacenamiento no pueden almacenar más datos si no hay espacio. Como no hay más almacenamiento, estos datos se pueden perder y crear problemas en el futuro. 
+
+\item Requerido para el uso de dispositivos de almacenamiento físico 
+
+Requiere importantes dispositivos de almacenamiento, especialmente dispositivos de memoria física. 
+
+\item Problema de rendimiento 
+
+El nivel de rendimiento puede ser bajo en las bases de datos relacionales porque depende de filas y columnas. Por lo tanto, si hay muchos filas y tablas, la consulta tardará más en procesar el resultado. Además, si hay una cantidad considerable de datos en la máquina, puede ralentizar el proceso de trabajo.  
+
+\item Puede ser complejo de entender 
+
+Cuando aumenta la cantidad de datos almacenados, se vuelve complicado comprender esos datos de forma simplificada. Sucede porque todos los datos han seguido utilizando la función particular que genera grandes conjuntos de datos para filtrar. [3] 
+
+\end{itemize}
+
+\textbf{Principales sistemas de gestión de bases de datos relacionales} \\
+
+A continuación, se muestra una tabla comparativa de los principales sistemas de gestión de bases de datos relacionales: 
 
 
 
-Lo primero que debemos de tener claro, es que la programación orientada a la inteligencia artificial es diferente al paradigma de la programación convencional. En esta última, el usuario le indica a la máquina exactamente lo que tiene que hacer, mientras que en Machine learning, se le enseña a programarse sola. Lo cúal se ejemplifica en el siguiente gráfico:
-\\
+
+\textbf{Sistemas Gestores de bases de datos No Relacionales (SQL)}\\
+
 \begin{center}
   \includegraphics[scale=0.3]{imagenes/programaclasico}
 \captionof{figure}{Programa clásico vs Machine Learning}
@@ -118,52 +208,7 @@ Lo primero que debemos de tener claro, es que la programación orientada a la int
 \end{center}
 
 
-El proceso de trabajo para aprendizaje automático es muy diferente a la construcción de una aplicación convencional. Por este motivo, la manera de utilizar los lenguajes de programación es diferente. Se deben de tomar en cuenta las características que estos utilizan, así como sus enfoques y paradigmas.\\
 
-Uno de los factores importantes a considerar al momento de elegir un lenguaje de programación orientado a machine learning, es la popularidad el mismo, ya que esta es una señal de la aceptación por parte de la comunidad. A su vez, su el soporte es tanto o mas importante, ya que podemos darnos una idea si dicho lenguaje posee las herramientas adecuadas que se acoplan a nuestras necesidades. La velocidad de ejecución es otro factor importante, sobre todo cuando se requiere una minusiocidad en la ejecución de procesos y el cuidado de la memoria .Finalmente, la versatilidad del lenguaje es otro factor relevante, ya que, si el lenguaje fue diseñado con una determinada tarea o propósito en mente, este será mucho más eficiente y productivo.\\
-
-A continuación, se listan algunos de los lenguajes de programación más populares en el campo de machine learning:\\
-
-\begin{itemize}
-\item \textbf{Python} \\
-Python se ha convertido en el lenguaje de programación más popular del mundo, esto gracias a su sencillez aunado a una gran versatilidad. Sus utilidades abarcan desde desarrollo web, hasta la inteligencia artificial.
-Python es uno de los lenguajes más naturales y  con sintaxis menos complicada. Por lo tanto, es fácil de aprender, leer y corregir errores. Lo mejor de todo es que Python es un lenguaje de código abierto. Lo que significa que es de libre acceso y distribución. Como resultado, tiene bibliotecas versátiles.
-
-Una biblioteca es una colección de módulos o códigos creados para realizar operaciones específicas. Algunos módulos pueden ayudar con la interfaz gráfica de usuario, análisis de datos, gráficos, entre otras cosas. En lugar de escribir el mismo código cada vez que lo necesite, puede importarlo desde la biblioteca.
-
-
- Uno de los principales factores de esta popularidad, es el enorme ecosistema de herramientas desarrolladas específicamente para machine learning tales como: Pandas, Numpy, Tensorflow, Keras, entre otras.
-A pesar de no ser el lenguaje más rápido o potente, lo anterior lo hace uno de los lenguajes indispensables si se piensa trabajar en el campo de machine learning.
-
-\item \textbf{C++}\\
-
-A menudo hemos escuchado que C++ se aborda más cuando se trata de desarrollar juegos y sistemas grandes. Esto se debe a su característica de portabilidad y también proporciona una comprensión básica de la construcción lógica. Sin embargo, Algunos de los paquetes compatibles con C++ incluyen: Microsoft Cognitive Toolkit (CNTK) para aprendizaje profundo; Tensorflow para aprendizaje profundo; OpenCV para visión artificial; MLPack para aprendizaje automático; DyNet para redes neuronales; OpenNN para redes neuronales; Shogun para aprendizaje automático y FANN para redes neuronales.\\
-Sin embargo, C++ también tiene sus propias deficiencias. Está muy orientado a la sintaxis, a diferencia de Python, que es realmente amigable para los principiantes. Adempas de no contar con un gran soporte de bibliotecas.
-
-\item \textbf{R}\\
-
-Otro de los lenguajes de programación cuyo uso es considerablemente popular en el ámbito de machine learning y data análisis es R. R ofrece una variedad de beneficios desde su buen soporte de biblioteca y gráficos hasta la posibilidad crecer enormemente con muchos de los que podemos buscar ayuda, debido a su naturaleza abierta.
-Algunos de los paquetes clave compatibles con R son: Kernlab para operaciones basadas en regresión y clasificación; Ggplot para visualización de datos; Caret para operaciones basadas en regresión y clasificación; Plotly para visualización de datos; MLr3 para diferentes flujos de trabajo de aprendizaje automático.
-al igual que Python, también es comparativamente más lento que el resto de los lenguajes. Esto representa una gran desventaja para este lenguaje de programación. Además de esto, también tiene un origen débil, por lo que no es tan fácil de aprender. Para las personas que no tienen experiencia en programación les puede resultar difícil aprender R.
-
-\item \textbf{Matlab}\\
-
-Matlab también admite operaciones de aprendizaje automático y se puede aplicar de manera innovadora a aplicaciones que incluyen visión por computadora. MATLAB no está limitado por la sintaxis y, por lo tanto, es fácil de aprender y comprender. MATLAB también tiene muchas funciones predefinidas y una GUI para que los alumnos entiendan mejor las cosas. Además, viene con un compilador MATLAB que ayuda cuando se trata de codificar en el mismo.
-Además, cuando se trata de capacidades de aprendizaje automático, MATLAB lo admite de una manera única. MATLAB permite a los usuarios aplicar AutoML, lo que les permite aprovechar al máximo los modelos codificados optimizados y reducidos. Además, MATLAB también puede realizar la generación automática de código para el análisis de sensores y mucho más.
-MATLAB también viene con algunas restricciones. El lenguaje de programación no está fácilmente disponible o es de uso gratuito. De hecho, una versión de prueba está disponible solo por 30 días y publica que los usuarios deben comprar el paquete para un uso posterior. Por esta razón, uno puede encontrar solo investigadores como su público objetivo. No solo eso, el compilador de MATLAB es costoso de comprar y, por lo tanto, no tiene un soporte de comunidad / foro denso para ayudar a los usuarios y estudiantes.
-
-
-\item \textbf{Javascript}
-
-JavaScript puede no ser el lenguaje principal para desarrollo en Inteligencia Artificial, pero es gran complemento para utilizar herramientas relacionadas con Machine Learning, especialmente visualización de datos o procesos,
-El hecho de que TensorFlow.js se ejecute dentro del navegador abre una gama de posibilidades interesantes tanto para empresas como para desarrolladores.
-Como los navegadores son un espacio interactivo: ofrece acceso a varios sensores, incluidas cámaras web y micrófonos, que pueden proporcionar imágenes y sonidos como entrada a cualquier modelo de aprendizaje automático.
-A pesar de todos los aspectos positivos, TensorFlow.js no tiene acceso predeterminado al sistema de archivos en el entorno del host del navegador. Esto limita los recursos de datos disponibles y puede imponer restricciones en el tamaño de los archivos y procesos.\\
-
-
-
-
-\end{itemize}
 
 A continuación se presenta una tabla comparativa de las características que se tomaron en cuenta para tomar una decisión sobre que lenguaje utilizar.
 
@@ -187,7 +232,7 @@ Debido a que en el presente proyecto se realizará la integración de sistemas enf
 
 
 \newpage
-\section{Diseño del Módulo Central de Procesamiento}
+\section{Elección del manejador de bases de datos}
 
 Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y que estaremos utilizando de manera frecuente a lo largo de este proyecto, es la modularidad. Que no es más que dividir nuestros programas en partes más pequeñas (sub-programas), que habitualmente son llamados módulos. Las cuales deben tener un grado de independencia de la aplicación o programa principal. Cuando hablamos de independencia, nos referimos a que pueden ser utilizados por otras aplicaciones y no dependen de la aplicación original en sí. 
 
@@ -240,7 +285,7 @@ Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial 
 
 
 \newpage
-\section{Diseño del Submódulo de Procesamiento de Imágenes}
+\section{Modelado de la base de datos}
 
 Para el diseño de la unidad de procesamiento nos apoyamos en la metodología UML, iniciando con un diagrama de casos de usos. Un modelo de casos de uso muestra una vista del sistema desde la perspectiva del usuario, por lo cual describe qué hace el sistema sin describir cómo lo hace.\\
 El siguiente diagrama muestra las funciones del Submódulo de Procesamiento de Imágenes basado en los requerimientos del sistema, así como la interacción con el Módulo Central de Procesamiento y el conductor, el cual es indispensable para poder realizar la detección de somnolencia.
@@ -337,7 +382,7 @@ MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-
 
 
 \newpage
-\section{Investigación de Estándares y Protocolos de Comunicación Inalámbricas}
+\section{Análisis del Módulo de Telemetría }
 
 Para transferir datos o información de un punto a otro sin la utilización de cableado o algún medio físico, tenemos las redes inalámbricas; y se dividen en 3 diferentes tipos dependiendo del alcance requerido:
 
@@ -448,7 +493,7 @@ Tomando esto en consideración, podemos observar que tanto SigFox y LoraWan no cu
 Por lo tanto, las tecnologías que cumplen estás características son LTE-M y NB-IoT, por lo que en la siguiente sección se procede a hacer un análsis y comparación de estas dos tipos de redes inalámbricas para corrobar cual de las dos es la más óptima para ser utilizada en este proyecto.
 
 \newpage
-\section{Búsqueda de Interfaces de Comunicación Inalámbrica}
+\section{Diseño del Módulo de Telemetría}
 
 \textbf{LTE-M}
 LTE-M es el término simplificado de la industria para el estándar tecnológico de Área Amplia de Baja Potencia (LPWA por sus siglas en inglés). Se refiere específicamente a la tecnología LTE CatM1, que es el estándar más adecuado para su uso con el IoT.\\
@@ -531,7 +576,7 @@ NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones 
 \end{itemize}
 
 \newpage
-\section{Elección de Interfaces de Comunicación Inalámbrica}
+\section{Investigación de Servidores de alojamiento}
 
 \textbf{LTE-M vs. NB-IoT}
 
@@ -604,7 +649,7 @@ El kit de módem celular para Raspberry Pi permite desplazarse de forma libre y s
 Ya sea que esté configurando una Raspberry Pi como un servidor web móvil o buscando acceder a Internet en ubicaciones remotas, nos brindará conectividad con nulos problemas.
 
 \newpage
-\section{Diseño de la Unidad Contenedora del Módulo Central de Procesamiento}
+\section{Elección del Servidor de Alojamiento }
 
 Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
 \\
@@ -708,27 +753,29 @@ Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo
  
 
 \newpage
-\section{Búsqueda de Tecnologías de Geolocalización}
+\section{Análisis del Módulo de Estación Base }
 
-La geolocalización implica el posicionamiento que define la localización de un objeto en un sistema de coordenadas determinado.
 
-Los datos para la geolocalización se pueden obtener mediante la dirección IP de un usuario, su dirección MAC, el uso del RFID, la ubicación de la conexión WIFI o las coordenadas de GPS de su dispositivo.\\
-Entre las diferentes tecnologías para la geolocalización, para este proyecto se destacan:
-\begin{table}[h]
-\begin{adjustbox}{width=\columnwidth,center}
-\begin{tabular}{|l|l|l|l|}
-\hline
-Tecnología                                 & Descripción                                                                                                                                                                                                                                                                                            & Exactitud                                                                                                                                & \begin{tabular}[c]{@{}l@{}}Utilización\\ Principal\end{tabular}          \\ \hline
-\textit{GPS(Global Positioning System)}    & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento global formado por \\ una red de más de 30 satélites \\ que orbitan alrededor de la tierra. \\ Cada navegador GPS está conectado a \\ diferentes satélites\\  para tener los datos reales de\\  la geolocalización en todo momento.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Es un sistema de\\ geolocalización muy preciso, \\ obteniendo la \\ ubicación de manera\\ exacta\end{tabular} & \begin{tabular}[c]{@{}l@{}}Telefono móvil \\ o en vehículos\end{tabular} \\ \hline
-\textit{GSM(Global System for Mobile)}     & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento \\ formado por las torres y \\ antenas de telefonía\end{tabular}                                                                                                                                                                                 & \begin{tabular}[c]{@{}l@{}}Es un sistema de geolocalización\\ impreciso. Tiene un \\ margen de error\\ de hasta 200 metros\end{tabular}  & \begin{tabular}[c]{@{}l@{}}Comunicación\\ móvil\end{tabular}             \\ \hline
-\textit{GPRS(General Packet Radio System)} & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento de \\ segunda generación GSM, \\ proporciona servicios de alta velocidad\end{tabular}                                                                                                                                                            & \begin{tabular}[c]{@{}l@{}}Es un sistema de geolocalización\\ preciso pero limitado en área de\\ cobertura\end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Solo disponible\\ en tierra\end{tabular}      \\ \hline
-\textit{Wi-Fi}                             & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento   \\ en el que todas las redes \\ WIFI encendidas emiten una \\ señal identificativa,   \\ comúnmente llamada dirección MAC. \\ Este sistema usa 3 o más puntos de\\  referencia para calcular la ubicación.\end{tabular}                        & \begin{tabular}[c]{@{}l@{}}Es un sistema de geolocalización\\ impreciso, \\ presenta grandes margenes\\ de error\end{tabular}            & Interiores                                                               \\ \hline
-\end{tabular}
-\end{adjustbox}
-\caption{\label{tab:interfaces}Tecnologías de Geolocalización}
-\end{table}
 
-En un siguiente reporte, se analizarán con mas detalle las tecnologías que sean compatibles con la interfaz de LTE-M que utilizaremos a lo largo del proyecto.
+\newpage
+\section{Diseño del Módulo de Estación Base}
+
+
+
+\newpage
+\section{Análisis de la aplicación Web}
+
+\newpage
+\section{Búsqueda Lenguajes de programación web}
+\newpage
+\section{Elección del lenguaje de programación para la aplicación web}
+
+\newpage
+\section{Diseño de la aplicación web}
+
+\newpage
+\section{Cotización de materiales}
+
 \newpage
 \section{Conclusiones}
 En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades investigación, nos dimos cuenta de que esta opción no era viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, así como una buena integración con la Rasperry Pi 4.\\
@@ -767,39 +814,8 @@ V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,
 
 \bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
 
-\bibitem{Referencia10} S. Pachouly, N. Bhondve, A. Dalvi, V. Dhande y N. Bhamare. "Driver drowsiness detection using machine learning with visual behaviour". https://ijcrt.org/papers/IJCRT2006408.pdf (accedido el 2 de noviembre de 2022).
 
-\bibitem{Referencia11} R. T. Puteri. "Micro-sleep detection using combination of haar cascade and convolutional neural network". https://lppm.ub.ac.id/wp-content/uploads/formidable/29/p130-puteri.pdf (accedido el 2 de noviembre de 2022).
 
-\bibitem{Referencia12} M. K. S. a. T. Annamani. "Driver drowsiness detection system using convolutional neural networks". https://ijarsct.co.in/Paper3399.pdf (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia13} Moko Lora. "Comparación entre LoRa y otras tecnologías inalámbricas". https://www.mokolora.com/es/lora-and-wireless-technologies/?fbclid=IwAR1kRuShLFIHTOBs_9-pzyt3p6x5tpNE-Lfny6gSofWJ-TVSPV-PwGDixOE(accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia14} C. López Jurado. "¿Qué es una red WPAN?" https://es.ccm.net/contents/821-wpan-wireless-personal-area-network (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia15} J. A. Castillo. "WLAN: Qué es, definición, estándar 802.11 y diferencias con LAN". https://www.profesionalreview.com/2020/03/07/wlan-que-es/ (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia16} Library. "Estándares de wlan". https://1library.co/article/estándares-de-wlan-redes-wlan-wireless-lan.y6em7mnz (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia17} Tarify.Win! "Red WWAN ¿Qué es, para qué sirve y cómo funcionan?" https://tarify.win/definiciones/red-wwan/ (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia18} Zoo stock. "Todo lo que debemos saber sobre redes WMAN y WWAN". https://www.zoostock.com/redes-y-sistemas/todo-lo-que-debemos-saber-sobre-redes-wman-y-wwan (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia19} Altium. "Los pros y los contras de diferentes redes LPWAN para tu aplicación iot". https://resources.altium.com/es/p/the-pros-and-cons-of-different-lpwan-networks-for-your-iot-application (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia20} Raspberry Pi Trading Ltd. "Raspberry pi 4 computer model B". https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-4-Product-Brief.pdf (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia21} Amazon. "Arducam para cámara raspberry pi, 21MP IMX230 programable motorizado focus pivariety, compatible con raspberry pi ISP y gstreamer plugin". https://www.amazon.com/-/es/Raspberry-programable-motorizado-Pivariety-compatible/dp/B092LHFG6P (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia22} Unit Electronics. "Zumbador Buzzer Pasivo M?Dulo KY-006". https://uelectronics.com/producto/zumbador-buzzer-pasivo-modulo-ky-006/ (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia23} Mercado Libre. "Cable jumpers dupont hembra hembra 10cm 40pzas arduino". https://articulo.mercadolibre.com.mx/MLM-656378857-cable-jumpers-dupont-hembra-hembra-10cm-40pzas-arduino-_JM (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia24} Sixfab. "Raspberry pi 4G/LTE cellular modem kit". https://sixfab.com/product/raspberry-pi-4g-lte-modem-kit/ (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia25} Sixfab. "Datasheet (v1.o) sixfab raspberry pi 3G-4G/LTE base HAT". https://sixfab.com/wp-content/uploads/2020/03/Sixfab_3G-4G-LTE_Base_HAT_Datasheet_V1.0.pdf (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencia26} Amazon. "Módulo de Sombrero para Raspberry Pi Zero/Zero W/Zero WH/2B/3B/3B+ basado en SIM7600A-H, comunicación 4G y módulo de posicionamiento GNSS soporta LTE CAT4 hasta 150 Mbps, GSM/GPRS/". https://www.amazon.com.mx/Raspberry-SIM7600A-H-comunicación-4G-posicionamiento/dp/B07PRMMG68?th=1&amp;psc=1 (accedido el 2 de noviembre de 2022).
 
 \end{thebibliography}
 
