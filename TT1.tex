@@ -567,12 +567,71 @@ Comunmente, uno de los operandos de la convolución se trata de una señal que se 
 En un caso multidimensional, si se tienen señales discretas definidas sobre dos variables y se le aplica un filtro de tamaño $K_1 x K_2,$ la convolución se calcula utilizando la siguiente expresión:
 
 \begin{equation}
-
+(x\star h)[n_1,n_2] = \sum_{k_1=0}^{K_1-1}\sum_{k_2=0}^{K_2-1} h[k_1,k_2] x[n_1-k_1,n_2-k_2]
 \end{equation}
 
+En el caso particular de procesamiento digital de imágenes, las variables $[n_1,n_2]$ corresponden a cordenadas $[x,y]$ de los píxeles de una imagen. Además, el signo menos que aparece en la Ecuación 8, se suele sustituir por un signo más, por lo cual la definición de convolución se expresaría como:
+
+\begin{equation}
+(x\star h)[x,y] = \sum_{k_1=0}^{K_1-1}\sum_{k_2=0}^{K_2-1} h[k_1,k_2] x[x+k_1,y +k_2]
+\end{equation}
+
+Supongamos que se tiene un imágen en blanco y negro. Dicha imagen, de $7x7$ píxeles, se puede representar mediante una matriz binaria:\\
+\begin{center}
+
+
+$
+I=\begin{bmatrix}
+0&  0&  0&  0&  0&  0&0\\ 
+ 0&  0&  0&  0&  0&  0&0 \\ 
+ 0& 0 &  1&1 &1  &  0& 0\\ 
+ 0& 0 &  1&1  &1  &0  &0 \\ 
+ 0& 0&  1&1  & 1 & 0 &0 \\ 
+ 0& 0 &  0& 0 &0  & 0 &0 \\ 
+ 0&0  &  0&0  & 0 &  0&0 
+\end{bmatrix}
+$
+\end{center}
+
+\begin{verse}
+\emph{Capas convolutivas}\\
+El componente clave de las redes neuronales convolucionales son las capas, que sustituyen la tradicional multiplicación de pesos por entradas. La entrada de una capa convolutiva es una señal,en el caso de imágenes, una señal bidimensional. Dicha señal es procesada realizando una convolución con una máscara o \emph{kernel}. Los pesos correspondientes al \emph{kernel} serán los parámetros de la capa convolutiva que será entrenada.
+A continuación se presenta la representación más simple de las capas de una red neuronal convolucional.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/cnn} 
+\captionof{figure}{Boosting}
+ \label{fig:boost}
+\end{center}
+
+\begin{itemize}
+	\item Capa Convolucional
+	
+Esta capa se utiliza para extraer las diversas características de las imágenes de entrada. En esta capa se realiza la convolución entre la imagen de entrada y un \emph{kernel} de un tamaño particular $MxM$. Al deslizar el filtro sobre la imagen de entrada, se toma el producto escalar entre el filtro y las partes de la imagen de entrada con respecto al tamaño de dicho kernel.
+
+La salida se denomina mapa de características, que nos brinda información sobre la imagen, como las esquinas y los bordes. Posteiormente, este mapa de características se alimenta a otras capas para aprender otras características de la imagen de entrada.
+
+La capa de convolución en CNN entrega el resultado a la siguiente capa una vez que se aplica la  en la entrada.
+
+\item Capa de \emph{Pooling}
+
+El objetivo principal de esta capa es disminuir el tamaño del mapa de características convolucionado para reducir los costos computacionales. Esto se realiza disminuyendo las conexiones entre capas y opera de forma independiente en cada mapa de características. Según el método utilizado, existen varios tipos de operaciones de agrupación. Básicamente resume las características generadas por una capa de convolución.
+
+
+\item \emph{Fully Connected Layer}
+
+La capa totalmente conectada  consta de los pesos y sesgos junto con las neuronas y se utiliza para conectar las neuronas entre dos capas diferentes.l¿La imagen de entrada de las capas anteriores se aplana y se alimenta esta capa. Luego, el vector aplanado pasa por unas pocas capas  más donde normalmente tienen lugar las operaciones de las funciones matemáticas. En esta etapa comienza el proceso de clasificación.
+
+\item \emph{Output Layer}
+Esta capa se encarga de mejorar el rendimiento de un modelo de aprendizaje automático, ya que evita el sobreajuste al simplificar la red. Descarta neuronas no escenciales de la red neuronal durante el entrenamiento.
+
+\end{itemize}
+
+\end{verse}
 
 \subsection{Visión Artificial}
 Se puede definir como el conjunto de técnicas para la extracción de información de imágenes digitales. El tipo de información obtenida de una imagen puede ser de identificación, mediciones para navegación, o aplicaciones de realidad aumentada.El campo de visión artificial puede verse como una parte de la informática. La teoría de algoritmos y el aprendizaje automático son esenciales para el desarrollo de algoritmos de visión artificial.
+
 
 \subsection{Boosting}
 
