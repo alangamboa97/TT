@@ -6,10 +6,11 @@
 \usepackage{amssymb}
 \usepackage{anysize}
 \usepackage{array}
+\usepackage{multicol}
 \usepackage{lmodern}
 \usepackage{adjustbox}
 
-\marginsize{2cm}{2cm}{2cm}{2cm}
+\marginsize{2cm}{2cm}{1cm}{1cm}
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -54,8 +55,13 @@
 
 \HRule \\[1.5cm]
 
-\begin{verse}\center
+\begin{center}
+
+
  Lista de actividades
+ 
+
+\begin{multicols}{2}
 \begin{itemize}
 \item Búsqueda de manejadores de bases de datos
 \item Elección del manejador de bases de datos
@@ -70,10 +76,12 @@
 \item Búsqueda Lenguajes de programación web
 \item Elección del lenguaje de programación para la aplicación web
 \item Diseño de la aplicación web
-\item Cotización de materiales \\
-
+\item Cotización de materiales 
 \end{itemize}
-\end{verse}
+\end{multicols}
+
+\end{center}
+
 
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
@@ -761,6 +769,115 @@ Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo
 \section{Diseño del Módulo de Estación Base}
 
 
+\newpage
+\section{Busqueda de servidores de alojamiento}
+
+Para el presente proyecto se requiere una capacidad de almacenamiento que nos permita el uso de archivos multimedia.
+Primero, veremos los diferentes tipos de medios que puede hospedar y qué funciones de hospedaje necesita para admitir esos medios.
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|c}
+\hline
+Contenido Multimedia & Ejemplos                 \\ \hline
+Imágenes             & JPEG, GIF, archivos TIFF \\ \hline
+Audio                & MP3, WAV, AAC            \\ \hline
+Video                & MP4, Youtube, QuickTime  \\ \hline
+\end{tabular}
+\caption{\label{tab:interfaces} Tipos de Contenido Multimedia}
+\end{table}
+
+El alojamiento de multimedia sugiere que el propietario de un sitio almacene y entregue una gran cantidad de imágenes, archivos de audio o videos, y los proporcione a como su contenido principal, a diferencia de los sitios que solo necesitan unos pocos recursos de medios para complementar principalmente los basados en texto. A continuación se describen los puntos mas importantes a considerar si se decide a tener un alojamiento basado en multimedia:
+
+\begin{itemize}
+\item \textbf{Ancho de banda}
+
+Un plan de alojamiento en la nube le permite pagar por un uso menor durante las horas de menor actividad y explotar cuando recibe mucho tráfico. En pocas palabras, pagas por lo que utilizas.La flexibilidad de la computación en la nube ha llevado incluso a Netflix a abandonar la mayoría de sus centros de datos en favor del alojamiento en la nube de Amazon.
+
+\item \textbf{Almacenamiento}
+
+Si se tiene una gran cantidad de archivos multimedia, entonces se requiere gran capacidad de almacenamiento. Lo ideal sería contar con almacenamiento ilimitado, pero esto no sería costeable. Se debe de analizar un aproximado de almacenamiento necesario y en base a eso se deberá elegir el plan de almacenamiento que mejor cubra esas necesidades.
+
+\item \textbf{CDN (\emph{Content Delivery Network})}
+
+Lo último que debe considerar con el alojamiento de medios es una red de entrega de contenido o CDN. Una CDN intenta mejorar el rendimiento de la transmisión de medios mediante la ubicación de servidores que están geográficamente cerca del usuario mediante sofisticados algoritmos de ubicación.
+
+
+ 
+\end{itemize}
+Sabiendo lo anterior, se analizarán distintos proveedores de alojamiento con la intención de saber cual de ellos se adapta mejor a nuestras necesidades.
+
+\begin{itemize}
+\item \textbf{AWS \textbf{Amplify Hosting}}
+
+AWS Amplify Hosting es un servicio de alojamiento y CI/CD \emph{Continous Integration/Continuos Delivery} completamente auto administrado para aplicaciones estáticas, rápidas, seguras, fiables, renderizadas del lado del servidor y que escalan con su empresa. Es compatible con marcos web modernos como React, Angular, Vue, Next.js, Gatsby, Hugo, Jekyll, entre otros. Algunas de sus principalmente ventajas son:
+\begin{itemize}
+\item \textbf{Implementación de contenido web con rapidez}
+
+AWS permite la implementación continua de una aplicación web estática o renderizada del lado del servidor, una página de inicio de la aplicación móvil o una aplicación progresiva en cada confirmación de código.
+\item \textbf{Alojamiento confiable cerca de los usuarios}
+
+AWS Amplify Hosting cuenta con la red de entrega de contenido (CDN) de Amazon CloudFront, con cientos de puntos de presencia en todo el mundo.
+
+\item \textbf{Mayor Velocidad de Producción}
+
+Cuenta con una alta velocidad del ciclo de lanzamiento de su aplicación con flujos de trabajo de CI/CD integrados, versiones preliminares de solicitudes de extracción y pruebas.7
+
+\item \textbf{Monitoreo}
+
+AWS cuenta con un sistema de monitoreo de tráfico en tiempo real. También permite crear alarmas personalizadas para enviar notificaciones cuando la métrica haya superado el límite establecido. 
+
+\item \textbf{Precio}
+
+AWS cuenta con dos planes, uno gratutio y otro de paga, a continuación se detallan las características de cada uno.
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/amplify}
+\captionof{figure}{Tipos de Planes de AWS Amplify}
+ \label{fig:scaraindust}
+\end{center}
+
+\end{itemize}
+
+
+\item \textbf{A2Hosting}
+
+Además de los planes de alojamiento, en A2 Hosting también puede obtener nombres de dominio y sus precios son justos. Por ejemplo, un nombre de dominio .com le costará \$14.95 por año. Entre otras extensiones, puedes adquirir: dominios .com, .info, .net y .org. Los TLD específicos de países como .co.uk, .de, .fr, .es o .au no están disponibles. Algunas de sus características se listan a continuación:
+
+\begin{itemize}
+\item \textbf{Alojamiento Compartido}
+
+A2Hosting es muy popular por sus planes de alojamiento compartido. Su costo de renovación va desde \$10.99 a \$25.99 por mes. Es el que necesitarán la mayoría de los proyectos, a menos que tenga un sitio con mucho tráfico o necesite una configuración de servidor especial.
+
+\item \textbf{VPS}
+
+VPS significa servidor privado virtual. Es una forma de dividir un servidor en (sub)servidores individuales más pequeños. Esto significa que se puede configurar de acuerdo a las necesidades del cliente y no tener que compartir recursos con otros clientes. Un VPS en A2 Hosting cuesta desde tan solo \$7.65 al mes hasta alrededor de \$200.
+
+\item \textbf{CDN}
+
+A2 Hosting no ofrece servicio de CDN, sin embargo sus planes ofrecen la posibilidad de contratar un servicio de CDN proveedores externos pagando un precio extra del precio base dependiendo del plan contratado.
+
+
+\end{itemize}
+
+\item \textbf{HostGator}
+\begin{itemize}
+\item \textbf{Tiempo de Respuesta}
+
+HostGator posé tiempos de respuesta mínimos para el terriotorio de EEUU. No tanto así para el resto del mundo. Esto debido a que solo poseen dos centros de datos, uno el área este de EEUU y otro en el área oeste. A continuación se muestra una comparación de los tiempos de respuesta de distintos territorios del mundo. Esta información es obtenida de la página de Bitcatcha, que se encarga de comparar los tiempos de respuesta de distintas páginas web desde distintos lugares del mundo.
+
+\begin{center}
+  \includegraphics[scale=.8]{imagenes/hostgator}
+\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento}
+ \label{fig:scaraindust}
+\end{center}
+ 
+
+
+\end{itemize}
+\end{itemize}
 
 \newpage
 \section{Análisis de la aplicación Web}
