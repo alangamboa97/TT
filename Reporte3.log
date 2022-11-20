@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  20 NOV 2022 14:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  20 NOV 2022 17:33
 entering extended mode
 **./Reporte3.tex
 (Reporte3.tex
@@ -1297,24 +1297,25 @@ Package pdftex.def Info: imagenes/hostgator.png  used on input line 872.
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.882 \newpage
-               <./imagenes/hostgator.png>] [36] [37] [38] [39] [40]
-Underfull \hbox (badness 10000) in paragraph at lines 898--899
+l.891 \newpage
+               <./imagenes/hostgator.png>] [36] [37] [38] [39] [40] [41]
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 900--901
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
 
  []
 
-[41]
-Underfull \hbox (badness 1117) in paragraph at lines 914--915
+[43]
+Underfull \hbox (badness 1117) in paragraph at lines 1019--1020
 \OT1/lmr/m/n/12 Blog. Spring-board . Avai-la-ble at: https://www.springboard.co
 m/blog/data-science/best-
  []
 
-[42] (Reporte3.aux
+[44] (Reporte3.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
@@ -1325,9 +1326,9 @@ Package rerunfilecheck Info: File `Reporte3.out' has not changed.
 (rerunfilecheck)             Checksum: 26E1C3C24DBAFF7CEE06515ECF0351A9;3856.
  ) 
 Here is how much of TeX's memory you used:
- 13425 strings out of 478927
- 208354 string characters out of 2852536
- 528292 words of memory out of 3000000
+ 13427 strings out of 478927
+ 208368 string characters out of 2852536
+ 528258 words of memory out of 3000000
  30888 multiletter control sequences out of 15000+600000
  455176 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1346,9 +1347,9 @@ ers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Use
 rs/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users
 /alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users
 /alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Reporte3.pdf (43 pages, 2551602 bytes).
+Output written on Reporte3.pdf (45 pages, 2559430 bytes).
 PDF statistics:
- 475 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
+ 485 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
  272 words of extra memory for PDF output out of 10000 (max. 10000000)
 
