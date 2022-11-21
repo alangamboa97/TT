@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  21 NOV 2022 16:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  21 NOV 2022 16:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -610,68 +610,6 @@ File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \unhbox 
-l.59 ...l{fig:Dise\~noMEB}{{9}{23}{D}{figure.9}{}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \unhbox 
-l.59 ...l{fig:Dise\~noMEB}{{9}{23}{D}{figure.9}{}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 ...l{fig:Dise\~noMEB}{{9}{23}{D}{figure.9}{}}
-                                                  
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \accent@spacefactor 
-l.59 ...l{fig:Dise\~noMEB}{{9}{23}{D}{figure.9}{}}
-                                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Bad space factor (0).
-<to be read again> 
-                   \accent@spacefactor 
-l.59 ...l{fig:Dise\~noMEB}{{9}{23}{D}{figure.9}{}}
-                                                  
-I allow only values in the range 1..32767 here.
-
-! Extra \endcsname.
-\@namedef ...xpandafter \def \csname #1\endcsname 
-                                                  
-l.59 ...l{fig:Dise\~noMEB}{{9}{23}{D}{figure.9}{}}
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Extra }, or forgotten \endgroup.
-\@newl@bel ...ined}}\global \@namedef {#1@#2}{#3}}
-                                                  
-l.59 ...l{fig:Dise\~noMEB}{{9}{23}{D}{figure.9}{}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 
 LaTeX Warning: Label `fig:scaraindust' multiply defined.
 
@@ -738,15 +676,13 @@ Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-) [1{C:/Users/unknown/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
-
-]
-<imagenes/ipn.jpg, id=78, 180.675pt x 232.87pt>
+)
+<imagenes/ipn.jpg, id=71, 180.675pt x 232.87pt>
 File: imagenes/ipn.jpg Graphic file (type jpg)
 <use imagenes/ipn.jpg>
 Package pdftex.def Info: imagenes/ipn.jpg  used on input line 41.
 (pdftex.def)             Requested size: 81.303pt x 104.79051pt.
-<imagenes/upiita.png, id=79, 722.7pt x 568.1225pt>
+<imagenes/upiita.png, id=72, 722.7pt x 568.1225pt>
 File: imagenes/upiita.png Graphic file (type png)
 <use imagenes/upiita.png>
 Package pdftex.def Info: imagenes/upiita.png  used on input line 43.
@@ -791,13 +727,10 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
 (C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.111 \end{titlepage}
-                      [1 <./imagenes/ipn.jpg> <./imagenes/upiita.png>]
-(Reporte3.toc
+[1
+
+{C:/Users/unknown/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./imagenes
+/ipn.jpg> <./imagenes/upiita.png>] (Reporte3.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -1096,7 +1029,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
                                                   \__shipout_drop_firstpage_...
 l.376 \newpage
               ]
-<imagenes/MongoDB_Logo.png, id=206, 2569.6pt x 692.5875pt>
+<imagenes/MongoDB_Logo.png, id=197, 2569.6pt x 692.5875pt>
 File: imagenes/MongoDB_Logo.png Graphic file (type png)
 <use imagenes/MongoDB_Logo.png>
 Package pdftex.def Info: imagenes/MongoDB_Logo.png  used on input line 384.
@@ -1108,19 +1041,19 @@ s been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.391 \newpage
                <./imagenes/MongoDB_Logo.png>]
-<imagenes/EstructuraMongoDB.png, id=212, 515.9275pt x 263.98625pt>
+<imagenes/EstructuraMongoDB.png, id=203, 515.9275pt x 263.98625pt>
 File: imagenes/EstructuraMongoDB.png Graphic file (type png)
 <use imagenes/EstructuraMongoDB.png>
 Package pdftex.def Info: imagenes/EstructuraMongoDB.png  used on input line 399
 .
 (pdftex.def)             Requested size: 309.55888pt x 158.39296pt.
-<imagenes/EstructuraDocumentoMongoDB.jpg, id=213, 469.755pt x 149.05687pt>
+<imagenes/EstructuraDocumentoMongoDB.jpg, id=204, 469.755pt x 149.05687pt>
 File: imagenes/EstructuraDocumentoMongoDB.jpg Graphic file (type jpg)
 <use imagenes/EstructuraDocumentoMongoDB.jpg>
 Package pdftex.def Info: imagenes/EstructuraDocumentoMongoDB.jpg  used on input
  line 410.
 (pdftex.def)             Requested size: 328.82626pt x 104.3391pt.
-<imagenes/ModeladoBD.png, id=214, 1327.96124pt x 634.37pt>
+<imagenes/ModeladoBD.png, id=205, 1327.96124pt x 634.37pt>
 File: imagenes/ModeladoBD.png Graphic file (type png)
 <use imagenes/ModeladoBD.png>
 Package pdftex.def Info: imagenes/ModeladoBD.png  used on input line 418.
@@ -1139,13 +1072,13 @@ s been already used, duplicate ignored
 l.419 ...opuesto para la base de datos en MongoDB}
                                                    <./imagenes/EstructuraMongoD
 B.png> <./imagenes/EstructuraDocumentoMongoDB.jpg>]
-<imagenes/ModeloConductores.jpg, id=221, 361.35pt x 74.52844pt>
+<imagenes/ModeloConductores.jpg, id=211, 361.35pt x 74.52844pt>
 File: imagenes/ModeloConductores.jpg Graphic file (type jpg)
 <use imagenes/ModeloConductores.jpg>
 Package pdftex.def Info: imagenes/ModeloConductores.jpg  used on input line 426
 .
 (pdftex.def)             Requested size: 325.21199pt x 67.07495pt.
-<imagenes/ModeloIncidencias.jpg, id=222, 288.3272pt x 156.585pt>
+<imagenes/ModeloIncidencias.jpg, id=212, 288.3272pt x 156.585pt>
 File: imagenes/ModeloIncidencias.jpg Graphic file (type jpg)
 <use imagenes/ModeloIncidencias.jpg>
 Package pdftex.def Info: imagenes/ModeloIncidencias.jpg  used on input line 435
@@ -1194,178 +1127,78 @@ l.568 \newpage
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 571.
 
-<imagenes/CasosdeusosMEB.png, id=254, 720.6925pt x 512.91624pt>
-File: imagenes/CasosdeusosMEB.png Graphic file (type png)
-<use imagenes/CasosdeusosMEB.png>
-Package pdftex.def Info: imagenes/CasosdeusosMEB.png  used on input line 585.
-(pdftex.def)             Requested size: 360.34537pt x 256.45749pt.
 [19
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.586 ...asos de Uso del Módulo de Estación Base }
-                                                  
+l.592 \newpage
+              
 pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.586 ...asos de Uso del Módulo de Estación Base }
-                                                  ]
-<imagenes/DiagramadeactividadMEB.png, id=259, 667.49374pt x 633.36626pt>
-File: imagenes/DiagramadeactividadMEB.png Graphic file (type png)
-<use imagenes/DiagramadeactividadMEB.png>
-Package pdftex.def Info: imagenes/DiagramadeactividadMEB.png  used on input lin
-e 592.
-(pdftex.def)             Requested size: 333.74606pt x 316.68236pt.
- [20
+l.592 \newpage
+              ] [20
 pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.593 ...Actividades del Módulo de Estación Base }
-                                                  
+l.592 \newpage
+              
 pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.593 ...Actividades del Módulo de Estación Base }
-                                                  
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.593 ...Actividades del Módulo de Estación Base }
-                                                   <./imagenes/CasosdeusosMEB.p
-ng>] [21
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.598 
-       <./imagenes/DiagramadeactividadMEB.png>] [22]
-! Missing endcsname inserted.
-<to be read again> 
-                   ~
-l.607 ...udegraphics[scale=.2]{imagenes/DiseñoMEB}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Use of ??? doesn't match its definition.
-<argument> ???  
-                ! LaTeX3 Error: ~ invalid in file name. Lost: fi noMEB.
-l.607 ...udegraphics[scale=.2]{imagenes/DiseñoMEB}
-                                                  
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-! Missing endcsname inserted.
-<to be read again> 
-                   ~
-l.607 ...udegraphics[scale=.2]{imagenes/DiseñoMEB}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Use of ??? doesn't match its definition.
-<argument> ???  
-                ! LaTeX3 Error: ~ invalid in file name. Lost: fi noMEB.
-l.607 ...udegraphics[scale=.2]{imagenes/DiseñoMEB}
-                                                  
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-! Missing endcsname inserted.
-<to be read again> 
-                   ~
-l.607 ...udegraphics[scale=.2]{imagenes/DiseñoMEB}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Use of ??? doesn't match its definition.
-<argument> ???  
-                ! LaTeX3 Error: ~ invalid in file name. Lost: fi noMEB.
-l.607 ...udegraphics[scale=.2]{imagenes/DiseñoMEB}
-                                                  
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-
-! LaTeX Error: File `imagenes/Dise\~noMEB' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.607 ...udegraphics[scale=.2]{imagenes/DiseñoMEB}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[23
-pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.614 \newpage
-              ]
-Overfull \hbox (6.081pt too wide) in paragraph at lines 657--659
+l.592 \newpage
+              ] [21]
+Overfull \hbox (6.081pt too wide) in paragraph at lines 642--644
 []\OT1/lmr/m/n/12 AWS Am-plify Hos-ting es un ser-vi-cio de alo-ja-mien-to y CI
 /CD \OT1/lmr/m/it/12 Con-ti-nous In-te-gra-tion/Continuos
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
-59.
+44.
 (C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-[24
+[22
 pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.662 \item \textbf
+l.647 \item \textbf
                    {Alojamiento confiable cerca de los usuarios}]
-<imagenes/amplify.png, id=284, 821.31844pt x 335.00156pt>
+<imagenes/amplify.png, id=262, 821.31844pt x 335.00156pt>
 File: imagenes/amplify.png Graphic file (type png)
 <use imagenes/amplify.png>
-Package pdftex.def Info: imagenes/amplify.png  used on input line 679.
+Package pdftex.def Info: imagenes/amplify.png  used on input line 664.
 (pdftex.def)             Requested size: 410.6582pt x 167.50037pt.
- [25
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
-as been already used, duplicate ignored
+ [23
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.698 V
+l.683 V
        PS significa servidor privado virtual. Es una forma de dividir un ser...
  <./imagenes/amplify.png>]
-Overfull \hbox (19.6487pt too wide) in paragraph at lines 698--699
+Overfull \hbox (19.6487pt too wide) in paragraph at lines 683--684
 []\OT1/lmr/m/n/12 VPS sig-ni-fi-ca ser-vi-dor pri-va-do vir-tual. Es una for-ma
  de di-vi-dir un ser-vi-dor en (sub)servidores
  []
 
-<imagenes/hostgator.png, id=291, 376.40625pt x 96.36pt>
+<imagenes/hostgator.png, id=269, 376.40625pt x 96.36pt>
 File: imagenes/hostgator.png Graphic file (type png)
 <use imagenes/hostgator.png>
-Package pdftex.def Info: imagenes/hostgator.png  used on input line 714.
+Package pdftex.def Info: imagenes/hostgator.png  used on input line 699.
 (pdftex.def)             Requested size: 301.1254pt x 77.08807pt.
-[26
-pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
-as been already used, duplicate ignored
+[24
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.733 \newpage
-               <./imagenes/hostgator.png>] [27]
+l.718 \newpage
+               <./imagenes/hostgator.png>] [25]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1396,148 +1229,129 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28
+[26
 pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
+l.976 \clearpage
                 
 pdfTeX warning (ext4): destination with the same identifier (name{table.10}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
-                ] [29
+l.976 \clearpage
+                ] [27
 pdfTeX warning (ext4): destination with the same identifier (name{table.11}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
+l.976 \clearpage
                 
 pdfTeX warning (ext4): destination with the same identifier (name{table.12}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
-                ] [30
+l.976 \clearpage
+                ] [28
 pdfTeX warning (ext4): destination with the same identifier (name{table.13}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
+l.976 \clearpage
                 
 pdfTeX warning (ext4): destination with the same identifier (name{table.14}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
-                ] [31
+l.976 \clearpage
+                ] [29
 pdfTeX warning (ext4): destination with the same identifier (name{table.15}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
+l.976 \clearpage
                 
 pdfTeX warning (ext4): destination with the same identifier (name{table.16}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
+l.976 \clearpage
                 
 pdfTeX warning (ext4): destination with the same identifier (name{table.17}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
-                ] [32
+l.976 \clearpage
+                ] [30
 pdfTeX warning (ext4): destination with the same identifier (name{table.18}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
+l.976 \clearpage
                 
 pdfTeX warning (ext4): destination with the same identifier (name{table.19}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
-                ] [33
+l.976 \clearpage
+                ] [31
 pdfTeX warning (ext4): destination with the same identifier (name{table.20}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.991 \clearpage
-                ] [34
+l.976 \clearpage
+                ] [32
 
-] [35] [36] [37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1075
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1077
+] [33] [34] [35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
 
  []
 
-[39]
-Underfull \hbox (badness 1117) in paragraph at lines 1090--1091
+
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1062
+
+ []
+
+[37]
+Underfull \hbox (badness 1117) in paragraph at lines 1075--1076
 \OT1/lmr/m/n/12 Blog. Spring-board . Avai-la-ble at: https://www.springboard.co
 m/blog/data-science/best-
  []
 
-[40] (Reporte3.aux
+[38] (Reporte3.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \unhbox 
-l.59 ...l{fig:Dise\~noMEB}{{9}{23}{D}{figure.9}{}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\@newl@bel ... \bbl@tempa \csname #1@#2\endcsname 
-                                                  \def \bbl@tempb {#3}\@safe...
-l.59 ...l{fig:Dise\~noMEB}{{9}{23}{D}{figure.9}{}}
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
 )
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Reporte3.out' has not changed.
 (rerunfilecheck)             Checksum: 1133D8FFB77257D4228B58FA6810E9C1;3874.
- )
-(\end occurred when \ifx on line 607 was incomplete)
-(\end occurred when \ifx on line 607 was incomplete)
-(\end occurred when \ifx on line 607 was incomplete) 
+ ) 
 Here is how much of TeX's memory you used:
- 14300 strings out of 478338
- 235896 string characters out of 2835756
- 566972 words of memory out of 3000000
- 32338 multiletter control sequences out of 15000+600000
+ 14228 strings out of 478338
+ 234292 string characters out of 2835756
+ 566777 words of memory out of 3000000
+ 32285 multiletter control sequences out of 15000+600000
  521005 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,17n,77p,1002b,665s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/unknown/AppData/L
-ocal/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/unknown/AppData/Lo
-cal/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/unknown/AppData/Loca
-l/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/unknown/AppData/Lo
-cal/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}<C:/Users/unknown/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/unknown/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/unknown/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/unknown/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/unknown/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/unknown/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/unknow
-n/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Reporte3.pdf (42 pages, 711414 bytes).
+{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc
+}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
+C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc
+}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc
+}<C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.p
+fb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi1
+0.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmc
+sc10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmr10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmr12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmri12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmsy10.pfb>
+Output written on Reporte3.pdf (39 pages, 654323 bytes).
 PDF statistics:
- 426 PDF objects out of 1000 (max. 8388607)
- 102 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 405 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
+ 187 words of extra memory for PDF output out of 10000 (max. 10000000)
 
