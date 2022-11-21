@@ -58,8 +58,7 @@
 
 \begin{center}
 
-
- Lista de actividades
+Lista de actividades
  
 
 \begin{multicols}{2}
@@ -205,190 +204,207 @@ Cuando aumenta la cantidad de datos almacenados, se vuelve complicado comprender
 
 A continuación, se muestra una tabla comparativa de los principales sistemas de gestión de bases de datos relacionales: 
 
+\begin{table}[]
+\begin{tabular}{{|m{0.15\linewidth}|m{0.21\linewidth}|m{0.31\linewidth}|m{0.21\linewidth}|}}
+\hline
+ \textbf{SGBDR}  & \textbf{Descripción}  & \textbf{Ventajas}  & \textbf{Desventajas} \\ \hline
+ \textbf{MySQL}  & Es un SGBD multihilo y multiusuario utilizado en aplicaciones creadas como software libre.  & -Facilidad de uso y gran rendimiento 
 
+-Facilidad para instalar y configurar 
+-Soporte multiplataforma  & Escalabilidad, no trabaja de manera eficiente con bases de datos muy grandes.   \\ \hline
+\textbf{MariaDB} & Este SGBD es una derivación de MySQL que cuenta con la mayoría de características de este e incluye varias extensiones.   & -Aumento de motores de almacenamiento 
+
+-Gran escalabilidad 
+
+-Seguridad y rapidez en transacciones 
+
+-Extensiones y nuevas características relacionadas con su aplicación para Bases de datos NoSQL.  
+
+-Compatible con MySQL.  & Incompatibilidades en la migración de MariaDB y MySQL. 
+
+Atrasos en la liberación de versiones estables.  \\ \hline
+ \textbf{PostgreSQL} & Es un SGBD orientado a objetos y es libre, publicado bajo la licencia BSD.  & -Flexibilidad en cuanto a lenguajes de programación. 
+
+-Multiplataforma. 
+
+-Herramienta fácil e intuitiva para la administración de las bases de datos. 
+
+-Robustez, Eficiencia y Estabilidad. & Lentitud para la administración de bases de datos pequeñas ya que está optimizado para gestionar grandes volúmenes de datos.  \\ \hline
+ Microsoft SQL Server & Es un SGBD basado en el lenguaje \emph{ Transact-SQL} capaz de poner a disposición de muchos usuarios grandes cantidades de datos de manera simultánea. & -Escalabilidad, estabilidad y seguridad. 
+
+-Posibilidad de cancelar consultas. 
+
+-Potente entorno gráfico de administración. 
+
+-Nativo para Windows, pero puede utilizarse en otras plataformas como Linux o Docker.  & Coste del software, cuenta con un plan gratuito (Express) pero lo normal es la elección de alguno de los planes de pago disponibles.  \\ \hline
+\textbf{Oracle} & Oracle ha sido el SGBD por excelencia para el mundo empresarial, considerado siempre como el más completo y robusto. & -Soporte de transacciones. 
+
+-Estabilidad. 
+
+-Escalabilidad. 
+
+-Multiplataforma.  & Coste del software, aunque cuenta con una versión gratuita (Express Edition o XE), sus principales opciones son de pago. \\ \hline
+\end{tabular}
+\caption{\label{tab:SGBD} Sistemas de Gestión de Bases de Datos Relacionales}
+\end{table}
 
 
 \textbf{Sistemas Gestores de bases de datos No Relacionales (SQL)}\\
 
-\begin{center}
-  \includegraphics[scale=0.3]{imagenes/programaclasico}
-\captionof{figure}{Programa clásico vs Machine Learning}
- \label{fig:pcvsml}
-\end{center}
+Se utilizan en entornos distribuidos que han de estar siempre disponibles y operativos y que gestionan un importante volumen de datos. 
 
+Para la administración de este tipo de bases de datos, actualmente los principales sistemas gestores de bases de datos (SGBD NoSQL) son los siguientes: 
 
+\textbf{Características:}
 
+\begin{itemize}
+\item Los datos no tienen que almacenarse en tablas. 
 
-A continuación se presenta una tabla comparativa de las características que se tomaron en cuenta para tomar una decisión sobre que lenguaje utilizar.
+\item Generalmente, su arquitectura es distribuida, la información se almacena en más de una máquina del sistema. Por lo tanto, los sistemas que las soportan tienen una mayor escalabilidad horizontal (a mayor número de nodos mayor rendimiento) y también mayor tolerancia ante fallos en los distintos nodos. 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|l|l|l|l|}
+\item Son más eficientes en el procesamiento de los datos que las BBDD relacionales, por tal motivo, son la elección para aplicaciones que hacen un uso intensivo de estos, como por ejemplo \emph{streaming}. 
+
+\item Utilizan lo que se conoce como consistencia eventual, que consiste en que los cambios realizados en los datos serán replicados a todos los nodos del sistema, lo cual aumenta el rendimiento de estos sistemas en contrap osición a las propiedades ACID de las BBDD relacionales (Atomicidad, Consistencia/Integridad, Aislamiento y Durabilidad).
+\end{itemize}
+
+\textbf{Ventajas:}
+
+\begin{itemize}
+\item Aplicaciones de big data  \\
+Grandes volúmenes de información son manejados fácilmente por las bases de datos NoSQL.  
+
+\item Administración de la base de datos \\
+Requieren menos administración práctica, cuenta con capacidades de distribución de datos y reparación automática, modelos de datos simplificados y menos requisitos de ajuste y administración. 
+
+\item Versatilidad \\
+Las posibilidades de crecimiento en el volumen de datos o la posibilidad de incluir cambios sobre la forma en la que ingresan los datos sin necesidad de alterar la estructura, lo que permite adaptarse de forma rápida a un entorno de alto dinamismo. 
+
+\item Crecimiento Horizontal  \\
+Son altamente escalables, si se requiere instalar mayor cantidad de nodos para ampliar la capacidad, se puede hacer sin problemas. Esto no interrumpe la usabilidad o consultas dentro de la base de datos.  
+
+\item Economía  \\
+No se necesitan servidores con gran cantidad de recursos para operar. La adaptabilidad y flexibilidad permiten empezar con bajos niveles de inversión en equipos e ir ampliando la capacidad a medida de las necesidades. 
+
+\end{itemize}
+
+\textbf{Desventajas:}
+
+\begin{itemize}
+\item Menos maduro  \\
+La mayoría de las alternativas de bases de datos NoSQL apenas han salido de las etapas de preproducción, y hay muchas características importantes que aún no se han implementado. 
+
+\item Atomicidad \\
+Algunas de estas bases de datos no incorporan la atomicidad de información. Esto puede derivar en que la información no sea consistente entre nodos. 
+
+\item Software poco documentado  \\
+Al ser tan relativamente nuevo, el NoSQL puede adolecer de que algunas operaciones sean limitadas por la falta de información sobre las herramientas y sus características. 
+
+\item Baja estandarización \\
+No se tiene un criterio plenamente definido entre los motores que se utilizan en este tipo de base de datos. El lenguaje tiende a variar según el tipo de base de datos que se vaya a utilizar. 
+
+\item Herramientas GUI \\
+La mayoría de las bases de datos NoSQL no contienen una interfaz gráfica. Requiere conocimiento especial para poder ejecutar algunas de ellas.
+
+\end{itemize}
+
+\textbf{Principales sistemas de gestión de bases de datos no relacionales }
+
+Se utilizan en entornos distribuidos que han de estar siempre disponibles y operativos y que gestionan un importante volumen de datos. 
+
+Para la administración de este tipo de bases de datos, actualmente los principales sistemas gestores de bases de datos (SGBD NoSQL) son los siguientes: 
+
+\begin{table}[]
+\begin{tabular}{{|m{0.15\linewidth}|m{0.21\linewidth}|m{0.31\linewidth}|m{0.21\linewidth}|}}
 \hline
-\textbf{Lenguaje} & \textbf{Popularidad} & \textbf{Versatilidad} & \textbf{Velocidad} & \textbf{Soporte} \\ \hline
-Python            & Alta                 & Alta                  & Moderada           & Alta             \\ \hline
-C++               & Baja                 & Alta                  & Alta               & Moderado         \\ \hline
-R                 & Alta                 & Moderada                  & Moderado           & Bajo             \\ \hline
-Matlab            & Baja                 & Moderada              & Moderada           & Bajo             \\ \hline
-Javascript        & Moderada             & Moderada              & Baja               & Moderado         \\ \hline
+ \textbf{SGBDR} & \textbf{Descripción}   & \textbf{Ventajas}   &  \textbf{Desventajas} \\ \hline
+\textbf{MongoDB} & Es un SBGD NoSQL orientado a documentos que almacena la información en estructuras JSON con un esquema dinámico que permite su facilidad de integración. & -Indexación y replicación. 
+
+-Balanceo de carga 
+
+-Almacenamiento en documentos. 
+
+-Consultas ad hoc. 
+
+-Escalabilidad horizontal. 
+
+-Código abierto. 
+
+-Multiplataforma.   & -MongoDB no es un SGBD adecuado para realizar transacciones complejas. 
+
+-Documentos limitados a 16MB.   \\ \hline
+\textbf{Redis} & Redis está basado en el almacenamiento clave-valor.  El principal uso de este SGBD es para el almacenamiento en memoria caché y la administración de sesiones.  & -Atomicidad y persistencia 
+
+-Gran velocidad 
+
+-Simplicidad 
+
+-Multiplataforma   & - La implementación en la nube a gran escala puede ser difícil. 
+
+-No ofrece ninguna solución de conjuntos en clústeres madura. \\ \hline
+\textbf{ Cassandra} & Cassandra utiliza almacenamiento clave-valor. Es un SGBD NoSQL distribuido y masivamente escalable. Dispone de un lenguaje propio para las consultas denominado CQL (\emph{Cassandra Query Languaje}).   & -Multiplataforma 
+
+-Propio lenguaje de consultas 
+
+-Escalado lineal y horizontal 
+
+-Es un SGBD distribuido 
+
+-Utiliza una arquitectura punto a punto  & -Duplicación de datos. 
+
+-Ejecución de lecturas lenta. 
+
+-Consultas limitadas debido a la recuperación de datos.  \\ \hline
+\textbf{DynamoDB }& Base de datos NoSQL de clave-valor sin servidor y completamente administrada que está diseñada para ejecutar aplicaciones de alto rendimiento a cualquier escala.    & -Ventajas avanzadas en la nube de AWS. 
+
+-Facilidad de uso. 
+
+-Coste. 
+
+-Integración 
+
+-Administrable.  & -Capacidad de consultas deficiente 
+
+-Compatible solo con AWS. 
+
+- No puede utilizar scripts del lado del servidor con DynamoDB. \\ \hline
+
 \end{tabular}
-\caption{\label{tab:lenguajes} Tabla Comparativa Lenguajes de Programación}
+\caption{\label{tab:SGBDNoSQL} Sistemas de Gestión de Bases de Datos No Relacionales}
 \end{table}
 
-Python es un lenguaje que permite trabajar más de un paradigma (programación estructurada y orientada a objetos).
-Normalmente cuando programamos un script sencillo aplicamos solo el paradigma de programación estructurada (Secuencia, selección e iteración), y cuando necesitamos programar un proyecto  más complejo y queremos incluir los beneficios del paradigma orientado a objetos (reutilización de los componentes, facilidad de mantenimiento y modificación de objetos) utilizamos clases (POO).\\
-Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje nos permite desarrollar ambos ámbitos. Por lo que se tomó la decisión de ser utilizado a lo largo de este proyecto. 
 
 
 \newpage
 \section{Elección del manejador de bases de datos}
 
-Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y que estaremos utilizando de manera frecuente a lo largo de este proyecto, es la modularidad. Que no es más que dividir nuestros programas en partes más pequeñas (sub-programas), que habitualmente son llamados módulos. Las cuales deben tener un grado de independencia de la aplicación o programa principal. Cuando hablamos de independencia, nos referimos a que pueden ser utilizados por otras aplicaciones y no dependen de la aplicación original en sí. 
+Debido a la escalabilidad, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (solo en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  
+
+Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación web se realizará utilizando como base el lenguaje JavaScript Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita, por lo cual no hay necesidad de pagar el uso de licencias. Otra característica importante es que es una base de datos multiplataforma, esto nos permitirá registrar información desde el sistema operativo Linux, que se ocupará en la Raspberry Pi y por otro lado se ocupará Windows en la aplicación web para la inserción, modificación, lectura y eliminación de los datos en la base de datos.  
 
 \begin{center}
-  \includegraphics[scale=.6]{imagenes/modularidad}
-\captionof{figure}{Modularidad}
- \label{fig:modul}
+  \includegraphics[scale=.2]{imagenes/MongoDB_Logo}
+\captionof{figure}{Icono de MongoDB}
+ \label{fig:MongoDB_Logo}
 \end{center}
-
-
-Estós módulos son archivos que alojan código independiente con una determinada función.  Python cuenta con diversos módulos que podemos agregar a nuestro código y utilizarlo para facilitar y acortar el 
-código, de manera que sea mas legible y ordenado.
-
-Otro de los factores que consideramos al desarrollar este proyecto, es el de concurrencia de procesos. La concucrrencia aparece cuando dos o más procesos ocurren al mismo tiempo.
-Estos procesos pueden "competir" o colaborar entre sí por los recursos del sistema. \\
-Los temás de colaboración, sincronización, hilos y paralelismo se abordarán de una manera más profunda en el tercer reporte, cuando se tenga el diseño de los módulos faltantes.
-
-\begin{center}
-  \includegraphics[scale=.6]{imagenes/diagrama_casosusomc}
-\captionof{figure}{Diagrama de Casos de Uso - Módulo Central de Procesamiento}
- \label{fig:casosusomc}
-\end{center}
-
-En el  siguiente diagrama, se pueden observar las distintas tareas así como las interacciones entre estas y el Submódulo de Procesamiento de Imágenes. \\
-Cabe recalcar, que para el presente reporte no se han determinado el diseño del Módulo de Telemetría, ni el de la Estación Base, por lo que se puede esperar el rediseño de este diagrama en un posterior reporte.Por esta misma razón, se decicidó no incluir el diagrama de clases hasta que los Módulos faltantes estén diseñados.
-
-
-\begin{center}
-
-  \includegraphics[scale=.4]{imagenes/diagrama_activiadesmc}
-\captionof{figure}{Diagrama de Actividades - Módulo Central de Procesamiento}
- \label{fig:casosusomc}
-
-\end{center}
-
-En el siguiente Diagrama de Actividades se describen las actividades y sus interacciones con el Submódulo de Procesamiento de Imágenes y la Estación Base. Para que el sistema principal pueda iniciar, se necesita que el conductor encienda el auto, ya que este sistema funcionará utilzando la alimentación electrica.
-\\\\ 
-El sistema principal comenzará por verificar el estado del Submódulo de Procesamiento de Imágenes, así como el de Telemetría y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Procesamiento de Imáganes. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
-Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Telemetría.se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
-Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. \\\\
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/diagrama_secuenciamc}
-\captionof{figure}{Diagrama de Secuencia - Módulo Central de Procesamiento}
- \label{fig:secuenciamc}
-\end{center}
-
-Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial en la concurrencia de los mismos. También se detallan las peticiones y respuestas de los distintos submódulos y sistemas.
 
 
 
 \newpage
 \section{Modelado de la base de datos}
 
-Para el diseño de la unidad de procesamiento nos apoyamos en la metodología UML, iniciando con un diagrama de casos de usos. Un modelo de casos de uso muestra una vista del sistema desde la perspectiva del usuario, por lo cual describe qué hace el sistema sin describir cómo lo hace.\\
-El siguiente diagrama muestra las funciones del Submódulo de Procesamiento de Imágenes basado en los requerimientos del sistema, así como la interacción con el Módulo Central de Procesamiento y el conductor, el cual es indispensable para poder realizar la detección de somnolencia.
+Tomando en cuenta la elección de MongodDB como gestor de la base de datos, se consultó la documentación de MongoDB para conocer la estructura y el modelado de los datos.  
+
+MongoDB utiliza documentos para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemejaría a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
 
 \begin{center}
-  \includegraphics[scale=.62]{imagenes/casosdeusospi}
-\captionof{figure}{Diagrama de Casos de Uso - Submódulo de Procesamiento de Imágenes}
- \label{fig:csspi}
+  \includegraphics[scale=.6]{imagenes/ModeloMongoDB}
+\captionof{figure}{Colección y Documentos }
+ \label{fig:MongoDB Colección y Do}
 \end{center}
 
+MongoDB almacena registros de datos como documentos BSON. BSON es una representación binaria de documentos JSON , aunque contiene más tipos de datos que JSON.   
 
-A continuación se muestra el diagrama de actividades para el Submódulo de Procesamiento de Imágenes:
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/Diagramadeactividadspi}
-\captionof{figure}{Diagrama de Actividades - Submódulo de Procesamiento de Imágenes}
- \label{fig:actspi}
-\end{center}
-El diagrama de actividades muestra el flujo de las actividades en general, para que el sistema pueda funcionar requiere que el automóvil le proporcione una fuente de alimentación hacia el ordenador, el cual iniciara el sistema para la detección de somnolencia. Una condición importante es que el conductor se encuentre dentro del rango visual de la cámara y permanezca dentro del mismo al mismo tiempo que el Submódulo de Procesamiento de Imágenes realiza la captura de video utilizando una cámara digital. Posteriormente se realizará la detección del rostro utilizando el método Haar-Adaboost. También se utilizarán librerías como Dlib en OpenCV para entrenar al sistema, y que este sea capaz de detectar el rostro con condiciones de poca luz.\\
-
-Se hará uso de una Red Neuronal Convolucional para clasificar los ojos (abierto o cerrado) y así determinar el estado de somnolencia del conductor. Cabe mencionar, que el diseño de esta red se retomará en un reporte posterior, cuando se determine la resolución de óptima para detectar el rostro en tiempo real. \\
-
-Mientras que para la boca se tomara la Relación de apertura de la boca (MOR).\\
-En caso de que el sistema detecte somnolencia en el conductor se enviará una señal de alerta hacia el Módulo Central de Procesamiento el cual será el encargado de activar la alarma.\\ 
-
-Como proceso paralelo a la detección de signos de somnolencia, la Identificación de una posible incidencia será la encargada de iniciar la grabación de video, con el fin de tener un fragmento de video segundos antes de detectar si el conductor presenta somnolencia.\\
-
-En caso de que el conductor presente somnolencia, el video será detenido hasta detectar que el conductor mantiene los ojos abiertos por un intervalo de tiempo definido. Posteriormente el video de incidencia será guardado en la memoria y se notificará al Módulo Central de Procesamiento.\\
-
-En caso de que el sistema indique que el conductor no presenta somnolencia el video será detenido y posteriormente eliminado de la memoria externa, con el fin de no saturar el espacio en la memoria.
- Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. 
-
-\newpage
- \textbf{Puntos de Referencia}
-
-\begin{center}
-  \includegraphics[scale=.42]{imagenes/landmark}
-\captionof{figure}{Puntos de referencia}
- \label{fig:landmark}
-\end{center}
-
-
-
-A su vez, se utilizarán puntos de referencia con la ayuda de el software OpenCV y el modelo iBUG 300-W de delimitación de rostro para dividir las características que posteriormente serán extraídas y clasificadas.
-
-En la siguiente tabla se muestra la delimitación y agrupación de los puntos de interés, tales como: ojo derecho, ojo izquierdo y boca.
-\begin{center}
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|c|}
-\hline
-Partes        & \multicolumn{1}{l|}{Puntos de Referencia} \\ \hline
-Boca          & {[}48-67{]}                               \\ \hline
-Ojo Derecho   & {[}36-41{]}                               \\ \hline
-Ojo Izquierdo & {[}42-46{]}                               \\ \hline
-\end{tabular}
-\caption{\label{tab:landmakrs} Agrupación de Puntos de Referencia}
-\end{table}
-
-
-\newpage
-\end{center}
-\textbf{\emph{Mouth Opening Ratio}}
-
-Bostezar es un signo cansancio. El bostezo se caracteriza por una apertura lenta y amplia de la boca. Por lo que se necesita medir el tamaño y la forma de la boca es necesario para identificar un bostezo. Para esto, se utilizara el \emph{Mouth Opening Ratio} que es un método que utiliza puntos de referencia para medir la apertura de la boca. Entre más grande sea este valor, más es la aperatura de la boca, por lo tanto se considera como un bostezo.
-
-
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/MOR}
-\captionof{figure}{\emph{Mouth Opening Ratio}}
- \label{fig:landmark}
-\end{center}
-
-La formula general para calular el \emph{MOR} es la siguiente:
-\begin{equation}
-MOR = \frac{\left \|p_{2}-p_{8}  \right \| +\left \|p_{3}-p_{7}  \right \|+\left \| p_{4}-p_{6} \right \|}{2\left \| p_{1}-p_{5}\right \|}
-\end{equation}
-
-Utilizando nuestros puntos de referencia, se podría calcular el MOR de la siguiente manera:
-
-\begin{equation}
-MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-P55 \right \|}{2\left \| P48-P54\right \|}
-\end{equation}
-
-
-\begin{center}
-  \includegraphics[scale=.42]{imagenes/diagramadesecuenciaspi}
-\captionof{figure}{Diagrama de Secuencia - Submódulo de Procesamiento de Imágenes}
- \label{fig:secspi}
-\end{center}
-\newpage	
-
-
-
+Un registro en MongoDB es un documento, que es una estructura de datos compuesta por pares de campo y valor. Los documentos MongoDB son similares a los objetos JSON. Los valores de los campos pueden incluir otros documentos, matrices y matrices de documentos. 
 
 \newpage
 \section{Análisis del Módulo de Telemetría }
