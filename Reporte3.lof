@@ -1,18 +1,12 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Icono de MongoDB}}{10}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Colecci\'on y Documentos }}{11}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Tipos de Redes Inal\'ambricas}}{14}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Mapa de la Ciudad de M\'exico}}{14}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Mapa de Cobertura LTE-Telcel}}{19}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Raspberry Pi 4G/LTE Cellular Modem Kit}}{20}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Especificaciones F\IeC {\'\i }sicas}}{21}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Zumbador Pasivo KY-006}}{21}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces C\'amara Pivariety IMX230}}{22}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Jumpers}}{22}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Micro SD}}{22}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces RasperryPi 3G/4G/ LTE Base HAT}}{23}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces LE 910Cx Mini PCIe Series Linux}}{23}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}}{24}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Unidad Contenedora del M\'odulo Central de Procesamiento}}{25}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Tipos de Planes de AWS Amplify}}{29}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Tiempos de Respuesta }}{30}{figure.17}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Estructura de datos en Mongo DB }}{11}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Estructura de un Documento en MongoDB}}{11}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Modelo propuesto para la base de datos en MongoDB}}{12}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Documento de Registro de Conductores}}{12}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Documento de registro de Incidencias}}{13}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Diagrama de Casos de Uso del M\'odulo de Estaci\'on Base }}{20}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de Actividades del M\'odulo de Estaci\'on Base }}{21}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces D }}{23}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Tipos de Planes de AWS Amplify}}{25}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Tiempos de Respuesta }}{26}{figure.11}%
