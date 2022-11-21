@@ -9,7 +9,7 @@
 \usepackage{lmodern}
 \usepackage{adjustbox}
 
-\marginsize{2cm}{2cm}{2cm}{2cm}
+\marginsize{2cm}{2cm}{1cm}{1cm}
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -223,8 +223,23 @@ Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial 
 \newpage
 \section{Justificación}
 
-Para el diseño de la unidad de procesamiento nos apoyamos en la metodología UML, iniciando con un diagrama de casos de usos. Un modelo de casos de uso muestra una vista del sistema desde la perspectiva del usuario, por lo cual describe qué hace el sistema sin describir cómo lo hace.\\
-El siguiente diagrama muestra las funciones del Submódulo de Procesamiento de Imágenes basado en los requerimientos del sistema, así como la interacción con el Módulo Central de Procesamiento y el conductor, el cual es indispensable para poder realizar la detección de somnolencia.
+De acuerdo con datos de CONAPRA (2013), en México cada año mueren en promedio 
+16,500 mexicanos por percances viales. Con base en estimaciones hechas por el 
+Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), 
+los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que 
+representan el 1.7 \% del Producto Interno Bruto (PIB), sumando costos directos e 
+indirectos.\cite{conapra}\\
+El estado de somnolencia es una de las principales causas de los accidentes de tránsito, 
+lo cual tiene consecuencias, no solo para los conductores, sino que también para los 
+pasajeros y personas que circulan en la vía pública. La somnolencia al momento de 
+conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de 
+alerta y conciencia por parte del conductor. Esto se convierte en un detonador 
+de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de 
+riesgo y por tanto evitar el peligro.\cite{conapra}
+
+
+
+
 
 \begin{center}
   \includegraphics[scale=.62]{imagenes/casosdeusospi}
@@ -665,7 +680,7 @@ b_j &  &otro ,
 Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles.
 
 \newpage
-\section{Diseño de la Unidad Contenedora del Módulo Central de Procesamiento}
+\section{Planteamiento del Problema}
 
 Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
 \\
@@ -769,7 +784,7 @@ Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo
  
 
 \newpage
-\section{Búsqueda de Tecnologías de Geolocalización}
+\section{Propuesta de Solución}
 
 La geolocalización implica el posicionamiento que define la localización de un objeto en un sistema de coordenadas determinado.
 
@@ -809,6 +824,9 @@ Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, s
 %Artículo:
 
 
+\bibitem{conapra} M. Paez y Emilio Abarca. \emph{Resumen Boletines}, Instituto Mexicano del Transporte.
+https://imt.mx/resumen-boletines.html?IdArticulo=449\&amp;IdBoletin=168 (accedido 
+el 18 de marzo de 2022).
 
 
 \bibitem{Referencia0} Fernando Berzal, \emph{ Redes Neuronales y Deep Learning}, Granada, 2018
