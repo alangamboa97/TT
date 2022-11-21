@@ -58,10 +58,9 @@
 
 \begin{center}
 
-
- Lista de actividades
+Lista de actividades
  
-
+ 
 \begin{multicols}{2}
 \begin{itemize}
 \item Búsqueda de manejadores de bases de datos
@@ -80,7 +79,6 @@
 \item Cotización de materiales 
 \end{itemize}
 \end{multicols}
-
 \end{center}
 
 
@@ -205,569 +203,412 @@ Cuando aumenta la cantidad de datos almacenados, se vuelve complicado comprender
 
 A continuación, se muestra una tabla comparativa de los principales sistemas de gestión de bases de datos relacionales: 
 
+\begin{table}[]
+\begin{tabular}{{|m{0.15\linewidth}|m{0.21\linewidth}|m{0.31\linewidth}|m{0.21\linewidth}|}}
+\hline
+ \textbf{SGBDR}  & \textbf{Descripción}  & \textbf{Ventajas}  & \textbf{Desventajas} \\ \hline
+ \textbf{MySQL}  & Es un SGBD multihilo y multiusuario utilizado en aplicaciones creadas como software libre.  & -Facilidad de uso y gran rendimiento 
 
+-Facilidad para instalar y configurar 
+-Soporte multiplataforma  & Escalabilidad, no trabaja de manera eficiente con bases de datos muy grandes.   \\ \hline
+\textbf{MariaDB} & Este SGBD es una derivación de MySQL que cuenta con la mayoría de características de este e incluye varias extensiones.   & -Aumento de motores de almacenamiento 
+
+-Gran escalabilidad 
+
+-Seguridad y rapidez en transacciones 
+
+-Extensiones y nuevas características relacionadas con su aplicación para Bases de datos NoSQL.  
+
+-Compatible con MySQL.  & Incompatibilidades en la migración de MariaDB y MySQL. 
+
+Atrasos en la liberación de versiones estables.  \\ \hline
+ \textbf{PostgreSQL} & Es un SGBD orientado a objetos y es libre, publicado bajo la licencia BSD.  & -Flexibilidad en cuanto a lenguajes de programación. 
+
+-Multiplataforma. 
+
+-Herramienta fácil e intuitiva para la administración de las bases de datos. 
+
+-Robustez, Eficiencia y Estabilidad. & Lentitud para la administración de bases de datos pequeñas ya que está optimizado para gestionar grandes volúmenes de datos.  \\ \hline
+ Microsoft SQL Server & Es un SGBD basado en el lenguaje \emph{ Transact-SQL} capaz de poner a disposición de muchos usuarios grandes cantidades de datos de manera simultánea. & -Escalabilidad, estabilidad y seguridad. 
+
+-Posibilidad de cancelar consultas. 
+
+-Potente entorno gráfico de administración. 
+
+-Nativo para Windows, pero puede utilizarse en otras plataformas como Linux o Docker.  & Coste del software, cuenta con un plan gratuito (Express) pero lo normal es la elección de alguno de los planes de pago disponibles.  \\ \hline
+\textbf{Oracle} & Oracle ha sido el SGBD por excelencia para el mundo empresarial, considerado siempre como el más completo y robusto. & -Soporte de transacciones. 
+
+-Estabilidad. 
+
+-Escalabilidad. 
+
+-Multiplataforma.  & Coste del software, aunque cuenta con una versión gratuita (Express Edition o XE), sus principales opciones son de pago. \\ \hline
+\end{tabular}
+\caption{\label{tab:SGBD} Sistemas de Gestión de Bases de Datos Relacionales}
+\end{table}
 
 
 \textbf{Sistemas Gestores de bases de datos No Relacionales (SQL)}\\
 
-\begin{center}
-  \includegraphics[scale=0.3]{imagenes/programaclasico}
-\captionof{figure}{Programa clásico vs Machine Learning}
- \label{fig:pcvsml}
-\end{center}
+Se utilizan en entornos distribuidos que han de estar siempre disponibles y operativos y que gestionan un importante volumen de datos. 
 
+Para la administración de este tipo de bases de datos, actualmente los principales sistemas gestores de bases de datos (SGBD NoSQL) son los siguientes: 
 
+\textbf{Características:}
 
+\begin{itemize}
+\item Los datos no tienen que almacenarse en tablas. 
 
-A continuación se presenta una tabla comparativa de las características que se tomaron en cuenta para tomar una decisión sobre que lenguaje utilizar.
+\item Generalmente, su arquitectura es distribuida, la información se almacena en más de una máquina del sistema. Por lo tanto, los sistemas que las soportan tienen una mayor escalabilidad horizontal (a mayor número de nodos mayor rendimiento) y también mayor tolerancia ante fallos en los distintos nodos. 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|l|l|l|l|}
+\item Son más eficientes en el procesamiento de los datos que las BBDD relacionales, por tal motivo, son la elección para aplicaciones que hacen un uso intensivo de estos, como por ejemplo \emph{streaming}. 
+
+\item Utilizan lo que se conoce como consistencia eventual, que consiste en que los cambios realizados en los datos serán replicados a todos los nodos del sistema, lo cual aumenta el rendimiento de estos sistemas en contrap osición a las propiedades ACID de las BBDD relacionales (Atomicidad, Consistencia/Integridad, Aislamiento y Durabilidad).
+\end{itemize}
+
+\textbf{Ventajas:}
+
+\begin{itemize}
+\item Aplicaciones de big data  \\
+Grandes volúmenes de información son manejados fácilmente por las bases de datos NoSQL.  
+
+\item Administración de la base de datos \\
+Requieren menos administración práctica, cuenta con capacidades de distribución de datos y reparación automática, modelos de datos simplificados y menos requisitos de ajuste y administración. 
+
+\item Versatilidad \\
+Las posibilidades de crecimiento en el volumen de datos o la posibilidad de incluir cambios sobre la forma en la que ingresan los datos sin necesidad de alterar la estructura, lo que permite adaptarse de forma rápida a un entorno de alto dinamismo. 
+
+\item Crecimiento Horizontal  \\
+Son altamente escalables, si se requiere instalar mayor cantidad de nodos para ampliar la capacidad, se puede hacer sin problemas. Esto no interrumpe la usabilidad o consultas dentro de la base de datos.  
+
+\item Economía  \\
+No se necesitan servidores con gran cantidad de recursos para operar. La adaptabilidad y flexibilidad permiten empezar con bajos niveles de inversión en equipos e ir ampliando la capacidad a medida de las necesidades. 
+
+\end{itemize}
+
+\textbf{Desventajas:}
+
+\begin{itemize}
+\item Menos maduro  \\
+La mayoría de las alternativas de bases de datos NoSQL apenas han salido de las etapas de preproducción, y hay muchas características importantes que aún no se han implementado. 
+
+\item Atomicidad \\
+Algunas de estas bases de datos no incorporan la atomicidad de información. Esto puede derivar en que la información no sea consistente entre nodos. 
+
+\item Software poco documentado  \\
+Al ser tan relativamente nuevo, el NoSQL puede adolecer de que algunas operaciones sean limitadas por la falta de información sobre las herramientas y sus características. 
+
+\item Baja estandarización \\
+No se tiene un criterio plenamente definido entre los motores que se utilizan en este tipo de base de datos. El lenguaje tiende a variar según el tipo de base de datos que se vaya a utilizar. 
+
+\item Herramientas GUI \\
+La mayoría de las bases de datos NoSQL no contienen una interfaz gráfica. Requiere conocimiento especial para poder ejecutar algunas de ellas.
+
+\end{itemize}
+
+\textbf{Principales sistemas de gestión de bases de datos no relacionales }
+
+Se utilizan en entornos distribuidos que han de estar siempre disponibles y operativos y que gestionan un importante volumen de datos. 
+
+Para la administración de este tipo de bases de datos, actualmente los principales sistemas gestores de bases de datos (SGBD NoSQL) son los siguientes: 
+
+\begin{table}[]
+\begin{tabular}{{|m{0.15\linewidth}|m{0.21\linewidth}|m{0.31\linewidth}|m{0.21\linewidth}|}}
 \hline
-\textbf{Lenguaje} & \textbf{Popularidad} & \textbf{Versatilidad} & \textbf{Velocidad} & \textbf{Soporte} \\ \hline
-Python            & Alta                 & Alta                  & Moderada           & Alta             \\ \hline
-C++               & Baja                 & Alta                  & Alta               & Moderado         \\ \hline
-R                 & Alta                 & Moderada                  & Moderado           & Bajo             \\ \hline
-Matlab            & Baja                 & Moderada              & Moderada           & Bajo             \\ \hline
-Javascript        & Moderada             & Moderada              & Baja               & Moderado         \\ \hline
+ \textbf{SGBDR} & \textbf{Descripción}   & \textbf{Ventajas}   &  \textbf{Desventajas} \\ \hline
+\textbf{MongoDB} & Es un SBGD NoSQL orientado a documentos que almacena la información en estructuras JSON con un esquema dinámico que permite su facilidad de integración. & -Indexación y replicación. 
+
+-Balanceo de carga 
+
+-Almacenamiento en documentos. 
+
+-Consultas ad hoc. 
+
+-Escalabilidad horizontal. 
+
+-Código abierto. 
+
+-Multiplataforma.   & -MongoDB no es un SGBD adecuado para realizar transacciones complejas. 
+
+-Documentos limitados a 16MB.   \\ \hline
+\textbf{Redis} & Redis está basado en el almacenamiento clave-valor.  El principal uso de este SGBD es para el almacenamiento en memoria caché y la administración de sesiones.  & -Atomicidad y persistencia 
+
+-Gran velocidad 
+
+-Simplicidad 
+
+-Multiplataforma   & - La implementación en la nube a gran escala puede ser difícil. 
+
+-No ofrece ninguna solución de conjuntos en clústeres madura. \\ \hline
+\textbf{ Cassandra} & Cassandra utiliza almacenamiento clave-valor. Es un SGBD NoSQL distribuido y masivamente escalable. Dispone de un lenguaje propio para las consultas denominado CQL (\emph{Cassandra Query Languaje}).   & -Multiplataforma 
+
+-Propio lenguaje de consultas 
+
+-Escalado lineal y horizontal 
+
+-Es un SGBD distribuido 
+
+-Utiliza una arquitectura punto a punto  & -Duplicación de datos. 
+
+-Ejecución de lecturas lenta. 
+
+-Consultas limitadas debido a la recuperación de datos.  \\ \hline
+\textbf{DynamoDB }& Base de datos NoSQL de clave-valor sin servidor y completamente administrada que está diseñada para ejecutar aplicaciones de alto rendimiento a cualquier escala.    & -Ventajas avanzadas en la nube de AWS. 
+
+-Facilidad de uso. 
+
+-Coste. 
+
+-Integración 
+
+-Administrable.  & -Capacidad de consultas deficiente 
+
+-Compatible solo con AWS. 
+
+- No puede utilizar scripts del lado del servidor con DynamoDB. \\ \hline
+
 \end{tabular}
-\caption{\label{tab:lenguajes} Tabla Comparativa Lenguajes de Programación}
+\caption{\label{tab:SGBDNoSQL} Sistemas de Gestión de Bases de Datos No Relacionales}
 \end{table}
 
-Python es un lenguaje que permite trabajar más de un paradigma (programación estructurada y orientada a objetos).
-Normalmente cuando programamos un script sencillo aplicamos solo el paradigma de programación estructurada (Secuencia, selección e iteración), y cuando necesitamos programar un proyecto  más complejo y queremos incluir los beneficios del paradigma orientado a objetos (reutilización de los componentes, facilidad de mantenimiento y modificación de objetos) utilizamos clases (POO).\\
-Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje nos permite desarrollar ambos ámbitos. Por lo que se tomó la decisión de ser utilizado a lo largo de este proyecto. 
 
 
 \newpage
 \section{Elección del manejador de bases de datos}
 
-Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y que estaremos utilizando de manera frecuente a lo largo de este proyecto, es la modularidad. Que no es más que dividir nuestros programas en partes más pequeñas (sub-programas), que habitualmente son llamados módulos. Las cuales deben tener un grado de independencia de la aplicación o programa principal. Cuando hablamos de independencia, nos referimos a que pueden ser utilizados por otras aplicaciones y no dependen de la aplicación original en sí. 
+Debido a la escalabilidad, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (solo en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  
+
+Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación web se realizará utilizando como base el lenguaje JavaScript Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita, por lo cual no hay necesidad de pagar el uso de licencias. Otra característica importante es que es una base de datos multiplataforma, esto nos permitirá registrar información desde el sistema operativo Linux, que se ocupará en la Raspberry Pi y por otro lado se ocupará Windows en la aplicación web para la inserción, modificación, lectura y eliminación de los datos en la base de datos.  
 
 \begin{center}
-  \includegraphics[scale=.6]{imagenes/modularidad}
-\captionof{figure}{Modularidad}
- \label{fig:modul}
+  \includegraphics[scale=.1]{imagenes/MongoDB_Logo}
+\captionof{figure}{Icono de MongoDB}
+ \label{fig:MongoDBLogo}
 \end{center}
-
-
-Estós módulos son archivos que alojan código independiente con una determinada función.  Python cuenta con diversos módulos que podemos agregar a nuestro código y utilizarlo para facilitar y acortar el 
-código, de manera que sea mas legible y ordenado.
-
-Otro de los factores que consideramos al desarrollar este proyecto, es el de concurrencia de procesos. La concucrrencia aparece cuando dos o más procesos ocurren al mismo tiempo.
-Estos procesos pueden "competir" o colaborar entre sí por los recursos del sistema. \\
-Los temás de colaboración, sincronización, hilos y paralelismo se abordarán de una manera más profunda en el tercer reporte, cuando se tenga el diseño de los módulos faltantes.
-
-\begin{center}
-  \includegraphics[scale=.6]{imagenes/diagrama_casosusomc}
-\captionof{figure}{Diagrama de Casos de Uso - Módulo Central de Procesamiento}
- \label{fig:casosusomc}
-\end{center}
-
-En el  siguiente diagrama, se pueden observar las distintas tareas así como las interacciones entre estas y el Submódulo de Procesamiento de Imágenes. \\
-Cabe recalcar, que para el presente reporte no se han determinado el diseño del Módulo de Telemetría, ni el de la Estación Base, por lo que se puede esperar el rediseño de este diagrama en un posterior reporte.Por esta misma razón, se decicidó no incluir el diagrama de clases hasta que los Módulos faltantes estén diseñados.
-
-
-\begin{center}
-
-  \includegraphics[scale=.4]{imagenes/diagrama_activiadesmc}
-\captionof{figure}{Diagrama de Actividades - Módulo Central de Procesamiento}
- \label{fig:casosusomc}
-
-\end{center}
-
-En el siguiente Diagrama de Actividades se describen las actividades y sus interacciones con el Submódulo de Procesamiento de Imágenes y la Estación Base. Para que el sistema principal pueda iniciar, se necesita que el conductor encienda el auto, ya que este sistema funcionará utilzando la alimentación electrica.
-\\\\ 
-El sistema principal comenzará por verificar el estado del Submódulo de Procesamiento de Imágenes, así como el de Telemetría y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Procesamiento de Imáganes. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
-Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Telemetría.se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
-Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. \\\\
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/diagrama_secuenciamc}
-\captionof{figure}{Diagrama de Secuencia - Módulo Central de Procesamiento}
- \label{fig:secuenciamc}
-\end{center}
-
-Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial en la concurrencia de los mismos. También se detallan las peticiones y respuestas de los distintos submódulos y sistemas.
 
 
 
 \newpage
 \section{Modelado de la base de datos}
 
-Para el diseño de la unidad de procesamiento nos apoyamos en la metodología UML, iniciando con un diagrama de casos de usos. Un modelo de casos de uso muestra una vista del sistema desde la perspectiva del usuario, por lo cual describe qué hace el sistema sin describir cómo lo hace.\\
-El siguiente diagrama muestra las funciones del Submódulo de Procesamiento de Imágenes basado en los requerimientos del sistema, así como la interacción con el Módulo Central de Procesamiento y el conductor, el cual es indispensable para poder realizar la detección de somnolencia.
+Tomando en cuenta la elección de MongodDB como gestor de la base de datos, se consultó la documentación de MongoDB para conocer la estructura y el modelado de los datos.  
+
+MongoDB utiliza documentos para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemejaría a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
 
 \begin{center}
-  \includegraphics[scale=.62]{imagenes/casosdeusospi}
-\captionof{figure}{Diagrama de Casos de Uso - Submódulo de Procesamiento de Imágenes}
- \label{fig:csspi}
+  \includegraphics[scale=.6]{imagenes/EstructuraMongoDB}
+\captionof{figure}{Estructura de datos en Mongo DB }
+ \label{fig:EstructuraMongoDB}
 \end{center}
 
 
-A continuación se muestra el diagrama de actividades para el Submódulo de Procesamiento de Imágenes:
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/Diagramadeactividadspi}
-\captionof{figure}{Diagrama de Actividades - Submódulo de Procesamiento de Imágenes}
- \label{fig:actspi}
-\end{center}
-El diagrama de actividades muestra el flujo de las actividades en general, para que el sistema pueda funcionar requiere que el automóvil le proporcione una fuente de alimentación hacia el ordenador, el cual iniciara el sistema para la detección de somnolencia. Una condición importante es que el conductor se encuentre dentro del rango visual de la cámara y permanezca dentro del mismo al mismo tiempo que el Submódulo de Procesamiento de Imágenes realiza la captura de video utilizando una cámara digital. Posteriormente se realizará la detección del rostro utilizando el método Haar-Adaboost. También se utilizarán librerías como Dlib en OpenCV para entrenar al sistema, y que este sea capaz de detectar el rostro con condiciones de poca luz.\\
+MongoDB almacena registros de datos como documentos BSON. BSON es una representación binaria de documentos JSON , aunque contiene más tipos de datos que JSON.   
 
-Se hará uso de una Red Neuronal Convolucional para clasificar los ojos (abierto o cerrado) y así determinar el estado de somnolencia del conductor. Cabe mencionar, que el diseño de esta red se retomará en un reporte posterior, cuando se determine la resolución de óptima para detectar el rostro en tiempo real. \\
-
-Mientras que para la boca se tomara la Relación de apertura de la boca (MOR).\\
-En caso de que el sistema detecte somnolencia en el conductor se enviará una señal de alerta hacia el Módulo Central de Procesamiento el cual será el encargado de activar la alarma.\\ 
-
-Como proceso paralelo a la detección de signos de somnolencia, la Identificación de una posible incidencia será la encargada de iniciar la grabación de video, con el fin de tener un fragmento de video segundos antes de detectar si el conductor presenta somnolencia.\\
-
-En caso de que el conductor presente somnolencia, el video será detenido hasta detectar que el conductor mantiene los ojos abiertos por un intervalo de tiempo definido. Posteriormente el video de incidencia será guardado en la memoria y se notificará al Módulo Central de Procesamiento.\\
-
-En caso de que el sistema indique que el conductor no presenta somnolencia el video será detenido y posteriormente eliminado de la memoria externa, con el fin de no saturar el espacio en la memoria.
- Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. 
-
-\newpage
- \textbf{Puntos de Referencia}
+Un registro en MongoDB es un documento, que es una estructura de datos compuesta por pares de campo y valor. Los documentos MongoDB son similares a los objetos JSON. Los valores de los campos pueden incluir otros documentos, matrices y matrices de documentos. 
 
 \begin{center}
-  \includegraphics[scale=.42]{imagenes/landmark}
-\captionof{figure}{Puntos de referencia}
- \label{fig:landmark}
+  \includegraphics[scale=.7]{imagenes/EstructuraDocumentoMongoDB}
+\captionof{figure}{Estructura de un Documento en MongoDB}
+ \label{fig:EstructuraDocumentoMongoDB}
 \end{center}
 
+Basado en la estructura NOSQL de MongoDB, se propone el siguiente modelado para la base de datos, la cual contará con dos colecciones: Conductores e Incidencias. Cabe mencionar que en dicho modelado no se contempla a los administradores, debido a que se utilizará el sistema de Amazon Cognito, que ofrece herramientas de autenticación, registro, verificación e inicio de sesión para el usuario. 
 
-
-A su vez, se utilizarán puntos de referencia con la ayuda de el software OpenCV y el modelo iBUG 300-W de delimitación de rostro para dividir las características que posteriormente serán extraídas y clasificadas.
-
-En la siguiente tabla se muestra la delimitación y agrupación de los puntos de interés, tales como: ojo derecho, ojo izquierdo y boca.
 \begin{center}
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|c|}
-\hline
-Partes        & \multicolumn{1}{l|}{Puntos de Referencia} \\ \hline
-Boca          & {[}48-67{]}                               \\ \hline
-Ojo Derecho   & {[}36-41{]}                               \\ \hline
-Ojo Izquierdo & {[}42-46{]}                               \\ \hline
-\end{tabular}
-\caption{\label{tab:landmakrs} Agrupación de Puntos de Referencia}
-\end{table}
-
-
-\newpage
+  \includegraphics[scale=.3]{imagenes/ModeladoBD}
+\captionof{figure}{Modelo propuesto para la base de datos en MongoDB}
+ \label{fig:ModeloBD}
 \end{center}
-\textbf{\emph{Mouth Opening Ratio}}
 
-Bostezar es un signo cansancio. El bostezo se caracteriza por una apertura lenta y amplia de la boca. Por lo que se necesita medir el tamaño y la forma de la boca es necesario para identificar un bostezo. Para esto, se utilizara el \emph{Mouth Opening Ratio} que es un método que utiliza puntos de referencia para medir la apertura de la boca. Entre más grande sea este valor, más es la aperatura de la boca, por lo tanto se considera como un bostezo.
+El modelo de documento para la colección ?Conductores?, se usará para registrar el nombre y apellido de cada conductor, así mismo se contabilizará el número de incidencias que presenté cada uno de ellos, el contador del conductor en marcha aumentará cada vez que el Módulo Central de Procesamiento envié un reporte de incidencia a la base de datos. Si el Usuario Administrador del Módulo de la Estación Base revisa el video de la incidencia y lo cataloga como ?Descartar? entonces se restará la incidencia, si esta es catalogada como ?Confirmar? el contador permanecerá igual.  Es importante mencionar que el registro de cada conductor se realizará desde la Aplicación Web. A continuación, se muestran los campos y un ejemplo de los valores que pueden ser ingresados dentro del documento de registro de conductores. 
 
+\begin{center}
+  \includegraphics[scale=.9]{imagenes/ModeloConductores}
+\captionof{figure}{Documento de Registro de Conductores}
+ \label{fig:DocumentoConductores}
+\end{center}
+
+El modelo de documento para la colección ?Incidencias?, se usará para registrar el Reporte de Incidencia que presente un conductor, el cual será enviado desde el Módulo Central de Procesamiento, por tanto, se realizará una consulta previa a la colección ?Conductores? para obtener el id, nombre y apellido del conductor en marcha. Posteriormente se realizará el reporte de la incidencia, el cual contendrá el Id del conductor, la fecha y hora de la incidencia, el nombre y apellido del conductor, y el estado de incidencia, este último muestra si la incidencia fue catalogada como descartada o confirmada por parte del Usuario Administrador después de revisar el video de la incidencia. Como se mencionó anteriormente, MongoDB permite anidar documentos, por lo que, dentro de este documento se encontrará anidado un segundo documento llamado ?Detalles?, el cual registrará la Ubicación donde sé detecto la incidencia y la URL donde se encontrará almacenado el video.  
 
 
 \begin{center}
-  \includegraphics[scale=.5]{imagenes/MOR}
-\captionof{figure}{\emph{Mouth Opening Ratio}}
- \label{fig:landmark}
+  \includegraphics[scale=.9]{imagenes/ModeloIncidencias}
+\captionof{figure}{Documento de registro de Incidencias}
+ \label{fig:DocumentoIncidencias}
 \end{center}
 
-La formula general para calular el \emph{MOR} es la siguiente:
-\begin{equation}
-MOR = \frac{\left \|p_{2}-p_{8}  \right \| +\left \|p_{3}-p_{7}  \right \|+\left \| p_{4}-p_{6} \right \|}{2\left \| p_{1}-p_{5}\right \|}
-\end{equation}
-
-Utilizando nuestros puntos de referencia, se podría calcular el MOR de la siguiente manera:
-
-\begin{equation}
-MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-P55 \right \|}{2\left \| P48-P54\right \|}
-\end{equation}
-
-
-\begin{center}
-  \includegraphics[scale=.42]{imagenes/diagramadesecuenciaspi}
-\captionof{figure}{Diagrama de Secuencia - Submódulo de Procesamiento de Imágenes}
- \label{fig:secspi}
-\end{center}
-\newpage	
-
-
+Cabe señalar que los anteriores modelos muestran el campo de ?Id?, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres.   
 
 
 \newpage
 \section{Análisis del Módulo de Telemetría }
 
-Para transferir datos o información de un punto a otro sin la utilización de cableado o algún medio físico, tenemos las redes inalámbricas; y se dividen en 3 diferentes tipos dependiendo del alcance requerido:
-
-
-\begin{itemize}
-
-\item \textbf{La red de área personal inalámbrica (WPAN)}\\
-
-Son redes de corto alcance que utilizan tecnología Bluetooth, HomeRF (\emph{Home Radio Frecuency}), Zigbee y las conexiones infrarrojas. Interconectan dispositivos compatibles como teléfonos móviles, electrodomésticos, impresoras o asistentes personales digitales (PDA) cerca de una ubicación central. 
-
-Utilizada para periféricos de tamaño pequeño, son conocidas como redes de corto alcance, con cobertura de 10 a 100 metros. 
-
-\item \textbf{La red de área local inalámbrica (WLAN)}\\
-
-Es una red de intercambio de datos a través de ondas electromagnéticas que se propagan en el aire, en ella se crea una red de área local con un determinado número de dispositivos conectados a un enrutador o punto de acceso que proporcionará acceso a Internet. 
-
-Son conocidas como redes de corto/mediano alcance alcanzando de 100 a 1000 metros.\\
-Estándares usados en WLAN: 
-\begin{itemize}
-
-\item IEEE 802.11 \\
-Es la forma más apropiada de referirnos a la tecnología Wi-Fi, especifica las normas de funcionamiento en una WLAN. \\
-
-\item IEEE 802.11a/b/g  \\
-Estándares identificadores de canales y frecuencias por donde se conectan los hosts a la WLAN. Con 802.11a se opera sobre las bandas de 5 GHz a 20 MHz y 2,4 GHz mientras que en la 802.11 b y g operan solamente en la banda de 2,4 GHz a una frecuencia de 25 MHz como ancho de banda.\\
-
-\item IEEE 802.11n\\
-Fue el primero en implementar la tecnología MIMO (\emph{Multiple Input - Multiple Output}) que permite usar varios canales a la vez para el envío y recepción de datos. \\
-
-\item IEEE 802.11ac \\
-Se denomina WiFi 5 y la gran mayoría de aparatos trabajan sobre esta versión. Es una versión que?solo opera en la banda de 5 GHz para proporcionar velocidades desde los 433 Mbps, dependiendo de la cantidad de antenas que utilice. \\
- 
-\item IEEE 802.11ax \\
-Es la nueva versión conocida como WiFi 6 o WiFi de 6ª generación en ella se introduce la nueva tecnología OFDMA? que mejora la eficiencia espectral de la red para WLAN en donde haya gran cantidad de usuarios conectados.\\
-Opera sobre las frecuencias de 2,4 GHz y 5 GHz. \\
-\end{itemize}
-
-\item \textbf{La red de inalámbrica de area amplia (WWAN)}\\
-
-Usan ondas de radio pero transmite a uno o varios puntos de acceso inalámbrico donde un usuario inalámbrico puede conectarse a la red, al disponer de un ancho de banda más elevado ofrece una mejor cobertura. \\\\
-Como ejemplo de estas redes tenemos la tecnología 4G y 5G. 
-Son conocidas como redes de largo alcance con cobertura de hasta 100km, pueden dar soporte a gran parte del territorio geográfico. 
-
-En esta red se incluye:
-\begin{itemize}
-\item \textbf{LPWAN(\emph{Low Power Wide Area Network}): Red de Área Amplia de Baja Frecuencia}\\
-Son conocidas como redes de largo alcance con cobertura de hasta 100km.
-\end{itemize}
-Ventajas, Desventajas y Aplicaciones de las LPWAN:
-\end{itemize}
-
-
-\begin{table}[]
-\begin{tabular}{|m{0.30\linewidth}|m{0.30\linewidth}|m{0.30\linewidth}|}
-\hline
- Ventajas & Desventajas  &Aplicaciones   \\ \hline
- Baja Potencia. 
-Minimiza el costo de energía lo que hace que los dispositivos remotos funcionen durante largos periodos de tiempo. & Baja velocidad de transmisión. 
-No puede manejar grandes volúmenes de datos.  &  IoT. 
-Satisfacer los desafíos de los dispositivos y sensores a pila. \\ \hline
- Amplia cobertura. 
-Ofrecen largo alcance sin mucha interferencia. & Problemas de atenuación de las señales. 
-Funcionan de forma más eficiente en espacios abiertos que en zonas urbanas.  &Aplicaciones de ciudades inteligentes. 
--Medidores de agua inteligentes 
--Iluminación inteligente   \\ \hline
- Bajo Ancho de Banda. 
-Destinadas a aplicaciones con mensajes pequeños pocas veces por hora. & Confiabilidad en las transmisiones.  &  -\\ \hline
- Bajo Coste. 
-Al tener un bajo ancho de banda reduce su costo también muchos usan el rango sin licencia en las bandas ISM. & Conectividad no constante. 
-Dificulta actividades como el control de movimiento.  & - \\ \hline
-\end{tabular}
-\caption{\label{tab:LPWAN} Ventajas, Desventajas y Aplicaciones de las LPWAN}
-\end{table}
-
-\newpage
-A continuación, se muestra de manera gráfica los tipos de redes antes mencionadas, así como algunos de sus protocolos y tecnologías.
-
-\begin{center}
-  \includegraphics[scale=1]{imagenes/redes}
-\captionof{figure}{Tipos de Redes Inalámbricas}
- \label{fig:prot}
-\end{center}
-
-Dado que para el presente proyecto tiene contemplado funcionar dentro de la Ciudad de México y considerando que esta tiene una extensión de 1485 km2, el tipo de red mas viable a utilizar es la LPWAN.
-
-\begin{center}
-  \includegraphics[scale=0.2]{imagenes/cdmx}
-\captionof{figure}{Mapa de la Ciudad de México}
- \label{fig:cd}
-\end{center}
-
-A continuación, se muestra un cuadro comparativo con estos tipos de redes.
-
-\begin{table}[h]
-\begin{tabular}{|l|l|l|l|l|l|l|}
-\hline
-        & Espectro                                                                 & \begin{tabular}[c]{@{}l@{}}Ancho de\\ Banda\end{tabular} & Costo    & BitRate & Escalabilidad & \begin{tabular}[c]{@{}l@{}}Inmunidad a \\ la Interferencia\end{tabular} \\ \hline
-LTE-M   & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 869 MHz\\ 915 MHz\end{tabular} & 100kHz                                                   & Moderado & 1Mbps   & Alta          & Moderada                                                                \\ \hline
-NB-IoT  & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 433 MHz\end{tabular}           & \textless{}500kHz                                        & Moderado & 200kbps & Alta          & Baja                                                                    \\ \hline
-SigFox  & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 200kHz                                                   & Bajo     & 100bps & Baja          & Baja                                                                    \\ \hline
-LoraWan & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 1.4MHz                                                   & Bajo     & 10kbps  & Moderada      & Muy Alta                                                                \\ \hline
-\end{tabular}
-\caption{\label{tab:redes} Comparación entre Redes Inalámbricas}
-\end{table}
-
-Ya que una parte fundamental del proyecto es la transferencia de contenido multimedia, se requiere un bitrate mínimo de 0.5 Mbps.\\
-Tomando esto en consideración, podemos observar que tanto SigFox y LoraWan no cumplen con este requisito, por lo tanto quedan descartadas para ser utilizadas. \\
-Por lo tanto, las tecnologías que cumplen estás características son LTE-M y NB-IoT, por lo que en la siguiente sección se procede a hacer un análsis y comparación de estas dos tipos de redes inalámbricas para corrobar cual de las dos es la más óptima para ser utilizada en este proyecto.
+  
 
 \newpage
 \section{Diseño del Módulo de Telemetría}
 
-\textbf{LTE-M}
-LTE-M es el término simplificado de la industria para el estándar tecnológico de Área Amplia de Baja Potencia (LPWA por sus siglas en inglés). Se refiere específicamente a la tecnología LTE CatM1, que es el estándar más adecuado para su uso con el IoT.\\
 
-Es una tecnología de área amplia de baja potencia que admite IoT a través de dispositivos poco complejos y proporciona una cobertura extendida, al tiempo que permite la reutilización de la base instalada de LT\\
-
-Las redes LTE-M coexistirán con las redes móviles 2G, 3G y 4G y se beneficiarán de todas las características de seguridad y privacidad de las redes móviles, como la confidencialidad de la identidad del usuario, la autenticación de la entidad, la privacidad, la integridad de los datos y la identificación del equipo móvil.
-
-A continuación se describen las ventajas principales de LTE-M
-
-\begin{itemize}
-\item \textbf{Ahorro de Energía}
-
-LTE-M permite que los dispositivos IoT usen un modo de ahorro de energía, que les permite "ir a dormir" cuando no están en uso. Y tampoco tienen que despertarse para enviar solo la actualización de ubicación, sino que pueden extender los tiempos de suspensión por un período de tiempo más largo. LTE-M también permite que los dispositivos usen recepción discontinua extendida (eDRX). Cuando el dispositivo está fuera del modo suspendido, verifica periódicamente la información del enlace descendente. Con eDRX, se aumenta el tiempo de verificación de la radio, lo que reduce el consumo de energía.
-
-\item \textbf{Cobertura}
-
-
-Las redes LTE-M/Cat-M1/Cat-M2 pueden utilizar la infraestructura 4G LTE existente. Esta es una ventaja significativa, ya que más del 50 por ciento de las conexiones móviles globales se realizan en redes 4G. 
-
-Con una pérdida de acoplamiento máxima (MCL) de 156 decibelios (dB), 14 dB más alta que LTE, las redes LTE-M también ofrecen mayor cobertura y mejor penetración en interiores. La señal puede manejar muchas interferencias de edificios y otras estructuras que obstruyen su camino.
-
-\item \textbf{Velocidad de Transferencia}
-
-
-Comparado con LTE, LTE-M no es particularmente rápido. Pero 1 megabit por segundo para transmisiones de enlace ascendente y descendente es excepcional en comparación con redes más antiguas como 2G y 3G (UMTS) y otras LPWAN. (Es varias veces más rápido que NB-IoT). Y eso es más que suficiente para la mayoría de las aplicaciones de IoT. Es factible para aplicaciones con necesidades de datos pequeñas e incluso casos de uso que involucran transmisión de video.
-
-
-En el contexto de IoT, el alto rendimiento de datos significa que los dispositivos que usan LTE-M pueden recibir fácilmente actualizaciones por aire (OTA), y las transmisiones de datos consumirán menos energía, porque el dispositivo puede volver al modo de ahorro de energía más rápido.
-
-
-\item \textbf{Costo}
-
-Las redes 4G se construyeron principalmente para teléfonos inteligentes. Las redes LTE-M se construyeron principalmente para dispositivos IoT. Como tal, los componentes necesarios para los dispositivos LTE-M son menos complejos y más asequibles que los componentes que necesitaría para un dispositivo 4G tradicional, aunque ambos utilizan la infraestructura 4G LTE.
-
-
-
-
-\end{itemize}
-
-\textbf{NB-IoT}
-
-Es un protocolo inalámbrico de Internet de las cosas (IoT) que utiliza tecnología de red de área amplia de baja potencia (LPWAN). Fue desarrollado por 3GPP para comunicación inalámbrica celular que permite una amplia gama de nuevos dispositivos y servicios NB-IoT. NB-IoT es uno de los tres principales estándares 3GPP LPWAN.\\
-
-El estándar de comunicación NB-IoT tiene como objetivo permitir que los dispositivos IoT funcionen a través de redes de operador, ya sea dentro de una onda portadora de comunicación del Sistema Global para Móviles (GSM) existente, en una "banda de protección" no utilizada entre canales LTE o de forma independiente.\\
-
-Uno de los objetivos de NB-IoT es impulsar la extensión de la cobertura más allá de lo que ofrecen las tecnologías celulares existentes. Para ello, NB-IoT ofrece repeticiones de transmisión y diferentes configuraciones de asignación de ancho de banda en la transmisión de enlace ascendente.\\
-
-La tecnología NB-IoT utiliza señales de bajo ancho de banda para comunicarse dentro de las tecnologías GSM y LTE existentes.
-
-Los dispositivos y sensores especialmente diseñados son los componentes básicos de los sistemas NB-IoT. Estos dispositivos recopilan información de su entorno y la transmiten a estaciones base NB-IoT o nodos de transmisión.
-
-Las estaciones base individuales están conectadas a una puerta de enlace de IoT y servidores de aplicaciones en la nube de IoT para el monitoreo centralizado y el análisis de datos.
-
-NB-IoT emplea una nueva capa física con señales y canales para cumplir con los requisitos de cobertura extendida en áreas rurales e interiores profundos, al tiempo que permite una complejidad de dispositivo muy baja. La tecnología subyacente es mucho menos compleja que la de los módulos GSM/GPRS.\\
-
-A continuación se describen las ventajas más importantes de NB-IoT:
-\begin{itemize}
-
-\item \textbf{ Ahorro de Energía}
-
-NB-IoT no necesita ejecutar un sistema operativo pesado, como Linux, ni hacer mucho procesamiento de señales, lo que lo hace más eficiente en términos de energía en comparación con otras tecnologías celulares.
-
-\item \textbf{Cobertura}
-
-
-NB-IoT puede ayudar a admitir una gran cantidad de dispositivos mediante el establecimiento de redes NB-IoT que pueden conectarse a miles de millones de nodos. Diseñado para cobertura extendida en interiores, la menor complejidad de los dispositivos proporciona conectividad y comunicación de largo alcance.
-
-\item \textbf{Costo}
-
-Debido a que es más fácil crear dispositivos con menor complejidad, el costo de los dispositivos es significativamente bajo, alrededor de 5 dolares por módulo.
-
-\item \textbf{Seguridad}
-
-
-NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones de autenticación basadas en cifrado y SIM.
-
-
- 
-\end{itemize}
 
 \newpage
 \section{Investigación de Servidores de alojamiento}
 
-\textbf{LTE-M vs. NB-IoT}
 
-Comparado a NB-IoT las velocidades de transferencia de datos de LTE-M son más de 10 veces más rápidas, su latencia es de 10 a 100 veces menor y cuenta con una cobertura mucho mayor, ya que utiliza la infraestructura 4G LTE existente. Sin embargo, aunque ambas LPWAN funcionan bien en interiores, NB-IoT tiene una pérdida máxima de acoplamiento (MCL) ligeramente más alta, lo que significa que puede manejar un poco más de interferencia.
+\newpage
+\section{Elección del Servidor de Alojamiento }
 
-LTE-M también puede usar una gama más amplia de frecuencias, aunque, como su nombre lo indica, Narrowband-IoT usa bandas de frecuencia más estrechas, lo que permite que esta tecnología use el espectro de radiofrecuencia (RF) de manera más eficiente.
+
+
+\newpage
+\section{Análisis del Módulo de Estación Base }
+
+El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.  El sistema contará con los siguientes requerimientos:   
+
+\emph{Requerimientos Funcionales del Módulo de Estación Base}
 
 \begin{table}[h]
-\begin{adjustbox}{width=\columnwidth,center}
-\begin{tabular}{|l|l|l|l|l|l|}
+\centering
+\begin{tabular}{|ll|}
 \hline
-       & \begin{tabular}[c]{@{}l@{}}Velocidad \\ Máxima de Subida\end{tabular} & \begin{tabular}[c]{@{}l@{}}Velocidad Máxima \\ de Descarga\end{tabular} & Latencia & \begin{tabular}[c]{@{}l@{}}Perdida Máxima\\ de Acoplamiento(dBs)\end{tabular} & Ancho de Banda \\ \hline
-LTE-M  & 1Mbps                                                                 & 1Mps                                                                    & 10-15 ms & 156                                                                           & 1.4MHz a 5MHz  \\ \hline
-NB-IoT & 127 kbit                                                              & 159 kbit                                                                & 1.6-10s  & 164                                                                           & 180KHz         \\ \hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF01}}                                              & \emph{Guardar Incidencia}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}La base de datos almacenará la información de cada reporte de incidencia que se envié desde el Módulo Central de Procesamiento. \\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Id del Conductor \\
+\quad $\bullet$ Nombre de Conductor\\
+\quad $\bullet$ Apellidos de Conductor  \\
+\quad $\bullet$ Número de Incidencias\\
+\quad $\bullet$ Fecha\\
+\quad $\bullet$ Hora\\
+\quad $\bullet$ Estado de la Incidencia \\
+\quad $\bullet$ Ubicación  \\
+\quad $\bullet$ URL del video 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El Módulo de Procesamiento Central puede insertar datos en la base datos.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\end{adjustbox}
-\caption{\label{tab:interfaces} Comparación entre LTE-M y NB-IoT}
+\caption{RF01- Guardar Incidencia }
 \end{table}
 
-Después de la investigación realizada, encontramos las siguientes ventajas de LTE-M sobre NB-IoT:
 
-\begin{itemize}
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF02}}                                              & \emph{Guardar Video }                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}La base de datos almacenará la información de cada reporte de incidencia que se envié desde el Módulo Central de Procesamiento. \\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Video de incidencia 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El Módulo de Procesamiento Central puede insertar el video en el almacenador de objetos en la nube, mientras que la base de datos obtiene la URL del video guardado. \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF02- Guardar Video }
+\end{table}
 
-\item \textbf{LTE-M tiene más redes de roaming disponibles}
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Conectar Aplicación Web }                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}La base de datos almacenará la información de cada reporte de incidencia que se envié desde el Módulo Central de Procesamiento. \\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Node.js  \\
+\quad $\bullet$ React   \\
+\quad $\bullet$ Express   \\
+\quad $\bullet$ MongoDB 
 
-Pocos operadores han establecido acuerdos de roaming para sus redes NB-IoT, por lo que LTE-M ofrece una mejor cobertura y tiene menos circunstancias en las que necesita cambiar de SIM.
-Actualemente, la compañia Telcel cuenta con la mayor cobertura de tecnología LTE en México.
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/lte-mcobertura}
-\captionof{figure}{Mapa de Cobertura LTE-Telcel}
- \label{fig:prot}
-\end{center}
-\newpage
-\item\textbf{NB-IoT consume más energía en algunos casos}
-
-Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las velocidades de datos más bajas de NB-IoT requieren estos permanezcan en línea por más tiempo, lo que resulta en un mayor consumo de energía. En casos de uso móvil, NB-IoT también usa más energía
-
-
-\end{itemize}
-
-Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto. Se investigaron distintos módulos que sean compatibles con la Rasperry Pi 4 Modelo B, y acontinuación se muestran una comparación entre ellas. 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El usuario administrador puede realizar la inserción, modificación, eliminación y consulta de datos desde la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF03- Conectar Aplicación Web }
+\end{table}
 
 
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|l|l|l|l|l|}
+\begin{tabular}{|ll|}
 \hline
-Modelo          & Voltaje de Operación & \begin{tabular}[c]{@{}l@{}}Redes que\\ Soporta\end{tabular} & \begin{tabular}[c]{@{}l@{}}Dificultad de \\ Integración\end{tabular} & Costo  \\ \hline
-SixFab Base Hat & 5V                   & 3G/4G/LTE                                                   & Bajo                                                                 & \$2500 \\ \hline
-SIM7600A-H      & 3-5V                 & 3G/4G/LTE                                                   & Alta                                                                 & \$1435 \\ \hline
-SIM800C-G       & 3.3 - 5V             & 3G/4G/LTE                                                   & Alta                                                                 & \$508  \\ \hline
-SIM7600CE       & 3.3-5V               & 2G/3G/4G/LTE                                                & Alta                                                                 & \$2100 \\ \hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Desplegar Aplicación Web  }                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}La aplicación web se alojará en una red de entrega de contenido (CDN), disponible con una URL.  \\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ AWS Amplify  \\
+\quad $\bullet$ GitHub \\
+\quad $\bullet$ Amazon S3 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El usuario administrador puede acceder a la interfaz de la aplicación web, haciendo uso de la URL en el navegador web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{\label{tab:interfaces}Comparación entre distintos módulos de LTE-M}
+\caption{RF04- Desplegar Aplicación Web}
 \end{table}
 
-Dado que el módulo SixFab es el de menor dificultad de integración, se decidió utilizar este módulo para poder utilizar la interfaz de LTE-M. Además SixFab ofrece un kit dónde de se incluyen todos los componentes necesarios para utilizar dicha interfaz.\\
 
-\textbf{Raspberry Pi 4G/LTE Cellular Modem Kit}
 
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/sixfabcomp}
-\captionof{figure}{Raspberry Pi 4G/LTE Cellular Modem Kit}
- \label{fig:scaraindust}
-\end{center}
-
-El kit de módem celular para Raspberry Pi permite desplazarse de forma libre y segura con una conexión de datos móviles.
-Ya sea que esté configurando una Raspberry Pi como un servidor web móvil o buscando acceder a Internet en ubicaciones remotas, nos brindará conectividad con nulos problemas.
-
-\newpage
-\section{Elección del Servidor de Alojamiento }
-
-Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Guardar Credenciales de Usuario Administrador }                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Elementos:}
 \\
-Elementos físicos que contendrá la unidad:
-
-\begin{itemize}
-
-\item Raspberry Pi 4 Modelo B\\
-De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
-Dimensiones 85 x 53mm. 
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
-\captionof{figure}{Especificaciones Físicas}
- \label{fig:scaraindust}
-\end{center}
-
-\item Zumbador Pasivo KY-006\\
-Dimensiones 18 x 15mm. 
-\begin{center}
-  \includegraphics[scale=.2]{imagenes/KY-006}
-\captionof{figure}{Zumbador Pasivo KY-006}
- \label{fig:scaraindust}
-\end{center}
-
-\item Cámara Arducam Pivariety IMX230\\
-Dimensiones de la placa: 38 x 38mm.
-
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/camara}
-\captionof{figure}{Cámara Pivariety IMX230}
- \label{fig:scaraindust}
-\end{center}
- 
-
-\item Cable macho-hembra\\
-
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/Jumpers}
-\captionof{figure}{Jumpers}
- \label{fig:scaraindust}
-\end{center}
-
-Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
-Largo 10 cm. 
-
-\item Micro SD\\  
-Dimensiones: 15 x 11 x 1 mm. 
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/MicroSD}
-\captionof{figure}{Micro SD}
- \label{fig:scaraindust}
-\end{center}
-\newpage
-\item \textbf{RasperryPi 3G/4G/ LTE Base HAT}
-
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/sixfabhat}
-\captionof{figure}{RasperryPi 3G/4G/ LTE Base HAT}
- \label{fig:scaraindust}
-\end{center}
-
-Este HAT celular proporciona una conexión de datos simplificada para proyectos de IoT remotos, en el campo, en todo el mundo, en todas partes. Comience a usar una conexión LTE de alta velocidad con bajo consumo de energía en un factor de forma delgado con todo el software necesario para Raspberry Pi.
-
-\item \textbf{LE 910Cx Mini PCIe Series Linux}
-
-\begin{center}
-  \includegraphics[scale=.7]{imagenes/LE910}
-\captionof{figure}{LE 910Cx Mini PCIe Series Linux}
- \label{fig:scaraindust}
-\end{center}
-
-
-Los módulos Mini PCIe (mPCIe) de la serie LE910Cx son
-optimizadas para redes LTE de baja categoría y están disponibles
-en modo único de LTE o con opciones de respaldo 3G/2G.
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF05- Guardar Credenciales de Usuario Administrador }
+\end{table}
 
 \newpage
-\item \textbf{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
+\emph{Requerimientos No Funcionales del Módulo de Estación Base}
+
+\begin{table}[]
+\begin{tabular}{{|m{0.12\linewidth}|m{0.25\linewidth}|m{0.50\linewidth}|}}
+\hline
+\emph{ID} & \emph{Nombre del requerimiento} & \emph{Descripción } \\ \hline
+\emph{RNF01 } & Disponibilidad & La disponibilidad del sistema será continua, el usuario podrá acceder a la información las 24 horas del día.  \\ \hline
+\emph{RNF02 } & Interoperabilidad  & El sistema será capaz de intercambiar información con el Módulo Central de Procesamiento a través del Módulo de Telemetría.  \\ \hline
+\emph{RNF03 } & Seguridad  & Las credenciales de acceso al sistema podrán ser cambiadas únicamente por el administrador. \\ \hline
+\emph{RNF04 } & Usabilidad  & El sistema estará enfocado a la visualización de reportes, por lo que el usuario le tomará menos de 1 hora en familiarizarse con el sistema. El sistema proporcionará mensajes de advertencia orientados al usuario, en caso de ocurrir un error en el Módulo Central de Procesamiento. \\ \hline
+\emph{RNF05 } & Interfaz del sistema  & La aplicación web presentará una interfaz de usuario sencilla que permitirá al usuario un fácil manejo del sistema. \\ \hline
+\end{tabular}
+\end{table}
+
 
 \begin{center}
-  \includegraphics[scale=.4]{imagenes/lteantena}
-\captionof{figure}{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
- \label{fig:scaraindust}
+  \includegraphics[scale=.5]{imagenes/CasosdeusosMEB}
+\captionof{figure}{Diagrama de Casos de Uso del Módulo de Estación Base }
+ \label{fig:CasosdeusosMEB}
 \end{center}
 
 
-Antenas LTE principal y Diversity combinadas con una antena GNSS en una sola antena formada. Ajuste directo para el módulo Mini PCIe LTE de Quectel EC25, Telit LE910C1 y Telit LE910C4.
-
-\end{itemize}
-
-\newpage
-
-Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño modular para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
-
 \begin{center}
-  \includegraphics[scale=.3]{imagenes/unidadcontenedora}
-\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento}
- \label{fig:scaraindust}
+  \includegraphics[scale=.5]{imagenes/DiagramadeactividadMEB}
+\captionof{figure}{Diagrama de Actividades del Módulo de Estación Base }
+ \label{fig:DiagramadeActividadMEB}
 \end{center}
- 
 
-\newpage
-\section{Análisis del Módulo de Estación Base }
+El diagrama de actividades del Módulo de Estación Base muestra la secuencia de las actividades que se realizarán en dicho módulo, la primera actividad conectará la aplicación web hacia la Base de Datos, lo que permitirá insertar, modificar, leer y eliminar los datos del conductor. En el caso de los Reportes de Incidencias, solo podrán ser visualizadas, modificadas o eliminadas desde la aplicación web, ya que la inserción de estas se deberá realizar desde el Módulo Central de Procesamiento, este módulo se encargará de realizar el reporte y posteriormente enviarlo a la Base de Datos. La segunda actividad consiste en el alojamiento y despliegue de la aplicación web, la cual estará disponible usando la URL dentro del navegador web.   
 
+Las credenciales del Usuario Administrador no se almacenarán en la Base de Datos, estas se guardarán en Amazon Cognito y serán utilizadas para iniciar sesión dentro de la aplicación. Como se mencionó anteriormente, el Módulo Central de Procesamiento realizará el Reporte de Incidencia, sin embargo, primero deberá guardar el video en la nube y posteriormente obtener la URL donde se almacenó el video, una vez recabados los datos necesarios para la incidencia el reporte será enviado y almacenado en la Base de Datos. 
 
 
 \newpage
 \section{Diseño del Módulo de Estación Base}
+
+
+\begin{center}
+ \includegraphics[scale=.2]{imagenes/DiseñoMEB}
+\captionof{figure}{D }
+ \label{fig:DiseñoMEB}
+\end{center}
+
 
 
 \newpage

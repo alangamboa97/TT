@@ -1,26 +1,12 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Programa cl\'asico vs Machine Learning}}{6}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Modularidad}}{7}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Diagrama de Casos de Uso - M\'odulo Central de Procesamiento}}{8}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de Actividades - M\'odulo Central de Procesamiento}}{9}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Diagrama de Secuencia - M\'odulo Central de Procesamiento}}{10}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama de Casos de Uso - Subm\'odulo de Procesamiento de Im\'agenes}}{11}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Diagrama de Actividades - Subm\'odulo de Procesamiento de Im\'agenes}}{12}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Puntos de referencia}}{14}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces \emph {Mouth Opening Ratio}}}{15}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de Secuencia - Subm\'odulo de Procesamiento de Im\'agenes}}{16}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Tipos de Redes Inal\'ambricas}}{19}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Mapa de la Ciudad de M\'exico}}{19}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Mapa de Cobertura LTE-Telcel}}{24}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Raspberry Pi 4G/LTE Cellular Modem Kit}}{25}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Especificaciones F\IeC {\'\i }sicas}}{26}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Zumbador Pasivo KY-006}}{26}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces C\'amara Pivariety IMX230}}{27}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Jumpers}}{27}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Micro SD}}{27}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces RasperryPi 3G/4G/ LTE Base HAT}}{28}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces LE 910Cx Mini PCIe Series Linux}}{28}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}}{29}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Unidad Contenedora del M\'odulo Central de Procesamiento}}{30}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Tipos de Planes de AWS Amplify}}{34}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Tiempos de Respuesta }}{35}{figure.25}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Icono de MongoDB}}{10}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Estructura de datos en Mongo DB }}{11}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Estructura de un Documento en MongoDB}}{11}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Modelo propuesto para la base de datos en MongoDB}}{12}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Documento de Registro de Conductores}}{12}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Documento de registro de Incidencias}}{13}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Diagrama de Casos de Uso del M\'odulo de Estaci\'on Base }}{20}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de Actividades del M\'odulo de Estaci\'on Base }}{21}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces D }}{23}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Tipos de Planes de AWS Amplify}}{25}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Tiempos de Respuesta }}{26}{figure.11}%
