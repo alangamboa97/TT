@@ -395,11 +395,6 @@ Tomando en cuenta la elección de MongodDB como gestor de la base de datos, se co
 
 MongoDB utiliza documentos para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemejaría a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
 
-\begin{center}
-  \includegraphics[scale=.6]{imagenes/EstructuraMongoDB}
-\captionof{figure}{Estructura de datos en Mongo DB }
- \label{fig:EstructuraMongoDB}
-\end{center}
 
 
 MongoDB almacena registros de datos como documentos BSON. BSON es una representación binaria de documentos JSON , aunque contiene más tipos de datos que JSON.   
@@ -437,7 +432,7 @@ El modelo de documento para la colección ?Incidencias?, se usará para registrar 
  \label{fig:DocumentoIncidencias}
 \end{center}
 
-Cabe señalar que los anteriores modelos muestran el campo de ?Id?, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres.   
+Cabe señalar que los anteriores modelos muestran el campo de Id, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres.   
 
 
 \newpage
