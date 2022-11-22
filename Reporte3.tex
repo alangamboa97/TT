@@ -395,11 +395,7 @@ Tomando en cuenta la elección de MongodDB como gestor de la base de datos, se co
 
 MongoDB utiliza documentos para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemejaría a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
 
-\begin{center}
-  \includegraphics[scale=.6]{imagenes/EstructuraMongoDB}
-\captionof{figure}{Estructura de datos en Mongo DB }
- \label{fig:EstructuraMongoDB}
-\end{center}
+
 
 
 MongoDB almacena registros de datos como documentos BSON. BSON es una representación binaria de documentos JSON , aunque contiene más tipos de datos que JSON.   
@@ -462,9 +458,9 @@ Cabe señalar que los anteriores modelos muestran el campo de ?Id?, sin embargo, 
 \newpage
 \section{Análisis del Módulo de Estación Base }
 
-El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.  El sistema contará con los siguientes requerimientos:   
+El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.  El sistema contará con los siguientes requerimientos:   \\
 
-\emph{Requerimientos Funcionales del Módulo de Estación Base}
+\textbf{Requerimientos Funcionales del Módulo de Estación Base}
 
 \begin{table}[h]
 \centering
@@ -528,6 +524,8 @@ El usuario administrador puede realizar la inserción, modificación, eliminación 
 \end{table}
 
 
+\clearpage
+
 
 \begin{table}[h]
 \centering
@@ -565,8 +563,9 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \caption{RF05- Guardar Credenciales de Usuario Administrador }
 \end{table}
 
-\newpage
-\emph{Requerimientos No Funcionales del Módulo de Estación Base}
+\textbf{Requerimientos No Funcionales del Módulo de Estación Base}
+\clearpage
+
 
 \begin{table}[]
 \begin{tabular}{{|m{0.12\linewidth}|m{0.25\linewidth}|m{0.50\linewidth}|}}
@@ -578,25 +577,71 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \emph{RNF04 } & Usabilidad  & El sistema estará enfocado a la visualización de reportes, por lo que el usuario le tomará menos de 1 hora en familiarizarse con el sistema. El sistema proporcionará mensajes de advertencia orientados al usuario, en caso de ocurrir un error en el Módulo Central de Procesamiento. \\ \hline
 \emph{RNF05 } & Interfaz del sistema  & La aplicación web presentará una interfaz de usuario sencilla que permitirá al usuario un fácil manejo del sistema. \\ \hline
 \end{tabular}
+\caption{Requerimientos No Funcionales del Módulo de Estación Base}
 \end{table}
 
 
 
+Con base en los requerimientos se realizó el siguiente diagrama de casos de uso, el cual muestra las actividades y la interacción con el Módulo de Estación base y el Módulo Central de Procesamiento. 
+
+\begin{center}
+  \includegraphics[scale=.55]{imagenes/CasosdeusosMEB}
+\captionof{figure}{Diagrama de Casos de Usos del Módulo de Etsación Base}
+ \label{fig:CasosdeusosMEB}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/DiagramadeactividadMEB}
+\captionof{figure}{Diagrama de Actividades del Módulo de Etsación Base}
+ \label{fig:DiagramadeactividadMEB}
+\end{center}
 
 
-El diagrama de actividades del Módulo de Estación Base muestra la secuencia de las actividades que se realizarán en dicho módulo, la primera actividad conectará la aplicación web hacia la Base de Datos, lo que permitirá insertar, modificar, leer y eliminar los datos del conductor. En el caso de los Reportes de Incidencias, solo podrán ser visualizadas, modificadas o eliminadas desde la aplicación web, ya que la inserción de estas se deberá realizar desde el Módulo Central de Procesamiento, este módulo se encargará de realizar el reporte y posteriormente enviarlo a la Base de Datos. La segunda actividad consiste en el alojamiento y despliegue de la aplicación web, la cual estará disponible usando la URL dentro del navegador web.   
+El diagrama de actividades del Módulo de Estación Base muestra la secuencia de las actividades que se realizarán en dicho módulo, la primera actividad conectará la aplicación web hacia la Base de Datos, lo que permitirá insertar, modificar, leer y eliminar los datos del conductor. En el caso de los Reportes de Incidencias, solo podrán ser visualizadas, modificadas o eliminadas desde la aplicación web, ya que la inserción de estas se deberá realizar desde el Módulo Central de Procesamiento, este módulo se encargará de realizar el reporte y posteriormente enviarlo a la Base de Datos. La segunda actividad consiste en el alojamiento y despliegue de la aplicación web, la cual estará disponible usando la URL dentro del navegador web.   \\
 
 Las credenciales del Usuario Administrador no se almacenarán en la Base de Datos, estas se guardarán en Amazon Cognito y serán utilizadas para iniciar sesión dentro de la aplicación. Como se mencionó anteriormente, el Módulo Central de Procesamiento realizará el Reporte de Incidencia, sin embargo, primero deberá guardar el video en la nube y posteriormente obtener la URL donde se almacenó el video, una vez recabados los datos necesarios para la incidencia el reporte será enviado y almacenado en la Base de Datos. 
 
 
-\newpage
+\clearpage
 \section{Diseño del Módulo de Estación Base}
 
 
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/DiagramaComunicacionRF2MEB}
+\captionof{figure}{Diagrama de Comunicación para guardar video}
+ \label{fig:DCGuardarVideo}
+\end{center}
 
 
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/DiagramaComunicacionRF1MEB}
+\captionof{figure}{Diagrama de Comunicación para guardar incidencia}
+ \label{fig:DCGuardarIncidencia}
+\end{center}
 
-\newpage
+
+\begin{center} 
+  \includegraphics[scale=.7]{imagenes/DiagramaComunicacionRF3MEB} 
+\captionof{figure}{Diagrama de Comunicación para conectar aplicación web} 
+\label{fig:DCConectarAppWeb} 
+\end{center} 
+  
+
+\begin{center} 
+  \includegraphics[scale=.7]{imagenes/DiagramaComunicacionRF4MEB} 
+\captionof{figure}{Diagrama de Comunicación para desplegar aplicación web} 
+\label{fig:DCDeplegarAppWeb} 
+\end{center} 
+
+
+\begin{center} 
+  \includegraphics[scale=.5]{imagenes/DisenoMEB} 
+\captionof{figure}{Diseño del Módulo de Estación Base} 
+\label{fig:DisenoMEB} 
+\end{center} 
+
+
+\clearpage
 \section{Busqueda de servidores de alojamiento}
 
 Para el presente proyecto se requiere una capacidad de almacenamiento que nos permita el uso de archivos multimedia.
