@@ -2,14 +2,34 @@
 \contentsline {section}{\numberline {1}Resumen}{4}{section.1}%
 \contentsline {section}{\numberline {2}Introducci\'on}{7}{section.2}%
 \contentsline {section}{\numberline {3}Justificaci\'on}{11}{section.3}%
-\contentsline {section}{\numberline {4}Estado del Arte}{17}{section.4}%
-\contentsline {section}{\numberline {5}Objetivos}{21}{section.5}%
-\contentsline {section}{\numberline {6}Marco Te\'orico}{24}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Red Neuronal}{24}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Redes Neuronales Convolucionales}{24}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Visi\'on Artificial}{27}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Boosting}{27}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Planteamiento del Problema}{28}{section.7}%
-\contentsline {section}{\numberline {8}Propuesta de Soluci\'on}{33}{section.8}%
-\contentsline {section}{\numberline {9}Conclusiones}{34}{section.9}%
-\contentsline {section}{\numberline {10}Bibliografia}{35}{section.10}%
+\contentsline {section}{\numberline {4}Propuesta de soluci\'on}{17}{section.4}%
+\contentsline {section}{\numberline {5}Metodolog\IeC {\'\i }a}{18}{section.5}%
+\contentsline {section}{\numberline {6}Estado del Arte}{19}{section.6}%
+\contentsline {section}{\numberline {7}Objetivos}{23}{section.7}%
+\contentsline {section}{\numberline {8}Marco Te\'orico}{26}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Red Neuronal}{26}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Redes Neuronales Convolucionales}{26}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Visi\'on Artificial}{29}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Boosting}{29}{subsection.8.4}%
+\contentsline {section}{\numberline {9}An\'alisis}{30}{section.9}%
+\contentsline {subsection}{\numberline {9.1}An\'alsis del M\'odulo Central de Procesamiento}{31}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}An\'alisis del Subm\'odulo de Procesamiento de Im\'agenes}{32}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}An\'alsis del Subm\'odulo de Deep Learning}{33}{subsubsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.2}An\'alisis de la Estaci\'on Base}{34}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}An\'alisis de la Aplicaci\'on Web}{35}{subsubsection.9.2.1}%
+\contentsline {section}{\numberline {10}Dise\~no}{42}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Dise\~no General del Sistema}{42}{subsection.10.1}%
+\contentsline {subsubsection}{\numberline {10.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{43}{subsubsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.2}Dise\~no del M\'odulo Central de Procesamiento}{48}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Dise\~no del Subm\'odulo de Procesamiento de Im\'agenes}{49}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Dise\~no del Subm\'odulo de Deep Learning}{51}{subsubsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.3}Dise\~no del M\'odulo de Comunicaciones}{52}{subsection.10.3}%
+\contentsline {subsubsection}{\numberline {10.3.1}Dise\~no del Subm\'odulo de Transmisi\'on de Datos}{53}{subsubsection.10.3.1}%
+\contentsline {subsubsection}{\numberline {10.3.2}Dise\~no del Subm\'odulo de Telemetr\IeC {\'\i }a}{54}{subsubsection.10.3.2}%
+\contentsline {subsubsection}{\numberline {10.3.3}Dise\~no del Subm\'odulo de Cobertura}{55}{subsubsection.10.3.3}%
+\contentsline {subsection}{\numberline {10.4}Dise\~no de la Estaci\'on Base}{56}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {10.4.1}Dise\~no de la Aplicaci\'on Web}{57}{subsubsection.10.4.1}%
+\contentsline {subsubsection}{\numberline {10.4.2}Dise\~no de la Base de Datos}{58}{subsubsection.10.4.2}%
+\contentsline {section}{\numberline {11}Propuesta de Soluci\'on}{59}{section.11}%
+\contentsline {section}{\numberline {12}Conclusiones}{60}{section.12}%
+\contentsline {section}{\numberline {13}Bibliografia}{61}{section.13}%

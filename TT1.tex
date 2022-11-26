@@ -8,6 +8,7 @@
 \usepackage{array}
 \usepackage{lmodern}
 \usepackage{adjustbox}
+\usepackage{titlesec}
 
 \marginsize{2cm}{2cm}{1cm}{1cm}
 \usepackage{fancyhdr}
@@ -330,6 +331,13 @@ MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-
 \newpage	
 
 
+\section{Propuesta de solución}
+
+
+\newpage
+
+\section{Metodología}
+
 
 
 \newpage
@@ -562,6 +570,8 @@ Las redes neuronales convolucionales, tambien conocidas como \emph{redes convolu
 
 Como su nombre lo indica, esta red neuronal utiliza la operación de convolución. La convolución es una operación matemática que se realiza sobre dos funciones para producir una tercera que se suele interpretar versión modificada (filtrada) de las funciones originales.\cite{Referencia0}
 
+\
+
 La convolución entre las funciones \emph{f} y {g} se representa de la siguiente manera:
 \begin{equation}
 (f\star g)(t) = \int_{-\infty}^{\infty} f(\tau )g(t-\tau )d\tau = \int_{-\infty}^{\infty} f(t-\tau)g(\tau)d\tau
@@ -622,7 +632,7 @@ A continuación se presenta la representación más simple de las capas de una red 
 \begin{itemize}
 	\item Capa Convolucional
 	
-Esta capa se utiliza para extraer las diversas características de las imágenes de entrada. En esta capa se realiza la convolución entre la imagen de entrada y un \emph{kernel} de un tamaño particular $MxM$. Al deslizar el filtro sobre la imagen de entrada, se toma el producto escalar entre el filtro y las partes de la imagen de entrada con respecto al tamaño de dicho kernel.
+Esta capa se utiliza para extraer las diversas características de las imágenes de entrada. En esta capa se realiza la convolución entre la imagen de entrada y un \emph{kernel} de un tamaño particular $MxM$.
 
 La salida se denomina mapa de características, que nos brinda información sobre la imagen, como las esquinas y los bordes. Posteiormente, este mapa de características se alimenta a otras capas para aprender otras características de la imagen de entrada.
 
@@ -680,13 +690,56 @@ b_j &  &otro ,
 Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles.
 
 \newpage
-\section{Planteamiento del Problema}
+\section{Análisis}
+\newpage
+\subsection{Análsis del Módulo Central de Procesamiento}
+\newpage
+\subsubsection{Análisis del Submódulo de Procesamiento de Imágenes}
 
-Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
-\\
-Elementos físicos que contendrá la unidad:
+
+\newpage
+\subsubsection{Análsis del Submódulo de Deep Learning}
+
+\newpage
+\subsection{Análisis de la Estación Base}
+
+\newpage
+\subsubsection{Análisis de la Aplicación Web}
+
+\newpage
+
+
 
 \begin{itemize}
+
+
+\item \textbf{Análisis de Requerimientos Funcionales}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF01}}                                              & \emph{Capturar video en tiempo real}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema capturará video en todo momento\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Incidencias\\
+\quad $\bullet$ Administrador\\
+\quad $\bullet$ MongoDB
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF01- Capturar Video en Tiempo Real}
+\end{table}
+	        
+\item \textbf{Análisis de Requerimientos no Funcionales}
+
+
+
+
+
 
 \item Raspberry Pi 4 Modelo B\\
 De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
@@ -782,6 +835,209 @@ Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo
  \label{fig:scaraindust}
 \end{center}
  
+\newpage
+\section{Diseño}
+\subsection{Diseño General del Sistema}
+
+Utilizando la metodología Top-Down, se propone el siguiente diagrama modular del sistema.
+
+\begin{center}
+  \includegraphics[scale=.43]{imagenes/topdowngeneral}
+\captionof{figure}{Diseño Modular del Sistema}
+ \label{fig:landmark}
+\end{center}
+
+\newpage
+\subsubsection{Diseño de la Unidad Contenedora de Procesamiento}
+
+Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema. 
+\\
+Elementos físicos que contendrá la unidad:
+
+\begin{itemize}
+
+\item Raspberry Pi 4 Modelo B\\
+De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
+Dimensiones 85 x 53mm. 
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
+\captionof{figure}{Especificaciones Físicas}
+ \label{fig:scaraindust}
+\end{center}
+
+\item Zumbador Pasivo KY-006\\
+Dimensiones 18 x 15mm. 
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/KY-006}
+\captionof{figure}{Zumbador Pasivo KY-006}
+ \label{fig:scaraindust}
+\end{center}
+
+\item Cámara Arducam Pivariety IMX230\\
+Dimensiones de la placa: 38 x 38mm.
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/camara}
+\captionof{figure}{Cámara Pivariety IMX230}
+ \label{fig:scaraindust}
+\end{center}
+ 
+
+\item Cable macho-hembra\\
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Jumpers}
+\captionof{figure}{Jumpers}
+ \label{fig:scaraindust}
+\end{center}
+
+Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
+Largo 10 cm. 
+
+\item Micro SD\\  
+Dimensiones: 15 x 11 x 1 mm. 
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/MicroSD}
+\captionof{figure}{Micro SD}
+ \label{fig:scaraindust}
+\end{center}
+\newpage
+\item \textbf{RasperryPi 3G/4G/ LTE Base HAT}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/sixfabhat}
+\captionof{figure}{RasperryPi 3G/4G/ LTE Base HAT}
+ \label{fig:scaraindust}
+\end{center}
+
+Este HAT celular proporciona una conexión de datos simplificada para proyectos de IoT remotos, en el campo, en todo el mundo, en todas partes. Comience a usar una conexión LTE de alta velocidad con bajo consumo de energía, además de contar con todo el software necesario para desarrollar en una  Raspberry Pi.
+
+\item \textbf{LE 910Cx Mini PCIe Series Linux}
+
+\begin{center}
+  \includegraphics[scale=.7]{imagenes/LE910}
+\captionof{figure}{LE 910Cx Mini PCIe Series Linux}
+ \label{fig:scaraindust}
+\end{center}
+
+
+Los módulos Mini PCIe (mPCIe) de la serie LE910Cx son
+optimizadas para redes LTE de baja categoría y están disponibles
+en modo único de LTE o con opciones de respaldo 3G/2G.
+
+\newpage
+\item \textbf{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/lteantena}
+\captionof{figure}{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
+ \label{fig:scaraindust}
+\end{center}
+
+
+Antenas LTE principal y Diversity combinadas con una antena GNSS en una sola antena formada. Ajuste directo para el módulo Mini PCIe LTE de Quectel EC25, Telit LE910C1 y Telit LE910C4.
+
+\end{itemize}
+
+\newpage
+
+Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño modular para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
+
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/unidadcontenedora}
+\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento}
+ \label{fig:scaraindust}
+\end{center}
+ 
+
+\newpage
+\subsection{Diseño del Módulo Central de Procesamiento}
+
+
+\newpage
+\subsubsection{Diseño del Submódulo de Procesamiento de Imágenes}
+
+\begin{itemize}
+
+
+\item \textbf{Puntos de Referencia}
+
+\begin{center}
+  \includegraphics[scale=.42]{imagenes/landmark}
+\captionof{figure}{Puntos de referencia}
+ \label{fig:landmark}
+\end{center}
+
+
+
+A su vez, se utilizarán puntos de referencia con la ayuda de el software OpenCV y el modelo iBUG 300-W de delimitación de rostro para dividir las características que posteriormente serán extraídas y posteriormente clasificadas.
+
+En la siguiente tabla se muestra la delimitación y agrupación de los puntos de interés, tales como: ojo derecho, ojo izquierdo y boca.
+\begin{center}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+Partes        & \multicolumn{1}{l|}{Puntos de Referencia} \\ \hline
+Boca          & {[}48-67{]}                               \\ \hline
+Ojo Derecho   & {[}36-41{]}                               \\ \hline
+Ojo Izquierdo & {[}42-46{]}                               \\ \hline
+\end{tabular}
+\caption{\label{tab:landmakrs} Agrupación de Puntos de Referencia}
+\end{table}
+\end{center}
+
+
+\item \textbf{Mouth Opening Ratio}
+
+
+Bostezar es un signo cansancio. El bostezo se caracteriza por una apertura lenta y amplia de la boca. Por lo que se necesita medir el tamño y la forma de la boca es necesario para identificar un bostezo. Para esto, se utilizara el \emph{Mouth Opening Ratio} que es un método que utiliza puntos de referencia para medir la apertura de la boca. Entre más grande sea este valor, más es la aperatura de la boca, por lo tanto cumple con las características de un bostezo.
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/MOR}
+\captionof{figure}{\emph{Mouth Opening Ratio}}
+ \label{fig:landmark}
+\end{center}
+
+La formula general para calular el \emph{MOR} es la siguiente:
+\begin{equation}
+MOR = \frac{\left \|p_{2}-p_{8}  \right \| +\left \|p_{3}-p_{7}  \right \|+\left \| p_{4}-p_{6} \right \|}{2\left \| p_{1}-p_{5}\right \|}
+\end{equation}
+
+Utilizando nuestros puntos de referencia, se podrá calcular el MOR de la siguiente manera:
+
+\begin{equation}
+MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-P55 \right \|}{2\left \| P48-P54\right \|}
+\end{equation}
+
+
+\end{itemize}
+
+
+\newpage
+\subsubsection{Diseño del Submódulo de Deep Learning}
+
+\newpage
+\subsection{Diseño del Módulo de Comunicaciones}
+
+\newpage
+\subsubsection{Diseño del Submódulo de Transmisión de Datos}
+
+\newpage
+\subsubsection{Diseño del Submódulo de Telemetría}
+
+\newpage
+\subsubsection{Diseño del Submódulo de Cobertura}
+
+\newpage
+\subsection{Diseño de la Estación Base}
+
+\newpage
+\subsubsection{Diseño de la Aplicación Web}
+
+\newpage
+\subsubsection{Diseño de la Base de Datos}
 
 \newpage
 \section{Propuesta de Solución}
