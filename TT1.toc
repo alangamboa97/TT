@@ -17,19 +17,17 @@
 \contentsline {subsubsection}{\numberline {9.1.2}An\'alsis del Subm\'odulo de Deep Learning}{33}{subsubsection.9.1.2}%
 \contentsline {subsection}{\numberline {9.2}An\'alisis de la Estaci\'on Base}{34}{subsection.9.2}%
 \contentsline {subsubsection}{\numberline {9.2.1}An\'alisis de la Aplicaci\'on Web}{35}{subsubsection.9.2.1}%
-\contentsline {section}{\numberline {10}Dise\~no}{42}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Dise\~no General del Sistema}{42}{subsection.10.1}%
-\contentsline {subsubsection}{\numberline {10.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{43}{subsubsection.10.1.1}%
-\contentsline {subsection}{\numberline {10.2}Dise\~no del M\'odulo Central de Procesamiento}{48}{subsection.10.2}%
-\contentsline {subsubsection}{\numberline {10.2.1}Dise\~no del Subm\'odulo de Procesamiento de Im\'agenes}{49}{subsubsection.10.2.1}%
-\contentsline {subsubsection}{\numberline {10.2.2}Dise\~no del Subm\'odulo de Deep Learning}{51}{subsubsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.3}Dise\~no del M\'odulo de Comunicaciones}{52}{subsection.10.3}%
-\contentsline {subsubsection}{\numberline {10.3.1}Dise\~no del Subm\'odulo de Transmisi\'on de Datos}{53}{subsubsection.10.3.1}%
-\contentsline {subsubsection}{\numberline {10.3.2}Dise\~no del Subm\'odulo de Telemetr\IeC {\'\i }a}{54}{subsubsection.10.3.2}%
-\contentsline {subsubsection}{\numberline {10.3.3}Dise\~no del Subm\'odulo de Cobertura}{55}{subsubsection.10.3.3}%
-\contentsline {subsection}{\numberline {10.4}Dise\~no de la Estaci\'on Base}{56}{subsection.10.4}%
-\contentsline {subsubsection}{\numberline {10.4.1}Dise\~no de la Aplicaci\'on Web}{57}{subsubsection.10.4.1}%
-\contentsline {subsubsection}{\numberline {10.4.2}Dise\~no de la Base de Datos}{58}{subsubsection.10.4.2}%
-\contentsline {section}{\numberline {11}Propuesta de Soluci\'on}{59}{section.11}%
-\contentsline {section}{\numberline {12}Conclusiones}{60}{section.12}%
-\contentsline {section}{\numberline {13}Bibliografia}{61}{section.13}%
+\contentsline {subsection}{\numberline {9.3}Dise\~no del M\'odulo Central de Procesamiento}{42}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}Dise\~no de la Unidad Contenedora de Procesamiento}{43}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}Dise\~no del Subm\'odulo de Procesamiento de Im\'agenes}{48}{subsubsection.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.3}Dise\~no del Subm\'odulo de Deep Learning}{50}{subsubsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.4}Dise\~no del M\'odulo de Comunicaciones}{51}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}Dise\~no del Subm\'odulo de Transmisi\'on de Datos}{52}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}Dise\~no del Subm\'odulo de Telemetr\IeC {\'\i }a}{53}{subsubsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.3}Dise\~no del Subm\'odulo de Cobertura}{54}{subsubsection.9.4.3}%
+\contentsline {subsection}{\numberline {9.5}Dise\~no de la Estaci\'on Base}{55}{subsection.9.5}%
+\contentsline {subsubsection}{\numberline {9.5.1}Dise\~no de la Aplicaci\'on Web}{56}{subsubsection.9.5.1}%
+\contentsline {subsubsection}{\numberline {9.5.2}Dise\~no de la Base de Datos}{57}{subsubsection.9.5.2}%
+\contentsline {section}{\numberline {10}Propuesta de Soluci\'on}{58}{section.10}%
+\contentsline {section}{\numberline {11}Conclusiones}{59}{section.11}%
+\contentsline {section}{\numberline {12}Bibliografia}{60}{section.12}%

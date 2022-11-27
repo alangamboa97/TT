@@ -9,6 +9,7 @@
 \usepackage{lmodern}
 \usepackage{adjustbox}
 \usepackage{titlesec}
+\usepackage{float}
 
 \marginsize{2cm}{2cm}{1cm}{1cm}
 \usepackage{fancyhdr}
@@ -695,25 +696,10 @@ Después de que cada clasificador débil es seleccionado, los \emph{data points} q
 \subsection{Análsis del Módulo Central de Procesamiento}
 \newpage
 \subsubsection{Análisis del Submódulo de Procesamiento de Imágenes}
-
-
-\newpage
-\subsubsection{Análsis del Submódulo de Deep Learning}
-
-\newpage
-\subsection{Análisis de la Estación Base}
-
-\newpage
-\subsubsection{Análisis de la Aplicación Web}
-
-\newpage
-
-
-
 \begin{itemize}
 
 
-\item \textbf{Análisis de Requerimientos Funcionales}
+\item \textbf{Requerimientos Funcionales}
 
 \begin{table}[h]
 \centering
@@ -733,119 +719,298 @@ Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular
 \end{tabular}
 \caption{RF01- Capturar Video en Tiempo Real}
 \end{table}
+
+
+\end{itemize}
+\newpage
+\subsubsection{Análsis del Submódulo de Deep Learning}
+
+\newpage
+\subsection{Análisis de la Estación Base}
+
+\newpage
+\subsubsection{Análisis de la Aplicación Web}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF01}}                                              & \emph{Iniciar Sesión}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbf{Descripción:}  El sistema permitirá iniciar sesión en la aplicación web\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Amazon Cognito\\
+\quad $\bullet$ Administrador\\
+\quad $\bullet$ Credenciales\\
+\quad $\bullet$ MongoDB
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El sistema, con la ayuda de los servicios de Amazon Cognito, comprobará que las credenciales ingresadas por parte del usuario administrador se encuentren en la base de datos. En caso contrario, la aplicación web indicará que ese usuario no se encuentra registrado en la base de datos.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF01- Iniciar Sesión}
+\end{table}
+
+
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF02}}                                              & \emph{Mostrar el Historial de Reportes de Incidencia}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema desplegará en forma de lista todas las incidencias que se tengan registradas en la base de datos\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Incidencias\\
+\quad $\bullet$ Administrador\\
+\quad $\bullet$ MongoDB
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El sistema recuperará de la base de datos todas las incidencias que se tengan registradas.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Visualizar Reporte de Incidencia}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema desplegará los detalles específicos de cada incidencia registrada.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Incidencia\\
+\quad $\bullet$ Administrdor\\
+\quad $\bullet$ Conductor
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El usuario administrador podrá visualizar los reportes individuales de incidencias de cada conductor al hacer click en cualquiera de las incidencias mostrada en la lista principal. Los reportes contendrán informacón sobre la fecha, hora, ubicación y un video corto del momento en que fueron detectados síntomas de somnolencia.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Visualizar Reporte de Incidencia}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema desplegará los detalles específicos de cada incidencia registrada.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Incidencia\\
+\quad $\bullet$ Administrdor\\
+\quad $\bullet$ Conductor
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El usuario administrador podrá visualizar los reportes individuales de incidencias de cada conductor al hacer click en cualquiera de las incidencias mostrada en la lista principal. Los reportes contendrán información sobre la fecha, hora, ubicación y un video corto del momento en que fueron detectados síntomas de somnolencia.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF03- Visualizar Reporte de Incidencia}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Confirmar Incidencia}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema permitirá al administrador confirmar la incidencia, esto para descartar que se trate de un falso positivo.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Administrador\\
+\quad $\bullet$ Incidencia\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ MongoDB
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El usuario administrador podrá confirmar la incidencia después de haber revisado el videoclip del momento de somnolencia con la intención de descartar falsos positivos. Esto será posible ingresando a una incidencia específica mostrando sus detalles.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF04- Confirmar Incidencia}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Recuperar Contraseña}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema contará con una opción para recuperar la contraseña del administrador en caso de que sea olvidada la contraseña.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Amazon Cognito\\
+\quad $\bullet$ Email\\
+\quad $\bullet$ Administrador\\
+\quad $\bullet$ MongoDB
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El sistema requerirá que el usuario administrador ingrese el correo con el que fue registrado. Posteriormente se le enviará un código de recuperación de contraseña a ese correo. El administrador ingresará se código en el apartado de recuperar contraseña y así podrá ingresar una nueva contraseña.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF05 - Recuperar Contraseña}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF06}}                                              & \emph{Mostrar Perfil Conductor}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema permitirá al usuario administrador visualizar los datos de cada conductor registrado en la base de datos.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Perfil\\
+\quad $\bullet$ Conductor\\
+
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El administrador podrá consultar cada uno de los perfiles de los conductores registrados en la base de datos dando click en el nombre del mismo. En dicho perfil se mostrarán datos como nombre, apellido, así como el número de incidencias de dicho conductor, con sus respectivos detalles.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF06- Mostrar perfil del Conductor}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF07}}                                              & \emph{Mostrar Ubicación Geográfica}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}La aplicación web, con ayuda de los datos proporcionados por el módulo de telemetría, mostrará la ubicación en tiempo real de un conductor.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Ubicación en Tiempo Real\\
+\quad $\bullet$ Módulo de Telemetría\\
+
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El sistema permitirá al administrador consultar la ubicación de los conductores en tiempo real. Para esto el administrador deberá de ingresar previamente al perfil del conductor del cual desea consultar dicha ubicación.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF07- Mostrar ubicación Geográfica}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF08}}                                              & \emph{Descartar Incidencia}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema permitirá catalogar una incidencia como Falsa si fuera el caso.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Incidencia\\
+\quad $\bullet$ Administrador\\
+
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+En caso de presentarse una incidencia falsa, después de haber sido revisada por el administrador, esta podrá ser catalogada como falsa incidencia y será eliminada automáticamente de la base de datos.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF08- Descartar Incidencia}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF09}}                                              & \emph{Registrar Usuario}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema le permitirá al administrador registrar nuevos conductores.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Incidencia\\
+\quad $\bullet$ Administrador\\
+
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+En caso de presentarse una incidencia falsa, después de haber sido revisada por el administrador, esta podrá ser catalogada como falsa incidencia y será eliminada automáticamente de la base de datos.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF09- Registrar Usuario}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF10}}                                              & \emph{Modificar Usuario}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema le permitirá al administrador modificar los datos del conductor.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Nombre\\
+\quad $\bullet$ Apellido\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Administrador
+
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El administrador podrá editar los datos de los conductores como nombre o apellido.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF10- Mostrar el Historial de Reportes de Incidencia}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF11}}                                              & \emph{Elimininar Usuario}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema le permitirá al administrador eliminar los datos del conductor.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Administrador
+
+
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El sistema le permitirá al eliminar los datos de conductores de la base de datos.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF11- Mostrar el Historial de Reportes de Incidencia}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF12}}                                              & \emph{Generar Mensaje de Alerta}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema alertará con un mensaje en caso de que algún componente en alguna Unidad Contenedora no funcione correctamente.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Módulo Central de Procesamiento\\
+\quad $\bullet$ Administrador\\
+\quad $\bullet$ Alerta
+
+
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El sistema enviará un mensaje de alerta al administrador indicando que Unidad presenta algún desperfecto, esto con la intención de sea reparada posteriormente.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF12- Generar Mensaje de Alerta}
+\end{table}
+
+
+\newpage
+
+
+
+\begin{itemize}
+
+
+\item \textbf{Análisis de Requerimientos Funcionales}
+
+
 	        
 \item \textbf{Análisis de Requerimientos no Funcionales}
 
 
 
-
-
-
-\item Raspberry Pi 4 Modelo B\\
-De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
-Dimensiones 85 x 53mm. 
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
-\captionof{figure}{Especificaciones Físicas}
- \label{fig:scaraindust}
-\end{center}
-
-\item Zumbador Pasivo KY-006\\
-Dimensiones 18 x 15mm. 
-\begin{center}
-  \includegraphics[scale=.2]{imagenes/KY-006}
-\captionof{figure}{Zumbador Pasivo KY-006}
- \label{fig:scaraindust}
-\end{center}
-
-\item Cámara Arducam Pivariety IMX230\\
-Dimensiones de la placa: 38 x 38mm.
-
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/camara}
-\captionof{figure}{Cámara Pivariety IMX230}
- \label{fig:scaraindust}
-\end{center}
- 
-
-\item Cable macho-hembra\\
-
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/Jumpers}
-\captionof{figure}{Jumpers}
- \label{fig:scaraindust}
-\end{center}
-
-Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
-Largo 10 cm. 
-
-\item Micro SD\\  
-Dimensiones: 15 x 11 x 1 mm. 
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/MicroSD}
-\captionof{figure}{Micro SD}
- \label{fig:scaraindust}
-\end{center}
-\newpage
-\item \textbf{RasperryPi 3G/4G/ LTE Base HAT}
-
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/sixfabhat}
-\captionof{figure}{RasperryPi 3G/4G/ LTE Base HAT}
- \label{fig:scaraindust}
-\end{center}
-
-Este HAT celular proporciona una conexión de datos simplificada para proyectos de IoT remotos, en el campo, en todo el mundo, en todas partes. Comience a usar una conexión LTE de alta velocidad con bajo consumo de energía en un factor de forma delgado con todo el software necesario para Raspberry Pi.
-
-\item \textbf{LE 910Cx Mini PCIe Series Linux}
-
-\begin{center}
-  \includegraphics[scale=.7]{imagenes/LE910}
-\captionof{figure}{LE 910Cx Mini PCIe Series Linux}
- \label{fig:scaraindust}
-\end{center}
-
-
-Los módulos Mini PCIe (mPCIe) de la serie LE910Cx son
-optimizadas para redes LTE de baja categoría y están disponibles
-en modo único de LTE o con opciones de respaldo 3G/2G.
-
-\newpage
-\item \textbf{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
-
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/lteantena}
-\captionof{figure}{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
- \label{fig:scaraindust}
-\end{center}
-
-
-Antenas LTE principal y Diversity combinadas con una antena GNSS en una sola antena formada. Ajuste directo para el módulo Mini PCIe LTE de Quectel EC25, Telit LE910C1 y Telit LE910C4.
-
 \end{itemize}
 
-\newpage
 
-Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño modular para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
-
-\begin{center}
-  \includegraphics[scale=.3]{imagenes/unidadcontenedora}
-\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento}
- \label{fig:scaraindust}
-\end{center}
  
+
+
+
+
 \newpage
-\section{Diseño}
-\subsection{Diseño General del Sistema}
+\subsection{Diseño del Módulo Central de Procesamiento}
 
-Utilizando la metodología Top-Down, se propone el siguiente diagrama modular del sistema.
 
-\begin{center}
-  \includegraphics[scale=.43]{imagenes/topdowngeneral}
-\captionof{figure}{Diseño Modular del Sistema}
- \label{fig:landmark}
-\end{center}
 
 \newpage
 \subsubsection{Diseño de la Unidad Contenedora de Procesamiento}
@@ -951,8 +1116,6 @@ Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo
 \end{center}
  
 
-\newpage
-\subsection{Diseño del Módulo Central de Procesamiento}
 
 
 \newpage
