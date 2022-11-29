@@ -436,7 +436,118 @@ Cabe señalar que los anteriores modelos muestran el campo Id, sin embargo, Mongo
 
 
 \newpage
-\section{Investigación de Servidores de alojamiento}
+\section{Búsqueda de Servidores de alojamiento}
+
+Para el presente proyecto se requiere una capacidad de almacenamiento que nos permita el uso de archivos multimedia, concretamente archivos de video.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Tipo de Multimedia} & \textbf{Ejemplos}             \\ \hline
+Imágenes                    & JPEG, GIF, PNG, Archivos TIFF \\ \hline
+Audio                       & MP3, WAV, ACC                 \\ \hline
+Video                       & QuickTime, MP4, Youtube       \\ \hline
+\end{tabular}
+\caption{Tipos de Archivo Multimedia}
+\end{table}
+
+Si se requiere alojar una aplicación web cuyo contenido predominante sea multimedia, se deberá de tomar en cuenta los siguientes factores:
+
+
+\begin{itemize}
+\item  Ancho de banda
+
+El ancho de banda y el almacenamiento son una función de su plan de alojamiento. Generalmente un plan de alojamiento en la nube  permite pagar por un uso menor durante las horas de menor actividad y explotar cuando recibe mucho tráfico. No se paga por ancho de banda o espacio de almacenamiento que en realidad no se utiliza.
+
+\item Almacenamiento
+
+Si se tiene una gran cantidad de archivos multimedia, entonces se requiere gran capacidad de almacenamiento. Lo ideal sería contar con almacenamiento ilimitado, pero esto significaría un aumento considerable al costo de alojamiento. Se debe de analizar un aproximado de almacenamiento necesario y en base a eso se deberá elegir el plan de almacenamiento que mejor cubra esas necesidades.
+
+\item CDN (\emph{Content Delivery Network})
+
+Lo último que debe considerar con el alojamiento de medios es una red de entrega de contenido o CDN. Una CDN intenta mejorar el rendimiento de la transmisión de medios mediante la ubicación de servidores que están geográficamente cerca del usuario mediante sofisticados algoritmos de ubicación y de ruteo.
+
+\end{itemize}
+
+Sabiendo lo anterior, se analizarán distintos proveedores de alojamiento con la intención de saber cuál de ellos se adapta mejor a nuestras necesidades.
+
+\begin{itemize}
+\item AWS Amplify Hosting
+AWS Amplify Hosting es un servicio de alojamiento e Integración Continua/Entrega Continua completamente administrado para aplicaciones estáticas, rápidas, seguras, fiables, renderizadas del lado del servidor y que escalan a la par. Algunas de sus principales ventajas son:
+
+\begin{itemize}
+\item \textbf{Implementación de contenido web con rapidez}
+
+AWS permite la implementación continua de una aplicación web estática o renderizada del lado del servidor, una página de inicio de la aplicación móvil o una aplicación progresiva en cada confirmación de código.
+
+
+\item \textbf{CDN}
+
+Cuenta con la red de entrega de contenido (CDN) de Amazon CloudFront con cientos de puntos de presencia en todo el mundo. Lo que permite un tiempo de respuesta de hasta menos de 10ms.
+
+\item \textbf{Monitoreo}
+
+AWS cuenta con un sistema de monitoreo de tráfico en tiempo real. También permite crear alarmas personalizadas para enviar notificaciones cuando la métrica haya superado el límite establecido. 
+
+\item \textbf{Precio}
+
+AWS cuenta con dos planes, uno gratuito y otro de paga, a continuación, se detallan las características de cada uno.
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/amplify}
+\captionof{figure}{Planes de Alojamiento AWS Amplify}
+ \label{fig:DiagramadeactividadMEB}
+\end{center}
+
+\item \textbf{A2Hosting}
+
+\begin{itemize}
+\item \textbf{Alojamiento Compartido}
+
+A2 Hosting cuenta con dos tipos de planes de alojamiento, el primero con costo de renovación que  va desde \$10.99 dls . Si se llegara a necesitar un servidor dedicado, el plan que nos ofrece está característica tiene un precio de  \$25.99 por mes.
+
+\item \textbf{VPS}
+
+VPS significa servidor privado virtual por sus siglas en inglés. Es una forma de dividir un servidor en (sub)servidores individuales más pequeños. Esto significa que se puede configurar de acuerdo a las necesidades del cliente y no tener que compartir recursos con otros clientes. Un VPS en A2 Hosting cuesta desde tan solo \$7.65 al mes hasta alrededor de \$200 dependiendo del numero de subdivisiones necesarias.
+
+\item \textbf{CDN}
+A2 Hosting no ofrece servicio de CDN, sin embargo, cualquiera de sus planes ofrecen la posibilidad de contratar un servicio de CDN proveedores externos pagando un precio extra del precio base dependiendo del plan contratado.
+
+\end{itemize}
+
+
+\item \textbf{HosGator}
+\begin{itemize}
+
+\item \textbf{Tiempo de Respuesta}
+
+De acuerdo con el sitio Bitcatcha, que se dedica a evaluar los tiempos de respuestas de los servidores de páginas web, HostGator poseé tiempos de respuestas mínimos para el territorio de Estados Unidos. A continuación se muestra los tiempos de respuesta de distintos territorios:
+
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/respuesta}
+\captionof{figure}{Planes de Alojamiento AWS Amplify}
+ \label{fig:DiagramadeactividadMEB}
+\end{center}
+
+HostGator posee solo 2 datacenters, uno localizado en el área oeste, y otro en el este. Esto puede ocasionar que los tiempos de respuesta no sean los mejores en áreas que estén alejadas de las antes mencionadas
+
+
+\item \textbf{Disponibilidad}
+HosGator ofrece una disponibilidad del 99.9\%, esto quiere decir que los sitios que se decida alojar en los servidores de HostGator deberían ser accesibles la mayoría del tiempo.
+
+
+\end{itemize}
+
+
+\end{itemize}
+
+
+
+\end{itemize}
+
+
 
 
 \newpage
@@ -1048,13 +1159,17 @@ El sistema enviará un mensaje de alerta al administrador indicando que Unidad pr
  \label{fig:scaraindust}
 \end{center}
 
+El Diagrama de Casos de Uso de la aplicación web muestra desde la perspectiva del Usuario Administrador las actividades que se podrán realizar. El usuario Administrador podrá iniciar sesión ingresando en la interfaz principal de la aplicación, posteriormente podrá registrar a los usuarios (conductores), cada conductor será registrado con un id, nombre y apellidos.  Este registro podrá ser eliminado o modificado por el usuario Administrador. Así mismo una de las tareas asignadas para este usuario Administrador es la confirmación de la incidencia, el cual tiene como objetivo verificar y valorar que la incidencia haya sido correctamente catalogada por el sistema de detección de somnolencia.   Debido a que el sistema puede presentar resultados falsos positivos que afecten al resultado. El usuario podrá visualizar los datos completos de la incidencia, incluyendo el id del conductor, el nombre y apellidos, el estatus de la incidencia, fecha, hora, ubicación y la url del video de la incidencia.  En caso de que el usuario no pueda ingresar al sistema debido a la contraseña, el usuario podrá recupérala ingresando al correo electrónico registrado. La aplicación web le permitirá al Usuario Administrador monitorear al conductor con la ubicación en tiempo real del conductor el cual desplegará un mapa con su posicionamiento actual. 
+
+
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/diagramaclasesaw}
-\captionof{figure}{Diagrama de Casos de Uso }
+\captionof{figure}{Diagrama de Clases }
  \label{fig:scaraindust}
 \end{center}
 
+El diagrama de clases muestra las clases, atributos, métodos y relaciones que tendrá cada una de las vistas del usuario. Como se puede observar, solamente el usuario Administrador podrá utilizar el sistema web. Mientras que el conductor no tendrá ninguna injerencia sobre esta última.
 
 
 
@@ -1150,63 +1265,81 @@ NodeJs nos permitirá manejar distintas peticiones sin que se tenga que esperara 
 \newpage
 \section{Diseño de la aplicación web}
 
+A continuación se muestran diversos diagramas de secuencias que describen los procesos de los requerimientos definidos en la sección de Análisis.
+
+
 \begin{center}
   \includegraphics[scale=.6]{imagenes/sec_reporte_incidencia}
 \captionof{figure}{Diagrama de Secuencia Detalle Reporte Incidencia }
  \label{fig:scaraindust}
 \end{center}
+
+El Administrador podrá consultar el reporte de incidencia de cada uno de los conductores. Accesando a la basde de datos de MongoDB
  
 
 \begin{center}
   \includegraphics[scale=.7]{imagenes/sec_ubicacion}
-\captionof{figure}{Diagrama de Secuencia Detalle Reporte Incidencia }
+\captionof{figure}{Diagrama de Secuencia Consultar Ubicación}
  \label{fig:scaraindust}
 \end{center}
+
+De igual manera, el Administrador podrá consultar la ubicación en tiempo real del conductor.
  
 \begin{center}
   \includegraphics[scale=.6]{imagenes/sec_rcontrasena}
-\captionof{figure}{Diagrama de Casos de Uso }
+\captionof{figure}{Diagrama de Secuencia Recuperar Contraseña }
  \label{fig:scaraindust}
 \end{center}
+
+También podrá recuperar su contraseña en caso de que esta sea olvidada.
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/sec_confirmar}
-\captionof{figure}{Diagrama de Casos de Uso }
+\captionof{figure}{Diagrama de Secuencia Confirmar Incidencia}
  \label{fig:scaraindust}
 \end{center}
+
+Para evitar falsos positivos, el Administrador podrá confirmar una incidencia una vez mirando el video clip del incidente.
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/sec_perfil}
-\captionof{figure}{Diagrama de Casos de Uso }
+\captionof{figure}{Diagrama de Secuencia Consultar Perfil}
  \label{fig:scaraindust}
 \end{center}
+El Administrador podrá consultar el perfil de cada conductor. 
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/sec_registrar}
-\captionof{figure}{Diagrama de Casos de Uso }
+\captionof{figure}{Diagrama de Secuencia Registrar Conductor }
  \label{fig:scaraindust}
 \end{center}
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/sec_modificar}
-\captionof{figure}{Diagrama de Casos de Uso }
+\captionof{figure}{Diagrama de Secuencia Modificar Conductor}
  \label{fig:scaraindust}
 \end{center}
 
+En caso de que los datos del conductor sean incorrectos, el administrador podrá modificicarlos.
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/sec_eliminar}
-\captionof{figure}{Diagrama de Casos de Uso }
+\captionof{figure}{Diagrama de Secuencia Eliminar Conductor }
  \label{fig:scaraindust}
 \end{center}
 
+El Administrador también tendrá la opción de dar de baja a un conductor.
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/sec_estado}
-\captionof{figure}{Diagrama de Casos de Uso }
+\captionof{figure}{Diagrama de Secuencia Estado de los Periféricos }
  \label{fig:scaraindust}
 \end{center}
 
+La aplicación web indicará si alguno de los periféricos no se encuentra en correcto funcionamiento, lanzando una alerta indicando el número de Unidad y a qué conductor pertenece.
+
+
+A continuación se muestra el diseño propuesto de cada una de las vistas que tendrá la aplicación web.
 
 \begin{center}
   \includegraphics[scale=.3]{imagenes/login}
