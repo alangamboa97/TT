@@ -594,34 +594,43 @@ Las credenciales del Usuario Administrador no se almacenarán en la Base de Datos
 \clearpage
 \section{Diseño del Módulo de Estación Base}
 
+Con base en los requerimientos del sistema se plantea realizar el diseño de la arquitectura del Módulo de Estación Base, integrando el Módulo de Procesamiento Central y el Módulo de Comunicaciones. El cual hará énfasis en la organización y comunicación de los elementos que lo conforman.  
+
+Los siguientes diagramas muestran las interacciones entre elementos que se involucran en cada requerimiento funcional.  
+
+El Diagrama de comunicación para guardar video de incidencia requiere del Módulo Central de Procesamiento el cual se encargará de enviar el video para ser almacenado en Amazon S3 como un objeto, al cual se podrá acceder por medio de una URL prefirmada.
 
 \begin{center}
-  \includegraphics[scale=.5]{imagenes/DiagramaComunicacionRF2MEB}
+  \includegraphics[scale=.8]{imagenes/DiagramaComunicacionRF2MEB}
 \captionof{figure}{Diagrama de Comunicación para guardar video}
  \label{fig:DCGuardarVideo}
 \end{center}
 
+El Diagrama de comunicación para enviar incidencia requiere la interacción del Módulo Central de Procesamiento el cual se encargará de realizar y enviar el Reporte de Incidencia, posteriormente será almacenado en la Base de Datos (MongoDB).  
 
 \begin{center}
-  \includegraphics[scale=.5]{imagenes/DiagramaComunicacionRF1MEB}
+  \includegraphics[scale=.8]{imagenes/DiagramaComunicacionRF1MEB}
 \captionof{figure}{Diagrama de Comunicación para guardar incidencia}
  \label{fig:DCGuardarIncidencia}
 \end{center}
 
+El Diagrama de comunicación para conectar aplicación web requiere de la Base de Datos (MongoDB) y el \emph{backend} de la aplicación web, que se realizará con Node.js.
 
 \begin{center} 
-  \includegraphics[scale=.7]{imagenes/DiagramaComunicacionRF3MEB} 
+  \includegraphics[scale=.8]{imagenes/DiagramaComunicacionRF3MEB} 
 \captionof{figure}{Diagrama de Comunicación para conectar aplicación web} 
 \label{fig:DCConectarAppWeb} 
 \end{center} 
-  
+
+El Diagrama de comunicación para desplegar aplicación web requiere del servidor que nos permitirá alojar la aplicación web y desplegarla, con objetivo de permitirle al usuario acceder a la aplicación web.  
 
 \begin{center} 
-  \includegraphics[scale=.7]{imagenes/DiagramaComunicacionRF4MEB} 
+  \includegraphics[scale=.8]{imagenes/DiagramaComunicacionRF4MEB} 
 \captionof{figure}{Diagrama de Comunicación para desplegar aplicación web} 
 \label{fig:DCDeplegarAppWeb} 
 \end{center} 
 
+El siguiente diagrama muestra la arquitectura final del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credencias de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{forntend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
 
 \begin{center} 
   \includegraphics[scale=.5]{imagenes/DisenoMEB} 
