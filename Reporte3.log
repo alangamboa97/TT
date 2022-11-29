@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  29 NOV 2022 17:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  29 NOV 2022 17:17
 entering extended mode
 **./Reporte3.tex
 (Reporte3.tex
@@ -1315,30 +1315,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 1443--1444
  []
 
 [50]
-Underfull \hbox (badness 1117) in paragraph at lines 1457--1458
-\OT1/lmr/m/n/12 Blog. Spring-board . Avai-la-ble at: https://www.springboard.co
-m/blog/data-science/best-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1480
+Underfull \hbox (badness 10000) in paragraph at lines 1476--1477
 \OT1/lmr/m/n/12 https://www.inesem.es/revistadigital/informatica-y-tics/los-ges
 tores-de-bases-de-datos-mas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1483--1484
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1481
 []\OT1/lmr/m/n/12 CursosGratis. "Ven-ta-jas y des-ven-ta-jas de la ba-se de da-
 tos re-la-cio-nal".
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1483--1484
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1481
 \OT1/lmr/m/n/12 https://aprendiendoaprogramar.es/blog/ventajas-y-desventajas-de
 -la-base-de-datos-
  []
 
-[51] (Reporte3.aux
+
+Underfull \hbox (badness 5008) in paragraph at lines 1496--1497
+[]\OT1/lmr/m/n/12 Matt Ahl-gren, \OT1/lmr/m/it/12 Re-vi-sion de alo-ja-mien-to
+ A2\OT1/lmr/m/n/12 , https://www.websiterating.com/es/web-
+ []
+
+[51] [52pdfTeX warning (ext4): destination with the same identifier (name{cite.
+bluehost}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1507 \end{document}
+                     ] (Reporte3.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
@@ -1349,10 +1354,10 @@ Package rerunfilecheck Info: File `Reporte3.out' has not changed.
 (rerunfilecheck)             Checksum: 5DC96742DFB69AE47D90DBBF2741733D;3849.
  ) 
 Here is how much of TeX's memory you used:
- 13877 strings out of 478927
- 217728 string characters out of 2852536
- 539152 words of memory out of 3000000
- 31290 multiletter control sequences out of 15000+600000
+ 13884 strings out of 478927
+ 217764 string characters out of 2852536
+ 539225 words of memory out of 3000000
+ 31293 multiletter control sequences out of 15000+600000
  455176 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,17n,66p,1375b,652s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1367,9 +1372,9 @@ sers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Us
 ers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Use
 rs/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Use
 rs/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Reporte3.pdf (52 pages, 1670609 bytes).
+Output written on Reporte3.pdf (53 pages, 1672319 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 148 named destinations out of 1000 (max. 500000)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 152 named destinations out of 1000 (max. 500000)
  312 words of extra memory for PDF output out of 10000 (max. 10000000)
 
