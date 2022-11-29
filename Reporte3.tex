@@ -63,6 +63,7 @@ Lista de actividades
  
 \begin{multicols}{2}
 \begin{itemize}
+\item Elección de tecnologías de geolocalización
 \item Búsqueda de manejadores de bases de datos
 \item Elección del manejador de bases de datos
 \item Modelado de la base de datos
@@ -115,6 +116,18 @@ Dr. Rodolfo Vera Amaro\\
 \listoffigures
 \newpage
 \listoftables
+
+\newpage
+\section{Elección de tecnologías de geolocalización }
+
+Entre las diferentes tecnologías que existen para la geolocalización, nos inclinamos por la tecnología GPS que indica la posición geográfica de un objeto o individuo. Envía información precisa del posicionamiento en intervalos cortos de tiempo, una vez que los datos sean recibidos por un módulo GPS este es capaz de localizar su posición. Además, la utilización principal de este es precisamente vehicular, su sistema de geolocalización es de los más precisos con un margen de error de hasta 10 metros.
+Previamente se eligió una antena LTE que cuenta con un componente GPS integrado del cual se obtendrán las coordenadas mediante su previa configuración en un puerto específico. Se optó por el uso del módulo GPS integrado en la antena LTE debido a la reducción de costos y practicidad de configuración por el módulo integrado.
+
+\begin{center}
+  \includegraphics[scale=2]{imagenes/GPS_AntenaSixfab}
+\captionof{figure}{Rastreador GPS con antena Sixfab 3G, 4G/LTE}
+ \label{fig:GPS_AntenaSixfab}
+\end{center}
 
 
 \newpage
@@ -436,16 +449,136 @@ El modelo de documento para la colección ?Incidencias?, se usará para registrar 
 Cabe señalar que los anteriores modelos muestran el campo de ?Id?, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres.   
 
 
-\newpage
-\section{Análisis del Módulo de Telemetría }
 
+
+\newpage
+\section{Análisis del Sistema de Comunicaciones }
+Los sistemas automatizados de comunicación, mayormente inalámbricos, se encargan de recopilar datos remotos y transmitir la información.
+La tecnología previamente elegida para la implementación de este módulo es la red 4G/LTE, su estándar es establecido por el 3GPP (Proyecto de asociación de tercera generación) donde establece sus especificaciones en la versión 8 de sus estándares, el cual clasifica hasta 13 categorías LTE. En estas categorías se especifica la velocidad máxima de carga y descarga, siendo la categoría 0 la velocidad más baja.
+
+\begin{table}[H]
+	\begin{center}
+\begin{tabular}{| c | c | c |}
+\hline
+
+Categoría & Velocidad Máxima de Bajada(Mbps)& Velocidad Máxima de Subida (Mpbs \\ \hline
+0 &  1 &  1   \\ \hline
+1 &  10 &  5  \\ \hline
+2 &  50 &  25   \\ \hline
+3 & 100 &  50  \\ \hline
+4 & 150 &  50  \\ \hline
+5 & 300 &  75   \\ \hline
+6 &  300 &  50  \\ \hline
+7 &  300 &  150 \\ \hline
+8 & 1200 & 600   \\ \hline
+9 &  450 &  50  \\ \hline
+10 &  450 &  100  \\ \hline
+11 &  600 &  50 \\ \hline
+12 &  600 &  100  \\ \hline
+13 & 390 &  150  \\ \hline
+
+\end{tabular}
+\caption{\label{tab:CLTE} Categorías LTE}
+\end{center}
+\end{table}
+
+De la categoría 0 a la 5 se definen para equipos de usuarios, es decir, telefonía celular. 
+Las antenas de la red 4G no cuentan con una categoría inferior a 4, siendo la más común la categoría 6. Por lo tanto, la velocidad se encuentra entre 1-50Mbps que depende de la cobertura de la red.
+Para este sistema, el análisis debe cumplir con los parámetros que dicta el teorema de Shannon que establece que, dado un canal con ruido con una capacidad $C$ e información transmitida en una tasa $R$ entonces si $R<C$ existe una técnica de codificación que permite que la probabilidad de error en el $Rx$ se reduzca. Se debe cumplir que la tasa de bits debe ser siempre menor a la capacidad del canal.
+
+Este análisis se divide en:
+\begin{itemize}
+\item Telemetría:\\El módulo de telemetría es el encargado de recopilar, procesar y transmitir las coordenadas de la ubicación geográfica del conductor a la estación base que se encarga de monitorear los datos obtenidos.
+
+\item Datos:\\ El encargado de recopilar, procesar y transmitir los fotogramas que el sistema identifica como somnolencia en el conductor, así como un mensaje informativo.
+
+\item Telemetría:\\ Encargado de revisar la cobertura de la zona o regiones presentes en el alcance del sistema.
+\end{itemize}
+
+\subsection{Análisis de Telemetría }
+El objetivo que tiene el módulo de telemetría es mandar el posicionamiento mediante coordenadas (latitud y longitud) del vehículo en movimiento en tiempo real. Las coordenadas serán mandadas en forma de cadena de texto, teniendo un aproximado máximo de hasta 100 bits, otro punto a considerar es el periodo de tiempo entre el envío de cada posición, al tratarse de un vehículo en movimiento y la velocidad máxima siendo regida por Semovi (Secretaría de movilidad de la ciudad de México) que dicta una velocidad promedio de entre 50-80 km/h.
+
+Se propone una velocidad de 60 km/h:
+
+\begin{equation*}
+60 \frac{km}{h} \cdot \frac{1000m}{1km}\cdot \frac{1h}{60min} \cdot \frac{1min}{60s}= 16.6 \frac{m}{s}\approx1 7\frac{m}{s}
+\end{equation*}
+
+
+El automóvil se desplaza aproximadamente 17 metros en 1 segundo. Se propone que cada 10 segundos se envíe la ubicación  para posteriormente trazar la ruta en el mapa. Teniendo 170 metros recorridos cada 10 segundos del viaje.
+Verificando que se cumpla el Teorema de Shannon tenemos:
+\begin{equation*}
+100 bits \cdot 10 s=1kbps
+\end{equation*} 
+y teniendo una capacidad del canal de hasta 5Mbps
+
+Cumpliéndose la relación establecida de $R<C$.
+\begin{equation*}
+1kbps<5 Mbps
+\end{equation*}
+
+\subsection{Análisis de Datos }
+El objetivo que tiene el análisis de los datos es mandar fotogramas a la estación base para su futura gestión y validación, así como el almacenamiento de estos; de igual manera se pretende el envío de mensajes informativos para la estación base.
+Anteriormente se establecen las especificaciones que debe tener el material multimedia a utilizar, las características que debe tener el clip grabado es una profundidad de bits de mínimo 8  y una resolución de mínimo 960 x 540 píxeles comúnmente conocido como QHD o Quarter of High Definition por sus siglas en inglés, que es lo mínimo necesario que requiere el sistema, todo esto en una secuencia de 30fps.
+Tenemos que:
+
+\begin{equation*}
+960 \; x \; 540 \; x \; 8=4,147,200 \; bits
+\end{equation*}
+
+Cada imagen tiene 4,147,200 bits entonces en 1 segundo se transmiten:
+\begin{equation*}
+4,147,200 \; x \; 30 fps=124.41 \; Mbps
+\end{equation*}
+Que rebasa la capacidad de canal de red establecida por lo que es necesario el uso de un compresor de video MP4 para modificar la resolución en la que se almacena el video en la estación base, por otro lado, se tiene que contemplar el envío de al menos 2 fotogramas por segundo para no sobrepasar la capacidad de canal.   
+Tenemos que:
+
+\begin{equation*}
+640 \; x \; 480 \; x \; 8=2,457,600 \; bits
+\end{equation*}
+Cada imagen tiene 2,457,600 bits entonces en 1 segundo se transmiten:
+\begin{equation*}
+2,457,600 \; x \; 2 fps=4.91 \; Mbps
+\end{equation*}
+Cumpliéndose nuevamente la relación establecida $R < C$.
+\begin{equation*}
+4.91 Mbps<5 Mbps
+\end{equation*}
+Más 1kbps de la tasa de bits a utilizar del texto informativo que se pretende enviar.
+
+\subsection{Análisis de Cobertura}
+
+La red de telefonía celular funciona mediante celdas, estas celdas tienen el objetivo de mantener conectados a los dispositivos en las diferentes áreas de cobertura y cada una de ellas contiene una estación base o antena. El handover o handoff es el proceso de transferir el servicio de una celda a otra, ya sea cuando se pierde la calidad en una de ellas o cuando el dispositivo se va trasladando. 
+Para el análisis de cobertura de la red LTE se tiene en cuenta el sistema handoff ya que el dispositivo se irá trasladando entre distintas celdas.
+La cobertura de LTE por Telcel es la más amplia del país, su mayor cobertura está concentrada en la Ciudad de México, por lo que tendremos una buena recepción, aunque en ocasiones debido a la saturación de la red o al transferir el servicio de la antena de una estación base a otra se puede encontrar alguna intermitencia o retraso, en estos casos el módulo va a pasar a modo de espera para enviar la información una vez se restablezca la red.
+
+\begin{center}
+  \includegraphics[scale=1.36]{imagenes/mapaLTE}
+\captionof{figure}{Mapa de cobertura de la red LTE }
+ \label{fig:mapaLTE}
+\end{center}
+
+En el mapa de cobertura la zona verde hace referencia a zonas con cobertura garantizada y la zona amarilla cobertura no garantizada, en caso de realizar pruebas en las zonas amarillas del mapa se va a notar un cambio en la velocidad del dispositivo móvil ya sea para la transferencia de archivos o la conectividad a la red, ocasionando un handoff fuerte; por el otro lado, al estar realizando pruebas en la zona verde del mapa su handoff será más suave.
+
+\textbf{Alcances:}
+\begin{itemize}
+\item Envío de las coordenadas y mensaje informativo del posicionamiento del vehículo a la estación base.
+\item Envío del fotograma y mensaje informativo del vehículo a la estación base.
+\item Compresión a MP4 para la transmisión y almacenamiento del fotograma.
+\item Recepción del status del envío de la información transmitida.
+\end{itemize}
+
+\textbf{Restricciones:}
+\begin{itemize}
+\item La velocidad de transmisión es de hasta 5Mbps.
+\item El envío de las coordenadas en periodos de 10 segundos.
+\item El envío de fotogramas a la estación base se mantiene limitado a 2 fps.
+\item El envío de la cadena de texto se mantiene limitada a 100 bits.
+\item El sistema de comunicación transmite la información solamente en zonas que cuenten con cobertura garantizada.
+\end{itemize}
+
+\section{Diseño del Sistema de Comunicaciones }
   
-
-\newpage
-\section{Diseño del Módulo de Telemetría}
-
-
-
 \newpage
 \section{Investigación de Servidores de alojamiento}
 
