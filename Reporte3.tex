@@ -120,7 +120,7 @@ Dr. Rodolfo Vera Amaro\\
 \newpage
 \section{Búsqueda de manejadores de bases de datos}
 
-Un Sistema Gestor de Base de Datos (SGBD) o \emph{DataBase Managenent System} (DBMS) es un sistema que permite la creación, gestión y administración de bases de datos, así como la elección y manejo de las estructuras necesarias para el almacenamiento y búsqueda de información del modo más eficiente posible.\\
+Un Sistema Gestor de Base de Datos (SGBD) o \emph{DataBase Management System} (DBMS) es un sistema que permite la creación, gestión y administración de bases de datos, así como la elección y manejo de las estructuras necesarias para el almacenamiento y búsqueda de información del modo más eficiente posible.\\
 
 Los sistemas gestores de bases de datos son clasificados según la forma en que administran los datos en: 
 \begin{itemize}
@@ -163,7 +163,7 @@ No existe ningún proceso de procesamiento de consultas y, por lo tanto, las base
 Fáciles de usar y también son simples por su estructura. Permite al usuario obtener una experiencia rápida. El usuario obtiene muchos filtros de optimización u opciones para aumentar la velocidad de acceso a los datos.
  
 \item Presenta datos con precisión \\
-Las bases de datos contienen tablas precisas e interrelacionadas. Usa las claves primaria y externa para establecer la relación entre el archivo \emph{raw}. Por lo tanto, los usuarios no tienen ningún problema con la reputación de los datos anteriores que ya han recibido.
+Contienen tablas precisas e interrelacionadas. Usa las claves primaria y externa para establecer la relación entre el archivo \emph{raw}. Por lo tanto, los usuarios no tienen ningún problema con la reputación de los datos anteriores que ya han recibido.
 
 \item Accesible en cualquier momento \\
 El usuario no necesita ninguna ruta predefinida. Por lo tanto, la accesibilidad en el RDBMS es más fácil en comparación con otras bases de datos. Además, los usuarios también pueden modificar los datos rápidamente. 
@@ -191,7 +191,7 @@ Requiere importantes dispositivos de almacenamiento, especialmente dispositivos 
 
 \item Problema de rendimiento 
 
-El nivel de rendimiento puede ser bajo en las bases de datos relacionales porque depende de filas y columnas. Por lo tanto, si hay muchos filas y tablas, la consulta tardará más en procesar el resultado. Además, si hay una cantidad considerable de datos en la máquina, puede ralentizar el proceso de trabajo.  
+El nivel de rendimiento puede ser bajo en las bases de datos relacionales porque depende de filas y columnas. Por lo tanto, si hay muchas filas y tablas, la consulta tardará más en procesar el resultado. Además, si hay una cantidad considerable de datos en la máquina, puede ralentizar el proceso de trabajo.  
 
 \item Puede ser complejo de entender 
 
@@ -254,7 +254,7 @@ Para la administración de este tipo de bases de datos, actualmente los principal
 
 \item Son más eficientes en el procesamiento de los datos que las BBDD relacionales, por tal motivo, son la elección para aplicaciones que hacen un uso intensivo de estos, como por ejemplo \emph{streaming}. 
 
-\item Utilizan lo que se conoce como consistencia eventual, que consiste en que los cambios realizados en los datos serán replicados a todos los nodos del sistema, lo cual aumenta el rendimiento de estos sistemas en contrap osición a las propiedades ACID de las BBDD relacionales (Atomicidad, Consistencia/Integridad, Aislamiento y Durabilidad).
+\item Utilizan lo que se conoce como consistencia eventual, que consiste en que los cambios realizados en los datos serán replicados a todos los nodos del sistema, lo cual aumenta el rendimiento de estos sistemas en contraposición a las propiedades ACID de las BBDD relacionales (Atomicidad, Consistencia/Integridad, Aislamiento y Durabilidad).
 \end{itemize}
 
 \textbf{Ventajas:}
@@ -264,7 +264,7 @@ Para la administración de este tipo de bases de datos, actualmente los principal
 Grandes volúmenes de información son manejados fácilmente por las bases de datos NoSQL.  
 
 \item Administración de la base de datos \\
-Requieren menos administración práctica, cuenta con capacidades de distribución de datos y reparación automática, modelos de datos simplificados y menos requisitos de ajuste y administración. 
+Requieren menos administración práctica, cuentan con capacidades de distribución de datos y reparación automática, modelos de datos simplificados y menos requisitos de ajuste y administración. 
 
 \item Versatilidad \\
 Las posibilidades de crecimiento en el volumen de datos o la posibilidad de incluir cambios sobre la forma en la que ingresan los datos sin necesidad de alterar la estructura, lo que permite adaptarse de forma rápida a un entorno de alto dinamismo. 
@@ -284,7 +284,7 @@ No se necesitan servidores con gran cantidad de recursos para operar. La adaptab
 La mayoría de las alternativas de bases de datos NoSQL apenas han salido de las etapas de preproducción, y hay muchas características importantes que aún no se han implementado. 
 
 \item Atomicidad \\
-Algunas de estas bases de datos no incorporan la atomicidad de información. Esto puede derivar en que la información no sea consistente entre nodos. 
+Algunas de estas bases de datos no incorporan la atomicidad de la información. Esto puede derivar en que la información no sea consistente entre nodos. 
 
 \item Software poco documentado  \\
 Al ser tan relativamente nuevo, el NoSQL puede adolecer de que algunas operaciones sean limitadas por la falta de información sobre las herramientas y sus características. 
@@ -330,8 +330,8 @@ Para la administración de este tipo de bases de datos, actualmente los principal
 
 -Multiplataforma   & - La implementación en la nube a gran escala puede ser difícil. 
 
--No ofrece ninguna solución de conjuntos en clústeres madura. \\ \hline
-\textbf{ Cassandra} & Cassandra utiliza almacenamiento clave-valor. Es un SGBD NoSQL distribuido y masivamente escalable. Dispone de un lenguaje propio para las consultas denominado CQL (\emph{Cassandra Query Languaje}).   & -Multiplataforma 
+-No ofrece ninguna solución madura de conjuntos en clústeres. \\ \hline
+\textbf{ Cassandra} & Cassandra utiliza almacenamiento clave-valor. Es un SGBD NoSQL distribuido y masivamente escalable. Dispone de un lenguaje propio para las consultas denominado CQL (\emph{Cassandra Query Language}).   & -Multiplataforma 
 
 -Propio lenguaje de consultas 
 
@@ -367,7 +367,7 @@ Para la administración de este tipo de bases de datos, actualmente los principal
 \newpage
 \section{Elección del manejador de bases de datos}
 
-Debido a la escalabilidad, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (solo en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  
+Debido a la escalabilidad, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  
 
 Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación web se realizará utilizando como base el lenguaje JavaScript Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita, por lo cual no hay necesidad de pagar el uso de licencias. Otra característica importante es que es una base de datos multiplataforma, esto nos permitirá registrar información desde el sistema operativo Linux, que se ocupará en la Raspberry Pi y por otro lado se ocupará Windows en la aplicación web para la inserción, modificación, lectura y eliminación de los datos en la base de datos.  
 
@@ -384,7 +384,7 @@ Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación web se realizar
 
 Tomando en cuenta la elección de MongodDB como gestor de la base de datos, se consultó la documentación de MongoDB para conocer la estructura y el modelado de los datos.  
 
-MongoDB utiliza documentos para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemejaría a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
+MongoDB utiliza documentos para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemeja a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
 
 
 MongoDB almacena registros de datos como documentos BSON. BSON es una representación binaria de documentos JSON , aunque contiene más tipos de datos que JSON.   
@@ -397,7 +397,7 @@ Un registro en MongoDB es un documento, que es una estructura de datos compuesta
  \label{fig:EstructuraDocumentoMongoDB}
 \end{center}
 
-Basado en la estructura NOSQL de MongoDB, se propone el siguiente modelado para la base de datos, la cual contará con dos colecciones: Conductores e Incidencias. Cabe mencionar que en dicho modelado no se contempla a los administradores, debido a que se utilizará el sistema de Amazon Cognito, que ofrece herramientas de autenticación, registro, verificación e inicio de sesión para el usuario. 
+Basado en la estructura NOSQL de MongoDB, se propone el siguiente modelo para la base de datos, la cual contará con dos colecciones: Conductores e Incidencias. Cabe mencionar que en dicho modelo no se contempla a los administradores, debido a que se utilizará el sistema de Amazon Cognito, que ofrece herramientas de autenticación, registro, verificación e inicio de sesión para el usuario. 
 
 \begin{center}
   \includegraphics[scale=.3]{imagenes/ModeladoBD}
@@ -413,7 +413,7 @@ El modelo de documento para la colección Conductores, se usará para registrar el
  \label{fig:DocumentoConductores}
 \end{center}
 
-El modelo de documento para la colección Incidencias, se usará para registrar el Reporte de Incidencia que presente un conductor, el cual será enviado desde el Módulo Central de Procesamiento, por tanto, se realizará una consulta previa a la colección Conductores para obtener el id, nombre y apellido del conductor en marcha. Posteriormente se realizará el reporte de la incidencia, el cual contendrá el Id del conductor, la fecha y hora de la incidencia, el nombre y apellido del conductor, y el estado de incidencia, este último muestra si la incidencia fue catalogada como descartada o confirmada por parte del Usuario Administrador después de revisar el video de la incidencia. Como se mencionó anteriormente, MongoDB permite anidar documentos, por lo que, dentro de este documento se encontrará anidado un segundo documento llamado Detalles, el cual registrará la Ubicación donde sé detecto la incidencia y la URL donde se encontrará almacenado el video.  
+El modelo de documento para la colección Incidencias, se usará para registrar el Reporte de Incidencia que presente un conductor, el cual será enviado desde el Módulo Central de Procesamiento, por tanto, se realizará una consulta previa a la colección Conductores para obtener el id, nombre y apellido del conductor en marcha. Posteriormente se realizará el reporte de la incidencia, el cual contendrá el Id del conductor, la fecha y hora de la incidencia, el nombre y apellido del conductor, y el estado de incidencia, este último muestra si la incidencia fue catalogada como descartada o confirmada por parte del Usuario Administrador después de revisar el video de la incidencia. Como se mencionó anteriormente, MongoDB permite anidar documentos, por lo que, dentro de este documento se encontrará anidado un segundo documento llamado Detalles, el cual registrará la Ubicación donde sé detectó la incidencia y la URL donde se encontrará almacenado el video.  
 
 
 \begin{center}
@@ -422,8 +422,16 @@ El modelo de documento para la colección Incidencias, se usará para registrar el
  \label{fig:DocumentoIncidencias}
 \end{center}
 
-Cabe señalar que los anteriores modelos muestran el campo Id, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres.   
+Cabe señalar que los anteriores modelos muestran el campo Id, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres. Por tanto, se utilizará el id que proporcione Mongo DB en los documentos. \\
 
+La base de datos pertenecerá al Módulo de Estación Base y tendrá conexión con la Aplicación Web, sin embargo, la base de datos también tendrá comunicación con el Módulo Central de Procesamiento, ya que desde dicho módulo se realizará la inserción de incidencias. El siguiente diagrama muestra la relación de la base de datos y el Módulo de Central de Procesamiento.  
+
+
+\begin{center}
+  \includegraphics[scale=.7]{imagenes/RelacionBD}
+\captionof{figure}{Diagrama de Comunicación de la Base de Datos }
+ \label{fig:RelacionBD}
+\end{center}
 
 \newpage
 \section{Análisis del Módulo de Telemetría }
@@ -598,7 +606,7 @@ El Módulo de Procesamiento Central puede insertar datos en la base datos.\end{ta
 \quad $\bullet$ Video de incidencia 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El Módulo de Procesamiento Central puede insertar el video en el almacenador de objetos en la nube, mientras que la base de datos obtiene la URL del video guardado. \end{tabular}}                                                    \\ \hline
+El Módulo de Procesamiento Central puede insertar el video en el almacenamiento de objetos, mientras que la base de datos obtiene la URL del video guardado. \end{tabular}}                                                    \\ \hline
 \end{tabular}
 \caption{RF02- Guardar Video }
 \end{table}
@@ -697,7 +705,7 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 \end{center}
 
 
-El diagrama de actividades del Módulo de Estación Base muestra la secuencia de las actividades que se realizarán en dicho módulo, la primera actividad conectará la aplicación web hacia la Base de Datos, lo que permitirá insertar, modificar, leer y eliminar los datos del conductor. En el caso de los Reportes de Incidencias, solo podrán ser visualizadas, modificadas o eliminadas desde la aplicación web, ya que la inserción de estas se deberá realizar desde el Módulo Central de Procesamiento, este módulo se encargará de realizar el reporte y posteriormente enviarlo a la Base de Datos. La segunda actividad consiste en el alojamiento y despliegue de la aplicación web, la cual estará disponible usando la URL dentro del navegador web.   \\
+El diagrama de actividades del Módulo de Estación Base muestra la secuencia de las actividades que se realizarán en dicho módulo, la primera actividad conectará la aplicación web hacia la Base de Datos, lo que permitirá insertar, modificar, leer y eliminar los datos del conductor. En el caso de los Reportes de Incidencias, podrán ser visualizadas, modificadas o eliminadas desde la aplicación web, ya que la inserción de estas se deberá realizar desde el Módulo Central de Procesamiento, este módulo se encargará de realizar el reporte y posteriormente enviarlo a la Base de Datos. La segunda actividad consiste en el alojamiento y despliegue de la aplicación web, la cual estará disponible usando la URL dentro del navegador web.   \\
 
 Las credenciales del Usuario Administrador no se almacenarán en la Base de Datos, estas se guardarán en Amazon Cognito y serán utilizadas para iniciar sesión dentro de la aplicación. Como se mencionó anteriormente, el Módulo Central de Procesamiento realizará el Reporte de Incidencia, sin embargo, primero deberá guardar el video en la nube y posteriormente obtener la URL donde se almacenó el video, una vez recabados los datos necesarios para la incidencia el reporte será enviado y almacenado en la Base de Datos. 
 
@@ -707,7 +715,7 @@ Las credenciales del Usuario Administrador no se almacenarán en la Base de Datos
 
 Con base en los requerimientos, se plantea realizar el diseño de la arquitectura del Módulo de Estación Base, integrando el Módulo de Procesamiento Central. El cual hará énfasis en la organización y comunicación de los elementos que lo conforman.  \\
 
-El siguiente diagrama muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credencias de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{forntend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
+El siguiente diagrama muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credencialess de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{frontend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
 
 \begin{center} 
   \includegraphics[scale=.5]{imagenes/DisenoMEB} 
@@ -771,7 +779,7 @@ Video                & MP4, Youtube, QuickTime  \\ \hline
 \caption{\label{tab:interfaces} Tipos de Contenido Multimedia}
 \end{table}
 
-El alojamiento de multimedia sugiere que el propietario de un sitio almacene y entregue una gran cantidad de imágenes, archivos de audio o videos, y los proporcione a como su contenido principal, a diferencia de los sitios que solo necesitan unos pocos recursos de medios para complementar principalmente los basados en texto. A continuación se describen los puntos mas importantes a considerar si se decide a tener un alojamiento basado en multimedia:
+El alojamiento de multimedia sugiere que el propietario de un sitio almacene y entregue una gran cantidad de imágenes, archivos de audio o videos, y los proporcione a como su contenido principal, a diferencia de los sitios que solo necesitan unos pocos recursos de medios para complementar principalmente los basados en texto. A continuación se describen los puntos más importantes a considerar si se decide a tener un alojamiento basado en multimedia:
 
 \begin{itemize}
 \item \textbf{Ancho de banda}
@@ -789,7 +797,7 @@ Lo último que debe considerar con el alojamiento de medios es una red de entrega
 
  
 \end{itemize}
-Sabiendo lo anterior, se analizarán distintos proveedores de alojamiento con la intención de saber cual de ellos se adapta mejor a nuestras necesidades.
+Conociendo lo anterior, se analizarán distintos proveedores de alojamiento con la intención de saber cual de ellos se adapta mejor a nuestras necesidades.
 
 \begin{itemize}
 \item \textbf{AWS \textbf{Amplify Hosting}}
@@ -826,7 +834,7 @@ AWS cuenta con dos planes, uno gratutio y otro de paga, a continuación se detall
 
 \item \textbf{A2Hosting}
 
-Además de los planes de alojamiento, en A2 Hosting también puede obtener nombres de dominio y sus precios son justos. Por ejemplo, un nombre de dominio .com le costará \$14.95 por año. Entre otras extensiones, puedes adquirir: dominios .com, .info, .net y .org. Los TLD específicos de países como .co.uk, .de, .fr, .es o .au no están disponibles. Algunas de sus características se listan a continuación:
+Además de los planes de alojamiento, en A2 Hosting también puede obtener nombres de dominio y sus precios son justos. Por ejemplo, un nombre de dominio .com le costará \$14.95 por año. Entre otras extensiones, puedes adquirir: dominios .com, .info, .net y .org. Los TLD específicos de países como .co.uk, .de, .fr, .es o .aún no están disponibles. Algunas de sus características se listan a continuación:
 
 \begin{itemize}
 \item \textbf{Alojamiento Compartido}
@@ -848,7 +856,7 @@ A2 Hosting no ofrece servicio de CDN, sin embargo sus planes ofrecen la posibili
 \begin{itemize}
 \item \textbf{Tiempo de Respuesta}
 
-HostGator posé tiempos de respuesta mínimos para el terriotorio de EEUU. No tanto así para el resto del mundo. Esto debido a que solo poseen dos centros de datos, uno el área este de EEUU y otro en el área oeste. A continuación se muestra una comparación de los tiempos de respuesta de distintos territorios del mundo. Esta información es obtenida de la página de Bitcatcha, que se encarga de comparar los tiempos de respuesta de distintas páginas web desde distintos lugares del mundo.
+HostGator posee tiempos de respuesta mínimos para el territorio de EEUU. No tanto así para el resto del mundo. Esto debido a que solo poseen dos centros de datos, uno el área este de EEUU y otro en el área oeste. A continuación se muestra una comparación de los tiempos de respuesta de distintos territorios del mundo. Esta información es obtenida de la página de Bitcatcha, que se encarga de comparar los tiempos de respuesta de distintas páginas web desde distintos lugares del mundo.
 
 \begin{center}
   \includegraphics[scale=.8]{imagenes/hostgator}
@@ -862,7 +870,7 @@ HostGator ofrece una disponibilidad del 99.9\%, esto quiere decir que los sitios
 
 \item \textbf{Precios}
 
-HostGator cuenta con dos tipos de planes, uno gratuito y uno de paga. El plan de gratuito ofrece hasta 2 GB de almacenamiento gratis. Sin embargo, el tipo de hosting es uno compartido, lo cual puede ocasionar lentitud en el tiempo de respuesta del sitio web. El plan de paga ofrece hasta 100 GB de almacenamiento y hosting individual, el precio de este plan es de 11.59 dls mensuales
+HostGator cuenta con dos tipos de planes, uno gratuito y uno de paga. El plan gratuito ofrece hasta 2 GB de almacenamiento gratis. Sin embargo, el tipo de hosting es uno compartido, lo cual puede ocasionar lentitud en el tiempo de respuesta del sitio web. El plan de paga ofrece hasta 100 GB de almacenamiento y hosting individual, el precio de este plan es de 11.59 dls mensuales
 
 \item \textbf{CDN}
 
@@ -888,7 +896,7 @@ Sin embargo sus servidores de alto rendimiento solo están disponibles con su pla
 
 \item \textbf{CDN}
 
-Desafortunadamente, el servicio de hosting de BlueHost no cuenta con ninguna CDN, lo que puede significar una perdida del tiempo de respuesta en cuanto al manejo de contenido multimedia.
+Desafortunadamente, el servicio de hosting de BlueHost no cuenta con ninguna CDN, lo que puede significar una pérdida del tiempo de respuesta en cuanto al manejo de contenido multimedia.
 
 
 
@@ -955,7 +963,7 @@ El sistema recuperará de la base de datos todas las incidencias que se tengan re
 \quad $\bullet$ Conductor
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El usuario administrador podrá visualizar los reportes individuales de incidencias de cada conductor al hacer click en cualquiera de las incidencias mostrada en la lista principal. Los reportes contendrán informacón sobre la fecha, hora, ubicación y un video corto del momento en que fueron detectados síntomas de somnolencia.\end{tabular}}                                                    \\ \hline
+El usuario administrador podrá visualizar los reportes individuales de incidencias de cada conductor al hacer click en cualquiera de las incidencias mostrada en la lista principal. Los reportes contendrán información sobre la fecha, hora, ubicación y un video corto del momento en que fueron detectados síntomas de somnolencia.\end{tabular}}                                                    \\ \hline
 \end{tabular}
 \caption{RF02- Mostrar el Historial de Reportes de Incidencia}
 \end{table}
@@ -1184,7 +1192,7 @@ Con respecto al desarrollo web, hay distintos parámetros en los que basarnos par
 
 JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, también es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa
 
-A continuación se describen sus características más imporantes:
+A continuación se describen sus características más importantes:
 
 \begin{itemize}
 \item \textbf{Veloz}
@@ -1216,7 +1224,7 @@ PHP es uno de los lenguajes de programación back-end más simples. La sencillez d
 
 \item \textbf{Tipádo débil}
 
-En el lenguaje de programación PHP, no necesita mencionar el tipo de datos de una variable antes de asignar el valor. El tipo de datos de la variable se basará en los datos almacenados en ella durante la ejecución.
+En el lenguaje de programación PHP, no se necesita mencionar el tipo de datos de una variable antes de asignar el valor. El tipo de datos de la variable se basará en los datos almacenados en ella durante la ejecución.
 
 \item \textbf{Flexibilidad}
 
@@ -1227,7 +1235,7 @@ PHP es un lenguaje flexible, y se puede usar muy fácil y efectivamente con HTML,
 \item \textbf{Python}
 
 El desarrollo web en Python no siempre es la elección principal para construir el lado del servidor de los sitios web. Este lenguaje es multipropósito, lo que significa que es utilizable en la mayoría de los campos de programación.
-Sin embargo, Python para el desarrollo web es también una sólida opción, atrayendo a la gente con su sintaxis simple, una variedad de marcos de trabajo, y un fuerte ecosistema general. Instagram, una de las redes sociales dominantes, utiliza Python para su plataforma, recibiendo millones de visitantes al día. A continuación se describen sus ventajas mas importantes:
+Sin embargo, Python para el desarrollo web es también una sólida opción, atrayendo a la gente con su sintaxis simple, una variedad de marcos de trabajo, y un fuerte ecosistema general. Instagram, una de las redes sociales dominantes, utiliza Python para su plataforma, recibiendo millones de visitantes al día. A continuación se describen sus ventajas más importantes:
 
 
 
@@ -1257,10 +1265,10 @@ Node.js, es un entorno en tiempo de ejecución multiplataforma para la capa del b
 En el momento en que obtengamos la respuesta del otro servidor o base de datos, ejecutará una función de devolución de llamada. Las funciones de devolución de llamada se llaman tan pronto como finaliza algún trabajo y esto se debe a que node.js utiliza una arquitectura basada en eventos. El subproceso único no funciona con la solicitud, sino que envía la solicitud a otro sistema que resuelve la solicitud y es accesible para otra solicitud.
 
 \item \textbf{Entrada/Salida sin bloqueo}
-significa trabajar con múltiples solicitudes sin bloquear el hilo para una sola solicitud. E/S básicamente interactúa con sistemas externos como archivos, bases de datos.
+Significa trabajar con múltiples solicitudes sin bloquear el hilo para una sola solicitud. E/S básicamente interactúa con sistemas externos como archivos, bases de datos.
 \end{itemize}
 
-NodeJs nos permitirá manejar distintas peticiones sin que se tenga que esperara a que una petición sea respondida para continuar con la siguiente petición. De ahí la elección de este entorno de Javascript para el desarrollo de la aplicación web.
+NodeJs nos permitirá manejar distintas peticiones sin que se tenga que esperar a que una petición sea respondida para continuar con la siguiente petición. De ahí la elección de este entorno de Javascript para el desarrollo de la aplicación web.
 
 \newpage
 \section{Diseño de la aplicación web}
