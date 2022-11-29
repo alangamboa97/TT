@@ -594,9 +594,17 @@ Las credenciales del Usuario Administrador no se almacenarán en la Base de Datos
 \clearpage
 \section{Diseño del Módulo de Estación Base}
 
-Con base en los requerimientos del sistema se plantea realizar el diseño de la arquitectura del Módulo de Estación Base, integrando el Módulo de Procesamiento Central y el Módulo de Comunicaciones. El cual hará énfasis en la organización y comunicación de los elementos que lo conforman.  
+Con base en los requerimientos, se plantea realizar el diseño de la arquitectura del Módulo de Estación Base, integrando el Módulo de Procesamiento Central. El cual hará énfasis en la organización y comunicación de los elementos que lo conforman.  \\
 
-Los siguientes diagramas muestran las interacciones entre elementos que se involucran en cada requerimiento funcional.  
+El siguiente diagrama muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credencias de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{forntend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
+
+\begin{center} 
+  \includegraphics[scale=.5]{imagenes/DisenoMEB} 
+\captionof{figure}{Arquitectura del Módulo de Estación Base} 
+\label{fig:DisenoMEB} 
+\end{center} 
+
+Los siguientes diagramas muestran las interacciones entre los elementos que se involucran en los requerimientos funcionales. \\
 
 El Diagrama de comunicación para guardar video de incidencia requiere del Módulo Central de Procesamiento el cual se encargará de enviar el video para ser almacenado en Amazon S3 como un objeto, al cual se podrá acceder por medio de una URL prefirmada.
 
@@ -630,13 +638,6 @@ El Diagrama de comunicación para desplegar aplicación web requiere del servidor 
 \label{fig:DCDeplegarAppWeb} 
 \end{center} 
 
-El siguiente diagrama muestra la arquitectura final del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credencias de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{forntend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
-
-\begin{center} 
-  \includegraphics[scale=.5]{imagenes/DisenoMEB} 
-\captionof{figure}{Diseño del Módulo de Estación Base} 
-\label{fig:DisenoMEB} 
-\end{center} 
 
 
 \clearpage
