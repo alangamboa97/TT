@@ -778,7 +778,8 @@ Desafortunadamente, el servicio de hosting de BlueHost no cuenta con ninguna CDN
 \section{Análisis de la aplicación Web}
 
 
-\begin{table}[h]
+
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -792,13 +793,14 @@ Desafortunadamente, el servicio de hosting de BlueHost no cuenta con ninguna CDN
 \quad $\bullet$ MongoDB
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El sistema comprobará que las credenciales ingresadas por parte del usuario administrador se encuentren en la base de datos. En caso contrario, la aplicación web indicará que ese usuario no se encuentra registrado en la base de datos.\end{tabular}}                                                    \\ \hline
+El sistema, con la ayuda de los servicios de Amazon Cognito, comprobará que las credenciales ingresadas por parte del usuario administrador se encuentren en la base de datos. En caso contrario, la aplicación web indicará que ese usuario no se encuentra registrado en la base de datos.\end{tabular}}                                                    \\ \hline
 \end{tabular}
 \caption{RF01- Iniciar Sesión}
 \end{table}
 
 
-\begin{table}[h]
+
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -817,7 +819,28 @@ El sistema recuperará de la base de datos todas las incidencias que se tengan re
 \caption{RF02- Mostrar el Historial de Reportes de Incidencia}
 \end{table}
 
-\begin{table}[h]
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Visualizar Reporte de Incidencia}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema desplegará los detalles específicos de cada incidencia registrada.\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Incidencia\\
+\quad $\bullet$ Administrdor\\
+\quad $\bullet$ Conductor
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El usuario administrador podrá visualizar los reportes individuales de incidencias de cada conductor al hacer click en cualquiera de las incidencias mostrada en la lista principal. Los reportes contendrán informacón sobre la fecha, hora, ubicación y un video corto del momento en que fueron detectados síntomas de somnolencia.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\end{table}
+
+
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -832,10 +855,10 @@ El sistema recuperará de la base de datos todas las incidencias que se tengan re
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador podrá visualizar los reportes individuales de incidencias de cada conductor al hacer click en cualquiera de las incidencias mostrada en la lista principal. Los reportes contendrán información sobre la fecha, hora, ubicación y un video corto del momento en que fueron detectados síntomas de somnolencia.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\caption{RF03- Visualizar Reporte de Incidencia}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -851,10 +874,10 @@ El usuario administrador podrá visualizar los reportes individuales de incidenci
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador podrá confirmar la incidencia después de haber revisado el videoclip del momento de somnolencia con la intención de descartar falsos positivos. Esto será posible ingresando a una incidencia específica mostrando sus detalles.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\caption{RF04- Confirmar Incidencia}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -870,10 +893,10 @@ El usuario administrador podrá confirmar la incidencia después de haber revisado
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema requerirá que el usuario administrador ingrese el correo con el que fue registrado. Posteriormente se le enviará un código de recuperación de contraseña a ese correo. El administrador ingresará se código en el apartado de recuperar contraseña y así podrá ingresar una nueva contraseña.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\caption{RF05 - Recuperar Contraseña}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -888,10 +911,10 @@ El sistema requerirá que el usuario administrador ingrese el correo con el que f
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El administrador podrá consultar cada uno de los perfiles de los conductores registrados en la base de datos dando click en el nombre del mismo. En dicho perfil se mostrarán datos como nombre, apellido, así como el número de incidencias de dicho conductor, con sus respectivos detalles.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\caption{RF06- Mostrar perfil del Conductor}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -906,12 +929,12 @@ El administrador podrá consultar cada uno de los perfiles de los conductores reg
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema permitirá al administrador consultar la ubicación de los conductores en tiempo real. Para esto el administrador deberá de ingresar previamente al perfil del conductor del cual desea consultar dicha ubicación.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\caption{RF07- Mostrar ubicación Geográfica}
 \end{table}
 
 
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -926,10 +949,10 @@ El sistema permitirá al administrador consultar la ubicación de los conductores 
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 En caso de presentarse una incidencia falsa, después de haber sido revisada por el administrador, esta podrá ser catalogada como falsa incidencia y será eliminada automáticamente de la base de datos.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\caption{RF08- Descartar Incidencia}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -944,10 +967,10 @@ En caso de presentarse una incidencia falsa, después de haber sido revisada por 
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 En caso de presentarse una incidencia falsa, después de haber sido revisada por el administrador, esta podrá ser catalogada como falsa incidencia y será eliminada automáticamente de la base de datos.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\caption{RF09- Registrar Usuario}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -964,10 +987,10 @@ En caso de presentarse una incidencia falsa, después de haber sido revisada por 
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El administrador podrá editar los datos de los conductores como nombre o apellido.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\caption{RF10- Mostrar el Historial de Reportes de Incidencia}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -983,10 +1006,10 @@ El administrador podrá editar los datos de los conductores como nombre o apellid
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema le permitirá al eliminar los datos de conductores de la base de datos.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\caption{RF11- Mostrar el Historial de Reportes de Incidencia}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -1003,8 +1026,26 @@ El sistema le permitirá al eliminar los datos de conductores de la base de datos
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema enviará un mensaje de alerta al administrador indicando que Unidad presenta algún desperfecto, esto con la intención de sea reparada posteriormente.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+\caption{RF12- Generar Mensaje de Alerta}
 \end{table}
+
+
+
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/casosdeusoweb}
+\captionof{figure}{Diagrama de Casos de Uso }
+ \label{fig:scaraindust}
+\end{center}
+
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/diagramaclasesaw}
+\captionof{figure}{Diagrama de Casos de Uso }
+ \label{fig:scaraindust}
+\end{center}
+
+
 
 
 \clearpage
@@ -1081,9 +1122,20 @@ Python ofrece una amplia gama de bibliotecas, que incluyen diferentes tipos de f
 \newpage
 \section{Elección del lenguaje de programación para la aplicación web}
 
-Para el desarrollo de la aplicación web, se decicidó utilizar el lenguaje de programación Javascript, ya que su procesamiento Asíncrono nos ayudará a poder procesar de una manera mas óptima las peticiones.
+Después de haber analizado distintos lenguajes de programación, así como sus ventajas y desventajas. Hemos decidido utilizar primordialmente el lenguaje Javascript, ya que este cuenta con las herramientas y/o frameworks que mejor se adaptan a las necesidades de nuestro proyecto.
+Debido a esto, se decidió utilizar el NodeJs para el sistema backend de nuestra aplicación.
 
-A
+Node.js, es un entorno en tiempo de ejecución multiplataforma para la capa del basado en JavaScript. Este es controlado por eventos diseñado para crear aplicaciones escalables, permitiendo establecer y gestionar múltiples conexiones al mismo tiempo. Gracias a esta característica, el bloqueo de procesos no existe. NodeJs trabaja bajo dos conceptos:
+
+\begin{itemize}
+\item \textbf{Asincronía}
+En el momento en que obtengamos la respuesta del otro servidor o base de datos, ejecutará una función de devolución de llamada. Las funciones de devolución de llamada se llaman tan pronto como finaliza algún trabajo y esto se debe a que node.js utiliza una arquitectura basada en eventos. El subproceso único no funciona con la solicitud, sino que envía la solicitud a otro sistema que resuelve la solicitud y es accesible para otra solicitud.
+
+\item \textbf{Entrada/Salida sin bloqueo}
+significa trabajar con múltiples solicitudes sin bloquear el hilo para una sola solicitud. E/S básicamente interactúa con sistemas externos como archivos, bases de datos.
+\end{itemize}
+
+NodeJs nos permitirá manejar distintas peticiones sin que se tenga que esperara a que una petición sea respondida para continuar con la siguiente petición. De ahí la elección de este entorno de Javascript para el desarrollo de la aplicación web.
 
 \newpage
 \section{Diseño de la aplicación web}
@@ -1094,14 +1146,56 @@ A
  \label{fig:scaraindust}
 \end{center}
  
- 
+
 \begin{center}
-  \includegraphics[scale=.6]{imagenes/sec_ubicacion}
+  \includegraphics[scale=.7]{imagenes/sec_ubicacion}
 \captionof{figure}{Diagrama de Secuencia Detalle Reporte Incidencia }
  \label{fig:scaraindust}
 \end{center}
  
- 
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_rcontrasena}
+\captionof{figure}{Diagrama de Casos de Uso }
+ \label{fig:scaraindust}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_confirmar}
+\captionof{figure}{Diagrama de Casos de Uso }
+ \label{fig:scaraindust}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_perfil}
+\captionof{figure}{Diagrama de Casos de Uso }
+ \label{fig:scaraindust}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_registrar}
+\captionof{figure}{Diagrama de Casos de Uso }
+ \label{fig:scaraindust}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_modificar}
+\captionof{figure}{Diagrama de Casos de Uso }
+ \label{fig:scaraindust}
+\end{center}
+
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_eliminar}
+\captionof{figure}{Diagrama de Casos de Uso }
+ \label{fig:scaraindust}
+\end{center}
+
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_estado}
+\captionof{figure}{Diagrama de Casos de Uso }
+ \label{fig:scaraindust}
+\end{center}
 
 
 \begin{center}
