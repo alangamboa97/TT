@@ -5,31 +5,36 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Documento de Registro de Conductores}}{12}{figure.4}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Documento de registro de Incidencias}}{12}{figure.5}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Diagrama de Comunicaci\'on de la Base de Datos }}{13}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Planes de Alojamiento AWS Amplify}}{16}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Planes de Alojamiento AWS Amplify}}{17}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Diagrama de Componentes AWS Amplify}}{18}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de Casos de Usos del M\'odulo de Etsaci\'on Base}}{22}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de Actividades del M\'odulo de Etsaci\'on Base}}{23}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Arquitectura del M\'odulo de Estaci\'on Base}}{24}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de Comunicaci\'on para guardar video}}{25}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de Comunicaci\'on para guardar incidencia}}{25}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de Comunicaci\'on para conectar aplicaci\'on web}}{25}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de Comunicaci\'on para desplegar aplicaci\'on web}}{25}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Tipos de Planes de AWS Amplify}}{27}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Tiempos de Respuesta }}{28}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama de Casos de Uso }}{36}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Diagrama de Clases }}{37}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Diagrama de Secuencia Detalle Reporte Incidencia }}{42}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Diagrama de Secuencia Consultar Ubicaci\'on}}{42}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Diagrama de Secuencia Recuperar Contrase\~na }}{42}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Diagrama de Secuencia Confirmar Incidencia}}{43}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Diagrama de Secuencia Consultar Perfil}}{43}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Diagrama de Secuencia Registrar Conductor }}{44}{figure.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de Secuencia Modificar Conductor}}{44}{figure.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Diagrama de Secuencia Eliminar Conductor }}{44}{figure.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Diagrama de Secuencia Estado de los Perif\'ericos }}{45}{figure.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces P\'agina Inicio de Sesi\'on }}{45}{figure.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces P\'agina Principal}}{46}{figure.31}%
-\contentsline {figure}{\numberline {32}{\ignorespaces P\'agina Perfil del Conductor }}{46}{figure.32}%
-\contentsline {figure}{\numberline {33}{\ignorespaces P\'agina Detalle de Incidencia }}{47}{figure.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces P\'agina Ubicaci\'on en Tiempo Real }}{47}{figure.34}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Esquema handover entre dos celdas }}{15}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Mapa de cobertura de la red LTE }}{16}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Rastreador GPS con antena Sixfab 3G, 4G/LTE}}{18}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de Flujo del M\'odulo de Comunicaciones}}{19}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de Flujo de Trabajo del M\'odulo de Comunicaciones}}{20}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Planes de Alojamiento AWS Amplify}}{22}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Planes de Alojamiento AWS Amplify}}{23}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de Componentes AWS Amplify}}{24}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de Casos de Usos del M\'odulo de Etsaci\'on Base}}{28}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de Actividades del M\'odulo de Etsaci\'on Base}}{29}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Arquitectura del M\'odulo de Estaci\'on Base}}{30}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Diagrama de Comunicaci\'on para guardar video}}{31}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama de Comunicaci\'on para guardar incidencia}}{31}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Diagrama de Comunicaci\'on para conectar aplicaci\'on web}}{31}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Diagrama de Comunicaci\'on para desplegar aplicaci\'on web}}{31}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Tipos de Planes de AWS Amplify}}{33}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Tiempos de Respuesta }}{34}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Diagrama de Casos de Uso }}{42}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Diagrama de Clases }}{43}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Diagrama de Secuencia Detalle Reporte Incidencia }}{48}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de Secuencia Consultar Ubicaci\'on}}{48}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Diagrama de Secuencia Recuperar Contrase\~na }}{48}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Diagrama de Secuencia Confirmar Incidencia}}{49}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Diagrama de Secuencia Consultar Perfil}}{49}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Diagrama de Secuencia Registrar Conductor }}{50}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Diagrama de Secuencia Modificar Conductor}}{50}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Diagrama de Secuencia Eliminar Conductor }}{50}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Diagrama de Secuencia Estado de los Perif\'ericos }}{51}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces P\'agina Inicio de Sesi\'on }}{51}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces P\'agina Principal}}{52}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces P\'agina Perfil del Conductor }}{52}{figure.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces P\'agina Detalle de Incidencia }}{53}{figure.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces P\'agina Ubicaci\'on en Tiempo Real }}{53}{figure.39}%
