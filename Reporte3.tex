@@ -368,7 +368,7 @@ Para la administración de este tipo de bases de datos, actualmente los principal
  \textbf{Licencia }& Codigo abierto  & Codigo abierto SSPL & Codigo abierto BSD 3-clause  & Vendor \\ \hline
  \textbf{Cumplimiento ACID }& No & Si  &  Si &  Si \\ \hline
  \textbf{Lenguaje de consulta principal }& CQL  & JavaScript  & Permite el uso de varios lenguajes  & DQL  \\ \hline
- \textbf{Casos de uso principales }& Análisis social, análisis en tiempo real, venta al por menor y mensajería & Gestión de IOT, análisis en tiempo real, desarrollo de aplicaciones, inventario y personalización & Almacenamiento en caché, colas, filtrado y estadísticas  & Juegos, comercio minorista, servicios financieros, publicidad y transmisión de medios  \\ \hline
+ \textbf{Principales casos de uso }& Análisis social, análisis en tiempo real, venta al por menor y mensajería & Gestión de IOT, análisis en tiempo real, desarrollo de aplicaciones, inventario y personalización & Almacenamiento en caché, colas, filtrado y estadísticas  & Juegos, comercio minorista, servicios financieros, publicidad y transmisión de medios  \\ \hline
  \textbf{Seguridad  }& Seguridad integrada para la autorización, el cifrado y la autenticación, pero la seguridad está desactivada de forma predeterminada para facilitar su uso dentro de los clústeres  & Seguridad incorporada para autorización, autenticación y encriptación  & Se inicia automáticamente en modo de protección y ofrece sugerencias de seguridad  & Seguridad integrada para datos y aplicaciones; software, hardware, instalaciones y red seguros del proveedor  \\ \hline
  \textbf{Escalabilidad }& Horizontal  & Horizontal  & Horizontal  & Horizontal  \\ \hline
  \textbf{Curva de aprendizaje  }& Difícil    & Medio   & Medio   &  - \\ \hline
@@ -379,7 +379,7 @@ Para la administración de este tipo de bases de datos, actualmente los principal
 \clearpage
 \section{Elección del manejador de bases de datos}
 
-Debido a la escalabilidad horizintal, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  \\
+Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  \\
 
 Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación web se realizará utilizando como base el lenguaje JavaScript Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación. Otra característica importante es que es una base de datos multiplataforma, esto nos permitirá registrar información desde el sistema operativo Linux, que se ocupará en la Raspberry Pi y por otro lado se ocupará Windows en la aplicación web para la inserción, modificación, lectura y eliminación de los datos en la base de datos.  
 
@@ -436,7 +436,7 @@ El modelo de documento para la colección Incidencias, se usará para registrar el
 
 Cabe señalar que los anteriores modelos muestran el campo Id, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres. Por tanto, se utilizará el id que proporcione Mongo DB en los documentos. \\
 
-La base de datos pertenecerá al Módulo de Estación Base y tendrá conexión con la Aplicación Web, sin embargo, la base de datos también tendrá comunicación con el Módulo Central de Procesamiento, ya que desde dicho módulo se realizará la inserción de incidencias. El siguiente diagrama muestra la relación de la base de datos y el Módulo de Central de Procesamiento.  
+La base de datos forma parte del Módulo de Estación Base y tendrá conexión con la Aplicación Web, sin embargo, la base de datos también tendrá comunicación con el Módulo Central de Procesamiento, ya que desde dicho módulo se realizará la inserción de incidencias. El siguiente diagrama muestra la relación de la base de datos y el Módulo de Central de Procesamiento.  
 
 
 \begin{center}
@@ -478,12 +478,12 @@ Categoría & Velocidad Máxima de Bajada(Mbps)& Velocidad Máxima de Subida (Mpbs \
 \end{table}
 
 De la categoría 0 a la 5 se definen para equipos de usuarios, es decir, telefonía celular. 
-Las antenas de la red 4G no cuentan con una categoría inferior a 4, siendo la más común la categoría 6. Por lo tanto, la velocidad se encuentra entre 1-50Mbps que depende de la cobertura de la red.
+Las antenas de la red 4G no cuentan con una categoría inferior a 4, siendo la más común la categoría 6. Por lo tanto, la velocidad se encuentra entre 1-50 Mbps que depende de la cobertura de la red.
 Para este sistema, el análisis debe cumplir con los parámetros que dicta el teorema de Shannon-Hartley que establece que, dado un canal con ruido con una capacidad $C$ e información transmitida en una tasa $R$ entonces si $R<C$ existe una técnica de codificación que permite que la probabilidad de error en el $Rx$ se reduzca. Se debe cumplir que la tasa de bits debe ser siempre menor a la capacidad del canal.
 
 Este análisis se divide en:
 \begin{itemize}
-\item Telemetría:\\El módulo de telemetría es el encargado de recopilar, procesar y transmitir las coordenadas de la ubicación geográfica del conductor a la estación base que se encarga de monitorear los datos obtenidos.
+\item Telemetría:\\ El módulo de telemetría es el encargado de recopilar, procesar y transmitir las coordenadas de la ubicación geográfica del conductor a la estación base que se encarga de monitorear los datos obtenidos.
 
 \item Datos:\\ El encargado de recopilar, procesar y transmitir los fotogramas que el sistema identifica como somnolencia en el conductor, así como un mensaje informativo.
 
@@ -505,7 +505,7 @@ Verificando que se cumpla el Teorema de Shannon-Hartley  tenemos:
 \begin{equation*}
 100 bits \cdot 10 s=1kbps
 \end{equation*} 
-y la máxima tasa de datos que el tranceptor tiene es de 5Mbps.
+y la máxima tasa de datos que el transceptor tiene es de 5 Mbps.
 
 Cumpliéndose la relación establecida de $R<C$.
 \begin{equation*}
@@ -539,7 +539,7 @@ Cumpliéndose nuevamente la relación establecida $R < C$.
 \begin{equation*}
 4.91 Mbps<5 Mbps
 \end{equation*}
-Más 1kbps de la tasa de bits a utilizar del texto informativo que se pretende enviar.
+Más 1 kbps de la tasa de bits a utilizar del texto informativo que se pretende enviar.
 
 \subsection{Análisis de Cobertura}
 
@@ -685,7 +685,7 @@ A2 Hosting cuenta con dos tipos de planes de alojamiento, el primero con costo d
 
 \item \textbf{VPS}
 
-VPS significa servidor privado virtual por sus siglas en inglés. Es una forma de dividir un servidor en (sub)servidores individuales más pequeños. Esto significa que se puede configurar de acuerdo a las necesidades del cliente y no tener que compartir recursos con otros clientes. Un VPS en A2 Hosting cuesta desde tan solo \$7.65 al mes hasta alrededor de \$200 dependiendo del numero de subdivisiones necesarias.
+VPS significa servidor privado virtual por sus siglas en inglés. Es una forma de dividir un servidor en (sub)servidores individuales más pequeños. Esto significa que se puede configurar de acuerdo a las necesidades del cliente y no tener que compartir recursos con otros clientes. Un VPS en A2 Hosting cuesta desde tan solo \$7.65 al mes hasta alrededor de \$200 dependiendo del número de subdivisiones necesarias.
 
 \item \textbf{CDN}
 A2 Hosting no ofrece servicio de CDN, sin embargo, cualquiera de sus planes ofrecen la posibilidad de contratar un servicio de CDN proveedores externos pagando un precio extra del precio base dependiendo del plan contratado.
@@ -729,7 +729,7 @@ HosGator ofrece una disponibilidad del 99.9\%, esto quiere decir que los sitios 
 \newpage
 \section{Elección del Servidor de Alojamiento }
 
-Después de haber analizado los distíntos proveedores de alojamiento así como sus características, llegamos a la conclusión que el que mejor cumple con los requisitos del proyecto es AWS Amplify. Ya que este contiene una suite de herramientas que facilitan la implementación de una aplicación web, como por ejemplo S3, que es un servicio de alojamiento en la nube utilizado para archivos multimedia de gran tamaño. 
+Después de haber analizado los distintos proveedores de alojamiento así como sus características, llegamos a la conclusión que el que mejor cumple con los requisitos del proyecto es AWS Amplify. Ya que este contiene una suite de herramientas que facilitan la implementación de una aplicación web, como por ejemplo S3, que es un servicio de alojamiento en la nube utilizado para archivos multimedia de gran tamaño. 
 
 \begin{center}
   \includegraphics[scale=.5]{imagenes/amplify-1}
@@ -870,13 +870,13 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 
 \begin{center}
   \includegraphics[scale=.55]{imagenes/CasosdeusosMEB}
-\captionof{figure}{Diagrama de Casos de Usos del Módulo de Etsación Base}
+\captionof{figure}{Diagrama de Casos de Usos del Módulo de Estación Base}
  \label{fig:CasosdeusosMEB}
 \end{center}
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/DiagramadeactividadMEB}
-\captionof{figure}{Diagrama de Actividades del Módulo de Etsación Base}
+\captionof{figure}{Diagrama de Actividades del Módulo de Estación Base}
  \label{fig:DiagramadeactividadMEB}
 \end{center}
 
@@ -891,7 +891,7 @@ Las credenciales del Usuario Administrador no se almacenarán en la Base de Datos
 
 Con base en los requerimientos, se plantea realizar el diseño de la arquitectura del Módulo de Estación Base, integrando el Módulo de Procesamiento Central. El cual hará énfasis en la organización y comunicación de los elementos que lo conforman.  \\
 
-El siguiente diagrama muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credencialess de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{frontend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
+El siguiente diagrama muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credenciales de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{frontend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
 
 \begin{center} 
   \includegraphics[scale=.5]{imagenes/DisenoMEB} 
@@ -997,7 +997,7 @@ AWS cuenta con un sistema de monitoreo de tráfico en tiempo real. También permit
 
 \item \textbf{Precio}
 
-AWS cuenta con dos planes, uno gratutio y otro de paga, a continuación se detallan las características de cada uno.
+AWS cuenta con dos planes, uno gratuito y otro de paga, a continuación se detallan las características de cada uno.
 
 \begin{center}
   \includegraphics[scale=.5]{imagenes/amplify}
@@ -1137,7 +1137,7 @@ El sistema recuperará de la base de datos todas las incidencias que se tengan re
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema desplegará los detalles específicos de cada incidencia registrada.\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Incidencia\\
-\quad $\bullet$ Administrdor\\
+\quad $\bullet$ Administrador\\
 \quad $\bullet$ Conductor
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
@@ -1156,7 +1156,7 @@ El usuario administrador podrá visualizar los reportes individuales de incidenci
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema desplegará los detalles específicos de cada incidencia registrada.\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Incidencia\\
-\quad $\bullet$ Administrdor\\
+\quad $\bullet$ Administrador\\
 \quad $\bullet$ Conductor
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
@@ -1345,7 +1345,7 @@ El sistema enviará un mensaje de alerta al administrador indicando que Unidad pr
  \label{fig:scaraindust}
 \end{center}
 
-El Diagrama de Casos de Uso de la aplicación web muestra desde la perspectiva del Usuario Administrador las actividades que se podrán realizar. El usuario Administrador podrá iniciar sesión ingresando en la interfaz principal de la aplicación, posteriormente podrá registrar a los usuarios (conductores), cada conductor será registrado con un id, nombre y apellidos.  Este registro podrá ser eliminado o modificado por el usuario Administrador. Así mismo una de las tareas asignadas para este usuario Administrador es la confirmación de la incidencia, el cual tiene como objetivo verificar y valorar que la incidencia haya sido correctamente catalogada por el sistema de detección de somnolencia.   Debido a que el sistema puede presentar resultados falsos positivos que afecten al resultado. El usuario podrá visualizar los datos completos de la incidencia, incluyendo el id del conductor, el nombre y apellidos, el estatus de la incidencia, fecha, hora, ubicación y la url del video de la incidencia.  En caso de que el usuario no pueda ingresar al sistema debido a la contraseña, el usuario podrá recupérala ingresando al correo electrónico registrado. La aplicación web le permitirá al Usuario Administrador monitorear al conductor con la ubicación en tiempo real del conductor el cual desplegará un mapa con su posicionamiento actual. 
+El Diagrama de Casos de Uso de la aplicación web muestra desde la perspectiva del Usuario Administrador las actividades que se podrán realizar. El usuario Administrador podrá iniciar sesión ingresando en la interfaz principal de la aplicación, posteriormente podrá registrar a los usuarios (conductores), cada conductor será registrado con un id, nombre y apellidos.  Este registro podrá ser eliminado o modificado por el usuario administrador. Así mismo una de las tareas asignadas para este usuario administrador es la confirmación de la incidencia, el cual tiene como objetivo verificar y valorar que la incidencia haya sido correctamente catalogada por el sistema de detección de somnolencia.   Debido a que el sistema puede presentar resultados falsos positivos que afecten al resultado. El usuario podrá visualizar los datos completos de la incidencia, incluyendo el id del conductor, el nombre y apellidos, el estatus de la incidencia, fecha, hora, ubicación y la url del video de la incidencia.  En caso de que el usuario no pueda ingresar al sistema debido a la contraseña, el usuario podrá recuperala ingresando al correo electrónico registrado. La aplicación web le permitirá al Usuario Administrador monitorear al conductor con la ubicación en tiempo real del conductor el cual desplegará un mapa con su posicionamiento actual. 
 
 
 
@@ -1413,12 +1413,12 @@ PHP es otro lenguaje de programación del lado del servidor conocido que se lanzó
 
 \item \textbf{Simplicidad}
 
-PHP es uno de los lenguajes de programación back-end más simples. La sencillez de esta programación lo ha convertido en uno de los lenguajes más utilizados, especialmente para el desarrollo web.
+PHP es uno de los lenguajes de programación backend más simples. La sencillez de esta programación lo ha convertido en uno de los lenguajes más utilizados, especialmente para el desarrollo web.
 
 \item \textbf{Independencia de Plataforma}
-?PHP es un lenguaje independiente de la plataforma. Esto significa que puede funcionar para todos los sistemas operativos y plataformas.
+PHP es un lenguaje independiente de la plataforma. Esto significa que puede funcionar para todos los sistemas operativos y plataformas.
 
-\item \textbf{Tipádo débil}
+\item \textbf{Tipado débil}
 
 En el lenguaje de programación PHP, no se necesita mencionar el tipo de datos de una variable antes de asignar el valor. El tipo de datos de la variable se basará en los datos almacenados en ella durante la ejecución.
 
@@ -1478,7 +1478,7 @@ A continuación se muestran diversos diagramas de secuencias que describen los pr
  \label{fig:scaraindust}
 \end{center}
 
-El Administrador podrá consultar el reporte de incidencia de cada uno de los conductores. Accesando a la basde de datos de MongoDB
+El Administrador podrá consultar el reporte de incidencia de cada uno de los conductores. Accediendo a la base de de datos de MongoDB
  
 
 \begin{center}
@@ -1503,7 +1503,7 @@ También podrá recuperar su contraseña en caso de que esta sea olvidada.
  \label{fig:scaraindust}
 \end{center}
 
-Para evitar falsos positivos, el Administrador podrá confirmar una incidencia una vez mirando el video clip del incidente.
+Para evitar falsos positivos, el Administrador podrá confirmar una incidencia una vez mirando el videoclip del incidente.
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/sec_perfil}
@@ -1524,7 +1524,7 @@ El Administrador podrá consultar el perfil de cada conductor.
  \label{fig:scaraindust}
 \end{center}
 
-En caso de que los datos del conductor sean incorrectos, el administrador podrá modificicarlos.
+En caso de que los datos del conductor sean incorrectos, el administrador podrá modificarlos.
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/sec_eliminar}
@@ -1589,18 +1589,18 @@ A continuación se muestra el diseño propuesto de cada una de las vistas que tend
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Material}                   & \textbf{Costo}  \\ \hline
-Rasperry Pi 4 Modelo B 8GB & \$3200 \\ \hline
+Raspberry Pi 4 Modelo B 8GB & \$3200 \\ \hline
 Zumbador Pasivo KY-006     & \$130  \\ \hline
 Cámara Privariety IMX230   & \$1200 \\ \hline
 Cable Macho-Hembra         & \$80   \\ \hline
 MicroSD SanDisk 128GB      & \$270  \\ \hline
-Rasperry SixFab Modem Kit  & \$2500 \\ \hline
+Raspberry SixFab Modem Kit  & \$2500 \\ \hline
 \textbf{Total}  & \$\textbf{7380} \\ \hline
 \end{tabular}
 \caption{Cotización de Materiales}
 \end{table}
 
-Cabe alcarar, que este desglose es en pesos mexicanos y con base a precios del año en curso. Se toma en consideración un posible aumento de precio debido a factores como la inflación.
+Cabe aclarar, que este desglose es en pesos mexicanos y con base a precios del año en curso. Se toma en consideración un posible aumento de precio debido a factores como la inflación.
 
 
 
