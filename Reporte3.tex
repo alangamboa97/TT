@@ -201,42 +201,98 @@ Cuando aumenta la cantidad de datos almacenados, se vuelve complicado comprender
 
 \textbf{Principales sistemas de gestión de bases de datos relacionales} \\
 
-A continuación, se muestra una tabla comparativa de los principales sistemas de gestión de bases de datos relacionales: 
+A continuación, se muestra una tabla comparativa de los principales sistemas de gestión de bases de datos relacionales:  
 
 \begin{table}[h]
-\begin{tabular}{{|m{0.15\linewidth}|m{0.21\linewidth}|m{0.31\linewidth}|m{0.21\linewidth}|}}
+\begin{tabular}{{|m{0.15\linewidth}|m{0.24\linewidth}|m{0.24\linewidth}|m{0.24\linewidth}|}}
 \hline
- \textbf{SGBDR}  & \textbf{Descripción}  & \textbf{Ventajas}  & \textbf{Desventajas} \\ \hline
- \textbf{MySQL}  & Es un SGBD multihilo y multiusuario utilizado en aplicaciones creadas como software libre.  & -Facilidad de uso y gran rendimiento 
+ & \textbf{SQL Server}  & \textbf{MySQL }  & \textbf{Oracle } \\ \hline
+ \textbf{Interfaz }& GUI, SQL   & SQL  & GUI, SQL, Various   \\ \hline
+ \textbf{Sistema Operativo  }& Windows, Linux, Solaris, HP, UX, OS X, z/OS, AIX & Windows, Linux, OS X, FreeBSD, Solaris  & Windows  \\ \hline
+ \textbf{Clasificación de motores }& Puntuación: 1040.50 
 
--Facilidad para instalar y configurar.
+Rango general: 3 
 
--Soporte multiplataforma  & Escalabilidad, no trabaja de manera eficiente con bases de datos muy grandes.   \\ 
-\hline
- \textbf{PostgreSQL} & Es un SGBD orientado a objetos y es libre, publicado bajo la licencia BSD.  & -Flexibilidad en cuanto a lenguajes de programación. 
+DBS relacional: 3 & Puntuación: 1167.29 
 
--Multiplataforma. 
+Rango general: 2 
 
--Herramienta fácil e intuitiva para la administración de las bases de datos. 
+DBS relacional: 2  &  Puntuación: 1264.02 
 
--Robustez, Eficiencia y Estabilidad. & Lentitud para la administración de bases de datos pequeñas ya que está optimizado para gestionar grandes volúmenes de datos.  \\ \hline
- Microsoft SQL Server & Es un SGBD basado en el lenguaje \emph{ Transact-SQL} capaz de poner a disposición de muchos usuarios grandes cantidades de datos de manera simultánea. & -Escalabilidad, estabilidad y seguridad. 
+Rango general: 1 
 
--Posibilidad de cancelar consultas. 
+DBS relacional: 1 \\ \hline
+ \textbf{Servidor de sistemas operativos }& Linux 
 
--Potente entorno gráfico de administración. 
+Windows   & FreeBSD 
 
--Nativo para Windows, pero puede utilizarse en otras plataformas como Linux o Docker.  & Coste del software, cuenta con un plan gratuito (Express) pero lo normal es la elección de alguno de los planes de pago disponibles.  \\ \hline
-\textbf{Oracle} & Oracle ha sido el SGBD por excelencia para el mundo empresarial, considerado siempre como el más completo y robusto. & -Soporte de transacciones. 
+Linux 
 
--Estabilidad. 
+OSX 
 
--Escalabilidad. 
+Solaris 
 
--Multiplataforma.  & Coste del software, aunque cuenta con una versión gratuita (Express Edition o XE), sus principales opciones son de pago. \\ \hline
+Windows  & AlX 
+
+HP-UX 
+
+Linux 
+
+OSx 
+
+Solaris 
+
+Windows 
+
+z/ OS  \\ \hline
+ \textbf{Licencia }& Propietario   & Código Libre  & Propietario  \\ \hline
+ \textbf{Empresa }& Microsoft  & Sun Marosysten  &  Oracle Corporation \\ \hline
+ \textbf{APIs y otros métodos de acceso }& Flujo de datos tabular (TDS) 
+
+OLE DS 
+
+ADO.NET 
+
+JDBC 
+
+ODBC  & APl nativa propietaria 
+
+ADO.NET 
+
+JDBC 
+
+ODBC  & ODP.NET 
+
+Oracle Call Interface 
+
+(OCI) 
+
+JDBC 
+
+ODBC  \\ \hline
+ \textbf{Características  }& Soporte de transacciones. Procedimientos almacenados. 
+
+Permite administrar información de otros 
+
+servidores de datos.  & Operaciones de Indexación Online. 
+
+Particionado de datos. 
+
+Amplio subconjunto del lenguaje SQL. 
+
+Algunas extensiones son incluidas igualmente.  &  Operaciones de Indexación Online. 
+
+Particionado de datos. 
+
+Amplio subconjunto del lenguaje SQL. 
+
+Algunas extensiones son incluidas igualmente. \\ \hline
+ \textbf{Escalabilidad  }& Vertical complejo  & Vertical complejo  &  Vertical \\ \hline
+ \textbf{Curva de aprendizaje }& Difícil   & Medio & Difícil   \\ \hline
 \end{tabular}
-\caption{\label{tab:SGBD} Sistemas de Gestión de Bases de Datos Relacionales}
+\caption{Comparación de los Sistemas de Gestión de Bases de Datos Relacionales}
 \end{table}
+
 \clearpage
 
 \textbf{Sistemas Gestores de bases de datos No Relacionales (SQL)}\\
@@ -303,73 +359,29 @@ Se utilizan en entornos distribuidos que han de estar siempre disponibles y oper
 
 Para la administración de este tipo de bases de datos, actualmente los principales sistemas gestores de bases de datos (SGBD NoSQL) son los siguientes: 
 
-\begin{table}[]
-\begin{tabular}{{|m{0.15\linewidth}|m{0.21\linewidth}|m{0.31\linewidth}|m{0.21\linewidth}|}}
+
+\begin{table}[h]
+\begin{tabular}{{|m{0.16\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|}}
 \hline
- \textbf{SGBDR} & \textbf{Descripción}   & \textbf{Ventajas}   &  \textbf{Desventajas} \\ \hline
-\textbf{MongoDB} & Es un SBGD NoSQL orientado a documentos que almacena la información en estructuras JSON con un esquema dinámico que permite su facilidad de integración. & -Indexación y replicación. 
-
--Balanceo de carga 
-
--Almacenamiento en documentos. 
-
--Consultas ad hoc. 
-
--Escalabilidad horizontal. 
-
--Código abierto. 
-
--Multiplataforma.   & -MongoDB no es un SGBD adecuado para realizar transacciones complejas. 
-
--Documentos limitados a 16MB.   \\ \hline
-\textbf{Redis} & Redis está basado en el almacenamiento clave-valor.  El principal uso de este SGBD es para el almacenamiento en memoria caché y la administración de sesiones.  & -Atomicidad y persistencia 
-
--Gran velocidad 
-
--Simplicidad 
-
--Multiplataforma   & - La implementación en la nube a gran escala puede ser difícil. 
-
--No ofrece ninguna solución madura de conjuntos en clústeres. \\ \hline
-\textbf{ Cassandra} & Cassandra utiliza almacenamiento clave-valor. Es un SGBD NoSQL distribuido y masivamente escalable. Dispone de un lenguaje propio para las consultas denominado CQL (\emph{Cassandra Query Language}).   & -Multiplataforma 
-
--Propio lenguaje de consultas 
-
--Escalado lineal y horizontal 
-
--Es un SGBD distribuido 
-
--Utiliza una arquitectura punto a punto  & -Duplicación de datos. 
-
--Ejecución de lecturas lenta. 
-
--Consultas limitadas debido a la recuperación de datos.  \\ \hline
-\textbf{DynamoDB }& Base de datos NoSQL de clave-valor sin servidor y completamente administrada que está diseñada para ejecutar aplicaciones de alto rendimiento a cualquier escala.    & -Ventajas avanzadas en la nube de AWS. 
-
--Facilidad de uso. 
-
--Coste. 
-
--Integración 
-
--Administrable.  & -Capacidad de consultas deficiente 
-
--Compatible solo con AWS. 
-
-- No puede utilizar scripts del lado del servidor con DynamoDB. \\ \hline
-
+ & \textbf{Cassandra } & \textbf{MongoDB } & \textbf{Redis } & \textbf{Amazon DynamoDB } \\ \hline
+ \textbf{Tipo de base de datos }& NoSQL \emph{wide-column}  & NoSQL Orientado a documentos  & NoSQL clave-valor  & NoSQL clave-valor  \\ \hline
+ \textbf{Licencia }& Codigo abierto  & Codigo abierto SSPL & Codigo abierto BSD 3-clause  & Vendor \\ \hline
+ \textbf{Cumplimiento ACID }& No & Si  &  Si &  Si \\ \hline
+ \textbf{Lenguaje de consulta principal }& CQL  & JavaScript  & Permite el uso de varios lenguajes  & DQL  \\ \hline
+ \textbf{Casos de uso principales }& Análisis social, análisis en tiempo real, venta al por menor y mensajería & Gestión de IOT, análisis en tiempo real, desarrollo de aplicaciones, inventario y personalización & Almacenamiento en caché, colas, filtrado y estadísticas  & Juegos, comercio minorista, servicios financieros, publicidad y transmisión de medios  \\ \hline
+ \textbf{Seguridad  }& Seguridad integrada para la autorización, el cifrado y la autenticación, pero la seguridad está desactivada de forma predeterminada para facilitar su uso dentro de los clústeres  & Seguridad incorporada para autorización, autenticación y encriptación  & Se inicia automáticamente en modo de protección y ofrece sugerencias de seguridad  & Seguridad integrada para datos y aplicaciones; software, hardware, instalaciones y red seguros del proveedor  \\ \hline
+ \textbf{Escalabilidad }& Horizontal  & Horizontal  & Horizontal  & Horizontal  \\ \hline
+ \textbf{Curva de aprendizaje  }& Difícil    & Medio   & Medio   &  - \\ \hline
 \end{tabular}
-\caption{\label{tab:SGBDNoSQL} Sistemas de Gestión de Bases de Datos No Relacionales}
+\caption{Comparación de los Sistemas de Gestión de Bases de Datos No Relacionales}
 \end{table}
 
-
-
-\newpage
+\clearpage
 \section{Elección del manejador de bases de datos}
 
-Debido a la escalabilidad, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  
+Debido a la escalabilidad horizintal, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  \\
 
-Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación web se realizará utilizando como base el lenguaje JavaScript Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita, por lo cual no hay necesidad de pagar el uso de licencias. Otra característica importante es que es una base de datos multiplataforma, esto nos permitirá registrar información desde el sistema operativo Linux, que se ocupará en la Raspberry Pi y por otro lado se ocupará Windows en la aplicación web para la inserción, modificación, lectura y eliminación de los datos en la base de datos.  
+Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación web se realizará utilizando como base el lenguaje JavaScript Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación. Otra característica importante es que es una base de datos multiplataforma, esto nos permitirá registrar información desde el sistema operativo Linux, que se ocupará en la Raspberry Pi y por otro lado se ocupará Windows en la aplicación web para la inserción, modificación, lectura y eliminación de los datos en la base de datos.  
 
 \begin{center}
   \includegraphics[scale=.1]{imagenes/MongoDB_Logo}
@@ -433,7 +445,7 @@ La base de datos pertenecerá al Módulo de Estación Base y tendrá conexión con la
  \label{fig:RelacionBD}
 \end{center}
 
-\newpage
+
 \section{Análisis del Módulo de Telemetría }
 
   
@@ -1498,6 +1510,14 @@ V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,
 \bibitem {bluehost} Tony Leong, \emph{Bluehost Review: 7 Pros \& 4 Cons of Bluehost (Server Speed Tested!)} https://www.bitcatcha.com/hosting-reviews/bluehost/
 
 \bibitem {bluehost} Tony Leong, \emph{HostGator Review: 9 Pros \& 5 Cons of HostGator (Server Speed Tested!)} https://www.bitcatcha.com/hosting-reviews/hostgator/
+
+
+
+\bibitem {SGBD SQL} Gonzalez, E. L. (s. f.). Cuadro comparativo de los sistemas gestores de base de datos. https://studylib.es/doc/9167711/cuadro-comparativo-de-los-sistemas-gestores-de-base-de-datos
+
+\bibitem {SGBD SQL y NoSQL} altexsoft. (octubre de 2021). Comparing Database Management Systems: MySQL, PostgreSQL, MSSQL Server, MongoDB, Elasticsearch, and others. https://www.altexsoft.com/blog/business/comparing-database-management-systems-mysql-postgresql-mssql-server-mongodb-elasticsearch-and-others/
+
+\bibitem {SGBD NoSQL} Joyce, K. E. (22 de junio de 2021). Comparación de bases de datosNoSQL para elegir la opción adecuada. https://www.computerweekly.com/es/consejo/Comparacion-de-bases-de-datosNoSQL-para-elegir-la-opcion-adecuada
 
 \end{thebibliography}
 
