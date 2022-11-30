@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.9)  29 NOV 2022 16:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.9)  29 NOV 2022 20:14
 entering extended mode
 **./Reporte3.tex
 (Reporte3.tex
@@ -735,24 +735,19 @@ LaTeX Info: Redefining \% on input line 1.
 \openout6 = `Reporte3.lot'.
 
  [3]
-<imagenes/GPS_AntenaSixfab.jpg, id=212, 237.88875pt x 133.24782pt>
+<imagenes/GPS_AntenaSixfab.jpg, id=218, 237.88875pt x 133.24782pt>
 File: imagenes/GPS_AntenaSixfab.jpg Graphic file (type jpg)
 <use imagenes/GPS_AntenaSixfab.jpg>
-Package pdftex.def Info: imagenes/GPS_AntenaSixfab.jpg  used on input line 127.
+Package pdftex.def Info: imagenes/GPS_AntenaSixfab.jpg  used on input line 128.
 
 (pdftex.def)             Requested size: 475.7763pt x 266.49496pt.
  [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.133 \newpage
+l.135 \newpage
                <./imagenes/GPS_AntenaSixfab.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
@@ -766,147 +761,152 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
 [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 219.
+               Default added (so using `tbp') on input line 221.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--226
+Underfull \hbox (badness 10000) in paragraph at lines 228--228
 []|\OT1/lmr/m/n/12 Escalabilidad, no
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 226--226
+Underfull \hbox (badness 1895) in paragraph at lines 228--228
 \OT1/lmr/m/n/12 tra-ba-ja de ma-ne-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--226
+Underfull \hbox (badness 10000) in paragraph at lines 228--228
 \OT1/lmr/m/n/12 efi-cien-te con ba-
  []
 
 
-Underfull \hbox (badness 2608) in paragraph at lines 226--226
+Underfull \hbox (badness 2608) in paragraph at lines 228--228
 \OT1/lmr/m/n/12 ses de da-tos muy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
+Underfull \hbox (badness 10000) in paragraph at lines 229--229
 []|\OT1/lmr/m/n/12 Este SGBD es
  []
 
 
-Underfull \hbox (badness 5274) in paragraph at lines 227--227
+Underfull \hbox (badness 5274) in paragraph at lines 229--229
 \OT1/lmr/m/n/12 una de-ri-va-cion de
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 227--227
+Underfull \hbox (badness 1360) in paragraph at lines 229--229
 \OT1/lmr/m/n/12 con la ma-yora de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
+Underfull \hbox (badness 10000) in paragraph at lines 229--229
 \OT1/lmr/m/n/12 ca-rac-tersti-cas de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 []|\OT1/lmr/m/n/12 Incompatibilidades
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []|\OT1/lmr/m/n/12 Lentitud pa-ra la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \OT1/lmr/m/n/12 ad-mi-nis-tra-cion de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \OT1/lmr/m/n/12 op-ti-mi-za-do pa-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \OT1/lmr/m/n/12 ges-tio-nar gran-des
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 245--245
+Underfull \hbox (badness 3009) in paragraph at lines 247--247
 \OT1/lmr/m/n/12 do en el len-gua-je
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 245--245
+Underfull \hbox (badness 1874) in paragraph at lines 247--247
 \OT1/lmr/m/n/12 de po-ner a dis-po-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
 \OT1/lmr/m/n/12 si-cion de mu-chos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
 \OT1/lmr/m/n/12 usua-rios gran-des
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 245--245
+Underfull \hbox (badness 5924) in paragraph at lines 247--247
 \OT1/lmr/m/n/12 can-ti-da-des de da-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
 \OT1/lmr/m/n/12 tos de ma-ne-ra
  []
 
 
-Underfull \hbox (badness 1796) in paragraph at lines 245--246
+Underfull \hbox (badness 1796) in paragraph at lines 247--248
 []|\OT1/lmr/m/n/12 -Escalabilidad, es-ta-bi-li-dad y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--251
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
 \OT1/lmr/m/n/12 gra-tui-to (Ex-press)
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 251--251
+Underfull \hbox (badness 2698) in paragraph at lines 253--253
 \OT1/lmr/m/n/12 elec-cion de al-guno
  []
 
 
-Underfull \hbox (badness 6825) in paragraph at lines 251--251
+Underfull \hbox (badness 6825) in paragraph at lines 253--253
 \OT1/lmr/m/n/12 de los pla-nes de
  []
 
 
-Underfull \hbox (badness 3312) in paragraph at lines 252--252
+Underfull \hbox (badness 3312) in paragraph at lines 254--254
 []|\OT1/lmr/m/n/12 Oracle ha si-do el
  []
 
 
-Underfull \hbox (badness 4699) in paragraph at lines 252--252
+Underfull \hbox (badness 4699) in paragraph at lines 254--254
 \OT1/lmr/m/n/12 cia pa-ra el mun-
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 258--258
+Underfull \hbox (badness 1270) in paragraph at lines 260--260
 \OT1/lmr/m/n/12 aun-que cuen-ta con
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
@@ -914,99 +914,99 @@ Underfull \hbox (badness 10000) in paragraph at lines 264--265
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.297 \item E
+l.299 \item E
              conomía  \\]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 328.
+               Default added (so using `tbp') on input line 330.
 
 
-Underfull \hbox (badness 5637) in paragraph at lines 332--332
+Underfull \hbox (badness 5637) in paragraph at lines 334--334
 \OT1/lmr/m/n/12 orien-ta-do a do-cu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
 \OT1/lmr/m/n/12 es-truc-tu-ras JSON
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
 \OT1/lmr/m/n/12 con un es-que-ma
  []
 
 
-Underfull \hbox (badness 3179) in paragraph at lines 332--332
+Underfull \hbox (badness 3179) in paragraph at lines 334--334
 \OT1/lmr/m/n/12 dinami-co que per-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
 []\OT1/lmr/m/n/12 -Almacenamiento en do-cu-
  []
 
 
-Underfull \hbox (badness 3965) in paragraph at lines 347--347
+Underfull \hbox (badness 3965) in paragraph at lines 349--349
 []|\OT1/lmr/m/n/12 Redis esta ba-sa-do
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--347
+Underfull \hbox (badness 10000) in paragraph at lines 349--349
 \OT1/lmr/m/n/12 to clave-valor. El
  []
 
 
-Underfull \hbox (badness 3449) in paragraph at lines 347--347
+Underfull \hbox (badness 3449) in paragraph at lines 349--349
 \OT1/lmr/m/n/12 SGBD es pa-ra el
  []
 
 
-Underfull \hbox (badness 4291) in paragraph at lines 347--347
+Underfull \hbox (badness 4291) in paragraph at lines 349--349
 \OT1/lmr/m/n/12 al-ma-ce-na-mien-to en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--347
+Underfull \hbox (badness 10000) in paragraph at lines 349--349
 \OT1/lmr/m/n/12 ad-mi-nis-tra-cion de
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 356--356
+Underfull \hbox (badness 1112) in paragraph at lines 358--358
 \OT1/lmr/m/it/12 san-dra Query Lan-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--369
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 []|\OT1/lmr/m/n/12 Base de da-tos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--369
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 \OT1/lmr/m/n/12 NoSQL de clave-
  []
 
 
-Underfull \hbox (badness 7944) in paragraph at lines 369--369
+Underfull \hbox (badness 7944) in paragraph at lines 371--371
 \OT1/lmr/m/n/12 valor sin ser-vi-dor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--369
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 \OT1/lmr/m/n/12 y com-ple-ta-men-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--369
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 \OT1/lmr/m/n/12 ad-mi-nis-tra-da que
  []
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 369--369
+Underfull \hbox (badness 1502) in paragraph at lines 371--371
 \OT1/lmr/m/n/12 esta di-se~nada pa-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--380
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 []\OT1/lmr/m/n/12 -Compatible so-lo
  []
 
@@ -1014,82 +1014,120 @@ Underfull \hbox (badness 10000) in paragraph at lines 379--380
 2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.389 \newpage
+l.391 \newpage
               ]
-<imagenes/MongoDB_Logo.png, id=242, 2569.6pt x 692.5875pt>
+<imagenes/MongoDB_Logo.png, id=249, 2569.6pt x 692.5875pt>
 File: imagenes/MongoDB_Logo.png Graphic file (type png)
 <use imagenes/MongoDB_Logo.png>
-Package pdftex.def Info: imagenes/MongoDB_Logo.png  used on input line 397.
+Package pdftex.def Info: imagenes/MongoDB_Logo.png  used on input line 399.
 (pdftex.def)             Requested size: 256.97505pt x 69.2628pt.
  [11pdfTeX warning (ext4): destination with the same identifier (name{figure.2}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.404 \newpage
+l.406 \newpage
                <./imagenes/MongoDB_Logo.png>]
-<imagenes/EstructuraDocumentoMongoDB.jpg, id=248, 469.755pt x 149.05687pt>
+<imagenes/EstructuraDocumentoMongoDB.jpg, id=255, 469.755pt x 149.05687pt>
 File: imagenes/EstructuraDocumentoMongoDB.jpg Graphic file (type jpg)
 <use imagenes/EstructuraDocumentoMongoDB.jpg>
 Package pdftex.def Info: imagenes/EstructuraDocumentoMongoDB.jpg  used on input
- line 419.
+ line 421.
 (pdftex.def)             Requested size: 328.82626pt x 104.3391pt.
-<imagenes/ModeladoBD.png, id=249, 1327.96124pt x 634.37pt>
+<imagenes/ModeladoBD.png, id=256, 1327.96124pt x 634.37pt>
 File: imagenes/ModeladoBD.png Graphic file (type png)
 <use imagenes/ModeladoBD.png>
-Package pdftex.def Info: imagenes/ModeladoBD.png  used on input line 427.
+Package pdftex.def Info: imagenes/ModeladoBD.png  used on input line 429.
 (pdftex.def)             Requested size: 398.39145pt x 190.31245pt.
  [12pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.433 
+l.435 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.433 
+l.435 
        <./imagenes/EstructuraDocumentoMongoDB.jpg> <./imagenes/ModeladoBD.png>]
-<imagenes/ModeloConductores.jpg, id=256, 361.35pt x 74.52844pt>
+<imagenes/ModeloConductores.jpg, id=263, 361.35pt x 74.52844pt>
 File: imagenes/ModeloConductores.jpg Graphic file (type jpg)
 <use imagenes/ModeloConductores.jpg>
-Package pdftex.def Info: imagenes/ModeloConductores.jpg  used on input line 435
+Package pdftex.def Info: imagenes/ModeloConductores.jpg  used on input line 437
 .
 (pdftex.def)             Requested size: 325.21199pt x 67.07495pt.
-<imagenes/ModeloIncidencias.jpg, id=257, 288.3272pt x 156.585pt>
+<imagenes/ModeloIncidencias.jpg, id=264, 288.3272pt x 156.585pt>
 File: imagenes/ModeloIncidencias.jpg Graphic file (type jpg)
 <use imagenes/ModeloIncidencias.jpg>
-Package pdftex.def Info: imagenes/ModeloIncidencias.jpg  used on input line 444
+Package pdftex.def Info: imagenes/ModeloIncidencias.jpg  used on input line 446
 .
 (pdftex.def)             Requested size: 259.49207pt x 140.92519pt.
 [13pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.454 \newpage
+l.456 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.454 \newpage
+l.456 \newpage
                <./imagenes/ModeloConductores.jpg> <./imagenes/ModeloIncidencias
 .jpg>] [14pdfTeX warning (ext4): destination with the same identifier (name{tab
 le.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.496 \end{itemize}
+l.498 \end{itemize}
                    ] [15]
-<imagenes/mapaLTE.png, id=272, 367.3725pt x 215.30438pt>
+<imagenes/handover.png, id=280, 813.0375pt x 589.4522pt>
+File: imagenes/handover.png Graphic file (type png)
+<use imagenes/handover.png>
+Package pdftex.def Info: imagenes/handover.png  used on input line 557.
+(pdftex.def)             Requested size: 406.51776pt x 294.72537pt.
+<imagenes/mapaLTE.png, id=281, 367.3725pt x 215.30438pt>
 File: imagenes/mapaLTE.png Graphic file (type png)
 <use imagenes/mapaLTE.png>
-Package pdftex.def Info: imagenes/mapaLTE.png  used on input line 556.
+Package pdftex.def Info: imagenes/mapaLTE.png  used on input line 565.
 (pdftex.def)             Requested size: 499.62556pt x 292.81335pt.
  [16pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.562 
-       <./imagenes/mapaLTE.png>] [17] [18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
+l.566 ...figure}{Mapa de cobertura de la red LTE }
+                                                   <./imagenes/handover.png>]
+[17pdfTeX warning (ext4): destination with the same identifier (name{figure.8})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.588 \newpage
+               <./imagenes/mapaLTE.png>]
+<imagenes/DF-modCom.jpeg, id=292, 492.84125pt x 914.41624pt>
+File: imagenes/DF-modCom.jpeg Graphic file (type jpg)
+<use imagenes/DF-modCom.jpeg>
+Package pdftex.def Info: imagenes/DF-modCom.jpeg  used on input line 593.
+(pdftex.def)             Requested size: 295.70702pt x 548.65398pt.
+<imagenes/DG-modCom.jpeg, id=293, 814.04124pt x 835.12pt>
+File: imagenes/DG-modCom.jpeg Graphic file (type jpg)
+<use imagenes/DG-modCom.jpeg>
+Package pdftex.def Info: imagenes/DG-modCom.jpeg  used on input line 599.
+(pdftex.def)             Requested size: 529.12053pt x 542.82156pt.
+
+Overfull \hbox (28.63654pt too wide) in paragraph at lines 599--600
+[][]
+ []
+
+[18pdfTeX warning (ext4): destination with the same identifier (name{figure.9})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.603 \newpage
+               <./imagenes/DF-modCom.jpeg>] [19pdfTeX warning (ext4): destinati
+on with the same identifier (name{figure.10}) has been already used, duplicate 
+ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.603 \newpage
+               <./imagenes/DG-modCom.jpeg>] [20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
 
  []
 
@@ -1099,186 +1137,186 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
+[22pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.660 \clearpage
-                ] [21pdfTeX warning (ext4): destination with the same identifie
+l.681 \clearpage
+                ] [23pdfTeX warning (ext4): destination with the same identifie
 r (name{table.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.660 \clearpage
+l.681 \clearpage
                 pdfTeX warning (ext4): destination with the same identifier (na
 me{table.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.660 \clearpage
-                ] [22
+l.681 \clearpage
+                ] [24
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.700 \clearpage
+l.721 \clearpage
                 pdfTeX warning (ext4): destination with the same identifier (na
 me{table.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.700 \clearpage
+l.721 \clearpage
                 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 703.
+               Default added (so using `tbp') on input line 724.
 
-<imagenes/CasosdeusosMEB.png, id=303, 720.6925pt x 512.91624pt>
+<imagenes/CasosdeusosMEB.png, id=324, 720.6925pt x 512.91624pt>
 File: imagenes/CasosdeusosMEB.png Graphic file (type png)
 <use imagenes/CasosdeusosMEB.png>
-Package pdftex.def Info: imagenes/CasosdeusosMEB.png  used on input line 721.
+Package pdftex.def Info: imagenes/CasosdeusosMEB.png  used on input line 742.
 (pdftex.def)             Requested size: 396.38211pt x 282.1048pt.
-<imagenes/DiagramadeactividadMEB.png, id=304, 667.49374pt x 633.36626pt>
+<imagenes/DiagramadeactividadMEB.png, id=325, 667.49374pt x 633.36626pt>
 File: imagenes/DiagramadeactividadMEB.png Graphic file (type png)
 <use imagenes/DiagramadeactividadMEB.png>
 Package pdftex.def Info: imagenes/DiagramadeactividadMEB.png  used on input lin
-e 727.
+e 748.
 (pdftex.def)             Requested size: 400.49934pt x 380.02269pt.
-[23pdfTeX warning (ext4): destination with the same identifier (name{table.9}) 
+[25pdfTeX warning (ext4): destination with the same identifier (name{table.9}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.728 ... Actividades del Módulo de Etsación Base}
+l.749 ... Actividades del Módulo de Etsación Base}
                                                   
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.728 ... Actividades del Módulo de Etsación Base}
-                                                   <./imagenes/CasosdeusosMEB.p
-ng>]
-Underfull \hbox (badness 10000) in paragraph at lines 733--734
-
- []
-
-[24pdfTeX warning (ext4): destination with the same identifier (name{figure.9})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.738 \clearpage
-                 <./imagenes/DiagramadeactividadMEB.png>]
-<imagenes/DiagramaComunicacionRF2MEB.png, id=316, 452.69125pt x 61.22874pt>
-File: imagenes/DiagramaComunicacionRF2MEB.png Graphic file (type png)
-<use imagenes/DiagramaComunicacionRF2MEB.png>
-Package pdftex.def Info: imagenes/DiagramaComunicacionRF2MEB.png  used on input
- line 743.
-(pdftex.def)             Requested size: 226.34506pt x 30.61429pt.
-<imagenes/DiagramaComunicacionRF1MEB.png, id=317, 412.54124pt x 191.71625pt>
-File: imagenes/DiagramaComunicacionRF1MEB.png Graphic file (type png)
-<use imagenes/DiagramaComunicacionRF1MEB.png>
-Package pdftex.def Info: imagenes/DiagramaComunicacionRF1MEB.png  used on input
- line 750.
-(pdftex.def)             Requested size: 206.27011pt x 95.85788pt.
-<imagenes/DiagramaComunicacionRF3MEB.png, id=318, 713.66624pt x 61.22874pt>
-File: imagenes/DiagramaComunicacionRF3MEB.png Graphic file (type png)
-<use imagenes/DiagramaComunicacionRF3MEB.png>
-Package pdftex.def Info: imagenes/DiagramaComunicacionRF3MEB.png  used on input
- line 757.
-(pdftex.def)             Requested size: 499.56296pt x 42.8598pt.
-<imagenes/DiagramaComunicacionRF4MEB.png, id=319, 443.6575pt x 62.2325pt>
-File: imagenes/DiagramaComunicacionRF4MEB.png Graphic file (type png)
-<use imagenes/DiagramaComunicacionRF4MEB.png>
-Package pdftex.def Info: imagenes/DiagramaComunicacionRF4MEB.png  used on input
- line 764.
-(pdftex.def)             Requested size: 310.55812pt x 43.56244pt.
-<imagenes/DisenoMEB.png, id=320, 1054.94125pt x 533.995pt>
-File: imagenes/DisenoMEB.png Graphic file (type png)
-<use imagenes/DisenoMEB.png>
-Package pdftex.def Info: imagenes/DisenoMEB.png  used on input line 771.
-(pdftex.def)             Requested size: 527.46935pt x 266.99684pt.
-
-Overfull \hbox (26.98535pt too wide) in paragraph at lines 771--772
- [] 
- []
-
-[25
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.772 ...gure}{Diseño del Módulo de Estación Base}
+l.749 ... Actividades del Módulo de Etsación Base}
+                                                   <./imagenes/CasosdeusosMEB.p
+ng>]
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
+
+ []
+
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.12}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.759 \clearpage
+                 <./imagenes/DiagramadeactividadMEB.png>]
+<imagenes/DiagramaComunicacionRF2MEB.png, id=336, 452.69125pt x 61.22874pt>
+File: imagenes/DiagramaComunicacionRF2MEB.png Graphic file (type png)
+<use imagenes/DiagramaComunicacionRF2MEB.png>
+Package pdftex.def Info: imagenes/DiagramaComunicacionRF2MEB.png  used on input
+ line 764.
+(pdftex.def)             Requested size: 226.34506pt x 30.61429pt.
+<imagenes/DiagramaComunicacionRF1MEB.png, id=337, 412.54124pt x 191.71625pt>
+File: imagenes/DiagramaComunicacionRF1MEB.png Graphic file (type png)
+<use imagenes/DiagramaComunicacionRF1MEB.png>
+Package pdftex.def Info: imagenes/DiagramaComunicacionRF1MEB.png  used on input
+ line 771.
+(pdftex.def)             Requested size: 206.27011pt x 95.85788pt.
+<imagenes/DiagramaComunicacionRF3MEB.png, id=338, 713.66624pt x 61.22874pt>
+File: imagenes/DiagramaComunicacionRF3MEB.png Graphic file (type png)
+<use imagenes/DiagramaComunicacionRF3MEB.png>
+Package pdftex.def Info: imagenes/DiagramaComunicacionRF3MEB.png  used on input
+ line 778.
+(pdftex.def)             Requested size: 499.56296pt x 42.8598pt.
+<imagenes/DiagramaComunicacionRF4MEB.png, id=339, 443.6575pt x 62.2325pt>
+File: imagenes/DiagramaComunicacionRF4MEB.png Graphic file (type png)
+<use imagenes/DiagramaComunicacionRF4MEB.png>
+Package pdftex.def Info: imagenes/DiagramaComunicacionRF4MEB.png  used on input
+ line 785.
+(pdftex.def)             Requested size: 310.55812pt x 43.56244pt.
+<imagenes/DisenoMEB.png, id=340, 1054.94125pt x 533.995pt>
+File: imagenes/DisenoMEB.png Graphic file (type png)
+<use imagenes/DisenoMEB.png>
+Package pdftex.def Info: imagenes/DisenoMEB.png  used on input line 792.
+(pdftex.def)             Requested size: 527.46935pt x 266.99684pt.
+
+Overfull \hbox (26.98535pt too wide) in paragraph at lines 792--793
+ [] 
+ []
+
+[27
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.793 ...gure}{Diseño del Módulo de Estación Base}
                                                   pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.11}) has been already used, duplica
+ation with the same identifier (name{figure.14}) has been already used, duplica
 te ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.772 ...gure}{Diseño del Módulo de Estación Base}
+l.793 ...gure}{Diseño del Módulo de Estación Base}
                                                   pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.12}) has been already used, duplica
+ation with the same identifier (name{figure.15}) has been already used, duplica
 te ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.772 ...gure}{Diseño del Módulo de Estación Base}
+l.793 ...gure}{Diseño del Módulo de Estación Base}
                                                   pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.13}) has been already used, duplica
+ation with the same identifier (name{figure.16}) has been already used, duplica
 te ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.772 ...gure}{Diseño del Módulo de Estación Base}
+l.793 ...gure}{Diseño del Módulo de Estación Base}
                                                    <./imagenes/DiagramaComunica
 cionRF2MEB.png> <./imagenes/DiagramaComunicacionRF1MEB.png> <./imagenes/Diagram
 aComunicacionRF3MEB.png> <./imagenes/DiagramaComunicacionRF4MEB.png> <./imagene
-s/DisenoMEB.png>] [26pdfTeX warning (ext4): destination with the same identifie
-r (name{figure.14}) has been already used, duplicate ignored
+s/DisenoMEB.png>] [28pdfTeX warning (ext4): destination with the same identifie
+r (name{figure.17}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.777 \clearpage
+l.798 \clearpage
                 ]
-Overfull \hbox (6.081pt too wide) in paragraph at lines 820--822
+Overfull \hbox (6.081pt too wide) in paragraph at lines 841--843
 []\OT1/lmr/m/n/12 AWS Am-plify Hos-ting es un ser-vi-cio de alo-ja-mien-to y CI
 /CD \OT1/lmr/m/it/12 Con-ti-nous In-te-gra-tion/Continuos
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
-22.
+43.
 (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [27
+) [29
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.10}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.825 \item \textbf
+l.846 \item \textbf
                    {Alojamiento confiable cerca de los usuarios}]
-<imagenes/amplify.png, id=339, 821.31844pt x 335.00156pt>
+<imagenes/amplify.png, id=359, 821.31844pt x 335.00156pt>
 File: imagenes/amplify.png Graphic file (type png)
 <use imagenes/amplify.png>
-Package pdftex.def Info: imagenes/amplify.png  used on input line 842.
+Package pdftex.def Info: imagenes/amplify.png  used on input line 863.
 (pdftex.def)             Requested size: 410.6582pt x 167.50037pt.
- [28pdfTeX warning (ext4): destination with the same identifier (name{figure.15
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.18
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.861 V
+l.882 V
        PS significa servidor privado virtual. Es una forma de dividir un ser...
  <./imagenes/amplify.png>]
-Overfull \hbox (19.6487pt too wide) in paragraph at lines 861--862
+Overfull \hbox (19.6487pt too wide) in paragraph at lines 882--883
 []\OT1/lmr/m/n/12 VPS sig-ni-fi-ca ser-vi-dor pri-va-do vir-tual. Es una for-ma
  de di-vi-dir un ser-vi-dor en (sub)servidores
  []
 
-<imagenes/hostgator.png, id=346, 376.40625pt x 96.36pt>
+<imagenes/hostgator.png, id=367, 376.40625pt x 96.36pt>
 File: imagenes/hostgator.png Graphic file (type png)
 <use imagenes/hostgator.png>
-Package pdftex.def Info: imagenes/hostgator.png  used on input line 877.
+Package pdftex.def Info: imagenes/hostgator.png  used on input line 898.
 (pdftex.def)             Requested size: 301.1254pt x 77.08807pt.
-[29pdfTeX warning (ext4): destination with the same identifier (name{figure.16}
+[31pdfTeX warning (ext4): destination with the same identifier (name{figure.19}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.896 \newpage
-               <./imagenes/hostgator.png>] [30]
+l.917 \newpage
+               <./imagenes/hostgator.png>] [32]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1309,85 +1347,80 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[31pdfTeX warning (ext4): destination with the same identifier (name{table.11})
+[33pdfTeX warning (ext4): destination with the same identifier (name{table.11})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
+l.1175 \clearpage
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{table.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
-                 ] [32pdfTeX warning (ext4): destination with the same identifi
+l.1175 \clearpage
+                 ] [34pdfTeX warning (ext4): destination with the same identifi
 er (name{table.13}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
+l.1175 \clearpage
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{table.14}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
-                 ] [33pdfTeX warning (ext4): destination with the same identifi
+l.1175 \clearpage
+                 ] [35pdfTeX warning (ext4): destination with the same identifi
 er (name{table.15}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
+l.1175 \clearpage
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{table.16}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
-                 ] [34pdfTeX warning (ext4): destination with the same identifi
+l.1175 \clearpage
+                 ] [36pdfTeX warning (ext4): destination with the same identifi
 er (name{table.17}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
+l.1175 \clearpage
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{table.18}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
+l.1175 \clearpage
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{table.19}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
-                 ] [35pdfTeX warning (ext4): destination with the same identifi
+l.1175 \clearpage
+                 ] [37pdfTeX warning (ext4): destination with the same identifi
 er (name{table.20}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
+l.1175 \clearpage
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{table.21}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
-                 ] [36pdfTeX warning (ext4): destination with the same identifi
+l.1175 \clearpage
+                 ] [38pdfTeX warning (ext4): destination with the same identifi
 er (name{table.22}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1154 \clearpage
-                 ] [37
+l.1175 \clearpage
+                 ] [39
 
-] [38] [39] [40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1237--1238
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
+] [40] [41] [42] [43]
+Underfull \hbox (badness 10000) in paragraph at lines 1258--1259
 
  []
 
-[42]
-Underfull \hbox (badness 1117) in paragraph at lines 1253--1254
+[44]
+Underfull \hbox (badness 1117) in paragraph at lines 1272--1273
 \OT1/lmr/m/n/12 Blog. Spring-board . Avai-la-ble at: https://www.springboard.co
 m/blog/data-science/best-
  []
 
-[43] (Reporte3.aux
+[45] (Reporte3.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
@@ -1395,13 +1428,13 @@ LaTeX Info: Redefining \% on input line 26.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Reporte3.out' has not changed.
-(rerunfilecheck)             Checksum: 85546A222689277A737CBEF158DEC300;4724.
+(rerunfilecheck)             Checksum: D26CEC990608AED2FA5E65CC92CF66F5;4720.
  ) 
 Here is how much of TeX's memory you used:
- 13550 strings out of 478864
- 203681 string characters out of 2858518
- 558477 words of memory out of 3000000
- 31074 multiletter control sequences out of 15000+600000
+ 13605 strings out of 478864
+ 204952 string characters out of 2858518
+ 558688 words of memory out of 3000000
+ 31119 multiletter control sequences out of 15000+600000
  458122 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,17n,66p,1002b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1415,9 +1448,9 @@ es/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1
 /public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><
 C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Reporte3.pdf (44 pages, 991144 bytes).
+Output written on Reporte3.pdf (46 pages, 1194044 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 512 PDF objects out of 1000 (max. 8388607)
+ 121 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
 

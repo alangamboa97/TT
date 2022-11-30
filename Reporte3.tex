@@ -67,8 +67,8 @@ Lista de actividades
 \item Búsqueda de manejadores de bases de datos
 \item Elección del manejador de bases de datos
 \item Modelado de la base de datos
-\item Análisis del Módulo de Telemetría
-\item Diseño del Módulo de Telemetría
+\item Análisis del Módulo de Comunicaciones
+\item Diseño del Módulo de Comunicaciones
 \item Investigación de Servidores de alojamiento
 \item Elección del Servidor de Alojamiento
 \item Análisis del Módulo de Estación Base
@@ -121,7 +121,8 @@ Dr. Rodolfo Vera Amaro\\
 \section{Elección de tecnologías de geolocalización }
 
 Entre las diferentes tecnologías que existen para la geolocalización, nos inclinamos por la tecnología GPS que indica la posición geográfica de un objeto o individuo. Envía información precisa del posicionamiento en intervalos cortos de tiempo, una vez que los datos sean recibidos por un módulo GPS este es capaz de localizar su posición. Además, la utilización principal de este es precisamente vehicular, su sistema de geolocalización es de los más precisos con un margen de error de hasta 10 metros.
-Previamente se eligió una antena LTE que cuenta con un componente GPS integrado del cual se obtendrán las coordenadas mediante su previa configuración en un puerto específico. Se optó por el uso del módulo GPS integrado en la antena LTE debido a la reducción de costos y practicidad de configuración por el módulo integrado.
+
+De igual manera,otra de las razones por la que elegimos la tecnología GPS es porque nos permite poder consultar la ubicación del vehículo en tiempo real, con esta tecnología es posible acceder a los datos de posicionamiento del vehículo a través del sistema Web, al usar el módulo con esta tecnología va a ser posible extraer los datos de una manera sencilla.
 
 \begin{center}
   \includegraphics[scale=2]{imagenes/GPS_AntenaSixfab}
@@ -129,6 +130,7 @@ Previamente se eligió una antena LTE que cuenta con un componente GPS integrado 
  \label{fig:GPS_AntenaSixfab}
 \end{center}
 
+Previamente se eligió una antena LTE que cuenta con un componente GPS integrado (Figura \ref{fig:GPS_AntenaSixfab}) del cual se obtendrán las coordenadas mediante su previa configuración en un puerto específico. Se optó por el uso del módulo GPS integrado en la antena LTE debido a la reducción de costos y practicidad de configuración por el módulo integrado.
 
 \newpage
 \section{Búsqueda de manejadores de bases de datos}
@@ -452,7 +454,7 @@ Cabe señalar que los anteriores modelos muestran el campo de ?Id?, sin embargo, 
 
 
 \newpage
-\section{Análisis del Sistema de Comunicaciones }
+\section{Análisis del Módulo de Comunicaciones }
 Los sistemas automatizados de comunicación, mayormente inalámbricos, se encargan de recopilar datos remotos y transmitir la información.
 La tecnología previamente elegida para la implementación de este módulo es la red 4G/LTE, su estándar es establecido por el 3GPP (Proyecto de asociación de tercera generación) donde establece sus especificaciones en la versión 8 de sus estándares, el cual clasifica hasta 13 categorías LTE. En estas categorías se especifica la velocidad máxima de carga y descarga, siendo la categoría 0 la velocidad más baja.
 
@@ -484,7 +486,7 @@ Categoría & Velocidad Máxima de Bajada(Mbps)& Velocidad Máxima de Subida (Mpbs \
 
 De la categoría 0 a la 5 se definen para equipos de usuarios, es decir, telefonía celular. 
 Las antenas de la red 4G no cuentan con una categoría inferior a 4, siendo la más común la categoría 6. Por lo tanto, la velocidad se encuentra entre 1-50Mbps que depende de la cobertura de la red.
-Para este sistema, el análisis debe cumplir con los parámetros que dicta el teorema de Shannon que establece que, dado un canal con ruido con una capacidad $C$ e información transmitida en una tasa $R$ entonces si $R<C$ existe una técnica de codificación que permite que la probabilidad de error en el $Rx$ se reduzca. Se debe cumplir que la tasa de bits debe ser siempre menor a la capacidad del canal.
+Para este sistema, el análisis debe cumplir con los parámetros que dicta el teorema de Shannon-Hartley que establece que, dado un canal con ruido con una capacidad $C$ e información transmitida en una tasa $R$ entonces si $R<C$ existe una técnica de codificación que permite que la probabilidad de error en el $Rx$ se reduzca. Se debe cumplir que la tasa de bits debe ser siempre menor a la capacidad del canal.
 
 Este análisis se divide en:
 \begin{itemize}
@@ -506,11 +508,11 @@ Se propone una velocidad de 60 km/h:
 
 
 El automóvil se desplaza aproximadamente 17 metros en 1 segundo. Se propone que cada 10 segundos se envíe la ubicación  para posteriormente trazar la ruta en el mapa. Teniendo 170 metros recorridos cada 10 segundos del viaje.
-Verificando que se cumpla el Teorema de Shannon tenemos:
+Verificando que se cumpla el Teorema de Shannon-Hartley  tenemos:
 \begin{equation*}
 100 bits \cdot 10 s=1kbps
 \end{equation*} 
-y teniendo una capacidad del canal de hasta 5Mbps
+y la máxima tasa de datos que el tranceptor tiene es de 5Mbps.
 
 Cumpliéndose la relación establecida de $R<C$.
 \begin{equation*}
@@ -548,8 +550,15 @@ Más 1kbps de la tasa de bits a utilizar del texto informativo que se pretende en
 
 \subsection{Análisis de Cobertura}
 
-La red de telefonía celular funciona mediante celdas, estas celdas tienen el objetivo de mantener conectados a los dispositivos en las diferentes áreas de cobertura y cada una de ellas contiene una estación base o antena. El handover o handoff es el proceso de transferir el servicio de una celda a otra, ya sea cuando se pierde la calidad en una de ellas o cuando el dispositivo se va trasladando. 
+La red de telefonía celular funciona mediante celdas (véase la Figura \ref{fig:handover}), estas celdas tienen el objetivo de mantener conectados a los dispositivos en las diferentes áreas de cobertura y cada una de ellas contiene una estación base o antena. El handover o handoff es el proceso de transferir el servicio de una celda a otra, ya sea cuando se pierde la calidad en una de ellas o cuando el dispositivo se va trasladando.Este mecanismo tiene por objetivo el garantizar la correcta realización del servicio en las condiciones mencionadas anteriormente. 
 Para el análisis de cobertura de la red LTE se tiene en cuenta el sistema handoff ya que el dispositivo se irá trasladando entre distintas celdas.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/handover}
+\captionof{figure}{Esquema handover entre dos celdas }
+ \label{fig:handover}
+\end{center}
+
 La cobertura de LTE por Telcel es la más amplia del país, su mayor cobertura está concentrada en la Ciudad de México, por lo que tendremos una buena recepción, aunque en ocasiones debido a la saturación de la red o al transferir el servicio de la antena de una estación base a otra se puede encontrar alguna intermitencia o retraso, en estos casos el módulo va a pasar a modo de espera para enviar la información una vez se restablezca la red.
 
 \begin{center}
@@ -576,9 +585,21 @@ En el mapa de cobertura la zona verde hace referencia a zonas con cobertura gara
 \item El envío de la cadena de texto se mantiene limitada a 100 bits.
 \item El sistema de comunicación transmite la información solamente en zonas que cuenten con cobertura garantizada.
 \end{itemize}
+\newpage
+\section{Diseño del Módulo de Comunicaciones }
+Para el diseño de este módulo se tiene contemplado ejecutar dos procesos asíncronos, es decir, que se ejecutan al mismo tiempo o de manera paralela.
 
-\section{Diseño del Sistema de Comunicaciones }
-  
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/DF-modCom}
+\captionof{figure}{Diagrama de Flujo del Módulo de Comunicaciones}
+ \label{fig:DF-modCom}
+\end{center}
+
+\begin{figure}
+  \includegraphics[scale=0.65]{imagenes/DG-modCom}
+\captionof{figure}{Diagrama de Flujo de Trabajo del Módulo de Comunicaciones}
+ \label{fig:DG-modCom}
+\end{figure}
 \newpage
 \section{Investigación de Servidores de alojamiento}
 
@@ -1234,13 +1255,11 @@ Python ofrece una amplia gama de bibliotecas, que incluyen diferentes tipos de f
 
 \newpage
 \section{Conclusiones}
-En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades investigación, nos dimos cuenta de que esta opción no era viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, así como una buena integración con la Rasperry Pi 4.\\
-
 En el caso del Submódulo de Procesamiento de imágenes, se tenía contemplado desarrollarlo de manera separada del submódulo de \emph{machine learning } pero después de haber realizado un análisis más profundo, se decidió integrarlo dentro de este mismo. Esto para el ahorro de recursos de procesamiento y conseguir una mejor comunicación entre procesos. En un siguiente reporte, se terminará por diseñar la Red Neuronal Convolucional, así como el diseño del Módulo de Telemetría y de la Estación Base.\\
 
 Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, sin embargo, se tiene contemplado rediseñar el modelo con el fin de mejorar y adaptarla los cambios del sistema a futuro.
 
-
+En un principio para el análisis del sistema de comunicaciones, sólo se había contemplado el análisis de telemetría pero al ir realizando las actividades del tercer reporte e ir profundizando en algunos temas de comunicaciones, caímos en cuenta que se necesitaba el análisis de la cobertura y de los datos, es decir,de la transmisión de los fotogramas así que fueron agregados; se pretende hacer un análisis más teórico que el empírico que ya se tiene.
 \newpage
 \section{Bibliografia}
 %\bibliographystyle{apacite}
