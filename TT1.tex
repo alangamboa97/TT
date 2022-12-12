@@ -349,114 +349,21 @@ MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-
 \section{Metodología}
 
 
-
-Para transferir datos o información de un punto a otro sin la utilización de cableado o algún medio físico, tenemos las redes inalámbricas; y se dividen en 3 diferentes tipos dependiendo del alcance requerido:
-
+Para el presente proyecto 
 
 \begin{itemize}
 
-\item \textbf{La red de área personal inalámbrica (WPAN)}\\
+\item \textbf{Top-Down}
 
-Son redes de corto alcance que utilizan tecnología Bluetooth, HomeRF (\emph{Home Radio Frecuency}), Zigbee y las conexiones infrarrojas. Interconectan dispositivos compatibles como teléfonos móviles, electrodomésticos, impresoras o asistentes personales digitales (PDA) cerca de una ubicación central. 
+La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas par
 
-Utilizada para periféricos de tamaño pequeño, son conocidas como redes de corto alcance, con cobertura de 10 a 100 metros. 
 
-\item \textbf{La red de área local inalámbrica (WLAN)}\\
 
-Es una red de intercambio de datos a través de ondas electromagnéticas que se propagan en el aire, en ella se crea una red de área local con un determinado número de dispositivos conectados a un enrutador o punto de acceso que proporcionará acceso a Internet. 
 
-Son conocidas como redes de corto/mediano alcance alcanzando de 100 a 1000 metros.\\
-Estándares usados en WLAN: 
-\begin{itemize}
-
-\item IEEE 802.11 \\
-Es la forma más apropiada de referirnos a la tecnología Wi-Fi, especifica las normas de funcionamiento en una WLAN. \\
-
-\item IEEE 802.11a/b/g  \\
-Estándares identificadores de canales y frecuencias por donde se conectan los hosts a la WLAN. Con 802.11a se opera sobre las bandas de 5 GHz a 20 MHz y 2,4 GHz mientras que en la 802.11 b y g operan solamente en la banda de 2,4 GHz a una frecuencia de 25 MHz como ancho de banda.\\
-
-\item IEEE 802.11n\\
-Fue el primero en implementar la tecnología MIMO (\emph{Multiple Input - Multiple Output}) que permite usar varios canales a la vez para el envío y recepción de datos. \\
-
-\item IEEE 802.11ac \\
-Se denomina WiFi 5 y la gran mayoría de aparatos trabajan sobre esta versión. Es una versión que?solo opera en la banda de 5 GHz para proporcionar velocidades desde los 433 Mbps, dependiendo de la cantidad de antenas que utilice. \\
- 
-\item IEEE 802.11ax \\
-Es la nueva versión conocida como WiFi 6 o WiFi de 6ª generación en ella se introduce la nueva tecnología OFDMA? que mejora la eficiencia espectral de la red para WLAN en donde haya gran cantidad de usuarios conectados.\\
-Opera sobre las frecuencias de 2,4 GHz y 5 GHz. \\
-\end{itemize}
-
-\item \textbf{La red de inalámbrica de area amplia (WWAN)}\\
-
-Usan ondas de radio pero transmite a uno o varios puntos de acceso inalámbrico donde un usuario inalámbrico puede conectarse a la red, al disponer de un ancho de banda más elevado ofrece una mejor cobertura. \\\\
-Como ejemplo de estas redes tenemos la tecnología 4G y 5G. 
-Son conocidas como redes de largo alcance con cobertura de hasta 100km, pueden dar soporte a gran parte del territorio geográfico. 
-
-En esta red se incluye:
-\begin{itemize}
-\item \textbf{LPWAN(\emph{Low Power Wide Area Network}): Red de Área Amplia de Baja Frecuencia}\\
-Son conocidas como redes de largo alcance con cobertura de hasta 100km.
-\end{itemize}
-Ventajas, Desventajas y Aplicaciones de las LPWAN:
 \end{itemize}
 
 
-\begin{table}[]
-\begin{tabular}{|m{0.30\linewidth}|m{0.30\linewidth}|m{0.30\linewidth}|}
-\hline
- Ventajas & Desventajas  &Aplicaciones   \\ \hline
- Baja Potencia. 
-Minimiza el costo de energía lo que hace que los dispositivos remotos funcionen durante largos periodos de tiempo. & Baja velocidad de transmisión. 
-No puede manejar grandes volúmenes de datos.  &  IoT. 
-Satisfacer los desafíos de los dispositivos y sensores a pila. \\ \hline
- Amplia cobertura. 
-Ofrecen largo alcance sin mucha interferencia. & Problemas de atenuación de las señales. 
-Funcionan de forma más eficiente en espacios abiertos que en zonas urbanas.  &Aplicaciones de ciudades inteligentes. 
--Medidores de agua inteligentes 
--Iluminación inteligente   \\ \hline
- Bajo Ancho de Banda. 
-Destinadas a aplicaciones con mensajes pequeños pocas veces por hora. & Confiabilidad en las transmisiones.  &  -\\ \hline
- Bajo Coste. 
-Al tener un bajo ancho de banda reduce su costo también muchos usan el rango sin licencia en las bandas ISM. & Conectividad no constante. 
-Dificulta actividades como el control de movimiento.  & - \\ \hline
-\end{tabular}
-\caption{\label{tab:LPWAN} Ventajas, Desventajas y Aplicaciones de las LPWAN}
-\end{table}
 
-\newpage
-A continuación, se muestra de manera gráfica los tipos de redes antes mencionadas, así como algunos de sus protocolos y tecnologías.
-
-\begin{center}
-  \includegraphics[scale=1]{imagenes/redes}
-\captionof{figure}{Tipos de Redes Inalámbricas}
- \label{fig:prot}
-\end{center}
-
-Dado que para el presente proyecto tiene contemplado funcionar dentro de la Ciudad de México y considerando que esta tiene una extensión de 1485 km2, el tipo de red mas viable a utilizar es la LPWAN.
-
-\begin{center}
-  \includegraphics[scale=0.2]{imagenes/cdmx}
-\captionof{figure}{Mapa de la Ciudad de México}
- \label{fig:cd}
-\end{center}
-
-A continuación, se muestra un cuadro comparativo con estos tipos de redes.
-
-\begin{table}[h]
-\begin{tabular}{|l|l|l|l|l|l|l|}
-\hline
-        & Espectro                                                                 & \begin{tabular}[c]{@{}l@{}}Ancho de\\ Banda\end{tabular} & Costo    & BitRate & Escalabilidad & \begin{tabular}[c]{@{}l@{}}Inmunidad a \\ la Interferencia\end{tabular} \\ \hline
-LTE-M   & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 869 MHz\\ 915 MHz\end{tabular} & 100kHz                                                   & Moderado & 1Mbps   & Alta          & Moderada                                                                \\ \hline
-NB-IoT  & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 433 MHz\end{tabular}           & \textless{}500kHz                                        & Moderado & 200kbps & Alta          & Baja                                                                    \\ \hline
-SigFox  & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 200kHz                                                   & Bajo     & 100bps & Baja          & Baja                                                                    \\ \hline
-LoraWan & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 1.4MHz                                                   & Bajo     & 10kbps  & Moderada      & Muy Alta                                                                \\ \hline
-\end{tabular}
-\caption{\label{tab:redes} Comparación entre Redes Inalámbricas}
-\end{table}
-
-Ya que una parte fundamental del proyecto es la transferencia de contenido multimedia, se requiere un bitrate mínimo de 0.5 Mbps.\\
-Tomando esto en consideración, podemos observar que tanto SigFox y LoraWan no cumplen con este requisito, por lo tanto quedan descartadas para ser utilizadas. \\
-Por lo tanto, las tecnologías que cumplen estás características son LTE-M y NB-IoT, por lo que en la siguiente sección se procede a hacer un análsis y comparación de estas dos tipos de redes inalámbricas para corrobar cual de las dos es la más óptima para ser utilizada en este proyecto.
 
 \newpage
 \section{Objetivos}
@@ -765,6 +672,10 @@ Tesis del año 2017 de la Pontifica Universidad Católica del Perú que tiene por o
 
 \newpage
 \subsection{Análsis del Módulo Central de Procesamiento}
+
+
+
+
 \newpage
 \subsubsection{Análisis del Submódulo de Procesamiento de Imágenes}
 \begin{itemize}
@@ -1498,6 +1409,44 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 
 
 
+
+\begin{itemize}
+
+\item \textbf{Elección del Lenguaje de Programación}
+
+
+Debido a que el presente proyecto posee un enfoque orientado a la inteligencia artificial, se debe de tener en claro que esta difiere al paradigma de la programación convencional. En la programación convencional, o estructurada, el usuario le indica a la máquina los datos y las reglas que debe seguir, y la máquina se encarga de obtener los resultados los parámetros mencionados. Sin embargo, en el paradigma de la programación orientada a inteligencia artificial, este enfoque cambia. Ahora se le indican los datos y los resultados, para obtener finalmente las reglas con las que se llegan a dichos resultados. 
+
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/programaclasico}
+\captionof{figure}{Programa clásico vs Machine Learning}
+ \label{fig:pcvsml}
+\end{center}
+
+
+\item \textbf{Arquitectura}
+
+Cómo se mencionó anteriormente en la sección de metodología, a lo largo de este proyecto se hará uso de la metodología \emph{Top-Down}, en dónde uno de sus princpipios fundamentales radica en la modularidad. Esta no es más que la habilidad de poder dividir programas en partes más pequeñas  o sub-programas llamados módulos.
+Estos módulos deben posser cierto grado de independencia de la aplicación principal, y a su vez poder ser utilizados por otras aplicaciones. 
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/modularidad}
+\captionof{figure}{Modularidad}
+ \label{fig:modul}
+\end{center}
+
+
+
+
+
+
+
+
+Python es un lenguaje de programación que permite trabajar con más de un paradigma(programación estructurada y orientada a objetos).\cite{python}. Normalmente cuando se programa un script sencillo, se aplica el paradigma de programación estructurada. Sin embargo, al tratarse de un problema más complejo, se suele utilizar el paradigma orientado a objetos. 
+
+
+\end{itemize}
+
 \newpage
 \subsubsection{Diseño de la Unidad Contenedora de Procesamiento}
 
@@ -1902,7 +1851,7 @@ el 18 de marzo de 2022).
 
 \bibitem{Referencia0} Fernando Berzal, \emph{ Redes Neuronales y Deep Learning}, Granada, 2018
 
-\bibitem{Referencia1} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
+\bibitem{python} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
 %Libro
 \bibitem{Referencia2}
 V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
