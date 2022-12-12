@@ -802,7 +802,12 @@ Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular
 
 
 \subsection{Análisis de la Estación Base}
-El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.  El sistema contará con los siguientes requerimientos:   \\
+El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.  
+
+
+
+
+El sistema contará con los siguientes requerimientos:   \\
 
 \textbf{Requerimientos Funcionales del Módulo de Estación Base}
 
@@ -906,7 +911,6 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \end{tabular}
 \caption{RF05- Guardar Credenciales de Usuario Administrador }
 \end{table}
-
 \textbf{Requerimientos No Funcionales del Módulo de Estación Base}
 \clearpage
 
@@ -925,10 +929,126 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \end{table}
 
 
+\textbf{Análsis de Casos de Uso}
+
+Con base en los requerimientos se realizó el siguiente diagrama de casos de uso, el cual muestra las actividades y la interacción con el Módulo de Estación base y el Módulo Central de Procesamiento. 
+
+\begin{center}
+  \includegraphics[scale=.55]{imagenes/CasosdeusosMEB}
+\captionof{figure}{Diagrama de Casos de Usos del Módulo de Estación Base}
+ \label{fig:CasosdeusosMEB}
+\end{center}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Guardar Incidencia}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Módulo Central de Procesamiento, Módulo de Estación Base}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 01 }
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Guardar Video}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Módulo Central de Procesamiento, Módulo de Estación Base}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 02 }
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Conectar Aplicación Web}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Módulo de Estación Base}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 03 }
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Desplegar Aplicación Web}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Módulo Central de Procesamiento, Módulo de Estación Base}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 04 }
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Guardar Credenciales de Usuario Administrador}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Módulo Central de Procesamiento}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 05 }
+\end{table}
+
+
+
+
+\textbf{Requerimientos No Funcionales del Módulo de Estación Base}
+\clearpage
+
+
+
+
+
 \newpage
 \subsubsection{Análisis de la Aplicación Web}
 
 
+
+
+
+
+\begin{itemize}
+
+
+
+
+
+
+\item \textbf{Análisis de Requerimientos Funcionales}
 \begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
@@ -1181,8 +1301,8 @@ El sistema enviará un mensaje de alerta al administrador indicando que Unidad pr
 \end{table}
 
 
-\textbf{Requerimientos No Funcionales}
-
+	        
+\item \textbf{Análisis de Requerimientos no Funcionales}
 
 A continuación se mencionan los requerimientos no funcionales de la aplicación web.
 
@@ -1194,25 +1314,174 @@ Disponibilidad                      & \begin{tabular}[c]{@{}l@{}}La aplicación w
 Interoperabilidad                   & \begin{tabular}[c]{@{}l@{}}La aplicación deberá ser accesible desde \\ cualquier sistema operativo \\ mientras se cuenta con un \\ navegador web en su versión más actual\end{tabular} &  \\ \cline{1-2}
 Eficiencia                          & \begin{tabular}[c]{@{}l@{}}La aplicación tendrá tiempos de respuesta\\ menores a 100ms.\end{tabular}                                                                                   &  \\ \cline{1-2}
 Escalabilidad                       & \begin{tabular}[c]{@{}l@{}}La aplicación web deberá ofrecer la oportunidad de \\ agregar nuevas funcionalidades y \\ soportar un mayor número de usuarios a \\ futuro\end{tabular}     &  \\ \cline{1-2}
-Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación deberá ofrecer un buen \\ funcionamiento mientras se tenga \\ una buena conexión a internet\end{tabular}                                      &  \\ \cline{1-2}
+Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación deberá ofrecer un buen \\ funcionamiento mientras se tenga \\ una conexión a internet mínima de 1Mbps\end{tabular}                                      &  \\ \cline{1-2}
 \end{tabular}
-\caption{Requerimientos no funcionales - Aplicación Web}
+\caption{Requerimientos No funcionales - Aplicación Web}
+\end{table}
+
+\item \textbf{Análsis de Casos de Uso}
+
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/casosdeusoweb}
+\captionof{figure}{Diagrama de Casos de Uso }
+ \label{fig:scaraindust}
+\end{center}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Iniciar Sesión}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El administrador ingresará los datos correspondientes para iniciar sesión en la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ El administrador deberá tener sus credenciales registradas en Amazon Cognito
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ Email\\
+\quad $\bullet$ Contraseña
+ \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 01 }
 \end{table}
 
 
-\newpage
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Registrar Usuario}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 02 }
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Modificar Usuario}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 03 }
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Eliminar Usuario}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 04 }
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Eliminar Usuario}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 05 }
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Confirmar Incidencia}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 06 }
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Visualizar Incidencia}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 07 }
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Recuperar Contraseña}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 08 }
+\end{table}
 
 
 
-\begin{itemize}
-
-
-\item \textbf{Análisis de Requerimientos Funcionales}
-
-
-	        
-\item \textbf{Análisis de Requerimientos no Funcionales}
-
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Mostrar Ubicación en Tiempo Real}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador Módulo de Comunicaciones}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{Caso de Uso 08 }
+\end{table}
 
 
 \end{itemize}
@@ -1223,7 +1492,7 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 
 
 
-\newpage
+\clearpage
 \section{Diseño}
 \subsection{Diseño del Módulo Central de Procesamiento}
 
@@ -1417,6 +1686,7 @@ Con base en los requerimientos, se plantea realizar el diseño de la arquitectura
 
 El siguiente diagrama muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credenciales de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{frontend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
 
+
 \begin{center} 
   \includegraphics[scale=.5]{imagenes/DisenoMEB} 
 \captionof{figure}{Arquitectura del Módulo de Estación Base} 
@@ -1424,6 +1694,16 @@ El siguiente diagrama muestra la arquitectura del sistema de Estación base, el c
 \end{center} 
 
 
+\textbf{Elección del servidor de alojamiento}
+Después de haber analizado los distintos proveedores de alojamiento así como sus características, llegamos a la conclusión que el que mejor cumple con los requisitos del proyecto es AWS Amplify. Ya que este contiene una suite de herramientas que facilitan la implementación de una aplicación web, como por ejemplo S3, que es un servicio de alojamiento en la nube utilizado para archivos multimedia de gran tamaño. \cite{AWS}
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/amplify-1}
+\captionof{figure}{Diagrama de Componentes AWS Amplify}
+ \label{fig:DiagramadeactividadMEB}
+\end{center}
+
+Otro factor fundamental por el cual se decidió utilizar la suite de AWS Amplify, es que esta cuenta con su propia CDN, lo cual significa que los tiempos de respuesta al usar la aplicación web deben de ser mínimos.
 
 
 \newpage
@@ -1432,7 +1712,7 @@ El siguiente diagrama muestra la arquitectura del sistema de Estación base, el c
 Para el diseño y desarrollo de la Aplicación web, se  decidió utilizar el lenguaje Javascript, ya que este cuenta con las herramientas y/o frameworks que mejor se adaptan a los requisitos previamente definidos.
 A su vez, se decidió utilizar el NodeJs para el sistema backend.
 
-Node.js, es un entorno en tiempo de ejecución multiplataforma basado en JavaScript. Este es controlado por eventos, permitiendo establecer y gestionar múltiples conexiones al mismo tiempo. Gracias a esta característica, el bloqueo de procesos no existe. NodeJs trabaja fundamentalmente bajo dos características: \emph{asincronía}, que permite la ejecucción de varios procesos al mismo tiempo, y \emph{Entrada/salida sin bloqueo}, que significa poder trabajar con múltiples solicitudes sin bloquear un hilo para una sola solicitud.
+Node.js, es un entorno en tiempo de ejecución multiplataforma basado en JavaScript. Este es controlado por eventos, permitiendo establecer y gestionar múltiples conexiones al mismo tiempo. Gracias a esta característica, el bloqueo de procesos no existe. NodeJs trabaja fundamentalmente bajo dos características: \emph{asincronía}, que permite la ejecucción de varios procesos al mismo tiempo, y \emph{Entrada/salida sin bloqueo}, que significa poder trabajar con múltiples solicitudes sin bloquear un hilo para una sola solicitud. \cite{NodeJs}
 
 NodeJs es capaz de manejar distintas peticiones sin que tener que esperar a que una petición sea respondida para continuar con la siguiente petición. De ahí la elección de este entorno de Javascript para el desarrollo de la aplicación web.\\
 
@@ -1551,7 +1831,6 @@ Tomando en cuenta la elección de MongodDB como gestor de la base de datos, se co
 
 MongoDB utiliza documentos para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemeja a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
 
-
 MongoDB almacena registros de datos como documentos BSON. BSON es una representación binaria de documentos JSON , aunque contiene más tipos de datos que JSON.   
 
 Un registro en MongoDB es un documento, que es una estructura de datos compuesta por pares de campo y valor. Los documentos MongoDB son similares a los objetos JSON. Los valores de los campos pueden incluir otros documentos, matrices y matrices de documentos. 
@@ -1612,6 +1891,14 @@ Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, s
 https://imt.mx/resumen-boletines.html?IdArticulo=449\&amp;IdBoletin=168 (accedido 
 el 18 de marzo de 2022).
 
+\bibitem {NodeJs} Jonathan Wexler, \emph{Get Programming with Node.js}, Manning, 2019
+
+\bibitem {js} Marjin Haverbeke \emph{Eloquent Javascript}, Third Edition, No Starch Press, 2020
+
+
+\bibitem {AWS} Amazon, \emph{Amazon Amplify}, https://aws.amazon.com/es/amplify/
+
+\bibitem {mongo} Kyle Banker, \emph{MondoDB in Action}, Second Edition, Manning, 20216
 
 \bibitem{Referencia0} Fernando Berzal, \emph{ Redes Neuronales y Deep Learning}, Granada, 2018
 
