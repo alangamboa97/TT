@@ -1,0 +1,778 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{anysize}
+\usepackage{array}
+\usepackage{lmodern}
+\usepackage{adjustbox}
+
+\marginsize{2cm}{2cm}{2cm}{2cm}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize UPIITA}
+%\fancyfoot[R]{\footnotesize Diseño}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{\footnotesize Proyecto Terminal 1}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{graphics}
+\usepackage{capt-of}
+\usepackage[pdftex=false,colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+\setlength\parindent{0pt}
+\usepackage[usenames]{color}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{shapepar}
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+
+\includegraphics[scale=0.45]{imagenes/ipn}
+\hspace{10cm}
+\includegraphics[scale=0.15]{imagenes/upiita}
+\\
+
+
+\begin{center}
+
+
+\textsc{\Large ``Sistema de central Telefónica''}\\[0.5cm]
+
+
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Proyecto Final}\\[0.4cm]
+
+\HRule \\[1.5cm]
+
+
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{\\Autores:}\\
+Alan Eduardo Gamboa Del Ángel\\
+Maite Paulette Díaz Martínez\\
+
+%Grupo:4MM6\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{flushright} \large
+\emph{Profesor:} \\
+Dr. Carlos Hernandez Mejía\\
+
+
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+03 de Noviembre 2022
+
+\end{center}
+
+
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+
+
+\newpage
+\section{Introducción}
+
+
+
+Lo primero que debemos de tener claro, es que la programación orientada a la inteligencia artificial es diferente al paradigma de la programación convencional. En esta última, el usuario le indica a la máquina exactamente lo que tiene que hacer, mientras que en Machine learning, se le enseña a programarse sola. Lo cúal se ejemplifica en el siguiente gráfico:
+\\
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/programaclasico}
+\captionof{figure}{Programa clásico vs Machine Learning}
+ \label{fig:pcvsml}
+\end{center}
+
+
+El proceso de trabajo para aprendizaje automático es muy diferente a la construcción de una aplicación convencional. Por este motivo, la manera de utilizar los lenguajes de programación es diferente. Se deben de tomar en cuenta las características que estos utilizan, así como sus enfoques y paradigmas.\\
+
+Uno de los factores importantes a considerar al momento de elegir un lenguaje de programación orientado a machine learning, es la popularidad el mismo, ya que esta es una señal de la aceptación por parte de la comunidad. A su vez, su el soporte es tanto o mas importante, ya que podemos darnos una idea si dicho lenguaje posee las herramientas adecuadas que se acoplan a nuestras necesidades. La velocidad de ejecución es otro factor importante, sobre todo cuando se requiere una minusiocidad en la ejecución de procesos y el cuidado de la memoria .Finalmente, la versatilidad del lenguaje es otro factor relevante, ya que, si el lenguaje fue diseñado con una determinada tarea o propósito en mente, este será mucho más eficiente y productivo.\\
+
+A continuación, se listan algunos de los lenguajes de programación más populares en el campo de machine learning:\\
+
+\begin{itemize}
+\item \textbf{Python} \\
+Python se ha convertido en el lenguaje de programación más popular del mundo, esto gracias a su sencillez aunado a una gran versatilidad. Sus utilidades abarcan desde desarrollo web, hasta la inteligencia artificial.
+Python es uno de los lenguajes más naturales y  con sintaxis menos complicada. Por lo tanto, es fácil de aprender, leer y corregir errores. Lo mejor de todo es que Python es un lenguaje de código abierto. Lo que significa que es de libre acceso y distribución. Como resultado, tiene bibliotecas versátiles.
+
+Una biblioteca es una colección de módulos o códigos creados para realizar operaciones específicas. Algunos módulos pueden ayudar con la interfaz gráfica de usuario, análisis de datos, gráficos, entre otras cosas. En lugar de escribir el mismo código cada vez que lo necesite, puede importarlo desde la biblioteca.
+
+
+ Uno de los principales factores de esta popularidad, es el enorme ecosistema de herramientas desarrolladas específicamente para machine learning tales como: Pandas, Numpy, Tensorflow, Keras, entre otras.
+A pesar de no ser el lenguaje más rápido o potente, lo anterior lo hace uno de los lenguajes indispensables si se piensa trabajar en el campo de machine learning.
+
+\item \textbf{C++}\\
+
+A menudo hemos escuchado que C++ se aborda más cuando se trata de desarrollar juegos y sistemas grandes. Esto se debe a su característica de portabilidad y también proporciona una comprensión básica de la construcción lógica. Sin embargo, Algunos de los paquetes compatibles con C++ incluyen: Microsoft Cognitive Toolkit (CNTK) para aprendizaje profundo; Tensorflow para aprendizaje profundo; OpenCV para visión artificial; MLPack para aprendizaje automático; DyNet para redes neuronales; OpenNN para redes neuronales; Shogun para aprendizaje automático y FANN para redes neuronales.\\
+Sin embargo, C++ también tiene sus propias deficiencias. Está muy orientado a la sintaxis, a diferencia de Python, que es realmente amigable para los principiantes. Adempas de no contar con un gran soporte de bibliotecas.
+
+\item \textbf{R}\\
+
+Otro de los lenguajes de programación cuyo uso es considerablemente popular en el ámbito de machine learning y data análisis es R. R ofrece una variedad de beneficios desde su buen soporte de biblioteca y gráficos hasta la posibilidad crecer enormemente con muchos de los que podemos buscar ayuda, debido a su naturaleza abierta.
+Algunos de los paquetes clave compatibles con R son: Kernlab para operaciones basadas en regresión y clasificación; Ggplot para visualización de datos; Caret para operaciones basadas en regresión y clasificación; Plotly para visualización de datos; MLr3 para diferentes flujos de trabajo de aprendizaje automático.
+al igual que Python, también es comparativamente más lento que el resto de los lenguajes. Esto representa una gran desventaja para este lenguaje de programación. Además de esto, también tiene un origen débil, por lo que no es tan fácil de aprender. Para las personas que no tienen experiencia en programación les puede resultar difícil aprender R.
+
+\item \textbf{Matlab}\\
+
+Matlab también admite operaciones de aprendizaje automático y se puede aplicar de manera innovadora a aplicaciones que incluyen visión por computadora. MATLAB no está limitado por la sintaxis y, por lo tanto, es fácil de aprender y comprender. MATLAB también tiene muchas funciones predefinidas y una GUI para que los alumnos entiendan mejor las cosas. Además, viene con un compilador MATLAB que ayuda cuando se trata de codificar en el mismo.
+Además, cuando se trata de capacidades de aprendizaje automático, MATLAB lo admite de una manera única. MATLAB permite a los usuarios aplicar AutoML, lo que les permite aprovechar al máximo los modelos codificados optimizados y reducidos. Además, MATLAB también puede realizar la generación automática de código para el análisis de sensores y mucho más.
+MATLAB también viene con algunas restricciones. El lenguaje de programación no está fácilmente disponible o es de uso gratuito. De hecho, una versión de prueba está disponible solo por 30 días y publica que los usuarios deben comprar el paquete para un uso posterior. Por esta razón, uno puede encontrar solo investigadores como su público objetivo. No solo eso, el compilador de MATLAB es costoso de comprar y, por lo tanto, no tiene un soporte de comunidad / foro denso para ayudar a los usuarios y estudiantes.
+
+
+\item \textbf{Javascript}
+
+JavaScript puede no ser el lenguaje principal para desarrollo en Inteligencia Artificial, pero es gran complemento para utilizar herramientas relacionadas con Machine Learning, especialmente visualización de datos o procesos,
+El hecho de que TensorFlow.js se ejecute dentro del navegador abre una gama de posibilidades interesantes tanto para empresas como para desarrolladores.
+Como los navegadores son un espacio interactivo: ofrece acceso a varios sensores, incluidas cámaras web y micrófonos, que pueden proporcionar imágenes y sonidos como entrada a cualquier modelo de aprendizaje automático.
+A pesar de todos los aspectos positivos, TensorFlow.js no tiene acceso predeterminado al sistema de archivos en el entorno del host del navegador. Esto limita los recursos de datos disponibles y puede imponer restricciones en el tamaño de los archivos y procesos.\\
+
+
+
+
+\end{itemize}
+
+A continuación se presenta una tabla comparativa de las características que se tomaron en cuenta para tomar una decisión sobre que lenguaje utilizar.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Lenguaje} & \textbf{Popularidad} & \textbf{Versatilidad} & \textbf{Velocidad} & \textbf{Soporte} \\ \hline
+Python            & Alta                 & Alta                  & Moderada           & Alta             \\ \hline
+C++               & Baja                 & Alta                  & Alta               & Moderado         \\ \hline
+R                 & Alta                 & Moderada                  & Moderado           & Bajo             \\ \hline
+Matlab            & Baja                 & Moderada              & Moderada           & Bajo             \\ \hline
+Javascript        & Moderada             & Moderada              & Baja               & Moderado         \\ \hline
+\end{tabular}
+\caption{\label{tab:lenguajes} Tabla Comparativa Lenguajes de Programación}
+\end{table}
+
+Python es un lenguaje que permite trabajar más de un paradigma (programación estructurada y orientada a objetos).
+Normalmente cuando programamos un script sencillo aplicamos solo el paradigma de programación estructurada (Secuencia, selección e iteración), y cuando necesitamos programar un proyecto  más complejo y queremos incluir los beneficios del paradigma orientado a objetos (reutilización de los componentes, facilidad de mantenimiento y modificación de objetos) utilizamos clases (POO).\\
+Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje nos permite desarrollar ambos ámbitos. Por lo que se tomó la decisión de ser utilizado a lo largo de este proyecto. 
+
+
+\newpage
+\section{Justificación}
+
+Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y que estaremos utilizando de manera frecuente a lo largo de este proyecto, es la modularidad. Que no es más que dividir nuestros programas en partes más pequeñas (sub-programas), que habitualmente son llamados módulos. Las cuales deben tener un grado de independencia de la aplicación o programa principal. Cuando hablamos de independencia, nos referimos a que pueden ser utilizados por otras aplicaciones y no dependen de la aplicación original en sí. 
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/modularidad}
+\captionof{figure}{Modularidad}
+ \label{fig:modul}
+\end{center}
+
+
+Estós módulos son archivos que alojan código independiente con una determinada función.  Python cuenta con diversos módulos que podemos agregar a nuestro código y utilizarlo para facilitar y acortar el 
+código, de manera que sea mas legible y ordenado.
+
+Otro de los factores que consideramos al desarrollar este proyecto, es el de concurrencia de procesos. La concucrrencia aparece cuando dos o más procesos ocurren al mismo tiempo.
+Estos procesos pueden "competir" o colaborar entre sí por los recursos del sistema. \\
+Los temás de colaboración, sincronización, hilos y paralelismo se abordarán de una manera más profunda en el tercer reporte, cuando se tenga el diseño de los módulos faltantes.
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/diagrama_casosusomc}
+\captionof{figure}{Diagrama de Casos de Uso - Módulo Central de Procesamiento}
+ \label{fig:casosusomc}
+\end{center}
+
+En el  siguiente diagrama, se pueden observar las distintas tareas así como las interacciones entre estas y el Submódulo de Procesamiento de Imágenes. \\
+Cabe recalcar, que para el presente reporte no se han determinado el diseño del Módulo de Telemetría, ni el de la Estación Base, por lo que se puede esperar el rediseño de este diagrama en un posterior reporte.Por esta misma razón, se decicidó no incluir el diagrama de clases hasta que los Módulos faltantes estén diseñados.
+
+
+\begin{center}
+
+  \includegraphics[scale=.4]{imagenes/diagrama_activiadesmc}
+\captionof{figure}{Diagrama de Actividades - Módulo Central de Procesamiento}
+ \label{fig:casosusomc}
+
+\end{center}
+
+En el siguiente Diagrama de Actividades se describen las actividades y sus interacciones con el Submódulo de Procesamiento de Imágenes y la Estación Base. Para que el sistema principal pueda iniciar, se necesita que el conductor encienda el auto, ya que este sistema funcionará utilzando la alimentación electrica.
+\\\\ 
+El sistema principal comenzará por verificar el estado del Submódulo de Procesamiento de Imágenes, así como el de Telemetría y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Procesamiento de Imáganes. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
+Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Telemetría.se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
+Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. \\\\
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/diagrama_secuenciamc}
+\captionof{figure}{Diagrama de Secuencia - Módulo Central de Procesamiento}
+ \label{fig:secuenciamc}
+\end{center}
+
+Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial en la concurrencia de los mismos. También se detallan las peticiones y respuestas de los distintos submódulos y sistemas.
+
+
+
+\newpage
+\section{Marco Teórico}
+\subsection{Multifrecuencia de Tonos Duales - DTMF(\emph{Dual-Tone Multifrequency}) }
+
+Es una tecnología de telecomunicaciones para transferir información entre dispositivos telefónicos centrales telefónicas y de conmutación mediante tonos de audio en banda enviados a través de frecuencias de voz. En pocas palabras, la señalización DTMF traduce los tonos audibles de presionar las teclas en los teclados de los teléfonos en información legible que las empresas de telecomunicaciones utilizan para procesar las llamadas telefónicas entrantes.\\
+Como sugiere el nombre, la señalización multifrecuencia de dos tonos utiliza una combinación de ocho frecuencias de audio transmitidas en pares para representar dieciséis señales, representadas por los diez dígitos numéricos, las letras de la A a la D y los símbolos \# y *. Las claves A, B, C, D, terminaron cayendo de los teléfonos de escritorio de los consumidores y se utilizan principalmente en equipos de radio y controles de redes internas de las compañías telefónicas.
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/dtmf}
+\captionof{figure}{Tabla Multifrecuencia de Tonos Duales}
+ \label{fig:prot}
+\end{center}
+
+DTMF funciona asignando ocho frecuencias de audio diferentes a las filas y columnas del teclado. Cada fila de marcación está definida por una frecuencia de tono bajo y cada columna por una frecuencia de tono alto. Cuando se presiona una tecla correspondiente a un número o símbolo, el teléfono genera un tono que combina simultáneamente señales de alta y baja frecuencia. Este par de señales único se transmite luego a la central local y se decodifica para determinar qué número se marcó y cómo enrutar la llamada de manera apropiada. DTMF se puede transmitir a través de líneas telefónicas activas, Internet y una radio.\\
+La función principal de la señalización multifrecuencia de dos tonos es identificar el número marcado y la información de proceso de los clientes.
+
+\subsection{Teléfono}
+
+El teléfono es un dispositivo de telecomunicación creado para transmitir señales acústicas a distancia por medio de señales eléctricas.
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/telefono}
+\captionof{figure}{Tabla Multifrecuencia de Tonos Duales}
+ \label{fig:prot}
+\end{center}
+
+\begin{itemize}
+
+\item \textbf{Auricular}
+
+Se trata de una bocina que tiene un pequeño imán de forma permanente al cual se conecta un diafragma. En esta parte la señal eléctrica es transformada en energía acústica, lo cual ofrece la voz al oído.
+
+
+\item \textbf{Bocina}
+
+Se trata del micrófono que permite hablar durante la llamada. Contiene un carbón que transforma las vibraciones acústicas en cambios de resistencia, que generan alteraciones en la corriente eléctrica del lazo local.
+
+\item \textbf{Campana}
+
+Esta se conecta directamente al trenzado local del lazo con dirección a la central telefónica.
+Es desde esta central donde se produce una señal cuando se recibe una llamada, lo cual hace que la campana suene.
+
+\item \textbf{Bobina Híbrida}
+
+Se trata de un devanado que funciona como un transformador que recibe y transmite en solo un par de conductores.
+
+\item \textbf{Circuitos de Marcación}
+
+Es a través de esta parte del teléfono donde el usuario puede introducir el número de teléfono a donde desea llamar. Estos circuitos han cambiado a través de los años, por ejemplo: en un principio contaba con un sistema de pulsos por discado y hoy día se usa un sistema de marcación por tonos o sistema de multi-frecuencia, donde se muestran botoneras que muestran los números a marcar.
+
+\item \textbf{Teclado DTMF}
+Se trata de cuatro teclas adicionales al sistema de marcación, el cual ofrece aplicaciones especiales.
+
+\item \textbf{Interruptor de Gancho}
+Se encarga de mantener el control del dispositivo que actúa a través del auricular del teléfono. Con este se abre o cierta los circuitos que hacen operar el teléfono, donde el auricular se mantiene en reposo cuando es colocado en este gancho.
+\end{itemize}
+
+\newpage
+\section{Propuesta de Solución}
+
+Para transferir datos o información de un punto a otro sin la utilización de cableado o algún medio físico, tenemos las redes inalámbricas; y se dividen en 3 diferentes tipos dependiendo del alcance requerido:
+
+
+\begin{itemize}
+
+\item \textbf{La red de área personal inalámbrica (WPAN)}\\
+
+Son redes de corto alcance que utilizan tecnología Bluetooth, HomeRF (\emph{Home Radio Frecuency}), Zigbee y las conexiones infrarrojas. Interconectan dispositivos compatibles como teléfonos móviles, electrodomésticos, impresoras o asistentes personales digitales (PDA) cerca de una ubicación central. 
+
+Utilizada para periféricos de tamaño pequeño, son conocidas como redes de corto alcance, con cobertura de 10 a 100 metros. 
+
+\item \textbf{La red de área local inalámbrica (WLAN)}\\
+
+Es una red de intercambio de datos a través de ondas electromagnéticas que se propagan en el aire, en ella se crea una red de área local con un determinado número de dispositivos conectados a un enrutador o punto de acceso que proporcionará acceso a Internet. 
+
+Son conocidas como redes de corto/mediano alcance alcanzando de 100 a 1000 metros.\\
+Estándares usados en WLAN: 
+\begin{itemize}
+
+\item IEEE 802.11 \\
+Es la forma más apropiada de referirnos a la tecnología Wi-Fi, especifica las normas de funcionamiento en una WLAN. \\
+
+\item IEEE 802.11a/b/g  \\
+Estándares identificadores de canales y frecuencias por donde se conectan los hosts a la WLAN. Con 802.11a se opera sobre las bandas de 5 GHz a 20 MHz y 2,4 GHz mientras que en la 802.11 b y g operan solamente en la banda de 2,4 GHz a una frecuencia de 25 MHz como ancho de banda.\\
+
+\item IEEE 802.11n\\
+Fue el primero en implementar la tecnología MIMO (\emph{Multiple Input - Multiple Output}) que permite usar varios canales a la vez para el envío y recepción de datos. \\
+
+\item IEEE 802.11ac \\
+Se denomina WiFi 5 y la gran mayoría de aparatos trabajan sobre esta versión. Es una versión que?solo opera en la banda de 5 GHz para proporcionar velocidades desde los 433 Mbps, dependiendo de la cantidad de antenas que utilice. \\
+ 
+\item IEEE 802.11ax \\
+Es la nueva versión conocida como WiFi 6 o WiFi de 6ª generación en ella se introduce la nueva tecnología OFDMA? que mejora la eficiencia espectral de la red para WLAN en donde haya gran cantidad de usuarios conectados.\\
+Opera sobre las frecuencias de 2,4 GHz y 5 GHz. \\
+\end{itemize}
+
+\item \textbf{La red de inalámbrica de area amplia (WWAN)}\\
+
+Usan ondas de radio pero transmite a uno o varios puntos de acceso inalámbrico donde un usuario inalámbrico puede conectarse a la red, al disponer de un ancho de banda más elevado ofrece una mejor cobertura. \\\\
+Como ejemplo de estas redes tenemos la tecnología 4G y 5G. 
+Son conocidas como redes de largo alcance con cobertura de hasta 100km, pueden dar soporte a gran parte del territorio geográfico. 
+
+En esta red se incluye:
+\begin{itemize}
+\item \textbf{LPWAN(\emph{Low Power Wide Area Network}): Red de Área Amplia de Baja Frecuencia}\\
+Son conocidas como redes de largo alcance con cobertura de hasta 100km.
+\end{itemize}
+Ventajas, Desventajas y Aplicaciones de las LPWAN:
+\end{itemize}
+
+
+\begin{table}[]
+\begin{tabular}{|m{0.30\linewidth}|m{0.30\linewidth}|m{0.30\linewidth}|}
+\hline
+ Ventajas & Desventajas  &Aplicaciones   \\ \hline
+ Baja Potencia. 
+Minimiza el costo de energía lo que hace que los dispositivos remotos funcionen durante largos periodos de tiempo. & Baja velocidad de transmisión. 
+No puede manejar grandes volúmenes de datos.  &  IoT. 
+Satisfacer los desafíos de los dispositivos y sensores a pila. \\ \hline
+ Amplia cobertura. 
+Ofrecen largo alcance sin mucha interferencia. & Problemas de atenuación de las señales. 
+Funcionan de forma más eficiente en espacios abiertos que en zonas urbanas.  &Aplicaciones de ciudades inteligentes. 
+-Medidores de agua inteligentes 
+-Iluminación inteligente   \\ \hline
+ Bajo Ancho de Banda. 
+Destinadas a aplicaciones con mensajes pequeños pocas veces por hora. & Confiabilidad en las transmisiones.  &  -\\ \hline
+ Bajo Coste. 
+Al tener un bajo ancho de banda reduce su costo también muchos usan el rango sin licencia en las bandas ISM. & Conectividad no constante. 
+Dificulta actividades como el control de movimiento.  & - \\ \hline
+\end{tabular}
+\caption{\label{tab:LPWAN} Ventajas, Desventajas y Aplicaciones de las LPWAN}
+\end{table}
+
+\newpage
+A continuación, se muestra de manera gráfica los tipos de redes antes mencionadas, así como algunos de sus protocolos y tecnologías.
+
+\begin{center}
+  \includegraphics[scale=1]{imagenes/redes}
+\captionof{figure}{Tipos de Redes Inalámbricas}
+ \label{fig:prot}
+\end{center}
+
+Dado que para el presente proyecto tiene contemplado funcionar dentro de la Ciudad de México y considerando que esta tiene una extensión de 1485 km2, el tipo de red mas viable a utilizar es la LPWAN.
+
+\begin{center}
+  \includegraphics[scale=0.2]{imagenes/cdmx}
+\captionof{figure}{Mapa de la Ciudad de México}
+ \label{fig:cd}
+\end{center}
+
+A continuación, se muestra un cuadro comparativo con estos tipos de redes.
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+        & Espectro                                                                 & \begin{tabular}[c]{@{}l@{}}Ancho de\\ Banda\end{tabular} & Costo    & BitRate & Escalabilidad & \begin{tabular}[c]{@{}l@{}}Inmunidad a \\ la Interferencia\end{tabular} \\ \hline
+LTE-M   & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 869 MHz\\ 915 MHz\end{tabular} & 100kHz                                                   & Moderado & 1Mbps   & Alta          & Moderada                                                                \\ \hline
+NB-IoT  & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 433 MHz\end{tabular}           & \textless{}500kHz                                        & Moderado & 200kbps & Alta          & Baja                                                                    \\ \hline
+SigFox  & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 200kHz                                                   & Bajo     & 100bps & Baja          & Baja                                                                    \\ \hline
+LoraWan & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 1.4MHz                                                   & Bajo     & 10kbps  & Moderada      & Muy Alta                                                                \\ \hline
+\end{tabular}
+\caption{\label{tab:redes} Comparación entre Redes Inalámbricas}
+\end{table}
+
+Ya que una parte fundamental del proyecto es la transferencia de contenido multimedia, se requiere un bitrate mínimo de 0.5 Mbps.\\
+Tomando esto en consideración, podemos observar que tanto SigFox y LoraWan no cumplen con este requisito, por lo tanto quedan descartadas para ser utilizadas. \\
+Por lo tanto, las tecnologías que cumplen estás características son LTE-M y NB-IoT, por lo que en la siguiente sección se procede a hacer un análsis y comparación de estas dos tipos de redes inalámbricas para corrobar cual de las dos es la más óptima para ser utilizada en este proyecto.
+
+\newpage
+\section{Diseño}
+
+\subsection{Componentes}
+
+
+\begin{itemize}
+
+\item \textbf{Módulo MT8870}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/mtt8870}
+\captionof{figure}{Módulo MT8870}
+ \label{fig:prot}
+\end{center}
+
+\begin{itemize}
+
+\item \textbf{Descripción}
+
+El módulo MT8870 decodifica las señales DTMF desde una fuente de audio y es adecuada para aplicaciones de monitoreo remoto, contestadores telefónicos y mucho más.
+El módulo MT8870 es un chip decodificador DTMF bajo dispositivo de potencia. Es un receptor DTMF completo que integra tanto el filtro divisor de banda y las funciones de descodificación digital. Este módulo es adecuado para las interfaces de módem, radios móviles y otras aplicaciones relacionadas con DTMF.
+
+\item \textbf{Características}
+
+$\bullet$ Chip decodificador de frecuencias MT8870\\
+$\bullet$ Interfaz de entrada de Audio\\
+$\bullet$ Luces para indicación de estado de salida LED\\
+$\bullet$ Tamaño de PCB: 26,5 x 24,5 mm
+\end{itemize}
+
+
+\item \textbf{2N3904 Transistor BJT NPN}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/2n3904}
+\captionof{figure}{Módulo MT8870}
+ \label{fig:prot}
+\end{center}
+\begin{itemize}
+
+\item \textbf{Descripción}
+El 2N3904 es un dispositivo electrónico de estado solido de unión bipolar BJT por sus siglas en inglés (Bipolar Junction Transistor) que utiliza las propiedades del silicio para amplificar señales de voltaje o corriente. Este transistor es de tipo ?NPN?, formado por dos capas de material tipo ?N?, separadas por otra de tipo ?P?. El 2N3904 esta protegido por un encapsulado de plástico color negro conocido como TO-92 y cuenta con 3 pines que son base, colector y emisor, donde el emisor se encarga de emitir o inyectar electrones, la base permite transferir o pasar los electrones y el colector se encarga de colectar electrones.
+
+\item \textbf{Características}
+
+$\bullet$ Tensión VEBO Máxima Emisor-Base: 5 V\\
+$\bullet$ Corriente del Colector Ic: 200 mAdc
+
+\end{itemize}
+
+
+
+
+\end{itemize}
+
+
+
+A continuación se describen las ventajas principales de LTE-M
+
+\begin{itemize}
+\item \textbf{Ahorro de Energía}
+
+LTE-M permite que los dispositivos IoT usen un modo de ahorro de energía, que les permite "ir a dormir" cuando no están en uso. Y tampoco tienen que despertarse para enviar solo la actualización de ubicación, sino que pueden extender los tiempos de suspensión por un período de tiempo más largo. LTE-M también permite que los dispositivos usen recepción discontinua extendida (eDRX). Cuando el dispositivo está fuera del modo suspendido, verifica periódicamente la información del enlace descendente. Con eDRX, se aumenta el tiempo de verificación de la radio, lo que reduce el consumo de energía.
+
+\item \textbf{Cobertura}
+
+
+Las redes LTE-M/Cat-M1/Cat-M2 pueden utilizar la infraestructura 4G LTE existente. Esta es una ventaja significativa, ya que más del 50 por ciento de las conexiones móviles globales se realizan en redes 4G. 
+
+Con una pérdida de acoplamiento máxima (MCL) de 156 decibelios (dB), 14 dB más alta que LTE, las redes LTE-M también ofrecen mayor cobertura y mejor penetración en interiores. La señal puede manejar muchas interferencias de edificios y otras estructuras que obstruyen su camino.
+
+\item \textbf{Velocidad de Transferencia}
+
+
+Comparado con LTE, LTE-M no es particularmente rápido. Pero 1 megabit por segundo para transmisiones de enlace ascendente y descendente es excepcional en comparación con redes más antiguas como 2G y 3G (UMTS) y otras LPWAN. (Es varias veces más rápido que NB-IoT). Y eso es más que suficiente para la mayoría de las aplicaciones de IoT. Es factible para aplicaciones con necesidades de datos pequeñas e incluso casos de uso que involucran transmisión de video.
+
+
+En el contexto de IoT, el alto rendimiento de datos significa que los dispositivos que usan LTE-M pueden recibir fácilmente actualizaciones por aire (OTA), y las transmisiones de datos consumirán menos energía, porque el dispositivo puede volver al modo de ahorro de energía más rápido.
+
+
+\item \textbf{Costo}
+
+Las redes 4G se construyeron principalmente para teléfonos inteligentes. Las redes LTE-M se construyeron principalmente para dispositivos IoT. Como tal, los componentes necesarios para los dispositivos LTE-M son menos complejos y más asequibles que los componentes que necesitaría para un dispositivo 4G tradicional, aunque ambos utilizan la infraestructura 4G LTE.
+
+
+
+
+\end{itemize}
+
+\textbf{NB-IoT}
+
+Es un protocolo inalámbrico de Internet de las cosas (IoT) que utiliza tecnología de red de área amplia de baja potencia (LPWAN). Fue desarrollado por 3GPP para comunicación inalámbrica celular que permite una amplia gama de nuevos dispositivos y servicios NB-IoT. NB-IoT es uno de los tres principales estándares 3GPP LPWAN.\\
+
+El estándar de comunicación NB-IoT tiene como objetivo permitir que los dispositivos IoT funcionen a través de redes de operador, ya sea dentro de una onda portadora de comunicación del Sistema Global para Móviles (GSM) existente, en una "banda de protección" no utilizada entre canales LTE o de forma independiente.\\
+
+Uno de los objetivos de NB-IoT es impulsar la extensión de la cobertura más allá de lo que ofrecen las tecnologías celulares existentes. Para ello, NB-IoT ofrece repeticiones de transmisión y diferentes configuraciones de asignación de ancho de banda en la transmisión de enlace ascendente.\\
+
+La tecnología NB-IoT utiliza señales de bajo ancho de banda para comunicarse dentro de las tecnologías GSM y LTE existentes.
+
+Los dispositivos y sensores especialmente diseñados son los componentes básicos de los sistemas NB-IoT. Estos dispositivos recopilan información de su entorno y la transmiten a estaciones base NB-IoT o nodos de transmisión.
+
+Las estaciones base individuales están conectadas a una puerta de enlace de IoT y servidores de aplicaciones en la nube de IoT para el monitoreo centralizado y el análisis de datos.
+
+NB-IoT emplea una nueva capa física con señales y canales para cumplir con los requisitos de cobertura extendida en áreas rurales e interiores profundos, al tiempo que permite una complejidad de dispositivo muy baja. La tecnología subyacente es mucho menos compleja que la de los módulos GSM/GPRS.\\
+
+A continuación se describen las ventajas más importantes de NB-IoT:
+\begin{itemize}
+
+\item \textbf{ Ahorro de Energía}
+
+NB-IoT no necesita ejecutar un sistema operativo pesado, como Linux, ni hacer mucho procesamiento de señales, lo que lo hace más eficiente en términos de energía en comparación con otras tecnologías celulares.
+
+\item \textbf{Cobertura}
+
+
+NB-IoT puede ayudar a admitir una gran cantidad de dispositivos mediante el establecimiento de redes NB-IoT que pueden conectarse a miles de millones de nodos. Diseñado para cobertura extendida en interiores, la menor complejidad de los dispositivos proporciona conectividad y comunicación de largo alcance.
+
+\item \textbf{Costo}
+
+Debido a que es más fácil crear dispositivos con menor complejidad, el costo de los dispositivos es significativamente bajo, alrededor de 5 dolares por módulo.
+
+\item \textbf{Seguridad}
+
+
+NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones de autenticación basadas en cifrado y SIM.
+
+
+ 
+\end{itemize}
+
+\newpage
+\section{Implementación}
+
+\textbf{LTE-M vs. NB-IoT}
+
+Comparado a NB-IoT las velocidades de transferencia de datos de LTE-M son más de 10 veces más rápidas, su latencia es de 10 a 100 veces menor y cuenta con una cobertura mucho mayor, ya que utiliza la infraestructura 4G LTE existente. Sin embargo, aunque ambas LPWAN funcionan bien en interiores, NB-IoT tiene una pérdida máxima de acoplamiento (MCL) ligeramente más alta, lo que significa que puede manejar un poco más de interferencia.
+
+LTE-M también puede usar una gama más amplia de frecuencias, aunque, como su nombre lo indica, Narrowband-IoT usa bandas de frecuencia más estrechas, lo que permite que esta tecnología use el espectro de radiofrecuencia (RF) de manera más eficiente.
+
+\begin{table}[h]
+\begin{adjustbox}{width=\columnwidth,center}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+       & \begin{tabular}[c]{@{}l@{}}Velocidad \\ Máxima de Subida\end{tabular} & \begin{tabular}[c]{@{}l@{}}Velocidad Máxima \\ de Descarga\end{tabular} & Latencia & \begin{tabular}[c]{@{}l@{}}Perdida Máxima\\ de Acoplamiento(dBs)\end{tabular} & Ancho de Banda \\ \hline
+LTE-M  & 1Mbps                                                                 & 1Mps                                                                    & 10-15 ms & 156                                                                           & 1.4MHz a 5MHz  \\ \hline
+NB-IoT & 127 kbit                                                              & 159 kbit                                                                & 1.6-10s  & 164                                                                           & 180KHz         \\ \hline
+\end{tabular}
+\end{adjustbox}
+\caption{\label{tab:interfaces} Comparación entre LTE-M y NB-IoT}
+\end{table}
+
+Después de la investigación realizada, encontramos las siguientes ventajas de LTE-M sobre NB-IoT:
+
+\begin{itemize}
+
+\item \textbf{LTE-M tiene más redes de roaming disponibles}
+
+Pocos operadores han establecido acuerdos de roaming para sus redes NB-IoT, por lo que LTE-M ofrece una mejor cobertura y tiene menos circunstancias en las que necesita cambiar de SIM.
+Actualemente, la compañia Telcel cuenta con la mayor cobertura de tecnología LTE en México.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/lte-mcobertura}
+\captionof{figure}{Mapa de Cobertura LTE-Telcel}
+ \label{fig:prot}
+\end{center}
+\newpage
+\item\textbf{NB-IoT consume más energía en algunos casos}
+
+Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las velocidades de datos más bajas de NB-IoT requieren estos permanezcan en línea por más tiempo, lo que resulta en un mayor consumo de energía. En casos de uso móvil, NB-IoT también usa más energía
+
+
+\end{itemize}
+
+Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto. Se investigaron distintos módulos que sean compatibles con la Rasperry Pi 4 Modelo B, y acontinuación se muestran una comparación entre ellas. 
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Modelo          & Voltaje de Operación & \begin{tabular}[c]{@{}l@{}}Redes que\\ Soporta\end{tabular} & \begin{tabular}[c]{@{}l@{}}Dificultad de \\ Integración\end{tabular} & Costo  \\ \hline
+SixFab Base Hat & 5V                   & 3G/4G/LTE                                                   & Bajo                                                                 & \$2500 \\ \hline
+SIM7600A-H      & 3-5V                 & 3G/4G/LTE                                                   & Alta                                                                 & \$1435 \\ \hline
+SIM800C-G       & 3.3 - 5V             & 3G/4G/LTE                                                   & Alta                                                                 & \$508  \\ \hline
+SIM7600CE       & 3.3-5V               & 2G/3G/4G/LTE                                                & Alta                                                                 & \$2100 \\ \hline
+\end{tabular}
+\caption{\label{tab:interfaces}Comparación entre distintos módulos de LTE-M}
+\end{table}
+
+Dado que el módulo SixFab es el de menor dificultad de integración, se decidió utilizar este módulo para poder utilizar la interfaz de LTE-M. Además SixFab ofrece un kit dónde de se incluyen todos los componentes necesarios para utilizar dicha interfaz.\\
+
+\textbf{Raspberry Pi 4G/LTE Cellular Modem Kit}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/sixfabcomp}
+\captionof{figure}{Raspberry Pi 4G/LTE Cellular Modem Kit}
+ \label{fig:scaraindust}
+\end{center}
+
+El kit de módem celular para Raspberry Pi permite desplazarse de forma libre y segura con una conexión de datos móviles.
+Ya sea que esté configurando una Raspberry Pi como un servidor web móvil o buscando acceder a Internet en ubicaciones remotas, nos brindará conectividad con nulos problemas.
+
+\newpage
+\section{Pruebas}
+
+Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema.  
+\\
+Elementos físicos que contendrá la unidad:
+
+\begin{itemize}
+
+\item Raspberry Pi 4 Modelo B\\
+De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
+Dimensiones 85 x 53mm. 
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
+\captionof{figure}{Especificaciones Físicas}
+ \label{fig:scaraindust}
+\end{center}
+
+\item Zumbador Pasivo KY-006\\
+Dimensiones 18 x 15mm. 
+\begin{center}
+  \includegraphics[scale=.2]{imagenes/KY-006}
+\captionof{figure}{Zumbador Pasivo KY-006}
+ \label{fig:scaraindust}
+\end{center}
+
+\item Cámara Arducam Pivariety IMX230\\
+Dimensiones de la placa: 38 x 38mm.
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/camara}
+\captionof{figure}{Cámara Pivariety IMX230}
+ \label{fig:scaraindust}
+\end{center}
+ 
+
+\item Cable macho-hembra\\
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/Jumpers}
+\captionof{figure}{Jumpers}
+ \label{fig:scaraindust}
+\end{center}
+
+Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
+Largo 10 cm. 
+
+\item Micro SD\\  
+Dimensiones: 15 x 11 x 1 mm. 
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/MicroSD}
+\captionof{figure}{Micro SD}
+ \label{fig:scaraindust}
+\end{center}
+\newpage
+\item \textbf{RasperryPi 3G/4G/ LTE Base HAT}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/sixfabhat}
+\captionof{figure}{RasperryPi 3G/4G/ LTE Base HAT}
+ \label{fig:scaraindust}
+\end{center}
+
+Este HAT celular proporciona una conexión de datos simplificada para proyectos de IoT remotos, en el campo, en todo el mundo, en todas partes. Comience a usar una conexión LTE de alta velocidad con bajo consumo de energía en un factor de forma delgado con todo el software necesario para Raspberry Pi.
+
+\item \textbf{LE 910Cx Mini PCIe Series Linux}
+
+\begin{center}
+  \includegraphics[scale=.7]{imagenes/LE910}
+\captionof{figure}{LE 910Cx Mini PCIe Series Linux}
+ \label{fig:scaraindust}
+\end{center}
+
+
+Los módulos Mini PCIe (mPCIe) de la serie LE910Cx son
+optimizadas para redes LTE de baja categoría y están disponibles
+en modo único de LTE o con opciones de respaldo 3G/2G.
+
+\newpage
+\item \textbf{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/lteantena}
+\captionof{figure}{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
+ \label{fig:scaraindust}
+\end{center}
+
+
+Antenas LTE principal y Diversity combinadas con una antena GNSS en una sola antena formada. Ajuste directo para el módulo Mini PCIe LTE de Quectel EC25, Telit LE910C1 y Telit LE910C4.
+
+\end{itemize}
+
+\newpage
+
+Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño modular para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
+
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/unidadcontenedora}
+\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento}
+ \label{fig:scaraindust}
+\end{center}
+ 
+
+\newpage
+
+
+\newpage
+\section{Conclusiones}
+En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades investigación, nos dimos cuenta de que esta opción no era viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, así como una buena integración con la Rasperry Pi 4.\\
+
+En el caso del Submódulo de Procesamiento de imágenes, se tenía contemplado desarrollarlo de manera separada del submódulo de \emph{machine learning } pero después de haber realizado un análisis más profundo, se decidió integrarlo dentro de este mismo. Esto para el ahorro de recursos de procesamiento y conseguir una mejor comunicación entre procesos. En un siguiente reporte, se terminará por diseñar la Red Neuronal Convolucional, así como el diseño del Módulo de Telemetría y de la Estación Base.\\
+
+Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, sin embargo, se tiene contemplado rediseñar el modelo con el fin de mejorar y adaptarla los cambios del sistema a futuro.
+
+
+\newpage
+\section{Bibliografia}
+%\bibliographystyle{apacite}
+
+\begin{thebibliography}{10} %10 significa el número máximo de items
+%Aquí ponga la bibliografía y referencias usadas
+
+%Artículo:
+
+\bibitem{Referencia0} Gupta  , S. (2022) \emph{ Best language for machine learning: Which should you learn?}, Springboard Blog. Springboard . Available at: https://www.springboard.com/blog/data-science/best-language-for-machine-learning/ (Accessed: October 30, 2022). 
+
+\bibitem{Referencia1} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
+%Libro
+\bibitem{Referencia2}
+V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
+
+\bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
+
+\bibitem{Referencia4} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
+
+\bibitem{Referencia5} Aurélien Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow}, Segunda Edición , O'Reilly, 2009
+
+
+\bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with OpenCV}, Tercera Edición, O'Reilly, 2017
+
+\bibitem{Referncia8}Cuno Plister, \emph{Getting Started with Internet of Things},Primera Edición, O'Reilly, 2011
+
+\bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
+
+\bibitem{Referencia10} S. Pachouly, N. Bhondve, A. Dalvi, V. Dhande y N. Bhamare. "Driver drowsiness detection using machine learning with visual behaviour". https://ijcrt.org/papers/IJCRT2006408.pdf (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia11} R. T. Puteri. "Micro-sleep detection using combination of haar cascade and convolutional neural network". https://lppm.ub.ac.id/wp-content/uploads/formidable/29/p130-puteri.pdf (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia12} M. K. S. a. T. Annamani. "Driver drowsiness detection system using convolutional neural networks". https://ijarsct.co.in/Paper3399.pdf (accedido el 2 de noviembre de 2022).
+
+
+
+\bibitem{Referencia14} C. López Jurado. "¿Qué es una red WPAN?" https://es.ccm.net/contents/821-wpan-wireless-personal-area-network (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia15} J. A. Castillo. "WLAN: Qué es, definición, estándar 802.11 y diferencias con LAN". https://www.profesionalreview.com/2020/03/07/wlan-que-es/ (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia16} Library. "Estándares de wlan". https://1library.co/article/estándares-de-wlan-redes-wlan-wireless-lan.y6em7mnz (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia17} Tarify.Win! "Red WWAN ¿Qué es, para qué sirve y cómo funcionan?" https://tarify.win/definiciones/red-wwan/ (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia18} Zoo stock. "Todo lo que debemos saber sobre redes WMAN y WWAN". https://www.zoostock.com/redes-y-sistemas/todo-lo-que-debemos-saber-sobre-redes-wman-y-wwan (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia19} Altium. "Los pros y los contras de diferentes redes LPWAN para tu aplicación iot". https://resources.altium.com/es/p/the-pros-and-cons-of-different-lpwan-networks-for-your-iot-application (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia20} Raspberry Pi Trading Ltd. "Raspberry pi 4 computer model B". https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-4-Product-Brief.pdf (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia21} Amazon. "Arducam para cámara raspberry pi, 21MP IMX230 programable motorizado focus pivariety, compatible con raspberry pi ISP y gstreamer plugin". https://www.amazon.com/-/es/Raspberry-programable-motorizado-Pivariety-compatible/dp/B092LHFG6P (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencia22} Unit Electronics. "Zumbador Buzzer Pasivo M?Dulo KY-006". https://uelectronics.com/producto/zumbador-buzzer-pasivo-modulo-ky-006/ (accedido el 2 de noviembre de 2022).
+
+
+
+\bibitem{Referencia24} Sixfab. "Raspberry pi 4G/LTE cellular modem kit". https://sixfab.com/product/raspberry-pi-4g-lte-modem-kit/ (accedido el 2 de noviembre de 2022).
+
+\end{thebibliography}
+
+\end{document}
+
+
