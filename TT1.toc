@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}
+\babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Resumen}{5}{section.1}%
 \contentsline {section}{\numberline {2}Introducci\'on}{8}{section.2}%
 \contentsline {section}{\numberline {3}Planteamiento del problema}{12}{section.3}%
@@ -23,19 +23,20 @@
 \contentsline {subsection}{\numberline {11.1}An\'alsis del M\'odulo Central de Procesamiento}{35}{subsection.11.1}%
 \contentsline {subsubsection}{\numberline {11.1.1}An\'alisis del Subm\'odulo de Procesamiento de Im\'agenes}{36}{subsubsection.11.1.1}%
 \contentsline {subsubsection}{\numberline {11.1.2}An\'alsis del Subm\'odulo de Deep Learning}{37}{subsubsection.11.1.2}%
-\contentsline {subsection}{\numberline {11.2}An\'alisis de la Estaci\'on Base}{38}{subsection.11.2}%
-\contentsline {subsubsection}{\numberline {11.2.1}An\'alisis de la Aplicaci\'on Web}{39}{subsubsection.11.2.1}%
-\contentsline {section}{\numberline {12}Dise\~no}{46}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Dise\~no del M\'odulo Central de Procesamiento}{46}{subsection.12.1}%
-\contentsline {subsubsection}{\numberline {12.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{47}{subsubsection.12.1.1}%
-\contentsline {subsubsection}{\numberline {12.1.2}Dise\~no del Subm\'odulo de Procesamiento de Im\'agenes}{52}{subsubsection.12.1.2}%
-\contentsline {subsubsection}{\numberline {12.1.3}Dise\~no del Subm\'odulo de Deep Learning}{54}{subsubsection.12.1.3}%
-\contentsline {subsection}{\numberline {12.2}Dise\~no del M\'odulo de Comunicaciones}{55}{subsection.12.2}%
-\contentsline {subsubsection}{\numberline {12.2.1}Dise\~no del Subm\'odulo de Transmisi\'on de Datos}{56}{subsubsection.12.2.1}%
-\contentsline {subsubsection}{\numberline {12.2.2}Dise\~no del Subm\'odulo de Telemetr\IeC {\'\i }a}{57}{subsubsection.12.2.2}%
-\contentsline {subsubsection}{\numberline {12.2.3}Dise\~no del Subm\'odulo de Cobertura}{58}{subsubsection.12.2.3}%
-\contentsline {subsection}{\numberline {12.3}Dise\~no de la Estaci\'on Base}{59}{subsection.12.3}%
-\contentsline {subsubsection}{\numberline {12.3.1}Dise\~no de la Aplicaci\'on Web}{60}{subsubsection.12.3.1}%
-\contentsline {subsubsection}{\numberline {12.3.2}Dise\~no de la Base de Datos}{61}{subsubsection.12.3.2}%
-\contentsline {section}{\numberline {13}Conclusiones}{62}{section.13}%
-\contentsline {section}{\numberline {14}Referencias}{63}{section.14}%
+\contentsline {subsection}{\numberline {11.2}An\'alisis del M\'odulo de Comunicaciones}{38}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}An\'alisis de la Estaci\'on Base}{39}{subsection.11.3}%
+\contentsline {subsubsection}{\numberline {11.3.1}An\'alisis de la Aplicaci\'on Web}{42}{subsubsection.11.3.1}%
+\contentsline {section}{\numberline {12}Dise\~no}{50}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Dise\~no del M\'odulo Central de Procesamiento}{50}{subsection.12.1}%
+\contentsline {subsubsection}{\numberline {12.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{51}{subsubsection.12.1.1}%
+\contentsline {subsubsection}{\numberline {12.1.2}Dise\~no del Subm\'odulo de Procesamiento de Im\'agenes}{56}{subsubsection.12.1.2}%
+\contentsline {subsubsection}{\numberline {12.1.3}Dise\~no del Subm\'odulo de Deep Learning}{58}{subsubsection.12.1.3}%
+\contentsline {subsection}{\numberline {12.2}Dise\~no del M\'odulo de Comunicaciones}{59}{subsection.12.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}Dise\~no del Subm\'odulo de Transmisi\'on de Datos}{60}{subsubsection.12.2.1}%
+\contentsline {subsubsection}{\numberline {12.2.2}Dise\~no del Subm\'odulo de Telemetr\IeC {\'\i }a}{61}{subsubsection.12.2.2}%
+\contentsline {subsubsection}{\numberline {12.2.3}Dise\~no del Subm\'odulo de Cobertura}{62}{subsubsection.12.2.3}%
+\contentsline {subsection}{\numberline {12.3}Dise\~no de la Estaci\'on Base}{63}{subsection.12.3}%
+\contentsline {subsubsection}{\numberline {12.3.1}Dise\~no de la Aplicaci\'on Web}{64}{subsubsection.12.3.1}%
+\contentsline {subsubsection}{\numberline {12.3.2}Dise\~no de la Base de Datos}{70}{subsubsection.12.3.2}%
+\contentsline {section}{\numberline {13}Conclusiones}{72}{section.13}%
+\contentsline {section}{\numberline {14}Referencias}{73}{section.14}%

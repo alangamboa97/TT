@@ -797,7 +797,133 @@ Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular
 \subsubsection{Análsis del Submódulo de Deep Learning}
 
 \newpage
+\subsection{Análisis del Módulo de Comunicaciones}
+\newpage
+
+
 \subsection{Análisis de la Estación Base}
+El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.  El sistema contará con los siguientes requerimientos:   \\
+
+\textbf{Requerimientos Funcionales del Módulo de Estación Base}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF01}}                                              & \emph{Guardar Incidencia}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}La base de datos almacenará la información de cada reporte de incidencia que se envié desde el Módulo Central de Procesamiento. \\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Id del Conductor \\
+\quad $\bullet$ Nombre de Conductor\\
+\quad $\bullet$ Apellidos de Conductor  \\
+\quad $\bullet$ Número de Incidencias\\
+\quad $\bullet$ Fecha\\
+\quad $\bullet$ Hora\\
+\quad $\bullet$ Estado de la Incidencia \\
+\quad $\bullet$ Ubicación  \\
+\quad $\bullet$ URL del video 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El Módulo de Procesamiento Central puede insertar datos en la base datos.\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF01- Guardar Incidencia }
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF02}}                                              & \emph{Guardar Video }                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}La base de datos almacenará la información de cada reporte de incidencia que se envié desde el Módulo Central de Procesamiento. \\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Video de incidencia 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El Módulo de Procesamiento Central puede insertar el video en el almacenamiento de objetos, mientras que la base de datos obtiene la URL del video guardado. \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF02- Guardar Video }
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Conectar Aplicación Web }                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}La base de datos almacenará la información de cada reporte de incidencia que se envié desde el Módulo Central de Procesamiento. \\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Node.js  \\
+\quad $\bullet$ React   \\
+\quad $\bullet$ Express   \\
+\quad $\bullet$ MongoDB 
+
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El usuario administrador puede realizar la inserción, modificación, eliminación y consulta de datos desde la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF03- Conectar Aplicación Web }
+\end{table}
+
+
+\clearpage
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Desplegar Aplicación Web  }                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}La aplicación web se alojará en una red de entrega de contenido (CDN), disponible con una URL.  \\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ AWS Amplify  \\
+\quad $\bullet$ GitHub \\
+\quad $\bullet$ Amazon S3 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El usuario administrador puede acceder a la interfaz de la aplicación web, haciendo uso de la URL en el navegador web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF04- Desplegar Aplicación Web}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Guardar Credenciales de Usuario Administrador }                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Amazon Cognito 
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF05- Guardar Credenciales de Usuario Administrador }
+\end{table}
+
+\textbf{Requerimientos No Funcionales del Módulo de Estación Base}
+\clearpage
+
+
+\begin{table}[]
+\begin{tabular}{{|m{0.12\linewidth}|m{0.25\linewidth}|m{0.50\linewidth}|}}
+\hline
+\textbf{ID} & \textbf{Nombre del requerimiento} & \textbf{Descripción } \\ \hline
+\emph{RNF01 } & Disponibilidad & La disponibilidad del sistema será continua, el usuario podrá acceder a la información las 24 horas del día.  \\ \hline
+\emph{RNF02 } & Interoperabilidad  & El sistema será capaz de intercambiar información con el Módulo Central de Procesamiento a través del Módulo de Telemetría.  \\ \hline
+\emph{RNF03 } & Seguridad  & Las credenciales de acceso al sistema podrán ser cambiadas únicamente por el administrador. \\ \hline
+\emph{RNF04 } & Usabilidad  & El sistema estará enfocado a la visualización de reportes, por lo que el usuario le tomará menos de un día en familiarizarse con el sistema. El sistema proporcionará mensajes de advertencia orientados al usuario, en caso de ocurrir un error en el Módulo Central de Procesamiento. \\ \hline
+\emph{RNF05 } & Interfaz del sistema  & La aplicación web presentará una interfaz de usuario sencilla que permitirá al usuario un fácil manejo del sistema. \\ \hline
+\end{tabular}
+\caption{Requerimientos No Funcionales del Módulo de Estación Base}
+\end{table}
+
 
 \newpage
 \subsubsection{Análisis de la Aplicación Web}
@@ -1055,6 +1181,25 @@ El sistema enviará un mensaje de alerta al administrador indicando que Unidad pr
 \end{table}
 
 
+\textbf{Requerimientos No Funcionales}
+
+
+A continuación se mencionan los requerimientos no funcionales de la aplicación web.
+
+\begin{table}[H]
+\begin{tabular}{|l|l|l}
+\cline{1-2}
+\textbf{Requerimiento No Funcional} & \textbf{Descripción}                                                                                                                                                                   &  \\ \cline{1-2}
+Disponibilidad                      & \begin{tabular}[c]{@{}l@{}}La aplicación web deberá estar \\ disponible las 24 horas del día\end{tabular}                                                                              &  \\ \cline{1-2}
+Interoperabilidad                   & \begin{tabular}[c]{@{}l@{}}La aplicación deberá ser accesible desde \\ cualquier sistema operativo \\ mientras se cuenta con un \\ navegador web en su versión más actual\end{tabular} &  \\ \cline{1-2}
+Eficiencia                          & \begin{tabular}[c]{@{}l@{}}La aplicación tendrá tiempos de respuesta\\ menores a 100ms.\end{tabular}                                                                                   &  \\ \cline{1-2}
+Escalabilidad                       & \begin{tabular}[c]{@{}l@{}}La aplicación web deberá ofrecer la oportunidad de \\ agregar nuevas funcionalidades y \\ soportar un mayor número de usuarios a \\ futuro\end{tabular}     &  \\ \cline{1-2}
+Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación deberá ofrecer un buen \\ funcionamiento mientras se tenga \\ una buena conexión a internet\end{tabular}                                      &  \\ \cline{1-2}
+\end{tabular}
+\caption{Requerimientos no funcionales - Aplicación Web}
+\end{table}
+
+
 \newpage
 
 
@@ -1268,33 +1413,182 @@ MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-
 \newpage
 \subsection{Diseño de la Estación Base}
 
+Con base en los requerimientos, se plantea realizar el diseño de la arquitectura del Módulo de Estación Base, integrando el Módulo de Procesamiento Central. El cual hará énfasis en la organización y comunicación de los elementos que lo conforman.  \\
+
+El siguiente diagrama muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credenciales de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{frontend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
+
+\begin{center} 
+  \includegraphics[scale=.5]{imagenes/DisenoMEB} 
+\captionof{figure}{Arquitectura del Módulo de Estación Base} 
+\label{fig:DisenoMEB} 
+\end{center} 
+
+
+
+
 \newpage
 \subsubsection{Diseño de la Aplicación Web}
+
+Para el diseño y desarrollo de la Aplicación web, se  decidió utilizar el lenguaje Javascript, ya que este cuenta con las herramientas y/o frameworks que mejor se adaptan a los requisitos previamente definidos.
+A su vez, se decidió utilizar el NodeJs para el sistema backend.
+
+Node.js, es un entorno en tiempo de ejecución multiplataforma basado en JavaScript. Este es controlado por eventos, permitiendo establecer y gestionar múltiples conexiones al mismo tiempo. Gracias a esta característica, el bloqueo de procesos no existe. NodeJs trabaja fundamentalmente bajo dos características: \emph{asincronía}, que permite la ejecucción de varios procesos al mismo tiempo, y \emph{Entrada/salida sin bloqueo}, que significa poder trabajar con múltiples solicitudes sin bloquear un hilo para una sola solicitud.
+
+NodeJs es capaz de manejar distintas peticiones sin que tener que esperar a que una petición sea respondida para continuar con la siguiente petición. De ahí la elección de este entorno de Javascript para el desarrollo de la aplicación web.\\
+
+A continuación se muestran diversos diagramas de secuencias que describen los procesos de los requerimientos definidos en la sección de Análisis.
+
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_reporte_incidencia}
+\captionof{figure}{Diagrama de Secuencia Detalle Reporte Incidencia }
+ \label{fig:scaraindust}
+\end{center}
+
+El Administrador podrá consultar el reporte de incidencia de cada uno de los conductores. Accediendo a la base de de datos de MongoDB
+ 
+
+\begin{center}
+  \includegraphics[scale=.7]{imagenes/sec_ubicacion}
+\captionof{figure}{Diagrama de Secuencia Consultar Ubicación}
+ \label{fig:scaraindust}
+\end{center}
+
+De igual manera, el Administrador podrá consultar la ubicación en tiempo real del conductor.
+ 
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_rcontrasena}
+\captionof{figure}{Diagrama de Secuencia Recuperar Contraseña }
+ \label{fig:scaraindust}
+\end{center}
+
+También podrá recuperar su contraseña en caso de que esta sea olvidada.
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_confirmar}
+\captionof{figure}{Diagrama de Secuencia Confirmar Incidencia}
+ \label{fig:scaraindust}
+\end{center}
+
+Para evitar falsos positivos, el Administrador podrá confirmar una incidencia una vez mirando el videoclip del incidente.
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_perfil}
+\captionof{figure}{Diagrama de Secuencia Consultar Perfil}
+ \label{fig:scaraindust}
+\end{center}
+El Administrador podrá consultar el perfil de cada conductor. 
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_registrar}
+\captionof{figure}{Diagrama de Secuencia Registrar Conductor }
+ \label{fig:scaraindust}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_modificar}
+\captionof{figure}{Diagrama de Secuencia Modificar Conductor}
+ \label{fig:scaraindust}
+\end{center}
+
+En caso de que los datos del conductor sean incorrectos, el administrador podrá modificarlos.
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_eliminar}
+\captionof{figure}{Diagrama de Secuencia Eliminar Conductor }
+ \label{fig:scaraindust}
+\end{center}
+
+El Administrador también tendrá la opción de dar de baja a un conductor.
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/sec_estado}
+\captionof{figure}{Diagrama de Secuencia Estado de los Periféricos }
+ \label{fig:scaraindust}
+\end{center}
+
+La aplicación web indicará si alguno de los periféricos no se encuentra en correcto funcionamiento, lanzando una alerta indicando el número de Unidad y a qué conductor pertenece.
+
+A continuación se muestra el diseño propuesto de cada una de las vistas que tendrá la aplicación web.
+
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/login}
+\captionof{figure}{Página Inicio de Sesión }
+ \label{fig:scaraindust}
+\end{center}
+ 
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/homescreen}
+\captionof{figure}{Página Principal}
+ \label{fig:scaraindust}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/profile}
+\captionof{figure}{Página Perfil del Conductor }
+ \label{fig:scaraindust}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/incident}
+\captionof{figure}{Página Detalle de Incidencia }
+ \label{fig:scaraindust}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/location}
+\captionof{figure}{Página Ubicación en Tiempo Real }
+ \label{fig:scaraindust}
+\end{center}
+ 
+ 
+
 
 \newpage
 \subsubsection{Diseño de la Base de Datos}
 
+Tomando en cuenta la elección de MongodDB como gestor de la base de datos, se consultó la documentación de MongoDB para conocer la estructura y el modelado de los datos.  
+
+MongoDB utiliza documentos para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemeja a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
 
 
-La geolocalización implica el posicionamiento que define la localización de un objeto en un sistema de coordenadas determinado.
+MongoDB almacena registros de datos como documentos BSON. BSON es una representación binaria de documentos JSON , aunque contiene más tipos de datos que JSON.   
 
-Los datos para la geolocalización se pueden obtener mediante la dirección IP de un usuario, su dirección MAC, el uso del RFID, la ubicación de la conexión WIFI o las coordenadas de GPS de su dispositivo.\\
-Entre las diferentes tecnologías para la geolocalización, para este proyecto se destacan:
-\begin{table}[h]
-\begin{adjustbox}{width=\columnwidth,center}
-\begin{tabular}{|l|l|l|l|}
-\hline
-Tecnología                                 & Descripción                                                                                                                                                                                                                                                                                            & Exactitud                                                                                                                                & \begin{tabular}[c]{@{}l@{}}Utilización\\ Principal\end{tabular}          \\ \hline
-\textit{GPS(Global Positioning System)}    & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento global formado por \\ una red de más de 30 satélites \\ que orbitan alrededor de la tierra. \\ Cada navegador GPS está conectado a \\ diferentes satélites\\  para tener los datos reales de\\  la geolocalización en todo momento.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Es un sistema de\\ geolocalización muy preciso, \\ obteniendo la \\ ubicación de manera\\ exacta\end{tabular} & \begin{tabular}[c]{@{}l@{}}Telefono móvil \\ o en vehículos\end{tabular} \\ \hline
-\textit{GSM(Global System for Mobile)}     & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento \\ formado por las torres y \\ antenas de telefonía\end{tabular}                                                                                                                                                                                 & \begin{tabular}[c]{@{}l@{}}Es un sistema de geolocalización\\ impreciso. Tiene un \\ margen de error\\ de hasta 200 metros\end{tabular}  & \begin{tabular}[c]{@{}l@{}}Comunicación\\ móvil\end{tabular}             \\ \hline
-\textit{GPRS(General Packet Radio System)} & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento de \\ segunda generación GSM, \\ proporciona servicios de alta velocidad\end{tabular}                                                                                                                                                            & \begin{tabular}[c]{@{}l@{}}Es un sistema de geolocalización\\ preciso pero limitado en área de\\ cobertura\end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Solo disponible\\ en tierra\end{tabular}      \\ \hline
-\textit{Wi-Fi}                             & \begin{tabular}[c]{@{}l@{}}Sistema de posicionamiento   \\ en el que todas las redes \\ WIFI encendidas emiten una \\ señal identificativa,   \\ comúnmente llamada dirección MAC. \\ Este sistema usa 3 o más puntos de\\  referencia para calcular la ubicación.\end{tabular}                        & \begin{tabular}[c]{@{}l@{}}Es un sistema de geolocalización\\ impreciso, \\ presenta grandes margenes\\ de error\end{tabular}            & Interiores                                                               \\ \hline
-\end{tabular}
-\end{adjustbox}
-\caption{\label{tab:interfaces}Tecnologías de Geolocalización}
-\end{table}
+Un registro en MongoDB es un documento, que es una estructura de datos compuesta por pares de campo y valor. Los documentos MongoDB son similares a los objetos JSON. Los valores de los campos pueden incluir otros documentos, matrices y matrices de documentos. 
 
-En un siguiente reporte, se analizarán con mas detalle las tecnologías que sean compatibles con la interfaz de LTE-M que utilizaremos a lo largo del proyecto.
+\begin{center}
+  \includegraphics[scale=.7]{imagenes/EstructuraDocumentoMongoDB}
+\captionof{figure}{Estructura de un Documento en MongoDB}
+ \label{fig:EstructuraDocumentoMongoDB}
+\end{center}
+
+Basado en la estructura NOSQL de MongoDB, se propone el siguiente modelo para la base de datos, la cual contará con dos colecciones: Conductores e Incidencias. Cabe mencionar que en dicho modelo no se contempla a los administradores, debido a que se utilizará el sistema de Amazon Cognito, que ofrece herramientas de autenticación, registro, verificación e inicio de sesión para el usuario. 
+
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/ModeladoBD}
+\captionof{figure}{Modelo propuesto para la base de datos en MongoDB}
+ \label{fig:ModeloBD}
+\end{center}
+
+El modelo de documento para la colección Conductores, se usará para registrar el nombre y apellido de cada conductor, así mismo se contabilizará el número de incidencias que presenté cada uno de ellos, el contador del conductor en marcha aumentará cada vez que el Módulo Central de Procesamiento envié un reporte de incidencia a la base de datos. Si el Usuario Administrador del Módulo de la Estación Base revisa el video de la incidencia y lo cataloga como Descartar entonces se restará la incidencia, si esta es catalogada como Confirmar, el contador permanecerá igual.  Es importante mencionar que el registro de cada conductor se realizará desde la Aplicación Web. A continuación, se muestran los campos y un ejemplo de los valores que pueden ser ingresados dentro del documento de registro de conductores. 
+
+\begin{center}
+  \includegraphics[scale=.9]{imagenes/ModeloConductores}
+\captionof{figure}{Documento de Registro de Conductores}
+ \label{fig:DocumentoConductores}
+\end{center}
+
+El modelo de documento para la colección Incidencias, se usará para registrar el Reporte de Incidencia que presente un conductor, el cual será enviado desde el Módulo Central de Procesamiento, por tanto, se realizará una consulta previa a la colección Conductores para obtener el id, nombre y apellido del conductor en marcha. Posteriormente se realizará el reporte de la incidencia, el cual contendrá el Id del conductor, la fecha y hora de la incidencia, el nombre y apellido del conductor, y el estado de incidencia, este último muestra si la incidencia fue catalogada como descartada o confirmada por parte del Usuario Administrador después de revisar el video de la incidencia. Como se mencionó anteriormente, MongoDB permite anidar documentos, por lo que, dentro de este documento se encontrará anidado un segundo documento llamado Detalles, el cual registrará la Ubicación donde sé detectó la incidencia y la URL donde se encontrará almacenado el video.  
+
+
+\begin{center}
+  \includegraphics[scale=.9]{imagenes/ModeloIncidencias}
+\captionof{figure}{Documento de registro de Incidencias}
+ \label{fig:DocumentoIncidencias}
+\end{center}
+
+Cabe señalar que los anteriores modelos muestran el campo Id, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres. Por tanto, se utilizará el id que proporcione Mongo DB en los documentos. \\
+
 \newpage
 \section{Conclusiones}
 En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades investigación, nos dimos cuenta de que esta opción no era viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, así como una buena integración con la Rasperry Pi 4.\\
