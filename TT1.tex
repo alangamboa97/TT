@@ -355,10 +355,28 @@ Para el presente proyecto
 
 \item \textbf{Top-Down}
 
-La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas par
+La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas partes pueden ser llamadas "modulos", "subrutinas" o "procedimientos". 
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Top-Down}
+\captionof{figure}{Descomposición en la metodología \emph{Top-Down}}
+ \label{fig:neurona}
+\end{center}
+
+Algunas de las ventajas de esta metodología son:
+
+\begin{itemize}
+\item  Dividir un problema en partes/tareas más pequeñas hace que este sea mucho más fácil de entender y resolver.
+\item Cada módulo puede ser probado individualmente
+\item Al momento de asignar los subproblemas a diferentes personas, se puede llegar a la solución final de una forma más rápida.
 
 
 
+\end{itemize}
+
+
+\item \textbf{UML}
 
 \end{itemize}
 
@@ -368,85 +386,8 @@ La metodología de diseño \emph{Top-Down} consiste en dividir un problema complej
 \newpage
 \section{Objetivos}
 
-\textbf{LTE-M}
-LTE-M es el término simplificado de la industria para el estándar tecnológico de Área Amplia de Baja Potencia (LPWA por sus siglas en inglés). Se refiere específicamente a la tecnología LTE CatM1, que es el estándar más adecuado para su uso con el IoT.\\
-
-Es una tecnología de área amplia de baja potencia que admite IoT a través de dispositivos poco complejos y proporciona una cobertura extendida, al tiempo que permite la reutilización de la base instalada de LT\\
-
-Las redes LTE-M coexistirán con las redes móviles 2G, 3G y 4G y se beneficiarán de todas las características de seguridad y privacidad de las redes móviles, como la confidencialidad de la identidad del usuario, la autenticación de la entidad, la privacidad, la integridad de los datos y la identificación del equipo móvil.
-
-A continuación se describen las ventajas principales de LTE-M
-
-\begin{itemize}
-\item \textbf{Ahorro de Energía}
-
-LTE-M permite que los dispositivos IoT usen un modo de ahorro de energía, que les permite "ir a dormir" cuando no están en uso. Y tampoco tienen que despertarse para enviar solo la actualización de ubicación, sino que pueden extender los tiempos de suspensión por un período de tiempo más largo. LTE-M también permite que los dispositivos usen recepción discontinua extendida (eDRX). Cuando el dispositivo está fuera del modo suspendido, verifica periódicamente la información del enlace descendente. Con eDRX, se aumenta el tiempo de verificación de la radio, lo que reduce el consumo de energía.
-
-\item \textbf{Cobertura}
 
 
-Las redes LTE-M/Cat-M1/Cat-M2 pueden utilizar la infraestructura 4G LTE existente. Esta es una ventaja significativa, ya que más del 50 por ciento de las conexiones móviles globales se realizan en redes 4G. 
-
-Con una pérdida de acoplamiento máxima (MCL) de 156 decibelios (dB), 14 dB más alta que LTE, las redes LTE-M también ofrecen mayor cobertura y mejor penetración en interiores. La señal puede manejar muchas interferencias de edificios y otras estructuras que obstruyen su camino.
-
-\item \textbf{Velocidad de Transferencia}
-
-
-Comparado con LTE, LTE-M no es particularmente rápido. Pero 1 megabit por segundo para transmisiones de enlace ascendente y descendente es excepcional en comparación con redes más antiguas como 2G y 3G (UMTS) y otras LPWAN. (Es varias veces más rápido que NB-IoT). Y eso es más que suficiente para la mayoría de las aplicaciones de IoT. Es factible para aplicaciones con necesidades de datos pequeñas e incluso casos de uso que involucran transmisión de video.
-
-
-En el contexto de IoT, el alto rendimiento de datos significa que los dispositivos que usan LTE-M pueden recibir fácilmente actualizaciones por aire (OTA), y las transmisiones de datos consumirán menos energía, porque el dispositivo puede volver al modo de ahorro de energía más rápido.
-
-
-\item \textbf{Costo}
-
-Las redes 4G se construyeron principalmente para teléfonos inteligentes. Las redes LTE-M se construyeron principalmente para dispositivos IoT. Como tal, los componentes necesarios para los dispositivos LTE-M son menos complejos y más asequibles que los componentes que necesitaría para un dispositivo 4G tradicional, aunque ambos utilizan la infraestructura 4G LTE.
-
-
-
-
-\end{itemize}
-
-\textbf{NB-IoT}
-
-Es un protocolo inalámbrico de Internet de las cosas (IoT) que utiliza tecnología de red de área amplia de baja potencia (LPWAN). Fue desarrollado por 3GPP para comunicación inalámbrica celular que permite una amplia gama de nuevos dispositivos y servicios NB-IoT. NB-IoT es uno de los tres principales estándares 3GPP LPWAN.\\
-
-El estándar de comunicación NB-IoT tiene como objetivo permitir que los dispositivos IoT funcionen a través de redes de operador, ya sea dentro de una onda portadora de comunicación del Sistema Global para Móviles (GSM) existente, en una "banda de protección" no utilizada entre canales LTE o de forma independiente.\\
-
-Uno de los objetivos de NB-IoT es impulsar la extensión de la cobertura más allá de lo que ofrecen las tecnologías celulares existentes. Para ello, NB-IoT ofrece repeticiones de transmisión y diferentes configuraciones de asignación de ancho de banda en la transmisión de enlace ascendente.\\
-
-La tecnología NB-IoT utiliza señales de bajo ancho de banda para comunicarse dentro de las tecnologías GSM y LTE existentes.
-
-Los dispositivos y sensores especialmente diseñados son los componentes básicos de los sistemas NB-IoT. Estos dispositivos recopilan información de su entorno y la transmiten a estaciones base NB-IoT o nodos de transmisión.
-
-Las estaciones base individuales están conectadas a una puerta de enlace de IoT y servidores de aplicaciones en la nube de IoT para el monitoreo centralizado y el análisis de datos.
-
-NB-IoT emplea una nueva capa física con señales y canales para cumplir con los requisitos de cobertura extendida en áreas rurales e interiores profundos, al tiempo que permite una complejidad de dispositivo muy baja. La tecnología subyacente es mucho menos compleja que la de los módulos GSM/GPRS.\\
-
-A continuación se describen las ventajas más importantes de NB-IoT:
-\begin{itemize}
-
-\item \textbf{ Ahorro de Energía}
-
-NB-IoT no necesita ejecutar un sistema operativo pesado, como Linux, ni hacer mucho procesamiento de señales, lo que lo hace más eficiente en términos de energía en comparación con otras tecnologías celulares.
-
-\item \textbf{Cobertura}
-
-
-NB-IoT puede ayudar a admitir una gran cantidad de dispositivos mediante el establecimiento de redes NB-IoT que pueden conectarse a miles de millones de nodos. Diseñado para cobertura extendida en interiores, la menor complejidad de los dispositivos proporciona conectividad y comunicación de largo alcance.
-
-\item \textbf{Costo}
-
-Debido a que es más fácil crear dispositivos con menor complejidad, el costo de los dispositivos es significativamente bajo, alrededor de 5 dolares por módulo.
-
-\item \textbf{Seguridad}
-
-
-NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones de autenticación basadas en cifrado y SIM.
-
-
- 
-\end{itemize}
 
 \newpage
 \section{Marco Teórico}
@@ -491,23 +432,6 @@ La convolución entre las funciones \emph{f} y {g} se representa de la siguiente 
 (f\star g)(t) = \int_{-\infty}^{\infty} f(\tau )g(t-\tau )d\tau = \int_{-\infty}^{\infty} f(t-\tau)g(\tau)d\tau
 \end{equation}
 
-Cuando se habla de procesamiento digital de señales, se utilizan señales discretas, por lo que la integral anterior se convierte en sumatoria:
-
-\begin{equation}
-(f\star g)[n] = \sum_{m=\infty}^{\infty}f[m]g[n-m] = \sum_{m=-\infty}^{\infty}f[n-m]g[m]
-\end{equation}
-
-Comunmente, uno de los operandos de la convolución se trata de una señal que se desea procesar $x[n]$, y el otro corresponde al filtro $h[n]$, con el que se procesa la señal. Si el filtro es finito y es definido sólo sobre el dominio $\left \{ 0,1,...,K-1 \right \}$ entonces para cada valor de la señal, se realizan K multiplicaciones y K-1 sumas:
-
-\begin{equation}
-(x\star h)[n] = \sum_{k=0}^{K-1}h[k]x[n-k]
-\end{equation}
-
-En un caso multidimensional, si se tienen señales discretas definidas sobre dos variables y se le aplica un filtro de tamaño $K_1 x K_2,$ la convolución se calcula utilizando la siguiente expresión:
-
-\begin{equation}
-(x\star h)[n_1,n_2] = \sum_{k_1=0}^{K_1-1}\sum_{k_2=0}^{K_2-1} h[k_1,k_2] x[n_1-k_1,n_2-k_2]
-\end{equation}
 
 En el caso particular de procesamiento digital de imágenes, las variables $[n_1,n_2]$ corresponden a cordenadas $[x,y]$ de los píxeles de una imagen. Además, el signo menos que aparece en la Ecuación 8, se suele sustituir por un signo más, por lo cual la definición de convolución se expresaría como:
 
@@ -569,8 +493,8 @@ Esta capa se encarga de mejorar el rendimiento de un modelo de aprendizaje autom
 \end{verse}
 
 \subsection{Visión Artificial}
-Se puede definir como el conjunto de técnicas para la extracción de información de imágenes digitales. El tipo de información obtenida de una imagen puede ser de identificación, mediciones para navegación, o aplicaciones de realidad aumentada.El campo de visión artificial puede verse como una parte de la informática. La teoría de algoritmos y el aprendizaje automático son esenciales para el desarrollo de algoritmos de visión artificial.
-
+Se puede definir como el conjunto de técnicas para la extracción de información de imágenes digitales. El tipo de información obtenida de una imagen puede ser de identificación, mediciones para navegación, o aplicaciones de realidad aumentada\cite{vision}.El campo de visión artificial puede verse como una parte de la informática. La teoría de algoritmos y el aprendizaje automático son esenciales para el desarrollo de algoritmos de visión artificial.
+La visión artificial está compuesta generalmente por un conjunto de procesos destinados a realizar el análsis de imágenes.\cite{vision}.
 
 \subsection{Boosting}
 
@@ -700,6 +624,25 @@ Tesis del año 2017 de la Pontifica Universidad Católica del Perú que tiene por o
 Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular}}                                                    \\ \hline
 \end{tabular}
 \caption{RF01- Capturar Video en Tiempo Real}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF02}}                                              & \emph{Delimitar una región de Interés}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema capturará video en todo momento\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ OpenCV\\
+\quad $\bullet$ Cascadas Haar
+
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+Utilizando el software de OpenCV y .\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\caption{RF02- Delimitar región de Interés}
 \end{table}
 
 
@@ -833,8 +776,8 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \emph{RNF01 } & Disponibilidad & La disponibilidad del sistema será continua, el usuario podrá acceder a la información las 24 horas del día.  \\ \hline
 \emph{RNF02 } & Interoperabilidad  & El sistema será capaz de intercambiar información con el Módulo Central de Procesamiento a través del Módulo de Telemetría.  \\ \hline
 \emph{RNF03 } & Seguridad  & Las credenciales de acceso al sistema podrán ser cambiadas únicamente por el administrador. \\ \hline
-\emph{RNF04 } & Usabilidad  & El sistema estará enfocado a la visualización de reportes, por lo que el usuario le tomará menos de un día en familiarizarse con el sistema. El sistema proporcionará mensajes de advertencia orientados al usuario, en caso de ocurrir un error en el Módulo Central de Procesamiento. \\ \hline
-\emph{RNF05 } & Interfaz del sistema  & La aplicación web presentará una interfaz de usuario sencilla que permitirá al usuario un fácil manejo del sistema. \\ \hline
+\emph{RNF04 } & Usabilidad  & El sistema estará enfocado a la visualización de reportes, por lo que este tendrá una interfaz intuitiva y amigable para el usuario. El sistema proporcionará mensajes de advertencia orientados al usuario, en caso de ocurrir un error en el Módulo Central de Procesamiento. \\ \hline
+ \\ \hline
 \end{tabular}
 \caption{Requerimientos No Funcionales del Módulo de Estación Base}
 \end{table}
@@ -1776,9 +1719,19 @@ A continuación se muestra el diseño propuesto de cada una de las vistas que tend
 \newpage
 \subsubsection{Diseño de la Base de Datos}
 
-Tomando en cuenta la elección de MongodDB como gestor de la base de datos, se consultó la documentación de MongoDB para conocer la estructura y el modelado de los datos.  
 
-MongoDB utiliza documentos para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemeja a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
+\textbf{Elección del manejador de Base de Datos}
+
+
+\begin{itemize}
+
+\item \textbf{MongoDB}
+
+Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  \\
+
+Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación web será desarrollada utilizando como base el lenguaje JavaScript y el framework Node.js para realizar el \emph{backend} de la aplicación. Por lo cual MongoDB, se integrerá de manera funcional en  el desarrollo del proyecto. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación. Otra característica importante es que es una base de datos multiplataforma, esto nos permitirá registrar información desde el sistema operativo Linux, que se ocupará en la Raspberry Pi y por otro lado se ocupará Windows en la aplicación web para la inserción, modificación, lectura y eliminación de los datos en la base de datos.\cite{mongo}
+
+MongoDB utiliza "documentos" para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemeja a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
 
 MongoDB almacena registros de datos como documentos BSON. BSON es una representación binaria de documentos JSON , aunque contiene más tipos de datos que JSON.   
 
@@ -1817,6 +1770,19 @@ El modelo de documento para la colección Incidencias, se usará para registrar el
 
 Cabe señalar que los anteriores modelos muestran el campo Id, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres. Por tanto, se utilizará el id que proporcione Mongo DB en los documentos. \\
 
+
+\item \textbf{Amazon S3 (\emph{Simple Storage Service})}
+
+Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilziado para almacenar datos en la nube de una forma segura, eficienta y escalable.
+
+
+
+\item \textbf{Amazon Cognito}
+
+\end{itemize}
+
+
+
 \newpage
 \section{Conclusiones}
 En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades investigación, nos dimos cuenta de que esta opción no era viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, así como una buena integración con la Rasperry Pi 4.\\
@@ -1846,6 +1812,9 @@ el 18 de marzo de 2022).
 
 
 \bibitem {AWS} Amazon, \emph{Amazon Amplify}, https://aws.amazon.com/es/amplify/
+
+
+\bibitem {vision} David A. Forsyth, Jean Ponce, \emph{Computer Vision a Modern Approach}, Second Edition, Pearson, 2012
 
 \bibitem {mongo} Kyle Banker, \emph{MondoDB in Action}, Second Edition, Manning, 20216
 
