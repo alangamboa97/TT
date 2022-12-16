@@ -217,26 +217,16 @@ Los elementos que componen a una central telefónica son:
 
 
 
+
+
+
 \newpage
 \section{Propuesta de Solución}
-\textbf{Central Telefónica }\\\\
-
-Se propone realizar una central telefónica haciendo uso de los relevadores, los cuales conmutan dependiendo el origen y destino de la llamada, se propone un único canal, el cual estará ocupado por los abonados en llamada. 
-
-\textbf{Señalización} \\\\
-
-Para dar señalización hacia el abonado que se desea llamar, se utilizará un decodificador de tonos el cual leerá el dígito presionado y como salida entrega un número binario de 4 bits. El usuario presionará dos dígitos que indicarán el origen y el destino. La salida de 4 bits del decodificador se utilizará como entrada hacia el  Arduino Uno, el cual tendrá como función relacionar el número marcado hacia la línea correspondiente, con el fin de realizar la conmutación. Se tendrán 6 salidas las cuales corresponderá a cada una de las 6 líneas del circuito. Para poder finalizar la llamada se presionará el dígito 0 en cualquiera de los abonados en llamada. Lo cual liberará el canal.  \\
-
-La siguiente tabla muestra la asignación del número a cada línea telefónica:\\
-
-
 
 
 
 \newpage
 \subsection{Diseño}
-
-
 
 \subsubsection{Componentes}
 
@@ -468,9 +458,6 @@ Arduino es una plataforma de electrónica «open-source»o de código abierto cuyos 
 
 \newpage
 \section{Pruebas}
-
-
-
 
 
 
