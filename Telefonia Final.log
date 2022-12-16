@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  16 DEC 2022 14:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  16 DEC 2022 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -723,7 +723,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 [5]
-<imagenes/dtmf.png, id=136, 227.85126pt x 222.8325pt>
+<imagenes/dtmf.png, id=138, 227.85126pt x 222.8325pt>
 File: imagenes/dtmf.png Graphic file (type png)
 <use imagenes/dtmf.png>
 Package pdftex.def Info: imagenes/dtmf.png  used on input line 151.
@@ -735,7 +735,7 @@ s been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.162 \begin{center}
                      <./imagenes/dtmf.png>]
-<imagenes/telefono.jpg, id=144, 501.875pt x 350.30875pt>
+<imagenes/telefono.jpg, id=146, 501.875pt x 350.30875pt>
 File: imagenes/telefono.jpg Graphic file (type jpg)
 <use imagenes/telefono.jpg>
 Package pdftex.def Info: imagenes/telefono.jpg  used on input line 163.
@@ -781,166 +781,187 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 232.
 
 [9]
-<imagenes/mtt8870.jpg, id=157, 353.06906pt x 293.59688pt>
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+<imagenes/mtt8870.jpg, id=159, 353.06906pt x 293.59688pt>
 File: imagenes/mtt8870.jpg Graphic file (type jpg)
 <use imagenes/mtt8870.jpg>
-Package pdftex.def Info: imagenes/mtt8870.jpg  used on input line 263.
+Package pdftex.def Info: imagenes/mtt8870.jpg  used on input line 264.
 (pdftex.def)             Requested size: 176.53409pt x 146.79807pt.
-<imagenes/2n3904.jpg, id=158, 309.40594pt x 292.09125pt>
+<imagenes/2n3904.jpg, id=160, 309.40594pt x 292.09125pt>
 File: imagenes/2n3904.jpg Graphic file (type jpg)
 <use imagenes/2n3904.jpg>
-Package pdftex.def Info: imagenes/2n3904.jpg  used on input line 287.
+Package pdftex.def Info: imagenes/2n3904.jpg  used on input line 288.
 (pdftex.def)             Requested size: 154.70259pt x 146.04526pt.
- [10
+[10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.288 \captionof{figure}{Módulo MT8870}
+l.289 \captionof{figure}{Módulo MT8870}
                                         <./imagenes/mtt8870.jpg>]
-<imagenes/diodis.jpg, id=164, 361.35pt x 331.99031pt>
+<imagenes/diodis.jpg, id=166, 361.35pt x 331.99031pt>
 File: imagenes/diodis.jpg Graphic file (type jpg)
 <use imagenes/diodis.jpg>
-Package pdftex.def Info: imagenes/diodis.jpg  used on input line 308.
+Package pdftex.def Info: imagenes/diodis.jpg  used on input line 309.
 (pdftex.def)             Requested size: 180.67456pt x 165.99474pt.
  [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.319 E
+l.320 E
        l diodo 1N4001 se utiliza regularmente como rectificador de señales e...
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.319 E
+l.320 E
        l diodo 1N4001 se utiliza regularmente como rectificador de señales e...
  <./imagenes/2n3904.jpg> <./imagenes/diodis.jpg>]
-<imagenes/regulador.jpg, id=169, 355.3275pt x 312.41719pt>
+<imagenes/regulador.jpg, id=171, 355.3275pt x 312.41719pt>
 File: imagenes/regulador.jpg Graphic file (type jpg)
 <use imagenes/regulador.jpg>
-Package pdftex.def Info: imagenes/regulador.jpg  used on input line 338.
+Package pdftex.def Info: imagenes/regulador.jpg  used on input line 339.
 (pdftex.def)             Requested size: 177.6633pt x 156.2082pt.
  [12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.365 \begin{center}
+l.366 \begin{center}
                      <./imagenes/regulador.jpg>]
-<imagenes/Jumpers.jpg, id=175, 570.13pt x 503.8825pt>
+<imagenes/Jumpers.jpg, id=177, 570.13pt x 503.8825pt>
 File: imagenes/Jumpers.jpg Graphic file (type jpg)
 <use imagenes/Jumpers.jpg>
-Package pdftex.def Info: imagenes/Jumpers.jpg  used on input line 366.
+Package pdftex.def Info: imagenes/Jumpers.jpg  used on input line 367.
 (pdftex.def)             Requested size: 285.0643pt x 251.94063pt.
-<imagenes/relay.jpg, id=176, 384.6872pt x 310.15875pt>
+<imagenes/relay.jpg, id=178, 384.6872pt x 310.15875pt>
 File: imagenes/relay.jpg Graphic file (type jpg)
 <use imagenes/relay.jpg>
-Package pdftex.def Info: imagenes/relay.jpg  used on input line 379.
+Package pdftex.def Info: imagenes/relay.jpg  used on input line 380.
 (pdftex.def)             Requested size: 192.34312pt x 155.079pt.
  [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.380 \captionof{figure}{Relevador RAS-0510}
+l.381 \captionof{figure}{Relevador RAS-0510}
                                              <./imagenes/Jumpers.jpg> <./imagen
-es/relay.jpg>] [14
+es/relay.jpg>]
+<imagenes/arduino.png, id=183, 301.125pt x 214.8025pt>
+File: imagenes/arduino.png Graphic file (type png)
+<use imagenes/arduino.png>
+Package pdftex.def Info: imagenes/arduino.png  used on input line 412.
+(pdftex.def)             Requested size: 150.56212pt x 107.40099pt.
+ [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.409 \newpage
-              ]
-<imagenes/cuatro.jpeg, id=185, 1043.9pt x 782.925pt>
-File: imagenes/cuatro.jpeg Graphic file (type jpg)
-<use imagenes/cuatro.jpeg>
-Package pdftex.def Info: imagenes/cuatro.jpeg  used on input line 413.
-(pdftex.def)             Requested size: 521.94872pt x 391.46155pt.
-
-Overfull \hbox (21.46472pt too wide) in paragraph at lines 413--414
- [] 
- []
-
-<imagenes/cinco.jpeg, id=186, 902.37125pt x 1604.99625pt>
-File: imagenes/cinco.jpeg Graphic file (type jpg)
-<use imagenes/cinco.jpeg>
-Package pdftex.def Info: imagenes/cinco.jpeg  used on input line 419.
-(pdftex.def)             Requested size: 451.18452pt x 802.49617pt.
-[15
+l.442 \newpage
+              
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.420 \captionof{figure}{Circuito Preliminar}
+l.442 \newpage
+               <./imagenes/arduino.png>]
+<imagenes/cuatro.jpeg, id=190, 1043.9pt x 782.925pt>
+File: imagenes/cuatro.jpeg Graphic file (type jpg)
+<use imagenes/cuatro.jpeg>
+Package pdftex.def Info: imagenes/cuatro.jpeg  used on input line 446.
+(pdftex.def)             Requested size: 521.94872pt x 391.46155pt.
+
+Overfull \hbox (21.46472pt too wide) in paragraph at lines 446--447
+ [] 
+ []
+
+<imagenes/cinco.jpeg, id=191, 902.37125pt x 1604.99625pt>
+File: imagenes/cinco.jpeg Graphic file (type jpg)
+<use imagenes/cinco.jpeg>
+Package pdftex.def Info: imagenes/cinco.jpeg  used on input line 452.
+(pdftex.def)             Requested size: 451.18452pt x 802.49617pt.
+[15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.453 \captionof{figure}{Circuito Preliminar}
                                               <./imagenes/cuatro.jpeg>]
 Overfull \vbox (188.33719pt too high) has occurred while \output is active []
 
 
 [16 <./imagenes/cinco.jpeg>]
-<imagenes/uno.jpeg, id=195, 1284.8pt x 963.6pt>
+<imagenes/uno.jpeg, id=200, 1284.8pt x 963.6pt>
 File: imagenes/uno.jpeg Graphic file (type jpg)
 <use imagenes/uno.jpeg>
-Package pdftex.def Info: imagenes/uno.jpeg  used on input line 433.
+Package pdftex.def Info: imagenes/uno.jpeg  used on input line 466.
 (pdftex.def)             Requested size: 642.39844pt x 481.79883pt.
 
-Overfull \hbox (141.91444pt too wide) in paragraph at lines 433--434
+Overfull \hbox (141.91444pt too wide) in paragraph at lines 466--467
  [] 
  []
 
-<imagenes/dos.jpeg, id=196, 1284.8pt x 963.6pt>
+<imagenes/dos.jpeg, id=201, 1284.8pt x 963.6pt>
 File: imagenes/dos.jpeg Graphic file (type jpg)
 <use imagenes/dos.jpeg>
-Package pdftex.def Info: imagenes/dos.jpeg  used on input line 439.
+Package pdftex.def Info: imagenes/dos.jpeg  used on input line 472.
 (pdftex.def)             Requested size: 642.39844pt x 481.79883pt.
 
-Overfull \hbox (141.91444pt too wide) in paragraph at lines 439--440
+Overfull \hbox (141.91444pt too wide) in paragraph at lines 472--473
  [] 
  []
 
 [17
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.440 \captionof{figure}{Circuito Final}
-                                        
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.440 \captionof{figure}{Circuito Final}
-                                         <./imagenes/uno.jpeg>]
-<imagenes/tres.jpeg, id=201, 1284.8pt x 963.6pt>
-File: imagenes/tres.jpeg Graphic file (type jpg)
-<use imagenes/tres.jpeg>
-Package pdftex.def Info: imagenes/tres.jpeg  used on input line 445.
-(pdftex.def)             Requested size: 642.39844pt x 481.79883pt.
-
-Overfull \hbox (141.91444pt too wide) in paragraph at lines 445--446
- [] 
- []
-
-[18
+l.473 \captionof{figure}{Circuito Final}
+                                        
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.446 \captionof{figure}{Circuito Final}
-                                         <./imagenes/dos.jpeg>] [19
+l.473 \captionof{figure}{Circuito Final}
+                                         <./imagenes/uno.jpeg>]
+<imagenes/tres.jpeg, id=206, 1284.8pt x 963.6pt>
+File: imagenes/tres.jpeg Graphic file (type jpg)
+<use imagenes/tres.jpeg>
+Package pdftex.def Info: imagenes/tres.jpeg  used on input line 478.
+(pdftex.def)             Requested size: 642.39844pt x 481.79883pt.
+
+Overfull \hbox (141.91444pt too wide) in paragraph at lines 478--479
+ [] 
+ []
+
+[18
 pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.451 \newpage
+l.479 \captionof{figure}{Circuito Final}
+                                         <./imagenes/dos.jpeg>] [19
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.484 \newpage
                <./imagenes/tres.jpeg>] [20] [21] [22
 pdfTeX warning (ext4): destination with the same identifier (name{cite.Referenc
 ia1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.490 \end{document}
+l.523 \end{document}
                     ] (Telefonia Final.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
@@ -952,10 +973,10 @@ Package rerunfilecheck Info: File `"Telefonia Final".out' has not changed.
 (rerunfilecheck)             Checksum: 192520636607B9D240BF4B0765CEE152;1959.
  ) 
 Here is how much of TeX's memory you used:
- 13798 strings out of 478338
- 227172 string characters out of 2835756
+ 13810 strings out of 478338
+ 227439 string characters out of 2835756
  533540 words of memory out of 3000000
- 31896 multiletter control sequences out of 15000+600000
+ 31906 multiletter control sequences out of 15000+600000
  523951 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,13n,77p,734b,674s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -970,10 +991,11 @@ sc10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
 lmr10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
 /lmr12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
 m/lmri12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/lm/lmsy10.pfb>
-Output written on "Telefonia Final.pdf" (23 pages, 1280650 bytes).
+/lm/lmsy10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmsy6.pfb>
+Output written on "Telefonia Final.pdf" (23 pages, 1449380 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 56 named destinations out of 1000 (max. 500000)
- 188 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
