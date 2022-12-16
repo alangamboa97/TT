@@ -229,7 +229,8 @@ Para dar señalización hacia el abonado que se desea llamar, se utilizará un deco
 
 La siguiente tabla muestra la asignación del número a cada línea telefónica:\\
 
-\begin{table}[]
+\begin{table}[H]
+\centering
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{ Dígito }& \textbf{Número Binario} & \textbf{Línea} \\ \hline
@@ -242,6 +243,8 @@ La siguiente tabla muestra la asignación del número a cada línea telefónica:\\
 0 & 1010 & Finaliza llamda \\ \hline
 Otro & XXXX & - \\ \hline
 \end{tabular}
+\captionof{figure}{Asignación del número a la línea telefónica}
+\label{tabla:ANLT}
 \end{table}
 
 
@@ -250,6 +253,18 @@ Otro & XXXX & - \\ \hline
 
 Para el diseño del circuito se utilizó Smartdraw el cual es una herramienta en línea para realizar esquemas eléctricos. A continuación se presenta el diseño del circuito implementado.\\\\
 
+
+\begin{center}
+  \includegraphics[scale=0.8]{imagenes/t1}
+\captionof{figure}{Esquematico}
+ \label{fig:Esquema1}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.8]{imagenes/t2}
+\captionof{figure}{Esquematico}
+ \label{fig:Esquema2}
+\end{center}
 
 
 
@@ -442,50 +457,133 @@ Arduino es una plataforma de electrónica «open-source»o de código abierto cuyos 
 \newpage
 \section{Implementación}
 
+Pruebas del decodificador Módulo MT8870:\\
+
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/cuatro}
-\captionof{figure}{Circuito Preliminar}
- \label{fig:prot}
+\captionof{figure}{Decodificador}
+ \label{fig:decodificador}
 \end{center}
 
+
+Pruebas de conmutación a través de relevadores: \\
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/cinco}
+  \includegraphics[scale=0.4]{imagenes/cinco}
 \captionof{figure}{Circuito Preliminar}
  \label{fig:prot}
 \end{center}
 
 
+Código en IDE Arduino:\\\\
+
+
+\begin{verbatim}
+/* Central telefonica 
+ Alumnos:
+ Díaz Martiínez Maite Paulette 
+ Gamboa Del Angel Alan Eduardo
+---------------------------------------------------------------*/
+//Definir variables de entrada
+int E1;
+int E2;
+int E3;
+int E4;
+
+int i = 0;
+
+void setup() {
+  // Definir pines de entradas y salidas
+  //Serial.begin(9600);
+  pinMode(2,INPUT); 
+  pinMode(3,INPUT);
+  pinMode(4,INPUT);
+  pinMode(5,INPUT);
+ 
+
+  pinMode(6,OUTPUT);
+  pinMode(7,OUTPUT);
+  pinMode(8,OUTPUT);
+  pinMode(9,OUTPUT);
+  pinMode(10,OUTPUT);
+  pinMode(11,OUTPUT);
+  
+}
+ 
+void loop() {
+
+
+  E1 = digitalRead(2);
+  E2 = digitalRead(3);
+  E3 = digitalRead(4);
+  E4 = digitalRead(5);
+  
+ 
+  if((E1 == 1)&& (E2 == 0)&& (E3 == 0)&& (E4 == 0)){  //line 1
+      digitalWrite(6,HIGH); 
+      
+  }
+  else if((E1 == 0)&& (E2 == 1)&& (E3 == 0)&& (E4 == 0)){ //line 2
+    digitalWrite(7,HIGH); 
+            
+  }
+  else if((E1 == 1)&& (E2 == 1)&& (E3 == 0)&& (E4 == 0)){ //line 3
+    digitalWrite(8,HIGH); 
+     
+  }
+  else if((E1 == 0)&& (E2 == 0)&& (E3 == 1)&& (E4 == 0)){ //line 4
+    digitalWrite(9,HIGH); 
+      
+  }
+  else if((E1 == 1)&& (E2 == 0)&& (E3 == 1)&& (E4 == 0)){ //line 5
+    digitalWrite(10,HIGH); 
+    
+  }
+  else if((E1 == 0)&& (E2 == 1)&& (E3 == 1)&& (E4 == 0)){// line 6
+    digitalWrite(11,HIGH); 
+    
+  }
+  else if((E1 == 0)&& (E2 == 1)&& (E3 == 0) && (E4 == 1)){ //Finaliza la llamada con digito 0 
+   digitalWrite(6,LOW); 
+   digitalWrite(7,LOW); 
+   digitalWrite(8,LOW); 
+   digitalWrite(9,LOW);
+   digitalWrite(10,LOW); 
+   digitalWrite(11,LOW); 
+ 
+  }
+  else {
+    delay(100); 
+  }
+  
+  delay(100); 
+}
+
+\end{verbatim}
 
 
 
 
 \subsection{Resultados}
 
-
+Los resultados se muestran en las siguientes figuras, se puede observar el circuito junto con los aparatos telefónicos conectados en conjunto. 
+\\ 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/uno}
+  \includegraphics[scale=0.4]{imagenes/uno}
 \captionof{figure}{Circuito Final}
- \label{fig:prot}
+ \label{fig:Resultadoimg1}
 \end{center}
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/dos}
+  \includegraphics[scale=0.4]{imagenes/dos}
 \captionof{figure}{Circuito Final}
- \label{fig:prot}
+ \label{fig:Resultadoimg2}
 \end{center}
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/tres}
+  \includegraphics[scale=0.4]{imagenes/tres}
 \captionof{figure}{Circuito Final}
- \label{fig:prot}
+ \label{fig:Resultadoimg3}
 \end{center}
-
-
-\newpage
-\section{Pruebas}
-
-
-
 
 
 
@@ -495,6 +593,7 @@ Arduino es una plataforma de electrónica «open-source»o de código abierto cuyos 
 \newpage
 \section{Conclusiones}
 
+En conclusión no se pudo llegar al resultado esperado, sin embargo se logró identificar las partes que conforman los aparatos telefónicos, y los elementos esenciales dentro de la central telefónica incluyendo la parte de la marcación y señalización. Así mismo se conoció más a fondo y se puso en práctica la marcación por tonos y la conmutación para lograr una comunicación entre abonados.
 
 
 \newpage
