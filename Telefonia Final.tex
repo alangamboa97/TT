@@ -93,93 +93,55 @@ Dr. Carlos Hernandez Mejía\\
 \newpage
 \section{Planteamiento del Problema}
 
-
-
-Lo primero que debemos de tener claro, es que la programación orientada a la inteligencia artificial es diferente al paradigma de la programación convencional. En esta última, el usuario le indica a la máquina exactamente lo que tiene que hacer, mientras que en Machine learning, se le enseña a programarse sola. Lo cúal se ejemplifica en el siguiente gráfico:
-\\
-\begin{center}
-  \includegraphics[scale=0.3]{imagenes/programaclasico}
-\captionof{figure}{Programa clásico vs Machine Learning}
- \label{fig:pcvsml}
-\end{center}
-
-
-El proceso de trabajo para aprendizaje automático es muy diferente a la construcción de una aplicación convencional. Por este motivo, la manera de utilizar los lenguajes de programación es diferente. Se deben de tomar en cuenta las características que estos utilizan, así como sus enfoques y paradigmas.\\
-
-Uno de los factores importantes a considerar al momento de elegir un lenguaje de programación orientado a machine learning, es la popularidad el mismo, ya que esta es una señal de la aceptación por parte de la comunidad. A su vez, su el soporte es tanto o mas importante, ya que podemos darnos una idea si dicho lenguaje posee las herramientas adecuadas que se acoplan a nuestras necesidades. La velocidad de ejecución es otro factor importante, sobre todo cuando se requiere una minusiocidad en la ejecución de procesos y el cuidado de la memoria .Finalmente, la versatilidad del lenguaje es otro factor relevante, ya que, si el lenguaje fue diseñado con una determinada tarea o propósito en mente, este será mucho más eficiente y productivo.\\
-
-A continuación, se listan algunos de los lenguajes de programación más populares en el campo de machine learning:\\
-
-\begin{itemize}
-\item \textbf{Python} \\
-Python se ha convertido en el lenguaje de programación más popular del mundo, esto gracias a su sencillez aunado a una gran versatilidad. Sus utilidades abarcan desde desarrollo web, hasta la inteligencia artificial.
-Python es uno de los lenguajes más naturales y  con sintaxis menos complicada. Por lo tanto, es fácil de aprender, leer y corregir errores. Lo mejor de todo es que Python es un lenguaje de código abierto. Lo que significa que es de libre acceso y distribución. Como resultado, tiene bibliotecas versátiles.
-
-Una biblioteca es una colección de módulos o códigos creados para realizar operaciones específicas. Algunos módulos pueden ayudar con la interfaz gráfica de usuario, análisis de datos, gráficos, entre otras cosas. En lugar de escribir el mismo código cada vez que lo necesite, puede importarlo desde la biblioteca.
-
-
- Uno de los principales factores de esta popularidad, es el enorme ecosistema de herramientas desarrolladas específicamente para machine learning tales como: Pandas, Numpy, Tensorflow, Keras, entre otras.
-A pesar de no ser el lenguaje más rápido o potente, lo anterior lo hace uno de los lenguajes indispensables si se piensa trabajar en el campo de machine learning.
-
-\item \textbf{C++}\\
-
-A menudo hemos escuchado que C++ se aborda más cuando se trata de desarrollar juegos y sistemas grandes. Esto se debe a su característica de portabilidad y también proporciona una comprensión básica de la construcción lógica. Sin embargo, Algunos de los paquetes compatibles con C++ incluyen: Microsoft Cognitive Toolkit (CNTK) para aprendizaje profundo; Tensorflow para aprendizaje profundo; OpenCV para visión artificial; MLPack para aprendizaje automático; DyNet para redes neuronales; OpenNN para redes neuronales; Shogun para aprendizaje automático y FANN para redes neuronales.\\
-Sin embargo, C++ también tiene sus propias deficiencias. Está muy orientado a la sintaxis, a diferencia de Python, que es realmente amigable para los principiantes. Adempas de no contar con un gran soporte de bibliotecas.
-
-\item \textbf{R}\\
-
-Otro de los lenguajes de programación cuyo uso es considerablemente popular en el ámbito de machine learning y data análisis es R. R ofrece una variedad de beneficios desde su buen soporte de biblioteca y gráficos hasta la posibilidad crecer enormemente con muchos de los que podemos buscar ayuda, debido a su naturaleza abierta.
-Algunos de los paquetes clave compatibles con R son: Kernlab para operaciones basadas en regresión y clasificación; Ggplot para visualización de datos; Caret para operaciones basadas en regresión y clasificación; Plotly para visualización de datos; MLr3 para diferentes flujos de trabajo de aprendizaje automático.
-al igual que Python, también es comparativamente más lento que el resto de los lenguajes. Esto representa una gran desventaja para este lenguaje de programación. Además de esto, también tiene un origen débil, por lo que no es tan fácil de aprender. Para las personas que no tienen experiencia en programación les puede resultar difícil aprender R.
-
-\item \textbf{Matlab}\\
-
-Matlab también admite operaciones de aprendizaje automático y se puede aplicar de manera innovadora a aplicaciones que incluyen visión por computadora. MATLAB no está limitado por la sintaxis y, por lo tanto, es fácil de aprender y comprender. MATLAB también tiene muchas funciones predefinidas y una GUI para que los alumnos entiendan mejor las cosas. Además, viene con un compilador MATLAB que ayuda cuando se trata de codificar en el mismo.
-Además, cuando se trata de capacidades de aprendizaje automático, MATLAB lo admite de una manera única. MATLAB permite a los usuarios aplicar AutoML, lo que les permite aprovechar al máximo los modelos codificados optimizados y reducidos. Además, MATLAB también puede realizar la generación automática de código para el análisis de sensores y mucho más.
-MATLAB también viene con algunas restricciones. El lenguaje de programación no está fácilmente disponible o es de uso gratuito. De hecho, una versión de prueba está disponible solo por 30 días y publica que los usuarios deben comprar el paquete para un uso posterior. Por esta razón, uno puede encontrar solo investigadores como su público objetivo. No solo eso, el compilador de MATLAB es costoso de comprar y, por lo tanto, no tiene un soporte de comunidad / foro denso para ayudar a los usuarios y estudiantes.
-
-
-\item \textbf{Javascript}
-
-JavaScript puede no ser el lenguaje principal para desarrollo en Inteligencia Artificial, pero es gran complemento para utilizar herramientas relacionadas con Machine Learning, especialmente visualización de datos o procesos,
-El hecho de que TensorFlow.js se ejecute dentro del navegador abre una gama de posibilidades interesantes tanto para empresas como para desarrolladores.
-Como los navegadores son un espacio interactivo: ofrece acceso a varios sensores, incluidas cámaras web y micrófonos, que pueden proporcionar imágenes y sonidos como entrada a cualquier modelo de aprendizaje automático.
-A pesar de todos los aspectos positivos, TensorFlow.js no tiene acceso predeterminado al sistema de archivos en el entorno del host del navegador. Esto limita los recursos de datos disponibles y puede imponer restricciones en el tamaño de los archivos y procesos.\\
+Se requiere diseñar e implementar una central telefónica que cuente con seis líneas telefónicas y que estas tengan una distancia máxima entre ellas de 10 m. Además deberán realizar algún tipo de señalización al momento de la marcación y llamada.
 
 
 
 
-\end{itemize}
-
-A continuación se presenta una tabla comparativa de las características que se tomaron en cuenta para tomar una decisión sobre que lenguaje utilizar.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-\textbf{Lenguaje} & \textbf{Popularidad} & \textbf{Versatilidad} & \textbf{Velocidad} & \textbf{Soporte} \\ \hline
-Python            & Alta                 & Alta                  & Moderada           & Alta             \\ \hline
-C++               & Baja                 & Alta                  & Alta               & Moderado         \\ \hline
-R                 & Alta                 & Moderada                  & Moderado           & Bajo             \\ \hline
-Matlab            & Baja                 & Moderada              & Moderada           & Bajo             \\ \hline
-Javascript        & Moderada             & Moderada              & Baja               & Moderado         \\ \hline
-\end{tabular}
-\caption{\label{tab:lenguajes} Tabla Comparativa Lenguajes de Programación}
-\end{table}
-
-Python es un lenguaje que permite trabajar más de un paradigma (programación estructurada y orientada a objetos).
-Normalmente cuando programamos un script sencillo aplicamos solo el paradigma de programación estructurada (Secuencia, selección e iteración), y cuando necesitamos programar un proyecto  más complejo y queremos incluir los beneficios del paradigma orientado a objetos (reutilización de los componentes, facilidad de mantenimiento y modificación de objetos) utilizamos clases (POO).\\
-Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje nos permite desarrollar ambos ámbitos. Por lo que se tomó la decisión de ser utilizado a lo largo de este proyecto. 
-
-
-\newpage
-\section{Justificación}
 
 
 
 
 \newpage
 \section{Marco Teórico}
+
+
+\subsection{Señalización}
+
+
+La señalización se refiere al uso de señales para el control de las comunicaciones. Esta se encarga del intercambio de información y gestión de la red. Se utiliza el envío de una señal desde el extremo de transmisión de un circuito de telecomunicación para informar a un usuario en el extremo receceptor que se va a enviar un mensaje.
+
+Existen distintos tipos de señalización:
+
+\begin{itemize}
+
+\item \textbf{Señalización en Banda}
+
+En la PSTN, es el intercambio de información de control de llamadas dentro del mismo canal que usa la llamada telefónica. Un ejemplo de esta señalización es la marcación por tonos la cual es usada en las líneas telefónicas de los suscriptores.
+
+\item \textbf{Señalización Fuera de Banda}
+
+Este tipo de señalización requiere un canal dedicado separado. Esta señalización ha sido empleada desde el surgimiento del sistema de señalización n° 6 en el año 1970 y en su sucesor, el SS7, el cual, desde entonces, se convirtió en el estándar de señalización en la mayoría de las centrales telefónicas.
+
+\item \textbf{Señalización de Línea}
+
+Se refiere a la transmisión de información sobre el estado de la línea o canal, como el teléfono colgado, descolgado, la corriente de timbre y el rellamado.
+
+\item \textbf{Señalización de Registro}
+
+La señalización de registro tiene que ver con la transmisión de información de direccionamiento, tales como los números telefónicos de origen y destino. En los primeros días de la telefonía, en las centrales telefónicas operadas por telefonistas, la información de direccionamiento se suministraba en forma hablada, mientras que en la primera mitad del siglo XX, esta información era provista por un teléfono con un disco de marcar, que divide la corriente de línea en pulsos, cuyo número transporta la dirección. Por último, a partir de la segunda mitad del siglo, la señalización de dirección es por marcación por tonos.
+
+\item \textbf{Señalización Asociada al Canal}
+
+La señalización asociada a canal (CAS) emplea un canal de señalización que está dedicado a un canal portador específico.
+
+\item \textbf{Señalización por Canal Común}
+
+La señalización de canal común (CCS) emplea un canal de señalización que transmite información de señalización relativa a múltiples canales portadores. Por tanto, estos canales portadores tienen su canal de señalización en común. Los mensajes de señalización deben llevar identificación del canal al que pertenecen.
+
+\end{itemize}
+
+
 \subsection{Multifrecuencia de Tonos Duales - DTMF(\emph{Dual-Tone Multifrequency}) }
 
 Es una tecnología de telecomunicaciones para transferir información entre dispositivos telefónicos centrales telefónicas y de conmutación mediante tonos de audio en banda enviados a través de frecuencias de voz. En pocas palabras, la señalización DTMF traduce los tonos audibles de presionar las teclas en los teclados de los teléfonos en información legible que las empresas de telecomunicaciones utilizan para procesar las llamadas telefónicas entrantes.\\
@@ -264,9 +226,9 @@ Los elementos que componen a una central telefónica son:
 
 
 \newpage
-\section{Diseño}
+\subsection{Diseño}
 
-\subsection{Componentes}
+\subsubsection{Componentes}
 
 
 \begin{itemize}
@@ -423,6 +385,43 @@ Un relevador, también conocido como relé o relay, es un interruptor cuyo control
 \newpage
 \section{Implementación}
 
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/cuatro}
+\captionof{figure}{Circuito Preliminar}
+ \label{fig:prot}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/cinco}
+\captionof{figure}{Circuito Preliminar}
+ \label{fig:prot}
+\end{center}
+
+
+
+
+
+
+\subsection{Resultados}
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/uno}
+\captionof{figure}{Circuito Final}
+ \label{fig:prot}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/dos}
+\captionof{figure}{Circuito Final}
+ \label{fig:prot}
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/tres}
+\captionof{figure}{Circuito Final}
+ \label{fig:prot}
+\end{center}
 
 
 \newpage
@@ -450,6 +449,9 @@ Un relevador, también conocido como relé o relay, es un interruptor cuyo control
 \bibitem{Referencia0} Leo Schenker, \emph{Pushbutton Calling with a Two-Group Voice Frequency Code}, Bell System Technical Journal, Julio 2014
 
 \bibitem{Referencia1} García Algarra Javier, \emph{De Gran Vía al Distrito C. El patrimonio Arquitectónico de Telefónica}, Tesis doctoral, Dpto. Historia del Arte, UNED, 2012.
+
+
+\bibitem{Referencia1} Joskowicz José, \emph{Conceptos Básicos de Telefonía}, Montevideo, Uruguay, Universidad de la República, 2014
 
 
 %Libro
