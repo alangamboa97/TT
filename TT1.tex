@@ -103,122 +103,13 @@ El presente documento detalla el proceso de diseño del proyecto titulado "Sistem
 
 
 
-Uno de los factores importantes a considerar al momento de elegir un lenguaje de programación orientado a machine learning, es la popularidad el mismo, ya que esta es una señal de la aceptación por parte de la comunidad. A su vez, su el soporte es tanto o mas importante, ya que podemos darnos una idea si dicho lenguaje posee las herramientas adecuadas que se acoplan a nuestras necesidades. La velocidad de ejecución es otro factor importante, sobre todo cuando se requiere una minusiocidad en la ejecución de procesos y el cuidado de la memoria .Finalmente, la versatilidad del lenguaje es otro factor relevante, ya que, si el lenguaje fue diseñado con una determinada tarea o propósito en mente, este será mucho más eficiente y productivo.\\
-
-A continuación, se listan algunos de los lenguajes de programación más populares en el campo de machine learning:\\
-
-\begin{itemize}
-\item \textbf{Python} \\
-Python se ha convertido en el lenguaje de programación más popular del mundo, esto gracias a su sencillez aunado a una gran versatilidad. Sus utilidades abarcan desde desarrollo web, hasta la inteligencia artificial.
-Python es uno de los lenguajes más naturales y  con sintaxis menos complicada. Por lo tanto, es fácil de aprender, leer y corregir errores. Lo mejor de todo es que Python es un lenguaje de código abierto. Lo que significa que es de libre acceso y distribución. Como resultado, tiene bibliotecas versátiles.
-
-Una biblioteca es una colección de módulos o códigos creados para realizar operaciones específicas. Algunos módulos pueden ayudar con la interfaz gráfica de usuario, análisis de datos, gráficos, entre otras cosas. En lugar de escribir el mismo código cada vez que lo necesite, puede importarlo desde la biblioteca.
-
-
- Uno de los principales factores de esta popularidad, es el enorme ecosistema de herramientas desarrolladas específicamente para machine learning tales como: Pandas, Numpy, Tensorflow, Keras, entre otras.
-A pesar de no ser el lenguaje más rápido o potente, lo anterior lo hace uno de los lenguajes indispensables si se piensa trabajar en el campo de machine learning.
-
-\item \textbf{C++}\\
-
-A menudo hemos escuchado que C++ se aborda más cuando se trata de desarrollar juegos y sistemas grandes. Esto se debe a su característica de portabilidad y también proporciona una comprensión básica de la construcción lógica. Sin embargo, Algunos de los paquetes compatibles con C++ incluyen: Microsoft Cognitive Toolkit (CNTK) para aprendizaje profundo; Tensorflow para aprendizaje profundo; OpenCV para visión artificial; MLPack para aprendizaje automático; DyNet para redes neuronales; OpenNN para redes neuronales; Shogun para aprendizaje automático y FANN para redes neuronales.\\
-Sin embargo, C++ también tiene sus propias deficiencias. Está muy orientado a la sintaxis, a diferencia de Python, que es realmente amigable para los principiantes. Adempas de no contar con un gran soporte de bibliotecas.
-
-\item \textbf{R}\\
-
-Otro de los lenguajes de programación cuyo uso es considerablemente popular en el ámbito de machine learning y data análisis es R. R ofrece una variedad de beneficios desde su buen soporte de biblioteca y gráficos hasta la posibilidad crecer enormemente con muchos de los que podemos buscar ayuda, debido a su naturaleza abierta.
-Algunos de los paquetes clave compatibles con R son: Kernlab para operaciones basadas en regresión y clasificación; Ggplot para visualización de datos; Caret para operaciones basadas en regresión y clasificación; Plotly para visualización de datos; MLr3 para diferentes flujos de trabajo de aprendizaje automático.
-al igual que Python, también es comparativamente más lento que el resto de los lenguajes. Esto representa una gran desventaja para este lenguaje de programación. Además de esto, también tiene un origen débil, por lo que no es tan fácil de aprender. Para las personas que no tienen experiencia en programación les puede resultar difícil aprender R.
-
-\item \textbf{Matlab}\\
-
-Matlab también admite operaciones de aprendizaje automático y se puede aplicar de manera innovadora a aplicaciones que incluyen visión por computadora. MATLAB no está limitado por la sintaxis y, por lo tanto, es fácil de aprender y comprender. MATLAB también tiene muchas funciones predefinidas y una GUI para que los alumnos entiendan mejor las cosas. Además, viene con un compilador MATLAB que ayuda cuando se trata de codificar en el mismo.
-Además, cuando se trata de capacidades de aprendizaje automático, MATLAB lo admite de una manera única. MATLAB permite a los usuarios aplicar AutoML, lo que les permite aprovechar al máximo los modelos codificados optimizados y reducidos. Además, MATLAB también puede realizar la generación automática de código para el análisis de sensores y mucho más.
-MATLAB también viene con algunas restricciones. El lenguaje de programación no está fácilmente disponible o es de uso gratuito. De hecho, una versión de prueba está disponible solo por 30 días y publica que los usuarios deben comprar el paquete para un uso posterior. Por esta razón, uno puede encontrar solo investigadores como su público objetivo. No solo eso, el compilador de MATLAB es costoso de comprar y, por lo tanto, no tiene un soporte de comunidad / foro denso para ayudar a los usuarios y estudiantes.
-
-
-\item \textbf{Javascript}
-
-JavaScript puede no ser el lenguaje principal para desarrollo en Inteligencia Artificial, pero es gran complemento para utilizar herramientas relacionadas con Machine Learning, especialmente visualización de datos o procesos,
-El hecho de que TensorFlow.js se ejecute dentro del navegador abre una gama de posibilidades interesantes tanto para empresas como para desarrolladores.
-Como los navegadores son un espacio interactivo: ofrece acceso a varios sensores, incluidas cámaras web y micrófonos, que pueden proporcionar imágenes y sonidos como entrada a cualquier modelo de aprendizaje automático.
-A pesar de todos los aspectos positivos, TensorFlow.js no tiene acceso predeterminado al sistema de archivos en el entorno del host del navegador. Esto limita los recursos de datos disponibles y puede imponer restricciones en el tamaño de los archivos y procesos.\\
-
-
-
-
-\end{itemize}
-
-A continuación se presenta una tabla comparativa de las características que se tomaron en cuenta para tomar una decisión sobre que lenguaje utilizar.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-\textbf{Lenguaje} & \textbf{Popularidad} & \textbf{Versatilidad} & \textbf{Velocidad} & \textbf{Soporte} \\ \hline
-Python            & Alta                 & Alta                  & Moderada           & Alta             \\ \hline
-C++               & Baja                 & Alta                  & Alta               & Moderado         \\ \hline
-R                 & Alta                 & Moderada                  & Moderado           & Bajo             \\ \hline
-Matlab            & Baja                 & Moderada              & Moderada           & Bajo             \\ \hline
-Javascript        & Moderada             & Moderada              & Baja               & Moderado         \\ \hline
-\end{tabular}
-\caption{\label{tab:lenguajes} Tabla Comparativa Lenguajes de Programación}
-\end{table}
-
-Python es un lenguaje que permite trabajar más de un paradigma (programación estructurada y orientada a objetos).
-Normalmente cuando programamos un script sencillo aplicamos solo el paradigma de programación estructurada (Secuencia, selección e iteración), y cuando necesitamos programar un proyecto  más complejo y queremos incluir los beneficios del paradigma orientado a objetos (reutilización de los componentes, facilidad de mantenimiento y modificación de objetos) utilizamos clases (POO).\\
-Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje nos permite desarrollar ambos ámbitos. Por lo que se tomó la decisión de ser utilizado a lo largo de este proyecto. 
+ 
 
 
 \newpage
 \section{Introducción}
 
-Una propiedad fundamental que nos ofrece el lenguaje de programación Python, y que estaremos utilizando de manera frecuente a lo largo de este proyecto, es la modularidad. Que no es más que dividir nuestros programas en partes más pequeñas (sub-programas), que habitualmente son llamados módulos. Las cuales deben tener un grado de independencia de la aplicación o programa principal. Cuando hablamos de independencia, nos referimos a que pueden ser utilizados por otras aplicaciones y no dependen de la aplicación original en sí. 
 
-\begin{center}
-  \includegraphics[scale=.6]{imagenes/modularidad}
-\captionof{figure}{Modularidad}
- \label{fig:modul}
-\end{center}
-
-
-Estós módulos son archivos que alojan código independiente con una determinada función.  Python cuenta con diversos módulos que podemos agregar a nuestro código y utilizarlo para facilitar y acortar el 
-código, de manera que sea mas legible y ordenado.
-
-Otro de los factores que consideramos al desarrollar este proyecto, es el de concurrencia de procesos. La concucrrencia aparece cuando dos o más procesos ocurren al mismo tiempo.
-Estos procesos pueden "competir" o colaborar entre sí por los recursos del sistema. \\
-Los temás de colaboración, sincronización, hilos y paralelismo se abordarán de una manera más profunda en el tercer reporte, cuando se tenga el diseño de los módulos faltantes.
-
-\begin{center}
-  \includegraphics[scale=.6]{imagenes/diagrama_casosusomc}
-\captionof{figure}{Diagrama de Casos de Uso - Módulo Central de Procesamiento}
- \label{fig:casosusomc}
-\end{center}
-
-En el  siguiente diagrama, se pueden observar las distintas tareas así como las interacciones entre estas y el Submódulo de Procesamiento de Imágenes. \\
-Cabe recalcar, que para el presente reporte no se han determinado el diseño del Módulo de Telemetría, ni el de la Estación Base, por lo que se puede esperar el rediseño de este diagrama en un posterior reporte.Por esta misma razón, se decicidó no incluir el diagrama de clases hasta que los Módulos faltantes estén diseñados.
-
-
-\begin{center}
-
-  \includegraphics[scale=.4]{imagenes/diagrama_activiadesmc}
-\captionof{figure}{Diagrama de Actividades - Módulo Central de Procesamiento}
- \label{fig:casosusomc}
-
-\end{center}
-
-En el siguiente Diagrama de Actividades se describen las actividades y sus interacciones con el Submódulo de Procesamiento de Imágenes y la Estación Base. Para que el sistema principal pueda iniciar, se necesita que el conductor encienda el auto, ya que este sistema funcionará utilzando la alimentación electrica.
-\\\\ 
-El sistema principal comenzará por verificar el estado del Submódulo de Procesamiento de Imágenes, así como el de Telemetría y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Procesamiento de Imáganes. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
-Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Telemetría.se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
-Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. \\\\
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/diagrama_secuenciamc}
-\captionof{figure}{Diagrama de Secuencia - Módulo Central de Procesamiento}
- \label{fig:secuenciamc}
-\end{center}
-
-Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial en la concurrencia de los mismos. También se detallan las peticiones y respuestas de los distintos submódulos y sistemas.
 
 \newpage
 \section{Planteamiento del problema}
@@ -256,96 +147,9 @@ riesgo y por tanto evitar el peligro.\cite{conapra}
 
 
 
-\begin{center}
-  \includegraphics[scale=.62]{imagenes/casosdeusospi}
-\captionof{figure}{Diagrama de Casos de Uso - Submódulo de Procesamiento de Imágenes}
- \label{fig:csspi}
-\end{center}
-
-
-A continuación se muestra el diagrama de actividades para el Submódulo de Procesamiento de Imágenes:
-\begin{center}
-  \includegraphics[scale=.4]{imagenes/Diagramadeactividadspi}
-\captionof{figure}{Diagrama de Actividades - Submódulo de Procesamiento de Imágenes}
- \label{fig:actspi}
-\end{center}
-El diagrama de actividades muestra el flujo de las actividades en general, para que el sistema pueda funcionar requiere que el automóvil le proporcione una fuente de alimentación hacia el ordenador, el cual iniciara el sistema para la detección de somnolencia. Una condición importante es que el conductor se encuentre dentro del rango visual de la cámara y permanezca dentro del mismo al mismo tiempo que el Submódulo de Procesamiento de Imágenes realiza la captura de video utilizando una cámara digital. Posteriormente se realizará la detección del rostro utilizando el método Haar-Adaboost. También se utilizarán librerías como Dlib en OpenCV para entrenar al sistema, y que este sea capaz de detectar el rostro con condiciones de poca luz.\\
-
-Se hará uso de una Red Neuronal Convolucional para clasificar los ojos (abierto o cerrado) y así determinar el estado de somnolencia del conductor. Cabe mencionar, que el diseño de esta red se retomará en un reporte posterior, cuando se determine la resolución de óptima para detectar el rostro en tiempo real. \\
-
-Mientras que para la boca se tomara la Relación de apertura de la boca (MOR).\\
-En caso de que el sistema detecte somnolencia en el conductor se enviará una señal de alerta hacia el Módulo Central de Procesamiento el cual será el encargado de activar la alarma.\\ 
-
-Como proceso paralelo a la detección de signos de somnolencia, la Identificación de una posible incidencia será la encargada de iniciar la grabación de video, con el fin de tener un fragmento de video segundos antes de detectar si el conductor presenta somnolencia.\\
-
-En caso de que el conductor presente somnolencia, el video será detenido hasta detectar que el conductor mantiene los ojos abiertos por un intervalo de tiempo definido. Posteriormente el video de incidencia será guardado en la memoria y se notificará al Módulo Central de Procesamiento.\\
-
-En caso de que el sistema indique que el conductor no presenta somnolencia el video será detenido y posteriormente eliminado de la memoria externa, con el fin de no saturar el espacio en la memoria.
- Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. 
-
-\newpage
- \textbf{Puntos de Referencia}
-
-\begin{center}
-  \includegraphics[scale=.42]{imagenes/landmark}
-\captionof{figure}{Puntos de referencia}
- \label{fig:landmark}
-\end{center}
-
-
-
-A su vez, se utilizarán puntos de referencia con la ayuda de el software OpenCV y el modelo iBUG 300-W de delimitación de rostro para dividir las características que posteriormente serán extraídas y clasificadas.
-
-En la siguiente tabla se muestra la delimitación y agrupación de los puntos de interés, tales como: ojo derecho, ojo izquierdo y boca.
-\begin{center}
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|c|}
-\hline
-Partes        & \multicolumn{1}{l|}{Puntos de Referencia} \\ \hline
-Boca          & {[}48-67{]}                               \\ \hline
-Ojo Derecho   & {[}36-41{]}                               \\ \hline
-Ojo Izquierdo & {[}42-46{]}                               \\ \hline
-\end{tabular}
-\caption{\label{tab:landmakrs} Agrupación de Puntos de Referencia}
-\end{table}
 
 
 \newpage
-\end{center}
-\textbf{\emph{Mouth Opening Ratio}}
-
-Bostezar es un signo cansancio. El bostezo se caracteriza por una apertura lenta y amplia de la boca. Por lo que se necesita medir el tamaño y la forma de la boca es necesario para identificar un bostezo. Para esto, se utilizara el \emph{Mouth Opening Ratio} que es un método que utiliza puntos de referencia para medir la apertura de la boca. Entre más grande sea este valor, más es la aperatura de la boca, por lo tanto se considera como un bostezo.
-
-
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/MOR}
-\captionof{figure}{\emph{Mouth Opening Ratio}}
- \label{fig:landmark}
-\end{center}
-
-La formula general para calular el \emph{MOR} es la siguiente:
-\begin{equation}
-MOR = \frac{\left \|p_{2}-p_{8}  \right \| +\left \|p_{3}-p_{7}  \right \|+\left \| p_{4}-p_{6} \right \|}{2\left \| p_{1}-p_{5}\right \|}
-\end{equation}
-
-Utilizando nuestros puntos de referencia, se podría calcular el MOR de la siguiente manera:
-
-\begin{equation}
-MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-P55 \right \|}{2\left \| P48-P54\right \|}
-\end{equation}
-
-
-\begin{center}
-  \includegraphics[scale=.42]{imagenes/diagramadesecuenciaspi}
-\captionof{figure}{Diagrama de Secuencia - Submódulo de Procesamiento de Imágenes}
- \label{fig:secspi}
-\end{center}
-
-
-\newpage
-
 \section{Metodología}
 
 
@@ -394,7 +198,7 @@ Desarrollar e implementar un sistema para el monitoreo y detección de síntomas d
 \textbf{Para TT1:}
 
 \begin{itemize}
-\item Diseñar un sistema de visión artificial que sea capaz de detectar la somnolencia en conductores 
+\item Diseñar un sistema de visión artificial que sea capaz de detectar la somnolencia en conductores.
 \item Diseñar un sistema de geolocalización en tiempo real usando redes de telecomunicaciones.
 \item  Diseñar un sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
 \item Diseñar un sistema de comunicaciones que permita la interconexión entre el sistema de visión artificial y el sistema de administración.  
@@ -404,7 +208,7 @@ Desarrollar e implementar un sistema para el monitoreo y detección de síntomas d
 \textbf{Para TT2:}
 
 \begin{itemize}
-\item Implementar un sistema de visión artificial que sea capaz de detectar la somnolencia en conductores 
+\item Implementar un sistema de visión artificial que sea capaz de detectar la somnolencia en conductores.
 \item Implementar un sistema de geolocalización en tiempo real usando redes de telecomunicaciones.
 \item Implementar un sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
 \item Implementar un sistema de comunicaciones que permita la interconexión entre el sistema de visión artificial y el sistema de administración.  
@@ -666,7 +470,7 @@ Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de l
 
 
 \newpage
-\subsubsection{Análisis del Submódulo de Procesamiento de Imágenes}
+\subsubsection{Análisis del Submódulo Visión Artificial}
 \begin{itemize}
 
 
@@ -712,15 +516,14 @@ Utilizando el software de OpenCV y .\end{tabular}}                              
 
 
 \end{itemize}
-\newpage
-\subsubsection{Análsis del Submódulo de Deep Learning}
+
 
 \newpage
 \subsection{Análisis del Módulo de Comunicaciones}
 \newpage
 
 
-\subsection{Análisis de la Estación Base}
+\subsection{Análisis del Módulo de Estación Base}
 El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.  
 
 
