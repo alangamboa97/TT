@@ -279,24 +279,7 @@ En el caso particular de procesamiento digital de imágenes, las variables $[n_1,
 (x\star h)[x,y] = \sum_{k_1=0}^{K_1-1}\sum_{k_2=0}^{K_2-1} h[k_1,k_2] x[x+k_1,y +k_2]
 \end{equation}
 
-Supongamos que se tiene un imágen en blanco y negro. Dicha imagen, de $7x7$ píxeles, se puede representar mediante una matriz binaria:\\
-\begin{center}
 
-
-$
-I=\begin{bmatrix}
-0&  0&  0&  0&  0&  0&0\\ 
- 0&  0&  0&  0&  0&  0&0 \\ 
- 0& 0 &  1&1 &1  &  0& 0\\ 
- 0& 0 &  1&1  &1  &0  &0 \\ 
- 0& 0&  1&1  & 1 & 0 &0 \\ 
- 0& 0 &  0& 0 &0  & 0 &0 \\ 
- 0&0  &  0&0  & 0 &  0&0 
-\end{bmatrix}
-$
-\end{center}
-
-\begin{verse}
 \emph{Capas convolutivas}\\
 El componente clave de las redes neuronales convolucionales son las capas, que sustituyen la tradicional multiplicación de pesos por entradas. La entrada de una capa convolutiva es una señal,en el caso de imágenes, una señal bidimensional. Dicha señal es procesada realizando una convolución con una máscara o \emph{kernel}. Los pesos correspondientes al \emph{kernel} serán los parámetros de la capa convolutiva que será entrenada.
 A continuación se presenta la representación más simple de las capas de una red neuronal convolucional.
@@ -326,12 +309,22 @@ El objetivo principal de esta capa es disminuir el tamaño del mapa de caracterís
 La capa totalmente conectada  consta de los pesos y sesgos junto con las neuronas y se utiliza para conectar las neuronas entre dos capas diferentes.l¿La imagen de entrada de las capas anteriores se aplana y se alimenta esta capa. Luego, el vector aplanado pasa por unas pocas capas  más donde normalmente tienen lugar las operaciones de las funciones matemáticas. En esta etapa comienza el proceso de clasificación.
 
 \item \emph{Output Layer}
+
 Esta capa se encarga de mejorar el rendimiento de un modelo de aprendizaje automático, ya que evita el sobreajuste al simplificar la red. Descarta neuronas no escenciales de la red neuronal durante el entrenamiento.
 
 \end{itemize}
 
-\end{verse}
+\subsection{\emph{Content Delivery Network}}
 
+Una Red de Distribución de Contenido, o CDN por sus siglas en inglés, es de una red de servidores que se encarga de mejorar el rendimiento en la carga y descarga de contenido de la red. Los componentes de una CDN se encuentran distribuidos en diferentes nodos. Estos componentes pueden ser servidores y se encuentran con contenido replicado alrededor del mundo. El trabajo de una CDN consiste en redirigir la solicitudes de los clientes a un servidor ubicado geográficamente cerca de estos. En consecuencia, los clientes obtienen los datos solicitados a una velocidad más rápida.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/cdn-diagram} 
+\captionof{figure}{Arquitectura de una CDN}
+ \label{fig:boost}
+\end{center}
+
+Además de esto, una CDN es capaz de detectar cambios en la información existente, así como detectar la disponibilidad de nuevo contenido en los servidores de origen.
 
 \newpage
 \section{Estado del Arte}
