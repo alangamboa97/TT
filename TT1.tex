@@ -185,6 +185,9 @@ Algunas de las ventajas de esta metodología son:
 UML es el estándar de la industria para modelar sistemas orientados a objetos\cite{kendall}. UML incluye un conjunto de herramientas que permite visualizar la construcción de un sistema orientado a objetos. Al trabajar por iteraciones, se aborda de manera cada vez con más detalle el diseño de sistema, hasta que se defina con claridad las relaciones de cada uno de los objetos del sistema. Uno de las principales ventajas de UML es la reutilización de objetos, esto permite reducir costo de desarrollo así como de mantenimiento de los programas.
 
 
+
+
+
 \end{itemize}
 
 
@@ -285,8 +288,8 @@ El componente clave de las redes neuronales convolucionales son las capas, que s
 A continuación se presenta la representación más simple de las capas de una red neuronal convolucional.
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/cnn} 
-\captionof{figure}{Boosting}
+  \includegraphics[scale=0.45]{imagenes/cnn2} 
+\captionof{figure}{Arquitectura general de una Red Neuronal Convolucional}
  \label{fig:boost}
 \end{center}
 
@@ -301,16 +304,29 @@ La capa de convolución en CNN entrega el resultado a la siguiente capa una vez q
 
 \item Capa de \emph{Pooling}
 
-El objetivo principal de esta capa es disminuir el tamaño del mapa de características convolucionado para reducir los costos computacionales. Esto se realiza disminuyendo las conexiones entre capas y opera de forma independiente en cada mapa de características. Según el método utilizado, existen varios tipos de operaciones de agrupación. Básicamente resume las características generadas por una capa de convolución.
+El objetivo principal de esta capa es disminuir el tamaño del mapa de características convolucionado para reducir los costos computacionales. Esto se realiza disminuyendo las conexiones entre capas y opera de forma independiente en cada mapa de características. Según el método utilizado, existen varios tipos de operaciones de agrupación. Básicamente resume las características generadas por una capa de convolución. El tipo de pooling más utilizado es el \emph{max-pooling}. Este devuelve el valor máximo del fragmento de la imágen filtrada por el kernel.
 
+\begin{center}
+  \includegraphics[scale=1]{imagenes/maxpool} 
+\captionof{figure}{Ejemplo de Max Pooling}
+ \label{fig:boost}
+\end{center}
 
 \item \emph{Fully Connected Layer}
 
-La capa totalmente conectada  consta de los pesos y sesgos junto con las neuronas y se utiliza para conectar las neuronas entre dos capas diferentes.l¿La imagen de entrada de las capas anteriores se aplana y se alimenta esta capa. Luego, el vector aplanado pasa por unas pocas capas  más donde normalmente tienen lugar las operaciones de las funciones matemáticas. En esta etapa comienza el proceso de clasificación.
+La capa totalmente conectada  consta de los pesos y sesgos junto con las neuronas y se utiliza para conectar las neuronas entre dos capas diferentes.La imagen de entrada de las capas anteriores se aplana y se alimenta esta capa. Luego, el vector aplanado pasa por unas pocas capas  más donde normalmente tienen lugar las operaciones de las funciones matemáticas. En esta etapa comienza el proceso de clasificación.
 
 \item \emph{Output Layer}
 
 Esta capa se encarga de mejorar el rendimiento de un modelo de aprendizaje automático, ya que evita el sobreajuste al simplificar la red. Descarta neuronas no escenciales de la red neuronal durante el entrenamiento.
+
+\item \emph{Funciones de activación}
+
+
+\item \emph{Flattening}
+
+Flattening consiste en convertir los datos de salida de la capa convolucional a una matriz unidimensional para ser llevada a la capa siguiente.
+
 
 \end{itemize}
 
@@ -325,6 +341,7 @@ Una Red de Distribución de Contenido, o CDN por sus siglas en inglés, es de una 
 \end{center}
 
 Además de esto, una CDN es capaz de detectar cambios en la información existente, así como detectar la disponibilidad de nuevo contenido en los servidores de origen.
+
 
 \newpage
 \section{Estado del Arte}
