@@ -116,14 +116,38 @@ El presente documento detalla el proceso de diseño del proyecto titulado "Sistem
 
 
 
+
+
 \newpage
 \section{Propuesta de solución}
 
+Como respuesta a la problemática planteada en la sección anterior, se propone el desarrollo de un sistema portátil que sea capaz de detectar somnlencia en conductores y a su vez alertar con la intención de que este despierte.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/topdowngeneral}
+\captionof{figure}{Descomposición en la metodología \emph{Top-Down}}
+ \label{fig:neurona}
+\end{center}
+
+ 
 
 
 
 \newpage
 \section{Alcances y escenario de pruebas}
+
+Para este trabajo, se decidió a delimitar el área de pruebas a la ciudad de méxico.
+
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/mapacobertura}
+\captionof{figure}{Descomposición en la metodología \emph{Top-Down}}
+ \label{fig:neurona}
+\end{center}
+
+
 
 
 \newpage
@@ -159,25 +183,21 @@ Para el presente proyecto
 
 \item \textbf{Top-Down}
 
-La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas partes pueden ser llamadas "modulos", "subrutinas" o "procedimientos". 
+La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas partes pueden ser llamadas modulos o subrutinas. Cada módulo puede ser probado individualmente.  
 
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/Top-Down}
+  \includegraphics[scale=0.5]{imagenes/Top-down}
 \captionof{figure}{Descomposición en la metodología \emph{Top-Down}}
  \label{fig:neurona}
 \end{center}
 
-Algunas de las ventajas de esta metodología son:
-
-\begin{itemize}
-\item  Dividir un problema en partes/tareas más pequeñas hace que este sea mucho más fácil de entender y resolver.
-\item Cada módulo puede ser probado individualmente
-\item Al momento de asignar los subproblemas a diferentes personas, se puede llegar a la solución final de una forma más rápida.
+Por lo tanto, en este proyecto se comenzará entendiendo el problema general para posteriormente poder realizar una subdivisión de problemas más pequeños para ser resueltos de manera invididual.
 
 
 
-\end{itemize}
+
+
 
 
 \item \textbf{UML}
@@ -322,6 +342,7 @@ Esta capa se encarga de mejorar el rendimiento de un modelo de aprendizaje autom
 
 \item \emph{Funciones de activación}
 
+Son funciones matemáticas que determinan la salida de una capa de la red neuronal, y se utilizan en capas convolucionales así cómo en las capas completamente conectadas. Estas funciones se utilizan para asignar los valores de las salidas de cada capa entre valores definidos, para así facilitar que el modelo se adapte a una gran variedad de datos. 
 
 \item \emph{Flattening}
 
