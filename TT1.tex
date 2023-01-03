@@ -508,43 +508,184 @@ b_j &  &otro ,
 
 Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles.
 
-\subsection{Red de Telecomunicaciones}
-Sistema integrado por medios de transmisión, tales como canales o circuitos que utilicen 
-bandas de frecuencias del espectro radioeléctrico, enlaces satelitales, cableados, redes 
-de transmisión eléctrica o cualquier otro medio de transmisión, así como, en su caso, 
-centrales, dispositivos de conmutación o cualquier equipo necesario. [28]
-\subsection{Teorema de Shannon-}
+\newpage
+\subsection{Estándares y Protocolos de Comunicación Inalámbrica}
+
+Para transferir datos o información de un punto a otro sin la utilización de cableado o algún medio físico, tenemos las redes inalámbricas que utilizan ondas de radio para conectar a los 
+dispositivos permitiendo así, a los dispositivos remotos, se conecten sin 
+dificultad y sin importar que estos dispositivos estén a unos metros o incluso a varios 
+kilómetros de distancia \cite{Referencian1}. Se dividen en 4 tipos dependiendo del alcance requerido y se definen por el estándar 802.11 del IEEE que es el organismo de estandarización internacional \cite{Referencian2}.
+
+\begin{itemize}
+
+\item \textbf{Red de área personal inalámbrica (WPAN)}\\
+
+Redes de corto alcance que utilizan tecnología Bluetooth, HomeRF (\emph{Home Radio Frecuency}), Zigbee y las conexiones infrarrojas. Interconectan dispositivos compatibles como teléfonos móviles, electrodomésticos, impresoras o asistentes personales digitales (PDA) cerca de una ubicación central. 
+
+Utilizada para periféricos de tamaño pequeño, son conocidas como redes de corto alcance, con cobertura de 10 a 100 metros \cite{Referencian3}. 
+
+\item \textbf{Red de área local inalámbrica (WLAN)}\\
+
+Es una red de intercambio de datos a través de ondas electromagnéticas que se propagan en el aire, en ella se crea una red de área local con un determinado número de dispositivos conectados a un enrutador o punto de acceso que proporcionará acceso a Internet. 
+
+Son conocidas como redes de corto/mediano alcance alcanzando de 100 a 1000 metros.\\
+Estándares usados en WLAN \cite{Referencian4}: 
+\begin{itemize}
+
+\item IEEE 802.11 \\
+Es la forma más apropiada de referirnos a la tecnología Wi-Fi, especifica las normas de funcionamiento en una WLAN. \\
+
+\item IEEE 802.11a/b/g  \\
+Estándares identificadores de canales y frecuencias por donde se conectan los hosts a la WLAN. Con 802.11a se opera sobre las bandas de 5 GHz a 20 MHz y 2,4 GHz mientras que en la 802.11 b y g operan solamente en la banda de 2,4 GHz a una frecuencia de 25 MHz como ancho de banda.\\
+
+\item IEEE 802.11n\\
+Fue el primero en implementar la tecnología MIMO (\emph{Multiple Input - Multiple Output}) que permite usar varios canales a la vez para el envío y recepción de datos. \\
+
+\item IEEE 802.11ac \\
+Se denomina WiFi 5 y la gran mayoría de aparatos trabajan sobre esta versión. Es una versión que solo opera en la banda de 5 GHz para proporcionar velocidades desde los 433 Mbps, dependiendo de la cantidad de antenas que utilice. \\
+ 
+\item IEEE 802.11ax \\
+Es la nueva versión conocida como WiFi 6 o WiFi de 6ª generación en ella se introduce la nueva tecnología OFDMA? que mejora la eficiencia espectral de la red para WLAN en donde haya gran cantidad de usuarios conectados.\\
+Opera sobre las frecuencias de 2,4 GHz y 5 GHz. \\
+\end{itemize}
+
+\item \textbf{Red de área inalámbrica de área metropolitana (WMAN)}\\
+
+Las redes WMAN están basadas en el estándar IEEE 802.16, también denominado WiMAX (Interoperabilidad mundial para acceso por microondas) por sus siglas en inglés. 
+WiMAX es una tecnología que se caracteriza por proporcionar una alta velocidad de transmisión de datos a través de 
+redes inalámbricas de área metropolitana.
+WiMAX es parecida a la red Wi-Fi, pero proporciona cobertura a mayores distancias, opera en dos bandas de frecuencia de 2 GHz a 11 GHz y de 10 
+GHz a 66 GHz y puede alcanzar velocidades de transmisión de hasta 70 Mbps 
+en una distancia de 50 km a miles de usuarios desde una única estación base.\cite{Referencian1}. 
+
+
+\item \textbf{Red  inalámbrica de area amplia (WWAN)}\\
+
+Usan ondas de radio pero transmite a uno o varios puntos de acceso inalámbrico donde un usuario inalámbrico puede conectarse a la red, al disponer de un ancho de banda más elevado ofrece una mejor cobertura. \\\\
+Como ejemplo de estas redes tenemos la tecnología 4G y 5G. 
+Son conocidas como redes de largo alcance con cobertura de hasta 100km, pueden dar soporte a gran parte del territorio geográfico\cite{Referencian5}. 
+
+En esta red se incluyen:
+\begin{itemize}
+\item \textbf{Celulares}\\
+Es conocida como la red de telefonía móvil.
+\end{itemize}
+\begin{itemize}
+\item \textbf{LPWAN(\emph{Low Power Wide Area Network}): Red de Área Amplia de Baja Frecuencia}\\
+Son conocidas como redes de largo alcance con cobertura de hasta 100km.
+\end{itemize}
+\end{itemize}
+
+
+
+
+\newpage
+A continuación, se muestra de manera gráfica los tipos de redes antes mencionadas, así como algunos de sus protocolos y tecnologías.
+
+\begin{center}
+  \includegraphics[scale=.3]{imagenes/redes}
+\captionof{figure}{Tipos de Redes Inalámbricas}
+ \label{fig:prot}
+\end{center}
+
 \subsection{LPWAN}
-LPWAN (Low Power Wide Area Network) redes de área amplia y de baja potencia, es un 
+LPWAN \emph(Low Power Wide Area Network) son redes de área amplia y de baja potencia, es un 
 protocolo de transporte inalámbrico de datos que hoy en día se utiliza como uno de los 
 protocolos básicos para la implementación de IoT.
-Existen varias implementaciones del protocolo LPWAN, tales como Sigfox, NB-IoT, 
-Weightless, RPMA y LoRaWAN. Hay muchas diferencias entre cada una de ellas en 
+Existen varias implementaciones del protocolo LPWAN, tales como Sigfox,LoRaWAN, NB-IoT y LTE. Hay muchas diferencias entre cada una de ellas en 
 cuanto a los esquemas de modulación, el alcance geográfico, la cantidad de información
-transmitida y a sus capacidades de encriptación y autenticación. [29]
-\subsection{LoRaWAN}
-LoRaWAN es un protocolo de red de área amplia de baja potencia construido sobre la 
-técnica de modulación de radio LoRa. Conecta de forma inalámbrica dispositivos a 
-Internet y gestiona la comunicación entre dispositivos de nodo final y puertas de enlace 
-de red. Se tratade un protocolo de comunicación bidireccional asequible de largo alcance 
-con un consumo de energía muy bajo: los dispositivos pueden funcionar durante diez 
-años con una batería pequeña. Utiliza las bandas de radio ISM (Industrial, Scientific, 
-Medical) sin licencia para implementaciones de red.[29]
-\subsection{Sigfox}
-Sigfox es una red de conectividad celular a nivel mundial enfocada para el Internet de 
-las cosas (IoT: Internet of things). Esta red está diseñada para comunicaciones de baja 
-velocidad permitiendo reducir los costes y el consumo de energía de los dispositivos 
-conectados. Además, aparte de ser de baja velocidad, la comunicación también se basa 
-en una banda muy estrecha, lo que permite a los dispositivos tener un alto poder de 
-penetración a obstáculos, facilitando la comunicación a grandes distancias, incluso en 
-suelo urbano.[30]
-\subsection{LTE}
+transmitida y a sus capacidades de encriptación y autenticación\cite{Referencian6}.
+
+Las interfaces de comunicación inalámbrica LPWAN consideradas son:
+
+\subsubsection{LTE-M}
+LTE-M es el término simplificado de la industria para el estándar tecnológico de Área Amplia de Baja Potencia (LPWA por sus siglas en inglés). Se refiere específicamente a la tecnología LTE CatM1.
+
+Es una tecnología de área amplia de baja potencia que admite IoT a través de dispositivos poco complejos y proporciona una cobertura extendida, al tiempo que permite la reutilización de la base instalada de LTE.\\
+
+Las redes LTE-M coexistirán con las redes móviles 2G, 3G y 4G y se beneficiarán de todas las características de seguridad y privacidad de las redes móviles, como la confidencialidad de la identidad del usuario, la autenticación de la entidad, la privacidad, la integridad de los datos y la identificación del equipo móvil\cite{Referencian7}.
+
+A continuación se describen las ventajas principales de LTE-M:
+
+\begin{itemize}
+\item \textbf{Ahorro de Energía}
+
+LTE-M permite que los dispositivos IoT usen un modo de ahorro de energía, que les permite "ir a dormir" cuando no están en uso. Y tampoco tienen que despertarse para enviar solo la actualización de ubicación, sino que pueden extender los tiempos de suspensión por un período de tiempo más largo. LTE-M también permite que los dispositivos usen recepción discontinua extendida (eDRX). Cuando el dispositivo está fuera del modo suspendido, verifica periódicamente la información del enlace descendente. Con eDRX, se aumenta el tiempo de verificación de la radio, lo que reduce el consumo de energía.
+
+\item \textbf{Cobertura}
+
+
+Las redes LTE-M/Cat-M1/Cat-M2 pueden utilizar la infraestructura 4G LTE existente. Esta es una ventaja significativa, ya que más del 50 por ciento de las conexiones móviles globales se realizan en redes 4G. 
+
+Con una pérdida de acoplamiento máxima (MCL) de 156 decibelios (dB), 14 dB más alta que LTE, las redes LTE-M también ofrecen mayor cobertura y mejor penetración en interiores. La señal puede manejar muchas interferencias de edificios y otras estructuras que obstruyen su camino.
+
+\item \textbf{Velocidad de Transferencia}
+
+
+Comparado con LTE, LTE-M no es particularmente rápido. Pero 1 megabit por segundo para transmisiones de enlace ascendente y descendente es excepcional en comparación con redes más antiguas como 2G y 3G (UMTS) y otras LPWAN. (Es varias veces más rápido que NB-IoT). Y eso es más que suficiente para la mayoría de las aplicaciones de IoT. Es factible para aplicaciones con necesidades de datos pequeñas e incluso casos de uso que involucran transmisión de video.
+
+
+En el contexto de IoT, el alto rendimiento de datos significa que los dispositivos que usan LTE-M pueden recibir fácilmente actualizaciones por aire (OTA), y las transmisiones de datos consumirán menos energía, porque el dispositivo puede volver al modo de ahorro de energía más rápido.
+
+
+\item \textbf{Costo}
+
+Las redes 4G se construyeron principalmente para teléfonos inteligentes. Las redes LTE-M se construyeron principalmente para dispositivos IoT. Como tal, los componentes necesarios para los dispositivos LTE-M son menos complejos y más asequibles que los componentes que necesitaría para un dispositivo 4G tradicional, aunque ambos utilizan la infraestructura 4G LTE.
+
+
+
+
+\end{itemize}
+
+\subsubsection{NB-IoT}
+
+Es un protocolo inalámbrico de Internet de las cosas (IoT) que utiliza tecnología de red de área amplia de baja potencia (LPWAN). Fue desarrollado por 3GPP para comunicación inalámbrica celular que permite una amplia gama de nuevos dispositivos y servicios NB-IoT. NB-IoT es uno de los tres principales estándares 3GPP LPWAN.\\
+
+El estándar de comunicación NB-IoT tiene como objetivo permitir que los dispositivos IoT funcionen a través de redes de operador, ya sea dentro de una onda portadora de comunicación del Sistema Global para Móviles (GSM) existente, en una "banda de protección" no utilizada entre canales LTE o de forma independiente.\\
+
+Uno de los objetivos de NB-IoT es impulsar la extensión de la cobertura más allá de lo que ofrecen las tecnologías celulares existentes. Para ello, NB-IoT ofrece repeticiones de transmisión y diferentes configuraciones de asignación de ancho de banda en la transmisión de enlace ascendente.\\
+
+La tecnología NB-IoT utiliza señales de bajo ancho de banda para comunicarse dentro de las tecnologías GSM y LTE existentes.
+
+Los dispositivos y sensores especialmente diseñados son los componentes básicos de los sistemas NB-IoT. Estos dispositivos recopilan información de su entorno y la transmiten a estaciones base NB-IoT o nodos de transmisión.
+
+Las estaciones base individuales están conectadas a una puerta de enlace de IoT y servidores de aplicaciones en la nube de IoT para el monitoreo centralizado y el análisis de datos.
+
+NB-IoT emplea una nueva capa física con señales y canales para cumplir con los requisitos de cobertura extendida en áreas rurales e interiores profundos, al tiempo que permite una complejidad de dispositivo muy baja. La tecnología subyacente es mucho menos compleja que la de los módulos GSM/GPRS\cite{Referencian8}.\\
+
+A continuación se describen las ventajas más importantes de NB-IoT:
+\begin{itemize}
+
+\item \textbf{ Ahorro de Energía}
+
+NB-IoT no necesita ejecutar un sistema operativo pesado, como Linux, ni hacer mucho procesamiento de señales, lo que lo hace más eficiente en términos de energía en comparación con otras tecnologías celulares.
+
+\item \textbf{Cobertura}
+
+
+NB-IoT puede ayudar a admitir una gran cantidad de dispositivos mediante el establecimiento de redes NB-IoT que pueden conectarse a miles de millones de nodos. Diseñado para cobertura extendida en interiores, la menor complejidad de los dispositivos proporciona conectividad y comunicación de largo alcance.
+
+\item \textbf{Costo}
+
+Debido a que es más fácil crear dispositivos con menor complejidad, el costo de los dispositivos es significativamente bajo, alrededor de 5 dolares por módulo.
+
+\item \textbf{Seguridad}
+
+
+NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones de autenticación basadas en cifrado y SIM.
+
+
+ 
+\end{itemize}
+
+\subsection{Teorema de Shannon-Hartley}
+
 \subsection{Geolocalización}
 La Geolocalización consiste en la identificación de la posición de un dispositivo móvil en 
 el espacio real. El Sistema de Posicionamiento Global GPS es la forma más común y 
 precisa en que se realiza la localización geográfica, y es capaz de ubicar el aparato con 
 una precisión de unos pocos metros.[31]
-\subsection{GPS}
+
 
 
 
@@ -1192,7 +1333,26 @@ V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,
 
 \bibitem{Referencia10} S. Pachouly, N. Bhondve, A. Dalvi, V. Dhande y N. Bhamare. "Driver drowsiness detection using machine learning with visual behaviour". https://ijcrt.org/papers/IJCRT2006408.pdf (accedido el 2 de noviembre de 2022).
 
+\bibitem{Referencian1} Salazar Soler, Jorge,Redes inal{\'a}mbricas, European Virtual Learning Platform for Electrical and Information Engineering, 2016
 
+\bibitem{Referencian2} "Clasificación de redes inalámbricas - Guía Wireless para todos/as". mailxmail. http://www.mailxmail.com/curso-guia-wireless-todos-as/clasificacion-redes-inalambricas
+
+\bibitem{Referencian3} C. López Jurado. "¿Qué es una red WPAN?" https://es.ccm.net/contents/821-wpan-wireless-personal-area-network (accedido el 2 de noviembre de 2022).
+
+\bibitem{Referencian4} J. A. Castillo. "WLAN: Qué es, definición, estándar 802.11 y diferencias con LAN".
+https://www.profesionalreview.com/2020/03/07/wlan-que-es/ (accedido el 2 de noviembre de
+2022).
+
+\bibitem{Referencian5}Tarify.Win! Red WWAN ¿Qué es, para qué sirve y cómo
+funcionan??https://tarify.win/definiciones/red-wwan/
+
+
+\bibitem{Referencian6}La Rosa, A. (2021, 13 julio). LPWAN como base de comunicaciones para IoT. Pandora 
+FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com/blog/es/que-eslpwan/?msclkid=08006fc5cf4611ecbc00aa3b275ed2b5
+
+\bibitem{Referencian7}LTE-M, el despegue esperado para IoT. Hablemos de empresas. https://hablemosdeempresas.com/grandes-empresas/lte-m-despliegue-soluciones-iot/
+
+\bibitem{Referencian8}S{\'a}nchez Rosado, David,NB-IoT tecnolog{\'\i}as celulares narrow-band: an{\'a}lisis pr{\'a}ctico de las soluciones de Telef{\'o}nica y Vodafone,2019
 \end{thebibliography}
 
 \end{document}

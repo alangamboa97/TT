@@ -12,38 +12,36 @@
 \contentsline {subsection}{\numberline {9.2}Redes Neuronales Convolucionales}{23}{subsection.9.2}%
 \contentsline {subsection}{\numberline {9.3}Visi\'on Artificial}{26}{subsection.9.3}%
 \contentsline {subsection}{\numberline {9.4}Boosting}{26}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Red de Telecomunicaciones}{26}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Teorema de Shannon-}{27}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}LPWAN}{27}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}LoRaWAN}{27}{subsection.9.8}%
-\contentsline {subsection}{\numberline {9.9}Sigfox}{27}{subsection.9.9}%
-\contentsline {subsection}{\numberline {9.10}LTE}{27}{subsection.9.10}%
-\contentsline {subsection}{\numberline {9.11}Geolocalizaci\'on}{27}{subsection.9.11}%
-\contentsline {subsection}{\numberline {9.12}GPS}{27}{subsection.9.12}%
-\contentsline {section}{\numberline {10}Estado del Arte}{28}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Implementaci\'on de un sistema web con geolocalizaci\'on para medir la transaccionalidad del portal ABC de la democracia para el consejo nacional electoral (CNE)}{28}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Dise\~no e implementaci\'on de un sistema de geolocalizaci\'on en interiores para plataforma Android v\IeC {\'\i }a la red enterprise WLAN de la PUCP}{28}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Geolocalizaci\'on con LoRa mediante multilateraci\'on}{28}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Propuesta de un sistema de geolocalizaci\'on y monitoreo v\IeC {\'\i }a GPS/GSM/GPRS aplicado a un puls\'ometro para personas con enfermedades cardiovasculares}{29}{subsection.10.4}%
-\contentsline {subsection}{\numberline {10.5}Influencia de un sistema de geolocalizaci\'on en el control y monitoreo de veh\IeC {\'\i }culos con dispositivos GPS en una empresa log\IeC {\'\i }stica}{29}{subsection.10.5}%
-\contentsline {subsection}{\numberline {10.6}Dise\~no de la red de acceso LTE en el distrito de Jes\'us Mar\IeC {\'\i }a}{29}{subsection.10.6}%
-\contentsline {section}{\numberline {11}An\'alisis}{30}{section.11}%
-\contentsline {subsection}{\numberline {11.1}An\'alsis del M\'odulo Central de Procesamiento}{31}{subsection.11.1}%
-\contentsline {subsubsection}{\numberline {11.1.1}An\'alisis del Subm\'odulo de Procesamiento de Im\'agenes}{32}{subsubsection.11.1.1}%
-\contentsline {subsubsection}{\numberline {11.1.2}An\'alsis del Subm\'odulo de Deep Learning}{33}{subsubsection.11.1.2}%
-\contentsline {subsection}{\numberline {11.2}An\'alisis de la Estaci\'on Base}{34}{subsection.11.2}%
-\contentsline {subsubsection}{\numberline {11.2.1}An\'alisis de la Aplicaci\'on Web}{35}{subsubsection.11.2.1}%
-\contentsline {section}{\numberline {12}Dise\~no}{42}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Dise\~no del M\'odulo Central de Procesamiento}{42}{subsection.12.1}%
-\contentsline {subsubsection}{\numberline {12.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{43}{subsubsection.12.1.1}%
-\contentsline {subsubsection}{\numberline {12.1.2}Dise\~no del Subm\'odulo de Procesamiento de Im\'agenes}{48}{subsubsection.12.1.2}%
-\contentsline {subsubsection}{\numberline {12.1.3}Dise\~no del Subm\'odulo de Deep Learning}{50}{subsubsection.12.1.3}%
-\contentsline {subsection}{\numberline {12.2}Dise\~no del M\'odulo de Comunicaciones}{51}{subsection.12.2}%
-\contentsline {subsubsection}{\numberline {12.2.1}Dise\~no del Subm\'odulo de Transmisi\'on de Datos}{52}{subsubsection.12.2.1}%
-\contentsline {subsubsection}{\numberline {12.2.2}Dise\~no del Subm\'odulo de Telemetr\IeC {\'\i }a}{53}{subsubsection.12.2.2}%
-\contentsline {subsubsection}{\numberline {12.2.3}Dise\~no del Subm\'odulo de Cobertura}{54}{subsubsection.12.2.3}%
-\contentsline {subsection}{\numberline {12.3}Dise\~no de la Estaci\'on Base}{55}{subsection.12.3}%
-\contentsline {subsubsection}{\numberline {12.3.1}Dise\~no de la Aplicaci\'on Web}{56}{subsubsection.12.3.1}%
-\contentsline {subsubsection}{\numberline {12.3.2}Dise\~no de la Base de Datos}{57}{subsubsection.12.3.2}%
-\contentsline {section}{\numberline {13}Conclusiones}{58}{section.13}%
-\contentsline {section}{\numberline {14}Referencias}{59}{section.14}%
+\contentsline {subsection}{\numberline {9.5}Est\'andares y Protocolos de Comunicaci\'on Inal\'ambrica}{27}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}LPWAN}{29}{subsection.9.6}%
+\contentsline {subsubsection}{\numberline {9.6.1}LTE-M}{29}{subsubsection.9.6.1}%
+\contentsline {subsubsection}{\numberline {9.6.2}NB-IoT}{30}{subsubsection.9.6.2}%
+\contentsline {subsection}{\numberline {9.7}Teorema de Shannon-Hartley}{32}{subsection.9.7}%
+\contentsline {subsection}{\numberline {9.8}Geolocalizaci\'on}{32}{subsection.9.8}%
+\contentsline {section}{\numberline {10}Estado del Arte}{33}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Implementaci\'on de un sistema web con geolocalizaci\'on para medir la transaccionalidad del portal ABC de la democracia para el consejo nacional electoral (CNE)}{33}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Dise\~no e implementaci\'on de un sistema de geolocalizaci\'on en interiores para plataforma Android v\IeC {\'\i }a la red enterprise WLAN de la PUCP}{33}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Geolocalizaci\'on con LoRa mediante multilateraci\'on}{33}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Propuesta de un sistema de geolocalizaci\'on y monitoreo v\IeC {\'\i }a GPS/GSM/GPRS aplicado a un puls\'ometro para personas con enfermedades cardiovasculares}{34}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Influencia de un sistema de geolocalizaci\'on en el control y monitoreo de veh\IeC {\'\i }culos con dispositivos GPS en una empresa log\IeC {\'\i }stica}{34}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Dise\~no de la red de acceso LTE en el distrito de Jes\'us Mar\IeC {\'\i }a}{34}{subsection.10.6}%
+\contentsline {section}{\numberline {11}An\'alisis}{35}{section.11}%
+\contentsline {subsection}{\numberline {11.1}An\'alsis del M\'odulo Central de Procesamiento}{36}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}An\'alisis del Subm\'odulo de Procesamiento de Im\'agenes}{37}{subsubsection.11.1.1}%
+\contentsline {subsubsection}{\numberline {11.1.2}An\'alsis del Subm\'odulo de Deep Learning}{38}{subsubsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.2}An\'alisis de la Estaci\'on Base}{39}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}An\'alisis de la Aplicaci\'on Web}{40}{subsubsection.11.2.1}%
+\contentsline {section}{\numberline {12}Dise\~no}{47}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Dise\~no del M\'odulo Central de Procesamiento}{47}{subsection.12.1}%
+\contentsline {subsubsection}{\numberline {12.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{48}{subsubsection.12.1.1}%
+\contentsline {subsubsection}{\numberline {12.1.2}Dise\~no del Subm\'odulo de Procesamiento de Im\'agenes}{53}{subsubsection.12.1.2}%
+\contentsline {subsubsection}{\numberline {12.1.3}Dise\~no del Subm\'odulo de Deep Learning}{55}{subsubsection.12.1.3}%
+\contentsline {subsection}{\numberline {12.2}Dise\~no del M\'odulo de Comunicaciones}{56}{subsection.12.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}Dise\~no del Subm\'odulo de Transmisi\'on de Datos}{57}{subsubsection.12.2.1}%
+\contentsline {subsubsection}{\numberline {12.2.2}Dise\~no del Subm\'odulo de Telemetr\IeC {\'\i }a}{58}{subsubsection.12.2.2}%
+\contentsline {subsubsection}{\numberline {12.2.3}Dise\~no del Subm\'odulo de Cobertura}{59}{subsubsection.12.2.3}%
+\contentsline {subsection}{\numberline {12.3}Dise\~no de la Estaci\'on Base}{60}{subsection.12.3}%
+\contentsline {subsubsection}{\numberline {12.3.1}Dise\~no de la Aplicaci\'on Web}{61}{subsubsection.12.3.1}%
+\contentsline {subsubsection}{\numberline {12.3.2}Dise\~no de la Base de Datos}{62}{subsubsection.12.3.2}%
+\contentsline {section}{\numberline {13}Conclusiones}{63}{section.13}%
+\contentsline {section}{\numberline {14}Referencias}{64}{section.14}%
