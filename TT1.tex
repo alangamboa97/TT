@@ -442,6 +442,7 @@ En el contexto de IoT, el alto rendimiento de datos significa que los dispositiv
 
 \end{itemize}
 \end{itemize}
+\subsection{Teorema de Shannon-Hartley}
 
 Un sistema óptimo es el que cuenta con la capacidad de minimizar la probabilidad de error de bit a la salida del sistema, esto depende de las restricciones de la energía transmitida y del ancho de banda del canal\cite{Referencian9}.
 
@@ -1819,13 +1820,33 @@ El modelo de documento para la colección Incidencias, se usará para registrar el
 Cabe señalar que los anteriores modelos muestran el campo Id, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres. Por tanto, se utilizará el id que proporcione Mongo DB en los documentos. \\
 
 
+\item \textbf{Amazon Cognito}
+
+Es una suite de herramientas que ofrece autenticación, autorización y administración de usuarios para aplicaciones móviles o web. Amazon Cognito utiliza dos componentes principales: los grupos de usuarios y grupos de identidades. Los grupos de usuarios se tratan de directorios que proporcionan a los usuarios de las aplicaciones opciones para inscribirse e iniciar sesión. Por otro lado, los grupos de indentidades conceden a los usuarios acceso a otros servicios de \emph{Amazon Web Services}
+
+A continuación se muestra el funcionamiento de Amazon Cognito
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/cognito}
+\captionof{figure}{Documento de registro de Incidencias}
+ \label{fig:DocumentoIncidencias}
+\end{center}
+
+\begin{enumerate}
+\item En primer lugar, el usuario inicia sesión a través de su respectivo grupo de usuarios y recibe \emph{tokens} de grupos de usuario despuées de una autenticación correcta.
+\item Después, la aplicación intercambia dichos tokens del grupo de usuarios por las credenciales de AWS mediante un grupo de identidades.
+\item Finalmente, el usuario puede utilizar estas credenciales de AWS para obtener acceso a otros servicios como Amazon S3.
+\end{enumerate}
+
+Amazon Cognito se encuentra disponible en varias regiones alrededor del mundo. 
+
+
 \item \textbf{Amazon S3 (\emph{Simple Storage Service})}
 
-Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilziado para almacenar datos en la nube de una forma segura, eficienta y escalable.
+Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilizado para almacenar datos en la nube de una forma segura, eficienta y escalable. Este servicio utiliza elementos llamados \emph{buckets}, que se encargan de almacenar objetos. Un objeto es un archivo o cualquier metadato que describa dicho archivo. Para almacenar datos en S3, primero se debe especificar el nombre de un bucket y la región dónde se planea que opere la aplicación. Esto con la intención de que el acceso a los datos se realice de manera eficiente.
 
 
 
-\item \textbf{Amazon Cognito}
 
 \end{itemize}
 
