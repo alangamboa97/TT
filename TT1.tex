@@ -679,12 +679,26 @@ NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones 
 \end{itemize}
 
 \subsection{Teorema de Shannon-Hartley}
+Un sistema óptimo es el que cuenta con la capacidad de minimizar la probabilidad de error de bit a la salida del sistema, esto depende de las restricciones de la energía transmitida y del ancho de banda del canal\cite{Referencian9}.
+
+El teorema de Shannon-Hartley establece la máxima cantidad de información que puede ser transmitida sin error con un ancho de banda específico y que está expuesto a la interferencia de ruido. La ecuación para la capacidad de canal es\cite{Referencian10}:
+
+
+\begin{equation}C= B\cdot log (1+\frac{S}{N}) 
+\end{equation}
+
+Donde C es la capacidad de canal, es decir, la velocidad máxima a 
+la que se puede transmitir la información a lo largo del canal sin error, medida en bits por 
+segundo, B es el ancho de banda en hertz, S es la potencia de la señal útil en watts y N es la potencia de ruido presente en el canal expresada en watts. Al término S/N se le conoce como relación señal a ruido\cite{Referencian11}.
 
 \subsection{Geolocalización}
 La Geolocalización consiste en la identificación de la posición de un dispositivo móvil en 
-el espacio real. El Sistema de Posicionamiento Global GPS es la forma más común y 
+el espacio real. El Sistema de Posicionamiento Global GPS por sus siglas en inglés es la forma más común y 
 precisa en que se realiza la localización geográfica, y es capaz de ubicar el aparato con 
-una precisión de unos pocos metros.[31]
+una precisión de unos pocos metros.
+El GPS es una red satelital que cuenta con al menos 30 satélites y que se mantienen en órbita alrededor de la tierra. Si bien el sistema en sus inicios tenía un propósito militar, en la actualidad cualquier persona puede ocuparlo\cite{Referencian12}.
+\subsubsection{Funcionamiento}
+Cuando se solicita el posicionamiento por medio del GPS este envía señales de radio que permiten localizar a los satélites, el centro de comando transmite la información de la órbita, el tiempo y la posición de los otros satélites en el mismo sistema GPS. Estos satélites envían simultáneamente la información de tiempo y órbita a la tierra y finaliza cuando el dispositivo GPS utiliza la información recibida para determinar su localización la cual se interpreta mayormente en dos conjuntos: la latitud y longitud\cite{Referencian13}.
 
 
 
@@ -1333,26 +1347,36 @@ V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,
 
 \bibitem{Referencia10} S. Pachouly, N. Bhondve, A. Dalvi, V. Dhande y N. Bhamare. "Driver drowsiness detection using machine learning with visual behaviour". https://ijcrt.org/papers/IJCRT2006408.pdf (accedido el 2 de noviembre de 2022).
 
-\bibitem{Referencian1} Salazar Soler, Jorge,Redes inal{\'a}mbricas, European Virtual Learning Platform for Electrical and Information Engineering, 2016
+\bibitem{Referencian1} Salazar Soler, Jorge,\emph{Redes inal{\'a}mbricas, European Virtual Learning Platform for Electrical and Information Engineering}, 2016
 
-\bibitem{Referencian2} "Clasificación de redes inalámbricas - Guía Wireless para todos/as". mailxmail. http://www.mailxmail.com/curso-guia-wireless-todos-as/clasificacion-redes-inalambricas
+\bibitem{Referencian2} \emph{Clasificación de redes inalámbricas - Guía Wireless para todos/as.} mailxmail. http://www.mailxmail.com/curso-guia-wireless-todos-as/clasificacion-redes-inalambricas
 
-\bibitem{Referencian3} C. López Jurado. "¿Qué es una red WPAN?" https://es.ccm.net/contents/821-wpan-wireless-personal-area-network (accedido el 2 de noviembre de 2022).
+\bibitem{Referencian3} C. López Jurado. \emph{¿Qué es una red WPAN?} https://es.ccm.net/contents/821-wpan-wireless-personal-area-network (accedido el 2 de noviembre de 2022).
 
-\bibitem{Referencian4} J. A. Castillo. "WLAN: Qué es, definición, estándar 802.11 y diferencias con LAN".
+\bibitem{Referencian4} J. A. Castillo. \emph{WLAN: Qué es, definición, estándar 802.11 y diferencias con LAN.}
 https://www.profesionalreview.com/2020/03/07/wlan-que-es/ (accedido el 2 de noviembre de
 2022).
 
-\bibitem{Referencian5}Tarify.Win! Red WWAN ¿Qué es, para qué sirve y cómo
-funcionan??https://tarify.win/definiciones/red-wwan/
+\bibitem{Referencian5}Tarify.Win!\emph {Red WWAN ¿Qué es, para qué sirve y cómo
+funcionan?}https://tarify.win/definiciones/red-wwan/
 
 
-\bibitem{Referencian6}La Rosa, A. (2021, 13 julio). LPWAN como base de comunicaciones para IoT. Pandora 
+\bibitem{Referencian6}La Rosa, A. (2021, 13 julio). \emph{LPWAN como base de comunicaciones para IoT} Pandora 
 FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com/blog/es/que-eslpwan/?msclkid=08006fc5cf4611ecbc00aa3b275ed2b5
 
-\bibitem{Referencian7}LTE-M, el despegue esperado para IoT. Hablemos de empresas. https://hablemosdeempresas.com/grandes-empresas/lte-m-despliegue-soluciones-iot/
+\bibitem{Referencian7}\emph{LTE-M, el despegue esperado para IoT. Hablemos de empresas.} https://hablemosdeempresas.com/grandes-empresas/lte-m-despliegue-soluciones-iot/
 
-\bibitem{Referencian8}S{\'a}nchez Rosado, David,NB-IoT tecnolog{\'\i}as celulares narrow-band: an{\'a}lisis pr{\'a}ctico de las soluciones de Telef{\'o}nica y Vodafone,2019
+\bibitem{Referencian8}S{\'a}nchez Rosado, David,\emph{NB-IoT tecnolog{\'\i}as celulares narrow-band: an{\'a}lisis pr{\'a}ctico de las soluciones de Telef{\'o}nica y Vodafone},2019
+
+\bibitem{Referencian9}\emph{Ley de Hartley ? Shannon.} INGENIERIA DE TELECOMUNICACIONES. https://aiturrih.com/sistema-de-comunicaciones/ley-de-hartley-shannon/ 
+
+\bibitem{Referencian10}\emph{Teorema de Shannon-Hartley - Informes - vizard00.} ClubEnsayos.com - 3.142.000+ Ensayos, monografías y trabajos de Investigación. https://www.clubensayos.com/Tecnología/Teorema-de-Shannon-Hartley/1132021.html 
+
+\bibitem{Referencian11}Fallas-Vega, Juan Pablo. \emph{Enlace de comunicación para aplicaciones con vehículos aéreos no tripulados.} 2016.
+
+\bibitem{Referencian12}\emph{¿Qué precisión tiene el sistema GPS? / Pretexsa.com.} Pretexsa.com. http://www.pretexsa.com/
+
+\bibitem{Referencian13}\emph{¿Cómo funciona el GPS? | UbiTec GPS Solutions México.} UbiTec MX. https://ubitec.mx/como-funciona-el-gps/
 \end{thebibliography}
 
 \end{document}
