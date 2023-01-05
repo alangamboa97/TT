@@ -679,6 +679,7 @@ NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones 
 \end{itemize}
 
 \subsection{Teorema de Shannon-Hartley}
+\label{tsh}
 Un sistema óptimo es el que cuenta con la capacidad de minimizar la probabilidad de error de bit a la salida del sistema, esto depende de las restricciones de la energía transmitida y del ancho de banda del canal\cite{Referencian9}.
 
 El teorema de Shannon-Hartley establece la máxima cantidad de información que puede ser transmitida sin error con un ancho de banda específico y que está expuesto a la interferencia de ruido. La ecuación para la capacidad de canal es\cite{Referencian10}:
@@ -808,7 +809,146 @@ Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular
 \newpage
 \subsubsection{Análisis de la Aplicación Web}
 
+\section{Análisis del Módulo de Comunicaciones}
 
+Los sistemas automatizados de comunicación, mayormente inalámbricos, se encargan de recopilar datos remotos y transmitir la información.
+La tecnología previamente elegida para la implementación de este módulo es la red 4G/LTE, su estándar es establecido por el 3GPP (Proyecto de asociación de tercera generación) donde establece sus especificaciones en la versión 8 de sus estándares, el cual clasifica hasta 13 categorías LTE\cite{Referencian14}. En estas categorías se especifica la velocidad máxima de carga y descarga, siendo la categoría 0 la velocidad más baja.
+En la Tabla \ref{tab:CLTE} se observan las categorías LTE que existen junto con su velocidad máxima de bajada y subida,de la categoría 0 a la 5 se definen para equipos de usuarios, es decir, telefonía celular. 
+Las antenas de la red 4G pueden conectarse a la red LTE-M que forma parte de la tecnología LPWAN sin necesidad de una puerta de enlace y con una velocidad de hasta 5Mbps. 
+
+\begin{table}[H]
+	\begin{center}
+	\caption{\label{tab:CLTE} Categorías LTE}
+\begin{tabular}{| c | c | c |}
+\hline
+
+Categoría & Velocidad Máxima de Bajada(Mbps)& Velocidad Máxima de Subida (Mpbs \\ \hline
+0 &  1 &  1   \\ \hline
+1 &  10 &  5  \\ \hline
+2 &  50 &  25   \\ \hline
+3 & 100 &  50  \\ \hline
+4 & 150 &  50  \\ \hline
+5 & 300 &  75   \\ \hline
+6 &  300 &  50  \\ \hline
+7 &  300 &  150 \\ \hline
+8 & 1200 & 600   \\ \hline
+9 &  450 &  50  \\ \hline
+10 &  450 &  100  \\ \hline
+11 &  600 &  50 \\ \hline
+12 &  600 &  100  \\ \hline
+13 & 390 &  150  \\ \hline
+
+\end{tabular}
+
+\end{center}
+\end{table}
+
+Para este sistema, el análisis debe cumplir con los parámetros que dicta el teorema de Shannon-Hartley (véase la sección \ref{tsh}) que establece que, dado un canal con ruido con una capacidad $C$ e información transmitida en una tasa $R$ entonces si $R<C$ existe una técnica de codificación que permite que la probabilidad de error en el $Rx$ se reduzca. Se debe cumplir que la tasa de bits debe ser siempre menor a la capacidad del canal.
+
+Este análisis se divide en:
+\begin{itemize}
+\item Telemetría:\\ El módulo de telemetría es el encargado de recopilar, procesar y transmitir las coordenadas de la ubicación geográfica del conductor a la estación base que se encarga de monitorear los datos obtenidos.
+
+\item Datos:\\ El encargado de recopilar, procesar y transmitir los fotogramas que el sistema identifica como somnolencia en el conductor, así como un mensaje informativo.
+
+\item Telemetría:\\ Encargado de revisar la cobertura de la zona o regiones presentes en el alcance del sistema.
+\end{itemize}
+
+\subsection{Análisis de Telemetría }
+El objetivo que tiene el módulo de telemetría es mandar el posicionamiento mediante coordenadas (latitud y longitud) del vehículo en movimiento en tiempo real. Las coordenadas serán mandadas en forma de cadena de texto, teniendo un aproximado de hasta 300 bits, otro punto a considerar es el periodo de tiempo entre el envío de cada posición, al tratarse de un vehículo en movimiento y la velocidad máxima siendo regida por Semovi (Secretaría de movilidad de la ciudad de México) que dicta una velocidad promedio de entre 50-80 km/h\cite{Referencian15}.
+
+Se propone una velocidad de 60 km/h:
+
+\begin{equation*}
+60 \frac{km}{h} \cdot \frac{1000m}{1km}\cdot \frac{1h}{60min} \cdot \frac{1min}{60s}= 16.6 \frac{m}{s}\approx1 7\frac{m}{s}
+\end{equation*}
+
+
+El automóvil se desplaza aproximadamente 17 metros en 1 segundo por lo que al realizar el envío en periodos de 10 segundos, se  garantiza el trazado de la ruta en el mapa. Teniendo 170 metros recorridos cada 10 segundos del viaje.
+Verificando que se cumpla el Teorema de Shannon-Hartley  tenemos:
+\begin{equation*}
+300 bits \cdot 10 s=3kbps
+\end{equation*} 
+y la máxima tasa de datos que el transceptor tiene es de 5 Mbps.
+
+Cumpliéndose la relación establecida de $R<C$.
+\begin{equation*}
+3kbps<5 Mbps
+\end{equation*}
+
+\subsection{Análisis de Datos }
+El objetivo que tiene el análisis de los datos es mandar fotogramas a la estación base para su futura gestión y validación, así como el almacenamiento de estos; de igual manera se pretende el envío de mensajes informativos para la estación base.
+Anteriormente se establecen las especificaciones que debe tener el material multimedia a utilizar, las características que debe tener el clip grabado es una profundidad de bits de mínimo 8  y una resolución de mínimo 960 x 540 píxeles comúnmente conocido como QHD o \emph{Quarter of High Definition} por sus siglas en inglés, que es lo mínimo necesario que requiere el sistema, todo esto en una secuencia de 30fps.
+Tenemos que:
+
+\begin{equation*}
+960 \; x \; 540 \; x \; 8=4,147,200 \; bits
+\end{equation*}
+
+Cada imagen tiene 4,147,200 bits entonces en 1 segundo se transmiten:
+\begin{equation*}
+4,147,200 \; x \; 30 fps=124.41 \; Mbps
+\end{equation*}
+Que rebasa la capacidad de canal de red establecida, por lo que se implementa el uso de un compresor de video MP4 que tiene una relación de compresión de 16:1 \cite{Referencian16} para así modificar la resolución en la que se almacena el video en la estación base, por otro lado, se envían al menos 2 fotogramas por segundo para no sobrepasar la capacidad de canal.   
+Tenemos que:
+
+\begin{equation*}
+640 \; x \; 480 \; x \; 8=2,457,600 \; bits
+\end{equation*}
+Cada imagen tiene 2,457,600 bits entonces en 1 segundo se transmiten:
+\begin{equation*}
+2,457,600 \; x \; 2 fps=4.91 \; Mbps
+\end{equation*}
+Cumpliéndose nuevamente la relación establecida $R < C$.
+\begin{equation*}
+4.91 Mbps<5 Mbps
+\end{equation*}
+Más 3 kbps de la tasa de bits a utilizar del texto informativo.
+
+\subsection{Análisis de Cobertura}
+
+La red de telefonía celular funciona mediante celdas (véase la Figura \ref{fig:handover}), estas celdas tienen el objetivo de mantener conectados a los dispositivos en las diferentes áreas de cobertura y cada una de ellas contiene una estación base o antena. El \emph{handover}  o \emph{handoff} es el proceso de transferir el servicio de una celda a otra\cite{Referencian17} y se tiene la siguiente métrica:
+\begin{itemize}
+\item Se considera un \emph{handoff} fuerte cuando al ir cambiando de celdas  se presente algún problema en la velocidad de la red logrando así la pérdida de la misma.
+\item Se considera un \emph{handoff} suave cuando al ir cambiando de celdas no se presente algún problema de la red o este sea mínimo.
+\end{itemize}
+Ya sea cuando se pierde la calidad en una de ellas o cuando el dispositivo se va trasladando.Este mecanismo tiene por objetivo el garantizar la correcta realización del servicio en las condiciones mencionadas anteriormente. 
+Para el análisis de cobertura de la red LTE se tiene en cuenta el sistema \emph{handoff} porque el dispositivo se va trasladando entre distintas celdas.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/handover}
+\captionof{figure}{Esquema \emph{handover} entre dos celdas }
+ \label{fig:handover}
+\end{center}
+
+La cobertura de LTE por Telcel es la más amplia del país \cite{Referencian18}, su mayor cobertura está concentrada en la Ciudad de México, por lo que existe una buena recepción, aunque en ocasiones debido a la saturación de la red o al transferir el servicio de la antena de una estación base a otra se puede encontrar alguna intermitencia o retraso, en estos casos el módulo va a pasar a modo de espera para enviar la información una vez se restablezca la red.
+
+\begin{center}
+  \includegraphics[scale=1.3]{imagenes/mapaLTE}
+\captionof{figure}{Mapa de cobertura de la red LTE }
+ \label{fig:mapaLTE}
+\end{center}
+
+En el mapa de cobertura la zona verde hace referencia a zonas con cobertura garantizada y la zona amarilla cobertura no garantizada, en caso de realizar pruebas en las zonas amarillas del mapa se va a notar un cambio en la velocidad del dispositivo móvil ya sea para la transferencia de archivos o la conectividad a la red
+ocasionando un \emph{handoff fuerte}; por el otro lado, al estar realizando pruebas en la zona verde del mapa su \emph{handoff} será más suave.
+
+\textbf{Alcances:}
+\begin{itemize}
+\item Envío de las coordenadas y mensaje informativo del posicionamiento del vehículo a la estación base.
+\item Envío del fotograma y mensaje informativo del vehículo a la estación base.
+\item Compresión a MP4 para la transmisión y almacenamiento del fotograma.
+\item Recepción del estatus del envío de la información transmitida.
+\end{itemize}
+
+\textbf{Restricciones:}
+\begin{itemize}
+\item La velocidad de transmisión es de hasta 5Mbps.
+\item El envío de las coordenadas en periodos de 10 segundos.
+\item El envío de fotogramas a la estación base se mantiene limitado a 2 fps.
+\item El envío de la cadena de texto se mantiene limitada a 300 bits.
+\item El sistema de comunicación transmite la información solamente en zonas que cuenten con cobertura garantizada.
+\end{itemize}
+\newpage
 \begin{table}[H]
 \centering
 \begin{tabular}{|ll|}
@@ -1086,10 +1226,6 @@ El sistema enviará un mensaje de alerta al administrador indicando que Unidad pr
 
 \newpage
 \section{Diseño}
-\subsection{Diseño del Módulo Central de Procesamiento}
-
-
-
 \newpage
 \subsubsection{Diseño de la Unidad Contenedora de Procesamiento}
 
@@ -1261,7 +1397,19 @@ MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-
 
 \newpage
 \subsection{Diseño del Módulo de Comunicaciones}
+Para el diseño de este módulo se tiene contemplado ejecutar dos procesos asíncronos, es decir, que se ejecutan al mismo tiempo o de manera paralela.
 
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/DF-modCom}
+\captionof{figure}{Diagrama de Flujo del Módulo de Comunicaciones}
+ \label{fig:DF-modCom}
+\end{center}
+
+\begin{figure}
+  \includegraphics[scale=0.65]{imagenes/DG-modCom}
+\captionof{figure}{Diagrama de Flujo de Trabajo del Módulo de Comunicaciones}
+ \label{fig:DG-modCom}
+\end{figure}
 \newpage
 \subsubsection{Diseño del Submódulo de Transmisión de Datos}
 
@@ -1377,6 +1525,16 @@ FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com
 \bibitem{Referencian12}\emph{¿Qué precisión tiene el sistema GPS? / Pretexsa.com.} Pretexsa.com. http://www.pretexsa.com/
 
 \bibitem{Referencian13}\emph{¿Cómo funciona el GPS? | UbiTec GPS Solutions México.} UbiTec MX. https://ubitec.mx/como-funciona-el-gps/
+
+\bibitem{Referencian14} M. Cid. \emph{Categorías LTE o 4G: qué son y qué velocidades máximas ofrece cada una de ellas.} Xataka Móvil - Teléfonos móviles, tarifas, operadores de telefonía. https://www.xatakamovil.com/conectividad/categorias-lte-o-4g-que-son-y-que-velocidades-maximas-ofrece-cada-una-de-ellas
+
+\bibitem{Referencian15}\emph{¡No aceleres! Estos son los nuevos límites de velocidad 2022 en México.} ADNPolítico. https://politica.expansion.mx/mexico/2022/05/19/estos-son-nuevos-limites-velocidad-2022 
+
+\bibitem{Referencian16}\emph{MP4 - EcuRed.} EcuRed. https://www.ecured.cu/MP4\#:~:text=Un\%20archivo\%20de\%20MP4\%20lleva\%20sonido\%20y\%20video,de\%2020\%20segundos\%20de\%20clips\%20de\%20audio\%20(MP4/20s).
+
+\bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
+
+\bibitem{Referencian18}\emph{¿Dónde hay cobertura Telcel 4G, 4.5G Y 5G? Consulta los mapas.} Internetencasa. https://internetencasa.mx/cobertura/telcel\#:~:text=La\%20red\%20Telcel\%20es\%20una\%20de\%20las\%20más,contarás\%20con\%20cobertura\%20en\%20más\%20de\%20180\%20países.
 \end{thebibliography}
 
 \end{document}
