@@ -1469,7 +1469,7 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Iniciar Sesión}                                             \\ \hline
-\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD, Amazon Cognito}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El administrador ingresará los datos correspondientes para iniciar sesión en la aplicación web. \\ \\ \textbf{Precondiciones:}
 \\
 \quad $\bullet$ El administrador deberá contar sus credenciales registradas en Amazon Cognito
@@ -1512,12 +1512,17 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Modificar Usuario}                                             \\ \hline
 \multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El usuario Administrador podrá modificar los datos de los conductores previamente registrados. \\ \\ \textbf{Precondiciones:}
 \\
-\quad $\bullet$ Amazon Cognito 
+\quad $\bullet$ Contar con credenciales de Administrador \\
+\quad $\bullet$ Que exista una entrada del conductor a modificar
 \end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
-El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ Nombre\\
+\quad $\bullet$ Apellido\\
+\quad $\bullet$ Edad
+ 
+  \end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1530,12 +1535,15 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Eliminar Usuario}                                             \\ \hline
 \multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El usuario administrador podrá dar de baja a un conductor \\ \\ \textbf{Precondiciones:}
 \\
-\quad $\bullet$ Amazon Cognito 
+\quad $\bullet$ Contar con credenciales de Administrador \\
+\quad $\bullet$ Que exista una entrada del conductor a eliminar
 \end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
-El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ ID del conductor\\
+
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1549,12 +1557,14 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Confirmar Incidencia}                                             \\ \hline
 \multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El administrador podrá confirmar las incidencias \\ \\ \textbf{Precondiciones:}
 \\
-\quad $\bullet$ Amazon Cognito 
+\quad $\bullet$ Contar con credenciales de Administrador \\
+\quad $\bullet$ Haber inciado sesión previamente \\
 \end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
-El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ Correo \\
+\quad $\bullet$ Contraseña\\\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1566,12 +1576,13 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Visualizar Incidencia}                                             \\ \hline
 \multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El administrador podrá reproducir un video dónde se muestre el momento en que ocurrió la incidencia \\ \\ \textbf{Precondiciones:}
 \\
-\quad $\bullet$ Amazon Cognito 
+\quad $\bullet$ Contar con credenciales de administrador
+\quad $\bullet$ Haber seleccionado una incidencia
 \end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
-El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas}\\
+\quad $\bullet$ ID incidencia\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1579,37 +1590,41 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 
 \begin{table}[h]
 \centering
-\caption{Caso de Uso 08 }
-
+\caption{Caso de Uso 07 - Recuperar Contraseña}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Recuperar Contraseña}                                             \\ \hline
 \multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El administrador podrá recuperar contraseña en caso de olvidarla \\ \\ \textbf{Precondiciones:}
 \\
-\quad $\bullet$ Amazon Cognito 
+\quad $\bullet$ Contar con credenciales de administrador
+
 \end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
-El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas}\\
+\quad $\bullet$ Email\\
+\quad $\bullet$ Nueva Contraseña
+
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
 
 
-
 \begin{table}[h]
 \centering
-\caption{Caso de Uso 09 }
+\caption{Caso de Uso 08 - Visualizar Ubicación en Tiempo Real }
 \begin{tabular}{|ll|}
 \hline
-\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Mostrar Ubicación en Tiempo Real}                                             \\ \hline
-\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador Módulo de Comunicaciones}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Visualizar Ubicación en Tiempo Real}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, Módulo de Comunicaciones}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El administrador podrá visualizar la ubicación en tiempo real de los conductores registrados \\ \\ \textbf{Precondiciones:}
 \\
-\quad $\bullet$ Amazon Cognito 
+\quad $\bullet$ Contar con credenciales de Administrador\\
+\quad $\bullet$ Haber iniciado sesión previamente
 \end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
-El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ ID del conductor
+  \end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
