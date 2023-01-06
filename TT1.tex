@@ -2587,29 +2587,6 @@ En la Figura \ref{fig:location} se muestra la página web dónde el Administrador 
 \subsubsection{Diseño de la Base de Datos}
 
 
-\textbf{Elección del manejador de Base de Datos}
-
-
-\begin{itemize}
-
-\item \textbf{MongoDB}
-
-Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  \\
-
-Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación web será desarrollada utilizando como base el lenguaje JavaScript y el framework Node.js para realizar el \emph{backend} de la aplicación. Por lo cual MongoDB, se integrerá de manera funcional en  el desarrollo del proyecto. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación. Otra característica importante es que es una base de datos multiplataforma, esto nos permitirá registrar información desde el sistema operativo Linux, que se ocupará en la Raspberry Pi y por otro lado se ocupará Windows en la aplicación web para la inserción, modificación, lectura y eliminación de los datos en la base de datos.\cite{mongo}
-
-MongoDB utiliza "documentos" para registrar los datos, estos documentos son almacenados dentro de las colecciones, las cuales, en una base de datos relacional se asemeja a una tabla. Las bases de datos en MongoDB están conformadas por una o más colecciones de documentos.  
-
-MongoDB almacena registros de datos como documentos BSON. BSON es una representación binaria de documentos JSON , aunque contiene más tipos de datos que JSON.   
-
-Un registro en MongoDB es un documento, que es una estructura de datos compuesta por pares de campo y valor. Los documentos MongoDB son similares a los objetos JSON. Los valores de los campos pueden incluir otros documentos, matrices y matrices de documentos. 
-
-\begin{center}
-  \includegraphics[scale=.7]{imagenes/EstructuraDocumentoMongoDB}
-\captionof{figure}{Estructura de un Documento en MongoDB}
- \label{fig:EstructuraDocumentoMongoDB}
-\end{center}
-
 Basado en la estructura NOSQL de MongoDB, se propone el siguiente modelo para la base de datos, la cual contará con dos colecciones: Conductores e Incidencias. Cabe mencionar que en dicho modelo no se contempla a los administradores, debido a que se utilizará el sistema de Amazon Cognito, que ofrece herramientas de autenticación, registro, verificación e inicio de sesión para el usuario. 
 
 \begin{center}
@@ -2638,7 +2615,7 @@ El modelo de documento para la colección Incidencias, se usará para registrar el
 Cabe señalar que los anteriores modelos muestran el campo Id, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres. Por tanto, se utilizará el id que proporcione Mongo DB en los documentos. \\
 
 
-\item \textbf{Amazon Cognito}
+\textbf{Amazon Cognito}
 
 Es una suite de herramientas que ofrece autenticación, autorización y administración de usuarios para aplicaciones móviles o web. Amazon Cognito utiliza dos componentes principales: los grupos de usuarios y grupos de identidades. Los grupos de usuarios se tratan de directorios que proporcionan a los usuarios de las aplicaciones opciones para inscribirse e iniciar sesión. Por otro lado, los grupos de indentidades conceden a los usuarios acceso a otros servicios de \emph{Amazon Web Services}
 
@@ -2658,15 +2635,14 @@ A continuación se muestra el funcionamiento de Amazon Cognito
 
 Amazon Cognito se encuentra disponible en varias regiones alrededor del mundo. 
 
-
-\item \textbf{Amazon S3 (\emph{Simple Storage Service})}
+\textbf{Amazon S3 (\emph{Simple Storage Service})}
 
 Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilizado para almacenar datos en la nube de una forma segura, eficienta y escalable. Este servicio utiliza elementos llamados \emph{buckets}, que se encargan de almacenar objetos. Un objeto es un archivo o cualquier metadato que describa dicho archivo. Para almacenar datos en S3, primero se debe especificar el nombre de un bucket y la región dónde se planea que opere la aplicación. Esto con la intención de que el acceso a los datos se realice de manera eficiente.
 
 
 
 
-\end{itemize}
+
 
 
 
