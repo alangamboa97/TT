@@ -98,37 +98,49 @@ Dr. Rodolfo Vera Amaro\\
 
 El presente documento detalla el proceso de diseño del proyecto titulado "Sistema para el monitoreo, detección y alerta de somnolencia del conductor mediante visión artificial, comunicación inalámbrica y geolocalización" como Proyecto Terminal, dirigido a conductores de la ciudad de México. Dicho sistema hará uso de técnicas de visión artificial, tales como las funciones Haar para la detección de rostro, ojos y boca del conductor a partir de la entrada de video en tiempo real, así como la propuesta del uso de una red neuronal convolucional entrenada para poder detectar el estado de los ojos. El sistema utilizará puntos de referencia faciales para marcar la posición de la boca y posteriormente se obtendrá la relación de apertura de la boca, con el fin de detectar si se trata de un bostezo. Si el sistema detecta somnolencia, se activará una alarma con intención de alertar al conductor, a su vez, se realizará un reporte de incidencia el cual será enviado a una base de datos. El sistema utilizará una Raspberry Pi para su funcionamiento de manera portátil. Como parte del sistema se analizó y diseñó un sistema de administración que permitirá al usuario verificar y visualizar la información de los reportes de incidencia y la información de cada conductor. Para el cual se diseñó una aplicación web que le permita al usuario acceder a la información y adicionalmente monitorear la ubicación en tiempo real del conductor.  
 
-
-
 \newpage
 \section{Introducción}
 
-De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018, publicado por la Organización Mundial de la Salud (OMS), el número anual de muertes por accidentes de tránsito llego a los 1,35 millones. Sin embargo, las consecuencias de estos accidentes no solamente afectan al conductor y a los pasajeros del vehículo, sino que también involucran a los peatones, ciclistas y motociclistas, en particular aquellos que residen en países en desarrollo. [X]\\
-La somnolencia al conducir es reconocida como un factor que puede contribuir a los percances viales. De acuerdo a datos de CONAPRA, en México cada año mueren en promedio 16,500 mexicanos por percances de este tipo. Con base en estimaciones hechas por el Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que representan el 1.7 % del Producto Interno Bruto (PIB), sumando costos directos e indirectos [X].\\
-El estado de somnolencia es una de las principales causas de los accidentes de tránsito, la cual tiene consecuencias, no solo para los conductores, sino que también para los pasajeros y personas que circulan en la vía pública. La somnolencia, al momento de conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de alerta y conciencia por parte del conductor. Esta situación se convierte en un detonador de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de riesgo y por tanto evitar el peligro. [X]
-El estado de somnolencia y fatiga del conductor puede ir desde cansancio y agotamiento muscular, lentitud de respuesta, letargo, así como la pérdida de atención y concentración. Todos estos factores pueden ocasionar que, en cualquier momento, el conductor se quede dormido al momento de conducir. 
-En el desarrollo logístico de empresas que se encargan de transportar a pasajeros o que se encargan de repartir paquetería, los datos pueden verse de forma más alarmante o preocupante, ya que, usualmente, las personas designadas como conductores se enfrentan a largas horas de jornada sin descanso y en muchos casos, rotan por horarios que pueden ser en el día o en la noche, aumentando el riesgo de accidentarse por el desbalance de tener un horario mixto.
-Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente. [4]\\
-El rastreo satelital de vehículos funge como una de las principales opciones de sistemas capaces de indicar la ubicación de los vehículos en cuestión, sin embargo, el costo es elevado y periódico.\\
-De ahí partimos para que, utilizando una comunicación inalámbrica; podamos implementar un sistema GPS que esté a la vanguardia de las más recientes tecnologías como lo es el IoT (Internet de las cosas) [5], entre otros que serán discutidos más adelante; y así, poder rastrear y monitorear el viaje. Ofrecen amplia cobertura, un bajo costo y utilización de frecuencias libres o no licenciadas. [6]
-Tomando en cuenta el contexto antes planteado, se analiza y diseña en el presente documento un sistema que alerte a un conductor con somnolencia, mediante el uso de una cámara digital y un módulo de procesamiento con visión artificial, que permita detectar síntomas de somnolencia. El sistema en movimiento será monitoreado por medio de un subsistema de geolocalización en tiempo real, permitiendo el registro y monitoreo del conductor. Este sistema prototipo principalmente es dirigido hacia conductores transportistas del sector privado dentro de la Ciudad de México.
+De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018, publicado por la Organización Mundial de la Salud (OMS), el número anual de muertes por accidentes de tránsito llego a los 1,35 millones. Sin embargo, las consecuencias de estos accidentes no solamente afectan al conductor y a los pasajeros del vehículo, sino que también involucran a los peatones, ciclistas y motociclistas, en particular aquellos que residen en países en desarrollo. [1] 
 
+La somnolencia al conducir es reconocida como un factor que puede contribuir a los percances viales. De acuerdo a datos de CONAPRA, en México cada año mueren en promedio 16,500 mexicanos por percances de este tipo. Con base en estimaciones hechas por el Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que representan el 1.7 \% del Producto Interno Bruto (PIB), sumando costos directos e indirectos [2].  
+
+La somnolencia, al momento de conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de alerta y conciencia por parte del conductor. Esta situación se convierte en un detonador de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de riesgo y por tanto evitar el peligro. [2] 
+
+En el desarrollo logístico de empresas que se encargan de transportar a pasajeros o que se encargan de repartir paquetería, los datos pueden verse de forma más alarmante o preocupante, ya que, usualmente, las personas designadas como conductores se enfrentan a largas horas de jornada sin descanso y en muchos casos, rotan por horarios que pueden ser en el día o en la noche, aumentando el riesgo de accidentarse por el desbalance de tener un horario mixto. 
+
+Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente. [3] 
+
+El rastreo satelital de vehículos funge como una de las principales opciones de sistemas capaces de indicar la ubicación de los vehículos en cuestión, sin embargo, el costo es elevado y periódico. 
+
+Tomando en cuenta el contexto antes planteado, se analizará y diseñará en el presente documento un sistema que alerte a un conductor con somnolencia, mediante el uso de una cámara digital y algoritmos de visión artificial, además de incluir un sistema de administración que permita la geolocalización del sistema en tiempo real, así como la gestión de conductores y reportes de incidencias. 
+  
 
 \newpage
 \section{Planteamiento del problema}
 
-La somnolencia es un fenómeno complejo de analizar debido a los factores que pueden intervenir. Algunas de las características más notorias de un estado de somnolencia, se pueden apreciar principalmente en el rostro de las personas: frecuencia de parpadeo, bostezos, movimientos faciales y cabeceos, los cuales son parámetros claves para determinar si una persona está en estado de somnolencia o vigilia. [1]\\ 
-Gracias a los avances tecnológicos en los últimos años, se han comenzado a desarrollar técnicas de visión artificial y aprendizaje automático que permiten detectar patrones de manera más eficiente. En el área del hardware, se han desarrollado microordenadores capaces de realizar tareas que requieran un nivel moderado de computación de una manera eficaz. Finalmente, en el área de telecomunicaciones, tecnologías como el 4G y avances en el área de \emph{Internet of Things} han permitido mayores velocidades de transmisión de datos, así como mayor cobertura dentro del territorio nacional.\\
-Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores. Donde se han realizado diversos estudios y soluciones que intentan dar respuesta al problema de monitoreo de la somnolencia.
-Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, conductor y carretera repercuten en la eficacia del sistema.[7]\\
-Existen también sistemas que analizan el comportamiento del vehículo y su entorno. Estos sistemas cuentan con cámaras frente al vehículo, donde se digitaliza el entorno del vehículo; posteriormente se analizan parámetros como la reacción del conductor frente a la dirección de su vehículo con respecto a la carretera, velocidad, comportamiento del vehículo frente a baches en la carretera y distancia con respecto al vehículo que esta adelante. Si se detecta un comportamiento anormal en los parámetros anteriormente mencionados, se procede a realizar las alertas necesarias para advertir al conductor. No obstante, estos sistemas suelen ser costosos y no toman en cuenta el estado del conductor. 
-Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG). [7] \\
-Cabe mencionar que, entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede llegar a entorpecer el desempeño del conductor. [7]
-Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. [7] Cabe mencionar que se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficacia en el sistema.  
+La somnolencia es un fenómeno complejo de analizar debido a los factores que pueden intervenir. Algunas de las características más notorias de un estado de somnolencia, se pueden apreciar principalmente en el rostro de las personas: frecuencia de parpadeo, bostezos, movimientos faciales y cabeceos, los cuales son parámetros claves para determinar si una persona está en estado de somnolencia o vigilia.  
 
-Actualmente existen varias opciones para la geolocalización de vehículos en tiempo real, pero con costos elevados, como lo es el rastreo satelital que se tiene que pagar el servicio con una suscripción anual o mensual. 
-Dadas las posibles soluciones y escenarios antes mencionados se plantea la siguiente pregunta: ¿Cómo desarrollar un sistema portátil eficiente que pueda detectar la somnolencia y que al mismo tiempo permita monitorear al usuario en tiempo real?
+Gracias a los avances tecnológicos en los últimos años, se han comenzado a desarrollar técnicas de visión artificial y aprendizaje automático que permiten detectar patrones de manera más eficiente. En el área del hardware, se han desarrollado microordenadores capaces de realizar tareas que requieran un nivel moderado de computación de una manera eficaz. Finalmente, en el área de telecomunicaciones, tecnologías como el 4G y avances en el área de \emph{Internet of Things} han permitido mayores velocidades de transmisión de datos, así como mayor cobertura dentro del territorio nacional. 
 
+Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores. Donde se han realizado diversos estudios y soluciones que intentan dar respuesta al problema de monitoreo de la somnolencia. 
+
+Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, conductor y carretera repercuten en la eficacia del sistema. [4] 
+
+Existen también sistemas que analizan el comportamiento del vehículo y su entorno. Esto sistemas cuentan con cámaras frente al vehículo, donde se digitaliza el entorno del vehículo; posteriormente se analizan parámetros como la reacción del conductor frente a la dirección de su vehículo con respecto a la carretera, velocidad, comportamiento del vehículo frente a baches en la carretera y distancia con respecto al vehículo que esta adelante. Si se detecta un comportamiento anormal en los parámetros anteriormente mencionados, se procede a realizar las alertas necesarias para advertir al conductor. No obstante, estos sistemas suelen ser costosos y no toman en cuenta el estado del conductor.  
+
+Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG). [4]  
+
+Cabe mencionar que, entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede llegar a entorpecer el desempeño del conductor. [4] 
+
+Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que, los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia, sin embargo, son los métodos visuales más adecuados para dicho propósito. [4] Por tanto, se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficacia en el sistema.    
+
+ 
+Debido a las dificultades que pueden presentarse en los sistemas a la hora de detectar la somnolencia y la eficacia de este, así como las dificultades que muchos de los sistemas anteriores presentan en cuanto al espacio y potabilidad, se hará uso del método de análisis de características visuales para brindar una mejora y complemento a los sistemas actuales, usando visión artificial, además de integrar un sistema de monitoreo que permita a un tercero seguir la ubicación del conductor y registrar las incidencias del mismo.  
+
+Actualmente existen varias opciones para la geolocalización de vehículos en tiempo real, pero con costos elevados, como lo es el rastreo satelital que se tiene que pagar el servicio con una suscripción anual o mensual. Entonces surge esa necesidad de poder encontrar soluciones más asequibles pero que estén a la vanguardia del mercado, poder hacer uso de tecnologías gratuitas o que reduzcan los costos, como es el caso de las redes 4G, y así lograr la correcta comunicación del sistema para rastrear el vehículo en cuestión.  
+
+Dadas las posibles soluciones y escenarios antes mencionados se plantea la siguiente pregunta: ¿Cómo desarrollar un sistema portátil que pueda detectar la somnolencia y alertar al conductor, además de monitorear la ubicación en tiempo real y gestionar las incidencias detectadas en el conductor? 
 
 
 
@@ -136,30 +148,47 @@ Dadas las posibles soluciones y escenarios antes mencionados se plantea la sigui
 \newpage
 \section{Propuesta de solución}
 
-Como respuesta a la problemática planteada en la sección anterior, se propone el desarrollo de un sistema portátil que sea capaz de detectar y alertar en caso somnlencia en conductores.
+Como respuesta a la problemática planteada en la sección 3, se propone el desarrollo de un sistema portátil que sea capaz de detectar somnolencia en conductores y su vez activar una alarma que permita alertar al conductor. Adicionalmente se desarrollará como parte del sistema, un subsistema que permita la administración y validación de las incidencias reportadas, así como el monitoreo GPS del conductor en tiempo real dentro de la Ciudad de México.  
+
+Los problemas que resolverá el sistema serán listados a continuación. 
+
+\begin{itemize}
+\item El sistema será portátil por lo que se hará uso de un microordenador para poder ser instalado y que funcione dentro de un vehículo. 
+\item Mediante una cámara digital conectada al microordenador, el sistema analizará el rostro del conductor en tiempo real, tomando en cuenta parámetros de análisis tales como; rostro, ojos y boca del conductor. 
+\item El sistema hará uso de técnicas de visión artificial para poder detectar si el conductor presenta signos de somnolencia. 
+\item En caso de presentarse un caso de somnolencia, el sistema activará una alarma para alertar al conductor. 
+\item Al mismo tiempo, el sistema realizará y almacenará un reporte de incidencia que contendrá datos como fecha, hora, ubicación geográfica, y un pequeño video clip que muestre el momento en que el conductor presentó signos de somnolencia. 
+\item Posteriormente, el sistema hará uso de redes de telecomunicaciones móviles para enviar el reporte de incidencia previamente generado hacía una estación base que funcionará mediante una aplicación web, dónde un administrador podrá verificar este reporte con el fin de confirmar que se trata de un caso de somnolencia y no un falso positivo. 
+\item A su vez, el administrador podrá consultar la ubicación en tiempo real del conductor desde la misma estación base.
+\item En la figura 1 se muestra la propuesta del diagrama general de diseño de la arquitectura del sistema.    
+
+\end{itemize}
+
 
 \begin{center}
-  \includegraphics[scale=0.4]{imagenes/topdowngeneral}
-\captionof{figure}{Descomposición en la metodología \emph{Top-Down}}
- \label{fig:neurona}
-\end{center}
+  \includegraphics[scale=0.4]{imagenes/propuestasolucion}
+\captionof{figure}{Diagrama general del diseño preliminar de la arquitectura del sistema. }
+ \label{fig:Arquitecturapreliminar} 
+\end{center} 
+
 
  
-
-
-
 \newpage
 \section{Alcances y escenario de pruebas}
 
-
-
-El sistema estará disponible solo para zonas que se encuentren dentro de la Ciudad de México. 
-
-
+El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas. Ya que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Debido a lo anterior, se decidió utilizar redes móviles celulares para cumplir lo anterior.  
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/mapacobertura}
-\captionof{figure}{Descomposición en la metodología \emph{Top-Down}}
+  \includegraphics[scale=0.5]{imagenes/MapaCoberturaMexico}
+\captionof{figure}{Mapa de cobertura 3G / 4G / 5G, México. [5]}
+ \label{fig:neurona}
+\end{center} 
+
+Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura 2, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes (figura 3).  
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/CoberturaCDMX}
+\captionof{figure}{Mapa de cobertura 3G / 4G / 5G, Ciudad de México. [5]}
  \label{fig:neurona}
 \end{center}
 
@@ -1957,10 +1986,24 @@ Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, s
 \section{Referencias}
 %\bibliographystyle{apacite}
 
-\begin{thebibliography}{10} %10 significa el número máximo de items
+\begin{thebibliography}{100} %10 significa el número máximo de items
 %Aquí ponga la bibliografía y referencias usadas
 
 %Artículo:
+
+\bibitem{WHO} www.who.int/publications/i/item/9789241565684  
+
+\bibitem{IMT} imt.mx/resumen-boletines.html?IdArticulo=449\&IdBoletin=168
+
+\bibitem{TastreoSatelital} Rastreo satelital de vehículos: ¿qué es mejor que el GPS tradicional? (s/f). Beetrack.com. Recuperado de https://www.beetrack.com/es/blog/rastreo-satelital-de-vehiculos 
+
+\bibitem{Sistemasdesomnolencia}  "Sistemas de detección de somnolencia en conductores:Inicio, desarrollo y futuro", Revista Ingeniería y Región., vol. 13, n.º 1, pp. 159?168, 2015. Disponible: https://journalusco.edu.co/index.php/iregion/article/view/717/1372 
+
+\bibitem{CoberturaNacional} https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/
+
+
+
+
 
 
 \bibitem{conapra} M. Paez y Emilio Abarca. \emph{Resumen Boletines}, Instituto Mexicano del Transporte.
