@@ -101,10 +101,10 @@ El presente documento detalla el proceso de diseño del proyecto titulado "Sistem
 \emph{\textbf{Palabras Clave:}} Somnolencia, Visión artificial, Geolocalización, Machine Learning, Alerta, Red Neuronal Convolucional.
 
 \section{Abstract}
-This document details the design process of the project entitled "System for the monitoring, detection and alert of driver drowsiness through artificial vision, wireless communication and geolocation" as a Terminal Project, aimed at drivers in Mexico City.This system will make use of artificial vision techniques, such as the Haar functions for the detection of the driver's face, eyes and mouth from the video input in real time, as well as the proposal of the use of a convolutional neural network trained to to be able to detect the state of the eyes. The system will also use facial reference points to mark the position of the mouth and then the mouth opening ratio will be obtained, in order to detect if it is a yawn. If the system detects drowsiness, an alarm will be activated with the intention of alerting the driver, in turn, an incident report will be made which will be sent to a database. The system will use a Raspberry Pi for its portable operation. As part of the system, an administration system was analyzed and designed that will allow the user to verify and view the information of the incident reports and the information of each driver. For which a web application was designed that allows the user to access the information and additionally monitor the location in real time of the driver.\\
+This document details the design process of the project entitled "System for the monitoring, detection and alert of driver drowsiness through computer vision, wireless communication and geolocation" as a Terminal Project, aimed at drivers in Mexico City.This system will make use of computer vision techniques, such as the Haar functions for the detection of the driver's face, eyes and mouth from the video input in real time, as well as the proposal of the use of a convolutional neural network trained to to be able to detect the state of the eyes. The system will also use facial lanmark points to mark the position of the mouth and then the mouth opening ratio will be obtained, in order to detect if it is a yawn. If the system detects drowsiness, an alarm will be activated with the intention of alerting the driver, in turn, an incident report will be made which will be sent to a database. The system will use a Raspberry Pi for its portable operation. As part of the system, an administration system was analyzed and designed that will allow the user to verify and view the information of the incident reports and the information of each driver. For which a web application was designed that allows the user to access the information and additionally monitor the location in real time of the driver.\\
 
 
-\emph{\textbf{Keywords:}} Drowsiness, Artificial vision, Geolocation, Machine Learning, Alert, Convolutional Neural Network.
+\emph{\textbf{Keywords:}} Drowsiness, Computer Vision, Geolocation, Machine Learning, Alert, Convolutional Neural Network.
 
 
 \newpage
@@ -195,8 +195,7 @@ A continuación, se describen los alcances de la propuesta de solución:
 \item La transmisión de los datos del módulo de procesamiento se realizará mediante una red inalámbrica.
 \item Se trazará la ruta en el mapa de la trayectoria ejecutada por el conductor y se mostrará en la aplicación web.
 \item Las pruebas a realizar serán en la Ciudad de México donde se cuente con cobertura garantizada.
-\item 
-La aplicación web permitirá consultar las incidencias de los conductores, así como la fecha y hora de estas, además de la ubicación de cada conductor en tiempo real. 
+\item La aplicación web permitirá consultar las incidencias de los conductores, así como la fecha y hora de estas, además de la ubicación de cada conductor en tiempo real. 
 
 \end{itemize}
 
