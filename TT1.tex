@@ -418,6 +418,30 @@ Flattening consiste en convertir los datos de salida de la capa convolucional a 
 
 
 \end{itemize}
+\subsubsection{Cascadas Haar}
+Existen técnicas de visión artificial que permiten el reconocimiento de objetos en una imágen o cuadros en un video. Entre los que más destacan, se encuentran las Cascadas Haar. Esta técnica fue presentada por primera vez por Viola y Jones\cite{viola} Las Cascadas Haar implica entrenar una serie de clasificadores simples  y luego combinar su salida.\\
+
+Posteiormente estas salidas de transforman en un \emph{clasificador h(x)} como una suma de valores de \emph{aprendices débiles}:
+
+
+
+\begin{equation}
+h(x) = sgn \left [  \sum_{j=0}^{m-1} \alpha_{j}h_j(\bold{x}) \right ]
+\end{equation}
+
+
+los aprendices débiles $h_j(\bold{x})$ son funciones extremadamente simples de la entrada.
+En la mayoría de las variantes de Cascadas Haar, los aprendices débiles son funciones umbrales,
+que también son conocidos como \emph{desicion stumps} consideradas como la forma más simple de un árbol de decisiones.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/clasificadores}
+\captionof{figure}{Boosting}
+ \label{fig:boost}
+\end{center}
+
+Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles.
+
 
 \subsubsection{\emph{Content Delivery Network}}
 
@@ -430,6 +454,7 @@ Una Red de Distribución de Contenido, o CDN por sus siglas en inglés, es de una 
 \end{center}
 
 Además de esto, una CDN es capaz de detectar cambios en la información existente, así como detectar la disponibilidad de nuevo contenido en los servidores de origen.
+
 
 \subsubsection{Estándares y Protocolos de Comunicación Inalámbrica}
 
@@ -687,7 +712,7 @@ El proceso que tiene el módulo es el siguiente, la información recibida por el m
 Este módulo estará compuesto por una aplicación web y una base de datos que se encargará de almacenar las incidencias de los conductores para ser corroborados por un administrador posteriormente, esto con la intención de descartar un falso positivo y realizar los ajustes necesarios al sistema. 
 
 
-\subsection{Análsis de la Zona Geográfica}
+\subsection{Análisis de la Zona Geográfica}
 El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas. Ya que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Debido a lo anterior, se decidió utilizar redes móviles celulares para cumplir lo anterior.  
 
 \begin{center}
@@ -706,7 +731,7 @@ Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móvile
 
 
 \newpage
-\subsection{Análsis del Módulo Central de Procesamiento}
+\subsection{Análisis del Módulo Central de Procesamiento}
 
 
 
@@ -2084,7 +2109,8 @@ Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, s
 
 
 
-
+\bibitem{viola}Viola P.; Jones M, \emph{Rapid Object Detection
+using a Boosted Cascade of Simple Features}. IEEE International Conference on Computer Vision and Pattern Recognition,2001
 
 
 \bibitem{CoberturaNacional} https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/
