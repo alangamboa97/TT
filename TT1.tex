@@ -2243,47 +2243,6 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 
 \subsection{Diseño del Módulo Central de Procesamiento}
 
-
-
-
-\begin{itemize}
-
-\item \textbf{Elección del Lenguaje de Programación}
-
-
-Debido a que el presente proyecto posee un enfoque orientado a la inteligencia artificial, se debe de tener en claro que esta difiere al paradigma de la programación convencional. En la programación convencional, o estructurada, el usuario le indica a la máquina los datos y las reglas que debe seguir, y la máquina se encarga de obtener los resultados los parámetros mencionados. Sin embargo, en el paradigma de la programación orientada a inteligencia artificial, este enfoque cambia. Ahora se le indican los datos y los resultados, para obtener finalmente las reglas con las que se llegan a dichos resultados. 
-
-\begin{center}
-  \includegraphics[scale=0.3]{imagenes/programaclasico}
-\captionof{figure}{Programa clásico vs Machine Learning}
- \label{fig:pcvsml}
-\end{center}
-
-
-\item \textbf{Arquitectura}
-
-Cómo se mencionó anteriormente en la sección de metodología, a lo largo de este proyecto se hará uso de la metodología \emph{Top-Down}, en dónde uno de sus princpipios fundamentales radica en la modularidad. Esta no es más que la habilidad de poder dividir programas en partes más pequeñas  o sub-programas llamados módulos.
-Estos módulos deben posser cierto grado de independencia de la aplicación principal, y a su vez poder ser utilizados por otras aplicaciones. 
-
-\begin{center}
-  \includegraphics[scale=.6]{imagenes/modularidad}
-\captionof{figure}{Modularidad}
- \label{fig:modul}
-\end{center}
-
-
-
-
-
-
-
-
-Python es un lenguaje de programación que permite trabajar con más de un paradigma(programación estructurada y orientada a objetos).\cite{python}. Normalmente cuando se programa un script sencillo, se aplica el paradigma de programación estructurada. Sin embargo, al tratarse de un problema más complejo, se suele utilizar el paradigma orientado a objetos. 
-
-
-\end{itemize}
-
-\newpage
 \subsubsection{Diseño de la Unidad Contenedora de Procesamiento}
 
 Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema. 
@@ -2309,12 +2268,12 @@ Dimensiones 18 x 15mm.
  \label{fig:scaraindust}
 \end{center}
 
-\item Cámara Arducam Pivariety IMX230\\
+\item Rasperry Camera Module V2\\
 Dimensiones de la placa: 38 x 38mm.
 
 \begin{center}
-  \includegraphics[scale=.4]{imagenes/camara}
-\captionof{figure}{Cámara Pivariety IMX230}
+  \includegraphics[scale=.4]{imagenes/V2}
+\captionof{figure}{Raspberry Camera Module V2}
  \label{fig:scaraindust}
 \end{center}
  
@@ -2378,15 +2337,21 @@ Antenas LTE principal y Diversity combinadas con una antena GNSS en una sola ant
 
 \newpage
 
-Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo del diseño modular para la unidad contenedora, cabe aclarar que la siguiente propuesta puede presentar modificaciones durante el desarrollo del proyecto, con el fin de cumplir con las necesidades del sistema y presentar un diseño acorde a los cambios. 
+Tomando en cuenta las medidas anteriormente mencionadas, se decidió utilizar un modelo de contenedor para rasperry diseñado por Sixfab.
 
 \begin{center}
-  \includegraphics[scale=.3]{imagenes/unidadcontenedora}
-\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento}
+  \includegraphics[scale=.3]{imagenes/unidad_contenedoras}
+\captionof{figure}{Vistas de la Unidad Contendora Sixfab \cite{sixfab}}
  \label{fig:scaraindust}
 \end{center}
  
 
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/unidad_contenedoral}
+\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento \cite{sixfab}}
+ \label{fig:scaraindust}
+\end{center}
+ 
 
 
 \newpage
@@ -2592,35 +2557,42 @@ A continuación se muestra el diseño propuesto de cada una de las vistas que tend
 \begin{center}
   \includegraphics[scale=.3]{imagenes/login}
 \captionof{figure}{Página Inicio de Sesión }
- \label{fig:scaraindust}
+ \label{fig:login}
 \end{center}
+En la Figura \ref{fig:login} se observa la página dónde el Administrador podrá iniciar sesión ingresando su correo y su contraseña.
  
 \begin{center}
   \includegraphics[scale=.3]{imagenes/homescreen}
 \captionof{figure}{Página Principal}
- \label{fig:scaraindust}
+ \label{fig:homescreen}
 \end{center}
+
+En la Figura \ref{fig:homescreen} se muestra la página principal, dónde se muestran la lista de las incidencias, dónde cada una tendrá un estado de confirmada, rechazada, o pendiente de revisión. También se mostrarán una lista de todos los conductores para poder acceder al perfil de cada uno.
 
 \begin{center}
   \includegraphics[scale=.3]{imagenes/profile}
 \captionof{figure}{Página Perfil del Conductor }
- \label{fig:scaraindust}
+ \label{fig:profile}
 \end{center}
+
+En la Figura \ref{fig:profile} se aprecia la página de perfil del conductor, que mostrará sus datos personales, así como una lista de todas las incidencias acumuladas.
 
 \begin{center}
   \includegraphics[scale=.3]{imagenes/incident}
 \captionof{figure}{Página Detalle de Incidencia }
- \label{fig:scaraindust}
+ \label{fig:incident}
 \end{center}
+
+En al Figura \ref{fig:incident}, se puede observar la página desde dónde el administrador podrá revisar el videoclip de las incidencias de cada conductor. También cuenta con las opciones de confirmar o rechazar la incidencia dependiendo de cuál sea el caso.
 
 \begin{center}
   \includegraphics[scale=.3]{imagenes/location}
 \captionof{figure}{Página Ubicación en Tiempo Real }
- \label{fig:scaraindust}
+ \label{fig:location}
 \end{center}
  
  
-
+En la Figura \ref{fig:location} se muestra la página web dónde el Administrador podrá consultar la ubicación de un conductor en tiempo real.
 
 \newpage
 \subsubsection{Diseño de la Base de Datos}
@@ -2736,7 +2708,7 @@ Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, s
 \bibitem{Sistemasdesomnolencia}  "Sistemas de detección de somnolencia en conductores:Inicio, desarrollo y futuro", Revista Ingeniería y Región., vol. 13, n.º 1, pp. 159?168, 2015. Disponible: https://journalusco.edu.co/index.php/iregion/article/view/717/1372 
 
 
-\bibitem{Top-Down} 
+\bibitem{sixfab} Sixfab. "Raspberry Pi IP54 Outdoor Project Enclosure - Sixfab". Sixfab. https://sixfab.com/product/raspberry-pi-ip54-outdoor-iot-project-enclosure/ (accedido el 2 de enero de 2023).
 
 \bibitem{kendall} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
 
