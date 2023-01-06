@@ -396,6 +396,32 @@ Flattening consiste en convertir los datos de salida de la capa convolucional a 
 
 \end{itemize}
 
+\newpage
+\subsection{Cascadas Haar}
+Existen técnicas de visión artificial que permiten el reconocimiento de objetos en una imágen o cuadros en un video. Entre los que más destacan, se encuentran las Cascadas Haar. Esta técnica fue presentada por primera vez por Viola y Jones\cite{viola} Las Cascadas Haar implica entrenar una serie de clasificadores simples  y luego combinar su salida.\\
+	
+Posteiormente estas salidas de transforman en un \emph{clasificador h(x)} como una suma de valores de \emph{aprendices débiles}:
+
+
+
+\begin{equation}
+h(x) = sgn \left [  \sum_{j=0}^{m-1} \alpha_{j}h_j(\bold{x}) \right ]
+\end{equation}
+
+
+los aprendices débiles $h_j(\bold{x})$ son funciones extremadamente simples de la entrada.
+En la mayoría de las variantes de Cascadas Haar, los aprendices débiles son funciones umbrales,
+que también son conocidos como \emph{desicion stumps} consideradas como la forma más simple de un árbol de decisiones.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/clasificadores}
+\captionof{figure}{Boosting}
+ \label{fig:boost}
+\end{center}
+
+Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles.
+
+
 \subsection{\emph{Content Delivery Network}}
 
 Una Red de Distribución de Contenido, o CDN por sus siglas en inglés, es de una red de servidores que se encarga de mejorar el rendimiento en la carga y descarga de contenido de la red. Los componentes de una CDN se encuentran distribuidos en diferentes nodos. Estos componentes pueden ser servidores y se encuentran con contenido replicado alrededor del mundo. El trabajo de una CDN consiste en redirigir la solicitudes de los clientes a un servidor ubicado geográficamente cerca de estos. En consecuencia, los clientes obtienen los datos solicitados a una velocidad más rápida.
@@ -2020,7 +2046,8 @@ Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, s
 
 
 
-
+\bibitem{viola}Viola P.; Jones M, \emph{Rapid Object Detection
+using a Boosted Cascade of Simple Features}. IEEE International Conference on Computer Vision and Pattern Recognition,2001
 
 
 \bibitem{conapra} M. Paez y Emilio Abarca. \emph{Resumen Boletines}, Instituto Mexicano del Transporte.
