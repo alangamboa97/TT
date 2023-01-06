@@ -37,26 +37,27 @@
 \contentsline {figure}{\numberline {36}{\ignorespaces LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}}{73}{figure.36}%
 \contentsline {figure}{\numberline {37}{\ignorespaces Unidad Contenedora del M\'odulo Central de Procesamiento}}{74}{figure.37}%
 \contentsline {figure}{\numberline {38}{\ignorespaces Puntos de referencia}}{75}{figure.38}%
-\contentsline {figure}{\numberline {39}{\ignorespaces \emph {Mouth Opening Ratio}}}{75}{figure.39}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Diagrama de Flujo del M\'odulo de Comunicaciones}}{77}{figure.40}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Diagrama Actividades del M\'odulo de Comunicaciones}}{78}{figure.41}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Arquitectura del M\'odulo de Estaci\'on Base}}{79}{figure.42}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Diagrama de Secuencia Detalle Reporte Incidencia }}{80}{figure.43}%
-\contentsline {figure}{\numberline {44}{\ignorespaces Diagrama de Secuencia Consultar Ubicaci\'on}}{80}{figure.44}%
-\contentsline {figure}{\numberline {45}{\ignorespaces Diagrama de Secuencia Recuperar Contrase\~na }}{81}{figure.45}%
-\contentsline {figure}{\numberline {46}{\ignorespaces Diagrama de Secuencia Confirmar Incidencia}}{81}{figure.46}%
-\contentsline {figure}{\numberline {47}{\ignorespaces Diagrama de Secuencia Consultar Perfil}}{81}{figure.47}%
-\contentsline {figure}{\numberline {48}{\ignorespaces Diagrama de Secuencia Registrar Conductor }}{82}{figure.48}%
-\contentsline {figure}{\numberline {49}{\ignorespaces Diagrama de Secuencia Modificar Conductor}}{82}{figure.49}%
-\contentsline {figure}{\numberline {50}{\ignorespaces Diagrama de Secuencia Eliminar Conductor }}{82}{figure.50}%
-\contentsline {figure}{\numberline {51}{\ignorespaces Diagrama de Secuencia Estado de los Perif\'ericos }}{83}{figure.51}%
-\contentsline {figure}{\numberline {52}{\ignorespaces P\'agina Inicio de Sesi\'on }}{83}{figure.52}%
-\contentsline {figure}{\numberline {53}{\ignorespaces P\'agina Principal}}{84}{figure.53}%
-\contentsline {figure}{\numberline {54}{\ignorespaces P\'agina Perfil del Conductor }}{84}{figure.54}%
-\contentsline {figure}{\numberline {55}{\ignorespaces P\'agina Detalle de Incidencia }}{85}{figure.55}%
-\contentsline {figure}{\numberline {56}{\ignorespaces P\'agina Ubicaci\'on en Tiempo Real }}{85}{figure.56}%
-\contentsline {figure}{\numberline {57}{\ignorespaces Estructura de un Documento en MongoDB}}{86}{figure.57}%
-\contentsline {figure}{\numberline {58}{\ignorespaces Modelo propuesto para la base de datos en MongoDB}}{87}{figure.58}%
-\contentsline {figure}{\numberline {59}{\ignorespaces Documento de Registro de Conductores}}{87}{figure.59}%
-\contentsline {figure}{\numberline {60}{\ignorespaces Documento de registro de Incidencias}}{88}{figure.60}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Puntos de referencia}}{76}{figure.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces \emph {Mouth Opening Ratio}}}{76}{figure.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Diagrama de Flujo del M\'odulo de Comunicaciones}}{78}{figure.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Diagrama Actividades del M\'odulo de Comunicaciones}}{79}{figure.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Arquitectura del M\'odulo de Estaci\'on Base}}{80}{figure.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Diagrama de Secuencia Detalle Reporte Incidencia }}{81}{figure.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Diagrama de Secuencia Consultar Ubicaci\'on}}{81}{figure.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Diagrama de Secuencia Recuperar Contrase\~na }}{82}{figure.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Diagrama de Secuencia Confirmar Incidencia}}{82}{figure.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Diagrama de Secuencia Consultar Perfil}}{82}{figure.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Diagrama de Secuencia Registrar Conductor }}{83}{figure.49}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Diagrama de Secuencia Modificar Conductor}}{83}{figure.50}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Diagrama de Secuencia Eliminar Conductor }}{83}{figure.51}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Diagrama de Secuencia Estado de los Perif\'ericos }}{84}{figure.52}%
+\contentsline {figure}{\numberline {53}{\ignorespaces P\'agina Inicio de Sesi\'on }}{84}{figure.53}%
+\contentsline {figure}{\numberline {54}{\ignorespaces P\'agina Principal}}{85}{figure.54}%
+\contentsline {figure}{\numberline {55}{\ignorespaces P\'agina Perfil del Conductor }}{85}{figure.55}%
+\contentsline {figure}{\numberline {56}{\ignorespaces P\'agina Detalle de Incidencia }}{86}{figure.56}%
+\contentsline {figure}{\numberline {57}{\ignorespaces P\'agina Ubicaci\'on en Tiempo Real }}{86}{figure.57}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Estructura de un Documento en MongoDB}}{87}{figure.58}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Modelo propuesto para la base de datos en MongoDB}}{88}{figure.59}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Documento de Registro de Conductores}}{88}{figure.60}%
 \contentsline {figure}{\numberline {61}{\ignorespaces Documento de registro de Incidencias}}{89}{figure.61}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Documento de registro de Incidencias}}{90}{figure.62}%

@@ -2290,6 +2290,20 @@ Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo
 \subsubsection{Diseño del Submódulo de Visión Artificial}
 
 
+
+\begin{center}
+  \includegraphics[scale=.42]{imagenes/flujo_vision}
+\captionof{figure}{Puntos de referencia}
+ \label{fig:landmark}
+\end{center}
+
+
+
+La cámara digital capturará la imagen en tiempo real a una resolución de 640x480 pixeles a 30 cuadros por segundo. Esto debido a que dicha es la resolución mínima que la cámara digital seleccionada permite realizar el streaming de video. Dado que se busca un ahorro de recursos de procesamiento, utilizar una mayor resolución o tasa de cuadros por segundo podría resultar en el funcionamiento ineficaz en los procesos de los distintos módulos.
+Para la detección de rostro, se utilizarán la librería de Cascadas Haar \emph{haarcascade\_frontalface\_alt.xml} ofrecida por OpenCV. Para la detección de ojos, se utilizará la librería \emph{haarcascade\_eye\_tree\_eyeglasses.xml},  que ofrece datasets para poder detectar ojos incluso con el uso de anteojos. Posteriormente se utilizará un modelo de red neuronal convolucional previamente entrenado con el datasets EyesClosed/CNN  que cuenta con un directorio de prueba y otro de entrenamiento. La red neuronal convolucional determinará si el conductor se encuentra con los ojos abiertos o cerrados. En caso de encontrarse con los ojos cerrados se inciará un contador. Si este contador llega a los 4 segundos de detectar ojos cerrados el sistema determinará que el conductor presenta un caso de somnolencia y se activará la alama para alertar al conductor. Posteriormente se realizará un reporte de incidencia que incluirá datos del conducto y de la incidencia cómo: fecha, hora y ubicación, así como un videoclip menor a 1 minuto que muestre el momento en que se detectó la incidencia. El sistema continuará activando la alerta hasta que se detecte un cambio en el estado de los ojos (de cerrados a abiertos). Finalmente, el reporte de incidencia será enviado a la Estación Base para su posterior revisión. 
+
+
+
 \begin{itemize}
 
 
@@ -2303,9 +2317,9 @@ Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo
 
 
 
-A su vez, se utilizarán puntos de referencia con la ayuda de el software OpenCV y el modelo iBUG 300-W de delimitación de rostro para dividir las características que posteriormente serán extraídas y posteriormente clasificadas.
+A su vez, se utilizarán puntos de referencia con la ayuda de el software OpenCV y el modelo iBUG 300-W para delimitar la región de interés de la boca.
 
-En la siguiente tabla se muestra la delimitación y agrupación de los puntos de interés, tales como: ojo derecho, ojo izquierdo y boca.
+En la siguiente tabla se muestra la delimitación y agrupación de los puntos de interés, tales como: ojo derecho, ojo izquierdo y boca. De este modelo de detección de rostro, solo serán utilizados el grupo de 48 a 67, que delimitarán la región de la boca.
 \begin{center}
 \begin{table}[h]
 \centering
@@ -2324,7 +2338,7 @@ Ojo Izquierdo & {[}42-46{]}                               \\ \hline
 \item \textbf{Mouth Opening Ratio}
 
 
-Bostezar es un signo cansancio. El bostezo se caracteriza por una apertura lenta y amplia de la boca. Por lo que se necesita medir el tamño y la forma de la boca es necesario para identificar un bostezo. Para esto, se utilizara el \emph{Mouth Opening Ratio} que es un método que utiliza puntos de referencia para medir la apertura de la boca. Entre más grande sea este valor, más es la aperatura de la boca, por lo tanto cumple con las características de un bostezo.
+Debido a que bostezar es un signo de cansancio, se propone medir el tamaño y la forma de la boca es necesario para identificar un bostezo. Para esto, se utilizara el \emph{Mouth Opening Ratio} que es un método que utiliza puntos de referencia para medir la apertura de la boca. Entre más grande sea este valor, más es la aperatura de la boca, por lo tanto cumple con las características de un bostezo.
 
 \begin{center}
   \includegraphics[scale=.5]{imagenes/MOR}
