@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  5 JAN 2023 19:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  5 JAN 2023 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,12 +725,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-<imagenes/ipn.jpg, id=263, 180.675pt x 232.87pt>
+<imagenes/ipn.jpg, id=255, 180.675pt x 232.87pt>
 File: imagenes/ipn.jpg Graphic file (type jpg)
 <use imagenes/ipn.jpg>
 Package pdftex.def Info: imagenes/ipn.jpg  used on input line 41.
 (pdftex.def)             Requested size: 81.303pt x 104.79051pt.
-<imagenes/upiita.png, id=264, 722.7pt x 568.1225pt>
+<imagenes/upiita.png, id=256, 722.7pt x 568.1225pt>
 File: imagenes/upiita.png Graphic file (type png)
 <use imagenes/upiita.png>
 Package pdftex.def Info: imagenes/upiita.png  used on input line 43.
@@ -786,9 +786,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 ... de transporte. }{25}{subsubsection.6.2.9}
+l.37 ... sin accidentes}{25}{subsubsection.4.2.11}
                                                   % [1]
-Overfull \hbox (5.12357pt too wide) in paragraph at lines 43--43
+Overfull \hbox (5.12357pt too wide) in paragraph at lines 41--41
  [][] [][][]\OT1/lmr/m/n/12 Propuesta de un sis-te-ma de geo-lo-ca-li-za-ci^^So
 n y mo-ni-to-reo v^^S^^Pa GPS/GSM/GPRS 
  []
@@ -811,39 +811,184 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lot=\write6
 \openout6 = `TT1.lot'.
 
- [5] [6] [7] [8] [9]
-<imagenes/propuestasolucion.jpg, id=594, 929.72343pt x 549.55313pt>
+ [5]
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+<imagenes/propuestasolucion.jpg, id=583, 929.72343pt x 549.55313pt>
 File: imagenes/propuestasolucion.jpg Graphic file (type jpg)
 <use imagenes/propuestasolucion.jpg>
 Package pdftex.def Info: imagenes/propuestasolucion.jpg  used on input line 179
 .
 (pdftex.def)             Requested size: 371.88278pt x 219.81735pt.
- [10] [11 <./imagenes/propuestasolucion.jpg>] [12] [13]
-<imagenes/Top-down.jpg, id=617, 812.03375pt x 261.97874pt>
+[10] [11 <./imagenes/propuestasolucion.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+[13]
+<imagenes/Top-down.jpg, id=602, 812.03375pt x 261.97874pt>
 File: imagenes/Top-down.jpg Graphic file (type jpg)
 <use imagenes/Top-down.jpg>
 Package pdftex.def Info: imagenes/Top-down.jpg  used on input line 252.
 (pdftex.def)             Requested size: 406.01588pt x 130.98904pt.
  [14 <./imagenes/Top-down.jpg>] [15]
-<imagenes/neurona.png, id=635, 490.83376pt x 212.29312pt>
+<imagenes/neurona.png, id=616, 490.83376pt x 212.29312pt>
 File: imagenes/neurona.png Graphic file (type png)
 <use imagenes/neurona.png>
 Package pdftex.def Info: imagenes/neurona.png  used on input line 316.
 (pdftex.def)             Requested size: 245.41628pt x 106.1463pt.
  [16 <./imagenes/neurona.png>]
-<imagenes/cnn2.jpg, id=649, 1003.75pt x 341.275pt>
+<imagenes/cnn2.jpg, id=626, 1003.75pt x 341.275pt>
 File: imagenes/cnn2.jpg Graphic file (type jpg)
 <use imagenes/cnn2.jpg>
 Package pdftex.def Info: imagenes/cnn2.jpg  used on input line 364.
 (pdftex.def)             Requested size: 451.68333pt x 153.57233pt.
  [17]
-<imagenes/maxpool.png, id=664, 164.25pt x 68.547pt>
+<imagenes/maxpool.png, id=640, 164.25pt x 68.547pt>
 File: imagenes/maxpool.png Graphic file (type png)
 <use imagenes/maxpool.png>
 Package pdftex.def Info: imagenes/maxpool.png  used on input line 383.
 (pdftex.def)             Requested size: 164.24959pt x 68.54681pt.
- [18 <./imagenes/cnn2.jpg> <./imagenes/maxpool.png>]
-<imagenes/cdn-diagram.png, id=671, 722.7pt x 406.51875pt>
+
+[18 <./imagenes/cnn2.jpg> <./imagenes/maxpool.png>]
+<imagenes/cdn-diagram.png, id=647, 722.7pt x 406.51875pt>
 File: imagenes/cdn-diagram.png Graphic file (type png)
 <use imagenes/cdn-diagram.png>
 Package pdftex.def Info: imagenes/cdn-diagram.png  used on input line 412.
@@ -902,63 +1047,63 @@ i-to-reo v^^S^^Pa GPS/GSM/GPRS
  []
 
 [26] [27]
-<imagenes/MapaCoberturaMexico.jpg, id=741, 907.13907pt x 568.37344pt>
+<imagenes/MapaCoberturaMexico.jpg, id=693, 907.13907pt x 568.37344pt>
 File: imagenes/MapaCoberturaMexico.jpg Graphic file (type jpg)
 <use imagenes/MapaCoberturaMexico.jpg>
 Package pdftex.def Info: imagenes/MapaCoberturaMexico.jpg  used on input line 6
 39.
 (pdftex.def)             Requested size: 453.56842pt x 284.18602pt.
-<imagenes/CoberturaCDMX.jpg, id=742, 392.96812pt x 347.04657pt>
+<imagenes/CoberturaCDMX.jpg, id=694, 392.96812pt x 347.04657pt>
 File: imagenes/CoberturaCDMX.jpg Graphic file (type jpg)
 <use imagenes/CoberturaCDMX.jpg>
 Package pdftex.def Info: imagenes/CoberturaCDMX.jpg  used on input line 647.
 (pdftex.def)             Requested size: 196.48357pt x 173.52286pt.
  [28 <./imagenes/MapaCoberturaMexico.jpg>]
-<imagenes/topdowngeneral.png, id=747, 1145.27875pt x 300.12125pt>
+<imagenes/topdowngeneral.png, id=699, 1145.27875pt x 300.12125pt>
 File: imagenes/topdowngeneral.png Graphic file (type png)
 <use imagenes/topdowngeneral.png>
 Package pdftex.def Info: imagenes/topdowngeneral.png  used on input line 660.
 (pdftex.def)             Requested size: 458.10338pt x 120.04637pt.
  [29 <./imagenes/CoberturaCDMX.jpg> <./imagenes/topdowngeneral.png>] [30] [31]
-<imagenes/unicapa.jpg, id=763, 276.28218pt x 160.34906pt>
+<imagenes/unicapa.jpg, id=714, 276.28218pt x 160.34906pt>
 File: imagenes/unicapa.jpg Graphic file (type jpg)
 <use imagenes/unicapa.jpg>
 Package pdftex.def Info: imagenes/unicapa.jpg  used on input line 777.
 (pdftex.def)             Requested size: 110.51091pt x 64.13847pt.
-<imagenes/unicapa2.jpg, id=764, 1100.61188pt x 556.32843pt>
+<imagenes/unicapa2.jpg, id=715, 1100.61188pt x 556.32843pt>
 File: imagenes/unicapa2.jpg Graphic file (type jpg)
 <use imagenes/unicapa2.jpg>
 Package pdftex.def Info: imagenes/unicapa2.jpg  used on input line 787.
 (pdftex.def)             Requested size: 440.23695pt x 222.52742pt.
-<imagenes/multicapa.png, id=765, 310.15875pt x 197.98969pt>
+<imagenes/multicapa.png, id=716, 310.15875pt x 197.98969pt>
 File: imagenes/multicapa.png Graphic file (type png)
 <use imagenes/multicapa.png>
 Package pdftex.def Info: imagenes/multicapa.png  used on input line 799.
 (pdftex.def)             Requested size: 217.10963pt x 138.59183pt.
  [32 <./imagenes/unicapa.jpg> <./imagenes/unicapa2.jpg>]
-<imagenes/capasocultas.jpg, id=771, 1099.10625pt x 556.32843pt>
+<imagenes/capasocultas.jpg, id=721, 1099.10625pt x 556.32843pt>
 File: imagenes/capasocultas.jpg Graphic file (type jpg)
 <use imagenes/capasocultas.jpg>
 Package pdftex.def Info: imagenes/capasocultas.jpg  used on input line 808.
 (pdftex.def)             Requested size: 439.6347pt x 222.52742pt.
-<imagenes/funrelu.png, id=772, 501.5538pt x 404.712pt>
+<imagenes/funrelu.png, id=722, 501.5538pt x 404.712pt>
 File: imagenes/funrelu.png Graphic file (type png)
 <use imagenes/funrelu.png>
 Package pdftex.def Info: imagenes/funrelu.png  used on input line 822.
 (pdftex.def)             Requested size: 200.61797pt x 161.88193pt.
  [33 <./imagenes/multicapa.png> <./imagenes/capasocultas.jpg>]
-<imagenes/relu.jpg, id=778, 1106.63437pt x 581.17125pt>
+<imagenes/relu.jpg, id=728, 1106.63437pt x 581.17125pt>
 File: imagenes/relu.jpg Graphic file (type jpg)
 <use imagenes/relu.jpg>
 Package pdftex.def Info: imagenes/relu.jpg  used on input line 829.
 (pdftex.def)             Requested size: 442.6459pt x 232.46437pt.
-<imagenes/funtanh.png, id=779, 1204.5pt x 663.47874pt>
+<imagenes/funtanh.png, id=729, 1204.5pt x 663.47874pt>
 File: imagenes/funtanh.png Graphic file (type png)
 <use imagenes/funtanh.png>
 Package pdftex.def Info: imagenes/funtanh.png  used on input line 839.
 (pdftex.def)             Requested size: 240.89574pt x 132.69339pt.
  [34 <./imagenes/funrelu.png> <./imagenes/relu.jpg>]
-<imagenes/tanh.jpg, id=785, 1090.82532pt x 553.31718pt>
+<imagenes/tanh.jpg, id=735, 1090.82532pt x 553.31718pt>
 File: imagenes/tanh.jpg Graphic file (type jpg)
 <use imagenes/tanh.jpg>
 Package pdftex.def Info: imagenes/tanh.jpg  used on input line 848.
@@ -981,7 +1126,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 976.
 
-<imagenes/CasosdeusosMEB.png, id=804, 720.6925pt x 512.91624pt>
+<imagenes/CasosdeusosMEB.png, id=754, 720.6925pt x 512.91624pt>
 File: imagenes/CasosdeusosMEB.png Graphic file (type png)
 <use imagenes/CasosdeusosMEB.png>
 Package pdftex.def Info: imagenes/CasosdeusosMEB.png  used on input line 995.
@@ -1007,7 +1152,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ] [43] [44] [45] [46]
 [47]
-<imagenes/casosdeusoweb.jpg, id=844, 683.55376pt x 603.25375pt>
+<imagenes/casosdeusoweb.jpg, id=793, 683.55376pt x 603.25375pt>
 File: imagenes/casosdeusoweb.jpg Graphic file (type jpg)
 <use imagenes/casosdeusoweb.jpg>
 Package pdftex.def Info: imagenes/casosdeusoweb.jpg  used on input line 1384.
@@ -1035,13 +1180,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [49] [50] [51]
-<imagenes/programaclasico.png, id=862, 770.88pt x 578.16pt>
+<imagenes/programaclasico.png, id=811, 770.88pt x 578.16pt>
 File: imagenes/programaclasico.png Graphic file (type png)
 <use imagenes/programaclasico.png>
 Package pdftex.def Info: imagenes/programaclasico.png  used on input line 1569.
 
 (pdftex.def)             Requested size: 231.26578pt x 173.44933pt.
-<imagenes/modularidad.png, id=863, 350.81062pt x 225.84375pt>
+<imagenes/modularidad.png, id=812, 350.81062pt x 225.84375pt>
 File: imagenes/modularidad.png Graphic file (type png)
 <use imagenes/modularidad.png>
 Package pdftex.def Info: imagenes/modularidad.png  used on input line 1581.
@@ -1049,7 +1194,7 @@ Package pdftex.def Info: imagenes/modularidad.png  used on input line 1581.
  [52
 
  <./imagenes/programaclasico.png> <./imagenes/modularidad.png>] [53]
-<imagenes/Espeificaciones fisicas Raspberry Pi.jpg, id=876, 923.70094pt x 576.6
+<imagenes/Espeificaciones fisicas Raspberry Pi.jpg, id=825, 923.70094pt x 576.6
 5437pt>
 File: imagenes/Espeificaciones fisicas Raspberry Pi.jpg Graphic file (type jpg)
 
@@ -1057,14 +1202,14 @@ File: imagenes/Espeificaciones fisicas Raspberry Pi.jpg Graphic file (type jpg)
 Package pdftex.def Info: imagenes/Espeificaciones fisicas Raspberry Pi.jpg  use
 d on input line 1611.
 (pdftex.def)             Requested size: 369.47383pt x 230.65765pt.
-<imagenes/KY-006.jpg, id=877, 803.0pt x 803.0pt>
+<imagenes/KY-006.jpg, id=826, 803.0pt x 803.0pt>
 File: imagenes/KY-006.jpg Graphic file (type jpg)
 <use imagenes/KY-006.jpg>
 Package pdftex.def Info: imagenes/KY-006.jpg  used on input line 1619.
 (pdftex.def)             Requested size: 160.59715pt x 160.59715pt.
  [54 <./imagenes/Espeificaciones fisicas Raspberry Pi.jpg> <./imagenes/KY-006.j
 pg>]
-<imagenes/camara.jpg, id=883, 368.37625pt x 351.3125pt>
+<imagenes/camara.jpg, id=832, 368.37625pt x 351.3125pt>
 File: imagenes/camara.jpg Graphic file (type jpg)
 <use imagenes/camara.jpg>
 Package pdftex.def Info: imagenes/camara.jpg  used on input line 1628.
@@ -1074,48 +1219,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 1634--1635
 
  []
 
-<imagenes/Jumpers.jpg, id=884, 570.13pt x 503.8825pt>
+<imagenes/Jumpers.jpg, id=833, 570.13pt x 503.8825pt>
 File: imagenes/Jumpers.jpg Graphic file (type jpg)
 <use imagenes/Jumpers.jpg>
 Package pdftex.def Info: imagenes/Jumpers.jpg  used on input line 1637.
 (pdftex.def)             Requested size: 228.04796pt x 201.54942pt.
-<imagenes/MicroSD.png, id=885, 220.825pt x 91.34125pt>
+<imagenes/MicroSD.png, id=834, 220.825pt x 91.34125pt>
 File: imagenes/MicroSD.png Graphic file (type png)
 <use imagenes/MicroSD.png>
 Package pdftex.def Info: imagenes/MicroSD.png  used on input line 1649.
 (pdftex.def)             Requested size: 110.41222pt x 45.6705pt.
 [55 <./imagenes/camara.jpg> <./imagenes/Jumpers.jpg> <./imagenes/MicroSD.png>]
-<imagenes/sixfabhat.png, id=891, 353.82187pt x 319.94531pt>
+<imagenes/sixfabhat.png, id=840, 353.82187pt x 319.94531pt>
 File: imagenes/sixfabhat.png Graphic file (type png)
 <use imagenes/sixfabhat.png>
 Package pdftex.def Info: imagenes/sixfabhat.png  used on input line 1657.
 (pdftex.def)             Requested size: 141.52623pt x 127.97585pt.
-<imagenes/LE910.png, id=892, 258.9675pt x 280.79906pt>
+<imagenes/LE910.png, id=841, 258.9675pt x 280.79906pt>
 File: imagenes/LE910.png Graphic file (type png)
 <use imagenes/LE910.png>
 Package pdftex.def Info: imagenes/LE910.png  used on input line 1667.
 (pdftex.def)             Requested size: 181.27599pt x 196.558pt.
 
 [56 <./imagenes/sixfabhat.png> <./imagenes/LE910.png>]
-<imagenes/lteantena.png, id=899, 411.03563pt x 415.5525pt>
+<imagenes/lteantena.png, id=848, 411.03563pt x 415.5525pt>
 File: imagenes/lteantena.png Graphic file (type png)
 <use imagenes/lteantena.png>
 Package pdftex.def Info: imagenes/lteantena.png  used on input line 1681.
 (pdftex.def)             Requested size: 164.41133pt x 166.21805pt.
  [57 <./imagenes/lteantena.png>]
-<imagenes/unidadcontenedora.png, id=905, 1627.07875pt x 1569.865pt>
+<imagenes/unidadcontenedora.png, id=854, 1627.07875pt x 1569.865pt>
 File: imagenes/unidadcontenedora.png Graphic file (type png)
 <use imagenes/unidadcontenedora.png>
 Package pdftex.def Info: imagenes/unidadcontenedora.png  used on input line 169
 6.
 (pdftex.def)             Requested size: 488.1274pt x 470.96313pt.
  [58 <./imagenes/unidadcontenedora.png>]
-<imagenes/landmark.png, id=911, 415.5525pt x 395.4775pt>
+<imagenes/landmark.png, id=860, 415.5525pt x 395.4775pt>
 File: imagenes/landmark.png Graphic file (type png)
 <use imagenes/landmark.png>
 Package pdftex.def Info: imagenes/landmark.png  used on input line 1715.
 (pdftex.def)             Requested size: 174.53085pt x 166.09941pt.
-<imagenes/MOR.png, id=912, 209.28188pt x 164.86594pt>
+<imagenes/MOR.png, id=861, 209.28188pt x 164.86594pt>
 File: imagenes/MOR.png Graphic file (type png)
 <use imagenes/MOR.png>
 Package pdftex.def Info: imagenes/MOR.png  used on input line 1746.
@@ -1126,7 +1271,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1781--1782
 
  []
 
-<imagenes/DisenoMEB.png, id=941, 1054.94125pt x 533.995pt>
+<imagenes/DisenoMEB.png, id=890, 1054.94125pt x 533.995pt>
 File: imagenes/DisenoMEB.png Graphic file (type png)
 <use imagenes/DisenoMEB.png>
 Package pdftex.def Info: imagenes/DisenoMEB.png  used on input line 1787.
@@ -1136,7 +1281,7 @@ Overfull \hbox (26.98535pt too wide) in paragraph at lines 1787--1788
  [] 
  []
 
-<imagenes/amplify-1.png, id=943, 710.655pt x 545.03625pt>
+<imagenes/amplify-1.png, id=892, 710.655pt x 545.03625pt>
 File: imagenes/amplify-1.png Graphic file (type png)
 <use imagenes/amplify-1.png>
 Package pdftex.def Info: imagenes/amplify-1.png  used on input line 1797.
@@ -1146,30 +1291,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 1813--1814
 
  []
 
-<imagenes/sec_reporte_incidencia.png, id=958, 438.63875pt x 232.87pt>
+<imagenes/sec_reporte_incidencia.png, id=906, 438.63875pt x 232.87pt>
 File: imagenes/sec_reporte_incidencia.png Graphic file (type png)
 <use imagenes/sec_reporte_incidencia.png>
 Package pdftex.def Info: imagenes/sec_reporte_incidencia.png  used on input lin
 e 1819.
 (pdftex.def)             Requested size: 263.18527pt x 139.72307pt.
-<imagenes/sec_ubicacion.png, id=959, 536.0025pt x 221.82875pt>
+<imagenes/sec_ubicacion.png, id=907, 536.0025pt x 221.82875pt>
 File: imagenes/sec_ubicacion.png Graphic file (type png)
 <use imagenes/sec_ubicacion.png>
 Package pdftex.def Info: imagenes/sec_ubicacion.png  used on input line 1828.
 (pdftex.def)             Requested size: 375.19919pt x 155.27905pt.
-<imagenes/sec_rcontrasena.jpg, id=960, 507.8975pt x 319.1925pt>
+<imagenes/sec_rcontrasena.jpg, id=908, 507.8975pt x 319.1925pt>
 File: imagenes/sec_rcontrasena.jpg Graphic file (type jpg)
 <use imagenes/sec_rcontrasena.jpg>
 Package pdftex.def Info: imagenes/sec_rcontrasena.jpg  used on input line 1836.
 
 (pdftex.def)             Requested size: 304.74086pt x 191.51697pt.
 [67 <./imagenes/sec_reporte_incidencia.png> <./imagenes/sec_ubicacion.png>]
-<imagenes/sec_confirmar.jpg, id=969, 443.6575pt x 293.095pt>
+<imagenes/sec_confirmar.jpg, id=916, 443.6575pt x 293.095pt>
 File: imagenes/sec_confirmar.jpg Graphic file (type jpg)
 <use imagenes/sec_confirmar.jpg>
 Package pdftex.def Info: imagenes/sec_confirmar.jpg  used on input line 1844.
 (pdftex.def)             Requested size: 266.19655pt x 175.85834pt.
-<imagenes/sec_perfil.jpg, id=970, 554.07pt x 293.095pt>
+<imagenes/sec_perfil.jpg, id=917, 554.07pt x 293.095pt>
 File: imagenes/sec_perfil.jpg Graphic file (type jpg)
 <use imagenes/sec_perfil.jpg>
 Package pdftex.def Info: imagenes/sec_perfil.jpg  used on input line 1852.
@@ -1177,51 +1322,51 @@ Package pdftex.def Info: imagenes/sec_perfil.jpg  used on input line 1852.
 
 [68 <./imagenes/sec_rcontrasena.jpg> <./imagenes/sec_confirmar.jpg> <./imagenes
 /sec_perfil.jpg>]
-<imagenes/sec_registrar.jpg, id=975, 420.57124pt x 293.095pt>
+<imagenes/sec_registrar.jpg, id=922, 420.57124pt x 293.095pt>
 File: imagenes/sec_registrar.jpg Graphic file (type jpg)
 <use imagenes/sec_registrar.jpg>
 Package pdftex.def Info: imagenes/sec_registrar.jpg  used on input line 1859.
 (pdftex.def)             Requested size: 252.3447pt x 175.85834pt.
-<imagenes/sec_modificar.jpg, id=976, 507.8975pt x 293.095pt>
+<imagenes/sec_modificar.jpg, id=923, 507.8975pt x 293.095pt>
 File: imagenes/sec_modificar.jpg Graphic file (type jpg)
 <use imagenes/sec_modificar.jpg>
 Package pdftex.def Info: imagenes/sec_modificar.jpg  used on input line 1865.
 (pdftex.def)             Requested size: 304.74086pt x 175.85834pt.
-<imagenes/sec_eliminar.jpg, id=977, 516.93124pt x 313.17pt>
+<imagenes/sec_eliminar.jpg, id=924, 516.93124pt x 313.17pt>
 File: imagenes/sec_eliminar.jpg Graphic file (type jpg)
 <use imagenes/sec_eliminar.jpg>
 Package pdftex.def Info: imagenes/sec_eliminar.jpg  used on input line 1873.
 (pdftex.def)             Requested size: 310.16113pt x 187.90344pt.
  [69 <./imagenes/sec_registrar.jpg> <./imagenes/sec_modificar.jpg> <./imagenes/
 sec_eliminar.jpg>]
-<imagenes/sec_estado.jpg, id=982, 653.44125pt x 303.1325pt>
+<imagenes/sec_estado.jpg, id=929, 653.44125pt x 303.1325pt>
 File: imagenes/sec_estado.jpg Graphic file (type jpg)
 <use imagenes/sec_estado.jpg>
 Package pdftex.def Info: imagenes/sec_estado.jpg  used on input line 1881.
 (pdftex.def)             Requested size: 392.06776pt x 181.8809pt.
-<imagenes/login.png, id=983, 1445.4pt x 903.375pt>
+<imagenes/login.png, id=930, 1445.4pt x 903.375pt>
 File: imagenes/login.png Graphic file (type png)
 <use imagenes/login.png>
 Package pdftex.def Info: imagenes/login.png  used on input line 1891.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
-<imagenes/homescreen.png, id=984, 1445.4pt x 903.375pt>
+<imagenes/homescreen.png, id=931, 1445.4pt x 903.375pt>
 File: imagenes/homescreen.png Graphic file (type png)
 <use imagenes/homescreen.png>
 Package pdftex.def Info: imagenes/homescreen.png  used on input line 1897.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
  [70 <./imagenes/sec_estado.jpg> <./imagenes/login.png>]
-<imagenes/profile.png, id=989, 1445.4pt x 903.375pt>
+<imagenes/profile.png, id=936, 1445.4pt x 903.375pt>
 File: imagenes/profile.png Graphic file (type png)
 <use imagenes/profile.png>
 Package pdftex.def Info: imagenes/profile.png  used on input line 1903.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
-<imagenes/incident.png, id=990, 1445.4pt x 903.375pt>
+<imagenes/incident.png, id=937, 1445.4pt x 903.375pt>
 File: imagenes/incident.png Graphic file (type png)
 <use imagenes/incident.png>
 Package pdftex.def Info: imagenes/incident.png  used on input line 1909.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
  [71 <./imagenes/homescreen.png> <./imagenes/profile.png>]
-<imagenes/location.png, id=996, 1445.4pt x 903.375pt>
+<imagenes/location.png, id=943, 1445.4pt x 903.375pt>
 File: imagenes/location.png Graphic file (type png)
 <use imagenes/location.png>
 Package pdftex.def Info: imagenes/location.png  used on input line 1915.
@@ -1231,25 +1376,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 1934--1935
 
  []
 
-<imagenes/EstructuraDocumentoMongoDB.jpg, id=1005, 469.755pt x 149.05687pt>
+<imagenes/EstructuraDocumentoMongoDB.jpg, id=952, 469.755pt x 149.05687pt>
 File: imagenes/EstructuraDocumentoMongoDB.jpg Graphic file (type jpg)
 <use imagenes/EstructuraDocumentoMongoDB.jpg>
 Package pdftex.def Info: imagenes/EstructuraDocumentoMongoDB.jpg  used on input
  line 1945.
 (pdftex.def)             Requested size: 328.82626pt x 104.3391pt.
 [73 <./imagenes/EstructuraDocumentoMongoDB.jpg>]
-<imagenes/ModeladoBD.png, id=1012, 1327.96124pt x 634.37pt>
+<imagenes/ModeladoBD.png, id=958, 1327.96124pt x 634.37pt>
 File: imagenes/ModeladoBD.png Graphic file (type png)
 <use imagenes/ModeladoBD.png>
 Package pdftex.def Info: imagenes/ModeladoBD.png  used on input line 1953.
 (pdftex.def)             Requested size: 398.39145pt x 190.31245pt.
-<imagenes/ModeloConductores.jpg, id=1013, 361.35pt x 74.52844pt>
+<imagenes/ModeloConductores.jpg, id=959, 361.35pt x 74.52844pt>
 File: imagenes/ModeloConductores.jpg Graphic file (type jpg)
 <use imagenes/ModeloConductores.jpg>
 Package pdftex.def Info: imagenes/ModeloConductores.jpg  used on input line 196
 1.
 (pdftex.def)             Requested size: 325.21199pt x 67.07495pt.
-<imagenes/ModeloIncidencias.jpg, id=1014, 288.3272pt x 156.585pt>
+<imagenes/ModeloIncidencias.jpg, id=960, 288.3272pt x 156.585pt>
 File: imagenes/ModeloIncidencias.jpg Graphic file (type jpg)
 <use imagenes/ModeloIncidencias.jpg>
 Package pdftex.def Info: imagenes/ModeloIncidencias.jpg  used on input line 197
@@ -1260,7 +1405,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1975--1976
 
  []
 
-<imagenes/cognito.jpg, id=1020, 505.89pt x 467.49657pt>
+<imagenes/cognito.jpg, id=966, 505.89pt x 467.49657pt>
 File: imagenes/cognito.jpg Graphic file (type jpg)
 <use imagenes/cognito.jpg>
 Package pdftex.def Info: imagenes/cognito.jpg  used on input line 1985.
@@ -1338,230 +1483,40 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `TT1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `TT1.out':
-(rerunfilecheck)             Before: 3A918CB2B4200A0C8C08AB39DA290744;19768
-(rerunfilecheck)             After:  984717D17AB342CAFAE972E2C8DA075E;19556.
+Package rerunfilecheck Info: File `TT1.out' has not changed.
+(rerunfilecheck)             Checksum: 984717D17AB342CAFAE972E2C8DA075E;19556.
  ) 
 Here is how much of TeX's memory you used:
- 14900 strings out of 478338
- 248983 string characters out of 2835756
- 552405 words of memory out of 3000000
- 32695 multiletter control sequences out of 15000+600000
+ 14852 strings out of 478338
+ 248151 string characters out of 2835756
+ 552403 words of memory out of 3000000
+ 32693 multiletter control sequences out of 15000+600000
  523951 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,18n,77p,1465b,784s stack positions out of 10000i,1000n,20000p,200000b,80000s
-
-pdfTeX warning (dest): name{section.10} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.9} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.8.3.2} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.8.3.1} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.8.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.8.2.3} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.8.2.2} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.8.2.1} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.8.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.8.1.2} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.8.1.1} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.8.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.7.4.1} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.7.2.2} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.7.2.1} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.7.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.17} has been referenced but does 
-not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.16} has been referenced but does 
-not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.15} has been referenced but does 
-not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.14} has been referenced but does 
-not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.13} has been referenced but does 
-not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.12} has been referenced but does 
-not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.11} has been referenced but does 
-not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.10} has been referenced but does 
-not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.9} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.8} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.7} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.6} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.5} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.2.4} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.1.10} has been referenced but does 
-not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.1.9} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.1.8} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.1.7} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.1.6} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.1.5} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.1.4} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.6.1.3} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.5.8} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.5.7.1} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.5.7} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.5.6} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.5.5} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{
-C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:
-/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{
-C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc
-}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.e
-nc}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.e
-nc}<C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12
-.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx
-i10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mcsc10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
-m/lmex10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/lm/lmmi12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/lm/lmmi8.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/lm/lmr10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/lm/lmr12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmr6.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmr8.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmri12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmsy10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmsy8.pfb>
-Output written on TT1.pdf (80 pages, 3912803 bytes).
+ 72i,18n,77p,1468b,784s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc
+}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
+C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc
+}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.e
+nc}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit
+.enc}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc
+.enc}<C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx
+12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+bxi10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmcsc10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmex10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmmi12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/lm/lmmi8.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmr10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/lm/lmr12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmr6.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmr8.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmri12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/lm/lmsy10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmsy8.pfb>
+Output written on TT1.pdf (80 pages, 3906993 bytes).
 PDF statistics:
- 1189 PDF objects out of 1200 (max. 8388607)
- 318 named destinations out of 1000 (max. 500000)
- 796 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1127 PDF objects out of 1200 (max. 8388607)
+ 272 named destinations out of 1000 (max. 500000)
+ 780 words of extra memory for PDF output out of 10000 (max. 10000000)
 
