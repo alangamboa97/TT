@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  5 JAN 2023 19:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  5 JAN 2023 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1483,8 +1483,14 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `TT1.out' has not changed.
-(rerunfilecheck)             Checksum: 984717D17AB342CAFAE972E2C8DA075E;19556.
+
+Package rerunfilecheck Warning: File `TT1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TT1.out':
+(rerunfilecheck)             Before: C1694BD7AD361737B0B78A7A638B492A;19619
+(rerunfilecheck)             After:  6D5F87A2F91B1334CB57750CCBD8BFB6;19564.
  ) 
 Here is how much of TeX's memory you used:
  14852 strings out of 478338
@@ -1514,7 +1520,7 @@ public/lm/lmr12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/lm/lmri12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/lm/lmsy10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/lm/lmsy8.pfb>
-Output written on TT1.pdf (80 pages, 3906993 bytes).
+Output written on TT1.pdf (80 pages, 3906994 bytes).
 PDF statistics:
  1127 PDF objects out of 1200 (max. 8388607)
  272 named destinations out of 1000 (max. 500000)
