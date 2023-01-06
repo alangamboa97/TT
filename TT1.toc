@@ -1,61 +1,64 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Resumen}{6}{section.1}%
-\contentsline {section}{\numberline {2}Introducci\'on}{7}{section.2}%
-\contentsline {section}{\numberline {3}Planteamiento del problema}{8}{section.3}%
-\contentsline {section}{\numberline {4}Propuesta de soluci\'on}{10}{section.4}%
-\contentsline {section}{\numberline {5}Alcances y escenario de pruebas}{12}{section.5}%
-\contentsline {section}{\numberline {6}Justificaci\'on}{14}{section.6}%
-\contentsline {section}{\numberline {7}Metodolog\IeC {\'\i }a}{15}{section.7}%
-\contentsline {section}{\numberline {8}Objetivos}{16}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Objetivo General}{16}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Objetivos Espec\IeC {\'\i }ficos}{16}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Marco Te\'orico}{17}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Raspberry Pi}{17}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Visi\'on Artificial}{17}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Red Neuronal}{17}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Redes Neuronales Convolucionales}{18}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Cascadas Haar}{21}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}\emph {Content Delivery Network}}{21}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Est\'andares y Protocolos de Comunicaci\'on Inal\'ambrica}{22}{subsection.9.7}%
-\contentsline {subsubsection}{\numberline {9.7.1}LTE-M}{23}{subsubsection.9.7.1}%
-\contentsline {subsection}{\numberline {9.8}Teorema de Shannon-Hartley}{24}{subsection.9.8}%
-\contentsline {subsection}{\numberline {9.9}Geolocalizaci\'on}{24}{subsection.9.9}%
-\contentsline {subsubsection}{\numberline {9.9.1}Funcionamiento}{24}{subsubsection.9.9.1}%
-\contentsline {section}{\numberline {10}Estado del Arte}{25}{section.10}%
-\contentsline {subsection}{\numberline {10.1}\emph {Driver Drowsiness Detection Using Machine Learning with Visual Behaviour}}{25}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}\emph {Detection Of Drowsiness And Distraction Of Drivers Using CNN}}{25}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}\emph {Driver Drowsiness Detection System Using Convolutional Neural Networks}}{25}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Dise\~no e implementaci\'on de sistema de visi\'on artificial para alerta y detecci\'on de somnolencia mediante aprendizaje profundo aplicable en conductores de veh\IeC {\'\i }culos}{25}{subsection.10.4}%
-\contentsline {subsection}{\numberline {10.5}Sistema de detecci\'on de somnolencia mediante inteligencia artificial en conductores de veh\IeC {\'\i }culos para alertar la ocurrencia de accidentes de tr\'ansito}{26}{subsection.10.5}%
-\contentsline {subsection}{\numberline {10.6}Dise\~no de un sistema electr\'onico para detectar la somnolencia en automovilistas por medio de la actividad ocular}{26}{subsection.10.6}%
-\contentsline {subsection}{\numberline {10.7}Sistema para la detecci\'on del estado de somnolencia en seres humanos, con reconocimiento de patrones }{26}{subsection.10.7}%
-\contentsline {subsection}{\numberline {10.8}Sistema de Detecci\'on de Somnolencia}{27}{subsection.10.8}%
-\contentsline {subsection}{\numberline {10.9}Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. }{27}{subsection.10.9}%
-\contentsline {subsection}{\numberline {10.10}Sistema basado en la detecci\'on y notificaci\'on de somnolencia en conductores de autos }{27}{subsection.10.10}%
-\contentsline {subsection}{\numberline {10.11}Detecci\'on de somnolencia para conducci\'on sin accidentes}{27}{subsection.10.11}%
-\contentsline {subsection}{\numberline {10.12}Implementaci\'on de un sistema web con geolocalizaci\'on para medir la transaccionalidad del portal ABC de la democracia para el consejo nacional electoral (CNE)}{28}{subsection.10.12}%
-\contentsline {subsection}{\numberline {10.13}Dise\~no e implementaci\'on de un sistema de geolocalizaci\'on en interiores para plataforma Android v\IeC {\'\i }a la red enterprise WLAN de la PUCP}{28}{subsection.10.13}%
-\contentsline {subsection}{\numberline {10.14}Geolocalizaci\'on con LoRa mediante multilateraci\'on}{28}{subsection.10.14}%
-\contentsline {subsection}{\numberline {10.15}Propuesta de un sistema de geolocalizaci\'on y monitoreo v\IeC {\'\i }a GPS/GSM/GPRS aplicado a un puls\'ometro para personas con enfermedades cardiovasculares}{29}{subsection.10.15}%
-\contentsline {subsection}{\numberline {10.16}Influencia de un sistema de geolocalizaci\'on en el control y monitoreo de veh\IeC {\'\i }culos con dispositivos GPS en una empresa log\IeC {\'\i }stica}{29}{subsection.10.16}%
-\contentsline {subsection}{\numberline {10.17}Dise\~no de la red de acceso LTE en el distrito de Jes\'us Mar\IeC {\'\i }a}{29}{subsection.10.17}%
-\contentsline {section}{\numberline {11}An\'alisis}{30}{section.11}%
-\contentsline {subsection}{\numberline {11.1}An\'alsis del M\'odulo Central de Procesamiento}{31}{subsection.11.1}%
-\contentsline {subsubsection}{\numberline {11.1.1}An\'alisis del Subm\'odulo Visi\'on Artificial}{32}{subsubsection.11.1.1}%
-\contentsline {subsubsection}{\numberline {11.1.2}An\'alsis y Elecci\'on del Modelo de Red Neuronal}{33}{subsubsection.11.1.2}%
-\contentsline {subsection}{\numberline {11.2}An\'alisis del M\'odulo de Comunicaciones}{36}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}An\'alisis del M\'odulo de Estaci\'on Base}{37}{subsection.11.3}%
-\contentsline {subsubsection}{\numberline {11.3.1}An\'alisis de la Aplicaci\'on Web}{43}{subsubsection.11.3.1}%
-\contentsline {section}{\numberline {12}Dise\~no}{53}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Dise\~no del M\'odulo Central de Procesamiento}{53}{subsection.12.1}%
-\contentsline {subsubsection}{\numberline {12.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{55}{subsubsection.12.1.1}%
-\contentsline {subsubsection}{\numberline {12.1.2}Dise\~no del Subm\'odulo de Visi\'on Artificial}{60}{subsubsection.12.1.2}%
-\contentsline {subsection}{\numberline {12.2}Dise\~no del M\'odulo de Comunicaciones}{62}{subsection.12.2}%
-\contentsline {subsubsection}{\numberline {12.2.1}Dise\~no del Subm\'odulo de Transmisi\'on de Datos}{63}{subsubsection.12.2.1}%
-\contentsline {subsubsection}{\numberline {12.2.2}Dise\~no del Subm\'odulo de Telemetr\IeC {\'\i }a}{64}{subsubsection.12.2.2}%
-\contentsline {subsubsection}{\numberline {12.2.3}Dise\~no del Subm\'odulo de Cobertura}{65}{subsubsection.12.2.3}%
-\contentsline {subsection}{\numberline {12.3}Dise\~no de la Estaci\'on Base}{66}{subsection.12.3}%
-\contentsline {subsubsection}{\numberline {12.3.1}Dise\~no de la Aplicaci\'on Web}{68}{subsubsection.12.3.1}%
-\contentsline {subsubsection}{\numberline {12.3.2}Dise\~no de la Base de Datos}{74}{subsubsection.12.3.2}%
-\contentsline {section}{\numberline {13}Conclusiones}{78}{section.13}%
-\contentsline {section}{\numberline {14}Referencias}{79}{section.14}%
+\contentsline {section}{\numberline {2}Abstract}{6}{section.2}%
+\contentsline {section}{\numberline {3}Cap\IeC {\'\i }tulo I: Introducci\'on }{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Planteamiento del problema}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Propuesta de soluci\'on}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Alcances}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Escenario de pruebas}{12}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Justificaci\'on}{14}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Metodolog\IeC {\'\i }a}{15}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Objetivos}{16}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Objetivo General}{16}{subsubsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.8}Objetivos Espec\IeC {\'\i }ficos}{16}{subsection.3.8}%
+\contentsline {section}{\numberline {4}Cap\IeC {\'\i }tulo II: Marco de Referencia}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Marco Te\'orico}{17}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Raspberry Pi}{17}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Visi\'on Artificial}{17}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Red Neuronal}{17}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Redes Neuronales Convolucionales}{18}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}\emph {Content Delivery Network}}{20}{subsubsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.6}Est\'andares y Protocolos de Comunicaci\'on Inal\'ambrica}{21}{subsubsection.4.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.7}LTE-M}{21}{subsubsection.4.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.8}Teorema de Shannon-Hartley}{22}{subsubsection.4.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.9}Geolocalizaci\'on}{23}{subsubsection.4.1.9}%
+\contentsline {subsubsection}{\numberline {4.1.10}Funcionamiento}{23}{subsubsection.4.1.10}%
+\contentsline {subsection}{\numberline {4.2}Estado del Arte}{24}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}\emph {Driver Drowsiness Detection Using Machine Learning with Visual Behaviour}}{24}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}\emph {Detection Of Drowsiness And Distraction Of Drivers Using CNN}}{24}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}\emph {Driver Drowsiness Detection System Using Convolutional Neural Networks}}{24}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Dise\~no e implementaci\'on de sistema de visi\'on artificial para alerta y detecci\'on de somnolencia mediante aprendizaje profundo aplicable en conductores de veh\IeC {\'\i }culos}{24}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Sistema de detecci\'on de somnolencia mediante inteligencia artificial en conductores de veh\IeC {\'\i }culos para alertar la ocurrencia de accidentes de tr\'ansito}{25}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Dise\~no de un sistema electr\'onico para detectar la somnolencia en automovilistas por medio de la actividad ocular}{25}{subsubsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.7}Sistema para la detecci\'on del estado de somnolencia en seres humanos, con reconocimiento de patrones }{25}{subsubsection.4.2.7}%
+\contentsline {subsubsection}{\numberline {4.2.8}Sistema de Detecci\'on de Somnolencia}{25}{subsubsection.4.2.8}%
+\contentsline {subsubsection}{\numberline {4.2.9}Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. }{26}{subsubsection.4.2.9}%
+\contentsline {subsubsection}{\numberline {4.2.10}Sistema basado en la detecci\'on y notificaci\'on de somnolencia en conductores de autos }{26}{subsubsection.4.2.10}%
+\contentsline {subsubsection}{\numberline {4.2.11}Detecci\'on de somnolencia para conducci\'on sin accidentes}{26}{subsubsection.4.2.11}%
+\contentsline {subsubsection}{\numberline {4.2.12}Implementaci\'on de un sistema web con geolocalizaci\'on para medir la transaccionalidad del portal ABC de la democracia para el consejo nacional electoral (CNE)}{26}{subsubsection.4.2.12}%
+\contentsline {subsubsection}{\numberline {4.2.13}Dise\~no e implementaci\'on de un sistema de geolocalizaci\'on en interiores para plataforma Android v\IeC {\'\i }a la red enterprise WLAN de la PUCP}{27}{subsubsection.4.2.13}%
+\contentsline {subsubsection}{\numberline {4.2.14}Geolocalizaci\'on con LoRa mediante multilateraci\'on}{27}{subsubsection.4.2.14}%
+\contentsline {subsubsection}{\numberline {4.2.15}Propuesta de un sistema de geolocalizaci\'on y monitoreo v\IeC {\'\i }a GPS/GSM/GPRS aplicado a un puls\'ometro para personas con enfermedades cardiovasculares}{27}{subsubsection.4.2.15}%
+\contentsline {subsubsection}{\numberline {4.2.16}Influencia de un sistema de geolocalizaci\'on en el control y monitoreo de veh\IeC {\'\i }culos con dispositivos GPS en una empresa log\IeC {\'\i }stica}{28}{subsubsection.4.2.16}%
+\contentsline {subsubsection}{\numberline {4.2.17}Dise\~no de la red de acceso LTE en el distrito de Jes\'us Mar\IeC {\'\i }a}{28}{subsubsection.4.2.17}%
+\contentsline {section}{\numberline {5}Cap\IeC {\'\i }tulo III: An\'alisis}{29}{section.5}%
+\contentsline {subsection}{\numberline {5.1}An\'alsis de la Zona Geogr\'afica}{29}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}An\'alsis del M\'odulo Central de Procesamiento}{31}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}An\'alisis del Subm\'odulo Visi\'on Artificial}{32}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}An\'alsis y Elecci\'on del Modelo de Red Neuronal}{33}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}An\'alisis del M\'odulo de Comunicaciones}{36}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}An\'alisis del M\'odulo de Estaci\'on Base}{37}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}An\'alisis de la Aplicaci\'on Web}{43}{subsubsection.5.4.1}%
+\contentsline {section}{\numberline {6}Cap\IeC {\'\i }tulo IV: Dise\~no}{53}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Dise\~no del M\'odulo Central de Procesamiento}{53}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{55}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Dise\~no del Subm\'odulo de Visi\'on Artificial}{60}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Dise\~no del M\'odulo de Comunicaciones}{62}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Dise\~no del Subm\'odulo de Transmisi\'on de Datos}{63}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Dise\~no del Subm\'odulo de Telemetr\IeC {\'\i }a}{64}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Dise\~no del Subm\'odulo de Cobertura}{65}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}Dise\~no de la Estaci\'on Base}{66}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Dise\~no de la Aplicaci\'on Web}{68}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Dise\~no de la Base de Datos}{74}{subsubsection.6.3.2}%
+\contentsline {section}{\numberline {7}Conclusiones}{78}{section.7}%
+\contentsline {section}{\numberline {8}Referencias}{79}{section.8}%
