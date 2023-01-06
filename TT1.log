@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  6 JAN 2023 05:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  6 JAN 2023 05:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -541,8 +541,8 @@ File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box63
 ) (TT1.aux
-LaTeX Info: Redefining \. on input line 26.
-LaTeX Info: Redefining \% on input line 26.
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
 
 
 LaTeX Warning: Label `fig:neurona' multiply defined.
@@ -558,96 +558,6 @@ LaTeX Warning: Label `fig:boost' multiply defined.
 
 
 LaTeX Warning: Label `fig:DiagramadeactividadMEB' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:landmark' multiply defined.
-
-
-LaTeX Warning: Label `fig:landmark' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:DocumentoIncidencias' multiply defined.
 
 )
 \openout1 = `TT1.aux'.
@@ -713,12 +623,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-<imagenes/ipn.jpg, id=295, 180.675pt x 232.87pt>
+<imagenes/ipn.jpg, id=223, 180.675pt x 232.87pt>
 File: imagenes/ipn.jpg Graphic file (type jpg)
 <use imagenes/ipn.jpg>
 Package pdftex.def Info: imagenes/ipn.jpg  used on input line 41.
 (pdftex.def)             Requested size: 81.303pt x 104.79051pt.
-<imagenes/upiita.png, id=296, 722.7pt x 568.1225pt>
+<imagenes/upiita.png, id=224, 722.7pt x 568.1225pt>
 File: imagenes/upiita.png Graphic file (type png)
 <use imagenes/upiita.png>
 Package pdftex.def Info: imagenes/upiita.png  used on input line 43.
@@ -766,44 +676,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/unknown/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./imagenes
-/ipn.jpg> <./imagenes/upiita.png>] (TT1.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+/ipn.jpg> <./imagenes/upiita.png>] (TT1.toc)
+\tf@toc=\write4
+\openout4 = `TT1.toc'.
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 ...tores de autos }{25}{subsubsection.4.2.10}
-                                                  % [1]
-Overfull \hbox (5.12357pt too wide) in paragraph at lines 42--42
- [][] [][][]\OT1/lmr/m/n/12 Propuesta de un sis-te-ma de geo-lo-ca-li-za-ci^^So
-n y mo-ni-to-reo v^^S^^Pa GPS/GSM/GPRS 
- []
-
-[2])
-\tf@toc=\write4
-\openout4 = `TT1.toc'.
-
- [3] (TT1.lof
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-
-
-LaTeX Warning: Citation `Top-Down' on page 4 undefined on input line 3.
-
-[4])
+l.90 \newpage
+              [1] (TT1.lof)
 \tf@lof=\write5
 \openout5 = `TT1.lof'.
 
- [5] (TT1.lot
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
+ [2] (TT1.lot)
 \tf@lot=\write6
 \openout6 = `TT1.lot'.
 
- [6]
+ [3]
 Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
@@ -813,15 +704,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-[7]
+[4]
+
+LaTeX Warning: Citation `WHO' on page 5 undefined on input line 113.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
 
+LaTeX Warning: Citation `IMT' on page 5 undefined on input line 115.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
+
+
+LaTeX Warning: Citation `IMT' on page 5 undefined on input line 117.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 117--118
@@ -834,6 +735,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
  []
 
 
+LaTeX Warning: Citation `TastreoSatelital' on page 5 undefined on input line 12
+1.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
@@ -843,7 +748,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-[8]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
@@ -859,6 +764,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--136
  []
 
 
+LaTeX Warning: Citation `Sistemasdesomnolencia' on page 6 undefined on input li
+ne 137.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
@@ -869,16 +778,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--141
  []
 
 
+LaTeX Warning: Citation `Sistemasdesomnolencia' on page 6 undefined on input li
+ne 142.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
+
+
+LaTeX Warning: Citation `Sistemasdesomnolencia' on page 6 undefined on input li
+ne 144.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
-[9]
+[6]
+
+LaTeX Warning: Citation `Sistemasdesomnolencia' on page 7 undefined on input li
+ne 146.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
@@ -898,14 +820,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[10]
-<imagenes/propuestasolucion.jpg, id=664, 929.72343pt x 549.55313pt>
+[7]
+<imagenes/propuestasolucion.jpg, id=267, 929.72343pt x 549.55313pt>
 File: imagenes/propuestasolucion.jpg Graphic file (type jpg)
 <use imagenes/propuestasolucion.jpg>
 Package pdftex.def Info: imagenes/propuestasolucion.jpg  used on input line 175
 .
 (pdftex.def)             Requested size: 371.88278pt x 219.81735pt.
- [11 <./imagenes/propuestasolucion.jpg>]
+ [8 <./imagenes/propuestasolucion.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
@@ -940,7 +862,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
 
-[12]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
@@ -956,36 +878,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 239--240
  []
 
 
-LaTeX Warning: Citation `Top-Down' on page 13 undefined on input line 254.
+LaTeX Warning: Citation `Top-Down' on page 10 undefined on input line 254.
 
-<imagenes/Top-down.jpg, id=674, 812.03375pt x 261.97874pt>
+<imagenes/Top-down.jpg, id=277, 812.03375pt x 261.97874pt>
 File: imagenes/Top-down.jpg Graphic file (type jpg)
 <use imagenes/Top-down.jpg>
 Package pdftex.def Info: imagenes/Top-down.jpg  used on input line 258.
 (pdftex.def)             Requested size: 406.01588pt x 130.98904pt.
 
-LaTeX Warning: Citation `Top-Down' on page 13 undefined on input line 259.
+LaTeX Warning: Citation `Top-Down' on page 10 undefined on input line 259.
 
-[13] [14 <./imagenes/Top-down.jpg>] [15]
-<imagenes/neurona.png, id=691, 490.83376pt x 212.29312pt>
+[10]
+
+LaTeX Warning: Citation `kendall' on page 11 undefined on input line 268.
+
+[11 <./imagenes/Top-down.jpg>] [12]
+
+LaTeX Warning: Citation `vision' on page 13 undefined on input line 312.
+
+
+LaTeX Warning: Citation `vision' on page 13 undefined on input line 313.
+
+<imagenes/neurona.png, id=292, 490.83376pt x 212.29312pt>
 File: imagenes/neurona.png Graphic file (type png)
 <use imagenes/neurona.png>
 Package pdftex.def Info: imagenes/neurona.png  used on input line 322.
 (pdftex.def)             Requested size: 245.41628pt x 106.1463pt.
- [16 <./imagenes/neurona.png>]
-<imagenes/cnn2.jpg, id=701, 1003.75pt x 341.275pt>
+[13 <./imagenes/neurona.png>]
+
+LaTeX Warning: Citation `Referencia0' on page 14 undefined on input line 348.
+
+<imagenes/cnn2.jpg, id=301, 1003.75pt x 341.275pt>
 File: imagenes/cnn2.jpg Graphic file (type jpg)
 <use imagenes/cnn2.jpg>
 Package pdftex.def Info: imagenes/cnn2.jpg  used on input line 370.
 (pdftex.def)             Requested size: 451.68333pt x 153.57233pt.
- [17]
-<imagenes/maxpool.png, id=715, 164.25pt x 68.547pt>
+[14]
+<imagenes/maxpool.png, id=314, 164.25pt x 68.547pt>
 File: imagenes/maxpool.png Graphic file (type png)
 <use imagenes/maxpool.png>
 Package pdftex.def Info: imagenes/maxpool.png  used on input line 389.
 (pdftex.def)             Requested size: 164.24959pt x 68.54681pt.
+ [15 <./imagenes/cnn2.jpg> <./imagenes/maxpool.png>]
 
-[18 <./imagenes/cnn2.jpg> <./imagenes/maxpool.png>]
+LaTeX Warning: Citation `viola' on page 16 undefined on input line 413.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
  []
@@ -994,23 +932,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 413--414
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
 d on input line 420.
 
-<imagenes/clasificadores.png, id=723, 994.46532pt x 234.1247pt>
+<imagenes/clasificadores.png, id=322, 994.46532pt x 234.1247pt>
 File: imagenes/clasificadores.png Graphic file (type png)
 <use imagenes/clasificadores.png>
 Package pdftex.def Info: imagenes/clasificadores.png  used on input line 429.
 (pdftex.def)             Requested size: 497.23145pt x 117.06206pt.
-[19 <./imagenes/clasificadores.png>]
-<imagenes/cdn-diagram.png, id=732, 722.7pt x 406.51875pt>
+
+LaTeX Warning: Citation `viola' on page 16 undefined on input line 434.
+
+[16 <./imagenes/clasificadores.png>]
+<imagenes/cdn-diagram.png, id=330, 722.7pt x 406.51875pt>
 File: imagenes/cdn-diagram.png Graphic file (type png)
 <use imagenes/cdn-diagram.png>
 Package pdftex.def Info: imagenes/cdn-diagram.png  used on input line 442.
 (pdftex.def)             Requested size: 361.3491pt x 203.25887pt.
 
 
-LaTeX Warning: Citation `Referencian1' on page 20 undefined on input line 455.
+LaTeX Warning: Citation `Referencian1' on page 17 undefined on input line 455.
 
 
-LaTeX Warning: Citation `Referencian2' on page 20 undefined on input line 455.
+LaTeX Warning: Citation `Referencian2' on page 17 undefined on input line 455.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 459--460
@@ -1018,49 +959,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 459--460
  []
 
 
+LaTeX Warning: Citation `Referencian5' on page 17 undefined on input line 463.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 461--464
 
  []
 
-[20 <./imagenes/cdn-diagram.png>]
+[17 <./imagenes/cdn-diagram.png>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 67.
 
 (C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
+
+LaTeX Warning: Citation `Referencian6' on page 18 undefined on input line 477.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 485--486
 
  []
 
-[21]
 
-LaTeX Warning: Citation `Referencian9' on page 22 undefined on input line 515.
+LaTeX Warning: Citation `Referencian7' on page 18 undefined on input line 487.
 
+[18]
 
-LaTeX Warning: Citation `Referencian10' on page 22 undefined on input line 517.
-
-
-
-LaTeX Warning: Citation `Referencian11' on page 22 undefined on input line 525.
+LaTeX Warning: Citation `Referencian9' on page 19 undefined on input line 515.
 
 
-
-LaTeX Warning: Citation `Referencian12' on page 22 undefined on input line 532.
+LaTeX Warning: Citation `Referencian10' on page 19 undefined on input line 517.
 
 
 
-LaTeX Warning: Citation `Referencian13' on page 22 undefined on input line 535.
+LaTeX Warning: Citation `Referencian11' on page 19 undefined on input line 525.
 
 
-[22] [23] [24] [25]
+
+LaTeX Warning: Citation `Referencian12' on page 19 undefined on input line 532.
+
+
+
+LaTeX Warning: Citation `Referencian13' on page 19 undefined on input line 535.
+
+
+[19] [20] [21] [22]
 Overfull \hbox (4.54134pt too wide) in paragraph at lines 647--647
 |[]\OT1/lmr/bx/n/12 Propuesta de un sis-te-ma de geo-lo-ca-li-za-ci^^Son y mo-n
 i-to-reo v^^S^^Pa GPS/GSM/GPRS
  []
 
-[26] [27]
-<imagenes/topdowngeneral.png, id=774, 1145.27875pt x 300.12125pt>
+[23] [24]
+<imagenes/topdowngeneral.png, id=368, 1145.27875pt x 300.12125pt>
 File: imagenes/topdowngeneral.png Graphic file (type png)
 <use imagenes/topdowngeneral.png>
 Package pdftex.def Info: imagenes/topdowngeneral.png  used on input line 668.
@@ -1110,40 +1061,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 689--690
 
  []
 
-[28 <./imagenes/topdowngeneral.png>]
+[25 <./imagenes/topdowngeneral.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 692--693
 
  []
 
-<imagenes/MapaCoberturaMexico.jpg, id=780, 907.13907pt x 568.37344pt>
+<imagenes/MapaCoberturaMexico.jpg, id=375, 907.13907pt x 568.37344pt>
 File: imagenes/MapaCoberturaMexico.jpg Graphic file (type jpg)
 <use imagenes/MapaCoberturaMexico.jpg>
 Package pdftex.def Info: imagenes/MapaCoberturaMexico.jpg  used on input line 7
 01.
 (pdftex.def)             Requested size: 453.56842pt x 284.18602pt.
-[29 <./imagenes/MapaCoberturaMexico.jpg>]
-<imagenes/CoberturaCDMX.jpg, id=786, 392.96812pt x 347.04657pt>
+
+LaTeX Warning: Citation `CoberturaNacional' on page 26 undefined on input line 
+702.
+
+[26 <./imagenes/MapaCoberturaMexico.jpg>]
+<imagenes/CoberturaCDMX.jpg, id=381, 392.96812pt x 347.04657pt>
 File: imagenes/CoberturaCDMX.jpg Graphic file (type jpg)
 <use imagenes/CoberturaCDMX.jpg>
 Package pdftex.def Info: imagenes/CoberturaCDMX.jpg  used on input line 709.
 (pdftex.def)             Requested size: 353.66803pt x 312.33902pt.
+
+
+LaTeX Warning: Citation `CoberturaNacional' on page 27 undefined on input line 
+710.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 717--718
 
  []
 
 
+LaTeX Warning: Citation `algoritmosdeaprendizaje' on page 27 undefined on input
+ line 719.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 719--720
 
  []
 
-[30 <./imagenes/CoberturaCDMX.jpg>]
+[27 <./imagenes/CoberturaCDMX.jpg>]
+
+LaTeX Warning: Citation `algoritmosdeaprendizaje' on page 28 undefined on input
+ line 721.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 721--722
 
  []
 
 
-LaTeX Warning: Citation `filtroshaar' on page 31 undefined on input line 723.
+LaTeX Warning: Citation `filtroshaar' on page 28 undefined on input line 723.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 723--724
@@ -1151,7 +1120,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 723--724
  []
 
 
-LaTeX Warning: Citation `aprendizajeprofundo' on page 31 undefined on input lin
+LaTeX Warning: Citation `aprendizajeprofundo' on page 28 undefined on input lin
 e 725.
 
 
@@ -1368,12 +1337,12 @@ Underfull \hbox (badness 1331) in paragraph at lines 743--744
 []|\OT1/lmr/m/n/12 Puede dis-tin-guir da-tos
  []
 
-<imagenes/V2.jpg, id=795, 328.22626pt x 244.915pt>
+<imagenes/V2.jpg, id=387, 328.22626pt x 244.915pt>
 File: imagenes/V2.jpg Graphic file (type jpg)
 <use imagenes/V2.jpg>
 Package pdftex.def Info: imagenes/V2.jpg  used on input line 759.
 (pdftex.def)             Requested size: 164.11272pt x 122.45718pt.
-[31] [32]
+[28] [29]
 Underfull \hbox (badness 10000) in paragraph at lines 766--767
 
  []
@@ -1387,12 +1356,12 @@ Overfull \hbox (350.84848pt too wide) in paragraph at lines 795--805
 [][] 
  []
 
-[33 <./imagenes/V2.jpg>]
+[30 <./imagenes/V2.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 811--813
 
  []
 
-<imagenes/programaclasico.png, id=809, 770.88pt x 578.16pt>
+<imagenes/programaclasico.png, id=402, 770.88pt x 578.16pt>
 File: imagenes/programaclasico.png Graphic file (type png)
 <use imagenes/programaclasico.png>
 Package pdftex.def Info: imagenes/programaclasico.png  used on input line 814.
@@ -1407,7 +1376,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 822--823
 
  []
 
-[34 <./imagenes/programaclasico.png>]
+[31 <./imagenes/programaclasico.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 824--825
 
  []
@@ -1422,7 +1391,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 842--843
 
  []
 
-[35]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 848--849
 
  []
@@ -1435,7 +1404,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 857--860
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[36]
+[33]
 LaTeX Font Info:    Trying to load font information for OML+lmr on input line 8
 99.
  (C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmr.fd
@@ -1448,7 +1417,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 911--912
 
  []
 
-[37]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 948--949
 
  []
@@ -1463,18 +1432,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 952--953
 
  []
 
-[38]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 960--961
 
  []
 
-[39]
-<imagenes/lte-mcobertura.png, id=837, 459.96844pt x 348.55219pt>
+[36]
+<imagenes/lte-mcobertura.png, id=434, 459.96844pt x 348.55219pt>
 File: imagenes/lte-mcobertura.png Graphic file (type png)
 <use imagenes/lte-mcobertura.png>
 Package pdftex.def Info: imagenes/lte-mcobertura.png  used on input line 1003.
 (pdftex.def)             Requested size: 229.98366pt x 174.27565pt.
- [40 <./imagenes/lte-mcobertura.png>]
+ [37 <./imagenes/lte-mcobertura.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1019--1020
 
  []
@@ -1687,44 +1656,24 @@ Overfull \hbox (2.32904pt too wide) in paragraph at lines 1023--1035
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[41] [42]
-<imagenes/amplify.png, id=854, 821.31844pt x 335.00156pt>
+
+LaTeX Warning: Citation `js' on page 38 undefined on input line 1043.
+
+[38] [39]
+<imagenes/amplify.png, id=450, 821.31844pt x 335.00156pt>
 File: imagenes/amplify.png Graphic file (type png)
 <use imagenes/amplify.png>
 Package pdftex.def Info: imagenes/amplify.png  used on input line 1124.
 (pdftex.def)             Requested size: 410.6582pt x 167.50037pt.
- [43 <./imagenes/amplify.png>]
-<imagenes/respuesta.png, id=860, 376.40625pt x 96.36pt>
+ [40 <./imagenes/amplify.png>]
+<imagenes/respuesta.png, id=457, 376.40625pt x 96.36pt>
 File: imagenes/respuesta.png Graphic file (type png)
 <use imagenes/respuesta.png>
 Package pdftex.def Info: imagenes/respuesta.png  used on input line 1155.
 (pdftex.def)             Requested size: 188.20265pt x 48.17987pt.
- [44 <./imagenes/respuesta.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[45]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-)
+ [41 <./imagenes/respuesta.png>])
 Runaway argument?
-{\begin {tabular}[c]{p{0.7\linewidth }@{}l@{}}\textbf {Se almacenará \ETC.
+{\begin {tabular}[c]{p{0.7\linewidth }@{}l@{}}\textbf {Solución del R\ETC.
 ! File ended while scanning use of \multicolumn.
 <inserted text> 
                 \par 
@@ -1742,11 +1691,11 @@ you'd better type `E' or `X' now and fix your file.
 
  
 Here is how much of TeX's memory you used:
- 14417 strings out of 478338
- 236007 string characters out of 2835756
- 604762 words of memory out of 3000000
- 32321 multiletter control sequences out of 15000+600000
+ 14226 strings out of 478338
+ 233728 string characters out of 2835756
+ 595750 words of memory out of 3000000
+ 32251 multiletter control sequences out of 15000+600000
  529833 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,17n,77p,1468b,784s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,17n,77p,1468b,665s stack positions out of 10000i,1000n,20000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
