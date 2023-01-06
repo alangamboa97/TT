@@ -350,7 +350,7 @@ y_j(t)= F(y_j(t-1), z_j(t)) = F(y_j(t-1),net_j(t))
 
 \subsubsection{Redes Neuronales Convolucionales}
 
-Las redes neuronales convolucionales, tambien conocidas como \emph{redes convolutivas}, son redes neuronales artificiales que se utilizan comunmente para resolver problemas que requieren el procesamiento de imágenes. Sus casos de uso más frecuentes van desde la detección de objetos, hasta generar una descripción textual del contenido de una imagen. Particularmente, sus entradas y salidas pueden ser estructuradas. Esto quiere decir, que en lugar de recibir un vector de entradas, se puede recibir un vector (1D), matriz (2D) o tensor($>2D$). En el caso de señales bidimensionales, las entradas pueden pertenecer a los pixeles de una imágen capturada por una cámara.
+Las redes neuronales convolucionales, tambien conocidas como \emph{redes convolutivas}, son redes neuronales artificiales que se utilizan comunmente para resolver problemas que requieren el procesamiento de imágenes. Sus casos de uso más frecuentes van desde la detección de objetos, hasta generar una descripción textual del contenido de una imagen. Particularmente, sus entradas y salidas pueden ser estructuradas. Esto quiere decir, que en lugar de recibir un vector de entradas, se puede recibir un vector (1D), matriz (2D) o tensor($>2D$). En el caso de señales bidimensionales, las entradas pueden pertenecer a los pixeles de una imágen capturada por una cámara{Referencia0}.
 
 Como su nombre lo indica, esta red neuronal utiliza la operación de convolución. La convolución es una operación matemática que se realiza sobre dos funciones para producir una tercera que se suele interpretar versión modificada (filtrada) de las funciones originales.\cite{Referencia0}
 
@@ -417,7 +417,7 @@ Flattening consiste en convertir los datos de salida de la capa convolucional a 
 
 \end{itemize}
 \subsubsection{Cascadas Haar}
-Existen técnicas de visión artificial que permiten el reconocimiento de objetos en una imágen o cuadros en un video. Entre los que más destacan, se encuentran las Cascadas Haar. Esta técnica fue presentada por primera vez por Viola y Jones\cite{viola} Las Cascadas Haar implica entrenar una serie de clasificadores simples  y luego combinar su salida.\\
+Existen técnicas de visión artificial que permiten el reconocimiento de objetos en una imágen o cuadros en un video. Entre los que más destacan, se encuentran las Cascadas Haar. Esta técnica fue presentada por primera vez por Viola y Jones\cite{viola}. Las Cascadas Haar implica entrenar una serie de clasificadores simples  y luego combinar su salida.\\
 
 Posteiormente estas salidas de transforman en un \emph{clasificador h(x)} como una suma de valores de \emph{aprendices débiles}:
 
@@ -438,7 +438,7 @@ que también son conocidos como \emph{desicion stumps} consideradas como la forma
  \label{fig:boost}
 \end{center}
 
-Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles.
+Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles\cite{viola}.
 
 
 \subsubsection{\emph{Content Delivery Network}}
@@ -2687,7 +2687,7 @@ Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, s
 
 
 \newpage
-\section{Referencias}
+
 %\bibliographystyle{apacite}
 
 \begin{thebibliography}{100} %10 significa el número máximo de items
@@ -2719,13 +2719,8 @@ using a Boosted Cascade of Simple Features}. IEEE International Conference on Co
 
 \bibitem{algoritmosdeaprendizaje} https://www.alteryx.com/es-419/glossary/supervised-vs-unsupervised-learning\#:~:text=Hay\%20una\%20diferencia\%20clave\%20entre,etiquetados\%20con\%20la\%20respuesta\%20correcta
 
-\bibitem{filtroshaar} 
 
-https://carlosjuliopardoblog.wordpress.com/2017/05/12/filtros-haar-deteccion-de-rostros/ 
 
-\bibitem{aprendizajeprofundo}  
-
-https://www.oracle.com/mx/artificial-intelligence/machine-learning/what-is-deep-learning/ 
 
 
 \bibitem{conapra} M. Paez y Emilio Abarca. \emph{Resumen Boletines}, Instituto Mexicano del Transporte.
@@ -2781,11 +2776,21 @@ FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com
 
 \bibitem{Referencian8}S{\'a}nchez Rosado, David,\emph{NB-IoT tecnolog{\'\i}as celulares narrow-band: an{\'a}lisis pr{\'a}ctico de las soluciones de Telef{\'o}nica y Vodafone},2019
 
+\bibitem{Referencian14} M. Cid. \emph{Categorías LTE o 4G: qué son y qué velocidades máximas ofrece cada una de ellas.} Xataka Móvil - Teléfonos móviles, tarifas, operadores de telefonía. https://www.xatakamovil.com/conectividad/categorias-lte-o-4g-que-son-y-que-velocidades-maximas-ofrece-cada-una-de-ellas
+
+\bibitem{Referencian15}\emph{¡No aceleres! Estos son los nuevos límites de velocidad 2022 en México.} ADNPolítico. https://politica.expansion.mx/mexico/2022/05/19/estos-son-nuevos-limites-velocidad-2022 
+
+\bibitem{Referencian16}\emph{MP4 - EcuRed.} EcuRed. https://www.ecured.cu/MP4\#:~:text=Un\%20archivo\%20de\%20MP4\%20lleva\%20sonido\%20y\%20video,de\%2020\%20segundos\%20de\%20clips\%20de\%20audio\%20(MP4/20s).
+
+\bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
+
+
+
+
 
 \end{thebibliography}
 
 \end{document}
 
-\newpage
-\section{Anexos}
+
 
