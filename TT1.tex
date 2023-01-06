@@ -10,10 +10,8 @@
 \usepackage{adjustbox}
 \usepackage{titlesec}
 \usepackage{float}
-
 \marginsize{2cm}{2cm}{1cm}{1cm}
 \usepackage{fancyhdr}
-
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\footnotesize UPIITA}
@@ -34,57 +32,8 @@
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\listtablename}{Índice de tablas}
 
-\begin{titlepage}
-
-\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
-
-\includegraphics[scale=0.45]{imagenes/ipn}
-\hspace{10cm}
-\includegraphics[scale=0.15]{imagenes/upiita}
-\\
 
 
-\begin{center}
-
-
-\textsc{\Large ``Sistema para el monitoreo, detección y alerta de somnolencia del conductor mediante visión artificial, comunicación inalámbrica y geolocalización''}\\[0.5cm]
-
-
-
-\HRule \\[0.4cm]
-{ \huge \bfseries Proyecto Terminal 1}\\[0.4cm]
-
-\HRule \\[1.5cm]
-
-
-
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
-\emph{\\Autores:}\\
-Alan Eduardo Gamboa Del Ángel\\
-Maite Paulette Díaz Martínez\\
-Nilsen Alfaro Parra\\
-
-%Grupo:4MM6\\
-\end{flushleft}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{flushright} \large
-\emph{Asesores:} \\
-M.en C. Niels Henrik Navarrete Manzanilla\\
-Dr. Rodolfo Vera Amaro\\
-
-\end{flushright}
-\end{minipage}
-
-\vfill
-
-06 de Enero 2023
-
-\end{center}
-
-
-\end{titlepage}
 \newpage
 \tableofcontents
 \newpage
@@ -1195,7 +1144,7 @@ Después de haber analizado los distintos proveedores de alojamiento así como sus
 \quad $\bullet$ Antena Sixfab
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de los periféricos, se comprobará que funcionen de manera correcta, en caso contrario se enviará una alerta al módulo de Estación Base.\end{tabular}                                                    \\ \hline
+Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de los periféricos, se comprobará que funcionen de manera correcta, en caso contrario se enviará una alerta al módulo de Estación Base.\end{tabular}}                                                    \\ \hline
 \end{tabular}
 \caption{RF01- Verificar estado funcional de periféricos}
 \end{table}
@@ -1245,7 +1194,7 @@ Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de l
 \quad $\bullet$ MongoDB
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular}                                                    \\ \hline
+Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1264,7 +1213,7 @@ Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular
 \quad $\bullet$ Cámara Digital
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando el software de OpenCV el sistema podrá detectar el rostro del conductor.\end{tabular}                                                    \\ \hline
+Utilizando el software de OpenCV el sistema podrá detectar el rostro del conductor.\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1282,7 +1231,7 @@ Utilizando el software de OpenCV el sistema podrá detectar el rostro del conduct
 \quad $\bullet$ Cámara Digital
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando el software de OpenCV el sistema podrá detectar el rostro del conductor.\end{tabular}                                                    \\ \hline
+Utilizando el software de OpenCV el sistema podrá detectar el rostro del conductor.\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1294,14 +1243,14 @@ Utilizando el software de OpenCV el sistema podrá detectar el rostro del conduct
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Detectar signos de somnolencia}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Detectar signos de somnolencia}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema detectará el estado de los ojos y la boca, y analizará si estos corresponden a los signos de somnolencia del conductor..\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ MOR\\
 \quad $\bullet$ Red Neuronal Convolucional
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El sistema obtendrá el estado de somnolencia del conductor utilizando una red neuronal convolucional. \end{tabular}                                                    \\ \hline
+El sistema obtendrá el estado de somnolencia del conductor utilizando una red neuronal convolucional. \end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1322,7 +1271,7 @@ El sistema obtendrá el estado de somnolencia del conductor utilizando una red ne
 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El módulo Central de procesamiento activará la alarma al recibir la señal de alerta. \end{tabular}                                                   \\ \hline
+El módulo Central de procesamiento activará la alarma al recibir la señal de alerta. \end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1341,7 +1290,7 @@ El módulo Central de procesamiento activará la alarma al recibir la señal de ale
 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El módulo Central de procesamiento activará la alarma al recibir la señal de alerta.\end{tabular}                                                   \\ \hline
+El módulo Central de procesamiento activará la alarma al recibir la señal de alerta.\end{tabular}}                                                    \\ \hline
 \end{tabular}
 \end{table}
 
@@ -1594,7 +1543,7 @@ El sistema contará con los siguientes requerimientos:   \\
 
 \textbf{Requerimientos Funcionales del Módulo de Estación Base}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{RF01- Guardar Incidencia }
 \begin{tabular}{|ll|}
@@ -1980,7 +1929,8 @@ El administrador podrá consultar cada uno de los perfiles de los conductores reg
 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El sistema permitirá al administrador consultar la ubicación de los conductores en tiempo real. Para esto el administrador deberá de ingresar previamente al perfil del conductor del cual desea consultar dicha ubicación.\end{tabular}}                                                    \\ \hline
+El sistema permitirá al administrador consultar la ubicación de los conductores en tiempo real. Para esto el administrador deberá de ingresar previamente al perfil del conductor del cual desea consultar dicha ubicación.
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
