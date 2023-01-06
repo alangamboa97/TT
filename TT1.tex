@@ -651,7 +651,7 @@ Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de l
 
 
 \newpage
-\subsubsection{Análisis del Submódulo Visión Artificial}
+p\subsubsection{Análisis del Submódulo Visión Artificial}
 \begin{itemize}
 
 
@@ -700,6 +700,99 @@ Utilizando el software de OpenCV y .\end{tabular}}                              
 
 
 \newpage
+
+\subsubsection{Análsis y Elección del Modelo de Red Neuronal}
+
+Debido a que el presente proyecto se plantea resolver un problema de clasificación, a continuación se analizará que tipos de modelos de redes neuronales son los más aptos para la resolución de los mismos.
+
+\begin{itemize}
+\item Redes Neuronales Unicapa
+En el caso mas simple de una red neuronal, las neuronas de la capa de entrada se limitan a recibir las señales de entrada. Estas se encargan de redistribuir estas señales a las neuronas de la capa de salida. A esto se le llama una red neuronal unicapa.
+
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/unicapa}
+\captionof{figure}{Redes Unicapa}
+ \label{fig:boost}
+\end{center}
+
+
+Utilizando al herramiente de \emph{PlayGround Tensorflow} podemos observar la eficacia de este tipo de redes al resolver problemas de clasifiación.
+Si se le pide a esta Red Neuronal que sombree el área del color de los puntos mostrados dentro de la gráfica, se puede observar que es incapaz de realizarlo de manera correcta.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/unicapa2}
+\captionof{figure}{Redes Unicapa}
+ \label{fig:boost}
+\end{center}
+
+
+\item Redes Neuronales Multicapa
+
+
+Existe otro tipo de módelo de red neuronal que utiliza capas intermedias entre la capa de salida y la capa de entrada, a estas redes se les conoce como redes profundas o redes multicapa.
+
+\begin{center}
+  \includegraphics[scale=0.7]{imagenes/multicapa}
+\captionof{figure}{Redes Unicapa}
+ \label{fig:boost}
+\end{center}
+
+En la siguiente figura se puede apreciar que las redes neuronales multicapa tienen una eficiencia mayor a la hora de realizar el mismo problema de clasificación de puntos.Sin embargo, aún no puede resolver este problema correctamente. 
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/capasocultas}
+\captionof{figure}{Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una}
+ \label{fig:boost}
+\end{center}
+
+\item \textbf{Funciones de Activación}
+
+Una función de activación es un filtro o umbral que modifica o impone límites en los valores resultantes de una capa en una red neuronal. A continucación se muestran los resultados al resolver el mismo problema de clasificación de puntos de colores utilizando distintas funciones de activación.
+
+\begin{itemize}
+\item \textbf{ReLU}
+Esta función de activación consiste en anular los valores de entrada negativos y conservar los valores positivos con sus valores originales.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/funrelu}
+\captionof{figure}{Representación Gráfica de la Función ReLu}
+ \label{fig:boost}
+\end{center}
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/relu}
+\captionof{figure}{Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la función de Activación ReLu}
+ \label{fig:boost}
+\end{center}
+
+\item \textbf{Tanh}
+La función de la tangente hiperbólica toma cualquier valor real como valores de entrada y de salida en el rango de -1 a 1. Cuanto mayor sea la entrada, más cerca estará del valor de salida de 1.0. Por otro lado, mientras sea menor sea la entrada, el valor de salida se aproximará mas a -1.0
+
+
+\begin{center}
+  \includegraphics[scale=0.2]{imagenes/funtanh}
+\captionof{figure}{Representación gráfica de la función Tangente Hiperbólica}
+ \label{fig:boost}
+\end{center}
+
+
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/tanh}
+\captionof{figure}{Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la función de Activación Tanh}
+ \label{fig:boost}
+\end{center}
+
+\end{itemize}
+
+\end{itemize}
+
+
 \subsection{Análisis del Módulo de Comunicaciones}
 \newpage
 
@@ -854,7 +947,7 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 \quad $\bullet$ Amazon Cognito 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
-El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+El usuario administrador podrá iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
 \caption{Caso de Uso 01 }
 \end{table}
@@ -867,9 +960,9 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Guardar Video}                                             \\ \hline
 \multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Módulo Central de Procesamiento, Módulo de Estación Base}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se almacenarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
 \\
-\quad $\bullet$ Amazon Cognito 
+\quad $\bullet$ Haber Iniciado Sesión Previamente
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
