@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  6 JAN 2023 04:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  6 JAN 2023 04:54
 entering extended mode
 **./TT1.tex
 (TT1.tex
@@ -1736,11 +1736,8 @@ File: imagenes/tanh.jpg Graphic file (type jpg)
 <use imagenes/tanh.jpg>
 Package pdftex.def Info: imagenes/tanh.jpg  used on input line 1361.
 (pdftex.def)             Requested size: 436.3224pt x 221.32295pt.
- [50 <./imagenes/funtanh.png> <./imagenes/tanh.jpg>]
-
-LaTeX Warning: Reference `tsh' on page 51 undefined on input line 1406.
-
-[51] [52]
+ [50 <./imagenes/funtanh.png> <./imagenes/tanh.jpg>] [51]
+[52]
 <imagenes/handover.png, id=922, 813.0375pt x 589.4522pt>
 File: imagenes/handover.png Graphic file (type png)
 <use imagenes/handover.png>
@@ -2178,10 +2175,10 @@ Package rerunfilecheck Info: File `TT1.out' has not changed.
 (rerunfilecheck)             Checksum: CC6BE033D27E620AE626CB54FFE47AAD;23057.
  ) 
 Here is how much of TeX's memory you used:
- 14349 strings out of 478927
- 225869 string characters out of 2852536
+ 14348 strings out of 478927
+ 225864 string characters out of 2852536
  554314 words of memory out of 3000000
- 31561 multiletter control sequences out of 15000+600000
+ 31560 multiletter control sequences out of 15000+600000
  464004 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,18n,66p,1468b,687s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2204,7 +2201,7 @@ alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/al
 ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/al
 ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/al
 ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on TT1.pdf (98 pages, 4761252 bytes).
+Output written on TT1.pdf (98 pages, 4761191 bytes).
 PDF statistics:
  1327 PDF objects out of 1440 (max. 8388607)
  319 named destinations out of 1000 (max. 500000)
