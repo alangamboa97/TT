@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  5 JAN 2023 19:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  5 JAN 2023 20:02
 entering extended mode
 **./TT1.tex
 (TT1.tex
@@ -1383,7 +1383,7 @@ Package rerunfilecheck Warning: File `TT1.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `TT1.out':
-(rerunfilecheck)             Before: 029FAD5BD34526CE67CB5CAC5CB5F263;18730
+(rerunfilecheck)             Before: 25ACC6E7C4BAC4D0C5B31ABBFEFD423A;18657
 (rerunfilecheck)             After:  D7EC9D6976AD9BE0121B250CB6041B7B;18597.
  ) 
 Here is how much of TeX's memory you used:
@@ -1413,7 +1413,7 @@ alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/al
 ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/al
 ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/al
 ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on TT1.pdf (81 pages, 3979397 bytes).
+Output written on TT1.pdf (81 pages, 3979243 bytes).
 PDF statistics:
  1114 PDF objects out of 1200 (max. 8388607)
  273 named destinations out of 1000 (max. 500000)
