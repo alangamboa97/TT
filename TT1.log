@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  6 JAN 2023 04:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  6 JAN 2023 04:11
 entering extended mode
 **./TT1.tex
 (TT1.tex
@@ -2165,10 +2165,10 @@ Package rerunfilecheck Info: File `TT1.out' has not changed.
 (rerunfilecheck)             Checksum: 447207DF510914B15E2377079B565BBB;23156.
  ) 
 Here is how much of TeX's memory you used:
- 14366 strings out of 478927
- 226466 string characters out of 2852536
+ 14367 strings out of 478927
+ 226481 string characters out of 2852536
  554310 words of memory out of 3000000
- 31574 multiletter control sequences out of 15000+600000
+ 31575 multiletter control sequences out of 15000+600000
  464004 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,18n,66p,1468b,687s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2191,7 +2191,7 @@ alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/al
 ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/al
 ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/al
 ang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on TT1.pdf (101 pages, 4786002 bytes).
+Output written on TT1.pdf (101 pages, 4786283 bytes).
 PDF statistics:
  1343 PDF objects out of 1440 (max. 8388607)
  322 named destinations out of 1000 (max. 500000)
