@@ -774,9 +774,8 @@ MATLAB también viene con algunas restricciones. El lenguaje de programación no e
 
 \item \textbf{Javascript}
 
-JavaScript puede no ser el lenguaje principal para desarrollo en Inteligencia Artificial, pero es gran complemento para utilizar herramientas relacionadas con Machine Learning, especialmente visualización de datos o procesos,
-El hecho de que TensorFlow.js se ejecute dentro del navegador abre una gama de posibilidades interesantes tanto para empresas como para desarrolladores.
-Como los navegadores son un espacio interactivo: ofrece acceso a varios sensores, incluidas cámaras web y micrófonos, que pueden proporcionar imágenes y sonidos como entrada a cualquier modelo de aprendizaje automático.
+JavaScript puede no ser el lenguaje principal para desarrollo en Inteligencia Artificial, pero es gran complemento para utilizar herramientas relacionadas con Machine Learning, especialmente visualización de datos o procesos.
+Herramientas como TensorflowJs permiten el ofrece acceso a varios sensores, incluidas cámaras web y micrófonos, que pueden proporcionar imágenes y sonidos como entrada a cualquier modelo de aprendizaje automático.
 A pesar de todos los aspectos positivos, TensorFlow.js no tiene acceso predeterminado al sistema de archivos en el entorno del host del navegador. Esto limita los recursos de datos disponibles y puede imponer restricciones en el tamaño de los archivos y procesos.\\
 
 
@@ -801,7 +800,7 @@ Javascript        & Moderada             & Moderada              & Baja         
 
 \end{table}
 
-En conclusión, Python es un lenguaje que permite trabajar con más de un paradigma (programación estructurada y orientada a objetos).
+Python es un lenguaje que permite trabajar con más de un paradigma (programación estructurada y orientada a objetos).
 Normalmente cuando se programa un script sencillo, solo se el paradigma de programación estructurada (Secuencia, selección e iteración). Sin embargo cuando se requiere desarollar un proyecto  más complejo, es necesario incluir los beneficios del paradigma orientado a objetos (reutilización de los componentes, facilidad de mantenimiento y modificación de objetos) utilizamos clases (POO).\\
 Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje permite desarrollar ambos ámbitos de una manera integral.Por lo cual será utilizado a lo largo del proyecto.
 
@@ -2353,27 +2352,24 @@ MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-
 \subsection{Diseño del Módulo de Comunicaciones}
 Para el diseño de este módulo se tiene contemplado ejecutar dos procesos asíncronos, es decir, que se ejecutan al mismo tiempo o de manera paralela.
 
+A continuación se muestra el diagrama de Flujo del Módulo de Comunicaciones
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/DF-modCom}
 \captionof{figure}{Diagrama de Flujo del Módulo de Comunicaciones}
  \label{fig:DF-modCom}
 \end{center}
+\newpage
+La ubicación del conductor será obtenida por el Módulo de Telemetría cada 10 segundos, esto con la intención de no consumir demasiados recursos de procesamiento y energía. Posteriormente será enviada a la Estación Base utilizando la interfaz SixFab-LTE. En caso de no contar con cobertura que permita la conexión a la estación base, la ubicación del  conductor será guardada en el almacenamiento interno de la Unidad de Procesamiento Central. Se realizaran handhshakes a la espera de respuesta de la Estación Base hasta que se obtenga una respuesta de enlace, posteriormente enviarán la o las ubicaciones almacenadas temporalmente hacia  a la Estación Base.
+
+
 
 \begin{figure}
-  \includegraphics[scale=0.65]{imagenes/DG-modCom}
-\captionof{figure}{Diagrama de Flujo de Trabajo del Módulo de Comunicaciones}
+  \includegraphics[scale=0.5]{imagenes/DG-modCom}
+\captionof{figure}{Diagrama Actividades del Módulo de Comunicaciones}
  \label{fig:DG-modCom}
 \end{figure}
 
 
-\newpage
-\subsubsection{Diseño del Submódulo de Transmisión de Datos}
-
-\newpage
-\subsubsection{Diseño del Submódulo de Telemetría}
-
-\newpage
-\subsubsection{Diseño del Submódulo de Cobertura}
 
 \newpage
 \subsection{Diseño de la Estación Base}
@@ -2390,16 +2386,6 @@ El siguiente diagrama muestra la arquitectura del sistema de Estación base, el c
 \end{center} 
 
 
-\textbf{Elección del servidor de alojamiento}
-Después de haber analizado los distintos proveedores de alojamiento así como sus características, llegamos a la conclusión que el que mejor cumple con los requisitos del proyecto es AWS Amplify. Ya que este contiene una suite de herramientas que facilitan la implementación de una aplicación web, como por ejemplo S3, que es un servicio de alojamiento en la nube utilizado para archivos multimedia de gran tamaño. \cite{AWS}
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/amplify-1}
-\captionof{figure}{Diagrama de Componentes AWS Amplify}
- \label{fig:DiagramadeactividadMEB}
-\end{center}
-
-Otro factor fundamental por el cual se decidió utilizar la suite de AWS Amplify, es que esta cuenta con su propia CDN, lo cual significa que los tiempos de respuesta al usar la aplicación web deben de ser mínimos.
 
 
 \newpage
