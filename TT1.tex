@@ -681,59 +681,61 @@ Partiendo de la propuesta de solución y la metodología \emph{Top-down}, que nos 
 
 A continuación, se desglosan cada uno de los módulos: \\
 
-\textbf{Módulo Central de Procesamiento:}
+\textbf{Módulo Central de Procesamiento:}\\
 
-El módulo Central de procesamiento estará compuesto por un microordenador que será colocado dentro de un automóvil. Este microordenador será alimentado por el corriente proporcionado por dicho automóvil. Además, contará con una cámara digital que analizará el rostro del conductor después de que este encienda el automóvil. A este microordenador también le será acoplado un dispositivo que sea capaz de utilizar redes de telecomunicaciones móviles, esto para que sea posible la conexión con la Estación Base. Finalmente, también contará con una alarma para alertar al conductor si este presenta un estado de somnolencia. 
+El módulo Central de procesamiento estará compuesto por un microordenador que será colocado dentro de un automóvil. Este microordenador será alimentado por el corriente proporcionado por dicho automóvil. Además, contará con una cámara digital que analizará el rostro del conductor después de que este encienda el automóvil. A este microordenador también le será acoplado un dispositivo que sea capaz de utilizar redes de telecomunicaciones móviles, esto para que sea posible la conexión con la Estación Base. Finalmente, también contará con una alarma para alertar al conductor si este presenta un estado de somnolencia. \\
 
-\textbf{Submódulo de Visión Artificial:}
+\textbf{Submódulo de Visión Artificial:}\\
 
-Este submódulo se hará cargo de analizar el rostro del conductor utilizando técnicas de visión artificial. Se tomarán en cuenta los siguientes parámetros para determinar si el conductor presenta o no signos de somnolencia: estado de los ojos (cerrados, abiertos) y estado de la boca (cerrada o abierta). 
+Este submódulo se hará cargo de analizar el rostro del conductor utilizando técnicas de visión artificial. Se tomarán en cuenta los siguientes parámetros para determinar si el conductor presenta o no signos de somnolencia: estado de los ojos (cerrados, abiertos) y estado de la boca (cerrada o abierta). \\
 
-Si el conductor presenta un estado de ojos cerrador por más de 5 segundos, se considerará como un estado de somnolencia, por lo que se activará una alarma para alertar al conductor. Al mismo tiempo  
+Si el conductor presenta un estado de ojos cerrador por más de 5 segundos, se considerará como un estado de somnolencia, por lo que se activará una alarma para alertar al conductor. A su vez el sistema tomará un videoclip de por lo menos 10 segundos dónde se aprecie el momento en que el conductor presentó un estado de somnolencia. \\
 
- A su vez el sistema tomará un videoclip de por lo menos 10 segundos dónde se aprecie el momento en que el conductor presentó un estado de somnolencia. 
+\textbf{Módulo de Comunicaciones}\\
 
-\textbf{Módulo de Comunicaciones}
+Una vez que se tengan los datos recibidos por el módulo de procesamiento, este módulo se encargará de la transmisión de los datos hacia el módulo de estación base por medio de la tecnología  4G/LTE. \\ 
 
-Una vez que se tengan los datos recibidos por el módulo de procesamiento, este módulo se encargará de la transmisión de los datos hacia el módulo de estación base por medio de la tecnología  4G/LTE.  
-
-El proceso que tiene el módulo es el siguiente, la información recibida por el módulo de procesamiento se enviará en forma de paquetes hacia las antenas 4G y ser subidas a la nube para después ser descargadas o consultadas por el módulo base y ser verificadas por la persona que realiza la gestión del sitio. La tasa de datos con la que el transceptor funcionará se especifica en la sección (**)  y se cumplirán los parámetros establecidos en el teorema de Shannon-Hartley para garantizar la probabilidad de error en la transmisión. En caso de no contar con cobertura, quedarán almacenados las incidencias en una unidad externa para que puedan seguir los mismos pasos antes mencionados teniendo en cuenta el retraso de estos una vez que esta se restablezca. 
-
-
-\textbf{Submódulo de Telemetría}
-
-\textbf{Submódulo de Transmisión de Datos}
-
-\textbf{Submódulo de Cobertura}
+El proceso que tiene el módulo es el siguiente, la información recibida por el módulo de procesamiento se enviará en forma de paquetes hacia las antenas 4G y ser subidas a la nube para después ser descargadas o consultadas por el módulo base y ser verificadas por la persona que realiza la gestión del sitio. La tasa de datos con la que el transceptor funcionará se especifica en la sección (**)  y se cumplirán los parámetros establecidos en el teorema de Shannon-Hartley para garantizar la probabilidad de error en la transmisión. En caso de no contar con cobertura, quedarán almacenados las incidencias en una unidad externa para que puedan seguir los mismos pasos antes mencionados teniendo en cuenta el retraso de estos una vez que esta se restablezca. \\
 
  
-\textbf{Módulo de Estación Base}
+\textbf{Módulo de Estación Base}\\
 
 Este módulo estará compuesto por una aplicación web y una base de datos que se encargará de almacenar las incidencias de los conductores para ser corroborados por un administrador posteriormente, esto con la intención de descartar un falso positivo y realizar los ajustes necesarios al sistema. 
 
 
-\subsection{Análisis de la Zona Geográfica}
+\subsection{Análisis y elección de la zona geográfica  }
 El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas. Ya que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Debido a lo anterior, se decidió utilizar redes móviles celulares para cumplir lo anterior.  
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/MapaCoberturaMexico}
-\captionof{figure}{Mapa de cobertura 3G / 4G / 5G, México.\cite{CoberturaNacional}}  
+\captionof{figure}{Mapa de cobertura 3G/4G/5G, México.\cite{CoberturaNacional}}  
  \label{fig:mapacoberturaN}
 \end{center} 
 
-Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura \cite{mapacoberturaN}, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes (figura 3).  
+Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura 9, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes (figura 10).  
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/CoberturaCDMX}
-\captionof{figure}{Mapa de cobertura 3G / 4G / 5G, Ciudad de México.\cite{mapacoberturaCDMX}}
+  \includegraphics[scale=0.9]{imagenes/CoberturaCDMX}
+\captionof{figure}{Mapa de cobertura 3G/4G/5G, Ciudad de México.\cite{CoberturaNacional}}
  \label{fig:mapacoberturaCDMX}
 \end{center}
 
 
+\subsection{Análisis y elección del microprocesador }
+\subsection{Análisis y elección de algoritmos de aprendizaje supervisado, no supervisado y aprendizaje profundo }
+\subsection{Análisis y elección de la cámara digital  }
+\subsection{Análisis y elección de la alarma }
+\subsection{Análisis y elección de la unidad de almacenamiento externa  }
+\subsection{Análisis y elección de lenguajes de programación para el microprocesador}
+\subsection{Análisis y elección de estándares y protocolos de comunicación inalámbricos }
+\subsection{Análisis y elección de la interfaz para la comunicación inalámbrica  }
+\subsection{Análisis y elección de la tecnología de geolocalización}
+\subsection{Análisis y elección del manejador de bases de datos  }
+\subsection{Análisis y elección del servidor de alojamiento  }
+\subsection{Análisis y elección de lenguajes de programación web  }
+
 \newpage
 \subsection{Análisis del Módulo Central de Procesamiento}
-
-
 
 
 \begin{table}[h]
@@ -831,7 +833,7 @@ Utilizando el software de OpenCV y .\end{tabular}}                              
 
 \newpage
 
-\subsubsection{Análsis y Elección del Modelo de Red Neuronal}
+\subsubsection{Análsis y elección del modelo de Red Neuronal}
 
 Debido a que el presente proyecto se plantea resolver un problema de clasificación, a continuación se analizará que tipos de modelos de redes neuronales son los más aptos para la resolución de los mismos.
 
@@ -1799,7 +1801,6 @@ Tomando en cuenta las medidas anteriormente mencionadas, se presenta un bosquejo
 
 \newpage
 \subsubsection{Diseño del Submódulo de Visión Artificial}
-
 
 
 \begin{itemize}
