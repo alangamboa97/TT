@@ -96,20 +96,29 @@ Dr. Rodolfo Vera Amaro\\
 \newpage
 \section{Resumen}
 
-El presente documento detalla el proceso de diseño del proyecto titulado "Sistema para el monitoreo, detección y alerta de somnolencia del conductor mediante visión artificial, comunicación inalámbrica y geolocalización" como Proyecto Terminal, dirigido a conductores de la ciudad de México. Dicho sistema hará uso de técnicas de visión artificial, tales como las funciones Haar para la detección de rostro, ojos y boca del conductor a partir de la entrada de video en tiempo real, así como la propuesta del uso de una red neuronal convolucional entrenada para poder detectar el estado de los ojos. El sistema utilizará puntos de referencia faciales para marcar la posición de la boca y posteriormente se obtendrá la relación de apertura de la boca, con el fin de detectar si se trata de un bostezo. Si el sistema detecta somnolencia, se activará una alarma con intención de alertar al conductor, a su vez, se realizará un reporte de incidencia el cual será enviado a una base de datos. El sistema utilizará una Raspberry Pi para su funcionamiento de manera portátil. Como parte del sistema se analizó y diseñó un sistema de administración que permitirá al usuario verificar y visualizar la información de los reportes de incidencia y la información de cada conductor. Para el cual se diseñó una aplicación web que le permita al usuario acceder a la información y adicionalmente monitorear la ubicación en tiempo real del conductor.  
+El presente documento detalla el proceso de diseño del proyecto titulado "Sistema para el monitoreo, detección y alerta de somnolencia del conductor mediante visión artificial, comunicación inalámbrica y geolocalización" como Proyecto Terminal, dirigido a conductores de la ciudad de México. Dicho sistema hará uso de técnicas de visión artificial, tales como las funciones Haar para la detección de rostro, ojos y boca del conductor a partir de la entrada de video en tiempo real, así como la propuesta del uso de una red neuronal convolucional entrenada para poder detectar el estado de los ojos. El sistema utilizará puntos de referencia faciales para marcar la posición de la boca y posteriormente se obtendrá la relación de apertura de la boca, con el fin de detectar si se trata de un bostezo. Si el sistema detecta somnolencia, se activará una alarma con intención de alertar al conductor, a su vez, se realizará un reporte de incidencia el cual será enviado a una base de datos. El sistema utilizará una Raspberry Pi para su funcionamiento de manera portátil. Como parte del sistema se analizó y diseñó un sistema de administración que permitirá al usuario verificar y visualizar la información de los reportes de incidencia y la información de cada conductor. Para el cual se diseñó una aplicación web que le permita al usuario acceder a la información y adicionalmente monitorear la ubicación en tiempo real del conductor. 
+
+\emph{Palabras Clave:} Somnolencia, Visión artificial, Geolocalización, Machine Learning, Alerta, Red Neuronal Convolucional.
+
+\section{Abstract}
+This document details the design process of the project entitled "System for the monitoring, detection and alert of driver drowsiness through artificial vision, wireless communication and geolocation" as a Terminal Project, aimed at drivers in Mexico City. Said system will make use of artificial vision techniques, such as the Haar functions for the detection of the driver's face, eyes and mouth from the video input in real time, as well as the proposal of the use of a convolutional neural network trained to to be able to detect the state of the eyes. The system will use facial reference points to mark the position of the mouth and then the mouth opening ratio will be obtained, in order to detect if it is a yawn. If the system detects drowsiness, an alarm will be activated with the intention of alerting the driver, in turn, an incident report will be made which will be sent to a database. The system will use a Raspberry Pi for its portable operation. As part of the system, an administration system was analyzed and designed that will allow the user to verify and view the information of the incident reports and the information of each driver. For which a web application was designed that allows the user to access the information and additionally monitor the location in real time of the driver.
+
+
+\emph{Keywords:} Drowsiness, Artificial vision, Geolocation, Machine Learning, Alert, Convolutional Neural Network.
+
 
 \newpage
-\section{Introducción}
+\section{Capítulo I:Introducción }
 
-De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018, publicado por la Organización Mundial de la Salud (OMS), el número anual de muertes por accidentes de tránsito llego a los 1,35 millones. Sin embargo, las consecuencias de estos accidentes no solamente afectan al conductor y a los pasajeros del vehículo, sino que también involucran a los peatones, ciclistas y motociclistas, en particular aquellos que residen en países en desarrollo. [1] 
+De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018, publicado por la Organización Mundial de la Salud (OMS), el número anual de muertes por accidentes de tránsito llego a los 1,35 millones. Sin embargo, las consecuencias de estos accidentes no solamente afectan al conductor y a los pasajeros del vehículo, sino que también involucran a los peatones, ciclistas y motociclistas, en particular aquellos que residen en países en desarrollo. \cite{WHO}
 
-La somnolencia al conducir es reconocida como un factor que puede contribuir a los percances viales. De acuerdo a datos de CONAPRA, en México cada año mueren en promedio 16,500 mexicanos por percances de este tipo. Con base en estimaciones hechas por el Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que representan el 1.7 \% del Producto Interno Bruto (PIB), sumando costos directos e indirectos [2].  
+La somnolencia al conducir es reconocida como un factor que puede contribuir a los percances viales. De acuerdo a datos de CONAPRA, en México cada año mueren en promedio 16,500 mexicanos por percances de este tipo. Con base en estimaciones hechas por el Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que representan el 1.7 \% del Producto Interno Bruto (PIB), sumando costos directos e indirectos. \cite{IMT}  
 
-La somnolencia, al momento de conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de alerta y conciencia por parte del conductor. Esta situación se convierte en un detonador de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de riesgo y por tanto evitar el peligro. [2] 
+La somnolencia, al momento de conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de alerta y conciencia por parte del conductor. Esta situación se convierte en un detonador de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de riesgo y por tanto evitar el peligro.\cite{IMT} 
 
 En el desarrollo logístico de empresas que se encargan de transportar a pasajeros o que se encargan de repartir paquetería, los datos pueden verse de forma más alarmante o preocupante, ya que, usualmente, las personas designadas como conductores se enfrentan a largas horas de jornada sin descanso y en muchos casos, rotan por horarios que pueden ser en el día o en la noche, aumentando el riesgo de accidentarse por el desbalance de tener un horario mixto. 
 
-Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente. [3] 
+Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente. \cite{TastreoSatelital}  
 
 El rastreo satelital de vehículos funge como una de las principales opciones de sistemas capaces de indicar la ubicación de los vehículos en cuestión, sin embargo, el costo es elevado y periódico. 
 
@@ -117,7 +126,7 @@ Tomando en cuenta el contexto antes planteado, se analizará y diseñará en el pre
   
 
 \newpage
-\section{Planteamiento del problema}
+\subsection{Planteamiento del problema}
 
 La somnolencia es un fenómeno complejo de analizar debido a los factores que pueden intervenir. Algunas de las características más notorias de un estado de somnolencia, se pueden apreciar principalmente en el rostro de las personas: frecuencia de parpadeo, bostezos, movimientos faciales y cabeceos, los cuales son parámetros claves para determinar si una persona está en estado de somnolencia o vigilia.  
 
@@ -125,15 +134,16 @@ Gracias a los avances tecnológicos en los últimos años, se han comenzado a desar
 
 Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores. Donde se han realizado diversos estudios y soluciones que intentan dar respuesta al problema de monitoreo de la somnolencia. 
 
-Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, conductor y carretera repercuten en la eficacia del sistema. [4] 
+Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, conductor y carretera repercuten en la eficacia del sistema. \cite{Sistemasdesomnolencia}  
+
 
 Existen también sistemas que analizan el comportamiento del vehículo y su entorno. Esto sistemas cuentan con cámaras frente al vehículo, donde se digitaliza el entorno del vehículo; posteriormente se analizan parámetros como la reacción del conductor frente a la dirección de su vehículo con respecto a la carretera, velocidad, comportamiento del vehículo frente a baches en la carretera y distancia con respecto al vehículo que esta adelante. Si se detecta un comportamiento anormal en los parámetros anteriormente mencionados, se procede a realizar las alertas necesarias para advertir al conductor. No obstante, estos sistemas suelen ser costosos y no toman en cuenta el estado del conductor.  
 
-Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG). [4]  
+Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG). \cite{Sistemasdesomnolencia}    
 
-Cabe mencionar que, entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede llegar a entorpecer el desempeño del conductor. [4] 
+Cabe mencionar que, entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede llegar a entorpecer el desempeño del conductor. \cite{Sistemasdesomnolencia}  
 
-Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que, los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia, sin embargo, son los métodos visuales más adecuados para dicho propósito. [4] Por tanto, se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficacia en el sistema.    
+Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que, los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia, sin embargo, son los métodos visuales más adecuados para dicho propósito. \cite{Sistemasdesomnolencia}   Por tanto, se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficacia en el sistema.    
 
  
 Debido a las dificultades que pueden presentarse en los sistemas a la hora de detectar la somnolencia y la eficacia de este, así como las dificultades que muchos de los sistemas anteriores presentan en cuanto al espacio y potabilidad, se hará uso del método de análisis de características visuales para brindar una mejora y complemento a los sistemas actuales, usando visión artificial, además de integrar un sistema de monitoreo que permita a un tercero seguir la ubicación del conductor y registrar las incidencias del mismo.  
@@ -146,7 +156,7 @@ Dadas las posibles soluciones y escenarios antes mencionados se plantea la sigui
 
 
 \newpage
-\section{Propuesta de solución}
+\subsection{Propuesta de solución}
 
 Como respuesta a la problemática planteada en la sección 3, se propone el desarrollo de un sistema portátil que sea capaz de detectar somnolencia en conductores y su vez activar una alarma que permita alertar al conductor. Adicionalmente se desarrollará como parte del sistema, un subsistema que permita la administración y validación de las incidencias reportadas, así como el monitoreo GPS del conductor en tiempo real dentro de la Ciudad de México.  
 
@@ -174,95 +184,92 @@ Los problemas que resolverá el sistema serán listados a continuación.
 
  
 \newpage
-\section{Alcances y escenario de pruebas}
-
-El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas. Ya que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Debido a lo anterior, se decidió utilizar redes móviles celulares para cumplir lo anterior.  
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/MapaCoberturaMexico}
-\captionof{figure}{Mapa de cobertura 3G / 4G / 5G, México. [5]}
- \label{fig:neurona}
-\end{center} 
-
-Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura 2, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes (figura 3).  
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/CoberturaCDMX}
-\captionof{figure}{Mapa de cobertura 3G / 4G / 5G, Ciudad de México. [5]}
- \label{fig:neurona}
-\end{center}
+\subsection{Alcances}
 
 
+\subsection{Escenario de pruebas}
+
+Las pruebas se dividirán en dos fases:
+ 
+\textbf{Fase 1:}
+
+En la primera fase se probará el sistema de somnolencia y el sistema de administración de manera separada, con el propósito de analizar los resultados obtenidos. Para el sistema de detección de somnolencia será colocado dentro del vehículo, sin embargo, dicho vehículo permanecerá estacionado y con el motor apago, esto con el fin de realizar pruebas de la precisión del sistema y poder ajustar parámetros en caso de ser necesario.  
+
+En un primer escenario se examinarán los siguientes signos de somnolencia sin el uso de gafas de sol: 
+
+Estado de los ojos:  
+
+\begin{itemize}
+\item Abiertos, cerrados. 
+\item Duración de estos estados. 
+\end{itemize}
+
+Bostezos: 
+
+\begin{itemize}
+\item Apertura de la boca. 
+\end{itemize}
+
+En un segundo escenario se examinarán los mismos signos de somnolencia con el uso de gafas de sol.  
+
+Estas pruebas se realizarán tanto de noche como de día para comprobar la efectividad del sistema. En caso de ser necesario, se realizarán los ajustes correspondientes en los parámetros de análisis para mejorar la efectividad de las pruebas. Así mismo se verificará que la alarma se active correctamente al detectar somnolencia en el conductor.  
+
+Para el sistema de administración se probará la aplicación web que incluye el acceso a la geolocalización del sistema en tiempo real, así como pruebas de estrés al servidor de alojamiento, con el fin de conocer la eficacia de respuesta del sistema durante periodos de tráfico de datos elevados. 
+ 
+\textbf{Fase 2:}
+
+En la segunda fase, se probará el sistema completo con el vehículo en movimiento, donde el sistema estará monitoreando el estado de somnolencia del conductor en todos sus trayectos.  
+
+Para el sistema de administración se corroborará que en los casos en que el sistema de somnolencia detecte una incidencia, esta sea enviada correctamente y pueda ser visualizada desde el sistema de administración. A su vez, se constará que la información de la ubicación geográfica del sujeto de prueba esté disponible en todo momento.   
+
+\newpage
+\subsection{Justificación}
+
+Actualmente, nos encontramos en la era digital donde se han desarrollado diferentes avances tecnológicos tales como el internet de las cosas (IoT) el cual permite la comunicación con dispositivos y da pauta al desarrollo de sistemas inteligentes que resuelven problemas complejos de manera automática y eficaz en ambientes específicos, la inteligencia artificial, el machine learning, el procesamiento masivo de datos en menor tiempo, entre muchos otros. 
+
+El sistema propuesto es capaz de detectar la somnolencia apoyado en estudios donde se analizan los aspectos fisiológicos y donde se delimitan los datos biométricos del estado de somnolencia obtenidos en diferentes pruebas, mediante el uso de visión artificial y machine learning para tener mejores resultados y posteriormente ser enviados a una estación base con ayuda de la tecnología de las redes inalámbricas. 
+
+Al haber accidentes de tránsito por somnolencia en México, con este proyecto se pretende prevenirlos e integrar un sistema que permita el monitoreo del vehículo mediante la geolocalización del mismo, el uso de una alarma auditiva para que el conductor se mantenga alerta, así como un sistema interactivo con los usuarios que permita visualizar las incidencias que se puedan presentar por parte de los conductores. 
+
+Ofreciendo así un sistema que utilice las tecnologías de la nueva generación que permitan el monitoreo, la detección y la alerta del conductor. 
 
 
 \newpage
-\section{Justificación}
-
-De acuerdo con datos de CONAPRA (2013), en México cada año mueren en promedio 
-16,500 mexicanos por percances viales. Con base en estimaciones hechas por el 
-Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), 
-los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que 
-representan el 1.7 \% del Producto Interno Bruto (PIB), sumando costos directos e 
-indirectos.\cite{conapra}\\
-El estado de somnolencia es una de las principales causas de los accidentes de tránsito, 
-lo cual tiene consecuencias, no solo para los conductores, sino que también para los 
-pasajeros y personas que circulan en la vía pública. La somnolencia al momento de 
-conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de 
-alerta y conciencia por parte del conductor. Esto se convierte en un detonador 
-de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de 
-riesgo y por tanto evitar el peligro.\cite{conapra}
+\subsection{Metodología}
 
 
-
-
-
-
-
-\newpage
-\section{Metodología}
-
-
-Para el presente proyecto 
+Debido a que el presente proyecto conjunta la parte de software con hardware, se estarán implementando dos metodologías.  
 
 \begin{itemize}
 
 \item \textbf{Top-Down}
 
-La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas partes pueden ser llamadas modulos o subrutinas. Cada módulo puede ser probado individualmente.  
+
+La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas partes pueden ser llamadas modulos o subrutinas. Cada módulo puede ser probado individualmente. \cite{Top-Down}   
 
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/Top-down}
-\captionof{figure}{Descomposición en la metodología \emph{Top-Down}}
+\captionof{figure}{Descomposición en la metodología \emph{Top-Down}. \cite{Top-Down}   }
  \label{fig:neurona}
 \end{center}
 
-Por lo tanto, en este proyecto se comenzará entendiendo el problema general para posteriormente poder realizar una subdivisión de problemas más pequeños para ser resueltos de manera invididual.
-
-
-
-
-
+Utilizando la metodología Top-Down, se puede dividir el sistema en módulos que serán independientes de sí mismo, esto con la finalidad de ahorrar tiempo, así como recursos para su mantenimiento. Por lo tanto, en este proyecto se comenzará entendiendo el problema general para posteriormente poder realizar una subdivisión de problemas más pequeños para ser resueltos de manera invididual.
 
 
 \item \textbf{UML}
 
-UML es el estándar de la industria para modelar sistemas orientados a objetos\cite{kendall}. UML incluye un conjunto de herramientas que permite visualizar la construcción de un sistema orientado a objetos. Al trabajar por iteraciones, se aborda de manera cada vez con más detalle el diseño de sistema, hasta que se defina con claridad las relaciones de cada uno de los objetos del sistema. Uno de las principales ventajas de UML es la reutilización de objetos, esto permite reducir costo de desarrollo así como de mantenimiento de los programas.
-
-
-
-
+UML es el estándar de la industria para modelar sistemas orientados a objetos\cite{kendall}. UML incluye un conjunto de herramientas que permite visualizar la construcción de un sistema orientado a objetos. Al trabajar por iteraciones, se aborda de manera cada vez con más detalle el diseño de sistema, hasta que se defina con claridad las relaciones de cada uno de los objetos del sistema. Uno de las principales ventajas de UML es la reutilización de objetos, esto permite reducir costo de desarrollo así como de mantenimiento de los programas. 
 
 \end{itemize}
 
 
-
-
 \newpage
-\section{Objetivos}
+\subsection{Objetivos}
 
-\subsection{Objetivo General}
-Desarrollar e implementar un sistema para el monitoreo y detección de síntomas de somnolencia en conductores con vehículos particulares, con el fin de alertar al conductor. Además de implementar un sistema de telecomunicaciones y geolocalización que en conjunto con un sistema de administración lleve a cabo la gestión de registros de incidencias de cada conductor. 
+\subsubsection{Objetivo General}
+
+Analizar y diseñar un sistema para la detección de síntomas de somnolencia y alerta del conductor. Además de ser capaz de obtener la ubicación del conductor en tiempo real para ser monitoreada desde una aplicación web que a su vez permita gestionar y visualizar los reportes de incidencias del mismo. 
 
 \subsection{Objetivos Específicos}
 
@@ -286,21 +293,22 @@ Desarrollar e implementar un sistema para el monitoreo y detección de síntomas d
 \end{itemize}
 
 \newpage
-\section{Marco Teórico}
+\section{Capítulo II: Marco de Referencia}
 
-\subsection{Raspberry Pi}
+\subsection{Marco Teórico}
+\subsubsection{Raspberry Pi}
 
 La Raspberry Pi es una computadora de bajo costo y con un tamaño compacto, puede ser conectada a un monitor de computador o un TV, y usarse con un mouse y teclado estándar. Es un pequeño computador que corre un sistema operativo linux capaz de permitirle a las personas aprender a programar en lenguajes como Scratch y Python. Es capaz de hacer la mayoría de las tareas típicas de un computador de escritorio, desde navegar en internet, reproducir videos en alta resolución, manipular documentos de ofimática, hasta reproducir juegos. [1] 
 
 % https://raspberrypi.cl/que-es-raspberry/
 
-\subsection{Visión Artificial}
+\subsubsection{Visión Artificial}
 Se puede definir como el conjunto de técnicas para la extracción de información de imágenes digitales. El tipo de información obtenida de una imagen puede ser de identificación, mediciones para navegación, o aplicaciones de realidad aumentada\cite{vision}.El campo de visión artificial puede verse como una parte de la informática. La teoría de algoritmos y el aprendizaje automático son esenciales para el desarrollo de algoritmos de visión artificial.
 La visión artificial está compuesta generalmente por un conjunto de procesos destinados a realizar el análsis de imágenes:captación de imágenes, memorización de la información, proceso e interpretación de los resultados\cite{vision}.
 
 
 
-\subsection{Red Neuronal}
+\subsubsection{Red Neuronal}
 
 Una red neuronal es un sistema que pretende emular ciertas características propias de los seres humanos, tales como la capacidad de memorizar o y asociar hechos o características. Este sistema está se basa en el concepto de \emph{neurona}.
 
@@ -327,7 +335,7 @@ Por otra parte, en la etapa de activación de una neurona, esta utiliza el valor 
 y_j(t)= F(y_j(t-1), z_j(t)) = F(y_j(t-1),net_j(t))
 \end{equation}
 
-\subsection{Redes Neuronales Convolucionales}
+\subsubsection{Redes Neuronales Convolucionales}
 
 Las redes neuronales convolucionales, tambien conocidas como \emph{redes convolutivas}, son redes neuronales artificiales que se utilizan comunmente para resolver problemas que requieren el procesamiento de imágenes. Sus casos de uso más frecuentes van desde la detección de objetos, hasta generar una descripción textual del contenido de una imagen. Particularmente, sus entradas y salidas pueden ser estructuradas. Esto quiere decir, que en lugar de recibir un vector de entradas, se puede recibir un vector (1D), matriz (2D) o tensor($>2D$). En el caso de señales bidimensionales, las entradas pueden pertenecer a los pixeles de una imágen capturada por una cámara.
 
@@ -396,7 +404,7 @@ Flattening consiste en convertir los datos de salida de la capa convolucional a 
 
 \end{itemize}
 
-\subsection{\emph{Content Delivery Network}}
+\subsubsection{\emph{Content Delivery Network}}
 
 Una Red de Distribución de Contenido, o CDN por sus siglas en inglés, es de una red de servidores que se encarga de mejorar el rendimiento en la carga y descarga de contenido de la red. Los componentes de una CDN se encuentran distribuidos en diferentes nodos. Estos componentes pueden ser servidores y se encuentran con contenido replicado alrededor del mundo. El trabajo de una CDN consiste en redirigir la solicitudes de los clientes a un servidor ubicado geográficamente cerca de estos. En consecuencia, los clientes obtienen los datos solicitados a una velocidad más rápida.
 
@@ -408,7 +416,7 @@ Una Red de Distribución de Contenido, o CDN por sus siglas en inglés, es de una 
 
 Además de esto, una CDN es capaz de detectar cambios en la información existente, así como detectar la disponibilidad de nuevo contenido en los servidores de origen.
 
-\subsection{Estándares y Protocolos de Comunicación Inalámbrica}
+\subsubsection{Estándares y Protocolos de Comunicación Inalámbrica}
 
 Para transferir datos o información de un punto a otro sin la utilización de cableado o algún medio físico, tenemos las redes inalámbricas que utilizan ondas de radio para conectar a los 
 dispositivos permitiendo así, a los dispositivos remotos, se conecten sin 
@@ -471,7 +479,7 @@ En el contexto de IoT, el alto rendimiento de datos significa que los dispositiv
 
 \end{itemize}
 \end{itemize}
-\subsection{Teorema de Shannon-Hartley}
+\subsubsection{Teorema de Shannon-Hartley}
 
 Un sistema óptimo es el que cuenta con la capacidad de minimizar la probabilidad de error de bit a la salida del sistema, esto depende de las restricciones de la energía transmitida y del ancho de banda del canal\cite{Referencian9}.
 
@@ -485,12 +493,13 @@ Donde C es la capacidad de canal, es decir, la velocidad máxima a
 la que se puede transmitir la información a lo largo del canal sin error, medida en bits por 
 segundo, B es el ancho de banda en hertz, S es la potencia de la señal útil en watts y N es la potencia de ruido presente en el canal expresada en watts. Al término S/N se le conoce como relación señal a ruido\cite{Referencian11}.
 
-\subsection{Geolocalización}
+\subsubsection{Geolocalización}
 La Geolocalización consiste en la identificación de la posición de un dispositivo móvil en 
 el espacio real. El Sistema de Posicionamiento Global GPS por sus siglas en inglés es la forma más común y 
 precisa en que se realiza la localización geográfica, y es capaz de ubicar el aparato con 
 una precisión de unos pocos metros.
 El GPS es una red satelital que cuenta con al menos 30 satélites y que se mantienen en órbita alrededor de la tierra. Si bien el sistema en sus inicios tenía un propósito militar, en la actualidad cualquier persona puede ocuparlo\cite{Referencian12}.
+
 \subsubsection{Funcionamiento}
 Cuando se solicita el posicionamiento por medio del GPS este envía señales de radio que permiten localizar a los satélites, el centro de comando transmite la información de la órbita, el tiempo y la posición de los otros satélites en el mismo sistema GPS. Estos satélites envían simultáneamente la información de tiempo y órbita a la tierra y finaliza cuando el dispositivo GPS utiliza la información recibida para determinar su localización la cual se interpreta mayormente en dos conjuntos: la latitud y longitud\cite{Referencian13}.
 
@@ -498,34 +507,34 @@ Cuando se solicita el posicionamiento por medio del GPS este envía señales de ra
 
 
 \newpage
-\section{Estado del Arte}
+\subsection{Estado del Arte}
 
-\subsection{\emph{Driver Drowsiness Detection Using Machine Learning with Visual Behaviour}}
+\subsubsection{\emph{Driver Drowsiness Detection Using Machine Learning with Visual Behaviour}}
 Este trabajo de investigación realizado por el \emph{International Journal of Creative Research Thoughts} propone un sistema de detección de signos de somnolencia en conductores utilizando un modelo de Red Neuronal Convolucional para detectar la posición de los ojos, y OpenCV junto con Dlib para la detección de la boca y realizar el conteo del número de bostezos por minuto. Para alimetnar a la red Neuronal, se utilizaron el conjunto de datos de NTHU-DDD. También fue utilizado el método PERCLOS para obtener el número de parpadeos del sujeto de estudio. Este trabajo concluye que las mayores dificultades a la hora de detección de rostros fueron el uso de gafas oscuras, así como cambios en la iluminación. 
 
-\subsection{\emph{Detection Of Drowsiness And Distraction Of Drivers Using CNN}}
+\subsubsection{\emph{Detection Of Drowsiness And Distraction Of Drivers Using CNN}}
 
 En este trabajo realizado por los estudiantes de la Universidad de Mumbai, se implementó el aprendizaje automático y el paquete Keras para construir un modelo de CNN, el cual, clasifica si el conductor se encuentra somnoliento o distraído,el sistema emite un tono de alerta al detectar correctamente la somnolencia, dando al conductor una alerta temprana. Se utilizó el clasificador Open CV Haar-Cascade,un clasificador en cascada basado en características, usando sus funciones integradas, se detetó el rostro y la región de los ojos.
 
 % https://www.trendytechjournals.com/files/issues/volume4/issue7-5.pdf
 
-\subsection{\emph{Driver Drowsiness Detection System Using Convolutional Neural Networks}}
+\subsubsection{\emph{Driver Drowsiness Detection System Using Convolutional Neural Networks}}
 En este trabajo realizado en la Universidad Anurag en el año 2022 se presenta una forma de analizar y anticipar la somnolencia del conductor mediante la aplicación de una red neuronal convolucional sobre la cara del conductor de un marco de secuencia. Se uso un conjunto de datos para dar forma y aprobar el modelo, usando redes convolucionales 3D basadas en modelos de múltiples capas de arquitectura de red neuronal repetitiva para detectar la somnolencia del conductor. Tras una sesión de entrenamiento, se obtuvo una precisión que se acerca al 92\% de aceptación.
 
 % https://ijarsct.co.in/Paper3399.pdf
 
-\subsection{Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos}
+\subsubsection{Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos}
 En este trabajo realizado en la facultad de Ingeniería de la Universidad Nacional de Trujillo, se desarrolló un sistema de extracción de características faciales tales como pestañeo, cabeceo y bostezos. Para la extracción de regiones de interés se utilizaron cascadas Haar, y la clasificación de estas características se realizó utilizando un modelo de red LeNet. Además el trabajo incluye la creación de una base de datos de las regiones de interés de la cara utilizando imágenes propias y también utilizando conjunto de datos externos. Para el desarrollo de este trabajo se utilizó el lenguaje de programación Python, junto con las librerías de OpenCV, Tensorflow y Keras. 
 
-\subsection{Sistema de detección de somnolencia mediante inteligencia artificial en conductores de vehículos para alertar la ocurrencia de accidentes de tránsito}
+\subsubsection{Sistema de detección de somnolencia mediante inteligencia artificial en conductores de vehículos para alertar la ocurrencia de accidentes de tránsito}
 
 Este proyecto fue realizado por estudiantes de la Escuela Profesional de Ingeniería de Perú y consistió en llevar a cabo un sistema para la detección de la somnolencia y la distracción del conductor. El sistema se desarrolló utilizando C\# con EmguCV para detectar la distracción y orientación de los ojos utilizando técnicas de visión artificial. Además, cuenta con un sistema de alarma compuesto por un zumbador de 12v, que se activa a recibir la orden el microcontrolador al procesar el sistema de visión artificial junto a una red neuronal.[12] 
 
-\subsection{Diseño de un sistema electrónico para detectar la somnolencia en automovilistas por medio de la actividad ocular}
+\subsubsection{Diseño de un sistema electrónico para detectar la somnolencia en automovilistas por medio de la actividad ocular}
 Este trabajo realizado por alumnos de la ESIME Culhuacán en el año 2019 detalla el diseño y la implementación de un sistema que se basa en la fusión de dos señales. Una de ellas proviene de la detección del estado de los ojos utilizando información proveniente de una cámara digital. Para lo anterior, se realiza una segmentación de las regiones de la piel y posteriormente se obtiene la ubicación y el rastero de los ojos. La segunda señal se obtiene a partir de los datos proveniente de un acelerómetro colocado sobre la cabeza del conductor, cuya función es detectar los cabeceos asociados con somnolencia. El procesamiento de dicha señal del acelerómetro se lleva a cabo con la ayuda de la Transformada Wavelet Discreta. Estas dos señales son correlacionadas para tener como salida dos alarmas secuenciales que son percibidas por el conductor. La primera le alerta sobre un primer estado de posible somnolencia y la segunda acciona un control difuso para el control momentáneo del auto y la corrección del volante para el seguimiento del carril. Los resultados obtenidos por este trabajo demuestran una eficacia para la detección de ojos cerrados del 86\% y para la detección de cabeceo superior al 90\%.
 
 
-\subsection{Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones }
+\subsubsection{Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones }
 
 En este artículo se muestra la implementación de un sistema de detección del estado de somnolencia en
 seres humanos, a través de la identificación de patrones faciales y la frecuencia de parpadeo de los ojos. Utilizando técnicas de inteligencia artificial, visión por computadora y un sistema embebido con cámara integrada para la adquisición de imágenes.El cual permite detectar en tiempo real el estado de fatiga de un conductor automovilístico y su grado de somnolencia, todo con el objetivo de disminuir la tasa de accidentes viales causados precisamente por la somnolencia en México. Se hizo uso del lenguaje de programación Python, bibliotecas como OpenCV, Dlib y Scipy, las cuales, fueron requeridas debido a los modelos predefinidos que
@@ -533,29 +542,29 @@ establecen una mayor precisión en la detección de puntos faciales específicos, u
 
 %https://uptexcoco.edomex.gob.mx/sites/uptexcoco.edomex.gob.mx/files/files/2020/articulos-Tesis/sistema_somnolencia.pdf
 
-\subsection{Sistema de Detección de Somnolencia}
+\subsubsection{Sistema de Detección de Somnolencia}
 En este trabajo de fin de grado, realizado por un alumno de la Universidad de La Laguna en el año 2022 se estudió el uso de los modelos de Redes Neuronales para la clasificación de imágenes. Enfocado en la resolución del problema de la somnolencia en los conductores. En el cual se utilizó el lenguaje de programación Python, junto con diversas librerías que facilitan la integración del modelo, y otras que ayudan en la captura de las imágenes. 
 
 %https://riull.ull.es/xmlui/bitstream/handle/915/30312/Sistema%20de%20deteccion%20de%20somnolencia.pdf?sequence=1&isAllowed=y
 
 
-\subsection{Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. }
+\subsubsection{Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. }
 
 En este trabajo, realizado por alumnos de la Universidad de GUAYAQUIL en el año 2020-2021 se plantea el desarrollo un prototipo para la detección de la somnolencia del conductor de una cooperativa de transporte el cual dicho conductor se había sobrepasado el límite de horas de trabajo, usando la técnica de reconocimiento facial, basándose específicamente en el estado de los ojos. Para ello se realizó una investigación bibliográfica relacionada con patrones biométricos, inteligencia artificial y programación mediante Machine Learning, así como, las principales variables que permiten identificar un estado de somnolencia. Dentro de esta investigación también se determinan cuáles son los algoritmos a utilizar (CV2, Imutils, etc.) siendo la herramienta Python y su librería principal Visión por Computadora las seleccionadas para el estudio. [16] 
 
 
-\subsection{Sistema basado en la detección y notificación de somnolencia en conductores de autos }
+\subsubsection{Sistema basado en la detección y notificación de somnolencia en conductores de autos }
 En este trabajo, realizado por alumnos de la Universidad de Córdoba en el año 2015 se plantea el desarrollo que permite alertar a los conductores en estado de somnolencia leve, utilizando la tecnología de reconocimiento de objetos de Kinect y la librería OpenCV con el lenguaje C\# para el reconocimiento de imágenes. Además, se diseña una aplicación móvil del sistema operativo Android para la notificación de somnolencia utilizando una conexión socket tipo TCP. Para el procesamiento de imágenes, se utilizó el algoritmo Viola-Jones, el cual se basa en una nueva forma de representación de imágenes llamada ?Integral Image?, permitiendo que las características del detector se conmuten rápidamente. [13]
 
 
 
-\subsection{Detección de somnolencia para conducción sin accidentes}
+\subsubsection{Detección de somnolencia para conducción sin accidentes}
 En este trabajo de fin de grado, realizado por un alumno de la Universidad de Alicante en el año 2022 se propuso crear una aplicación real para detectar la somnolencia al volante haciendo énfasis a un bajo coste económico. Donde se realizó una comparativa entre una solución mediante Machine Learning (ML) y Principal Component Analysis (PCA).
 
 %http://hdl.handle.net/10045/124695
 
 
-\subsection{Implementación de un sistema web con geolocalización para medir la transaccionalidad del portal ABC de la democracia para el consejo nacional electoral (CNE)}
+\subsubsection{Implementación de un sistema web con geolocalización para medir la transaccionalidad del portal ABC de la democracia para el consejo nacional electoral (CNE)}
 En este proyecto de titulación de la Universidad de Guayaquil del año 2016, se 
 implementa un sistema de geolocalización para poder tener una mejor visión a través 
 de mapas virtuales de las personas y de las zonas geográficas de los productos o 
@@ -568,7 +577,7 @@ ayuda del api Javascript de Google Maps, se tuvieron en cuenta las limitaciones 
 respecto al código libre, pero estás no afectaron el desempeño del sistema; los datos 
 obtenidos se recopilaban en una base de datos en MySQL.
 
-\subsection{Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android vía la red enterprise WLAN de la PUCP}
+\subsubsection{Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android vía la red enterprise WLAN de la PUCP}
 En este proyecto de titulación de la Pontifica Universidad Católica Del 
 Perú del 2016 se desarrolló una aplicación móvil capaz de geolocalizar a un usuario 
 dentro de las instalaciones de la universidad usando la técnica de Huellas de Señal 
@@ -587,7 +596,7 @@ utilizó el algoritmo de ML basado en el teorema de Bayes de probabilidad. En las
 conclusiones señalan que este sistema obtuvo una precisión del 100\% en la 
 estimación del ambiente con un error menor de 2.4m en las pruebas realizadas.
 
-\subsection{Geolocalización con LoRa mediante multilateración}
+\subsubsection{Geolocalización con LoRa mediante multilateración}
 En esta tesis de la Universidad de la República de Uruguay del 2018 se desarrolló 
 un prototipo para la geolocalización animal en estudios de comportamiento. Para la 
 geolocalización se usó una tecnología nueva emergente llamada LoRa, tecnología de 
@@ -604,7 +613,7 @@ que el uso de LoRa para la geolocalización tiene gran potencial y que el alcance
 las señales fue eficiente, de igual manera se trata de una tecnología de bajo consumo 
 y que mantuvo los dispositivos con energía por meses.
 
-\subsection{Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades cardiovasculares}
+\subsubsection{Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades cardiovasculares}
 Tesis del Instituto Politécnico Nacional de la Escuela Superior de Ingeniería Mecánica 
 y Eléctrica Unidad Zacatenco del año 2018, donde se empleó un sensor de pulso 
 cardiaco el cual proporciona información en tiempo real de los latidos del corazón
@@ -613,14 +622,38 @@ los datos de que se está presentando una taquicardia, el microcontrolador solici
 ubicación al módulo GPS y envía un mensaje de texto a través de GSM/GPRS a la 
 persona designada.
 
-\subsection{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}
+\subsubsection{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}
 Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de manera profunda las características y detalles de la tecnología GPS para determinar la influencia de un sistema de geolocalización en el control y monitoreo de vehículos con esta tecnología en una empresa logística. 
 
-\subsection{Diseño de la red de acceso LTE en el distrito de Jesús María}
+\subsubsection{Diseño de la red de acceso LTE en el distrito de Jesús María}
 Tesis del año 2017 de la Pontifica Universidad Católica del Perú que tiene por objetivo analizar y diseñar una red usando la tecnología LTE, al desarrollar el proyecto se conocen las ventajas y desventajas de usar esta red así como la posibilidad de implementarla, también se realizan los cálculos de las coberturas y se dan a conocer las velocidades de enlace y el uso de diversos anchos de banda para su despliegue.
 
 \newpage
-\section{Análisis}
+\section{Capítulo III: Análisis}
+
+
+\subsection{Análsis de la Zona Geográfica}
+El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas. Ya que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Debido a lo anterior, se decidió utilizar redes móviles celulares para cumplir lo anterior.  
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/MapaCoberturaMexico}
+\captionof{figure}{Mapa de cobertura 3G / 4G / 5G, México. [5]}
+ \label{fig:neurona}
+\end{center} 
+
+Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura 2, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes (figura 3).  
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/CoberturaCDMX}
+\captionof{figure}{Mapa de cobertura 3G / 4G / 5G, Ciudad de México. [5]}
+ \label{fig:neurona}
+\end{center}
+
+
+
+
+
+
 
 
 \begin{center}
@@ -1518,7 +1551,8 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 
 
 \clearpage
-\section{Diseño}
+\section{Capítulo IV: Diseño}
+
 \subsection{Diseño del Módulo Central de Procesamiento}
 
 
@@ -1999,8 +2033,18 @@ Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, s
 
 \bibitem{Sistemasdesomnolencia}  "Sistemas de detección de somnolencia en conductores:Inicio, desarrollo y futuro", Revista Ingeniería y Región., vol. 13, n.º 1, pp. 159?168, 2015. Disponible: https://journalusco.edu.co/index.php/iregion/article/view/717/1372 
 
-\bibitem{CoberturaNacional} https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/
 
+\bibitem{Top-Down} 
+
+\bibitem{kendall} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
+
+
+
+
+
+
+
+\bibitem{CoberturaNacional} https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/
 
 
 
@@ -2031,7 +2075,7 @@ V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,
 
 \bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
 
-\bibitem{kendall} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
+
 
 \bibitem{Referencia5} Aurélien Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow}, Segunda Edición , O'Reilly, 2009
 
@@ -2064,4 +2108,6 @@ FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com
 
 \end{document}
 
+\newpage
+\section{Anexos}
 
