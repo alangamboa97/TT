@@ -541,56 +541,60 @@ Cuando se solicita el posicionamiento por medio del GPS este envía señales de ra
 \subsection{Estado del Arte}
 
 \subsubsection{\emph{Driver Drowsiness Detection Using Machine Learning with Visual Behaviour}}
-Este trabajo de investigación realizado por el \emph{International Journal of Creative Research Thoughts} propone un sistema de detección de signos de somnolencia en conductores utilizando un modelo de Red Neuronal Convolucional para detectar la posición de los ojos, y OpenCV junto con Dlib para la detección de la boca y realizar el conteo del número de bostezos por minuto. Para alimetnar a la red Neuronal, se utilizaron el conjunto de datos de NTHU-DDD. También fue utilizado el método PERCLOS para obtener el número de parpadeos del sujeto de estudio. Este trabajo concluye que las mayores dificultades a la hora de detección de rostros fueron el uso de gafas oscuras, así como cambios en la iluminación. 
+Este trabajo de investigación realizado por el \emph{International Journal of Creative Research Thoughts} propone un sistema de detección de signos de somnolencia en conductores utilizando un modelo de Red Neuronal Convolucional para detectar la posición de los ojos, y OpenCV junto con Dlib para la detección de la boca y realizar el conteo del número de bostezos por minuto. Para alimetnar a la red Neuronal, se utilizaron el conjunto de datos de NTHU-DDD. También fue utilizado el método PERCLOS para obtener el número de parpadeos del sujeto de estudio. Este trabajo concluye que las mayores dificultades a la hora de detección de rostros fueron el uso de gafas oscuras, así como cambios en la iluminación.\cite{EstadodelAarte1}
 
 \subsubsection{\emph{Detection Of Drowsiness And Distraction Of Drivers Using CNN}}
 
-En este trabajo realizado por los estudiantes de la Universidad de Mumbai, se implementó el aprendizaje automático y el paquete Keras para construir un modelo de CNN, el cual, clasifica si el conductor se encuentra somnoliento o distraído,el sistema emite un tono de alerta al detectar correctamente la somnolencia, dando al conductor una alerta temprana. Se utilizó el clasificador Open CV Haar-Cascade,un clasificador en cascada basado en características, usando sus funciones integradas, se detetó el rostro y la región de los ojos.
+En este trabajo realizado por los estudiantes de la Universidad de Mumbai, se implementó el aprendizaje automático y el paquete Keras para construir un modelo de CNN, el cual, clasifica si el conductor se encuentra somnoliento o distraído,el sistema emite un tono de alerta al detectar correctamente la somnolencia, dando al conductor una alerta temprana. Se utilizó el clasificador Open CV Haar-Cascade,un clasificador en cascada basado en características, usando sus funciones integradas, se detetó el rostro y la región de los ojos.\cite{EstadodelAarte2}
+
 
 % https://www.trendytechjournals.com/files/issues/volume4/issue7-5.pdf
 
 \subsubsection{\emph{Driver Drowsiness Detection System Using Convolutional Neural Networks}}
-En este trabajo realizado en la Universidad Anurag en el año 2022 se presenta una forma de analizar y anticipar la somnolencia del conductor mediante la aplicación de una red neuronal convolucional sobre la cara del conductor de un marco de secuencia. Se uso un conjunto de datos para dar forma y aprobar el modelo, usando redes convolucionales 3D basadas en modelos de múltiples capas de arquitectura de red neuronal repetitiva para detectar la somnolencia del conductor. Tras una sesión de entrenamiento, se obtuvo una precisión que se acerca al 92\% de aceptación.
+En este trabajo realizado en la Universidad Anurag en el año 2022 se presenta una forma de analizar y anticipar la somnolencia del conductor mediante la aplicación de una red neuronal convolucional sobre la cara del conductor de un marco de secuencia. Se uso un conjunto de datos para dar forma y aprobar el modelo, usando redes convolucionales 3D basadas en modelos de múltiples capas de arquitectura de red neuronal repetitiva para detectar la somnolencia del conductor. Tras una sesión de entrenamiento, se obtuvo una precisión que se acerca al 92\% de aceptación.\cite{EstadodelAarte3}
 
 % https://ijarsct.co.in/Paper3399.pdf
 
 \subsubsection{Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos}
-En este trabajo realizado en la facultad de Ingeniería de la Universidad Nacional de Trujillo, se desarrolló un sistema de extracción de características faciales tales como pestañeo, cabeceo y bostezos. Para la extracción de regiones de interés se utilizaron cascadas Haar, y la clasificación de estas características se realizó utilizando un modelo de red LeNet. Además el trabajo incluye la creación de una base de datos de las regiones de interés de la cara utilizando imágenes propias y también utilizando conjunto de datos externos. Para el desarrollo de este trabajo se utilizó el lenguaje de programación Python, junto con las librerías de OpenCV, Tensorflow y Keras. 
+En este trabajo realizado en la facultad de Ingeniería de la Universidad Nacional de Trujillo, se desarrolló un sistema de extracción de características faciales tales como pestañeo, cabeceo y bostezos. Para la extracción de regiones de interés se utilizaron cascadas Haar, y la clasificación de estas características se realizó utilizando un modelo de red LeNet. Además el trabajo incluye la creación de una base de datos de las regiones de interés de la cara utilizando imágenes propias y también utilizando conjunto de datos externos. Para el desarrollo de este trabajo se utilizó el lenguaje de programación Python, junto con las librerías de OpenCV, Tensorflow y Keras.\cite{EstadodelAarte4}
+
 
 \subsubsection{Sistema de detección de somnolencia mediante inteligencia artificial en conductores de vehículos para alertar la ocurrencia de accidentes de tránsito}
 
-Este proyecto fue realizado por estudiantes de la Escuela Profesional de Ingeniería de Perú y consistió en llevar a cabo un sistema para la detección de la somnolencia y la distracción del conductor. El sistema se desarrolló utilizando C\# con EmguCV para detectar la distracción y orientación de los ojos utilizando técnicas de visión artificial. Además, cuenta con un sistema de alarma compuesto por un zumbador de 12v, que se activa a recibir la orden el microcontrolador al procesar el sistema de visión artificial junto a una red neuronal.[12] 
+Este proyecto fue realizado por estudiantes de la Escuela Profesional de Ingeniería de Perú y consistió en llevar a cabo un sistema para la detección de la somnolencia y la distracción del conductor. El sistema se desarrolló utilizando C\# con EmguCV para detectar la distracción y orientación de los ojos utilizando técnicas de visión artificial. Además, cuenta con un sistema de alarma compuesto por un zumbador de 12v, que se activa a recibir la orden el microcontrolador al procesar el sistema de visión artificial junto a una red neuronal.\cite{EstadodelAarte5}
 
 \subsubsection{Diseño de un sistema electrónico para detectar la somnolencia en automovilistas por medio de la actividad ocular}
-Este trabajo realizado por alumnos de la ESIME Culhuacán en el año 2019 detalla el diseño y la implementación de un sistema que se basa en la fusión de dos señales. Una de ellas proviene de la detección del estado de los ojos utilizando información proveniente de una cámara digital. Para lo anterior, se realiza una segmentación de las regiones de la piel y posteriormente se obtiene la ubicación y el rastero de los ojos. La segunda señal se obtiene a partir de los datos proveniente de un acelerómetro colocado sobre la cabeza del conductor, cuya función es detectar los cabeceos asociados con somnolencia. El procesamiento de dicha señal del acelerómetro se lleva a cabo con la ayuda de la Transformada Wavelet Discreta. Estas dos señales son correlacionadas para tener como salida dos alarmas secuenciales que son percibidas por el conductor. La primera le alerta sobre un primer estado de posible somnolencia y la segunda acciona un control difuso para el control momentáneo del auto y la corrección del volante para el seguimiento del carril. Los resultados obtenidos por este trabajo demuestran una eficacia para la detección de ojos cerrados del 86\% y para la detección de cabeceo superior al 90\%.
+Este trabajo realizado por alumnos de la ESIME Culhuacán en el año 2019 detalla el diseño y la implementación de un sistema que se basa en la fusión de dos señales. Una de ellas proviene de la detección del estado de los ojos utilizando información proveniente de una cámara digital. Para lo anterior, se realiza una segmentación de las regiones de la piel y posteriormente se obtiene la ubicación y el rastero de los ojos. La segunda señal se obtiene a partir de los datos proveniente de un acelerómetro colocado sobre la cabeza del conductor, cuya función es detectar los cabeceos asociados con somnolencia. El procesamiento de dicha señal del acelerómetro se lleva a cabo con la ayuda de la Transformada Wavelet Discreta. Estas dos señales son correlacionadas para tener como salida dos alarmas secuenciales que son percibidas por el conductor. La primera le alerta sobre un primer estado de posible somnolencia y la segunda acciona un control difuso para el control momentáneo del auto y la corrección del volante para el seguimiento del carril. Los resultados obtenidos por este trabajo demuestran una eficacia para la detección de ojos cerrados del 86\% y para la detección de cabeceo superior al 90\%.\cite{EstadodelAarte6}
 
 
 \subsubsection{Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones }
 
 En este artículo se muestra la implementación de un sistema de detección del estado de somnolencia en
 seres humanos, a través de la identificación de patrones faciales y la frecuencia de parpadeo de los ojos. Utilizando técnicas de inteligencia artificial, visión por computadora y un sistema embebido con cámara integrada para la adquisición de imágenes.El cual permite detectar en tiempo real el estado de fatiga de un conductor automovilístico y su grado de somnolencia, todo con el objetivo de disminuir la tasa de accidentes viales causados precisamente por la somnolencia en México. Se hizo uso del lenguaje de programación Python, bibliotecas como OpenCV, Dlib y Scipy, las cuales, fueron requeridas debido a los modelos predefinidos que
-establecen una mayor precisión en la detección de puntos faciales específicos, utilizando como referencia el método de predicción de 68 puntos específicos del rostro. El sistema propuesto tiene la característica de funcionar con luz de día en una primera etapa, y la idea es poder implementarlo en cualquier tipo de vehículo automotriz a un costo accesible a la mayoría de los propietarios de vehículos automotrices.
+establecen una mayor precisión en la detección de puntos faciales específicos, utilizando como referencia el método de predicción de 68 puntos específicos del rostro. El sistema propuesto tiene la característica de funcionar con luz de día en una primera etapa, y la idea es poder implementarlo en cualquier tipo de vehículo automotriz a un costo accesible a la mayoría de los propietarios de vehículos automotrices.\cite{EstadodelAarte7}
+
 
 %https://uptexcoco.edomex.gob.mx/sites/uptexcoco.edomex.gob.mx/files/files/2020/articulos-Tesis/sistema_somnolencia.pdf
 
 \subsubsection{Sistema de Detección de Somnolencia}
-En este trabajo de fin de grado, realizado por un alumno de la Universidad de La Laguna en el año 2022 se estudió el uso de los modelos de Redes Neuronales para la clasificación de imágenes. Enfocado en la resolución del problema de la somnolencia en los conductores. En el cual se utilizó el lenguaje de programación Python, junto con diversas librerías que facilitan la integración del modelo, y otras que ayudan en la captura de las imágenes. 
+En este trabajo de fin de grado, realizado por un alumno de la Universidad de La Laguna en el año 2022 se estudió el uso de los modelos de Redes Neuronales para la clasificación de imágenes. Enfocado en la resolución del problema de la somnolencia en los conductores. En el cual se utilizó el lenguaje de programación Python, junto con diversas librerías que facilitan la integración del modelo, y otras que ayudan en la captura de las imágenes.\cite{EstadodelAarte8}
 
 %https://riull.ull.es/xmlui/bitstream/handle/915/30312/Sistema%20de%20deteccion%20de%20somnolencia.pdf?sequence=1&isAllowed=y
 
 
 \subsubsection{Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. }
 
-En este trabajo, realizado por alumnos de la Universidad de GUAYAQUIL en el año 2020-2021 se plantea el desarrollo un prototipo para la detección de la somnolencia del conductor de una cooperativa de transporte el cual dicho conductor se había sobrepasado el límite de horas de trabajo, usando la técnica de reconocimiento facial, basándose específicamente en el estado de los ojos. Para ello se realizó una investigación bibliográfica relacionada con patrones biométricos, inteligencia artificial y programación mediante Machine Learning, así como, las principales variables que permiten identificar un estado de somnolencia. Dentro de esta investigación también se determinan cuáles son los algoritmos a utilizar (CV2, Imutils, etc.) siendo la herramienta Python y su librería principal Visión por Computadora las seleccionadas para el estudio. [16] 
+En este trabajo, realizado por alumnos de la Universidad de GUAYAQUIL en el año 2020-2021 se plantea el desarrollo un prototipo para la detección de la somnolencia del conductor de una cooperativa de transporte el cual dicho conductor se había sobrepasado el límite de horas de trabajo, usando la técnica de reconocimiento facial, basándose específicamente en el estado de los ojos. Para ello se realizó una investigación bibliográfica relacionada con patrones biométricos, inteligencia artificial y programación mediante Machine Learning, así como, las principales variables que permiten identificar un estado de somnolencia. Dentro de esta investigación también se determinan cuáles son los algoritmos a utilizar (CV2, Imutils, etc.) siendo la herramienta Python y su librería principal Visión por Computadora las seleccionadas para el estudio.\cite{EstadodelAarte9}
 
 
 \subsubsection{Sistema basado en la detección y notificación de somnolencia en conductores de autos }
-En este trabajo, realizado por alumnos de la Universidad de Córdoba en el año 2015 se plantea el desarrollo que permite alertar a los conductores en estado de somnolencia leve, utilizando la tecnología de reconocimiento de objetos de Kinect y la librería OpenCV con el lenguaje C\# para el reconocimiento de imágenes. Además, se diseña una aplicación móvil del sistema operativo Android para la notificación de somnolencia utilizando una conexión socket tipo TCP. Para el procesamiento de imágenes, se utilizó el algoritmo Viola-Jones, el cual se basa en una nueva forma de representación de imágenes llamada ?Integral Image?, permitiendo que las características del detector se conmuten rápidamente. [13]
+En este trabajo, realizado por alumnos de la Universidad de Córdoba en el año 2015 se plantea el desarrollo que permite alertar a los conductores en estado de somnolencia leve, utilizando la tecnología de reconocimiento de objetos de Kinect y la librería OpenCV con el lenguaje C\# para el reconocimiento de imágenes. Además, se diseña una aplicación móvil del sistema operativo Android para la notificación de somnolencia utilizando una conexión socket tipo TCP. Para el procesamiento de imágenes, se utilizó el algoritmo Viola-Jones, el cual se basa en una nueva forma de representación de imágenes llamada ?Integral Image?, permitiendo que las características del detector se conmuten rápidamente.\cite{EstadodelAarte10}
 
 
 
 \subsubsection{Detección de somnolencia para conducción sin accidentes}
-En este trabajo de fin de grado, realizado por un alumno de la Universidad de Alicante en el año 2022 se propuso crear una aplicación real para detectar la somnolencia al volante haciendo énfasis a un bajo coste económico. Donde se realizó una comparativa entre una solución mediante Machine Learning (ML) y Principal Component Analysis (PCA).
+En este trabajo de fin de grado, realizado por un alumno de la Universidad de Alicante en el año 2022 se propuso crear una aplicación real para detectar la somnolencia al volante haciendo énfasis a un bajo coste económico. Donde se realizó una comparativa entre una solución mediante Machine Learning (ML) y Principal Component Analysis (PCA).\cite{EstadodelAarte11}
+
 
 %http://hdl.handle.net/10045/124695
 
@@ -606,7 +610,7 @@ proyecto, sólo se pretendía visualizar mapas en la web, por lo que sólo fue nece
 usar los servicios que ofrece Google Maps por ser una aplicación gratuita con la 
 ayuda del api Javascript de Google Maps, se tuvieron en cuenta las limitaciones con 
 respecto al código libre, pero estás no afectaron el desempeño del sistema; los datos 
-obtenidos se recopilaban en una base de datos en MySQL.
+obtenidos se recopilaban en una base de datos en MySQL.\cite{EstadodelAarte12}
 
 \subsubsection{Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android vía la red enterprise WLAN de la PUCP}
 En este proyecto de titulación de la Pontifica Universidad Católica Del 
@@ -625,7 +629,7 @@ se encuentran en un escenario para luego asociarlos a una localización y
 almacenarlos en una base de datos, para estimar la localización más probable se 
 utilizó el algoritmo de ML basado en el teorema de Bayes de probabilidad. En las 
 conclusiones señalan que este sistema obtuvo una precisión del 100\% en la 
-estimación del ambiente con un error menor de 2.4m en las pruebas realizadas.
+estimación del ambiente con un error menor de 2.4m en las pruebas realizadas.\cite{EstadodelAarte13}
 
 \subsubsection{Geolocalización con LoRa mediante multilateración}
 En esta tesis de la Universidad de la República de Uruguay del 2018 se desarrolló 
@@ -642,8 +646,7 @@ posteriormente realizar los cálculos en Geolocator , sistema de geolocalización
 desarrollado en Python, y así, obtener la posición geográfica del nodo. Se concluyó 
 que el uso de LoRa para la geolocalización tiene gran potencial y que el alcance de 
 las señales fue eficiente, de igual manera se trata de una tecnología de bajo consumo 
-y que mantuvo los dispositivos con energía por meses.
-
+y que mantuvo los dispositivos con energía por meses.\cite{EstadodelAarte14}
 \subsubsection{Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades cardiovasculares}
 Tesis del Instituto Politécnico Nacional de la Escuela Superior de Ingeniería Mecánica 
 y Eléctrica Unidad Zacatenco del año 2018, donde se empleó un sensor de pulso 
@@ -651,13 +654,13 @@ cardiaco el cual proporciona información en tiempo real de los latidos del coraz
 mientras que un microcontrolador procesa los datos y, en caso de que se obtengan 
 los datos de que se está presentando una taquicardia, el microcontrolador solicita la 
 ubicación al módulo GPS y envía un mensaje de texto a través de GSM/GPRS a la 
-persona designada.
+persona designada.\cite{EstadodelAarte15}
 
 \subsubsection{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}
-Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de manera profunda las características y detalles de la tecnología GPS para determinar la influencia de un sistema de geolocalización en el control y monitoreo de vehículos con esta tecnología en una empresa logística. 
+Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de manera profunda las características y detalles de la tecnología GPS para determinar la influencia de un sistema de geolocalización en el control y monitoreo de vehículos con esta tecnología en una empresa logística. \cite{EstadodelAarte16}
 
 \subsubsection{Diseño de la red de acceso LTE en el distrito de Jesús María}
-Tesis del año 2017 de la Pontifica Universidad Católica del Perú que tiene por objetivo analizar y diseñar una red usando la tecnología LTE, al desarrollar el proyecto se conocen las ventajas y desventajas de usar esta red así como la posibilidad de implementarla, también se realizan los cálculos de las coberturas y se dan a conocer las velocidades de enlace y el uso de diversos anchos de banda para su despliegue.
+Tesis del año 2017 de la Pontifica Universidad Católica del Perú que tiene por objetivo analizar y diseñar una red usando la tecnología LTE, al desarrollar el proyecto se conocen las ventajas y desventajas de usar esta red así como la posibilidad de implementarla, también se realizan los cálculos de las coberturas y se dan a conocer las velocidades de enlace y el uso de diversos anchos de banda para su despliegue.\cite{EstadodelAarte17}
 
 \newpage
 \section{Capítulo III: Análisis}
@@ -711,8 +714,6 @@ Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móvile
  \label{fig:mapacoberturaCDMX}
 \end{center}
 
-
-\subsection{Análisis y elección del microordenador}
 \subsection{Análisis y elección de algoritmos de aprendizaje supervisado, no supervisado y aprendizaje profundo }
 Dentro del aprendizaje automático se encuentran diferentes tipos de algoritmos, como el aprendizaje supervisado y no supervisado. \\
 
@@ -1037,7 +1038,7 @@ Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y 
 
 
 Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación  como base el lenguaje JavaScript y  Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación. Otra característica importante es que es una base de datos multiplataforma, esto para que se realice información desde el sistema operativo Linux, que será utilizado en la Rasperry Pi.
-
+\clearpage
 \subsection{Análisis y elección de lenguajes de programación web}
 
 Con respecto al desarrollo web, se requiere un lenguaje de programación que pueda ofrecer felixbilidad e interoperabilidad para su futura implementación. El lenguaje de programación que cumple en estas características, es Javascript \cite{js}.
@@ -1180,9 +1181,10 @@ Después de haber analizado los distintos proveedores de alojamiento así como sus
 \newpage
 \subsection{Análisis del Módulo Central de Procesamiento}
 
-
-\begin{table}[h]
+\textbf{Análisis de Requerimientos Funcionales}
+\begin{table}[H]
 \centering
+\caption{RF01- Verificar estado funcional de periféricos}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1195,14 +1197,16 @@ Después de haber analizado los distintos proveedores de alojamiento así como sus
 \quad $\bullet$ Antena Sixfab
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de los periféricos, se comprobará que funcionen de manera correcta, en caso contrario se enviará una alerta al módulo de Estación Base.\end{tabular}                                                    \\ \hline
+Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de los periféricos, se comprobará que funcionen de manera correcta, en caso contrario se enviará una alerta al módulo de Estación Base.
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF01- Verificar estado funcional de periféricos}
+
 \end{table}
 
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
+\caption{RF02- Activar Alarma}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1214,22 +1218,21 @@ Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de l
 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de los periféricos, se comprobará que funcionen de manera correcta, en caso contrario se enviará una alerta al módulo de Estación Base.\end{tabular}                                                    \\ \hline
+Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de los periféricos, se comprobará que funcionen de manera correcta, en caso contrario se enviará una alerta al módulo de Estación Base.
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Activar Alarma}
+
 \end{table}
 
 
 
 
 
-\newpage
+\clearpage
 \subsubsection{Análisis del Submódulo Visión Artificial}
 \begin{itemize}
 
-
 \item \textbf{Requerimientos Funcionales}
-
 \begin{table}[h]
 \centering
 \caption{RF01- Capturar Video en Tiempo Real}
@@ -1245,11 +1248,11 @@ Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de l
 \quad $\bullet$ MongoDB
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular}                                                    \\ \hline
+Con el uso de una cámara digital, se capturará video en tiempo real.
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
-
 
 \begin{table}[h]
 \centering
@@ -1264,10 +1267,12 @@ Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular
 \quad $\bullet$ Cámara Digital
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando el software de OpenCV el sistema podrá detectar el rostro del conductor.\end{tabular}                                                    \\ \hline
+Utilizando el software de OpenCV el sistema podrá detectar el rostro del conductor.
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
+
 
 \begin{table}[h]
 \centering
@@ -1282,11 +1287,11 @@ Utilizando el software de OpenCV el sistema podrá detectar el rostro del conduct
 \quad $\bullet$ Cámara Digital
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando el software de OpenCV el sistema podrá detectar el rostro del conductor.\end{tabular}                                                    \\ \hline
+Utilizando el software de OpenCV el sistema podrá detectar el rostro del conductor.
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
-
 
 \begin{table}[h]
 \centering
@@ -1294,19 +1299,18 @@ Utilizando el software de OpenCV el sistema podrá detectar el rostro del conduct
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Detectar signos de somnolencia}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Detectar signos de somnolencia}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema detectará el estado de los ojos y la boca, y analizará si estos corresponden a los signos de somnolencia del conductor..\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ MOR\\
 \quad $\bullet$ Red Neuronal Convolucional
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El sistema obtendrá el estado de somnolencia del conductor utilizando una red neuronal convolucional. \end{tabular}                                                    \\ \hline
+El sistema obtendrá el estado de somnolencia del conductor utilizando una red neuronal convolucional. 
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
-
-
 
 \begin{table}[h]
 \centering
@@ -1322,33 +1326,44 @@ El sistema obtendrá el estado de somnolencia del conductor utilizando una red ne
 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El módulo Central de procesamiento activará la alarma al recibir la señal de alerta. \end{tabular}                                                   \\ \hline
+El módulo Central de procesamiento activará la alarma al recibir la señal de alerta. 
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
+
 
 \begin{table}[h]
 \centering
 \caption{RF06- Almacenar Incidencia}
 \begin{tabular}{|ll|}
 \hline
-\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Almacenar Incidencia}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Se almacenará un fragmento del video en la memoria externa en caso de detectar somnolencia en el conductor.Se enviará una señal de alerta al módulo central de procesamiento cuando se detecten signos de somnolencia en el conductor y no se cuente con .\\ \\ \textbf{Elementos:}
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Almacenar Incidencia}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se almacenará un fragmento del video en la memoria externa en caso de detectar somnolencia en el conductor.\\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ RasperryPi\\
-\quad $\bullet$ Memoria Externa
-
+\quad $\bullet$ Rasperry Pi\\
+\quad $\bullet$ Memoria Externa\\
+\quad $\bullet$ Video
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El módulo Central de procesamiento activará la alarma al recibir la señal de alerta.\end{tabular}                                                   \\ \hline
+Se guardará el video de incidencia en la memoria externa en caso de no contar con conexión inalámbrica, para ser enviada posteriormente a un almacenamiento en la nube. 
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
+
 \end{table}
 
+
 \end{itemize}
+\clearpage
 
+\begin{center}
 
-\newpage
+  \includegraphics[scale=.4]{imagenes/casosuso_vision}
+\captionof{figure}{Diagrama de Casos de Uso - Submódulo de Visión Artificial}
+ \label{fig:actividades}
+
+\end{center}
 
 \subsubsection{Análisis y elección del modelo de Red Neuronal}
 
@@ -1367,12 +1382,12 @@ En el caso mas simple de una red neuronal, las neuronas de la capa de entrada se
 \end{center}
 
 
-Utilizando al herramiente de \emph{PlayGround Tensorflow} podemos observar la eficacia de este tipo de redes al resolver problemas de clasifiación.
+Utilizando la herramienta de \emph{PlayGround Tensorflow} podemos observar la eficacia de este tipo de redes al resolver problemas de clasifiación.
 Si se le pide a esta Red Neuronal que sombree el área del color de los puntos mostrados dentro de la gráfica, se puede observar que es incapaz de realizarlo de manera correcta.
 
 \begin{center}
-  \includegraphics[scale=0.4]{imagenes/unicapa2}
-\captionof{figure}{Redes Unicapa}
+  \includegraphics[scale=0.7]{imagenes/unicapa2}
+\captionof{figure}{Red Neuronal Unicapa}
  \label{fig:boost}
 \end{center}
 
@@ -1384,7 +1399,7 @@ Existe otro tipo de módelo de red neuronal que utiliza capas intermedias entre l
 
 \begin{center}
   \includegraphics[scale=0.7]{imagenes/multicapa}
-\captionof{figure}{Redes Unicapa}
+\captionof{figure}{Redes Neuronales Multicapa}
  \label{fig:boost}
 \end{center}
 
@@ -1585,7 +1600,7 @@ ocasionando un \emph{handoff fuerte}; por el otro lado, al estar realizando prue
  
 
 
-
+\clearpage
 \subsection{Análisis del Módulo de Estación Base}
 El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.  
 
@@ -1661,7 +1676,7 @@ El usuario administrador puede realizar la inserción, modificación, eliminación 
 \end{table}
 
 
-\clearpage
+
 
 
 \begin{table}[h]
@@ -1701,11 +1716,13 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \end{tabular}
 
 \end{table}
-\textbf{Requerimientos No Funcionales del Módulo de Estación Base}
+
 \clearpage
+\textbf{Requerimientos No Funcionales del Módulo de Estación Base}
 
 
-\begin{table}[]
+
+\begin{table}[H]
 \caption{Requerimientos No Funcionales del Módulo de Estación Base}
 \begin{tabular}{{|m{0.12\linewidth}|m{0.25\linewidth}|m{0.50\linewidth}|}}
 \hline
@@ -1837,13 +1854,13 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 
 
 
-\newpage
+\clearpage
 \subsubsection{Análisis de la Aplicación Web}
 
 
 
 
-
+A continuación se listan los requerimientos Funcionales obtenidos
 
 \begin{itemize}
 
@@ -2123,7 +2140,7 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 
 \begin{center}
   \includegraphics[scale=.6]{imagenes/casosdeusoweb}
-\captionof{figure}{Diagrama de Casos de Uso }
+\captionof{figure}{Diagrama de Casos de Uso - Aplicación Web }
  \label{fig:scaraindust}
 \end{center}
 
@@ -2218,7 +2235,7 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 
 \begin{table}[h]
 \centering
-\caption{Caso de Uso 05 }
+\caption{Caso de Uso 05 - Confirmar Incidencia}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Confirmar Incidencia}                                             \\ \hline
@@ -2237,7 +2254,7 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 
 \begin{table}[h]
 \centering
-\caption{Caso de Uso 07 }
+\caption{Caso de Uso 06 - Visualizar Incidencia }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Visualizar Incidencia}                                             \\ \hline
@@ -2303,8 +2320,19 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 
 \clearpage
 \section{Capítulo IV: Diseño}
-
+Con base a los requerimientos definidos previande
 \subsection{Diseño del Módulo Central de Procesamiento}
+El sistema principal comenzará por verificar el estado del Submódulo de Visón Artificial, así como el de Comunicaciones y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Procesamiento de Imáganes. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
+Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Comunicaciones se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
+Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. \\\\
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/diagrama_secuenciamc}
+\captionof{figure}{Diagrama de Secuencia - Módulo Central de Procesamiento}
+ \label{fig:secuenciamc}
+\end{center}
+
+Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial en la concurrencia de los mismos. También se detallan las peticiones y respuestas de los distintos submódulos y sistemas.
 
 \subsubsection{Diseño de la Unidad Contenedora de Procesamiento}
 
@@ -2419,12 +2447,23 @@ Tomando en cuenta las medidas anteriormente mencionadas, se decidió utilizar un 
 
 \newpage
 \subsubsection{Diseño del Submódulo de Visión Artificial}
+Con base a los requerimientos definidos en la sección de Análsis, se procedió a realizar distintos diagramas que muestren las interacciónes y el funcionamiento de los distintos módulos.
 
 
+En el siguiente Diagrama de Actividades se describen las actividades y sus interacciones con el Submódulo de Visión Artificial y la Estación Base. Para que el sistema principal pueda iniciar, se necesita que el conductor encienda el auto, ya que este sistema funcionará utilzando la alimentación electrica.
+\\\\ 
+
+\begin{center}
+
+  \includegraphics[scale=.4]{imagenes/actividades_vision}
+\captionof{figure}{Diagrama de Actividades - Submódulo de Visión Artificial}
+ \label{fig:actividades}
+
+\end{center}
 
 \begin{center}
   \includegraphics[scale=.42]{imagenes/flujo_vision}
-\captionof{figure}{Puntos de referencia}
+\captionof{figure}{Diagrama de Flujo - Submódulo de Visión Artificial}
  \label{fig:landmark}
 \end{center}
 
@@ -2520,16 +2559,23 @@ La ubicación del conductor será obtenida por el Módulo de Telemetría cada 10 seg
 
 Con base en los requerimientos, se plantea realizar el diseño de la arquitectura del Módulo de Estación Base, integrando el Módulo de Procesamiento Central. El cual hará énfasis en la organización y comunicación de los elementos que lo conforman.  \\
 
-El siguiente diagrama muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credenciales de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{frontend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
+La Figura \ref{fig:DisenoMEB} a muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credenciales de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{frontend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
 
 
 \begin{center} 
   \includegraphics[scale=.5]{imagenes/DisenoMEB} 
-\captionof{figure}{Arquitectura del Módulo de Estación Base} 
+\captionof{figure}{Diagrama de Diseño - Módulo de Estación Base} 
 \label{fig:DisenoMEB} 
 \end{center} 
 
 
+El diagrama de comunicación muestra las interacciones entre elementos que se involucran en cada requerimiento funcional.  Así mismo, dan profundidad al diagrama de Arquitectura del Módulo de Estación Base. La aplicación web hará uso de la Base de Datos (MongoDB) y el \emph{backend} de la aplicación web, que se realizará con Node.js. Mientras que para el despliegue de la aplicación web se requiere del servidor AWS Amplify para permitirle al usuario entrar a la aplicación web. El sistema almacenará el video de incidencia en Amazon S3, enviado desde el Módulo Central de Procesamiento, al cual se podrá acceder por medio de una URL prefirmada. El envío de incidencia requiere la interacción del Módulo Central de Procesamiento el cual se encargará de realizar y enviar el Reporte de Incidencia, posteriormente será almacenado en la Base de Datos (MongoDB).
+
+\begin{center} 
+  \includegraphics[scale=.5]{imagenes/diagramaMEB} 
+\captionof{figure}{Diagrama de Comunicación - Módulo de Estación Base} 
+\label{fig:DisenoMEB} 
+\end{center} 
 
 
 \newpage
@@ -2543,6 +2589,15 @@ Node.js, es un entorno en tiempo de ejecución multiplataforma basado en JavaScri
 NodeJs es capaz de manejar distintas peticiones sin que tener que esperar a que una petición sea respondida para continuar con la siguiente petición. De ahí la elección de este entorno de Javascript para el desarrollo de la aplicación web.\\
 
 A continuación se muestran diversos diagramas de secuencias que describen los procesos de los requerimientos definidos en la sección de Análisis.
+
+
+\begin{center}
+  \includegraphics[scale=.6]{imagenes/diagramaclasesaw}
+\captionof{figure}{Diagrama de Clases - Aplicación Web}
+ \label{fig:clasesaw}
+\end{center}
+
+En la Figura \ref{fig:clasesaw} se pueden observar las clases que estarán dentro de la aplicación web, así como sus atributos y las interacciones entre estas.
 
 
 \begin{center}
@@ -2697,7 +2752,7 @@ A continuación se muestra el funcionamiento de Amazon Cognito
 
 \begin{center}
   \includegraphics[scale=.5]{imagenes/cognito}
-\captionof{figure}{Documento de registro de Incidencias}
+\captionof{figure}{Arquitectura Amazon Cognito}
  \label{fig:DocumentoIncidencias}
 \end{center}
 
@@ -2722,11 +2777,13 @@ Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilizado 
 
 \newpage
 \section{Conclusiones}
-En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades investigación, nos dimos cuenta de que esta opción no era viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, así como una buena integración con la Rasperry Pi 4.\\
+Con base en los objetivos planteados, se realizó el diseño y análisis del sistema, gracias a la metodología top-dow se dividió en módulos y submódulos que nos permitieron profundizar en cada uno de ellos, delimitando los elementos a utilizar y los algoritmos o herramientas que se utilizarán en la implementación del sistema para trabajo terminal ll, en el presente trabajo se obtuvieron los resultados de las investigaciones realizadas para la elección de cada uno de los elementos principales que conforman el sistema y posteriormente el resultado del diseño de cada módulo planteado.
+En el caso del Submódulo de Visión artificial, se decidió desarrollar de manera conjunta la detección de rostro s Haar y extracción de características una Red Neuronal Convolucional.En un principio estas se plantearon de manera separada, este cambio significó la simplificación del modelo para el análisis y diseño. Para el reconocimiento del rostro, ojos y boca dentro de la imagen se decidió utilizar las funciones Haar que se implementarán a través de las librarías de Open CV mientras que para el reconocimiento de signos de somnolencia se utilizarán las redes neuronales convolucionales en el caso de los ojos y para la boca se hará uso de la relación MOR y puntos de referencia faciales.
+En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades de investigación, se llegó a la conclusión de que esta opción no es viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, buena cobertura, así como una buena integración con la Rasperry Pi 4. De igual manera, al realizar los cálculos para el envío de fotogramas a la estación base sobrepasaba la máxima tasa de datos propuesta con anterioridad así que optamos por el uso de un compresor de video MP4 que tiene una relación de hasta 16:1 pero que no baja la calidad cómo para no poder cumplir con lo requerido en el funcionamiento del sistema y que varias fuentes mencionan que es el mejor formato para la compresión de videos. Para el envío del posicionamiento del GPS, se llegó a un intervalo de tiempo de 10 segundos que garantiza el correcto trazo de la ruta en el mapa de la página web al consultar las velocidades permitidas en la ciudad de México.
+Para el desarrollo de la Estación base, se decidió utilizar la suite de herramientas de Amazon Amplify la cual hace uso de Amplify Hosting y tiene integración directa con Github, esto quiere decir, que los cambios que se realicen en el repositorio se reflejarán de manera automática en la aplicación web. Además AWS Amplify ofrece su servicio de almacenamiento en la nube S3, que será utilizado para el almacenamiento del contenido multimedia mientras que el manejo de credenciales, se eligió Amazon Cognito, que se encargará de administrar las credenciales de acceso a la aplicación. Por otra parte, el gestor de base de datos a implementar será MongoDB el cual nos permite una modelar la base de datos de una manera sencilla y flexible. Para la aplicación web se utilizará Node.js y React los cuales nos permitirán realizar el frontend y backend de dicha aplicación. 
+El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas de somnolencia y alertar al conductor, además de poder obtener la ubicación del conductor en tiempo real la cual será monitoreada desde la aplicación web, que a su vez gestionará la información de los conductores y los reportes de incidencias enviados desde el módulo central de procesamiento. 
 
-En el caso del Submódulo de Procesamiento de imágenes, se tenía contemplado desarrollarlo de manera separada del submódulo de \emph{machine learning } pero después de haber realizado un análisis más profundo, se decidió integrarlo dentro de este mismo. Esto para el ahorro de recursos de procesamiento y conseguir una mejor comunicación entre procesos. En un siguiente reporte, se terminará por diseñar la Red Neuronal Convolucional, así como el diseño del Módulo de Telemetría y de la Estación Base.\\
 
-Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, sin embargo, se tiene contemplado rediseñar el modelo con el fin de mejorar y adaptarla los cambios del sistema a futuro.
 
 
 \newpage
@@ -2757,18 +2814,53 @@ Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, s
 using a Boosted Cascade of Simple Features}. IEEE International Conference on Computer Vision and Pattern Recognition,2001
 
 
-\bibitem{CoberturaNacional} https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/
+\bibitem{CoberturaNacional} "Cobertura 3G / 4G / 5G Telcel Mobile - nPerf.com". Internet Speed test : Test your broadband connection - nPerf.com. https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/ (accedido el 22 de diciembre de 2022).
 
 
 \bibitem{algoritmosdeaprendizaje} https://www.alteryx.com/es-419/glossary/supervised-vs-unsupervised-learning\#:~:text=Hay\%20una\%20diferencia\%20clave\%20entre,etiquetados\%20con\%20la\%20respuesta\%20correcta
 
 
+\bibitem{EstadodelAarte1} Pachouly, S., Bhondve, N., Dalvi, A., Dhande, V., \& Bhamare, N. (2020, 6 de junio). Driver drowsiness detection using machine learning with visual behaviour. www.ijcrt.org. https://ijcrt.org/papers/IJCRT2006408.pdf
+
+\bibitem{EstadodelAarte2} Kanojia, G., Kanojiya, V., \& Mendonza, G. (2020, diciembre). Detection of drowsiness and distraction of drivers using cnn. https://www.trendytechjournals.com/files/issues/volume4/issue7-5.pdf
+
+\bibitem{EstadodelAarte3} Sri, M. K., \& Annamani, T. (2022, abril). Driver drowsiness detection system using convolutional neural networks. https://ijarsct.co.in/Paper3399.pdf 
 
 
+\bibitem{EstadodelAarte4} Rodriguez, A., \& Luis, D. J. (2021, mayo). Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos. https://dspace.unitru.edu.pe/handle/UNITRU/16872
+
+
+\bibitem{EstadodelAarte5} M. Limaquispe y E. Sánchez. "SISTEMA DE DETECCIÓN DE SOMNOLENCIA MEDIANTE INTELIGENCIA ARTIFICIAL EN CONDUCTORES DE VEHÍCULOS PARA ALERTAR LA OCURRENCIA DE ACCIDENTES DE TRÁNSITO"". Repository. http://repositorio.unh.edu.pe/handle/UNH/2327
+
+\bibitem{EstadodelAarte6} Eugenio, B. L. H., Alejandra, G. P. K., \& Pichardo Iniesta José Alejandro. (2019, junio). Diseño de un sistema electrónico para detectar somnolencia en automovilistas por medio de la actividad ocular. https://tesis.ipn.mx/handle/123456789/27287
+
+\bibitem{EstadodelAarte7} Becerril, E. L., Ramírez, A. M., \& Velázquez, E. T. J. (s.f.). Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones. $https://uptexcoco.edomex.gob.mx/sites/uptexcoco.edomex.gob.mx/files/files/2020/articulos-Tesis/sistema_somnolencia.pdf$
+
+\bibitem{EstadodelAarte8} Solís, H. F. (2022, 13 de septiembre). Sistema de detección de somnolencia. https://riull.ull.es/xmlui/bitstream/handle/915/30312/Sistema%20de%20deteccion%20de%20somnolencia.pdf?sequence=1&amp;isAllowed=y
+
+\bibitem{EstadodelAarte9} Pacay, C., \& Blanca Fanny. (2020). Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. http://repositorio.ug.edu.ec/handle/redug/49449?mode=full
+
+\bibitem{EstadodelAarte10} E. L. Benavides y M. M. Medina. "Sistema Basado en la Detección y notificación de somnolencia para conductores de autos". Repositorio Universidad de Córdoba. https://repositorio.unicordoba.edu.co/bitstream/handle/ucordoba/536/Trabajo%20de%20grado.pdf?sequence=1&amp;isAllowed=y
+
+\bibitem{EstadodelAarte11} Adrián, Ñ. H. (2022, 30 de junio). Detección de somnolencia para conducción sin accidentes. http://hdl.handle.net/10045/124695
+
+\bibitem{EstadodelAarte12} Avila, R., \& Arturo, W. (2016). Geolocalización transaccionalidad mapa ecuador cne democracia localización ubicación. http://repositorio.ug.edu.ec/handle/redug/16806
+
+\bibitem{EstadodelAarte13} Vilca, G., \& Eduardo, J. (2016, 3 de agosto). Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android via la red Enterprise WLAN de la PUCP. https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7156
+
+\bibitem{EstadodelAarte14} Federico, A., Guillermo, C., \& Guzmán, P. (2018). Geolocalizacoón con LoRa mediante multilateración. https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/20293
+
+\bibitem{EstadodelAarte15} Ramírez, C. E. E., Flores, R. E. R., \& Hernández, J. A. V. (2018). Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades vasculares. https://tesis.ipn.mx/handle/123456789/27690
+
+\bibitem{EstadodelAarte16} Espinoza, B. R. A. V. (2017). Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística, $https://repositorio.ucv.edu.pe/bitstream/handle/20.500.12692/17105/Vilca_ERA.pdf\?sequence=1\&amp\;isAllowed=y$
+
+
+\bibitem{EstadodelAarte17} Juan Carlos, C. P. (2017, 15 de febrero). Diseño de la red de acceso LTE en el distrito de Jesús María ¡https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7847
 
 \bibitem{conapra} M. Paez y Emilio Abarca. \emph{Resumen Boletines}, Instituto Mexicano del Transporte.
 https://imt.mx/resumen-boletines.html?IdArticulo=449\&amp;IdBoletin=168 (accedido 
 el 18 de marzo de 2022).
+
 
 \bibitem {NodeJs} Jonathan Wexler, \emph{Get Programming with Node.js}, Manning, 2019
 
