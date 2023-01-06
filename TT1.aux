@@ -8,10 +8,13 @@
 \@nameuse{es@quoting}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -21,6 +24,7 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \providecommand \oddpage@label [2]{}
 \babel@aux{spanish}{}
+\citation{Top-Down}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Resumen}{6}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Abstract}{6}{section.2}\protected@file@percent }
 \citation{WHO}
