@@ -3,9 +3,9 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TT1.aux
 I found no \bibdata command---while reading file TT1.aux
 I found no \bibstyle command---while reading file TT1.aux
-You've used 24 entries,
+You've used 32 entries,
             0 wiz_defined-function locations,
-            126 strings with 933 characters,
+            138 strings with 1112 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0

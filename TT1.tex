@@ -722,9 +722,98 @@ Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móvile
 
 \subsection{Análisis y elección del microordenador}
 \subsection{Análisis y elección de algoritmos de aprendizaje supervisado, no supervisado y aprendizaje profundo }
+Dentro del aprendizaje automático se encuentran diferentes tipos de algoritmos, como el aprendizaje supervisado y no supervisado. \\
+
+El aprendizaje supervisado utiliza conjuntos de datos etiquetados (aquellos datos para los que ya se conoce la respuesta de destino) que entrenan algoritmos para la clasificación de datos o predecir salidas con precisión, este puede agruparse en dos tipos fundamentales: clasificación y regresión, el primero ordena los datos en segmentos específicos, algunos de estos algoritmos de clasificación son: regresión logística, k vecinos más cercanos, bosque aleatorio, clasificador bayesiano simple, descenso de gradiente estocástico y árboles de decisión. Mientras que la regresión mide la relación entre una variable dependiente y una o más variables independientes mediante un método estadístico, permitiendo hacer predicciones de causa y efecto basadas en diversos datos. Algunos algoritmos de regresión comunes incluyen regresión de Ridge, Lasso, regresión de redes neuronales y regresión logística. \cite{algoritmosdeaprendizaje} \\
+
+El Aprendizaje no supervisado se utilizan algoritmos para examinar y agrupar los conjuntos de datos no etiquetados. Dichos algoritmos pueden descubrir patrones desconocidos en los datos sin supervisión humana.  Existen tres categorías principales de algoritmos: Agrupación de clústeres, el cual, según las similitudes o diferencias, los datos no etiquetados se clasifican mediante técnicas de agrupación de clústeres. Asociación, el cual permite identificar las relaciones de las variables dentro de un conjunto de datos y finalmente Reducción de dimensionalidad, el cual se usa en el caso de que un conjunto de datos contiene un conjunto de características inusualmente alto, ayudando a cotar este número sin comprometer la integridad de los datos.  \cite{algoritmosdeaprendizaje} \\
+
+Dado que el problema a resolver se trata de una clasificación en imágenes, existen algoritmos como la cascada de clasificadores \emph{boosting}, que nos permiten detectar el rostro de un apersona, el cual consiste en tomar serie de clasificadores débiles y combinarlos para construir un clasificador fuerte con la precisión deseada. Por tanto, es necesario realizar un proceso de entrenamiento supervisado para crear la cascada de clasificadores. Este proceso se realiza mediante un algoritmo basado en AdaBoost, un meta-algoritmo adaptativo del aprendizaje supervisado cuyo nombre es una abreviatura de \emph{adaptative boosting}. Adaboost es un procedimiento efectivo para buscar un numero pequeño de buenas características que no tienen una variación significante y que nos permitirá realizar la detección de rostro y características faciales, como los ojos y la boca dentro de una imagen. \cite{filtroshaar} \\
+
+Por otro lado, se tiene el aprendizaje profundo, el cual es un subgrupo del aprendizaje automático donde las redes neuronales artificiales aprenden de grandes cantidades de datos. Las redes neuronales son algoritmos modelados de la forma en que funciona el cerebro humano. El entrenamiento con grandes cantidades de datos es lo que configura las neuronas en la red neuronal dando como resultado un modelo de aprendizaje profundo que, una vez entrenado, procesa nuevos datos \cite{aprendizajeprofundo}.  Dentro de estas redes neuronales podemos encontrar las siguientes: \\
+
+\begin{table}[]
+\begin{tabular}{{|m{0.1\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|}}
+\hline
+\emph{Aplicaciones}  & \emph{Ventajas} & \emph{Desventajas}  & \emph{} \\ \hline
+\emph{Neural Networks (CNNs)} & Se utiliza principalmente en las tareas de reconocimiento de imágenes y detección de objetos. Además de sistemas de recomendación y tareas de procesamiento de lenguaje.   & los resultados son más precisos, especialmente para los casos de uso de reconocimiento de imágenes/objetos, en comparación con otros algoritmos  & ara entrenarla se requiere una potencia de cálculo muy alta. Por lo tanto, no es muy rentable. \\ \hline
+\emph{Long Short-Term Memory Networks} & Ideal para tareas como autocompletado de oraciones, generación de subtítulos y análisis de cuadros de video.  & Puede manejar la información en la memoria durante un largo período de tiempo en comparación con RNN.  & Se requiere una gran cantidad de computación y recursos para entrenar el modelo. \\ \hline
+\emph{General Adversarial Networks (GANs)} & Utilizado en la industria creativa para la generación de objetos 3D. 
+
+Útil en la edición de imágenes (Deepfake), generación de personajes de dibujos animados, ilustraciones para novelas, artículos, etc.  & Capaz de aprender la representación interna (distribuciones desordenadas y complejas) en cualquier dato.  & Cuando genera nuevos datos a partir de datos originales, no hay métrica de evaluación para juzgar la precisión de la salida. 
+
+Se requiere mucho cómputo y tiempo para el entrenamiento del modelo  \\ \hline
+\emph{Recurrent Neural Networks (RNNs) } & Se utiliza principalmente en los campos del procesamiento del lenguaje natural y el reconocimiento de voz. También es ideal para tareas como autocompletado de palabras, reconocimiento de texto y análisis de cuadros de video.  & Capacidad de recordar información a lo largo del período de entrenamiento. Posibilidad de procesar entradas de cualquier longitud   & Los cálculos requieren mucho tiempo debido a su naturaleza recurrente. 
+
+Dificultad de acceder a la información desde hace mucho tiempo.  \\ \hline
+\emph{Multilayer Perceptron?s (MLP?s)} & Problemas de clasificación.  
+
+Voz, reconocimiento de imágenes y compresión de datos.  & Puede distinguir datos que no son linealmente separables. 
+
+No hace ninguna suposición con respecto a las funciones de densidad de probabilidad  & Al actualizar los pesos en capas, la red puede atascarse en un mínimo local que puede dificultar la precisión.  \\ \hline
+
+\end{tabular}
+\end{table}
+
+Debido a que el presente proyecto se basará en el reconocimiento de imágenes y de clasificación de información, se tomó la de decisión de utilizar una CNN o Red Neuronal Convolucional para el reconocimiento de ojos abiertos o cerrados dentro de la imagen, esta aprende directamente de los datos, sin necesidad de extraer características manualmente.  Estas redes son particularmente útiles para encontrar patrones en imágenes para reconocer objetos, caras y escenas, además de permitir su implementación en video en tiempo real, lo cual es indispensable para el presente proyecto.  
+
 \subsection{Análisis y elección de la cámara digital  }
+
+Para la búsqueda de modelos de cámaras digitales, se buscó que la compatibilidad con la Raspberry Pi debido a que el sistema será alojado en este micrordenador.  
+
+Se optó por utilizar la Rasperry Camera Module V2, ya que cuenta con hasta 8 Megapixeles de resolución, además de tener distintos los formatos de salida jpg, RAW, DNG O MP4. También cuenta con diferentes resoluciones de video que van desde 1080p hasta 480p a 30 cuadros por segundo. 
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/V2}
+\captionof{figure}{Rasperry Camera Module V2}
+ \label{fig:CameraModuleV2}
+\end{center}
+
 \subsection{Análisis y elección de la alarma }
+
+Dentro de la búsqueda de modelos de alarma se encontraron dos tipos de zumbadores, el zumbador activo y zumbador pasivo, donde el primero produce un tono audible fijo, al aplicar una tensión de corriente directa. Mientras que el segundo requiere de una señal oscilante, generalmente de tipo PWM, que indique la frecuencia y la duración de la señal.  \\
+
+Para la elección de la alarma se obtuvieron dos de los principales modelos comerciales de cada tipo de zumbador mencionado: 
+
+\textbf{Buzzer Pasivo KY-006}
+
+\begin{itemize}
+\item Voltaje: 1.5 V - 5 V 
+\item Rango de frecuencia: 1.5 Hz - 2.5kHz 
+\item Decibeles: 72 DB
+\item Precio: \$50 
+\end{itemize}
+
+\textbf{Buzzer Activo KY-012  }
+
+\begin{itemize}
+\item Voltaje: 3.5 V ? 5.5 V 
+\item Rango de frecuencia: 300 Hz - 2.5kHz
+\item Decibeles: 85 DB
+\item Precio: \$71 
+\end{itemize}
+
+Debido a la posibilidad que ofrece el zumbador pasivo para controlar el tono y la duración del mismo, además de su bajo coste en comparación con el zumbador activo KY-012, se optó por el zumbador de tipo pasivo, específicamente el modelo KY-006, en cual se pueden configurar los tonos desde la Raspberry Pi por medio del lenguaje Python.   
+
 \subsection{Análisis y elección de la unidad de almacenamiento externa}
+
+Para la elección de la unidad de almacenamiento se consideró que la Raspberry requiere de una microSD de al menos 8GB de almacenamiento externo para la instalación del sistema operativo Raspbian oficial y tomando en cuenta que el tamaño compatible predeterminado más grande de Raspberry Pi es de 32GB, sin embargo, se puede formatear en caso de requerir capacidades más altas para que funcionen con las unidades.  
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+
+Micro SD  & Almacenamiento  & Speed class  & Video class  & Velocidad de escritura  & Velocidad de Lectura  & Precio \\ \hline
+SanDisk Extreme A2 & 32-256 (MAX 1T)GB  & Clase 30/U3  & V30 & 90 MB/s  & 160 MB/s  & \$1041  \\ \hline
+Kingston ENDURANCE  & 32-256 (MAX 1T)GB  & Clase 10/U1   & - & 45 MB/s  & 95 MB/s  & \$628  \\ \hline
+Samsung PRO Plus  & 128-512 GB  & Clase 10/U3   & V30  & 120 MB/s  & 160 MB/s  & 160 MB/s \$883 (128) \\ \hline
+Kingston Canvas React Plus V90 Card  & 64-256 GB  & Clase 10/U3  & V90  & 90 MB/s  & 180 MB/s  & \$3596 \\ \hline
+
+\end{tabular}
+\end{table}
+
+Tomando en cuenta lo anterior se decidió usar una unidad de almacenamiento \emph{Kingston ENDURANCE} de 32 GB para el almacenamiento externo.   
+
 \subsection{Análisis y elección de lenguajes de programación para el microordenador}
 
 Lo que se debe de considerasr para la elección de un lenguaje de programación, es que la programación orientada a la inteligencia artificial es diferente al paradigma de la programación convencional. En esta última, el usuario le indica a la máquina exactamente lo que tiene que hacer, mientras que en Machine learning, se le enseña a programarse sola. Lo cúal se ejemplifica en el siguiente gráfico:
@@ -934,12 +1023,26 @@ Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las vel
 Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto. 
 
 
-\subsection{Análisis y elección de la tecnología de geolocalización}
-
-
-
 \subsection{Análisis y elección del manejador de bases de datos  }
 Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  \\
+
+
+\begin{table}[h]
+\begin{tabular}{{|m{0.16\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|}}
+\hline
+ & \textbf{Cassandra } & \textbf{MongoDB } & \textbf{Redis } & \textbf{Amazon DynamoDB } \\ \hline
+ \textbf{Tipo de base de datos }& NoSQL \emph{wide-column}  & NoSQL Orientado a documentos  & NoSQL clave-valor  & NoSQL clave-valor  \\ \hline
+ \textbf{Licencia }& Codigo abierto  & Codigo abierto SSPL & Codigo abierto BSD 3-clause  & Vendor \\ \hline
+ \textbf{Cumplimiento ACID }& No & Si  &  Si &  Si \\ \hline
+ \textbf{Lenguaje de consulta principal }& CQL  & JavaScript  & Permite el uso de varios lenguajes  & DQL  \\ \hline
+ \textbf{Principales casos de uso }& Análisis social, análisis en tiempo real, venta al por menor y mensajería & Gestión de IOT, análisis en tiempo real, desarrollo de aplicaciones, inventario y personalización & Almacenamiento en caché, colas, filtrado y estadísticas  & Juegos, comercio minorista, servicios financieros, publicidad y transmisión de medios  \\ \hline
+ \textbf{Seguridad  }& Seguridad integrada para la autorización, el cifrado y la autenticación, pero la seguridad está desactivada de forma predeterminada para facilitar su uso dentro de los clústeres  & Seguridad incorporada para autorización, autenticación y encriptación  & Se inicia automáticamente en modo de protección y ofrece sugerencias de seguridad  & Seguridad integrada para datos y aplicaciones; software, hardware, instalaciones y red seguros del proveedor  \\ \hline
+ \textbf{Escalabilidad }& Horizontal  & Horizontal  & Horizontal  & Horizontal  \\ \hline
+ \textbf{Curva de aprendizaje  }& Difícil    & Medio   & Medio   &  - \\ \hline
+\end{tabular}
+\caption{Comparación de los Sistemas de Gestión de Bases de Datos No Relacionales}
+\end{table}
+
 
 Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación  como base el lenguaje JavaScript y  Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación. Otra característica importante es que es una base de datos multiplataforma, esto para que se realice información desde el sistema operativo Linux, que será utilizado en la Rasperry Pi.
 
@@ -2639,7 +2742,6 @@ Pará el diseño de la unidad de almacenamiento se obtuvo un bosquejo prototipo, s
 
 
 
-
 \bibitem{viola}Viola P.; Jones M, \emph{Rapid Object Detection
 using a Boosted Cascade of Simple Features}. IEEE International Conference on Computer Vision and Pattern Recognition,2001
 
@@ -2647,7 +2749,15 @@ using a Boosted Cascade of Simple Features}. IEEE International Conference on Co
 \bibitem{CoberturaNacional} https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/
 
 
+\bibitem{algoritmosdeaprendizaje} https://www.alteryx.com/es-419/glossary/supervised-vs-unsupervised-learning\#:~:text=Hay\%20una\%20diferencia\%20clave\%20entre,etiquetados\%20con\%20la\%20respuesta\%20correcta
 
+\bibitem{filtroshaar} 
+
+https://carlosjuliopardoblog.wordpress.com/2017/05/12/filtros-haar-deteccion-de-rostros/ 
+
+\bibitem{aprendizajeprofundo}  
+
+https://www.oracle.com/mx/artificial-intelligence/machine-learning/what-is-deep-learning/ 
 
 
 \bibitem{conapra} M. Paez y Emilio Abarca. \emph{Resumen Boletines}, Instituto Mexicano del Transporte.

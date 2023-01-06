@@ -9,55 +9,56 @@
 \contentsline {figure}{\numberline {8}{\ignorespaces top-down}}{30}{figure.8}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Mapa de cobertura 3G/4G/5G, M\'exico.\cite {CoberturaNacional}}}{31}{figure.9}%
 \contentsline {figure}{\numberline {10}{\ignorespaces Mapa de cobertura 3G/4G/5G, Ciudad de M\'exico.\cite {CoberturaNacional}}}{32}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Programa cl\'asico vs Machine Learning}}{33}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Mapa de Cobertura LTE-Telcel}}{38}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Planes de Alojamiento AWS Amplify}}{41}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Tiempos de Respuesta de servidores de HostGator}}{42}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Redes Unicapa}}{45}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Redes Unicapa}}{45}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Redes Unicapa}}{46}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una}}{46}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Representaci\'on Gr\'afica de la Funci\'on ReLu}}{47}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la funci\'on de Activaci\'on ReLu}}{47}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Representaci\'on gr\'afica de la funci\'on Tangente Hiperb\'olica}}{48}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la funci\'on de Activaci\'on Tanh}}{48}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Esquema \emph {handover} entre dos celdas }}{51}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Mapa de cobertura de la red LTE }}{52}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Diagrama de Casos de Usos del M\'odulo de Estaci\'on Base}}{56}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Diagrama de Casos de Uso }}{64}{figure.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Programa cl\'asico vs Machine Learning}}{68}{figure.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Modularidad}}{68}{figure.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Especificaciones F\IeC {\'\i }sicas}}{70}{figure.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Zumbador Pasivo KY-006}}{70}{figure.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces C\'amara Pivariety IMX230}}{71}{figure.31}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Jumpers}}{71}{figure.32}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Micro SD}}{71}{figure.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces RasperryPi 3G/4G/ LTE Base HAT}}{72}{figure.34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces LE 910Cx Mini PCIe Series Linux}}{72}{figure.35}%
-\contentsline {figure}{\numberline {36}{\ignorespaces LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}}{73}{figure.36}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Unidad Contenedora del M\'odulo Central de Procesamiento}}{74}{figure.37}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Puntos de referencia}}{75}{figure.38}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Puntos de referencia}}{76}{figure.39}%
-\contentsline {figure}{\numberline {40}{\ignorespaces \emph {Mouth Opening Ratio}}}{76}{figure.40}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Diagrama de Flujo del M\'odulo de Comunicaciones}}{78}{figure.41}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Diagrama Actividades del M\'odulo de Comunicaciones}}{79}{figure.42}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Arquitectura del M\'odulo de Estaci\'on Base}}{80}{figure.43}%
-\contentsline {figure}{\numberline {44}{\ignorespaces Diagrama de Secuencia Detalle Reporte Incidencia }}{81}{figure.44}%
-\contentsline {figure}{\numberline {45}{\ignorespaces Diagrama de Secuencia Consultar Ubicaci\'on}}{81}{figure.45}%
-\contentsline {figure}{\numberline {46}{\ignorespaces Diagrama de Secuencia Recuperar Contrase\~na }}{82}{figure.46}%
-\contentsline {figure}{\numberline {47}{\ignorespaces Diagrama de Secuencia Confirmar Incidencia}}{82}{figure.47}%
-\contentsline {figure}{\numberline {48}{\ignorespaces Diagrama de Secuencia Consultar Perfil}}{82}{figure.48}%
-\contentsline {figure}{\numberline {49}{\ignorespaces Diagrama de Secuencia Registrar Conductor }}{83}{figure.49}%
-\contentsline {figure}{\numberline {50}{\ignorespaces Diagrama de Secuencia Modificar Conductor}}{83}{figure.50}%
-\contentsline {figure}{\numberline {51}{\ignorespaces Diagrama de Secuencia Eliminar Conductor }}{83}{figure.51}%
-\contentsline {figure}{\numberline {52}{\ignorespaces Diagrama de Secuencia Estado de los Perif\'ericos }}{84}{figure.52}%
-\contentsline {figure}{\numberline {53}{\ignorespaces P\'agina Inicio de Sesi\'on }}{84}{figure.53}%
-\contentsline {figure}{\numberline {54}{\ignorespaces P\'agina Principal}}{85}{figure.54}%
-\contentsline {figure}{\numberline {55}{\ignorespaces P\'agina Perfil del Conductor }}{85}{figure.55}%
-\contentsline {figure}{\numberline {56}{\ignorespaces P\'agina Detalle de Incidencia }}{86}{figure.56}%
-\contentsline {figure}{\numberline {57}{\ignorespaces P\'agina Ubicaci\'on en Tiempo Real }}{86}{figure.57}%
-\contentsline {figure}{\numberline {58}{\ignorespaces Estructura de un Documento en MongoDB}}{87}{figure.58}%
-\contentsline {figure}{\numberline {59}{\ignorespaces Modelo propuesto para la base de datos en MongoDB}}{88}{figure.59}%
-\contentsline {figure}{\numberline {60}{\ignorespaces Documento de Registro de Conductores}}{88}{figure.60}%
-\contentsline {figure}{\numberline {61}{\ignorespaces Documento de registro de Incidencias}}{89}{figure.61}%
-\contentsline {figure}{\numberline {62}{\ignorespaces Documento de registro de Incidencias}}{90}{figure.62}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Rasperry Camera Module V2}}{35}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Programa cl\'asico vs Machine Learning}}{36}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Mapa de Cobertura LTE-Telcel}}{42}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Planes de Alojamiento AWS Amplify}}{45}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Tiempos de Respuesta de servidores de HostGator}}{46}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Redes Unicapa}}{49}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Redes Unicapa}}{49}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Redes Unicapa}}{50}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una}}{50}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Representaci\'on Gr\'afica de la Funci\'on ReLu}}{51}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la funci\'on de Activaci\'on ReLu}}{51}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Representaci\'on gr\'afica de la funci\'on Tangente Hiperb\'olica}}{52}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la funci\'on de Activaci\'on Tanh}}{52}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Esquema \emph {handover} entre dos celdas }}{55}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Mapa de cobertura de la red LTE }}{56}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Diagrama de Casos de Usos del M\'odulo de Estaci\'on Base}}{63}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de Casos de Uso }}{71}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Programa cl\'asico vs Machine Learning}}{75}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Modularidad}}{75}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Especificaciones F\IeC {\'\i }sicas}}{77}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Zumbador Pasivo KY-006}}{77}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces C\'amara Pivariety IMX230}}{78}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Jumpers}}{78}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Micro SD}}{78}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces RasperryPi 3G/4G/ LTE Base HAT}}{79}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces LE 910Cx Mini PCIe Series Linux}}{79}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}}{80}{figure.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Unidad Contenedora del M\'odulo Central de Procesamiento}}{81}{figure.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Puntos de referencia}}{82}{figure.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Puntos de referencia}}{83}{figure.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces \emph {Mouth Opening Ratio}}}{83}{figure.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Diagrama de Flujo del M\'odulo de Comunicaciones}}{85}{figure.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Diagrama Actividades del M\'odulo de Comunicaciones}}{86}{figure.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Arquitectura del M\'odulo de Estaci\'on Base}}{87}{figure.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Diagrama de Secuencia Detalle Reporte Incidencia }}{88}{figure.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Diagrama de Secuencia Consultar Ubicaci\'on}}{88}{figure.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Diagrama de Secuencia Recuperar Contrase\~na }}{89}{figure.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Diagrama de Secuencia Confirmar Incidencia}}{89}{figure.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Diagrama de Secuencia Consultar Perfil}}{89}{figure.49}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Diagrama de Secuencia Registrar Conductor }}{90}{figure.50}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Diagrama de Secuencia Modificar Conductor}}{90}{figure.51}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Diagrama de Secuencia Eliminar Conductor }}{90}{figure.52}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Diagrama de Secuencia Estado de los Perif\'ericos }}{91}{figure.53}%
+\contentsline {figure}{\numberline {54}{\ignorespaces P\'agina Inicio de Sesi\'on }}{91}{figure.54}%
+\contentsline {figure}{\numberline {55}{\ignorespaces P\'agina Principal}}{92}{figure.55}%
+\contentsline {figure}{\numberline {56}{\ignorespaces P\'agina Perfil del Conductor }}{92}{figure.56}%
+\contentsline {figure}{\numberline {57}{\ignorespaces P\'agina Detalle de Incidencia }}{93}{figure.57}%
+\contentsline {figure}{\numberline {58}{\ignorespaces P\'agina Ubicaci\'on en Tiempo Real }}{93}{figure.58}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Estructura de un Documento en MongoDB}}{94}{figure.59}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Modelo propuesto para la base de datos en MongoDB}}{95}{figure.60}%
+\contentsline {figure}{\numberline {61}{\ignorespaces Documento de Registro de Conductores}}{95}{figure.61}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Documento de registro de Incidencias}}{96}{figure.62}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Documento de registro de Incidencias}}{97}{figure.63}%
