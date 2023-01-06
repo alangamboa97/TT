@@ -808,6 +808,7 @@ Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular
 
 \begin{table}[h]
 \centering
+\caption{RF02- Delimitar región de Interés}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -821,7 +822,7 @@ Con el uso de una cámara digital, se capturará video en tiempo real.\end{tabular
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 Utilizando el software de OpenCV y .\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Delimitar región de Interés}
+
 \end{table}
 
 
@@ -939,6 +940,7 @@ El sistema contará con los siguientes requerimientos:   \\
 
 \begin{table}[h]
 \centering
+\caption{RF01- Guardar Incidencia }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -958,12 +960,13 @@ El sistema contará con los siguientes requerimientos:   \\
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El Módulo de Procesamiento Central puede insertar datos en la base datos.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF01- Guardar Incidencia }
+
 \end{table}
 
 
 \begin{table}[h]
 \centering
+\caption{RF02- Guardar Video }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -975,11 +978,12 @@ El Módulo de Procesamiento Central puede insertar datos en la base datos.\end{ta
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El Módulo de Procesamiento Central puede insertar el video en el almacenamiento de objetos, mientras que la base de datos obtiene la URL del video guardado. \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Guardar Video }
+
 \end{table}
 
 \begin{table}[h]
 \centering
+\caption{RF03- Conectar Aplicación Web }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -995,7 +999,7 @@ El Módulo de Procesamiento Central puede insertar el video en el almacenamiento 
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador puede realizar la inserción, modificación, eliminación y consulta de datos desde la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF03- Conectar Aplicación Web }
+
 \end{table}
 
 
@@ -1004,6 +1008,7 @@ El usuario administrador puede realizar la inserción, modificación, eliminación 
 
 \begin{table}[h]
 \centering
+\caption{RF04- Desplegar Aplicación Web}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1017,13 +1022,14 @@ El usuario administrador puede realizar la inserción, modificación, eliminación 
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador puede acceder a la interfaz de la aplicación web, haciendo uso de la URL en el navegador web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF04- Desplegar Aplicación Web}
+
 \end{table}
 
 
 
 \begin{table}[h]
 \centering
+\caption{RF05- Guardar Credenciales de Usuario Administrador }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1035,13 +1041,14 @@ El usuario administrador puede acceder a la interfaz de la aplicación web, hacie
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF05- Guardar Credenciales de Usuario Administrador }
+
 \end{table}
 \textbf{Requerimientos No Funcionales del Módulo de Estación Base}
 \clearpage
 
 
 \begin{table}[]
+\caption{Requerimientos No Funcionales del Módulo de Estación Base}
 \begin{tabular}{{|m{0.12\linewidth}|m{0.25\linewidth}|m{0.50\linewidth}|}}
 \hline
 \textbf{ID} & \textbf{Nombre del requerimiento} & \textbf{Descripción } \\ \hline
@@ -1051,7 +1058,7 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \emph{RNF04 } & Usabilidad  & El sistema estará enfocado a la visualización de reportes, por lo que este tendrá una interfaz intuitiva y amigable para el usuario. El sistema proporcionará mensajes de advertencia orientados al usuario, en caso de ocurrir un error en el Módulo Central de Procesamiento. \\ \hline
  \\ \hline
 \end{tabular}
-\caption{Requerimientos No Funcionales del Módulo de Estación Base}
+
 \end{table}
 
 
@@ -1068,6 +1075,7 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 01 }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Guardar Incidencia}                                             \\ \hline
@@ -1079,13 +1087,14 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador podrá iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 01 }
+
 \end{table}
 
 
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 02 }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Guardar Video}                                             \\ \hline
@@ -1097,12 +1106,13 @@ El usuario administrador podrá iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 02 }
+
 \end{table}
 
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 03 }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Conectar Aplicación Web}                                             \\ \hline
@@ -1114,11 +1124,12 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 03 }
+
 \end{table}
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 04 }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Desplegar Aplicación Web}                                             \\ \hline
@@ -1130,11 +1141,12 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 04 }
+
 \end{table}
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 05 }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Guardar Credenciales de Usuario Administrador}                                             \\ \hline
@@ -1146,7 +1158,7 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 05 }
+
 \end{table}
 
 
@@ -1177,6 +1189,7 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \item \textbf{Análisis de Requerimientos Funcionales}
 \begin{table}[H]
 \centering
+\caption{RF01- Iniciar Sesión}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1191,7 +1204,7 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema, con la ayuda de los servicios de Amazon Cognito, comprobará que las credenciales ingresadas por parte del usuario administrador se encuentren en la base de datos. En caso contrario, la aplicación web indicará que ese usuario no se encuentra registrado en la base de datos.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF01- Iniciar Sesión}
+
 \end{table}
 
 
@@ -1199,6 +1212,7 @@ El sistema, con la ayuda de los servicios de Amazon Cognito, comprobará que las 
 
 \begin{table}[H]
 \centering
+\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1213,32 +1227,15 @@ El sistema, con la ayuda de los servicios de Amazon Cognito, comprobará que las 
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema recuperará de la base de datos todas las incidencias que se tengan registradas.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
+
 \end{table}
+
 
 
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|ll|}
-\hline
-\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Visualizar Reporte de Incidencia}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema desplegará los detalles específicos de cada incidencia registrada.\\ \\ \textbf{Elementos:}
-\\
-\quad $\bullet$ Incidencia\\
-\quad $\bullet$ Administrdor\\
-\quad $\bullet$ Conductor
-\end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El usuario administrador podrá visualizar los reportes individuales de incidencias de cada conductor al hacer click en cualquiera de las incidencias mostrada en la lista principal. Los reportes contendrán informacón sobre la fecha, hora, ubicación y un video corto del momento en que fueron detectados síntomas de somnolencia.\end{tabular}}                                                    \\ \hline
-\end{tabular}
-\caption{RF02- Mostrar el Historial de Reportes de Incidencia}
-\end{table}
-
-
-\begin{table}[H]
-\centering
+\caption{RF03- Visualizar Reporte de Incidencia}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1252,11 +1249,12 @@ El usuario administrador podrá visualizar los reportes individuales de incidenci
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador podrá visualizar los reportes individuales de incidencias de cada conductor al hacer click en cualquiera de las incidencias mostrada en la lista principal. Los reportes contendrán información sobre la fecha, hora, ubicación y un video corto del momento en que fueron detectados síntomas de somnolencia.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF03- Visualizar Reporte de Incidencia}
+
 \end{table}
 
 \begin{table}[H]
 \centering
+\caption{RF04- Confirmar Incidencia}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1271,11 +1269,12 @@ El usuario administrador podrá visualizar los reportes individuales de incidenci
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador podrá confirmar la incidencia después de haber revisado el videoclip del momento de somnolencia con la intención de descartar falsos positivos. Esto será posible ingresando a una incidencia específica mostrando sus detalles.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF04- Confirmar Incidencia}
+
 \end{table}
 
 \begin{table}[H]
 \centering
+\caption{RF05 - Recuperar Contraseña}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1290,11 +1289,12 @@ El usuario administrador podrá confirmar la incidencia después de haber revisado
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema requerirá que el usuario administrador ingrese el correo con el que fue registrado. Posteriormente se le enviará un código de recuperación de contraseña a ese correo. El administrador ingresará se código en el apartado de recuperar contraseña y así podrá ingresar una nueva contraseña.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF05 - Recuperar Contraseña}
+
 \end{table}
 
 \begin{table}[H]
 \centering
+\caption{RF06- Mostrar perfil del Conductor}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1308,11 +1308,12 @@ El sistema requerirá que el usuario administrador ingrese el correo con el que f
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El administrador podrá consultar cada uno de los perfiles de los conductores registrados en la base de datos dando click en el nombre del mismo. En dicho perfil se mostrarán datos como nombre, apellido, así como el número de incidencias de dicho conductor, con sus respectivos detalles.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF06- Mostrar perfil del Conductor}
+
 \end{table}
 
 \begin{table}[H]
 \centering
+\caption{RF07- Mostrar ubicación Geográfica}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1326,13 +1327,14 @@ El administrador podrá consultar cada uno de los perfiles de los conductores reg
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema permitirá al administrador consultar la ubicación de los conductores en tiempo real. Para esto el administrador deberá de ingresar previamente al perfil del conductor del cual desea consultar dicha ubicación.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF07- Mostrar ubicación Geográfica}
+
 \end{table}
 
 
 
 \begin{table}[H]
 \centering
+\caption{RF08- Descartar Incidencia}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1346,29 +1348,32 @@ El sistema permitirá al administrador consultar la ubicación de los conductores 
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 En caso de presentarse una incidencia falsa, después de haber sido revisada por el administrador, esta podrá ser catalogada como falsa incidencia y será eliminada automáticamente de la base de datos.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF08- Descartar Incidencia}
+
 \end{table}
 
 \begin{table}[H]
 \centering
+\caption{RF09- Registrar Usuario}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
 \multicolumn{1}{|l|}{\emph{RF09}}                                              & \emph{Registrar Usuario}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema le permitirá al administrador registrar nuevos conductores.\\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Incidencia\\
-\quad $\bullet$ Administrador\\
+\quad $\bullet$ Nombre\\
+\quad $\bullet$ Apellido\\
+\quad $\bullet$ ID\\
 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-En caso de presentarse una incidencia falsa, después de haber sido revisada por el administrador, esta podrá ser catalogada como falsa incidencia y será eliminada automáticamente de la base de datos.\end{tabular}}                                                    \\ \hline
+El Administrador podrá registrar a nuevos conductores en el sistema. El sistema generará de manera automática el ID del nuevo conductor\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF09- Registrar Usuario}
+
 \end{table}
 
 \begin{table}[H]
 \centering
+\caption{RF10- Mostrar el Historial de Reportes de Incidencia}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
@@ -1384,10 +1389,11 @@ En caso de presentarse una incidencia falsa, después de haber sido revisada por 
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El administrador podrá editar los datos de los conductores como nombre o apellido.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF10- Mostrar el Historial de Reportes de Incidencia}
+
 \end{table}
 
 \begin{table}[H]
+\caption{RF11- Mostrar el Historial de Reportes de Incidencia}
 \centering
 \begin{tabular}{|ll|}
 \hline
@@ -1403,7 +1409,7 @@ El administrador podrá editar los datos de los conductores como nombre o apellid
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema le permitirá al eliminar los datos de conductores de la base de datos.\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{RF11- Mostrar el Historial de Reportes de Incidencia}
+
 \end{table}
 
 \begin{table}[H]
@@ -1433,6 +1439,7 @@ El sistema enviará un mensaje de alerta al administrador indicando que Unidad pr
 A continuación se mencionan los requerimientos no funcionales de la aplicación web.
 
 \begin{table}[H]
+\caption{Requerimientos No funcionales - Aplicación Web}
 \begin{tabular}{|l|l|l}
 \cline{1-2}
 \textbf{Requerimiento No Funcional} & \textbf{Descripción}                                                                                                                                                                   &  \\ \cline{1-2}
@@ -1442,7 +1449,7 @@ Eficiencia                          & \begin{tabular}[c]{@{}l@{}}La aplicación t
 Escalabilidad                       & \begin{tabular}[c]{@{}l@{}}La aplicación web deberá ofrecer la oportunidad de \\ agregar nuevas funcionalidades y \\ soportar un mayor número de usuarios a \\ futuro\end{tabular}     &  \\ \cline{1-2}
 Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación deberá ofrecer un buen \\ funcionamiento mientras se tenga \\ una conexión a internet mínima de 1Mbps\end{tabular}                                      &  \\ \cline{1-2}
 \end{tabular}
-\caption{Requerimientos No funcionales - Aplicación Web}
+
 \end{table}
 
 \item \textbf{Análsis de Casos de Uso}
@@ -1454,45 +1461,53 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
  \label{fig:scaraindust}
 \end{center}
 
+\textbf{Especificación de Casos de Uso}
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 01 - Iniciar Sesión }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Iniciar Sesión}                                             \\ \hline
 \multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El administrador ingresará los datos correspondientes para iniciar sesión en la aplicación web. \\ \\ \textbf{Precondiciones:}
 \\
-\quad $\bullet$ El administrador deberá tener sus credenciales registradas en Amazon Cognito
+\quad $\bullet$ El administrador deberá contar sus credenciales registradas en Amazon Cognito
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
 \quad $\bullet$ Email\\
 \quad $\bullet$ Contraseña
  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 01 }
+
 \end{table}
 
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 02 - Registrar Usuario }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Registrar Usuario}                                             \\ \hline
 \multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Solo los usuarios administradores podrán registrar a nuevos conductores en el sistema. \\ \\ \textbf{Precondiciones:}
 \\
-\quad $\bullet$ Amazon Cognito 
+\quad $\bullet$ Contar con credenciales de acceso como administrador 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
-El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+\quad $\bullet$ Nombre\\
+\quad $\bullet$ Apellido\\
+\quad $\bullet$ Edad
+ 
+\end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 02 }
+
 \end{table}
 
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 03 - Modificar Usuario }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Modificar Usuario}                                             \\ \hline
@@ -1504,12 +1519,13 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 03 }
+
 \end{table}
 
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 04 - Eliminar Usuario}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Eliminar Usuario}                                             \\ \hline
@@ -1521,29 +1537,14 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 04 }
+
 \end{table}
+
 
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|ll|}
-\hline
-\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Eliminar Usuario}                                             \\ \hline
-\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Administrador, BBDD}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Precondiciones:}
-\\
-\quad $\bullet$ Amazon Cognito 
-\end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
-El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
-\end{tabular}
 \caption{Caso de Uso 05 }
-\end{table}
-
-
-\begin{table}[h]
-\centering
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Confirmar Incidencia}                                             \\ \hline
@@ -1555,11 +1556,12 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 06 }
+
 \end{table}
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 07 }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Visualizar Incidencia}                                             \\ \hline
@@ -1571,12 +1573,14 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 07 }
+
 \end{table}
 
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 08 }
+
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Recuperar Contraseña}                                             \\ \hline
@@ -1588,13 +1592,14 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 08 }
+
 \end{table}
 
 
 
 \begin{table}[h]
 \centering
+\caption{Caso de Uso 09 }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Mostrar Ubicación en Tiempo Real}                                             \\ \hline
@@ -1606,7 +1611,7 @@ El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabula
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{PostCondiciones:}\\
 El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-\caption{Caso de Uso 08 }
+
 \end{table}
 
 
