@@ -8,10 +8,13 @@
 \@nameuse{es@quoting}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -34,10 +37,9 @@
 \citation{TastreoSatelital}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Cap\IeC {\'\i }tulo I: Introducci\'on }{9}{section.3}\protected@file@percent }
 \citation{Sistemasdesomnolencia}
-\citation{Sistemasdesomnolencia}
-\citation{Sistemasdesomnolencia}
+\citation{SistemasdesomnolenciaEEG}
+\citation{SistemasdesomnolenciaCV}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Planteamiento del problema}{10}{subsection.3.1}\protected@file@percent }
-\citation{Sistemasdesomnolencia}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Propuesta de soluci\'on}{11}{subsection.3.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Diagrama general del dise\~no preliminar de la arquitectura del sistema. }}{12}{figure.1}\protected@file@percent }
 \newlabel{fig:Arquitecturapreliminar}{{1}{12}{Diagrama general del diseño preliminar de la arquitectura del sistema}{figure.1}{}}
@@ -341,54 +343,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {66}{\ignorespaces Arquitectura Amazon Cognito}}{103}{figure.66}\protected@file@percent }
 \newlabel{fig:DocumentoIncidencias}{{66}{104}{Arquitectura Amazon Cognito}{figure.66}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Conclusiones}{105}{section.7}\protected@file@percent }
+\bibstyle{plain}
+\bibdata{Referencias}
 \bibcite{WHO}{1}
-\bibcite{IMT}{2}
-\bibcite{TastreoSatelital}{3}
-\bibcite{Sistemasdesomnolencia}{4}
-\bibcite{sixfab}{5}
-\bibcite{kendall}{6}
-\bibcite{viola}{7}
-\bibcite{CoberturaNacional}{8}
-\bibcite{algoritmosdeaprendizaje}{9}
-\bibcite{EstadodelAarte1}{10}
-\bibcite{EstadodelAarte2}{11}
-\bibcite{EstadodelAarte3}{12}
-\bibcite{EstadodelAarte4}{13}
-\bibcite{EstadodelAarte5}{14}
-\bibcite{EstadodelAarte6}{15}
-\bibcite{EstadodelAarte7}{16}
-\bibcite{EstadodelAarte8}{17}
-\bibcite{EstadodelAarte9}{18}
-\bibcite{EstadodelAarte10}{19}
-\bibcite{EstadodelAarte11}{20}
-\bibcite{EstadodelAarte12}{21}
-\bibcite{EstadodelAarte13}{22}
-\bibcite{EstadodelAarte14}{23}
-\bibcite{EstadodelAarte15}{24}
-\bibcite{EstadodelAarte16}{25}
-\bibcite{EstadodelAarte17}{26}
-\bibcite{conapra}{27}
-\bibcite{NodeJs}{28}
-\bibcite{js}{29}
-\bibcite{AWS}{30}
-\bibcite{vision}{31}
-\bibcite{mongo}{32}
-\bibcite{Referencia0}{33}
-\bibcite{python}{34}
-\bibcite{Referencia2}{35}
-\bibcite{Referencia3}{36}
-\bibcite{Referencia5}{37}
-\bibcite{Referencia7}{38}
-\bibcite{Referncia8}{39}
-\bibcite{Referencia9}{40}
-\bibcite{Referencia10}{41}
-\bibcite{Referencian4}{42}
-\bibcite{Referencian5}{43}
-\bibcite{Referencian6}{44}
-\bibcite{Referencian7}{45}
-\bibcite{Referencian8}{46}
-\bibcite{Referencian14}{47}
-\bibcite{Referencian15}{48}
-\bibcite{Referencian16}{49}
-\bibcite{Referencian17}{50}
-\gdef \@abspage@last{109}
+\gdef \@abspage@last{106}

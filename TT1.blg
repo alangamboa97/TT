@@ -1,47 +1,101 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TT1.aux
-I found no \bibdata command---while reading file TT1.aux
-I found no \bibstyle command---while reading file TT1.aux
-You've used 48 entries,
-            0 wiz_defined-function locations,
-            171 strings with 1633 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+Database file #1: Referencias.bib
+A bad cross reference---entry "WHO"
+refers to entry "http://www.who.int/publications/i/item/9789241565684", which doesn't exist
+Warning--I didn't find a database entry for "Top-Down"
+Warning--I didn't find a database entry for "CoberturaNacional"
+Warning--I didn't find a database entry for "sixfab"
+Warning--I didn't find a database entry for "IMT"
+Warning--I didn't find a database entry for "TastreoSatelital"
+Warning--I didn't find a database entry for "Sistemasdesomnolencia"
+Warning--I didn't find a database entry for "SistemasdesomnolenciaEEG"
+Warning--I didn't find a database entry for "SistemasdesomnolenciaCV"
+Warning--I didn't find a database entry for "kendall"
+Warning--I didn't find a database entry for "vision"
+Warning--I didn't find a database entry for "Referencia0"
+Warning--I didn't find a database entry for "viola"
+Warning--I didn't find a database entry for "Referencian1"
+Warning--I didn't find a database entry for "Referencian2"
+Warning--I didn't find a database entry for "Referencian5"
+Warning--I didn't find a database entry for "Referencian6"
+Warning--I didn't find a database entry for "Referencian7"
+Warning--I didn't find a database entry for "Referencian9"
+Warning--I didn't find a database entry for "Referencian10"
+Warning--I didn't find a database entry for "Referencian11"
+Warning--I didn't find a database entry for "Referencian12"
+Warning--I didn't find a database entry for "Referencian13"
+Warning--I didn't find a database entry for "EstadodelAarte1"
+Warning--I didn't find a database entry for "EstadodelAarte2"
+Warning--I didn't find a database entry for "EstadodelAarte3"
+Warning--I didn't find a database entry for "EstadodelAarte4"
+Warning--I didn't find a database entry for "EstadodelAarte5"
+Warning--I didn't find a database entry for "EstadodelAarte6"
+Warning--I didn't find a database entry for "EstadodelAarte7"
+Warning--I didn't find a database entry for "EstadodelAarte8"
+Warning--I didn't find a database entry for "EstadodelAarte9"
+Warning--I didn't find a database entry for "EstadodelAarte10"
+Warning--I didn't find a database entry for "EstadodelAarte11"
+Warning--I didn't find a database entry for "EstadodelAarte12"
+Warning--I didn't find a database entry for "EstadodelAarte13"
+Warning--I didn't find a database entry for "EstadodelAarte14"
+Warning--I didn't find a database entry for "EstadodelAarte15"
+Warning--I didn't find a database entry for "EstadodelAarte16"
+Warning--I didn't find a database entry for "EstadodelAarte17"
+Warning--I didn't find a database entry for "algoritmosdeaprendizaje"
+Warning--I didn't find a database entry for "filtroshaar"
+Warning--I didn't find a database entry for "aprendizajeprofundo"
+Warning--I didn't find a database entry for "js"
+Warning--I didn't find a database entry for "Referencian14"
+Warning--I didn't find a database entry for "Referencian15"
+Warning--I didn't find a database entry for "Referencian16"
+Warning--I didn't find a database entry for "Referencian17"
+Warning--I didn't find a database entry for "Referencian18"
+Warning--I didn't find a database entry for "NodeJs"
+Warning--I didn't find a database entry for "http://www.who.int/publications/i/item/9789241565684"
+You've used 1 entry,
+            2118 wiz_defined-function locations,
+            594 strings with 5389 characters,
+and the built_in function-call counts, 224 in all, are:
+= -- 20
+> -- 7
 < -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 3
+- -- 2
+* -- 10
+:= -- 48
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 1
+duplicate$ -- 10
+empty$ -- 18
+format.name$ -- 2
+if$ -- 42
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 2
+pop$ -- 4
+preamble$ -- 1
+purify$ -- 3
 quote$ -- 0
-skip$ -- 0
+skip$ -- 7
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 5
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 4
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+while$ -- 2
+width$ -- 2
+write$ -- 12
+(There was 1 error message)
