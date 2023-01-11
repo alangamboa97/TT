@@ -7,25 +7,25 @@
 \contentsline {figure}{\numberline {6}{\ignorespaces Boosting}}{21}{figure.6}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Arquitectura de una CDN}}{21}{figure.7}%
 \contentsline {figure}{\numberline {8}{\ignorespaces top-down}}{30}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Mapa de cobertura 3G/4G/5G, M\'exico.\cite {CoberturaNacional}}}{33}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Mapa de cobertura 3G/4G/5G, Ciudad de M\'exico.\cite {CoberturaNacional}}}{34}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Rasperry Camera Module V2}}{37}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Programa cl\'asico vs Machine Learning}}{39}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Mapa de Cobertura LTE-Telcel}}{44}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Planes de Alojamiento AWS Amplify}}{49}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Tiempos de Respuesta de servidores de HostGator}}{49}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de Casos de Uso - Subm\'odulo de Visi\'on Artificial}}{55}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Redes Unicapa}}{55}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Red Neuronal Unicapa}}{56}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Redes Neuronales Multicapa}}{56}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una}}{57}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Representaci\'on Gr\'afica de la Funci\'on ReLu}}{57}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la funci\'on de Activaci\'on ReLu}}{58}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Representaci\'on gr\'afica de la funci\'on Tangente Hiperb\'olica}}{58}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la funci\'on de Activaci\'on Tanh}}{59}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Esquema \emph {handover} entre dos celdas }}{62}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Mapa de cobertura de la red LTE }}{63}{figure.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de Casos de Usos del M\'odulo de Estaci\'on Base}}{68}{figure.27}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Mapa de cobertura 3G/4G/5G, M\'exico.\cite {CoberturaNacional}}}{31}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Mapa de cobertura 3G/4G/5G, Ciudad de M\'exico.\cite {CoberturaNacional}}}{32}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Rasperry Camera Module V2}}{36}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Programa cl\'asico vs Machine Learning}}{38}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Mapa de Cobertura LTE-Telcel}}{43}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Planes de Alojamiento AWS Amplify}}{48}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Tiempos de Respuesta de servidores de HostGator}}{48}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de Casos de Uso - Subm\'odulo de Visi\'on Artificial}}{54}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Redes Unicapa}}{54}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Red Neuronal Unicapa}}{55}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Redes Neuronales Multicapa}}{55}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una}}{56}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Representaci\'on Gr\'afica de la Funci\'on ReLu}}{56}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la funci\'on de Activaci\'on ReLu}}{57}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Representaci\'on gr\'afica de la funci\'on Tangente Hiperb\'olica}}{57}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la funci\'on de Activaci\'on Tanh}}{58}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Esquema \emph {handover} entre dos celdas }}{61}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Mapa de cobertura de la red LTE }}{62}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de Casos de Usos del M\'odulo de Estaci\'on Base}}{67}{figure.27}%
 \contentsline {figure}{\numberline {28}{\ignorespaces Diagrama de Casos de Uso - Aplicaci\'on Web }}{77}{figure.28}%
 \contentsline {figure}{\numberline {29}{\ignorespaces Diagrama de Secuencia - M\'odulo Central de Procesamiento}}{82}{figure.29}%
 \contentsline {figure}{\numberline {30}{\ignorespaces Especificaciones F\IeC {\'\i }sicas}}{83}{figure.30}%

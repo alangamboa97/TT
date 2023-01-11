@@ -1,30 +1,30 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {table}{\numberline {1}{\ignorespaces Cuadro Comparativo - Algoritmos de Aprendizaje}}{36}{table.1}%
-\contentsline {table}{\numberline {2}{\ignorespaces Tabla Comparativa Lenguajes de Programaci\'on}}{41}{table.2}%
-\contentsline {table}{\numberline {3}{\ignorespaces Comparaci\'on entre Redes Inal\'ambricas}}{42}{table.3}%
-\contentsline {table}{\numberline {4}{\ignorespaces Comparaci\'on entre LTE-M y NB-IoT}}{44}{table.4}%
-\contentsline {table}{\numberline {5}{\ignorespaces Comparaci\'on de los Sistemas de Gesti\'on de Bases de Datos No Relacionales}}{46}{table.5}%
-\contentsline {table}{\numberline {6}{\ignorespaces Tipos de Archivo Multimedia}}{47}{table.6}%
-\contentsline {table}{\numberline {7}{\ignorespaces RF01- Verificar estado funcional de perif\'ericos}}{51}{table.7}%
-\contentsline {table}{\numberline {8}{\ignorespaces RF02- Activar Alarma}}{51}{table.8}%
-\contentsline {table}{\numberline {9}{\ignorespaces RF01- Capturar Video en Tiempo Real}}{52}{table.9}%
-\contentsline {table}{\numberline {10}{\ignorespaces RF02- Ingresar al Campo Visual}}{52}{table.10}%
-\contentsline {table}{\numberline {11}{\ignorespaces RF03- Reconocer Caracter\IeC {\'\i }sticas Faciales}}{53}{table.11}%
-\contentsline {table}{\numberline {12}{\ignorespaces RF04- Detectar signos de somnolencia}}{53}{table.12}%
-\contentsline {table}{\numberline {13}{\ignorespaces RF05- Enviar se\~nal de Alerta}}{53}{table.13}%
-\contentsline {table}{\numberline {14}{\ignorespaces RF06- Almacenar Incidencia}}{54}{table.14}%
-\contentsline {table}{\numberline {15}{\ignorespaces Categor\IeC {\'\i }as LTE}}{60}{table.15}%
-\contentsline {table}{\numberline {16}{\ignorespaces RF01- Guardar Incidencia }}{65}{table.16}%
-\contentsline {table}{\numberline {17}{\ignorespaces RF02- Guardar Video }}{66}{table.17}%
-\contentsline {table}{\numberline {18}{\ignorespaces RF03- Conectar Aplicaci\'on Web }}{66}{table.18}%
-\contentsline {table}{\numberline {19}{\ignorespaces RF04- Desplegar Aplicaci\'on Web}}{66}{table.19}%
-\contentsline {table}{\numberline {20}{\ignorespaces RF05- Guardar Credenciales de Usuario Administrador }}{67}{table.20}%
-\contentsline {table}{\numberline {21}{\ignorespaces Requerimientos No Funcionales del M\'odulo de Estaci\'on Base}}{68}{table.21}%
-\contentsline {table}{\numberline {22}{\ignorespaces Caso de Uso 01 - Guardar Incidencia}}{69}{table.22}%
-\contentsline {table}{\numberline {23}{\ignorespaces Caso de Uso 02 - Guardar Video }}{69}{table.23}%
-\contentsline {table}{\numberline {24}{\ignorespaces Caso de Uso 03 - Conectar Aplicaci\'on Web }}{70}{table.24}%
-\contentsline {table}{\numberline {25}{\ignorespaces Caso de Uso 04 - Desplegar Aplicaci\'on Web}}{70}{table.25}%
-\contentsline {table}{\numberline {26}{\ignorespaces Caso de Uso 05 - Guardar Credenciales de Usuario Administrador }}{70}{table.26}%
+\contentsline {table}{\numberline {1}{\ignorespaces Cuadro Comparativo - Algoritmos de Aprendizaje}}{35}{table.1}%
+\contentsline {table}{\numberline {2}{\ignorespaces Tabla Comparativa Lenguajes de Programaci\'on}}{40}{table.2}%
+\contentsline {table}{\numberline {3}{\ignorespaces Comparaci\'on entre Redes Inal\'ambricas}}{41}{table.3}%
+\contentsline {table}{\numberline {4}{\ignorespaces Comparaci\'on entre LTE-M y NB-IoT}}{43}{table.4}%
+\contentsline {table}{\numberline {5}{\ignorespaces Comparaci\'on de los Sistemas de Gesti\'on de Bases de Datos No Relacionales}}{45}{table.5}%
+\contentsline {table}{\numberline {6}{\ignorespaces Tipos de Archivo Multimedia}}{46}{table.6}%
+\contentsline {table}{\numberline {7}{\ignorespaces RF01- Verificar estado funcional de perif\'ericos}}{50}{table.7}%
+\contentsline {table}{\numberline {8}{\ignorespaces RF02- Activar Alarma}}{50}{table.8}%
+\contentsline {table}{\numberline {9}{\ignorespaces RF01- Capturar Video en Tiempo Real}}{51}{table.9}%
+\contentsline {table}{\numberline {10}{\ignorespaces RF02- Ingresar al Campo Visual}}{51}{table.10}%
+\contentsline {table}{\numberline {11}{\ignorespaces RF03- Reconocer Caracter\IeC {\'\i }sticas Faciales}}{52}{table.11}%
+\contentsline {table}{\numberline {12}{\ignorespaces RF04- Detectar signos de somnolencia}}{52}{table.12}%
+\contentsline {table}{\numberline {13}{\ignorespaces RF05- Enviar se\~nal de Alerta}}{52}{table.13}%
+\contentsline {table}{\numberline {14}{\ignorespaces RF06- Almacenar Incidencia}}{53}{table.14}%
+\contentsline {table}{\numberline {15}{\ignorespaces Categor\IeC {\'\i }as LTE}}{59}{table.15}%
+\contentsline {table}{\numberline {16}{\ignorespaces RF01- Guardar Incidencia }}{64}{table.16}%
+\contentsline {table}{\numberline {17}{\ignorespaces RF02- Guardar Video }}{65}{table.17}%
+\contentsline {table}{\numberline {18}{\ignorespaces RF03- Conectar Aplicaci\'on Web }}{65}{table.18}%
+\contentsline {table}{\numberline {19}{\ignorespaces RF04- Desplegar Aplicaci\'on Web}}{65}{table.19}%
+\contentsline {table}{\numberline {20}{\ignorespaces RF05- Guardar Credenciales de Usuario Administrador }}{66}{table.20}%
+\contentsline {table}{\numberline {21}{\ignorespaces Requerimientos No Funcionales del M\'odulo de Estaci\'on Base}}{67}{table.21}%
+\contentsline {table}{\numberline {22}{\ignorespaces Caso de Uso 01 - Guardar Incidencia}}{68}{table.22}%
+\contentsline {table}{\numberline {23}{\ignorespaces Caso de Uso 02 - Guardar Video }}{68}{table.23}%
+\contentsline {table}{\numberline {24}{\ignorespaces Caso de Uso 03 - Conectar Aplicaci\'on Web }}{69}{table.24}%
+\contentsline {table}{\numberline {25}{\ignorespaces Caso de Uso 04 - Desplegar Aplicaci\'on Web}}{69}{table.25}%
+\contentsline {table}{\numberline {26}{\ignorespaces Caso de Uso 05 - Guardar Credenciales de Usuario Administrador }}{69}{table.26}%
 \contentsline {table}{\numberline {27}{\ignorespaces RF01- Iniciar Sesi\'on}}{71}{table.27}%
 \contentsline {table}{\numberline {28}{\ignorespaces RF02- Mostrar el Historial de Reportes de Incidencia}}{71}{table.28}%
 \contentsline {table}{\numberline {29}{\ignorespaces RF03- Visualizar Reporte de Incidencia}}{72}{table.29}%
