@@ -77,7 +77,7 @@ Tomando en cuenta el contexto antes planteado, se analizará y diseñará en el pre
   
 
 \newpage
-\subsection{Planteamiento del problema}
+\subsection{Planteamiento del problema} \label{problema}
 
 La somnolencia es un fenómeno complejo de analizar debido a los factores que pueden intervenir. Algunas de las características más notorias de un estado de somnolencia, se pueden apreciar principalmente en el rostro de las personas: frecuencia de parpadeo, bostezos, movimientos faciales y cabeceos, los cuales son parámetros claves para determinar si una persona está en estado de somnolencia o vigilia.  \\
 
@@ -104,11 +104,11 @@ Actualmente existen varias opciones para la geolocalización de vehículos en tiem
 Dadas las posibles soluciones y escenarios antes mencionados se plantea la siguiente pregunta: ¿Cómo desarrollar un sistema portátil que pueda detectar la somnolencia y alertar al conductor, además de monitorear la ubicación en tiempo real y gestionar las incidencias detectadas en el conductor? 
 
 
-\subsection{Propuesta de solución}
+\subsection{Propuesta de solución} \label{solucion}
 
-Como respuesta a la problemática planteada en la sección 3, se propone el desarrollo de un sistema portátil que sea capaz de detectar somnolencia en conductores y su vez activar una alarma que permita alertar al conductor. Adicionalmente se desarrollará como parte del sistema, un subsistema que permita la administración y validación de las incidencias reportadas, así como el monitoreo GPS del conductor en tiempo real dentro de la Ciudad de México.  \\
+Como respuesta a la problemática planteada en la sección \ref{problema}, se propone el desarrollo de un sistema portátil que sea capaz de detectar somnolencia en conductores y su vez activar una alarma que permita alertar al conductor. Como parte del sistema, un subsistema que permita la administración y validación de las incidencias reportadas, así como el monitoreo GPS del conductor en tiempo real dentro de la Ciudad de México.  \\
 
-Los problemas que resolverá el sistema serán listados a continuación: \\
+Los problemas que resolverá el sistema se listan a continuación: \\
 
 \begin{itemize}
 \item El sistema será portátil por lo que se hará uso de un microordenador para poder ser instalado y que funcione dentro de un vehículo. 
@@ -207,7 +207,7 @@ La metodología de diseño \emph{Top-Down} consiste en dividir un problema complej
 
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/Top-down}
+  \includegraphics[scale=0.56]{imagenes/Top-down}
 \captionof{figure}{Descomposición en la metodología \emph{Top-Down}. \cite{Top-Down}   }
  \label{fig:neurona}
 \end{center}
@@ -671,6 +671,22 @@ El proceso que tiene el módulo es el siguiente, la información recibida por el m
 
 Este módulo estará compuesto por una aplicación web y una base de datos que se encargará de almacenar las incidencias de los conductores para ser corroborados por un administrador posteriormente, esto con la intención de descartar un falso positivo y realizar los ajustes necesarios al sistema. 
 
+\clearpage
+\subsection{Análisis y elección del microordenador}
+
+Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenador para permitir que el sistema sea portátil y pueda funcionar dentro de un automóvil. A continuación se muestra un cuadro comparativo con los modelos de mayor aceptación en el mercado.
+
+\begin{table}[H]
+\begin{tabular}{{|m{0.1\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|}|m{0.25\linewidth|}}}
+\hline
+\textbf{Nombre}     & \textbf{CPU}                                                                        & \textbf{RAM}                                                           & \textbf{Almacenamiento}                                                                  & \textbf{Alimentación}                                                 & \textbf{Precio} \\ \hline
+Banana Pi BPI-F2    & \begin{tabular}[c]{@{}l@{}}ARM Cortex\\ A9- MPCore\\ Dual Core 1.2 Ghz\end{tabular} & 2GB DDR3                                                               & 8GB eMMC                                                                                 & 5V DC                                                                 & \$2179          \\ \hline
+ODRIOD-N2           & \begin{tabular}[c]{@{}l@{}}Amlogic\\ S9XX hexa-core 1.7 Ghz\end{tabular}            & 4GB DDR4                                                               & \begin{tabular}[c]{@{}l@{}}Chip SPI de 8MB\\ Ranura para tarjetas\\ MicroSD\end{tabular} & 15V/5A                                                                & \$5,461         \\ \hline
+Rasperry Pi 4B      & \begin{tabular}[c]{@{}l@{}}1.5 GHZ 64 bit QuadCore\\ Cortex A-72\end{tabular}       & \begin{tabular}[c]{@{}l@{}}1GB, 2GB, 4GB,\\ 8GB DDR4\end{tabular}      & \begin{tabular}[c]{@{}l@{}}Ranura para tarjetas\\ MicroSD\end{tabular}                   & \begin{tabular}[c]{@{}l@{}}5V vía USB-C \\ o puerto GPIO\end{tabular} & \$3956          \\ \hline
+Asus TinkerBoard 2S & Hexa Core A-72 2GHz                                                                 & \begin{tabular}[c]{@{}l@{}}2GB/4GB dual- channel\\ LPDDR4\end{tabular} & \begin{tabular}[c]{@{}l@{}}16GB eMMC + ranura\\ para tarjetas MicroSD\end{tabular}       & 12V-19V                                                               & \$7169          \\ \hline
+\end{tabular}
+\end{table}
+
 
 \subsection{Análisis y elección de la zona geográfica  }
 El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas. Ya que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Debido a lo anterior, se decidió utilizar redes móviles celulares para cumplir lo anterior.  
@@ -700,7 +716,7 @@ Dado que el problema a resolver se trata de una clasificación en imágenes, exist
 
 Por otro lado, se tiene el aprendizaje profundo, el cual es un subgrupo del aprendizaje automático donde las redes neuronales artificiales aprenden de grandes cantidades de datos. Las redes neuronales son algoritmos modelados de la forma en que funciona el cerebro humano. El entrenamiento con grandes cantidades de datos es lo que configura las neuronas en la red neuronal dando como resultado un modelo de aprendizaje profundo que, una vez entrenado, procesa nuevos datos \cite{aprendizajeprofundo}.  Dentro de estas redes neuronales podemos encontrar las siguientes: \\
 
-\begin{table}[]
+\begin{table}[H]
 \begin{tabular}{{|m{0.1\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|}}
 \hline
   & \emph{Aplicaciones} & \emph{Ventajas}  & \emph{Desventajas} \\ \hline
