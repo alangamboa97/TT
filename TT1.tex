@@ -10,7 +10,7 @@
 \usepackage{adjustbox}
 \usepackage{titlesec}
 \usepackage{float}
-
+\usepackage{tabularx}
 
 
 \marginsize{2cm}{2cm}{1cm}{1cm}
@@ -676,9 +676,10 @@ Este módulo estará compuesto por una aplicación web y una base de datos que se e
 
 Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenador para permitir que el sistema sea portátil y pueda funcionar dentro de un automóvil. A continuación se muestra un cuadro comparativo con los modelos de mayor aceptación en el mercado.
 
+
 \begin{table}[H]
-\begin{tabular}{{|m{0.1\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|}|m{0.25\linewidth|}}}
-\hline
+\centering
+\begin{tabular}{{|m{0.12\linewidth}|m{0.2\linewidth}|m{0.16\linewidth}|m{0.16\linewidth}|m{0.13\linewidth}|m{0.1\linewidth}|}}
 \textbf{Nombre}     & \textbf{CPU}                                                                        & \textbf{RAM}                                                           & \textbf{Almacenamiento}                                                                  & \textbf{Alimentación}                                                 & \textbf{Precio} \\ \hline
 Banana Pi BPI-F2    & \begin{tabular}[c]{@{}l@{}}ARM Cortex\\ A9- MPCore\\ Dual Core 1.2 Ghz\end{tabular} & 2GB DDR3                                                               & 8GB eMMC                                                                                 & 5V DC                                                                 & \$2179          \\ \hline
 ODRIOD-N2           & \begin{tabular}[c]{@{}l@{}}Amlogic\\ S9XX hexa-core 1.7 Ghz\end{tabular}            & 4GB DDR4                                                               & \begin{tabular}[c]{@{}l@{}}Chip SPI de 8MB\\ Ranura para tarjetas\\ MicroSD\end{tabular} & 15V/5A                                                                & \$5,461         \\ \hline
@@ -686,6 +687,14 @@ Rasperry Pi 4B      & \begin{tabular}[c]{@{}l@{}}1.5 GHZ 64 bit QuadCore\\ Corte
 Asus TinkerBoard 2S & Hexa Core A-72 2GHz                                                                 & \begin{tabular}[c]{@{}l@{}}2GB/4GB dual- channel\\ LPDDR4\end{tabular} & \begin{tabular}[c]{@{}l@{}}16GB eMMC + ranura\\ para tarjetas MicroSD\end{tabular}       & 12V-19V                                                               & \$7169          \\ \hline
 \end{tabular}
 \end{table}
+
+Los parámetros que se tomaron en cuenta para la elección de que microordenador utilizar fueron los siguientes:
+\begin{itemize}
+\item precio
+\item alimentación necesaria
+\item RAM
+\item módulos compatibles
+\end{itemize}
 
 
 \subsection{Análisis y elección de la zona geográfica  }
