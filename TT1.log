@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  11 JAN 2023 09:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  11 JAN 2023 09:40
 entering extended mode
 **./TT1.tex
 (TT1.tex
@@ -522,106 +522,19 @@ LaTeX Warning: Label `fig:boost' multiply defined.
 
 LaTeX Warning: Label `fig:boost' multiply defined.
 
-
-LaTeX Warning: Label `fig:DiagramadeactividadMEB' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:actividades' multiply defined.
-
-
-LaTeX Warning: Label `fig:landmark' multiply defined.
-
-
-LaTeX Warning: Label `fig:landmark' multiply defined.
-
-
-LaTeX Warning: Label `fig:DisenoMEB' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:DocumentoIncidencias' multiply defined.
-
 )
+Runaway argument?
+{\contentsline {subsubsection}{\numberline {4.2.5}Sistema de detecci\'\ETC.
+! File ended while scanning use of \@writefile.
+<inserted text> 
+                \par 
+l.35 \begin{document}
+                     
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
 \openout1 = `TT1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -687,7 +600,32 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 35.
 LaTeX Info: Redefining \pageref on input line 35.
 LaTeX Info: Redefining \nameref on input line 35.
- (TT1.out) (TT1.out)
+ (TT1.out)
+Runaway argument?
+{\376\377\000D\000i\000s\000e\000\361\000o\000\040\000e\000\040\000i\0\ETC.
+! File ended while scanning use of \@@BOOKMARK.
+<inserted text> 
+                \par 
+l.35 \begin{document}
+                     
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+(TT1.out)
+Runaway argument?
+{\376\377\000D\000i\000s\000e\000\361\000o\000\040\000e\000\040\000i\0\ETC.
+! File ended while scanning use of \@@BOOKMARK.
+<inserted text> 
+                \par 
+l.35 \begin{document}
+                     
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
 \@outlinefile=\write3
 \openout3 = `TT1.out'.
 
@@ -699,73 +637,22 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-(TT1.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-.
- (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-5.
-
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-5.
-
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 5.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 5.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
-
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
-
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-[1{C:/Users/alang/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
-
-]
-Overfull \hbox (5.12357pt too wide) in paragraph at lines 43--43
- [][] [][][]\OT1/lmr/m/n/12 Propuesta de un sis-te-ma de geo-lo-ca-li-za-cion 
-y mo-ni-to-reo va GPS/GSM/GPRS 
- []
-
-[2])
+(TT1.toc)
 \tf@toc=\write4
 \openout4 = `TT1.toc'.
 
- [3] (TT1.lof
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+ [1{C:/Users/alang/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
-
-LaTeX Warning: Citation `Top-Down' on page 4 undefined on input line 3.
-
-[4])
+]
+(TT1.lof)
 \tf@lof=\write5
 \openout5 = `TT1.lof'.
 
- [5] (TT1.lot
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [6])
+ [2] (TT1.lot)
 \tf@lot=\write6
 \openout6 = `TT1.lot'.
 
- [7]
+ [3]
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
@@ -775,10 +662,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-[8]
+[4]
+
+LaTeX Warning: Citation `WHO' on page 5 undefined on input line 67.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 67--69
 
  []
+
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
+0.
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+70.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+70.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 70.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 70.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Citation `IMT' on page 5 undefined on input line 70.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
@@ -786,11 +715,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--71
  []
 
 
+LaTeX Warning: Citation `TastreoSatelital' on page 5 undefined on input line 73
+.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
  []
 
-[9]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
@@ -799,6 +732,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
+
+
+LaTeX Warning: Citation `Sistemasdesomnolencia' on page 6 undefined on input li
+ne 89.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 89--90
@@ -811,16 +748,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
  []
 
 
+LaTeX Warning: Citation `Sistemasdesomnolencia' on page 6 undefined on input li
+ne 94.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
+
+
+LaTeX Warning: Citation `Sistemasdesomnolencia' on page 6 undefined on input li
+ne 96.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-[10]
+[6]
+
+LaTeX Warning: Citation `Sistemasdesomnolencia' on page 7 undefined on input li
+ne 98.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
@@ -840,14 +790,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-[11]
-<imagenes/propuestasolucion.jpg, id=685, 929.72343pt x 549.55313pt>
+[7]
+<imagenes/propuestasolucion.jpg, id=196, 929.72343pt x 549.55313pt>
 File: imagenes/propuestasolucion.jpg Graphic file (type jpg)
 <use imagenes/propuestasolucion.jpg>
 Package pdftex.def Info: imagenes/propuestasolucion.jpg  used on input line 127
 .
 (pdftex.def)             Requested size: 371.88278pt x 219.81735pt.
- [12 <./imagenes/propuestasolucion.jpg>]
+ [8 <./imagenes/propuestasolucion.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
@@ -882,7 +832,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
-[13]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
@@ -898,35 +848,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--192
  []
 
 
-LaTeX Warning: Citation `Top-Down' on page 14 undefined on input line 206.
+LaTeX Warning: Citation `Top-Down' on page 10 undefined on input line 206.
 
-<imagenes/Top-down.jpg, id=695, 812.03375pt x 261.97874pt>
+<imagenes/Top-down.jpg, id=206, 812.03375pt x 261.97874pt>
 File: imagenes/Top-down.jpg Graphic file (type jpg)
 <use imagenes/Top-down.jpg>
 Package pdftex.def Info: imagenes/Top-down.jpg  used on input line 210.
 (pdftex.def)             Requested size: 454.7358pt x 146.70709pt.
 
-LaTeX Warning: Citation `Top-Down' on page 14 undefined on input line 211.
+LaTeX Warning: Citation `Top-Down' on page 10 undefined on input line 211.
 
-[14] [15 <./imagenes/Top-down.jpg>] [16]
-<imagenes/neurona.png, id=713, 490.83376pt x 212.29312pt>
+[10]
+
+LaTeX Warning: Citation `kendall' on page 11 undefined on input line 220.
+
+[11 <./imagenes/Top-down.jpg>] [12]
+
+LaTeX Warning: Citation `intensidad' on page 13 undefined on input line 260.
+
+
+LaTeX Warning: Citation `vision' on page 13 undefined on input line 287.
+
+
+LaTeX Warning: Citation `vision' on page 13 undefined on input line 288.
+
+<imagenes/neurona.png, id=220, 490.83376pt x 212.29312pt>
 File: imagenes/neurona.png Graphic file (type png)
 <use imagenes/neurona.png>
 Package pdftex.def Info: imagenes/neurona.png  used on input line 297.
 (pdftex.def)             Requested size: 245.41628pt x 106.1463pt.
- [17] [18 <./imagenes/neurona.png>]
-<imagenes/cnn2.jpg, id=736, 1003.75pt x 341.275pt>
+[13]
+
+LaTeX Warning: Citation `Referencia0' on page 14 undefined on input line 323.
+
+[14 <./imagenes/neurona.png>]
+<imagenes/cnn2.jpg, id=241, 1003.75pt x 341.275pt>
 File: imagenes/cnn2.jpg Graphic file (type jpg)
 <use imagenes/cnn2.jpg>
 Package pdftex.def Info: imagenes/cnn2.jpg  used on input line 345.
 (pdftex.def)             Requested size: 451.68333pt x 153.57233pt.
-<imagenes/maxpool.png, id=737, 164.25pt x 68.547pt>
+<imagenes/maxpool.png, id=242, 164.25pt x 68.547pt>
 File: imagenes/maxpool.png Graphic file (type png)
 <use imagenes/maxpool.png>
 Package pdftex.def Info: imagenes/maxpool.png  used on input line 364.
 (pdftex.def)             Requested size: 164.24959pt x 68.54681pt.
+ [15 <./imagenes/cnn2.jpg>]
 
-[19 <./imagenes/cnn2.jpg>]
+LaTeX Warning: Citation `viola' on page 16 undefined on input line 388.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
@@ -935,28 +905,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 388--389
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
 d on input line 395.
 
-<imagenes/clasificadores.png, id=746, 994.46532pt x 234.1247pt>
+<imagenes/clasificadores.png, id=250, 994.46532pt x 234.1247pt>
 File: imagenes/clasificadores.png Graphic file (type png)
 <use imagenes/clasificadores.png>
 Package pdftex.def Info: imagenes/clasificadores.png  used on input line 404.
 (pdftex.def)             Requested size: 497.23145pt x 117.06206pt.
-[20 <./imagenes/maxpool.png>]
-<imagenes/cdn-diagram.png, id=755, 722.7pt x 406.51875pt>
+[16 <./imagenes/maxpool.png>]
+
+LaTeX Warning: Citation `viola' on page 17 undefined on input line 409.
+
+<imagenes/cdn-diagram.png, id=258, 722.7pt x 406.51875pt>
 File: imagenes/cdn-diagram.png Graphic file (type png)
 <use imagenes/cdn-diagram.png>
 Package pdftex.def Info: imagenes/cdn-diagram.png  used on input line 417.
 (pdftex.def)             Requested size: 361.3491pt x 203.25887pt.
 
+LaTeX Warning: Citation `Referencian1' on page 17 undefined on input line 430.
 
-LaTeX Warning: Citation `Referencian1' on page 21 undefined on input line 430.
 
+LaTeX Warning: Citation `Referencian2' on page 17 undefined on input line 430.
 
-LaTeX Warning: Citation `Referencian2' on page 21 undefined on input line 430.
-
-[21 <./imagenes/clasificadores.png> <./imagenes/cdn-diagram.png>]
+[17 <./imagenes/clasificadores.png> <./imagenes/cdn-diagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
+
+
+LaTeX Warning: Citation `Referencian5' on page 18 undefined on input line 438.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 436--439
@@ -968,39 +943,119 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+
+LaTeX Warning: Citation `Referencian6' on page 18 undefined on input line 452.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 460--461
 
  []
 
+
+LaTeX Warning: Citation `Referencian7' on page 18 undefined on input line 462.
+
+[18]
+
+LaTeX Warning: Citation `Referencian9' on page 19 undefined on input line 490.
+
+
+LaTeX Warning: Citation `Referencian10' on page 19 undefined on input line 492.
+
+
+
+LaTeX Warning: Citation `Referencian11' on page 19 undefined on input line 500.
+
+
+
+LaTeX Warning: Citation `Referencian12' on page 19 undefined on input line 507.
+
+
+[19]
+
+LaTeX Warning: Citation `Referencian13' on page 20 undefined on input line 510.
+
+
+[20]
+
+LaTeX Warning: Citation `EstadodelAarte1' on page 21 undefined on input line 51
+9.
+
+
+LaTeX Warning: Citation `EstadodelAarte2' on page 21 undefined on input line 52
+3.
+
+
+LaTeX Warning: Citation `EstadodelAarte3' on page 21 undefined on input line 52
+9.
+
+
+LaTeX Warning: Citation `EstadodelAarte4' on page 21 undefined on input line 53
+4.
+
+
+LaTeX Warning: Citation `EstadodelAarte5' on page 21 undefined on input line 53
+9.
+
+[21]
+
+LaTeX Warning: Citation `EstadodelAarte6' on page 22 undefined on input line 54
+2.
+
+
+LaTeX Warning: Citation `EstadodelAarte7' on page 22 undefined on input line 54
+9.
+
+
+LaTeX Warning: Citation `EstadodelAarte8' on page 22 undefined on input line 55
+5.
+
 [22]
 
-LaTeX Warning: Citation `Referencian9' on page 23 undefined on input line 490.
+LaTeX Warning: Citation `EstadodelAarte9' on page 23 undefined on input line 56
+2.
 
 
-LaTeX Warning: Citation `Referencian10' on page 23 undefined on input line 492.
+LaTeX Warning: Citation `EstadodelAarte10' on page 23 undefined on input line 5
+66.
 
 
+LaTeX Warning: Citation `EstadodelAarte11' on page 23 undefined on input line 5
+71.
 
-LaTeX Warning: Citation `Referencian11' on page 23 undefined on input line 500.
 
-
-
-LaTeX Warning: Citation `Referencian12' on page 23 undefined on input line 507.
-
+LaTeX Warning: Citation `EstadodelAarte12' on page 23 undefined on input line 5
+88.
 
 [23]
 
-LaTeX Warning: Citation `Referencian13' on page 24 undefined on input line 510.
+LaTeX Warning: Citation `EstadodelAarte13' on page 24 undefined on input line 6
+07.
 
 
-[24] [25] [26] [27]
+LaTeX Warning: Citation `EstadodelAarte14' on page 24 undefined on input line 6
+24.
+
+
 Overfull \hbox (4.54134pt too wide) in paragraph at lines 625--625
 |[]\OT1/lmr/bx/n/12 Propuesta de un sis-te-ma de geo-lo-ca-li-za-cion y mo-ni-
 to-reo va GPS/GSM/GPRS
  []
 
-[28] [29]
-<imagenes/topdowngeneral.png, id=836, 924.45375pt x 290.08376pt>
+
+LaTeX Warning: Citation `EstadodelAarte15' on page 24 undefined on input line 6
+32.
+
+[24]
+
+LaTeX Warning: Citation `EstadodelAarte16' on page 25 undefined on input line 6
+35.
+
+
+LaTeX Warning: Citation `EstadodelAarte17' on page 25 undefined on input line 6
+38.
+
+[25]
+<imagenes/topdowngeneral.png, id=307, 924.45375pt x 290.08376pt>
 File: imagenes/topdowngeneral.png Graphic file (type png)
 <use imagenes/topdowngeneral.png>
 Package pdftex.def Info: imagenes/topdowngeneral.png  used on input line 646.
@@ -1045,7 +1100,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 663--664
 
  []
 
-[30 <./imagenes/topdowngeneral.png>]
+[26 <./imagenes/topdowngeneral.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 665--666
 
  []
@@ -1060,7 +1115,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 670--671
 
  []
 
-[31]
+[27]
 
 ! Package array Error:  Illegal pream-token (|m{0.1\linewidth }|m{0.25\linewidt
 h }|m{0.25\linewidth }|m{0.25\linewidth }|): `c' used.
@@ -1087,36 +1142,3 @@ l.682 \textbf{Nombre}     &
                             \textbf{CPU}                                    ...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.682 ...                                        &
-                                                   \textbf{RAM}             ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.682 ...                                        &
-                                                   \textbf{Almacenamiento}  ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.682 ...                                        &
-                                                   \textbf{Alimentación}    ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more err
