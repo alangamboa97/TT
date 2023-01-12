@@ -32,46 +32,49 @@
 \contentsline {subsubsection}{\numberline {4.2.4}Rasperry Pi based System for Visual Object Detection and Tracking}{26}{subsubsection.4.2.4}%
 \contentsline {subsubsection}{\numberline {4.2.5}Dise\~no e implementaci\'on de sistema de visi\'on artificial para alerta y detecci\'on de somnolencia mediante aprendizaje profundo aplicable en conductores de veh\IeC {\'\i }culos}{26}{subsubsection.4.2.5}%
 \contentsline {subsubsection}{\numberline {4.2.6}Aplicaci\'on de visi\'on por computador y \emph {machine learning} al guiado de un robot m\'ovil basado en Rasperry Pi}{27}{subsubsection.4.2.6}%
-\contentsline {subsubsection}{\numberline {4.2.7}Sistema de detecci\'on de somnolencia mediante inteligencia artificial en conductores de veh\IeC {\'\i }culos para alertar la ocurrencia de accidentes de tr\'ansito}{27}{subsubsection.4.2.7}%
-\contentsline {subsubsection}{\numberline {4.2.8}Dise\~no de un sistema electr\'onico para detectar la somnolencia en automovilistas por medio de la actividad ocular}{27}{subsubsection.4.2.8}%
-\contentsline {subsubsection}{\numberline {4.2.9}Sistema para la detecci\'on del estado de somnolencia en seres humanos, con reconocimiento de patrones }{27}{subsubsection.4.2.9}%
-\contentsline {subsubsection}{\numberline {4.2.10}Sistema de Detecci\'on de Somnolencia}{28}{subsubsection.4.2.10}%
-\contentsline {subsubsection}{\numberline {4.2.11}Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. }{28}{subsubsection.4.2.11}%
-\contentsline {subsubsection}{\numberline {4.2.12}Sistema basado en la detecci\'on y notificaci\'on de somnolencia en conductores de autos }{28}{subsubsection.4.2.12}%
-\contentsline {subsubsection}{\numberline {4.2.13}Detecci\'on de somnolencia para conducci\'on sin accidentes}{28}{subsubsection.4.2.13}%
-\contentsline {subsubsection}{\numberline {4.2.14}Implementaci\'on de un sistema web con geolocalizaci\'on para medir la transaccionalidad del portal ABC de la democracia para el consejo nacional electoral (CNE)}{29}{subsubsection.4.2.14}%
-\contentsline {subsubsection}{\numberline {4.2.15}Dise\~no e implementaci\'on de un sistema de geolocalizaci\'on en interiores para plataforma Android v\IeC {\'\i }a la red enterprise WLAN de la PUCP}{29}{subsubsection.4.2.15}%
-\contentsline {subsubsection}{\numberline {4.2.16}Geolocalizaci\'on con LoRa mediante multilateraci\'on}{29}{subsubsection.4.2.16}%
-\contentsline {subsubsection}{\numberline {4.2.17}Propuesta de un sistema de geolocalizaci\'on y monitoreo v\IeC {\'\i }a GPS/GSM/GPRS aplicado a un puls\'ometro para personas con enfermedades cardiovasculares}{30}{subsubsection.4.2.17}%
-\contentsline {subsubsection}{\numberline {4.2.18}Influencia de un sistema de geolocalizaci\'on en el control y monitoreo de veh\IeC {\'\i }culos con dispositivos GPS en una empresa log\IeC {\'\i }stica}{30}{subsubsection.4.2.18}%
-\contentsline {subsubsection}{\numberline {4.2.19}Dise\~no de la red de acceso LTE en el distrito de Jes\'us Mar\IeC {\'\i }a}{30}{subsubsection.4.2.19}%
+\contentsline {subsubsection}{\numberline {4.2.7}Evaluaci\'on de la plataforma Nvidia Jetson Nano para aplicaciones de visi\'on artificial}{27}{subsubsection.4.2.7}%
+\contentsline {subsubsection}{\numberline {4.2.8}\emph {Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Nano}}{27}{subsubsection.4.2.8}%
+\contentsline {subsubsection}{\numberline {4.2.9}Sistema de detecci\'on de somnolencia mediante inteligencia artificial en conductores de veh\IeC {\'\i }culos para alertar la ocurrencia de accidentes de tr\'ansito}{27}{subsubsection.4.2.9}%
+\contentsline {subsubsection}{\numberline {4.2.10}Dise\~no de un sistema electr\'onico para detectar la somnolencia en automovilistas por medio de la actividad ocular}{27}{subsubsection.4.2.10}%
+\contentsline {subsubsection}{\numberline {4.2.11}Sistema para la detecci\'on del estado de somnolencia en seres humanos, con reconocimiento de patrones }{28}{subsubsection.4.2.11}%
+\contentsline {subsubsection}{\numberline {4.2.12}Sistema de Detecci\'on de Somnolencia}{28}{subsubsection.4.2.12}%
+\contentsline {subsubsection}{\numberline {4.2.13}Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. }{28}{subsubsection.4.2.13}%
+\contentsline {subsubsection}{\numberline {4.2.14}Sistema basado en la detecci\'on y notificaci\'on de somnolencia en conductores de autos }{29}{subsubsection.4.2.14}%
+\contentsline {subsubsection}{\numberline {4.2.15}Detecci\'on de somnolencia para conducci\'on sin accidentes}{29}{subsubsection.4.2.15}%
+\contentsline {subsubsection}{\numberline {4.2.16}Implementaci\'on de un sistema web con geolocalizaci\'on para medir la transaccionalidad del portal ABC de la democracia para el consejo nacional electoral (CNE)}{29}{subsubsection.4.2.16}%
+\contentsline {subsubsection}{\numberline {4.2.17}Dise\~no e implementaci\'on de un sistema de geolocalizaci\'on en interiores para plataforma Android v\IeC {\'\i }a la red enterprise WLAN de la PUCP}{29}{subsubsection.4.2.17}%
+\contentsline {subsubsection}{\numberline {4.2.18}Geolocalizaci\'on con LoRa mediante multilateraci\'on}{30}{subsubsection.4.2.18}%
+\contentsline {subsubsection}{\numberline {4.2.19}Propuesta de un sistema de geolocalizaci\'on y monitoreo v\IeC {\'\i }a GPS/GSM/GPRS aplicado a un puls\'ometro para personas con enfermedades cardiovasculares}{30}{subsubsection.4.2.19}%
+\contentsline {subsubsection}{\numberline {4.2.20}Influencia de un sistema de geolocalizaci\'on en el control y monitoreo de veh\IeC {\'\i }culos con dispositivos GPS en una empresa log\IeC {\'\i }stica}{30}{subsubsection.4.2.20}%
+\contentsline {subsubsection}{\numberline {4.2.21}Dise\~no de la red de acceso LTE en el distrito de Jes\'us Mar\IeC {\'\i }a}{30}{subsubsection.4.2.21}%
 \contentsline {section}{\numberline {5}Cap\IeC {\'\i }tulo III: An\'alisis}{31}{section.5}%
 \contentsline {subsection}{\numberline {5.1}An\'alisis y elecci\'on de la zona geogr\'afica }{32}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}An\'alisis y elecci\'on del microordenador}{34}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}An\'alisis y elecci\'on de algoritmos de aprendizaje supervisado, no supervisado y aprendizaje profundo }{34}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}An\'alisis y elecci\'on de la c\'amara digital }{37}{subsection.5.4}%
 \contentsline {subsection}{\numberline {5.5}An\'alisis y elecci\'on de la alarma }{37}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}An\'alisis y elecci\'on de la unidad de almacenamiento externa}{38}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}An\'alisis y elecci\'on de lenguajes de programaci\'on para el microordenador}{38}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}An\'alisis y elecci\'on de protocolos de comunicaci\'on inal\'ambrica }{41}{subsection.5.8}%
-\contentsline {subsection}{\numberline {5.9}An\'alisis y elecci\'on del manejador de bases de datos }{45}{subsection.5.9}%
-\contentsline {subsection}{\numberline {5.10}An\'alisis y elecci\'on de lenguajes de programaci\'on web}{47}{subsection.5.10}%
-\contentsline {subsection}{\numberline {5.11}An\'alisis y elecci\'on del servidor de alojamiento }{47}{subsection.5.11}%
-\contentsline {subsection}{\numberline {5.12}An\'alisis del M\'odulo Central de Procesamiento}{51}{subsection.5.12}%
-\contentsline {subsubsection}{\numberline {5.12.1}An\'alisis del Subm\'odulo Visi\'on Artificial}{52}{subsubsection.5.12.1}%
-\contentsline {subsubsection}{\numberline {5.12.2}An\'alisis y elecci\'on del modelo de Red Neuronal}{55}{subsubsection.5.12.2}%
-\contentsline {subsection}{\numberline {5.13}An\'alisis del M\'odulo de Comunicaciones}{60}{subsection.5.13}%
-\contentsline {subsubsection}{\numberline {5.13.1}An\'alisis del Subm\'odulo de Telemetr\IeC {\'\i }a }{61}{subsubsection.5.13.1}%
-\contentsline {subsubsection}{\numberline {5.13.2}An\'alisis del Subm\'odulo de Datos }{61}{subsubsection.5.13.2}%
-\contentsline {subsubsection}{\numberline {5.13.3}An\'alisis del Subm\'odulo de Cobertura}{62}{subsubsection.5.13.3}%
-\contentsline {subsection}{\numberline {5.14}An\'alisis del M\'odulo de Estaci\'on Base}{65}{subsection.5.14}%
-\contentsline {subsubsection}{\numberline {5.14.1}An\'alisis de la Aplicaci\'on Web}{71}{subsubsection.5.14.1}%
-\contentsline {section}{\numberline {6}Cap\IeC {\'\i }tulo IV: Dise\~no}{81}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Dise\~no del M\'odulo Central de Procesamiento}{81}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{83}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Dise\~no del Subm\'odulo de Visi\'on Artificial}{89}{subsubsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.2}Dise\~no del M\'odulo de Comunicaciones}{93}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Dise\~no de la Estaci\'on Base}{95}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Dise\~no de la Aplicaci\'on Web}{97}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Dise\~no de la Base de Datos}{105}{subsubsection.6.3.2}%
-\contentsline {section}{\numberline {7}Conclusiones}{108}{section.7}%
+\contentsline {subsection}{\numberline {5.6}An\'alisis y elecci\'on de la unidad de almacenamiento externa}{39}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}An\'alisis y elecci\'on de lenguajes de programaci\'on para el microordenador}{39}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}An\'alisis y elecci\'on de herramientas de programaci\'on}{42}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}An\'alisis y elecci\'on de protocolos de comunicaci\'on inal\'ambrica }{42}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.10}An\'alisis y elecci\'on del manejador de bases de datos }{46}{subsection.5.10}%
+\contentsline {subsection}{\numberline {5.11}An\'alisis y elecci\'on de lenguajes de programaci\'on web}{48}{subsection.5.11}%
+\contentsline {subsection}{\numberline {5.12}An\'alisis y elecci\'on del servidor de alojamiento }{48}{subsection.5.12}%
+\contentsline {subsection}{\numberline {5.13}An\'alisis del M\'odulo Central de Procesamiento}{52}{subsection.5.13}%
+\contentsline {subsubsection}{\numberline {5.13.1}An\'alisis del Subm\'odulo Visi\'on Artificial}{53}{subsubsection.5.13.1}%
+\contentsline {subsubsection}{\numberline {5.13.2}An\'alisis y elecci\'on del modelo de Red Neuronal}{56}{subsubsection.5.13.2}%
+\contentsline {subsection}{\numberline {5.14}An\'alisis del M\'odulo de Comunicaciones}{61}{subsection.5.14}%
+\contentsline {subsubsection}{\numberline {5.14.1}An\'alisis del Subm\'odulo de Telemetr\IeC {\'\i }a }{62}{subsubsection.5.14.1}%
+\contentsline {subsubsection}{\numberline {5.14.2}An\'alisis del Subm\'odulo de Datos }{62}{subsubsection.5.14.2}%
+\contentsline {subsubsection}{\numberline {5.14.3}An\'alisis del Subm\'odulo de Cobertura}{63}{subsubsection.5.14.3}%
+\contentsline {subsection}{\numberline {5.15}An\'alisis del M\'odulo de Estaci\'on Base}{66}{subsection.5.15}%
+\contentsline {subsubsection}{\numberline {5.15.1}An\'alisis de la Aplicaci\'on Web}{72}{subsubsection.5.15.1}%
+\contentsline {section}{\numberline {6}Cap\IeC {\'\i }tulo IV: Dise\~no}{82}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Dise\~no del M\'odulo Central de Procesamiento}{82}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{84}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Dise\~no del Subm\'odulo de Visi\'on Artificial}{90}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Dise\~no del M\'odulo de Comunicaciones}{94}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Dise\~no de la Estaci\'on Base}{96}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Dise\~no de la Aplicaci\'on Web}{98}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Dise\~no de la Base de Datos}{106}{subsubsection.6.3.2}%
+\contentsline {section}{\numberline {7}Conclusiones}{109}{section.7}%
