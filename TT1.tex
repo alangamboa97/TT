@@ -11,7 +11,7 @@
 \usepackage{titlesec}
 \usepackage{float}
 \usepackage{tabularx}
-
+\usepackage{multicol}
 
 \marginsize{2cm}{2cm}{1cm}{1cm}
 \usepackage{fancyhdr}
@@ -33,6 +33,7 @@
 \usepackage{shapepar}
 
 \begin{document}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\listtablename}{Índice de tablas}
 
@@ -44,6 +45,19 @@
 \newpage
 \listoftables
 
+\newpage
+
+\textbf{Glosario de Abreviaturas}
+
+\begin{itemize}
+
+    \item \textbf{CNN} \tab[3cm] \emph{Convolutional Neural Network}
+    \item b
+    \item c
+    \item d
+    \item e
+    \item 
+\end{itemize}
 
 \newpage
 \section{Resumen}
@@ -528,11 +542,23 @@ En este trabajo realizado por los estudiantes de la Universidad de Mumbai, se im
 \subsubsection{\emph{Driver Drowsiness Detection System Using Convolutional Neural Networks}}
 En este trabajo realizado en la Universidad Anurag en el año 2022 se presenta una forma de analizar y anticipar la somnolencia del conductor mediante la aplicación de una red neuronal convolucional sobre la cara del conductor de un marco de secuencia. Se uso un conjunto de datos para dar forma y aprobar el modelo, usando redes convolucionales 3D basadas en modelos de múltiples capas de arquitectura de red neuronal repetitiva para detectar la somnolencia del conductor. Tras una sesión de entrenamiento, se obtuvo una precisión que se acerca al 92\% de aceptación.\cite{EstadodelAarte3}
 
+
+\subsubsection{Rasperry Pi based System for Visual Object Detection and Tracking}
+Este trabajo aborda la implementación de un sistema capaz de realizar el seguimiento de varios objetos mediante una cámara digital conectada a una Rasperry Pi. El motor de este sistema fue desarrollado utilizando C++ y se ejecuta sobre un sistema operativo basado en GNU/Linux.
+Este sistema también logra transmitir las coordenadas y el tamaño de los objetos detectados a otras computadores dentro de una red de local de Internet.
+
+%https://a-lab.ee/edu/sites/default/files/Ivask_BSc.pdf
+
+
+
 % https://ijarsct.co.in/Paper3399.pdf
 
 \subsubsection{Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos}
 En este trabajo realizado en la facultad de Ingeniería de la Universidad Nacional de Trujillo, se desarrolló un sistema de extracción de características faciales tales como pestañeo, cabeceo y bostezos. Para la extracción de regiones de interés se utilizaron cascadas Haar, y la clasificación de estas características se realizó utilizando un modelo de red LeNet. Además el trabajo incluye la creación de una base de datos de las regiones de interés de la cara utilizando imágenes propias y también utilizando conjunto de datos externos. Para el desarrollo de este trabajo se utilizó el lenguaje de programación Python, junto con las librerías de OpenCV, Tensorflow y Keras.\cite{EstadodelAarte4}
 
+\subsubsection{Aplicación de visión por computador y \emph{machine learning} al guiado de un robot móvil basado en Rasperry Pi}
+
+Esta investigación realizada en la Universidad de Sevilla, detalla el desarrollo de un vehículo con guiado autónomo basado en visión artificial. Se utilizó una red neuronal convolucional para realizar el seguimiento de objetos. El sistema desarrollado consta de una integración de una computadora remota a la par de una Rasperry Pi,
 
 \subsubsection{Sistema de detección de somnolencia mediante inteligencia artificial en conductores de vehículos para alertar la ocurrencia de accidentes de tránsito}
 
