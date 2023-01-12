@@ -565,9 +565,10 @@ Esta investigación realizada en la Universidad de Sevilla, detalla el desarrollo
 Este trabajo de investigación aborda distintos proyectos tales como: Estimación de pose humana en tiempo real y Reconocimiento de matrícula en tiempo real sobre una Nvidia Jetson Nano. Se realizaron pruebas de rendimiento para conocer las limitaciones de la Jetson Nano. Los resultados presentados muestran que la Jetson Nano permite trabajar tanto como imágenes como con vídeos de forma fluida, aunque con ciertas limitaciones en el uso de redes neuronales profundas. Sin embargo, al utilizar la aceleración de hardware ofrecida por Nvdia, se redujo considerablemente los tiempos de ejecución de los procesos.
 %https://repositorio.uam.es/bitstream/handle/10486/698381/jimenez_varela_natalia_tfg.pdf?sequence=1
 
-\subsubsection{\emph{Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Nano}}
+\subsubsection{\emph{Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Jetson Nano}}
+Esta investigación realiza una comparación del rendimiento entre la Rasperry Pi y la Jetson Nano aplicado a un sistema de guía utilizando líneas rectas en el suelo. Los resultados de este trabajo muestran que ambas ofrecen un buen rendimiento. Sin embargo, la Jetson Nano demostró ser 20 segundos más rápida en cuanto al procesamiento de imágnes, y obtuvo un porcentaje del 100\% de efectividad al recorrer el trayecto trazado por el circuito de líneas. Por otro lado, la Rasperry Pi, obtuvo un porcentaje de 98\% de efectividad en cuanto al seguimiento del circuito. Por lo anterior, el estudio concluyó que la Jetson Nano ofrece un mejor rendimiento y efectividad en tareas de visión artificial.
 
-
+%https://jurnal.unsyiah.ac.id/JRE/article/view/21324/17_4_7_239_246
 
 \subsubsection{Sistema de detección de somnolencia mediante inteligencia artificial en conductores de vehículos para alertar la ocurrencia de accidentes de tránsito}
 
@@ -731,14 +732,13 @@ Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenad
 \begin{table}[h]
 \centering
 \caption{\label{tab:microordenador} Comparación de microordenadores}
-\begin{tabular}{{|m{0.12\linewidth}|m{0.2\linewidth}|m{0.15\linewidth}|m{0.2\linewidth}|m{0.18\linewidth}|m{0.08\linewidth}|}}
+\begin{tabular}{{|m{0.12\linewidth}|m{0.2\linewidth}|m{0.15\linewidth}|m{0.15\linewidth}|m{0.15\linewidth}|m{0.08\linewidth}|}}
 \hline
-\textbf{Nombre}& \textbf{CPU} & \textbf{RAM}  & \textbf{Almacenamiento} & \textbf{Alimentación}                                                 & \textbf{Precio} \\ \hline
-Banana Pi BPI-F2  & ARM Cortex A9- MPCore Dual Core 1.2 Ghz & 2GB DDR3                                                & 8GB eMMC & 5V DC & \$2179 \\ \hline
-ODRIOD-N2  & Amlogic S9XX hexa-core 1.7 Ghz & 4GB DDR4 & Chip SPI de 8MB Ranura para tarjetas MicroSD & 15V/5A  & \$5461 \\ \hline
-Rasperry Pi 4B & 1.5 GHZ 64 bit QuadCore Cortex A-72 & 1GB, 2GB, 4GB, 8GB DDR4 & Ranura para tarjetas MicroSD & 5V vía USB-C o puerto GPIO& \$3956\\ \hline
-Asus TinkerBoard 2S & Hexa Core A-72 2GHz & 2GB/4GB dual- channel LPDDR4 & 16GB eMMC + ranura para tarjetas MicroSD  & 12V-19V   & \$7169  \\ \hline
-Jetson Nano & ARM A57 de cuatro núcleos & 4 GB de LPDDR4 de 64 bits & MicroSD & 5V/4A & \$3,743 \\ \hline
+\textbf{Nombre}& \textbf{CPU} & \textbf{RAM}  & \textbf{GPU} & \textbf{Alimentación}                                                 & \textbf{Precio} \\ \hline
+Google Coral Dev Board & NXPiMX 8M SoC Dual Core 1.2 GHz & 2GB DDR3                                                & 8GB eMMC & 5V DC & \$4289 \\ \hline
+Rasperry Pi 4B & 1.5 GHZ 64 bit QuadCore Cortex A-72 & 1GB, 2GB, 4GB, 8GB DDR4 & No cuenta con GPU & 5V vía USB-C o puerto GPIO& \$3956\\ \hline
+Asus TinkerBoard 2S & Hexa Core A-72 2GHz & 2GB/4GB dual- channel LPDDR4 & Integrated GC7000 Lite Graphics  & 12V-19V   & \$7169  \\ \hline
+NVIDIA Jetson Nano & ARM A57 2.1 GHz de cuatro núcleos & 4 GB de LPDDR4 de 64 bits & NVIDIA Maxwell de 128 núcleos CUDA & 5V/4A & \$3,799 \\ \hline
 \end{tabular}
 \end{table}
 
@@ -749,6 +749,9 @@ Los parámetros que se tomaron en cuenta para la elección de que microordenador u
 \item RAM
 \item Módulos compatibles
 \end{itemize}
+
+Si bien la Rasperry Pi es uno de los microordenadores con más aceptación por parte de la comunidad, esta no cuenta con una GPU, lo cual reduce significativamente su rendimiento en tareas relacionadas con IA que requieren de mayor procesamiento. Por lo que al buscar alternativas de microordenadores que contaran una GPU, y basándose en él estudio se concluyó\cite{puciestudio} , que la Nvidia Jetson Nano, ofrece una mayor ventaja en comparación a la rasperry Pi en cuanto a procesamiento y eficacia en tareas que involucran visión artificial \cite{rasperryvsnano}. A pesar de que Asus y Google Coral Dev Board  cuenta con una GPU, su potencia no supera a la ofrecida por Jetson Nano {deepedgebench}  y su precio es considerablemente mayor como se puede apreciar en la tabla \ref{} Por lo cual se descartaron como opción viable. 
+Por todo lo anterior, se concluyó que la Jetson Nano representa la mejor opción para el desarrollo del presente proyecto debido a su bajo costo, bajo consumo de energía y mejor rendimiento en comparación a sus alternativas. 
 
 
 \subsection{Análisis y elección de algoritmos de aprendizaje supervisado, no supervisado y aprendizaje profundo }
@@ -2845,6 +2848,8 @@ El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas d
 Sleepiness and alertness}. Publicado en: Kryger MH, Roth T, Dement WC, 
 eds. \emph{Principles and Practice of Sleep Medicine}, 4th ed: Saunders; 
 2005:39-49.
+
+\bibitem{}
 
 \bibitem{sixfab} Sixfab. "Raspberry Pi IP54 Outdoor Project Enclosure - Sixfab". Sixfab. https://sixfab.com/product/raspberry-pi-ip54-outdoor-iot-project-enclosure/ (accedido el 2 de enero de 2023).
 
