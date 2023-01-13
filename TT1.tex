@@ -54,8 +54,8 @@
     \item \textbf{CNN} \tab[4.3cm] \emph{Convolutional Neural Network}
     \item \textbf{LTE-M} \tab[4cm] \emph{Long Term Evolution for Machines}
     \item \textbf{NB-IoT} \tab[3.7cm] \emph{Narrowband-Internet of Things}
-    \item d
-    \item e
+    \item \textbf{CPU} \tab[3.7cm] \emph{Central Processing Unit}
+    \item \textbf{GPU} \tab[3.7cm] \emph{Graphical Processing Unit}
     \item 
 \end{itemize}
 
@@ -735,9 +735,9 @@ Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenad
 \begin{tabular}{{|m{0.12\linewidth}|m{0.2\linewidth}|m{0.15\linewidth}|m{0.15\linewidth}|m{0.15\linewidth}|m{0.08\linewidth}|}}
 \hline
 \textbf{Nombre}& \textbf{CPU} & \textbf{RAM}  & \textbf{GPU} & \textbf{Alimentación}                                                 & \textbf{Precio} \\ \hline
-Google Coral Dev Board & NXPiMX 8M SoC Dual Core 1.2 GHz & 2GB DDR3                                                & 8GB eMMC & 5V DC & \$4289 \\ \hline
+Google Coral Dev Board & NXPiMX 8M SoC Dual Core 1.2 GHz & 2GB DDR3                                                &  Hexa Core A-72 2GHz & 5V DC & \$4289 \\ \hline
 Rasperry Pi 4B & 1.5 GHZ 64 bit QuadCore Cortex A-72 & 1GB, 2GB, 4GB, 8GB DDR4 & No cuenta con GPU & 5V vía USB-C o puerto GPIO& \$3956\\ \hline
-Asus TinkerBoard 2S & Hexa Core A-72 2GHz & 2GB/4GB dual- channel LPDDR4 & Integrated GC7000 Lite Graphics  & 12V-19V   & \$7169  \\ \hline
+Asus TinkerBoard 2S & Mali-G52 MP6  con 6 núcleos & 2GB/4GB dual- channel LPDDR4 & Integrated GC7000 Lite Graphics  & 12V-19V   & \$7169  \\ \hline
 NVIDIA Jetson Nano & ARM A57 2.1 GHz de cuatro núcleos & 4 GB de LPDDR4 de 64 bits & NVIDIA Maxwell de 128 núcleos CUDA & 5V/4A & \$3,799 \\ \hline
 \end{tabular}
 \end{table}
@@ -750,56 +750,21 @@ Los parámetros que se tomaron en cuenta para la elección de que microordenador u
 \item Módulos compatibles
 \end{itemize}
 
-Si bien la Rasperry Pi es uno de los microordenadores con más aceptación por parte de la comunidad, esta no cuenta con una GPU, lo cual reduce significativamente su rendimiento en tareas relacionadas con IA que requieren de mayor procesamiento. Por lo que al buscar alternativas de microordenadores que contaran una GPU, y basándose en él estudio se concluyó\cite{puciestudio} , que la Nvidia Jetson Nano, ofrece una mayor ventaja en comparación a la rasperry Pi en cuanto a procesamiento y eficacia en tareas que involucran visión artificial \cite{rasperryvsnano}. A pesar de que Asus y Google Coral Dev Board  cuenta con una GPU, su potencia no supera a la ofrecida por Jetson Nano {deepedgebench}  y su precio es considerablemente mayor como se puede apreciar en la tabla \ref{} Por lo cual se descartaron como opción viable. 
+Si bien la Rasperry Pi es uno de los microordenadores con más aceptación por parte de la comunidad, esta no cuenta con una GPU, lo cual reduce significativamente su rendimiento en tareas relacionadas con IA que requieren de mayor procesamiento. Por lo que al buscar alternativas de microordenadores que contaran una GPU, y basándose en él estudio \cite{nanovspi} se concluyó , que la Nvidia Jetson Nano, ofrece una mayor ventaja en comparación a la rasperry Pi en cuanto a procesamiento y eficacia en tareas que involucran visión artificial. A pesar de que Asus y Google Coral Dev Board  cuenta con una GPU, su potencia no supera a la ofrecida por Jetson Nano \cite{deepedgebench}  y su precio es considerablemente mayor como se puede apreciar en la tabla \ref{tab:microordenador} Por lo cual se descartaron como opción viable. 
 Por todo lo anterior, se concluyó que la Jetson Nano representa la mejor opción para el desarrollo del presente proyecto debido a su bajo costo, bajo consumo de energía y mejor rendimiento en comparación a sus alternativas. 
 
 
-\subsection{Análisis y elección de algoritmos de aprendizaje supervisado, no supervisado y aprendizaje profundo }
-Dentro del aprendizaje automático se encuentran diferentes tipos de algoritmos, como el aprendizaje supervisado y no supervisado. \\
 
-El aprendizaje supervisado utiliza conjuntos de datos etiquetados (aquellos datos para los que ya se conoce la respuesta de destino) que entrenan algoritmos para la clasificación de datos o predecir salidas con precisión, este puede agruparse en dos tipos fundamentales: clasificación y regresión, el primero ordena los datos en segmentos específicos, algunos de estos algoritmos de clasificación son: regresión logística, k vecinos más cercanos, bosque aleatorio, clasificador bayesiano simple, descenso de gradiente estocástico y árboles de decisión. Mientras que la regresión mide la relación entre una variable dependiente y una o más variables independientes mediante un método estadístico, permitiendo hacer predicciones de causa y efecto basadas en diversos datos. Algunos algoritmos de regresión comunes incluyen regresión de Ridge, Lasso, regresión de redes neuronales y regresión logística. \cite{algoritmosdeaprendizaje} \\
 
-El Aprendizaje no supervisado se utilizan algoritmos para examinar y agrupar los conjuntos de datos no etiquetados. Dichos algoritmos pueden descubrir patrones desconocidos en los datos sin supervisión humana.  Existen tres categorías principales de algoritmos: Agrupación de clústeres, el cual, según las similitudes o diferencias, los datos no etiquetados se clasifican mediante técnicas de agrupación de clústeres. Asociación, el cual permite identificar las relaciones de las variables dentro de un conjunto de datos y finalmente Reducción de dimensionalidad, el cual se usa en el caso de que un conjunto de datos contiene un conjunto de características inusualmente alto, ayudando a cotar este número sin comprometer la integridad de los datos.  \cite{algoritmosdeaprendizaje} \\
+\subsection{Análisis y elección de la cámara digital}
 
-Dado que el problema a resolver se trata de una clasificación en imágenes, existen algoritmos como la cascada de clasificadores \emph{boosting}, que nos permiten detectar el rostro de un apersona, el cual consiste en tomar serie de clasificadores débiles y combinarlos para construir un clasificador fuerte con la precisión deseada. Por tanto, es necesario realizar un proceso de entrenamiento supervisado para crear la cascada de clasificadores. Este proceso se realiza mediante un algoritmo basado en AdaBoost, un meta-algoritmo adaptativo del aprendizaje supervisado cuyo nombre es una abreviatura de \emph{adaptative boosting}. Adaboost es un procedimiento efectivo para buscar un numero pequeño de buenas características que no tienen una variación significante y que nos permitirá realizar la detección de rostro y características faciales, como los ojos y la boca dentro de una imagen. \cite{filtroshaar} \\
+Para la búsqueda de modelos de cámaras digitales, se buscaron modelos que tuvieran compatibilidad con la Nvidia Jetson Nano debido a que el sistema será alojado en este micrordenador.  
 
-Por otro lado, se tiene el aprendizaje profundo, el cual es un subgrupo del aprendizaje automático donde las redes neuronales artificiales aprenden de grandes cantidades de datos. Las redes neuronales son algoritmos modelados de la forma en que funciona el cerebro humano. El entrenamiento con grandes cantidades de datos es lo que configura las neuronas en la red neuronal dando como resultado un modelo de aprendizaje profundo que, una vez entrenado, procesa nuevos datos \cite{aprendizajeprofundo}.  Dentro de estas redes neuronales podemos encontrar las siguientes: \\
-
-\begin{table}[H]
-\caption{Cuadro Comparativo - Algoritmos de Aprendizaje}
-\begin{tabular}{{|m{0.1\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|}}
-\hline
-  & \emph{Aplicaciones} & \emph{Ventajas}  & \emph{Desventajas} \\ \hline
-\emph{Neural Networks (CNNs)} & Se utiliza principalmente en las tareas de reconocimiento de imágenes y detección de objetos. Además de sistemas de recomendación y tareas de procesamiento de lenguaje.   & los resultados son más precisos, especialmente para los casos de uso de reconocimiento de imágenes/objetos, en comparación con otros algoritmos  & ara entrenarla se requiere una potencia de cálculo muy alta. Por lo tanto, no es muy rentable. \\ \hline
-\emph{Long Short-Term Memory Networks} & Ideal para tareas como autocompletado de oraciones, generación de subtítulos y análisis de cuadros de video.  & Puede manejar la información en la memoria durante un largo período de tiempo en comparación con RNN.  & Se requiere una gran cantidad de computación y recursos para entrenar el modelo. \\ \hline
-\emph{General Adversarial Networks (GANs)} & Utilizado en la industria creativa para la generación de objetos 3D. 
-
-Útil en la edición de imágenes (Deepfake), generación de personajes de dibujos animados, ilustraciones para novelas, artículos, etc.  & Capaz de aprender la representación interna (distribuciones desordenadas y complejas) en cualquier dato.  & Cuando genera nuevos datos a partir de datos originales, no hay métrica de evaluación para juzgar la precisión de la salida. 
-
-Se requiere mucho cómputo y tiempo para el entrenamiento del modelo  \\ \hline
-\emph{Recurrent Neural Networks (RNNs) } & Se utiliza principalmente en los campos del procesamiento del lenguaje natural y el reconocimiento de voz. También es ideal para tareas como autocompletado de palabras, reconocimiento de texto y análisis de cuadros de video.  & Capacidad de recordar información a lo largo del período de entrenamiento. Posibilidad de procesar entradas de cualquier longitud   & Los cálculos requieren mucho tiempo debido a su naturaleza recurrente. 
-
-Dificultad de acceder a la información desde hace mucho tiempo.  \\ \hline
-\emph{Multilayer Perceptron?s (MLP?s)} & Problemas de clasificación.  
-
-Voz, reconocimiento de imágenes y compresión de datos.  & Puede distinguir datos que no son linealmente separables. 
-
-No hace ninguna suposición con respecto a las funciones de densidad de probabilidad  & Al actualizar los pesos en capas, la red puede atascarse en un mínimo local que puede dificultar la precisión.  \\ \hline
-
-\end{tabular}
-\end{table}
-
-Debido a que el presente proyecto se basará en el reconocimiento de imágenes y de clasificación de información, se tomó la de decisión de utilizar una CNN o Red Neuronal Convolucional para el reconocimiento de ojos abiertos o cerrados dentro de la imagen, esta aprende directamente de los datos, sin necesidad de extraer características manualmente.  Estas redes son particularmente útiles para encontrar patrones en imágenes para reconocer objetos, caras y escenas, además de permitir su implementación en video en tiempo real, lo cual es indispensable para el presente proyecto.  
-
-\subsection{Análisis y elección de la cámara digital  }
-
-Para la búsqueda de modelos de cámaras digitales, se buscó que la compatibilidad con la Raspberry Pi debido a que el sistema será alojado en este micrordenador.  
-
-Se optó por utilizar la Rasperry Camera Module V2, ya que cuenta con hasta 8 Megapixeles de resolución, además de tener distintos los formatos de salida jpg, RAW, DNG O MP4. También cuenta con diferentes resoluciones de video que van desde 1080p hasta 480p a 30 cuadros por segundo. 
+Se optó por utilizar la cámara IMX219-160, ya que cuenta con hasta 8 Megapixeles de resolución, además de tener distintos los formatos de salida jpg, RAW, DNG O MP4. También cuenta con diferentes resoluciones de video que van desde 1080p hasta 480p a 30 cuadros por segundo. 
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/V2}
-\captionof{figure}{Rasperry Camera Module V2}
+  \includegraphics[scale=0.5]{imagenes/imx}
+\captionof{figure}{Modulo de Cámara IMX219-160}
  \label{fig:CameraModuleV2}
 \end{center}
 
@@ -827,14 +792,15 @@ Para la elección de la alarma se obtuvieron dos de los principales modelos comer
 \item Precio: \$71 
 \end{itemize}
 
-Debido a la posibilidad que ofrece el zumbador pasivo para controlar el tono y la duración del mismo, además de su bajo coste en comparación con el zumbador activo KY-012, se optó por el zumbador de tipo pasivo, específicamente el modelo KY-006, en cual se pueden configurar los tonos desde la Raspberry Pi por medio del lenguaje Python. 
+Debido a la posibilidad que ofrece el zumbador pasivo para controlar el tono y la duración del mismo, además de su bajo coste en comparación con el zumbador activo KY-012, se optó por el zumbador de tipo pasivo, específicamente el modelo KY-006, en cual se pueden configurar los tonos desde la Nvidia Jetson Nano por medio del lenguaje Python. 
 \clearpage  
 
 \subsection{Análisis y elección de la unidad de almacenamiento externa}
 
-Para la elección de la unidad de almacenamiento se consideró que la Raspberry requiere de una microSD de al menos 8GB de almacenamiento externo para la instalación del sistema operativo Raspbian oficial y tomando en cuenta que el tamaño compatible predeterminado más grande de Raspberry Pi es de 32GB, sin embargo, se puede formatear en caso de requerir capacidades más altas para que funcionen con las unidades.  
+Para la elección de la unidad de almacenamiento se consideró que la Jetson Nano requiere de una microSD de al menos 8GB de almacenamiento externo para la instalación del sistema operativo Raspbian oficial y tomando en cuenta que el tamaño compatible predeterminado más grande de Raspberry Pi es de 32GB, sin embargo, se puede formatear en caso de requerir capacidades más altas para que funcionen con las unidades.  
 
 \begin{table}[h]
+\caption{Cuadro Comparativo de módelos de MicroSD}
 \begin{tabular}{{|m{0.12\linewidth}|m{0.15\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.13\linewidth}|m{0.13\linewidth}|m{0.1\linewidth}|}}
 \hline
 Micro SD  & Almacenamiento  & Speed class  & Video class  & Velocidad de escritura  & Velocidad de Lectura  & Precio \\ \hline
@@ -1410,6 +1376,50 @@ Se guardará el video de incidencia en la memoria externa en caso de no contar co
  \label{fig:actividades}
 
 \end{center}
+\subsubsection{Análisis y elección de algoritmos de visión artificial}
+
+Existen varios métodos utilizados para detectar rostros en imágenes y videos, algunos de los más comunes son:
+
+\begin{itemize}
+
+\item \textbf{Detección de cascada de Haar:} Este método utiliza una cascada de clasificadores basados en características Haar para detectar rostros. El método es rápido y eficiente en términos de recursos, pero puede ser menos preciso que otros métodos.
+
+
+\item \textbf{Métodos basados en aprendizaje automático:} Se utilizan algoritmos de aprendizaje automático para detectar rostros en imágenes y videos. Estos métodos suelen ser más precisos que los métodos basados en cascadas de Haar, pero requieren un gran conjunto de datos para el entrenamiento.
+
+\item \textbf{Métodos basados en deep learning}: utilizan redes neuronales profundas para detectar rostros en imágenes y videos. Estos métodos suelen ser más precisos que los métodos anteriores, pero requieren un gran conjunto de datos para el entrenamiento y un gran poder de procesamiento.
+
+
+\end{itemize}
+
+Debido a que el presente proyecto busca conseguir un ahorro en procesamiento, se decidió a utilizar cascadas Haar para la detección de rostro, ya que estas tienen un tiempo de respuesta mayor y requieren menos procesamiento que los demás métodos mencionados \cite{facedetection}
+
+
+\begin{table}[H]
+\caption{Cuadro Comparativo - Algoritmos de Aprendizaje}
+\begin{tabular}{{|m{0.1\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|}}
+\hline
+  & \emph{Aplicaciones} & \emph{Ventajas}  & \emph{Desventajas} \\ \hline
+\emph{Neural Networks (CNNs)} & Se utiliza principalmente en las tareas de reconocimiento de imágenes y detección de objetos. Además de sistemas de recomendación y tareas de procesamiento de lenguaje.   & los resultados son más precisos, especialmente para los casos de uso de reconocimiento de imágenes/objetos, en comparación con otros algoritmos  & ara entrenarla se requiere una potencia de cálculo muy alta. Por lo tanto, no es muy rentable. \\ \hline
+\emph{Long Short-Term Memory Networks} & Ideal para tareas como autocompletado de oraciones, generación de subtítulos y análisis de cuadros de video.  & Puede manejar la información en la memoria durante un largo período de tiempo en comparación con RNN.  & Se requiere una gran cantidad de computación y recursos para entrenar el modelo. \\ \hline
+\emph{General Adversarial Networks (GANs)} & Utilizado en la industria creativa para la generación de objetos 3D. 
+
+Útil en la edición de imágenes (Deepfake), generación de personajes de dibujos animados, ilustraciones para novelas, artículos, etc.  & Capaz de aprender la representación interna (distribuciones desordenadas y complejas) en cualquier dato.  & Cuando genera nuevos datos a partir de datos originales, no hay métrica de evaluación para juzgar la precisión de la salida. 
+
+Se requiere mucho cómputo y tiempo para el entrenamiento del modelo  \\ \hline
+\emph{Recurrent Neural Networks (RNNs) } & Se utiliza principalmente en los campos del procesamiento del lenguaje natural y el reconocimiento de voz. También es ideal para tareas como autocompletado de palabras, reconocimiento de texto y análisis de cuadros de video.  & Capacidad de recordar información a lo largo del período de entrenamiento. Posibilidad de procesar entradas de cualquier longitud   & Los cálculos requieren mucho tiempo debido a su naturaleza recurrente. 
+
+Dificultad de acceder a la información desde hace mucho tiempo.  \\ \hline
+\emph{Multilayer Perceptron?s (MLP?s)} & Problemas de clasificación.  
+
+Voz, reconocimiento de imágenes y compresión de datos.  & Puede distinguir datos que no son linealmente separables. 
+
+No hace ninguna suposición con respecto a las funciones de densidad de probabilidad  & Al actualizar los pesos en capas, la red puede atascarse en un mínimo local que puede dificultar la precisión.  \\ \hline
+
+\end{tabular}
+\end{table}
+
+Debido a que el presente proyecto se basará en el reconocimiento de imágenes y de clasificación de información, se tomó la de decisión de utilizar una CNN o Red Neuronal Convolucional para el reconocimiento de ojos abiertos o cerrados dentro de la imagen, esta aprende directamente de los datos, sin necesidad de extraer características manualmente.  Estas redes son particularmente útiles para encontrar patrones en imágenes para reconocer objetos, caras y escenas, además de permitir su implementación en video en tiempo real, lo cual es indispensable para el presente proyecto.  
 
 \subsubsection{Análisis y elección del modelo de Red Neuronal}
 
@@ -2873,6 +2883,8 @@ using a Boosted Cascade of Simple Features}. IEEE International Conference on Co
 
 \bibitem{EstadodelAarte3} Sri, M. K., \& Annamani, T. (2022, abril). Driver drowsiness detection system using convolutional neural networks. https://ijarsct.co.in/Paper3399.pdf 
 
+\bibitem{facedetection} Mayank Chauhan, Mukesh Sakle, \emph{Study \& Analysis of Different Face Detecion Techniques}
+
 
 \bibitem{EstadodelAarte4} Rodriguez, A., \& Luis, D. J. (2021, mayo). Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos. https://dspace.unitru.edu.pe/handle/UNITRU/16872
 
@@ -2916,6 +2928,7 @@ el 18 de marzo de 2022).
 
 \bibitem {AWS} Amazon, \emph{Amazon Amplify}, https://aws.amazon.com/es/amplify/
 
+\bibitem {deepedgebench} Stepahn Baller, Anshul Jindal \emph{DeepEdgeBench: Benchmarking Deep Neural Networks on Edge Devices}
 
 \bibitem {vision} David A. Forsyth, Jean Ponce, \emph{Computer Vision a Modern Approach}, Second Edition, Pearson, 2012
 
@@ -2931,6 +2944,7 @@ V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,
 \bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
 
 
+\bibitem{nanovspi} Gunan Dewantoro, Jamil Mansuri, \emph{Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Jeston Nano}
 
 \bibitem{Referencia5} Aurélien Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow}, Segunda Edición , O'Reilly, 2009
 
