@@ -1056,8 +1056,171 @@ Se guardará el video de incidencia en la memoria externa en caso de no contar co
   \includegraphics[scale=.4]{imagenes/casosuso_vision}
 \captionof{figure}{Diagrama de Casos de Uso - Submódulo de Visión Artificial}
  \label{fig:actividades}
+ \end{center}
  
+\textbf{Especificación de Casos de Uso}
+
+
+\begin{table}[h]
+\centering
+\caption{Caso de Uso 01 - Ingresar al campo visual de la Cámara}
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Ingresar al campo visual de la Cámara}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Conductor}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El conductor ingresesará al campo visual de la cámara al entrar al auto \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ El conductor deberá encender el auto
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Automóvil
+ \end{tabular}}                                                    \\ \hline
+\end{tabular}
+
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Caso de Uso 02 - Capturar Video en Tiempo real}
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Capturar Video en Tiempo real}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Submódulo de Visión Artificial}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El submódulo de visión artificial capturara un video en tiempo real utilizando una cámara digital \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ El conductor deberá encender el auto
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Automóvil\\
+\quad $\bullet$ Cámara Digital
+
+ \end{tabular}}                                                    \\ \hline
+\end{tabular}
+
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Caso de Uso 03 - Detectar Rostro}
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Detectar Rostro}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Submódulo de Visión Artificial}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El submódulo de visión artificial detectará el rostro del conductor. \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ El conductor deberá permanecer en el campo visual de la cámara
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Automóvil\\
+\quad $\bullet$ Cámara Digital\\
+\quad $\bullet$ Rostro
+
+ \end{tabular}}                                                    \\ \hline
+\end{tabular}
+
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\caption{Caso de Uso 04 - Reconocer características faciales}
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Reconocer características faciales}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Submódulo de Visión Artificial}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El submódulo de visión artificial reconocerá características faciales tales cómo: ojos, boca \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ El sistema deberá haber detectado previamente el rostro del conductor
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Ojos\\
+\quad $\bullet$ Cámara Digital\\
+\quad $\bullet$ Boca\\
+\quad $\bullet$ Rostro
+
+ \end{tabular}}                                                    \\ \hline
+\end{tabular}
+
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Caso de Uso 05 - Detectar Signos de Somnolencia}
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Detectar Signos de Somnolencia}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Submódulo de Visión Artificial}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El submódulo de visión artificial detectará signos de somnolencia utilizando métricas de tiempo para los ojos y tomará en cuenta la apertura de la boca \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ El sistema deberá haber extraído previamente la información de los ojos y boca
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Ojos\\
+\quad $\bullet$ Cámara Digital\\
+\quad $\bullet$ Boca\\
+\quad $\bullet$ Rostro
+
+ \end{tabular}}                                                    \\ \hline
+\end{tabular}
+
+\end{table}
  
+\begin{table}[h]
+\centering
+\caption{Caso de Uso 06 - Enviar Señal de Alerta}
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Enviar Señal de Alerta}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Submódulo de Visión Artificial,Módulo Central de Procesamiento}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El submódulo de visión artificial enviará una alerta al Módulo Central de Procesamiento para activar la alarma  
+ \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ El sistema deberá haber detectado signos de somnolencia en el conductor
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Ojos\\
+\quad $\bullet$ Cámara Digital\\
+\quad $\bullet$ Boca\\
+\quad $\bullet$ Alerta
+
+ \end{tabular}}                                                    \\ \hline
+\end{tabular}
+
+\end{table} 
+
+
+\begin{table}[h]
+\centering
+\caption{Caso de Uso 07 - Identificar Incidencia}
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Nombre del Caso de Uso}}                                                & \emph{Identificar Incidencia}                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Actores}}                                              & \emph{Submódulo de Visión Artificial}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El submódulo realizará un reporte de incidencia que contenga la fecha hora y lugar de la incidencia \\ \\ \textbf{Precondiciones:}
+\\
+\quad $\bullet$ El sistema deberá haber extraído previamente la información de los ojos y boca
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas:}\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Ojos\\
+\quad $\bullet$ Cámara Digital\\
+\quad $\bullet$ Boca\\
+\quad $\bullet$ Rostro
+
+ \end{tabular}}                                                    \\ \hline
+\end{tabular}
+
+\end{table}
+
+ 
+\clearpage 
 \subsubsection{Análisis y Elección de la cámara digital}
 
 Para la búsqueda de modelos de cámaras digitales, se buscaron modelos que tuvieran compatibilidad con la Nvidia Jetson Nano debido a que el sistema será alojado en este micrordenador.  
@@ -1071,7 +1234,7 @@ Se optó por utilizar la cámara IMX219-160, ya que cuenta con hasta 8 Megapixeles
 \end{center}
 
 
-\end{center}
+
 \subsubsection{Análisis y Elección de algoritmos de visión artificial}
 
 Existen varios métodos utilizados para detectar rostros en imágenes y videos, algunos de los más comunes son:
