@@ -707,7 +707,7 @@ Este módulo estará compuesto por una aplicación web y una base de datos que se e
 
 
 
-\subsection{Análisis y elección de la zona geográfica  }
+\subsection{Análisis y delimitación de la zona geográfica  }
 El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas. Debido a que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Por tanto, se decidió utilizar redes móviles celulares para cumplir con dicho requerimiento.  
 
 \begin{center}
@@ -725,472 +725,8 @@ Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móvile
 \end{center}
 
 \clearpage
-\subsection{Análisis y elección del microordenador}
 
-Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenador para permitir que el sistema sea portátil y pueda funcionar dentro de un automóvil.Por tanto, se realizó una investigación de los modelos disponibles y de mayor aceptación en el mercado, figura \ref{tab:microordenador}.
 
-\begin{table}[h]
-\centering
-\caption{\label{tab:microordenador} Comparación de microordenadores}
-\begin{tabular}{{|m{0.12\linewidth}|m{0.2\linewidth}|m{0.15\linewidth}|m{0.15\linewidth}|m{0.15\linewidth}|m{0.08\linewidth}|}}
-\hline
-\textbf{Nombre}& \textbf{CPU} & \textbf{RAM}  & \textbf{GPU} & \textbf{Alimentación}                                                 & \textbf{Precio} \\ \hline
-Google Coral Dev Board & NXPiMX 8M SoC Dual Core 1.2 GHz & 2GB DDR3                                                &  Hexa Core A-72 2GHz & 5V DC & \$4289 \\ \hline
-Rasperry Pi 4B & 1.5 GHZ 64 bit QuadCore Cortex A-72 & 1GB, 2GB, 4GB, 8GB DDR4 & No cuenta con GPU & 5V vía USB-C o puerto GPIO& \$3956\\ \hline
-Asus TinkerBoard 2S & Mali-G52 MP6  con 6 núcleos & 2GB/4GB dual- channel LPDDR4 & Integrated GC7000 Lite Graphics  & 12V-19V   & \$7169  \\ \hline
-NVIDIA Jetson Nano & ARM A57 2.1 GHz de cuatro núcleos & 4 GB de LPDDR4 de 64 bits & NVIDIA Maxwell de 128 núcleos CUDA & 5V/4A & \$3,799 \\ \hline
-\end{tabular}
-\end{table}
-
-Los parámetros que se tomaron en cuenta para la elección de que microordenador utilizar fueron los siguientes:
-\begin{itemize}
-\item Precio
-\item Voltaje necesario
-\item RAM
-\item Módulos compatibles
-\end{itemize}
-
-Si bien la Rasperry Pi es uno de los microordenadores con más aceptación por parte de la comunidad, esta no cuenta con una GPU, lo cual reduce significativamente su rendimiento en tareas relacionadas con IA que requieren de mayor procesamiento. Por lo que al buscar alternativas de microordenadores que contaran una GPU, y basándose en él estudio \cite{nanovspi} se concluyó , que la Nvidia Jetson Nano, ofrece una mayor ventaja en comparación a la rasperry Pi en cuanto a procesamiento y eficacia en tareas que involucran visión artificial. A pesar de que Asus y Google Coral Dev Board  cuenta con una GPU, su potencia no supera a la ofrecida por Jetson Nano \cite{deepedgebench}  y su precio es considerablemente mayor como se puede apreciar en la tabla \ref{tab:microordenador} Por lo cual se descartaron como opción viable. 
-Por todo lo anterior, se concluyó que la Jetson Nano representa la mejor opción para el desarrollo del presente proyecto debido a su bajo costo, bajo consumo de energía y mejor rendimiento en comparación a sus alternativas. 
-
-
-
-
-\subsection{Análisis y elección de la cámara digital}
-
-Para la búsqueda de modelos de cámaras digitales, se buscaron modelos que tuvieran compatibilidad con la Nvidia Jetson Nano debido a que el sistema será alojado en este micrordenador.  
-
-Se optó por utilizar la cámara IMX219-160, ya que cuenta con hasta 8 Megapixeles de resolución, además de tener distintos los formatos de salida jpg, RAW, DNG O MP4. También cuenta con diferentes resoluciones de video que van desde 1080p hasta 480p a 30 cuadros por segundo. 
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/imx}
-\captionof{figure}{Modulo de Cámara IMX219-160}
- \label{fig:CameraModuleV2}
-\end{center}
-
-\subsection{Análisis y elección de la alarma }
-
-Dentro de la búsqueda de modelos de alarma se encontraron dos tipos de zumbadores, el zumbador activo y zumbador pasivo, donde el primero produce un tono audible fijo, al aplicar una tensión de corriente directa. Mientras que el segundo requiere de una señal oscilante, generalmente de tipo PWM, que indique la frecuencia y la duración de la señal.  \\
-
-Para la elección de la alarma se obtuvieron dos de los principales modelos comerciales de cada tipo de zumbador mencionado: 
-
-\textbf{Buzzer Pasivo KY-006}
-
-\begin{itemize}
-\item Voltaje: 1.5 V - 5 V 
-\item Rango de frecuencia: 1.5 Hz - 2.5kHz 
-\item Decibeles: 72 DB
-\item Precio: \$50 
-\end{itemize}
-
-\textbf{Buzzer Activo KY-012  }
-
-\begin{itemize}
-\item Voltaje: 3.5 V - 5.5 V 
-\item Rango de frecuencia: 300 Hz - 2.5kHz
-\item Decibeles: 85 DB
-\item Precio: \$71 
-\end{itemize}
-
-Debido a la posibilidad que ofrece el zumbador pasivo para controlar el tono y la duración del mismo, además de su bajo coste en comparación con el zumbador activo KY-012, se optó por el zumbador de tipo pasivo, específicamente el modelo KY-006, en cual se pueden configurar los tonos desde la Nvidia Jetson Nano por medio del lenguaje Python. 
-\clearpage  
-
-\subsection{Análisis y elección de la unidad de almacenamiento externa}
-
-Para la elección de la unidad de almacenamiento se consideró que la Jetson Nano requiere de una microSD de al menos 8GB de almacenamiento externo para la instalación del sistema operativo Raspbian oficial y tomando en cuenta que el tamaño compatible predeterminado más grande de Raspberry Pi es de 32GB, sin embargo, se puede formatear en caso de requerir capacidades más altas para que funcionen con las unidades.  
-
-\begin{table}[h]
-\caption{Cuadro Comparativo de módelos de MicroSD}
-\begin{tabular}{{|m{0.12\linewidth}|m{0.15\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.13\linewidth}|m{0.13\linewidth}|m{0.1\linewidth}|}}
-\hline
-Micro SD  & Almacenamiento  & Speed class  & Video class  & Velocidad de escritura  & Velocidad de Lectura  & Precio \\ \hline
-SanDisk Extreme A2 & 32-256 (MAX 1T)GB  & Clase 30/U3  & V30 & 90 MB/s  & 160 MB/s  & \$1041  \\ \hline
-Kingston ENDURANCE  & 32-256 (MAX 1T)GB  & Clase 10/U1   & - & 45 MB/s  & 95 MB/s  & \$628  \\ \hline
-Samsung PRO Plus  & 128-512 GB  & Clase 10/U3   & V30  & 120 MB/s  & 160 MB/s  & 160 MB/s \$883 (128) \\ \hline
-Kingston Canvas React Plus V90 Card  & 64-256 GB  & Clase 10/U3  & V90  & 90 MB/s  & 180 MB/s  & \$3596 \\ \hline
-
-\end{tabular}
-\end{table}
-
-Tomando en cuenta lo anterior se decidió usar una unidad de almacenamiento \emph{Kingston ENDURANCE} de 32 GB para el almacenamiento externo.   
-
-\subsection{Análisis y elección de lenguajes de programación para el microordenador}
-
-Lo que se debe de considerasr para la elección de un lenguaje de programación, es que la programación orientada a la inteligencia artificial es diferente al paradigma de la programación convencional. En esta última, el usuario le indica a la máquina exactamente lo que tiene que hacer, mientras que en Machine learning, se le enseña a programarse sola. Lo cúal se ejemplifica en el siguiente gráfico:
-\\
-\begin{center}
-  \includegraphics[scale=0.3]{imagenes/programaclasico}
-\captionof{figure}{Programa clásico vs Machine Learning}
- \label{fig:pcvsml}
-\end{center}
-
-
-El proceso de trabajo para aprendizaje automático es muy diferente a la construcción de una aplicación convencional. Por este motivo, la manera de utilizar los lenguajes de programación es diferente. Se deben de tomar en cuenta las características que estos utilizan, así como sus enfoques y paradigmas.\\
-
-Uno de los factores importantes a considerar al momento de elegir un lenguaje de programación orientado a machine learning, es la popularidad el mismo, ya que esta es una señal de la aceptación por parte de la comunidad. A su vez, su el soporte es tanto o mas importante, ya que podemos darnos una idea si dicho lenguaje posee las herramientas adecuadas que se acoplan a nuestras necesidades. La velocidad de ejecución es otro factor importante, sobre todo cuando se requiere una minusiocidad en la ejecución de procesos y el cuidado de la memoria .Finalmente, la versatilidad del lenguaje es otro factor relevante, ya que, si el lenguaje fue diseñado con una determinada tarea o propósito en mente, este será mucho más eficiente y productivo.\\
-
-A continuación, se listan algunos de los lenguajes de programación más populares en el campo de machine learning:\\
-
-\begin{itemize}
-\item \textbf{Python} \\
-Python se ha convertido en el lenguaje de programación más popular del mundo, esto gracias a su sencillez aunado a una gran versatilidad. Sus utilidades abarcan desde desarrollo web, hasta la inteligencia artificial.
-Python es uno de los lenguajes más naturales y  con sintaxis menos complicada. Por lo tanto, es fácil de aprender, leer y corregir errores. Lo mejor de todo es que Python es un lenguaje de código abierto. Lo que significa que es de libre acceso y distribución. Como resultado, tiene bibliotecas versátiles.
-
-Una biblioteca es una colección de módulos o códigos creados para realizar operaciones específicas. Algunos módulos pueden ayudar con la interfaz gráfica de usuario, análisis de datos, gráficos, entre otras cosas. En lugar de escribir el mismo código cada vez que lo necesite, puede importarlo desde la biblioteca.
-
-
- Uno de los principales factores de esta popularidad, es el enorme ecosistema de herramientas desarrolladas específicamente para machine learning tales como: Pandas, Numpy, Tensorflow, Keras, entre otras.
-A pesar de no ser el lenguaje más rápido o potente, lo anterior lo hace uno de los lenguajes indispensables si se piensa trabajar en el campo de machine learning.
-
-\item \textbf{C++}\\
-
-A menudo hemos escuchado que C++ se aborda más cuando se trata de desarrollar juegos y sistemas grandes. Esto se debe a su característica de portabilidad y también proporciona una comprensión básica de la construcción lógica. Sin embargo, Algunos de los paquetes compatibles con C++ incluyen: Microsoft Cognitive Toolkit (CNTK) para aprendizaje profundo; Tensorflow para aprendizaje profundo; OpenCV para visión artificial; MLPack para aprendizaje automático; DyNet para redes neuronales; OpenNN para redes neuronales; Shogun para aprendizaje automático y FANN para redes neuronales.\\
-Sin embargo, C++ también tiene sus propias deficiencias. Está muy orientado a la sintaxis, a diferencia de Python, que es realmente amigable para los principiantes. Adempas de no contar con un gran soporte de bibliotecas.
-
-\item \textbf{R}\\
-
-Otro de los lenguajes de programación cuyo uso es considerablemente popular en el ámbito de machine learning y data análisis es R. R ofrece una variedad de beneficios desde su buen soporte de biblioteca y gráficos hasta la posibilidad crecer enormemente con muchos de los que podemos buscar ayuda, debido a su naturaleza abierta.
-Algunos de los paquetes clave compatibles con R son: Kernlab para operaciones basadas en regresión y clasificación; Ggplot para visualización de datos; Caret para operaciones basadas en regresión y clasificación; Plotly para visualización de datos; MLr3 para diferentes flujos de trabajo de aprendizaje automático.
-al igual que Python, también es comparativamente más lento que el resto de los lenguajes. Esto representa una gran desventaja para este lenguaje de programación. Además de esto, también tiene un origen débil, por lo que no es tan fácil de aprender. Para las personas que no tienen experiencia en programación les puede resultar difícil aprender R.
-
-\item \textbf{Matlab}\\
-
-Matlab también admite operaciones de aprendizaje automático y se puede aplicar de manera innovadora a aplicaciones que incluyen visión por computadora. MATLAB no está limitado por la sintaxis y, por lo tanto, es fácil de aprender y comprender. MATLAB también tiene muchas funciones predefinidas y una GUI para que los alumnos entiendan mejor las cosas. Además, viene con un compilador MATLAB que ayuda cuando se trata de codificar en el mismo.
-Además, cuando se trata de capacidades de aprendizaje automático, MATLAB lo admite de una manera única. MATLAB permite a los usuarios aplicar AutoML, lo que les permite aprovechar al máximo los modelos codificados optimizados y reducidos. Además, MATLAB también puede realizar la generación automática de código para el análisis de sensores y mucho más.
-MATLAB también viene con algunas restricciones. El lenguaje de programación no está fácilmente disponible o es de uso gratuito. De hecho, una versión de prueba está disponible solo por 30 días y publica que los usuarios deben comprar el paquete para un uso posterior. Por esta razón, uno puede encontrar solo investigadores como su público objetivo. No solo eso, el compilador de MATLAB es costoso de comprar y, por lo tanto, no tiene un soporte de comunidad / foro denso para ayudar a los usuarios y estudiantes.
-
-
-\item \textbf{Javascript}
-
-JavaScript puede no ser el lenguaje principal para desarrollo en Inteligencia Artificial, pero es gran complemento para utilizar herramientas relacionadas con Machine Learning, especialmente visualización de datos o procesos.
-Herramientas como TensorflowJs permiten el ofrece acceso a varios sensores, incluidas cámaras web y micrófonos, que pueden proporcionar imágenes y sonidos como entrada a cualquier modelo de aprendizaje automático.
-A pesar de todos los aspectos positivos, TensorFlow.js no tiene acceso predeterminado al sistema de archivos en el entorno del host del navegador. Esto limita los recursos de datos disponibles y puede imponer restricciones en el tamaño de los archivos y procesos.\\
-
-
-
-
-\end{itemize}
-
-A continuación se presenta una tabla comparativa de las características que se tomaron en cuenta para la elección sobre que lenguaje utilizar.
-
-\begin{table}[h]
-\centering
-\caption{\label{tab:lenguajes} Tabla Comparativa Lenguajes de Programación}
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-\textbf{Lenguaje} & \textbf{Popularidad} & \textbf{Versatilidad} & \textbf{Velocidad} & \textbf{Soporte} \\ \hline
-Python            & Alta                 & Alta                  & Moderada           & Alta             \\ \hline
-C++               & Baja                 & Alta                  & Alta               & Moderado         \\ \hline
-R                 & Alta                 & Moderada                  & Moderado           & Bajo             \\ \hline
-Matlab            & Baja                 & Moderada              & Moderada           & Bajo             \\ \hline
-Javascript        & Moderada             & Moderada              & Baja               & Moderado         \\ \hline
-\end{tabular}
-
-\end{table}
-
-Python es un lenguaje que permite trabajar con más de un paradigma (programación estructurada y orientada a objetos).
-Normalmente cuando se programa un script sencillo, solo se el paradigma de programación estructurada (Secuencia, selección e iteración). Sin embargo cuando se requiere desarollar un proyecto  más complejo, es necesario incluir los beneficios del paradigma orientado a objetos (reutilización de los componentes, facilidad de mantenimiento y modificación de objetos) utilizamos clases (POO).\\
-Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje permite desarrollar ambos ámbitos de una manera integral.Por lo cual será utilizado a lo largo del proyecto.
-
-\subsection{Análisis y elección de herramientas de programación}
-
-
-
-
-
-
-\subsection{Análisis y elección de protocolos de comunicación inalámbrica  }
-Debido a que el presente proyecto tiene como parte fundamental la portabilidad y la transferencia de contenido multimedia, y habiendo definido que para su desarollo se utilizará un microordenador, se requiere una interfaz de comunicación inálmbrica con amplia cobertura. A continuación se muestra una comparación de los estándares de comunicación inalámbrica más utilizados enfocados a sistemas portátiles.
-
-\begin{table}[h]
-\caption{\label{tab:redes} Comparación entre Redes Inalámbricas}
-\begin{tabular}{|l|l|l|l|l|l|l|}
-\hline
-        & Espectro                                                                 & \begin{tabular}[c]{@{}l@{}}Ancho de\\ Banda\end{tabular} & Costo    & \emph{BitRate} & Escalabilidad & \begin{tabular}[c]{@{}l@{}}Inmunidad a \\ la Interferencia\end{tabular} \\ \hline
-LTE-M   & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 869 MHz\\ 915 MHz\end{tabular} & 100kHz                                                   & Moderado & 1Mbps   & Alta          & Moderada                                                                \\ \hline
-NB-IoT  & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 433 MHz\end{tabular}           & \textless{}500kHz                                        & Moderado & 200kbps & Alta          & Baja                                                                    \\ \hline
-SigFox  & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 200kHz                                                   & Bajo     & 100bps & Baja          & Baja                                                                    \\ \hline
-LoraWan & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 1.4MHz                                                   & Bajo     & 10kbps  & Moderada      & Muy Alta                                                                \\ \hline
-\end{tabular}
-
-\end{table}
-
-De la Tabla 1\ref{tab:redes} las interfaces de comunicación que mas destacan por su cobertura y su tasa de transferencia de datos son LTE-M y NB-IoT. A continuación se realiza una comparación entre estas interfaces para poder definir cual será utilizada a lo largo del proyecto.
-
-
-\textbf{LTE-M}
-
-Es una tecnología de área amplia de baja potencia que admite IoT a través de dispositivos poco complejos y proporciona una cobertura extendida, al tiempo que permite la reutilización de la base instalada de LTE\\
-
-Las redes LTE-M coexisten con las redes móviles 2G, 3G y 4G y se beneficiaan de todas las características de seguridad y privacidad de las redes móviles, como la confidencialidad de la identidad del usuario, la autenticación de la entidad, la privacidad, la integridad de los datos y la identificación del equipo móvil.
-
-A continuación se describen las ventajas principales de LTE-M
-
-\begin{itemize}
-\item \textbf{Ahorro de Energía}
-
-LTE-M permite que los dispositivos en los que operan utilicen un modo de ahorro de energía. Consumiendo energía sólo cuando los dispositivos requiren su uso.
-
-\item \textbf{Cobertura}
-
-
-Las redes LTE-M/Cat-M1/Cat-M2 pueden utilizar la infraestructura 4G LTE existente. Esta es una ventaja significativa, ya que más del 50 por ciento de las conexiones móviles globales se realizan en redes 4G. 
-
-Con una pérdida de acoplamiento máxima (MCL) de 156 decibelios (dB), 14 dB más alta que LTE, las redes LTE-M también ofrecen mayor cobertura y mejor penetración en interiores. La señal puede manejar muchas interferencias de edificios y otras estructuras que obstruyen su camino.
-
-\item \textbf{Velocidad de Transferencia}
-
-LTE-M cuenta con un estándar base de 1 megabit por segundo para transmisiones de enlace subida y descarga. Su uso es factible para aplicaciones con necesidades de  transmisión datos menores a los 50MBps e incluso casos de uso que involucran transmisión de contenido multimedia.
-
-
-En el contexto de IoT, el alto rendimiento de datos significa que los dispositivos que usan LTE-M pueden recibir fácilmente actualizaciones por aire (OTA), y las transmisiones de datos consumirán menos energía, porque el dispositivo puede volver al modo de ahorro de energía más rápido.
-
-
-\item \textbf{Costo}
-
-Las redes 4G se construyeron principalmente para teléfonos inteligentes. Las redes LTE-M se construyeron principalmente para dispositivos IoT. Como tal, los componentes necesarios para los dispositivos LTE-M son menos complejos y más asequibles que los componentes que necesitaría para un dispositivo 4G tradicional, aunque ambos utilizan la infraestructura 4G LTE.
-
-
-
-
-\end{itemize}
-
-\textbf{NB-IoT}
-
-Es un protocolo inalámbrico de Internet de las cosas (IoT) que también utiliza tecnología de red de área amplia de baja potencia (LPWAN). Fue desarrollado por 3GPP para comunicación inalámbrica celular que permite una amplia gama de nuevos dispositivos y servicios NB-IoT. NB-IoT es uno de los tres principales estándares 3GPP LPWAN.\\
-
-El estándar de comunicación NB-IoT tiene como objetivo permitir que los dispositivos IoT funcionen a través de redes de operador, ya sea dentro de una onda portadora de comunicación del Sistema Global para Móviles (GSM) existente, en una "banda de protección" no utilizada entre canales LTE o de forma independiente.\\
-
-Uno de los objetivos de NB-IoT es impulsar la extensión de la cobertura más allá de lo que ofrecen las tecnologías celulares existentes. Para ello, NB-IoT ofrece repeticiones de transmisión y diferentes configuraciones de asignación de ancho de banda en la transmisión de enlace ascendente.\\
-
-La tecnología NB-IoT utiliza señales de bajo ancho de banda para comunicarse dentro de las tecnologías GSM y LTE existentes.
-
-Los dispositivos y sensores especialmente diseñados son los componentes básicos de los sistemas NB-IoT. Estos dispositivos recopilan información de su entorno y la transmiten a estaciones base NB-IoT o nodos de transmisión.
-
-Las estaciones base individuales están conectadas a una puerta de enlace de IoT y servidores de aplicaciones en la nube de IoT para el monitoreo centralizado y el análisis de datos.
-
-NB-IoT emplea una nueva capa física con señales y canales para cumplir con los requisitos de cobertura extendida en áreas rurales e interiores profundos, al tiempo que permite una complejidad de dispositivo muy baja. La tecnología subyacente es mucho menos compleja que la de los módulos GSM/GPRS.\\
-
-A continuación se describen las ventajas más importantes de NB-IoT:
-\begin{itemize}
-
-\item \textbf{ Ahorro de Energía}
-
-NB-IoT no necesita ejecutar un sistema operativo pesado, y no require procesamiento de señales, lo que lo hace más eficiente en términos de energía en comparación con LTE-M.
-
-\item \textbf{Cobertura}
-
-
-NB-IoT puede ayudar a admitir una gran cantidad de dispositivos mediante el establecimiento de redes NB-IoT que pueden conectarse a miles de millones de nodos. Diseñado para cobertura extendida en interiores, la menor complejidad de los dispositivos proporciona conectividad y comunicación de largo alcance.
-
-\item \textbf{Costo}
-
-Debido a que es más fácil crear dispositivos con menor complejidad, el costo de los dispositivos es significativamente bajo, alrededor de 5 dolares por módulo.
-
-\item \textbf{Seguridad}
-
-
-NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones de autenticación basadas en cifrado y SIM.
-
-Comparado a NB-IoT las velocidades de transferencia de datos de LTE-M son más de 10 veces más rápidas, su latencia es de 10 a 100 veces menor y cuenta con una cobertura mucho mayor, ya que utiliza la infraestructura 4G LTE existente. Sin embargo, aunque ambas LPWAN funcionan bien en interiores, NB-IoT tiene una pérdida máxima de acoplamiento (MCL) ligeramente más alta, lo que significa que puede manejar un poco más de interferencia.
-
-LTE-M también puede usar una gama más amplia de frecuencias, aunque, como su nombre lo indica, Narrowband-IoT usa bandas de frecuencia más estrechas, lo que permite que esta tecnología use el espectro de radiofrecuencia (RF) de manera más eficiente.
-
-\begin{table}[h]
-\begin{adjustbox}{width=\columnwidth,center}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-       & \begin{tabular}[c]{@{}l@{}}Velocidad \\ Máxima de Subida\end{tabular} & \begin{tabular}[c]{@{}l@{}}Velocidad Máxima \\ de Descarga\end{tabular} & Latencia & \begin{tabular}[c]{@{}l@{}}Perdida Máxima\\ de Acoplamiento(dBs)\end{tabular} & Ancho de Banda \\ \hline
-LTE-M  & 1Mbps                                                                 & 1Mps                                                                    & 10-15 ms & 156                                                                           & 1.4MHz a 5MHz  \\ \hline
-NB-IoT & 127 kbit                                                              & 159 kbit                                                                & 1.6-10s  & 164                                                                           & 180KHz         \\ \hline
-\end{tabular}
-\end{adjustbox}
-\caption{\label{tab:interfaces} Comparación entre LTE-M y NB-IoT}
-\end{table}
-
-Pocos operadores han establecido acuerdos de roaming para sus redes NB-IoT, por lo que LTE-M ofrece una mejor cobertura y tiene menos circunstancias en las que necesita cambiar de SIM.
-Actualemente, la compañia Telcel cuenta con la mayor cobertura de tecnología LTE en México.
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/lte-mcobertura}
-\captionof{figure}{Mapa de Cobertura LTE-Telcel}
- \label{fig:prot}
-\end{center}
-\newpage
-\item\textbf{NB-IoT consume más energía en algunos casos}
-
-Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las velocidades de datos más bajas de NB-IoT requieren estos permanezcan en línea por más tiempo, lo que resulta en un mayor consumo de energía. En casos de uso móvil, NB-IoT también usa más energía
-
-
-\end{itemize}
-
-Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto. 
-
-
-\subsection{Análisis y elección del manejador de bases de datos  }
-Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  \\
-
-
-\begin{table}[h]
-\caption{Cuadro Comparativo de los Sistemas de Gestión de Bases de Datos No Relacionales}
-\begin{tabular}{{|m{0.16\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|}}
-\hline
- & \textbf{Cassandra } & \textbf{MongoDB } & \textbf{Redis } & \textbf{Amazon DynamoDB } \\ \hline
- \textbf{Tipo de base de datos }& NoSQL \emph{wide-column}  & NoSQL Orientado a documentos  & NoSQL clave-valor  & NoSQL clave-valor  \\ \hline
- \textbf{Licencia }& Codigo abierto  & Codigo abierto SSPL & Codigo abierto BSD 3-clause  & Vendor \\ \hline
- \textbf{Cumplimiento ACID }& No & Si  &  Si &  Si \\ \hline
- \textbf{Lenguaje de consulta principal }& CQL  & JavaScript  & Permite el uso de varios lenguajes  & DQL  \\ \hline
- \textbf{Principales casos de uso }& Análisis social, análisis en tiempo real, venta al por menor y mensajería & Gestión de IOT, análisis en tiempo real, desarrollo de aplicaciones, inventario y personalización & Almacenamiento en caché, colas, filtrado y estadísticas  & Juegos, comercio minorista, servicios financieros, publicidad y transmisión de medios  \\ \hline
- \textbf{Seguridad  }& Seguridad integrada para la autorización, el cifrado y la autenticación, pero la seguridad está desactivada de forma predeterminada para facilitar su uso dentro de los clústeres  & Seguridad incorporada para autorización, autenticación y encriptación  & Se inicia automáticamente en modo de protección y ofrece sugerencias de seguridad  & Seguridad integrada para datos y aplicaciones; software, hardware, instalaciones y red seguros del proveedor  \\ \hline
- \textbf{Escalabilidad }& Horizontal  & Horizontal  & Horizontal  & Horizontal  \\ \hline
- \textbf{Curva de aprendizaje  }& Difícil    & Medio   & Medio   &  - \\ \hline
-\end{tabular}
-
-\end{table}
-
-
-Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación  como base el lenguaje JavaScript y  Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación. Otra característica importante es que es una base de datos multiplataforma, esto para que se realice información desde el sistema operativo Linux, que será utilizado en la Rasperry Pi.
-\clearpage
-\subsection{Análisis y elección de lenguajes de programación web}
-
-Con respecto al desarrollo web, se requiere un lenguaje de programación que pueda ofrecer felixbilidad e interoperabilidad para su futura implementación. El lenguaje de programación que cumple en estas características, es Javascript \cite{js}.
-
-
-JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, también es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa
-
-A continuación se describen sus características más importantes:
-
-\begin{itemize}
-\item \textbf{Veloz}
-
-Como lenguaje de programación interpretado, no tiene que compilarse cada vez que se ejecuta, lo que hace que el desarrollo y la depuración sean más rápidos para comenzar. Además, JavaScript encuentra más velocidad al ejecutarse como un script del lado del cliente, ejecutándose en el navegador sin conectarse al servidor y ahorrando recursos valiosos para cada usuario adicional.
-
-\item \textbf{Procesamiento asíncrono}
-
-El procesamiento asíncrono es una de las características más útiles del lenguaje JavaScript. Usando JavaScript, un bloque del script no podrá detenerse o dejar que el otro bloque de código espere a que comience la respuesta. Si se está procesando una solicitud, otras también trabajarán en paralelo con la solicitud anterior en lugar de esperar la respuesta de la solicitud anterior. Ahorra mucho tiempo al ejecutar scripts en paralelo.
-
-\item \textbf{Poca carga de Procesamiento del servidor}
-
-JavaScript permite realizar funcionalidades básicas en el lado del cliente. Esto significa que el servidor no tendrá que procesar las funcionalidades básicas que mejoran el rendimiento del servidor.
-
-\end{itemize}
-
-
-\subsection{Análisis y elección del servidor de alojamiento  }
-Para el presente proyecto se requiere una capacidad de almacenamiento que nos permita el uso de archivos multimedia, concretamente archivos de video.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Tipo de Multimedia} & \textbf{Ejemplos}             \\ \hline
-Imágenes                    & JPEG, GIF, PNG, Archivos TIFF \\ \hline
-Audio                       & MP3, WAV, ACC                 \\ \hline
-Video                       & QuickTime, MP4, Youtube       \\ \hline
-\end{tabular}
-\caption{Tipos de Archivo Multimedia}
-\end{table}
-
-Si se requiere alojar una aplicación web cuyo contenido predominante sea multimedia, se deberá de tomar en cuenta los siguientes factores:
-
-
-\begin{itemize}
-\item  Ancho de banda
-
-El ancho de banda y el almacenamiento son una función de su plan de alojamiento. Generalmente un plan de alojamiento en la nube  permite pagar por un uso menor durante las horas de menor actividad y explotar cuando recibe mucho tráfico. No se paga por ancho de banda o espacio de almacenamiento que en realidad no se utiliza.
-
-\item Almacenamiento
-
-Si se tiene una gran cantidad de archivos multimedia, entonces se requiere gran capacidad de almacenamiento. Lo ideal sería contar con almacenamiento ilimitado, pero esto significaría un aumento considerable al costo de alojamiento. Se debe de analizar un aproximado de almacenamiento necesario y en base a eso se deberá elegir el plan de almacenamiento que mejor cubra esas necesidades.
-
-\item CDN (\emph{Content Delivery Network})
-
-Lo último que debe considerar con el alojamiento de medios es una red de entrega de contenido o CDN. Una CDN intenta mejorar el rendimiento de la transmisión de medios mediante la ubicación de servidores que están geográficamente cerca del usuario mediante sofisticados algoritmos de ubicación y de ruteo.
-
-\end{itemize}
-
-Sabiendo lo anterior, se procede a realizar el análisis de distintos proveedores de alojamiento con la propósito de seleccionar saber aquel que ofrezca la capadidad de alojar y almacenar contenido multimedia.
-
-\begin{itemize}
-\item AWS Amplify Hosting
-AWS Amplify Hosting es un servicio de alojamiento e Integración Continua/Entrega Continua completamente administrado para aplicaciones estáticas, rápidas, seguras, fiables, renderizadas del lado del servidor y que escalan a la par. Algunas de sus principales ventajas son:
-
-\begin{itemize}
-\item \textbf{Implementación de contenido web con rapidez}
-
-AWS permite la implementación continua de una aplicación web estática o renderizada del lado del servidor, una página de inicio de la aplicación móvil o una aplicación progresiva en cada confirmación de código.
-
-
-\item \textbf{CDN}
-
-Cuenta con la red de entrega de contenido (CDN) de Amazon CloudFront con cientos de puntos de presencia en todo el mundo. Lo que permite un tiempo de respuesta de hasta menos de 10ms.
-
-\item \textbf{Monitoreo}
-
-AWS cuenta con un sistema de monitoreo de tráfico en tiempo real. También permite crear alarmas personalizadas para enviar notificaciones cuando la métrica haya superado el límite establecido. 
-
-\item \textbf{Precio}
-
-AWS cuenta con dos planes, uno gratuito y otro de paga, a continuación, se detallan las características de cada uno.
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/amplify}
-\captionof{figure}{Planes de Alojamiento AWS Amplify}
- \label{fig:DiagramadeactividadMEB}
-\end{center}
-
-\item \textbf{A2Hosting}
-
-\begin{itemize}
-\item \textbf{Alojamiento Compartido}
-
-A2 Hosting cuenta con dos tipos de planes de alojamiento, el primero con costo de renovación que  va desde \$10.99 dls . Si se llegara a necesitar un servidor dedicado, el plan que nos ofrece está característica tiene un precio de  \$25.99 por mes.
-
-\item \textbf{VPS}
-
-VPS significa servidor privado virtual por sus siglas en inglés. Es una forma de dividir un servidor en (sub)servidores individuales más pequeños. Esto significa que se puede configurar de acuerdo a las necesidades del cliente y no tener que compartir recursos con otros clientes. Un VPS en A2 Hosting cuesta desde tan solo \$7.65 al mes hasta alrededor de \$200 dependiendo del número de subdivisiones necesarias.
-
-\item \textbf{CDN}
-A2 Hosting no ofrece servicio de CDN, sin embargo, cualquiera de sus planes ofrecen la posibilidad de contratar un servicio de CDN proveedores externos pagando un precio extra del precio base dependiendo del plan contratado.
-
-\end{itemize}
-
-
-\item \textbf{HosGator}
-\begin{itemize}
-
-\item \textbf{Tiempo de Respuesta}
-
-De acuerdo con el sitio Bitcatcha, que se dedica a evaluar los tiempos de respuestas de los servidores de páginas web, HostGator poseé tiempos de respuestas mínimos para el territorio de Estados Unidos. A continuación se muestra los tiempos de respuesta de distintos territorios:
-
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/respuesta}
-\captionof{figure}{Tiempos de Respuesta de servidores de HostGator}
- \label{fig:DiagramadeactividadMEB}
-\end{center}
-
-HostGator posee solo 2 datacenters, uno localizado en el área oeste, y otro en el este. Esto puede ocasionar que los tiempos de respuesta no sean los mejores en áreas que estén alejadas de las antes mencionadas
-
-
-\item \textbf{Disponibilidad}
-HosGator ofrece una disponibilidad del 99.9\%, esto quiere decir que los sitios que se decida alojar en los servidores de HostGator deberían ser accesibles la mayoría del tiempo.
-
-
-\end{itemize}
-
-
-\end{itemize}
-
-
-
-\end{itemize}
-
-
-Después de haber analizado los distintos proveedores de alojamiento así como sus características, se llegó a la conclusión de utilizar AWS Amplify. Ya que este contiene una suite de herramientas que facilitan la implementación de una aplicación web, como por ejemplo S3, que es un servicio de alojamiento en la nube utilizado para archivos multimedia de gran tamaño, además de contar con su propia CDN que facilitará el acceso a los datos almacenados.
-
-
-\newpage
 \subsection{Análisis del Módulo Central de Procesamiento}
 
 \textbf{Análisis de Requerimientos Funcionales}
@@ -1235,6 +771,152 @@ Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de l
 \end{tabular}
 
 \end{table}
+
+
+\clearpage
+\subsubsection{Análisis y Elección del microordenador}
+
+Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenador para permitir que el sistema sea portátil y pueda funcionar dentro de un automóvil.Por tanto, se realizó una investigación de los modelos disponibles y de mayor aceptación en el mercado, figura \ref{tab:microordenador}.
+
+\begin{table}[h]
+\centering
+\caption{\label{tab:microordenador} Comparación de microordenadores}
+\begin{tabular}{{|m{0.12\linewidth}|m{0.2\linewidth}|m{0.15\linewidth}|m{0.15\linewidth}|m{0.15\linewidth}|m{0.08\linewidth}|}}
+\hline
+\textbf{Nombre}& \textbf{CPU} & \textbf{RAM}  & \textbf{GPU} & \textbf{Alimentación}                                                 & \textbf{Precio} \\ \hline
+Google Coral Dev Board & NXPiMX 8M SoC Dual Core 1.2 GHz & 2GB DDR3                                                &  Hexa Core A-72 2GHz & 5V DC & \$4289 \\ \hline
+Rasperry Pi 4B & 1.5 GHZ 64 bit QuadCore Cortex A-72 & 1GB, 2GB, 4GB, 8GB DDR4 & No cuenta con GPU & 5V vía USB-C o puerto GPIO& \$3956\\ \hline
+Asus TinkerBoard 2S & Mali-G52 MP6  con 6 núcleos & 2GB/4GB dual- channel LPDDR4 & Integrated GC7000 Lite Graphics  & 12V-19V   & \$7169  \\ \hline
+NVIDIA Jetson Nano & ARM A57 2.1 GHz de cuatro núcleos & 4 GB de LPDDR4 de 64 bits & NVIDIA Maxwell de 128 núcleos CUDA & 5V/4A & \$3,799 \\ \hline
+\end{tabular}
+\end{table}
+
+Los parámetros que se tomaron en cuenta para la elección de que microordenador utilizar fueron los siguientes:
+\begin{itemize}
+\item Precio
+\item Voltaje necesario
+\item RAM
+\item Módulos compatibles
+\end{itemize}
+
+Si bien la Rasperry Pi es uno de los microordenadores con más aceptación por parte de la comunidad, esta no cuenta con una GPU, lo cual reduce significativamente su rendimiento en tareas relacionadas con IA que requieren de mayor procesamiento. Por lo que al buscar alternativas de microordenadores que contaran una GPU, y basándose en él estudio \cite{nanovspi} se concluyó , que la Nvidia Jetson Nano, ofrece una mayor ventaja en comparación a la rasperry Pi en cuanto a procesamiento y eficacia en tareas que involucran visión artificial. A pesar de que Asus y Google Coral Dev Board  cuenta con una GPU, su potencia no supera a la ofrecida por Jetson Nano \cite{deepedgebench}  y su precio es considerablemente mayor como se puede apreciar en la tabla \ref{tab:microordenador}, por lo cual se descartaron como opción viable. 
+Debido a lo anterior, se concluyó que la Jetson Nano representa la mejor opción para el desarrollo del presente proyecto debido a su bajo costo, bajo consumo de energía y mejor rendimiento en comparación a sus alternativas. 
+
+
+
+
+
+
+\clearpage
+\subsubsection{Análisis y Elección de la alarma }
+
+Dentro de la búsqueda de modelos de alarma se encontraron dos tipos de zumbadores, el zumbador activo y zumbador pasivo, donde el primero produce un tono audible fijo, al aplicar una tensión de corriente directa. Mientras que el segundo requiere de una señal oscilante, generalmente de tipo PWM, que indique la frecuencia y la duración de la señal.  \\
+
+Para la elección de la alarma se obtuvieron dos de los principales modelos comerciales de cada tipo de zumbador mencionado: 
+
+\textbf{Buzzer Pasivo KY-006}
+
+\begin{itemize}
+\item Voltaje: 1.5 V - 5 V 
+\item Rango de frecuencia: 1.5 Hz - 2.5kHz 
+\item Decibeles: 72 DB
+\item Precio: \$50 
+\end{itemize}
+
+\textbf{Buzzer Activo KY-012  }
+
+\begin{itemize}
+\item Voltaje: 3.5 V - 5.5 V 
+\item Rango de frecuencia: 300 Hz - 2.5kHz
+\item Decibeles: 85 DB
+\item Precio: \$71 
+\end{itemize}
+
+Debido a la posibilidad que ofrece el zumbador pasivo para controlar el tono y la duración del mismo, además de su bajo coste en comparación con el zumbador activo KY-012, se optó por el zumbador de tipo pasivo, específicamente el modelo KY-006, en cual se pueden configurar los tonos desde la Nvidia Jetson Nano por medio del lenguaje Python. 
+\clearpage  
+
+
+
+\subsubsection{Análisis y Elección de la unidad de almacenamiento externa}
+
+Para la elección de la unidad de almacenamiento se consideró que la Jetson Nano requiere de una microSD de al menos 8GB de almacenamiento externo para la instalación del sistema operativo Raspbian oficial y tomando en cuenta que el tamaño compatible predeterminado más grande de Raspberry Pi es de 32GB, sin embargo, se puede formatear en caso de requerir capacidades más altas para que funcionen con las unidades.  
+
+\begin{table}[h]
+\caption{Cuadro Comparativo de módelos de MicroSD}
+\begin{tabular}{{|m{0.12\linewidth}|m{0.15\linewidth}|m{0.1\linewidth}|m{0.1\linewidth}|m{0.13\linewidth}|m{0.13\linewidth}|m{0.1\linewidth}|}}
+\hline
+Micro SD  & Almacenamiento  & Speed class  & Video class  & Velocidad de escritura  & Velocidad de Lectura  & Precio \\ \hline
+SanDisk Extreme A2 & 32-256 (MAX 1T)GB  & Clase 30/U3  & V30 & 90 MB/s  & 160 MB/s  & \$1041  \\ \hline
+Kingston ENDURANCE  & 32-256 (MAX 1T)GB  & Clase 10/U1   & - & 45 MB/s  & 95 MB/s  & \$628  \\ \hline
+Samsung PRO Plus  & 128-512 GB  & Clase 10/U3   & V30  & 120 MB/s  & 160 MB/s  & 160 MB/s \$883 (128) \\ \hline
+Kingston Canvas React Plus V90 Card  & 64-256 GB  & Clase 10/U3  & V90  & 90 MB/s  & 180 MB/s  & \$3596 \\ \hline
+
+\end{tabular}
+\end{table}
+
+Tomando en cuenta lo anterior se decidió usar una unidad de almacenamiento \emph{Kingston ENDURANCE} de 32 GB para el almacenamiento externo.   
+\clearpage
+\subsubsection{Análisis y Elección de lenguajes de programación para el microordenador}
+
+Lo que se debe de considerar para la elección de un lenguaje de programación, es que la programación orientada a la inteligencia artificial es diferente al paradigma de la programación convencional. En esta última, el usuario le indica a la máquina exactamente lo que tiene que hacer, mientras que en Machine learning, se le enseña a programarse sola. Lo cúal se ejemplifica en el siguiente gráfico:
+\\
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/programaclasico}
+\captionof{figure}{Programa clásico vs Machine Learning}
+ \label{fig:pcvsml}
+\end{center}
+
+
+El proceso de trabajo para aprendizaje automático es muy diferente a la construcción de una aplicación convencional. Por este motivo, la manera de utilizar los lenguajes de programación es diferente. Se deben de tomar en cuenta las características que estos utilizan, así como sus enfoques y paradigmas.\\
+
+Uno de los factores importantes a considerar al momento de elegir un lenguaje de programación orientado a machine learning, es la popularidad el mismo, ya que esta es una señal de la aceptación por parte de la comunidad. A su vez, su el soporte es tanto o mas importante, ya que podemos darnos una idea si dicho lenguaje posee las herramientas adecuadas que se acoplan a nuestras necesidades. La velocidad de ejecución es otro factor importante, sobre todo cuando se requiere una minusiocidad en la ejecución de procesos y el cuidado de la memoria .Finalmente, la versatilidad del lenguaje es otro factor relevante, ya que, si el lenguaje fue diseñado con una determinada tarea o propósito en mente, este será mucho más eficiente y productivo.\\
+
+A continuación, se listan algunos de los lenguajes de programación más populares en el campo de Machine Learning:\\
+
+\begin{itemize}
+
+\item Python
+Es uno de los lenguajes más populares en la comunidad de aprendizaje automático y visión artificial debido a su facilidad de uso, gran cantidad de bibliotecas y frameworks disponibles y gran comunidad de desarrolladores.
+
+\item C++: Es un lenguaje de programación de alto rendimiento, es muy adecuado para proyectos de visión artificial que requieren de un gran rendimiento.
+
+\item Matlab: Es un lenguaje de programación y entorno de desarrollo específicamente diseñado para matemáticas y cálculo científico, es muy utilizado en el campo de la visión artificial y procesamiento de imágenes.
+
+\item Java: Es un lenguaje de programación multiplataforma, es muy popular en el desarrollo de aplicaciones y se utiliza en proyectos de visión artificial.
+
+\item R: Es un lenguaje de programación especializado en estadística y análisis de datos. Es ampliamente utilizado en investigación académica, ciencia de datos y análisis estadístico en ciencias sociales, económicas, financieras y biotecnología entre otros.
+
+\end{itemize}
+
+A continuación se presenta una tabla comparativa de las características que se tomaron en cuenta para la elección sobre que lenguaje utilizar.
+
+\begin{table}[h]
+\centering
+\caption{\label{tab:lenguajes} Tabla Comparativa Lenguajes de Programación}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Lenguaje} & \textbf{Popularidad} & \textbf{Versatilidad} & \textbf{Velocidad} & \textbf{Soporte} \\ \hline
+Python            & Alta                 & Alta                  & Moderada           & Alta             \\ \hline
+C++               & Baja                 & Alta                  & Alta               & Moderado         \\ \hline
+R                 & Alta                 & Moderada                  & Moderado           & Bajo             \\ \hline
+Matlab            & Baja                 & Moderada              & Moderada           & Bajo             \\ \hline
+Java        & Moderada             & Moderada              & Baja               & Moderado         \\ \hline
+\end{tabular}
+
+\end{table}
+
+
+Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje permite desarrollar ambos ámbitos de una manera integral\cite{python}.Por lo cual será utilizado a lo largo del proyecto.
+\clearpage
+\subsubsection{Análisis y Elección de herramientas de programación}
+
+
+
+
+
+
+
+
 
 
 
@@ -1374,9 +1056,23 @@ Se guardará el video de incidencia en la memoria externa en caso de no contar co
   \includegraphics[scale=.4]{imagenes/casosuso_vision}
 \captionof{figure}{Diagrama de Casos de Uso - Submódulo de Visión Artificial}
  \label{fig:actividades}
+ 
+ 
+\subsubsection{Análisis y Elección de la cámara digital}
+
+Para la búsqueda de modelos de cámaras digitales, se buscaron modelos que tuvieran compatibilidad con la Nvidia Jetson Nano debido a que el sistema será alojado en este micrordenador.  
+
+Se optó por utilizar la cámara IMX219-160, ya que cuenta con hasta 8 Megapixeles de resolución, además de tener distintos los formatos de salida jpg, RAW, DNG O MP4. También cuenta con diferentes resoluciones de video que van desde 1080p hasta 480p a 30 cuadros por segundo. 
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/imx}
+\captionof{figure}{Modulo de Cámara IMX219-160}
+ \label{fig:CameraModuleV2}
+\end{center}
+
 
 \end{center}
-\subsubsection{Análisis y elección de algoritmos de visión artificial}
+\subsubsection{Análisis y Elección de algoritmos de visión artificial}
 
 Existen varios métodos utilizados para detectar rostros en imágenes y videos, algunos de los más comunes son:
 
@@ -1421,7 +1117,7 @@ No hace ninguna suposición con respecto a las funciones de densidad de probabili
 
 Debido a que el presente proyecto se basará en el reconocimiento de imágenes y de clasificación de información, se tomó la de decisión de utilizar una CNN o Red Neuronal Convolucional para el reconocimiento de ojos abiertos o cerrados dentro de la imagen, esta aprende directamente de los datos, sin necesidad de extraer características manualmente.  Estas redes son particularmente útiles para encontrar patrones en imágenes para reconocer objetos, caras y escenas, además de permitir su implementación en video en tiempo real, lo cual es indispensable para el presente proyecto.  
 
-\subsubsection{Análisis y elección del modelo de Red Neuronal}
+\subsubsection{Análisis y Elección del modelo de Red Neuronal}
 
 Debido a que el presente proyecto se plantea resolver un problema de clasificación, a continuación se analizará que tipos de modelos de redes neuronales son los más aptos para la resolución de los mismos.
 
@@ -1580,6 +1276,133 @@ Cumpliéndose la relación establecida de $R<C$.
 \begin{equation*}
 3kbps<5 Mbps
 \end{equation*}
+
+\subsubsection{Análisis y Elección de Protocolos de comunicación inalámbrica  }
+Debido a que el presente proyecto tiene como parte fundamental la portabilidad y la transferencia de contenido multimedia, y habiendo definido que para su desarollo se utilizará un microordenador, se requiere una interfaz de comunicación inálmbrica con amplia cobertura. A continuación se muestra una comparación de los estándares de comunicación inalámbrica más utilizados enfocados a sistemas portátiles.
+
+\begin{table}[h]
+\caption{\label{tab:redes} Comparación entre Redes Inalámbricas}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+        & Espectro                                                                 & \begin{tabular}[c]{@{}l@{}}Ancho de\\ Banda\end{tabular} & Costo    & \emph{BitRate} & Escalabilidad & \begin{tabular}[c]{@{}l@{}}Inmunidad a \\ la Interferencia\end{tabular} \\ \hline
+LTE-M   & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 869 MHz\\ 915 MHz\end{tabular} & 100kHz                                                   & Moderado & 1Mbps   & Alta          & Moderada                                                                \\ \hline
+NB-IoT  & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 433 MHz\end{tabular}           & \textless{}500kHz                                        & Moderado & 200kbps & Alta          & Baja                                                                    \\ \hline
+SigFox  & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 200kHz                                                   & Bajo     & 100bps & Baja          & Baja                                                                    \\ \hline
+LoraWan & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 1.4MHz                                                   & Bajo     & 10kbps  & Moderada      & Muy Alta                                                                \\ \hline
+\end{tabular}
+
+\end{table}
+
+De la Tabla 1\ref{tab:redes} las interfaces de comunicación que mas destacan por su cobertura y su tasa de transferencia de datos son LTE-M y NB-IoT. A continuación se realiza una comparación entre estas interfaces para poder definir cual será utilizada a lo largo del proyecto.
+
+
+\textbf{LTE-M}
+
+Es una tecnología de área amplia de baja potencia que admite IoT a través de dispositivos poco complejos y proporciona una cobertura extendida, al tiempo que permite la reutilización de la base instalada de LTE\\
+
+Las redes LTE-M coexisten con las redes móviles 2G, 3G y 4G y se beneficiaan de todas las características de seguridad y privacidad de las redes móviles, como la confidencialidad de la identidad del usuario, la autenticación de la entidad, la privacidad, la integridad de los datos y la identificación del equipo móvil.
+
+A continuación se describen las ventajas principales de LTE-M
+
+\begin{itemize}
+\item \textbf{Ahorro de Energía}
+
+LTE-M permite que los dispositivos en los que operan utilicen un modo de ahorro de energía. Consumiendo energía sólo cuando los dispositivos requiren su uso.
+
+\item \textbf{Cobertura}
+
+
+Las redes LTE-M/Cat-M1/Cat-M2 pueden utilizar la infraestructura 4G LTE existente. Esta es una ventaja significativa, ya que más del 50 por ciento de las conexiones móviles globales se realizan en redes 4G. 
+
+Con una pérdida de acoplamiento máxima (MCL) de 156 decibelios (dB), 14 dB más alta que LTE, las redes LTE-M también ofrecen mayor cobertura y mejor penetración en interiores. La señal puede manejar muchas interferencias de edificios y otras estructuras que obstruyen su camino.
+
+\item \textbf{Velocidad de Transferencia}
+
+LTE-M cuenta con un estándar base de 1 megabit por segundo para transmisiones de enlace subida y descarga. Su uso es factible para aplicaciones con necesidades de  transmisión datos menores a los 50MBps e incluso casos de uso que involucran transmisión de contenido multimedia.
+
+
+En el contexto de IoT, el alto rendimiento de datos significa que los dispositivos que usan LTE-M pueden recibir fácilmente actualizaciones por aire (OTA), y las transmisiones de datos consumirán menos energía, porque el dispositivo puede volver al modo de ahorro de energía más rápido.
+
+
+\item \textbf{Costo}
+
+Las redes 4G se construyeron principalmente para teléfonos inteligentes. Las redes LTE-M se construyeron principalmente para dispositivos IoT. Como tal, los componentes necesarios para los dispositivos LTE-M son menos complejos y más asequibles que los componentes que necesitaría para un dispositivo 4G tradicional, aunque ambos utilizan la infraestructura 4G LTE.
+
+
+
+
+\end{itemize}
+
+\textbf{NB-IoT}
+
+Es un protocolo inalámbrico de Internet de las cosas (IoT) que también utiliza tecnología de red de área amplia de baja potencia (LPWAN). Fue desarrollado por 3GPP para comunicación inalámbrica celular que permite una amplia gama de nuevos dispositivos y servicios NB-IoT. NB-IoT es uno de los tres principales estándares 3GPP LPWAN.\\
+
+El estándar de comunicación NB-IoT tiene como objetivo permitir que los dispositivos IoT funcionen a través de redes de operador, ya sea dentro de una onda portadora de comunicación del Sistema Global para Móviles (GSM) existente, en una "banda de protección" no utilizada entre canales LTE o de forma independiente.\\
+
+Uno de los objetivos de NB-IoT es impulsar la extensión de la cobertura más allá de lo que ofrecen las tecnologías celulares existentes. Para ello, NB-IoT ofrece repeticiones de transmisión y diferentes configuraciones de asignación de ancho de banda en la transmisión de enlace ascendente.\\
+
+La tecnología NB-IoT utiliza señales de bajo ancho de banda para comunicarse dentro de las tecnologías GSM y LTE existentes.
+
+Los dispositivos y sensores especialmente diseñados son los componentes básicos de los sistemas NB-IoT. Estos dispositivos recopilan información de su entorno y la transmiten a estaciones base NB-IoT o nodos de transmisión.
+
+Las estaciones base individuales están conectadas a una puerta de enlace de IoT y servidores de aplicaciones en la nube de IoT para el monitoreo centralizado y el análisis de datos.
+
+NB-IoT emplea una nueva capa física con señales y canales para cumplir con los requisitos de cobertura extendida en áreas rurales e interiores profundos, al tiempo que permite una complejidad de dispositivo muy baja. La tecnología subyacente es mucho menos compleja que la de los módulos GSM/GPRS.\\
+
+A continuación se describen las ventajas más importantes de NB-IoT:
+\begin{itemize}
+
+\item \textbf{ Ahorro de Energía}
+
+NB-IoT no necesita ejecutar un sistema operativo pesado, y no require procesamiento de señales, lo que lo hace más eficiente en términos de energía en comparación con LTE-M.
+
+\item \textbf{Cobertura}
+
+
+NB-IoT puede ayudar a admitir una gran cantidad de dispositivos mediante el establecimiento de redes NB-IoT que pueden conectarse a miles de millones de nodos. Diseñado para cobertura extendida en interiores, la menor complejidad de los dispositivos proporciona conectividad y comunicación de largo alcance.
+
+\item \textbf{Costo}
+
+Debido a que es más fácil crear dispositivos con menor complejidad, el costo de los dispositivos es significativamente bajo, alrededor de 5 dolares por módulo.
+
+\item \textbf{Seguridad}
+
+
+NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones de autenticación basadas en cifrado y SIM.
+
+Comparado a NB-IoT las velocidades de transferencia de datos de LTE-M son más de 10 veces más rápidas, su latencia es de 10 a 100 veces menor y cuenta con una cobertura mucho mayor, ya que utiliza la infraestructura 4G LTE existente. Sin embargo, aunque ambas LPWAN funcionan bien en interiores, NB-IoT tiene una pérdida máxima de acoplamiento (MCL) ligeramente más alta, lo que significa que puede manejar un poco más de interferencia.
+
+LTE-M también puede usar una gama más amplia de frecuencias, aunque, como su nombre lo indica, Narrowband-IoT usa bandas de frecuencia más estrechas, lo que permite que esta tecnología use el espectro de radiofrecuencia (RF) de manera más eficiente.
+
+\begin{table}[h]
+\begin{adjustbox}{width=\columnwidth,center}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+       & \begin{tabular}[c]{@{}l@{}}Velocidad \\ Máxima de Subida\end{tabular} & \begin{tabular}[c]{@{}l@{}}Velocidad Máxima \\ de Descarga\end{tabular} & Latencia & \begin{tabular}[c]{@{}l@{}}Perdida Máxima\\ de Acoplamiento(dBs)\end{tabular} & Ancho de Banda \\ \hline
+LTE-M  & 1Mbps                                                                 & 1Mps                                                                    & 10-15 ms & 156                                                                           & 1.4MHz a 5MHz  \\ \hline
+NB-IoT & 127 kbit                                                              & 159 kbit                                                                & 1.6-10s  & 164                                                                           & 180KHz         \\ \hline
+\end{tabular}
+\end{adjustbox}
+\caption{\label{tab:interfaces} Comparación entre LTE-M y NB-IoT}
+\end{table}
+
+Pocos operadores han establecido acuerdos de roaming para sus redes NB-IoT, por lo que LTE-M ofrece una mejor cobertura y tiene menos circunstancias en las que necesita cambiar de SIM.
+Actualemente, la compañia Telcel cuenta con la mayor cobertura de tecnología LTE en México.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/lte-mcobertura}
+\captionof{figure}{Mapa de Cobertura LTE-Telcel}
+ \label{fig:prot}
+\end{center}
+\newpage
+\item\textbf{NB-IoT consume más energía en algunos casos}
+
+Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las velocidades de datos más bajas de NB-IoT requieren estos permanezcan en línea por más tiempo, lo que resulta en un mayor consumo de energía. En casos de uso móvil, NB-IoT también usa más energía
+
+
+\end{itemize}
+
+Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto. 
 
 \subsubsection{Análisis del Submódulo de Datos }\label{sec:ASD}
 El objetivo que tiene el análisis de los datos es mandar fotogramas a la estación base para su futura gestión y validación, así como el almacenamiento de estos; de igual manera se pretende el envío de mensajes informativos para la estación base.
@@ -2362,10 +2185,174 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \end{table}
 
 \end{itemize}
+\clearpage
+
+\subsection{Análisis y Elección del manejador de bases de datos  }
+Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  \\
+
+
+\begin{table}[h]
+\caption{Cuadro Comparativo de los Sistemas de Gestión de Bases de Datos No Relacionales}
+\begin{tabular}{{|m{0.16\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|m{0.18\linewidth}|}}
+\hline
+ & \textbf{Cassandra } & \textbf{MongoDB } & \textbf{Redis } & \textbf{Amazon DynamoDB } \\ \hline
+ \textbf{Tipo de base de datos }& NoSQL \emph{wide-column}  & NoSQL Orientado a documentos  & NoSQL clave-valor  & NoSQL clave-valor  \\ \hline
+ \textbf{Licencia }& Codigo abierto  & Codigo abierto SSPL & Codigo abierto BSD 3-clause  & Vendor \\ \hline
+ \textbf{Cumplimiento ACID }& No & Si  &  Si &  Si \\ \hline
+ \textbf{Lenguaje de consulta principal }& CQL  & JavaScript  & Permite el uso de varios lenguajes  & DQL  \\ \hline
+ \textbf{Principales casos de uso }& Análisis social, análisis en tiempo real, venta al por menor y mensajería & Gestión de IOT, análisis en tiempo real, desarrollo de aplicaciones, inventario y personalización & Almacenamiento en caché, colas, filtrado y estadísticas  & Juegos, comercio minorista, servicios financieros, publicidad y transmisión de medios  \\ \hline
+ \textbf{Seguridad  }& Seguridad integrada para la autorización, el cifrado y la autenticación, pero la seguridad está desactivada de forma predeterminada para facilitar su uso dentro de los clústeres  & Seguridad incorporada para autorización, autenticación y encriptación  & Se inicia automáticamente en modo de protección y ofrece sugerencias de seguridad  & Seguridad integrada para datos y aplicaciones; software, hardware, instalaciones y red seguros del proveedor  \\ \hline
+ \textbf{Escalabilidad }& Horizontal  & Horizontal  & Horizontal  & Horizontal  \\ \hline
+ \textbf{Curva de aprendizaje  }& Difícil    & Medio   & Medio   &  - \\ \hline
+\end{tabular}
+
+\end{table}
+
+
+Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación  como base el lenguaje JavaScript y  Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación. Otra característica importante es que es una base de datos multiplataforma, esto para que se realice información desde el sistema operativo Linux, que será utilizado en la Rasperry Pi.
+
+\clearpage
+\subsection{Análisis y Elección de lenguajes de programación web}
+
+Con respecto al desarrollo web, se requiere un lenguaje de programación que pueda ofrecer felixbilidad e interoperabilidad para su futura implementación. El lenguaje de programación que cumple en estas características, es Javascript \cite{js}.
+
+
+JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, también es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa
+
+A continuación se describen sus características más importantes:
+
+\begin{itemize}
+\item \textbf{Veloz}
+
+Como lenguaje de programación interpretado, no tiene que compilarse cada vez que se ejecuta, lo que hace que el desarrollo y la depuración sean más rápidos para comenzar. Además, JavaScript encuentra más velocidad al ejecutarse como un script del lado del cliente, ejecutándose en el navegador sin conectarse al servidor y ahorrando recursos valiosos para cada usuario adicional.
+
+\item \textbf{Procesamiento asíncrono}
+
+El procesamiento asíncrono es una de las características más útiles del lenguaje JavaScript. Usando JavaScript, un bloque del script no podrá detenerse o dejar que el otro bloque de código espere a que comience la respuesta. Si se está procesando una solicitud, otras también trabajarán en paralelo con la solicitud anterior en lugar de esperar la respuesta de la solicitud anterior. Ahorra mucho tiempo al ejecutar scripts en paralelo.
+
+\item \textbf{Poca carga de Procesamiento del servidor}
+
+JavaScript permite realizar funcionalidades básicas en el lado del cliente. Esto significa que el servidor no tendrá que procesar las funcionalidades básicas que mejoran el rendimiento del servidor.
+
+\end{itemize}
 
 
 
 
+\clearpage
+
+\subsection{Análisis y Elección del servidor de alojamiento  }
+Para el presente proyecto se requiere una capacidad de almacenamiento que nos permita el uso de archivos multimedia, concretamente archivos de video.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Tipo de Multimedia} & \textbf{Ejemplos}             \\ \hline
+Imágenes                    & JPEG, GIF, PNG, Archivos TIFF \\ \hline
+Audio                       & MP3, WAV, ACC                 \\ \hline
+Video                       & QuickTime, MP4, Youtube       \\ \hline
+\end{tabular}
+\caption{Tipos de Archivo Multimedia}
+\end{table}
+
+Si se requiere alojar una aplicación web cuyo contenido predominante sea multimedia, se deberá de tomar en cuenta los siguientes factores:
+
+
+\begin{itemize}
+\item  Ancho de banda
+
+El ancho de banda y el almacenamiento son una función de su plan de alojamiento. Generalmente un plan de alojamiento en la nube  permite pagar por un uso menor durante las horas de menor actividad y explotar cuando recibe mucho tráfico. No se paga por ancho de banda o espacio de almacenamiento que en realidad no se utiliza.
+
+\item Almacenamiento
+
+Si se tiene una gran cantidad de archivos multimedia, entonces se requiere gran capacidad de almacenamiento. Lo ideal sería contar con almacenamiento ilimitado, pero esto significaría un aumento considerable al costo de alojamiento. Se debe de analizar un aproximado de almacenamiento necesario y en base a eso se deberá elegir el plan de almacenamiento que mejor cubra esas necesidades.
+
+\item CDN (\emph{Content Delivery Network})
+
+Lo último que debe considerar con el alojamiento de medios es una red de entrega de contenido o CDN. Una CDN intenta mejorar el rendimiento de la transmisión de medios mediante la ubicación de servidores que están geográficamente cerca del usuario mediante sofisticados algoritmos de ubicación y de ruteo.
+
+\end{itemize}
+
+Sabiendo lo anterior, se procede a realizar el análisis de distintos proveedores de alojamiento con la propósito de seleccionar saber aquel que ofrezca la capadidad de alojar y almacenar contenido multimedia.
+
+\begin{itemize}
+\item AWS Amplify Hosting
+AWS Amplify Hosting es un servicio de alojamiento e Integración Continua/Entrega Continua completamente administrado para aplicaciones estáticas, rápidas, seguras, fiables, renderizadas del lado del servidor y que escalan a la par. Algunas de sus principales ventajas son:
+
+\begin{itemize}
+\item \textbf{Implementación de contenido web con rapidez}
+
+AWS permite la implementación continua de una aplicación web estática o renderizada del lado del servidor, una página de inicio de la aplicación móvil o una aplicación progresiva en cada confirmación de código.
+
+
+\item \textbf{CDN}
+
+Cuenta con la red de entrega de contenido (CDN) de Amazon CloudFront con cientos de puntos de presencia en todo el mundo. Lo que permite un tiempo de respuesta de hasta menos de 10ms.
+
+\item \textbf{Monitoreo}
+
+AWS cuenta con un sistema de monitoreo de tráfico en tiempo real. También permite crear alarmas personalizadas para enviar notificaciones cuando la métrica haya superado el límite establecido. 
+
+\item \textbf{Precio}
+
+AWS cuenta con dos planes, uno gratuito y otro de paga, a continuación, se detallan las características de cada uno.
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/amplify}
+\captionof{figure}{Planes de Alojamiento AWS Amplify}
+ \label{fig:DiagramadeactividadMEB}
+\end{center}
+
+\item \textbf{A2Hosting}
+
+\begin{itemize}
+\item \textbf{Alojamiento Compartido}
+
+A2 Hosting cuenta con dos tipos de planes de alojamiento, el primero con costo de renovación que  va desde \$10.99 dls . Si se llegara a necesitar un servidor dedicado, el plan que nos ofrece está característica tiene un precio de  \$25.99 por mes.
+
+\item \textbf{VPS}
+
+VPS significa servidor privado virtual por sus siglas en inglés. Es una forma de dividir un servidor en (sub)servidores individuales más pequeños. Esto significa que se puede configurar de acuerdo a las necesidades del cliente y no tener que compartir recursos con otros clientes. Un VPS en A2 Hosting cuesta desde tan solo \$7.65 al mes hasta alrededor de \$200 dependiendo del número de subdivisiones necesarias.
+
+\item \textbf{CDN}
+A2 Hosting no ofrece servicio de CDN, sin embargo, cualquiera de sus planes ofrecen la posibilidad de contratar un servicio de CDN proveedores externos pagando un precio extra del precio base dependiendo del plan contratado.
+
+\end{itemize}
+
+
+\item \textbf{HosGator}
+\begin{itemize}
+
+\item \textbf{Tiempo de Respuesta}
+
+De acuerdo con el sitio Bitcatcha, que se dedica a evaluar los tiempos de respuestas de los servidores de páginas web, HostGator poseé tiempos de respuestas mínimos para el territorio de Estados Unidos. A continuación se muestra los tiempos de respuesta de distintos territorios:
+
+
+\begin{center}
+  \includegraphics[scale=.5]{imagenes/respuesta}
+\captionof{figure}{Tiempos de Respuesta de servidores de HostGator}
+ \label{fig:DiagramadeactividadMEB}
+\end{center}
+
+HostGator posee solo 2 datacenters, uno localizado en el área oeste, y otro en el este. Esto puede ocasionar que los tiempos de respuesta no sean los mejores en áreas que estén alejadas de las antes mencionadas
+
+
+\item \textbf{Disponibilidad}
+HosGator ofrece una disponibilidad del 99.9\%, esto quiere decir que los sitios que se decida alojar en los servidores de HostGator deberían ser accesibles la mayoría del tiempo.
+
+
+\end{itemize}
+
+
+\end{itemize}
+
+
+
+\end{itemize}
+
+
+Después de haber analizado los distintos proveedores de alojamiento así como sus características, se llegó a la conclusión de utilizar AWS Amplify. Ya que este contiene una suite de herramientas que facilitan la implementación de una aplicación web, como por ejemplo S3, que es un servicio de alojamiento en la nube utilizado para archivos multimedia de gran tamaño, además de contar con su propia CDN que facilitará el acceso a los datos almacenados.
 
 \clearpage
 \section{Capítulo IV: Diseño}

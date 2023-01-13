@@ -48,33 +48,33 @@
 \contentsline {subsubsection}{\numberline {4.2.20}Influencia de un sistema de geolocalizaci\'on en el control y monitoreo de veh\IeC {\'\i }culos con dispositivos GPS en una empresa log\IeC {\'\i }stica}{30}{subsubsection.4.2.20}%
 \contentsline {subsubsection}{\numberline {4.2.21}Dise\~no de la red de acceso LTE en el distrito de Jes\'us Mar\IeC {\'\i }a}{31}{subsubsection.4.2.21}%
 \contentsline {section}{\numberline {5}Cap\IeC {\'\i }tulo III: An\'alisis}{32}{section.5}%
-\contentsline {subsection}{\numberline {5.1}An\'alisis y elecci\'on de la zona geogr\'afica }{33}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}An\'alisis y elecci\'on del microordenador}{35}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}An\'alisis y elecci\'on de la c\'amara digital}{35}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}An\'alisis y elecci\'on de la alarma }{36}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}An\'alisis y elecci\'on de la unidad de almacenamiento externa}{37}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}An\'alisis y elecci\'on de lenguajes de programaci\'on para el microordenador}{37}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}An\'alisis y elecci\'on de herramientas de programaci\'on}{40}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}An\'alisis y elecci\'on de protocolos de comunicaci\'on inal\'ambrica }{40}{subsection.5.8}%
-\contentsline {subsection}{\numberline {5.9}An\'alisis y elecci\'on del manejador de bases de datos }{44}{subsection.5.9}%
-\contentsline {subsection}{\numberline {5.10}An\'alisis y elecci\'on de lenguajes de programaci\'on web}{46}{subsection.5.10}%
-\contentsline {subsection}{\numberline {5.11}An\'alisis y elecci\'on del servidor de alojamiento }{46}{subsection.5.11}%
-\contentsline {subsection}{\numberline {5.12}An\'alisis del M\'odulo Central de Procesamiento}{50}{subsection.5.12}%
-\contentsline {subsubsection}{\numberline {5.12.1}An\'alisis del Subm\'odulo Visi\'on Artificial}{51}{subsubsection.5.12.1}%
-\contentsline {subsubsection}{\numberline {5.12.2}An\'alisis y elecci\'on de algoritmos de visi\'on artificial}{54}{subsubsection.5.12.2}%
-\contentsline {subsubsection}{\numberline {5.12.3}An\'alisis y elecci\'on del modelo de Red Neuronal}{56}{subsubsection.5.12.3}%
-\contentsline {subsection}{\numberline {5.13}An\'alisis del M\'odulo de Comunicaciones}{61}{subsection.5.13}%
-\contentsline {subsubsection}{\numberline {5.13.1}An\'alisis del Subm\'odulo de Telemetr\IeC {\'\i }a }{62}{subsubsection.5.13.1}%
-\contentsline {subsubsection}{\numberline {5.13.2}An\'alisis del Subm\'odulo de Datos }{62}{subsubsection.5.13.2}%
-\contentsline {subsubsection}{\numberline {5.13.3}An\'alisis del Subm\'odulo de Cobertura}{63}{subsubsection.5.13.3}%
-\contentsline {subsection}{\numberline {5.14}An\'alisis del M\'odulo de Estaci\'on Base}{66}{subsection.5.14}%
-\contentsline {subsubsection}{\numberline {5.14.1}An\'alisis de la Aplicaci\'on Web}{72}{subsubsection.5.14.1}%
-\contentsline {section}{\numberline {6}Cap\IeC {\'\i }tulo IV: Dise\~no}{82}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Dise\~no del M\'odulo Central de Procesamiento}{82}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{84}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Dise\~no del Subm\'odulo de Visi\'on Artificial}{90}{subsubsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.2}Dise\~no del M\'odulo de Comunicaciones}{94}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Dise\~no de la Estaci\'on Base}{96}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Dise\~no de la Aplicaci\'on Web}{98}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Dise\~no de la Base de Datos}{106}{subsubsection.6.3.2}%
-\contentsline {section}{\numberline {7}Conclusiones}{109}{section.7}%
+\contentsline {subsection}{\numberline {5.1}An\'alisis y delimitaci\'on de la zona geogr\'afica }{33}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}An\'alisis del M\'odulo Central de Procesamiento}{35}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}An\'alisis y Elecci\'on del microordenador}{36}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}An\'alisis y Elecci\'on de la alarma }{37}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}An\'alisis y Elecci\'on de la unidad de almacenamiento externa}{38}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}An\'alisis y Elecci\'on de lenguajes de programaci\'on para el microordenador}{39}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.5}An\'alisis y Elecci\'on de herramientas de programaci\'on}{41}{subsubsection.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.6}An\'alisis del Subm\'odulo Visi\'on Artificial}{42}{subsubsection.5.2.6}%
+\contentsline {subsubsection}{\numberline {5.2.7}An\'alisis y Elecci\'on de la c\'amara digital}{45}{subsubsection.5.2.7}%
+\contentsline {subsubsection}{\numberline {5.2.8}An\'alisis y Elecci\'on de algoritmos de visi\'on artificial}{46}{subsubsection.5.2.8}%
+\contentsline {subsubsection}{\numberline {5.2.9}An\'alisis y Elecci\'on del modelo de Red Neuronal}{48}{subsubsection.5.2.9}%
+\contentsline {subsection}{\numberline {5.3}An\'alisis del M\'odulo de Comunicaciones}{53}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}An\'alisis del Subm\'odulo de Telemetr\IeC {\'\i }a }{54}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}An\'alisis y Elecci\'on de Protocolos de comunicaci\'on inal\'ambrica }{54}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}An\'alisis del Subm\'odulo de Datos }{58}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}An\'alisis del Subm\'odulo de Cobertura}{58}{subsubsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.4}An\'alisis del M\'odulo de Estaci\'on Base}{61}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}An\'alisis de la Aplicaci\'on Web}{67}{subsubsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.5}An\'alisis y Elecci\'on del manejador de bases de datos }{77}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}An\'alisis y Elecci\'on de lenguajes de programaci\'on web}{79}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}An\'alisis y Elecci\'on del servidor de alojamiento }{80}{subsection.5.7}%
+\contentsline {section}{\numberline {6}Cap\IeC {\'\i }tulo IV: Dise\~no}{83}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Dise\~no del M\'odulo Central de Procesamiento}{83}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Dise\~no de la Unidad Contenedora de Procesamiento}{85}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Dise\~no del Subm\'odulo de Visi\'on Artificial}{91}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Dise\~no del M\'odulo de Comunicaciones}{95}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Dise\~no de la Estaci\'on Base}{97}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Dise\~no de la Aplicaci\'on Web}{99}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Dise\~no de la Base de Datos}{107}{subsubsection.6.3.2}%
+\contentsline {section}{\numberline {7}Conclusiones}{110}{section.7}%
