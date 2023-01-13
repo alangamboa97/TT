@@ -910,7 +910,25 @@ Debido a que en el presente proyecto se realizará la integración de sistemas enf
 \clearpage
 \subsubsection{Análisis y Elección de herramientas de programación}
 
+\begin{itemize}
 
+\item \textbf{Tensorflow}
+
+Es una plataforma de código abierto para el aprendizaje automático y el procesamiento de datos. Permite  definir, optimizar y ejecutar operaciones matemáticas, especialmente aquellas que involucran tensores, que son arrays multidimensionales de datos.Una de las principales ventajas de esta herramienta es su capacidad para ejecutarse en diferentes plataformas, desde dispositivos móviles hasta servidores de alta capacidad y sistemas en la nube.
+
+\item \textbf{Keras}
+
+Es una biblioteca de software de código abierto para el desarrollo de redes neuronales escrita en Python.Permite la construcción de modelos mediante la definición de capas y la conexión de estas capas para crear una red neuronal completa. También proporciona una serie de funciones de alto nivel para la configuración de optimizadores, pérdidas y métricas, lo que facilita el proceso de entrenamiento y evaluación de un modelo.
+
+
+\item  \textbf{OpenCV}
+
+Es una biblioteca de procesamiento de imágenes de código abierto, ampliamente utilizada en la investigación académica y la industria. Permite el análisis de imágenes, la detección de objetos, el reconocimiento de patrones y la segmentación de imágenes.
+
+
+
+
+\end{itemize}
 
 
 
@@ -2533,7 +2551,7 @@ Como se indicó inicialmente el sistema estará disponible mientras el sistema se 
 
 Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial en la concurrencia de los mismos. También se detallan las peticiones y respuestas de los distintos submódulos y sistemas.
 
-\subsubsection{Diseño de la Unidad Contenedora de Procesamiento}
+\subsubsection{Elección de la Unidad Contenedora de Procesamiento}
 
 Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema. 
 \\
@@ -2541,14 +2559,25 @@ Elementos físicos que contendrá la unidad:
 
 \begin{itemize}
 
-\item Raspberry Pi 4 Modelo B\\
-De acuerdo con las especificaciones físicas de la Raspberry Pi 4 Modelo B se tiene las siguientes medidas en milímetros:\\
-Dimensiones 85 x 53mm. 
+\item \textbf{Nvidia Jetson Nano}\\
+De acuerdo con las especificaciones físicas de la Jetson Nano se tiene las siguientes medidas en milímetros:\\
+
+
+
 \begin{center}
-  \includegraphics[scale=.4]{imagenes/Espeificaciones fisicas Raspberry Pi}
-\captionof{figure}{Especificaciones Físicas}
+  \includegraphics[scale=.6]{imagenes/nanodim}
+\captionof{figure}{Dimensiones Nvidia Jetson Nano}
  \label{fig:scaraindust}
 \end{center}
+
+
+\begin{center}
+  \includegraphics[scale=.4]{imagenes/nano}
+\captionof{figure}{Nvidia Jetson Nano}
+ \label{fig:scaraindust}
+\end{center}
+
+
 
 \item Zumbador Pasivo KY-006\\
 Dimensiones 18 x 15mm. 
@@ -2562,7 +2591,7 @@ Dimensiones 18 x 15mm.
 Dimensiones de la placa: 38 x 38mm.
 
 \begin{center}
-  \includegraphics[scale=.4]{imagenes/V2}
+  \includegraphics[scale=.4]{imagenes/imx}
 \captionof{figure}{Raspberry Camera Module V2}
  \label{fig:scaraindust}
 \end{center}
@@ -2627,17 +2656,18 @@ Antenas LTE principal y Diversity combinadas con una antena GNSS en una sola ant
 
 \newpage
 
-Tomando en cuenta las medidas anteriormente mencionadas, se decidió utilizar un modelo de contenedor para rasperry diseñado por Sixfab.
+En un principio se tenía propuesto diseñar la unidad contenedora de procesamiento. Sin embargo, al buscar alternativas, se encontró una carcase especificamente diseñada para la Nvidia Jetson Nano, que cuenta con una plataforma para colocar una cámara digital además de orificios para antenas 4G, por lo que se decidió a utilizar esta carcasa para proteger los componentes.
 
 \begin{center}
-  \includegraphics[scale=.3]{imagenes/unidad_contenedoras}
-\captionof{figure}{Vistas de la Unidad Contendora Sixfab \cite{sixfab}}
+  \includegraphics[scale=.6]{imagenes/waveshare}
+\captionof{figure}{Carcasa Waveshare}
  \label{fig:scaraindust}
 \end{center}
- 
+
+Esta carcasa está hecha de metal y además incluye un ventilador para disipar el calor.
 
 \begin{center}
-  \includegraphics[scale=.5]{imagenes/unidad_contenedoral}
+  \includegraphics[scale=.5]{imagenes/wavecompo}
 \captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento \cite{sixfab}}
  \label{fig:scaraindust}
 \end{center}
@@ -2654,14 +2684,14 @@ En el siguiente Diagrama de Actividades se describen las actividades y sus inter
 
 \begin{center}
 
-  \includegraphics[scale=.4]{imagenes/actividades_vision}
+  \includegraphics[scale=.45]{imagenes/actividades_vision}
 \captionof{figure}{Diagrama de Actividades - Submódulo de Visión Artificial}
  \label{fig:actividades}
 
 \end{center}
 
 \begin{center}
-  \includegraphics[scale=.42]{imagenes/flujo_vision}
+  \includegraphics[scale=.5]{imagenes/flujo_vision}
 \captionof{figure}{Diagrama de Flujo - Submódulo de Visión Artificial}
  \label{fig:landmark}
 \end{center}
