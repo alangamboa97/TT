@@ -739,10 +739,10 @@ Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móvile
 \multicolumn{1}{|l|}{\emph{RF01}}                                              & \emph{Verificar estado funcional de periféricos}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema verificará el estado funcional de los distintos periféricos utilizados en el Módulo Central de Procesamiento\\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Rasperry Pi\\
+\quad $\bullet$ Microodenador\\
 \quad $\bullet$ Cámara Digital\\
 \quad $\bullet$ Zumbador Pasivo\\
-\quad $\bullet$ Antena Sixfab
+\quad $\bullet$ Antena
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de los periféricos, se comprobará que funcionen de manera correcta, en caso contrario se enviará una alerta al módulo de Estación Base.
@@ -761,7 +761,7 @@ Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de l
 \multicolumn{1}{|l|}{\emph{RF02}}                                              & \emph{Activar Alarma}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema activará el zumbador en caso de que el Submódulo de \\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Rasperry Pi\\
+\quad $\bullet$ Microodenador\\
 \quad $\bullet$ Zumbador Pasivo
 
 \end{tabular}} \\ \hline
@@ -937,9 +937,9 @@ Debido a que en el presente proyecto se realizará la integración de sistemas enf
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema capturará video en todo momento\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Conductor\\
-\quad $\bullet$ Incidencias\\
-\quad $\bullet$ Administrador\\
-\quad $\bullet$ MongoDB
+\quad $\bullet$ Cámara Digital\\
+
+
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 Con el uso de una cámara digital, se capturará video en tiempo real.
@@ -961,7 +961,7 @@ Con el uso de una cámara digital, se capturará video en tiempo real.
 \quad $\bullet$ Cámara Digital
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando el software de OpenCV el sistema podrá detectar el rostro del conductor.
+Utilizando el software de procesamiento de imágenes el sistema podrá detectar el rostro del conductor.
 \end{tabular}}                                                    \\ \hline
 \end{tabular}
 
@@ -977,11 +977,11 @@ Utilizando el software de OpenCV el sistema podrá detectar el rostro del conduct
 \multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Reconocer Características Faciales}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:} El sistema detectará la posición de los ojos y la boca del conductor a partir de la detección del rostro.\\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Cascadas Haar\\
+\quad $\bullet$ Método de Detección de Rostro\\
 \quad $\bullet$ Cámara Digital
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando el software de OpenCV el sistema podrá detectar el rostro del conductor.
+Utilizando un método de detección de rostro el sistema podrá detectar el rostro del conductor.
 \end{tabular}}                                                    \\ \hline
 \end{tabular}
 
@@ -994,9 +994,9 @@ Utilizando el software de OpenCV el sistema podrá detectar el rostro del conduct
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
 \multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Detectar signos de somnolencia}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema detectará el estado de los ojos y la boca, y analizará si estos corresponden a los signos de somnolencia del conductor..\\ \\ \textbf{Elementos:}
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema detectará el estado de los ojos y la boca, y analizará si estos corresponden a los signos de somnolencia del conductor.\\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ MOR\\
+
 \quad $\bullet$ Red Neuronal Convolucional
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
@@ -1013,9 +1013,9 @@ El sistema obtendrá el estado de somnolencia del conductor utilizando una red ne
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
 \multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se enviará una señal de alerta al módulo central de procesamiento cuando se detecten signos de somnolencia en el conductor..\\ \\ \textbf{Elementos:}
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se enviará una señal de alerta al módulo central de procesamiento cuando se detecten signos de somnolencia en el conductor.\\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Rasperry Pi\\
+\quad $\bullet$ Microordenador\\
 \quad $\bullet$ Zumbador
 
 \end{tabular}} \\ \hline
@@ -1036,7 +1036,7 @@ El módulo Central de procesamiento activará la alarma al recibir la señal de ale
 \multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se almacenará un fragmento del video en la memoria externa en caso de detectar somnolencia en el conductor.\\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Rasperry Pi\\
+\quad $\bullet$ Microordenador\\
 \quad $\bullet$ Memoria Externa\\
 \quad $\bullet$ Video
 \end{tabular}} \\ \hline
@@ -1730,9 +1730,8 @@ El usuario administrador puede realizar la inserción, modificación, eliminación 
 \multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Desplegar Aplicación Web  }                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}La aplicación web se alojará en una red de entrega de contenido (CDN), disponible con una URL.  \\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ AWS Amplify  \\
-\quad $\bullet$ GitHub \\
-\quad $\bullet$ Amazon S3 
+\quad $\bullet$ \emph{Content Delivery Network}  \\
+
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador puede acceder a la interfaz de la aplicación web, haciendo uso de la URL en el navegador web.  \end{tabular}}                                                    \\ \hline
@@ -1751,10 +1750,10 @@ El usuario administrador puede acceder a la interfaz de la aplicación web, hacie
 \multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Guardar Credenciales de Usuario Administrador }                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se guardarán únicamente las credenciales de los usuarios administradores que podrán acceder a la aplicación web. \\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Amazon Cognito 
+\quad $\bullet$ Servicio de Administración de Acceso e Identidad 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El usuario administrador puede iniciar sesión en la aplicación web.  \end{tabular}}                                                    \\ \hline
+El usuario administrador podrá iniciar sesión en la aplicación web utilizando un servicio de Administración de Acceso e Identidad  \end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1914,13 +1913,13 @@ A continuación se listan los requerimientos Funcionales obtenidos
 \multicolumn{1}{|l|}{\emph{RF01}}                                              & \emph{Iniciar Sesión}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbf{Descripción:}  El sistema permitirá iniciar sesión en la aplicación web\\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Amazon Cognito\\
+\quad $\bullet$ Servicio de Administración de Acceso e Identidad\\
 \quad $\bullet$ Administrador\\
 \quad $\bullet$ Credenciales\\
-\quad $\bullet$ MongoDB
+\quad $\bullet$ Gestor de Base de Datos
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El sistema, con la ayuda de los servicios de Amazon Cognito, comprobará que las credenciales ingresadas por parte del usuario administrador se encuentren en la base de datos. En caso contrario, la aplicación web indicará que ese usuario no se encuentra registrado en la base de datos.\end{tabular}}                                                    \\ \hline
+El sistema, con la ayuda un servicio de administración de acceso e identidad del cliente, comprobará que las credenciales ingresadas por parte del usuario administrador se encuentren en la base de datos. En caso contrario, la aplicación web indicará que ese usuario no se encuentra registrado en la base de datos.\end{tabular}}                                                    \\ \hline
 \end{tabular}
 
 \end{table}
@@ -1940,7 +1939,7 @@ El sistema, con la ayuda de los servicios de Amazon Cognito, comprobará que las 
 \quad $\bullet$ Conductor\\
 \quad $\bullet$ Incidencias\\
 \quad $\bullet$ Administrador\\
-\quad $\bullet$ MongoDB
+\quad $\bullet$ Gestor de Base de Datos
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema recuperará de la base de datos todas las incidencias que se tengan registradas.\end{tabular}}                                                    \\ \hline
@@ -1962,7 +1961,7 @@ El sistema recuperará de la base de datos todas las incidencias que se tengan re
 \\
 \quad $\bullet$ Incidencia\\
 \quad $\bullet$ Administrdor\\
-\quad $\bullet$ Conductor
+\quad $\bullet$ Gestor de Base de Datos
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador podrá visualizar los reportes individuales de incidencias de cada conductor al hacer click en cualquiera de las incidencias mostrada en la lista principal. Los reportes contendrán información sobre la fecha, hora, ubicación y un video corto del momento en que fueron detectados síntomas de somnolencia.\end{tabular}}                                                    \\ \hline
@@ -1982,7 +1981,7 @@ El usuario administrador podrá visualizar los reportes individuales de incidenci
 \quad $\bullet$ Administrador\\
 \quad $\bullet$ Incidencia\\
 \quad $\bullet$ Conductor\\
-\quad $\bullet$ MongoDB
+\quad $\bullet$ Gestor de Base de Datos
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador podrá confirmar la incidencia después de haber revisado el videoclip del momento de somnolencia con la intención de descartar falsos positivos. Esto será posible ingresando a una incidencia específica mostrando sus detalles.\end{tabular}}                                                    \\ \hline
@@ -1999,10 +1998,10 @@ El usuario administrador podrá confirmar la incidencia después de haber revisado
 \multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Recuperar Contraseña}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema contará con una opción para recuperar la contraseña del administrador en caso de que sea olvidada la contraseña.\\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Amazon Cognito\\
+\quad $\bullet$ Servicio de Administración de Acceso e Identidad\\
 \quad $\bullet$ Email\\
 \quad $\bullet$ Administrador\\
-\quad $\bullet$ MongoDB
+\quad $\bullet$ Gestor de Base de Datos
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El sistema requerirá que el usuario administrador ingrese el correo con el que fue registrado. Posteriormente se le enviará un código de recuperación de contraseña a ese correo. El administrador ingresará se código en el apartado de recuperar contraseña y así podrá ingresar una nueva contraseña.\end{tabular}}                                                    \\ \hline
@@ -2021,6 +2020,7 @@ El sistema requerirá que el usuario administrador ingrese el correo con el que f
 \\
 \quad $\bullet$ Perfil\\
 \quad $\bullet$ Conductor\\
+\quad $\bullet$ Gestor de Base de Datos
 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
