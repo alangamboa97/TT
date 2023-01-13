@@ -62,15 +62,13 @@ This document details the design process of the project entitled "System for the
 \newpage
 \section{Capítulo I: Introducción }
 
-De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018, publicado por la Organización Mundial de la Salud (OMS), el número anual de muertes por accidentes de tránsito llego a los 1,35 millones. Sin embargo, las consecuencias de estos accidentes no solamente afectan al conductor y a los pasajeros del vehículo, sino que también involucran a los peatones, ciclistas y motociclistas, en particular aquellos que residen en países en desarrollo. \cite{WHO}\\
+De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018, publicado por la Organización Mundial de la Salud (OMS), el número anual de muertes por accidentes de tránsito llego a los 1,35 millones. Sin embargo, las consecuencias de estos accidentes no solamente afectan al conductor y a los pasajeros del vehículo, sino que también involucran a los peatones, ciclistas y motociclistas, en particular aquellos que residen en países en desarrollo \cite{WHO}.\\
 
-La somnolencia al conducir es reconocida como un factor que puede contribuir a los percances viales. De acuerdo a datos de CONAPRA, en México cada año mueren en promedio 16,500 mexicanos por percances de este tipo. Con base en estimaciones hechas por el Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que representan el 1.7 \% del Producto Interno Bruto (PIB), sumando costos directos e indirectos. \cite{IMT}  \\
-
-La somnolencia, al momento de conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de alerta y conciencia por parte del conductor. Esta situación se convierte en un detonador de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de riesgo y por tanto evitar el peligro.\cite{IMT} \\
+La somnolencia al conducir es reconocida como un factor que puede contribuir a los percances viales. De acuerdo a datos de CONAPRA, en México cada año mueren en promedio 16,500 mexicanos por percances de este tipo. Con base en estimaciones hechas por el Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que representan el 1.7 \% del Producto Interno Bruto (PIB), sumando costos directos e indirectos.La somnolencia, al momento de conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de alerta y conciencia por parte del conductor. Esta situación se convierte en un detonador de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de riesgo y por tanto evitar el peligro \cite{IMT}. \\
 
 En el desarrollo logístico de empresas que se encargan de transportar a pasajeros o que se encargan de repartir paquetería, los datos pueden verse de forma más alarmante o preocupante, ya que, usualmente, las personas designadas como conductores se enfrentan a largas horas de jornada sin descanso y en muchos casos, rotan por horarios que pueden ser en el día o en la noche, aumentando el riesgo de accidentarse por el desbalance de tener un horario mixto.\\ 
 
-Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente. \cite{TastreoSatelital}  \\
+Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{RastreoSatelital}.  \\
 
 El rastreo satelital de vehículos funge como una de las principales opciones de sistemas capaces de indicar la ubicación de los vehículos en cuestión, sin embargo, el costo es elevado y periódico. \\
 
@@ -256,7 +254,7 @@ La Raspberry Pi es una computadora de bajo costo y con un tamaño compacto, puede
 % https://raspberrypi.cl/que-es-raspberry/
 
 \subsubsection{Visión Artificial}
-Se puede definir como el conjunto de técnicas para la extracción de información de imágenes digitales. El tipo de información obtenida de una imagen puede ser de identificación, mediciones para navegación, o aplicaciones de realidad aumentada\cite{vision}.El campo de visión artificial puede verse como una parte de la informática. La teoría de algoritmos y el aprendizaje automático son esenciales para el desarrollo de algoritmos de visión artificial.
+Se puede definir como el conjunto de técnicas para la extracción de información de imágenes digitales. El tipo de información obtenida de una imagen puede ser de identificación, mediciones para navegación, o aplicaciones de realidad aumentada.El campo de visión artificial puede verse como una parte de la informática. La teoría de algoritmos y el aprendizaje automático son esenciales para el desarrollo de algoritmos de visión artificial.
 La visión artificial está compuesta generalmente por un conjunto de procesos destinados a realizar el análsis de imágenes:captación de imágenes, memorización de la información, proceso e interpretación de los resultados\cite{vision}.
 
 
@@ -378,7 +376,7 @@ que también son conocidos como \emph{desicion stumps} consideradas como la forma
  \label{fig:boost}
 \end{center}
 
-Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles\cite{viola}.
+Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles.
 
 
 \subsubsection{\emph{Content Delivery Network}}
@@ -649,11 +647,11 @@ El sistema está dirigido principalmente para empresas cuya actividad esté enfoca
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/MapaCoberturaMexico}
-\captionof{figure}{Mapa de cobertura 3G/4G/5G, México.\cite{CoberturaNacional}}  
+\captionof{figure}{Mapa de cobertura 3G/4G/5G, México.}  
  \label{fig:mapacoberturaN}
 \end{center} 
 
-Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura 9, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes (figura 10).  
+Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G\cite{CoberturaNacional}, de redes móviles en México, mostrado en la figura 9, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes (figura 10).  
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/CoberturaCDMX}
@@ -2374,18 +2372,18 @@ Antenas LTE principal y Diversity combinadas con una antena GNSS en una sola ant
 
 \newpage
 
-Tomando en cuenta las medidas anteriormente mencionadas, se decidió utilizar un modelo de contenedor para rasperry diseñado por Sixfab.
+Tomando en cuenta las medidas anteriormente mencionadas, se decidió utilizar un modelo de contenedor para rasperry diseñado por Sixfab\cite{sixfab}.
 
 \begin{center}
   \includegraphics[scale=.3]{imagenes/unidad_contenedoras}
-\captionof{figure}{Vistas de la Unidad Contendora Sixfab \cite{sixfab}}
+\captionof{figure}{Vistas de la Unidad Contendora Sixfab}
  \label{fig:scaraindust}
 \end{center}
  
 
 \begin{center}
   \includegraphics[scale=.5]{imagenes/unidad_contenedoral}
-\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento \cite{sixfab}}
+\captionof{figure}{Unidad Contenedora del Módulo Central de Procesamiento }
  \label{fig:scaraindust}
 \end{center}
  
@@ -2733,7 +2731,7 @@ El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas d
 
 
 \newpage
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \bibliography{Referencias}
 \end{document}
 
