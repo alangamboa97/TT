@@ -46,46 +46,46 @@
 \listoftables
 
 \newpage
-
+\section{Glosario de Abreviaturas}
 \textbf{Glosario de Abreviaturas}
 
 \begin{itemize}
 
-    \item \textbf{CNN} \tab[4.3cm] \emph{Convolutional Neural Network}
+    \item \textbf{CNN} \tab[4cm] \emph{Convolutional Neural Network}
     \item \textbf{LTE-M} \tab[4cm] \emph{Long Term Evolution for Machines}
-    \item \textbf{NB-IoT} \tab[3.7cm] \emph{Narrowband-Internet of Things}
-    \item \textbf{CPU} \tab[3.7cm] \emph{Central Processing Unit}
-    \item \textbf{GPU} \tab[3.7cm] \emph{Graphical Processing Unit}
-    \item 
+    \item \textbf{NB-IoT} \tab[4cm] \emph{Narrowband-Internet of Things}
+    \item \textbf{CPU} \tab[4cm] \emph{Central Processing Unit}
+    \item \textbf{GPU} \tab[4cm] \emph{Graphical Processing Unit}
+    \item \textbf{SBGD} 
 \end{itemize}
 
 \newpage
 \section{Resumen}
 
+El sistema hará uso de técnicas de visión artificial, tales como las Cascadas Haar para la detección de rostro, ojos y boca del conductor a partir de la entrada de video en tiempo real, así como la propuesta del uso de una red neuronal convolucional entrenada para poder detectar el estado de los ojos. El sistema utilizará puntos de referencia faciales para marcar la posición de la boca y posteriormente se obtendrá la relación de apertura de la boca, con el fin de detectar si se trata de un bostezo. Si el sistema detecta somnolencia, se activará una alarma con intención de alertar al conductor, a su vez, se realizará un reporte de incidencia el cual será enviado a una base de datos. El sistema utilizará una Jetson Nano para su funcionamiento de manera portátil. Como parte del sistema se analizó y diseñó un sistema de administración que permitirá al usuario verificar y visualizar la información de los reportes de incidencia y la información de cada conductor. Para el cual se diseñó una aplicación web que le permita al usuario acceder a la información y adicionalmente monitorear la ubicación en tiempo real del conductor. \\
 
-
-Dicho sistema hará uso de técnicas de visión artificial, tales como las funciones Haar para la detección de rostro, ojos y boca del conductor a partir de la entrada de video en tiempo real, así como la propuesta del uso de una red neuronal convolucional entrenada para poder detectar el estado de los ojos. El sistema utilizará puntos de referencia faciales para marcar la posición de la boca y posteriormente se obtendrá la relación de apertura de la boca, con el fin de detectar si se trata de un bostezo. Si el sistema detecta somnolencia, se activará una alarma con intención de alertar al conductor, a su vez, se realizará un reporte de incidencia el cual será enviado a una base de datos. El sistema utilizará una Raspberry Pi para su funcionamiento de manera portátil. Como parte del sistema se analizó y diseñó un sistema de administración que permitirá al usuario verificar y visualizar la información de los reportes de incidencia y la información de cada conductor. Para el cual se diseñó una aplicación web que le permita al usuario acceder a la información y adicionalmente monitorear la ubicación en tiempo real del conductor. \\
-
-\emph{\textbf{Palabras Clave:}} Somnolencia, Visión artificial, Geolocalización, Machine Learning, Alerta, Red Neuronal Convolucional.
+\emph{\textbf{Palabras Clave:}} Somnolencia, Visión artificial, Geolocalización, Alerta, Red Neuronal Convolucional, Aplicación web.
 
 \section{Abstract}
-This document details the design process of the project entitled "System for the monitoring, detection and alert of driver drowsiness through computer vision, wireless communication and geolocation" as a Terminal Project, aimed at drivers in Mexico City.This system will make use of computer vision techniques, such as the Haar functions for the detection of the driver's face, eyes and mouth from the video input in real time, as well as the proposal of the use of a convolutional neural network trained to to be able to detect the state of the eyes. The system will also use facial lanmark points to mark the position of the mouth and then the mouth opening ratio will be obtained, in order to detect if it is a yawn. If the system detects drowsiness, an alarm will be activated with the intention of alerting the driver, in turn, an incident report will be made which will be sent to a database. The system will use a Raspberry Pi for its portable operation. As part of the system, an administration system was analyzed and designed that will allow the user to verify and view the information of the incident reports and the information of each driver. For which a web application was designed that allows the user to access the information and additionally monitor the location in real time of the driver.\\
+The system will make use of artificial vision techniques, such as Haar Cascades for the detection of the driver's face, eyes and mouth from the video input in real time, as well as the proposal of the use of a convolutional neural network trained to to be able to detect the state of the eyes. The system will use facial reference points to mark the position of the mouth and then the mouth opening ratio will be obtained, in order to detect if it is a yawn. If the system detects drowsiness, an alarm will be activated with the intention of alerting the driver, in turn, an incident report will be made which will be sent to a database. The system will use a Jetson Nano for portable operation. As part of the system, an administration system was analyzed and designed that will allow the user to verify and view the information of the incident reports and the information of each driver. For which a web application was designed that allows the user to access the information and additionally monitor the location in real time of the driver.\\
 
 
-\emph{\textbf{Keywords:}} Drowsiness, Computer Vision, Geolocation, Machine Learning, Alert, Convolutional Neural Network.
+\emph{\textbf{Keywords:}} Drowsiness, Computer Vision, Geolocation, Alert, Convolutional Neural Network.
 
 
 \newpage
 \section{Capítulo I: Introducción }
 
-De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018, publicado por la Organización Mundial de la Salud (OMS), el número anual de muertes por accidentes de tránsito llego a los 1,35 millones. Sin embargo, las consecuencias de estos accidentes no solamente afectan al conductor y a los pasajeros del vehículo, sino que también involucran a los peatones, ciclistas y motociclistas, en particular aquellos que residen en países en desarrollo\cite{WHO}.
+De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018, publicado por la Organización Mundial de la Salud (OMS), el número anual de muertes por accidentes de tránsito llego a los 1,35 millones. Sin embargo, las consecuencias de estos accidentes no solamente afectan al conductor y a los pasajeros del vehículo, sino que también involucran a los peatones, ciclistas y motociclistas, en particular aquellos que residen en países en desarrollo \cite{WHO}.
 \\
 
-La somnolencia al conducir es reconocida como un factor que puede contribuir a los percances viales. De acuerdo a datos de CONAPRA, en México cada año mueren en promedio 16,500 mexicanos por percances de este tipo. Con base en estimaciones hechas por el Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que representan el 1.7 \% del Producto Interno Bruto (PIB), sumando costos directos e indirectos. La somnolencia, al momento de conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de alerta y conciencia por parte del conductor. Esta situación se convierte en un detonador de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de riesgo y por tanto evitar el peligro\cite{IMT}. \\
+La somnolencia al conducir es reconocida como un factor que puede contribuir a los percances viales. De acuerdo a datos de CONAPRA, en México cada año mueren en promedio 16,500 mexicanos por percances de este tipo. Con base en estimaciones hechas por el Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que representan el 1.7 \% del Producto Interno Bruto (PIB), sumando costos directos e indirectos. La somnolencia, al momento de conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de alerta y conciencia por parte del conductor. Esta situación se convierte en un detonador de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de riesgo y por tanto evitar el peligro \cite{IMT}. \\
 
 En el desarrollo logístico de empresas que se encargan de transportar a pasajeros o que se encargan de repartir paquetería, los datos pueden verse de forma más alarmante o preocupante, ya que, usualmente, las personas designadas como conductores se enfrentan a largas horas de jornada sin descanso y en muchos casos, rotan por horarios que pueden ser en el día o en la noche, aumentando el riesgo de accidentarse por el desbalance de tener un horario mixto.\\ 
-Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{TastreoSatelital}.
-\\El rastreo satelital de vehículos funge como una de las principales opciones de sistemas capaces de indicar la ubicación de los vehículos en cuestión, sin embargo, el costo es elevado y periódico. \\
+
+Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{TastreoSatelital}.\\ 
+
+El rastreo satelital de vehículos funge como una de las principales opciones de sistemas capaces de indicar la ubicación de los vehículos en cuestión, sin embargo, el costo es elevado y periódico. \\
 
 Tomando en cuenta el contexto antes planteado, se analizará y diseñará en el presente documento un sistema que alerte a un conductor con somnolencia, mediante el uso de una cámara digital y algoritmos de visión artificial, además de incluir un sistema de administración que permita la geolocalización del sistema en tiempo real, así como la gestión de conductores y reportes de incidencias. 
   
@@ -216,13 +216,11 @@ Debido a que el presente proyecto conjunta la parte de software con hardware, se
 
 \item \textbf{Top-Down}
 
-
-La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas partes pueden ser llamadas modulos o subrutinas. Cada módulo puede ser probado individualmente. \cite{Top-Down}   
-
+La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas partes pueden ser llamadas modulos o subrutinas. Cada módulo puede ser probado individualmente \cite{Topdown}.  
 
 \begin{center}
   \includegraphics[scale=0.56]{imagenes/Top-down}
-\captionof{figure}{Descomposición en la metodología \emph{Top-Down}. \cite{Top-Down}   }
+\captionof{figure}{Descomposición en la metodología \emph{Top-Down}. \cite{Topdown}}
  \label{fig:neurona}
 \end{center}
 
@@ -271,7 +269,7 @@ Analizar y diseñar un sistema para la detección de síntomas de somnolencia y ale
 
 \subsubsection{Somnolencia}
 
-La somnolencia es la necesidad o tendencia que tiene una persona a quedarse dormido. La intensidad de somnolencia está determinada por la calidad de sueño, la cantidad, y el ritmo circadiano de la persona\cite{intensidad}.
+La somnolencia es la necesidad o tendencia que tiene una persona a quedarse dormido. La intensidad de somnolencia está determinada por la calidad de sueño, la cantidad, y el ritmo circadiano de la persona \cite{intensidad}.
 
 Se han propuesto tres clases de métodos para poder medir el grado de somnolencia en una persona:
 
@@ -291,16 +289,20 @@ Son diseñados bajo la premisa de cuantificar la somnolencia de manera objetiva.
 
 \end{itemize}
 
-\subsubsection{Raspberry Pi}
+\subsubsection{Jetson Nano}
 
-La Raspberry Pi es una computadora de bajo costo y con un tamaño compacto, puede ser conectada a un monitor de computador o un TV, y usarse con un mouse y teclado estándar. Es un pequeño computador que corre un sistema operativo linux capaz de permitirle a las personas aprender a programar en lenguajes como Scratch y Python. Es capaz de hacer la mayoría de las tareas típicas de un computador de escritorio, desde navegar en internet, reproducir videos en alta resolución, manipular documentos de ofimática, hasta reproducir juegos. [1] 
+Jetson Nano es una computadora pequeña y poderosa que permite ejecutar múltiples redes neuronales en paralelo para aplicaciones como clasificación de imágenes, detección de objetos, segmentación y procesamiento de voz. En una plataforma fácil de usar que funciona con 5 vatios \cite{JetsonNano}. 
 
-% https://raspberrypi.cl/que-es-raspberry/
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/JetsonNano}
+\captionof{figure}{Kit para Desarrolladores Jetson Nano. }
+ \label{fig:JetsonNano} 
+\end{center} 
+
 
 \subsubsection{Visión Artificial}
-Se puede definir como el conjunto de técnicas para la extracción de información de imágenes digitales. El tipo de información obtenida de una imagen puede ser de identificación, mediciones para navegación, o aplicaciones de realidad aumentada\cite{vision}.El campo de visión artificial puede verse como una parte de la informática. La teoría de algoritmos y el aprendizaje automático son esenciales para el desarrollo de algoritmos de visión artificial.
-La visión artificial está compuesta generalmente por un conjunto de procesos destinados a realizar el análsis de imágenes:captación de imágenes, memorización de la información, proceso e interpretación de los resultados\cite{vision}.
-
+Se puede definir como el conjunto de técnicas para la extracción de información de imágenes digitales. El tipo de información obtenida de una imagen puede ser de identificación, mediciones para navegación, o aplicaciones de realidad aumentada.El campo de visión artificial puede verse como una parte de la informática. La teoría de algoritmos y el aprendizaje automático son esenciales para el desarrollo de algoritmos de visión artificial.
+La visión artificial está compuesta generalmente por un conjunto de procesos destinados a realizar el análsis de imágenes:captación de imágenes, memorización de la información, proceso e interpretación de los resultados \cite{vision}.
 
 
 \subsubsection{Red Neuronal}
@@ -334,7 +336,7 @@ y_j(t)= F(y_j(t-1), z_j(t)) = F(y_j(t-1),net_j(t))
 
 Las redes neuronales convolucionales, tambien conocidas como \emph{redes convolutivas}, son redes neuronales artificiales que se utilizan comunmente para resolver problemas que requieren el procesamiento de imágenes. Sus casos de uso más frecuentes van desde la detección de objetos, hasta generar una descripción textual del contenido de una imagen. Particularmente, sus entradas y salidas pueden ser estructuradas. Esto quiere decir, que en lugar de recibir un vector de entradas, se puede recibir un vector (1D), matriz (2D) o tensor($>2D$). En el caso de señales bidimensionales, las entradas pueden pertenecer a los pixeles de una imágen capturada por una cámara{Referencia0}.
 
-Como su nombre lo indica, esta red neuronal utiliza la operación de convolución. La convolución es una operación matemática que se realiza sobre dos funciones para producir una tercera que se suele interpretar versión modificada (filtrada) de las funciones originales.\cite{Referencia0}
+Como su nombre lo indica, esta red neuronal utiliza la operación de convolución. La convolución es una operación matemática que se realiza sobre dos funciones para producir una tercera que se suele interpretar versión modificada (filtrada) de las funciones originales \cite{Referencia0}.
 
 \
 
@@ -357,7 +359,7 @@ A continuación se presenta la representación más simple de las capas de una red 
 
 \begin{center}
   \includegraphics[scale=0.45]{imagenes/cnn2} 
-\captionof{figure}{Arquitectura general de una Red Neuronal Convolucional}
+\captionof{figure}{Arquitectura general de una Red Neuronal Convolucional \cite{CNNpresentacion}.}
  \label{fig:boost}
 \end{center}
 
@@ -525,22 +527,21 @@ Cuando se solicita el posicionamiento por medio del GPS este envía señales de ra
 
 
 
-
 \newpage
 \subsection{Estado del Arte}
 
 \subsubsection{\emph{Driver Drowsiness Detection Using Machine Learning with Visual Behaviour}}
-Este trabajo de investigación realizado por el \emph{International Journal of Creative Research Thoughts} propone un sistema de detección de signos de somnolencia en conductores utilizando un modelo de Red Neuronal Convolucional para detectar la posición de los ojos, y OpenCV junto con Dlib para la detección de la boca y realizar el conteo del número de bostezos por minuto. Para alimetnar a la red Neuronal, se utilizaron el conjunto de datos de NTHU-DDD. También fue utilizado el método PERCLOS para obtener el número de parpadeos del sujeto de estudio. Este trabajo concluye que las mayores dificultades a la hora de detección de rostros fueron el uso de gafas oscuras, así como cambios en la iluminación.\cite{EstadodelAarte1}
+Este trabajo de investigación propone un sistema de detección de signos de somnolencia en conductores utilizando un modelo de Red Neuronal Convolucional para detectar la posición de los ojos, y OpenCV junto con Dlib para la detección de la boca y realizar el conteo del número de bostezos por minuto. Para alimetnar a la red Neuronal, se utilizaron el conjunto de datos de NTHU-DDD. También fue utilizado el método PERCLOS para obtener el número de parpadeos del sujeto de estudio. Este trabajo concluye que las mayores dificultades a la hora de detección de rostros fueron el uso de gafas oscuras, así como cambios en la iluminación.\cite{EstadodelAarte1}
 
 \subsubsection{\emph{Detection Of Drowsiness And Distraction Of Drivers Using CNN}}
 
-En este trabajo realizado por los estudiantes de la Universidad de Mumbai, se implementó el aprendizaje automático y el paquete Keras para construir un modelo de CNN, el cual, clasifica si el conductor se encuentra somnoliento o distraído,el sistema emite un tono de alerta al detectar correctamente la somnolencia, dando al conductor una alerta temprana. Se utilizó el clasificador Open CV Haar-Cascade,un clasificador en cascada basado en características, usando sus funciones integradas, se detetó el rostro y la región de los ojos.\cite{EstadodelAarte2}
+En este trabajo se implementó el aprendizaje automático y el paquete Keras para construir un modelo de CNN, el cual, clasifica si el conductor se encuentra somnoliento o distraído,el sistema emite un tono de alerta al detectar correctamente la somnolencia, dando al conductor una alerta temprana. Se utilizó el clasificador Open CV Haar-Cascade,un clasificador en cascada basado en características, usando sus funciones integradas, se detetó el rostro y la región de los ojos.\cite{EstadodelAarte2}
 
 
 % https://www.trendytechjournals.com/files/issues/volume4/issue7-5.pdf
 
 \subsubsection{\emph{Driver Drowsiness Detection System Using Convolutional Neural Networks}}
-En este trabajo realizado en la Universidad Anurag en el año 2022 se presenta una forma de analizar y anticipar la somnolencia del conductor mediante la aplicación de una red neuronal convolucional sobre la cara del conductor de un marco de secuencia. Se uso un conjunto de datos para dar forma y aprobar el modelo, usando redes convolucionales 3D basadas en modelos de múltiples capas de arquitectura de red neuronal repetitiva para detectar la somnolencia del conductor. Tras una sesión de entrenamiento, se obtuvo una precisión que se acerca al 92\% de aceptación.\cite{EstadodelAarte3}
+En este trabajo realizado en la Universidad Anurag se presenta una forma de analizar y anticipar la somnolencia del conductor mediante la aplicación de una red neuronal convolucional sobre la cara del conductor de un marco de secuencia. Se uso un conjunto de datos para dar forma y aprobar el modelo, usando redes convolucionales 3D basadas en modelos de múltiples capas de arquitectura de red neuronal repetitiva para detectar la somnolencia del conductor. Tras una sesión de entrenamiento, se obtuvo una precisión que se acerca al 92\% de aceptación.\cite{EstadodelAarte3}
 
 
 \subsubsection{Rasperry Pi based System for Visual Object Detection and Tracking}
@@ -548,8 +549,6 @@ Este trabajo aborda la implementación de un sistema capaz de realizar el seguimi
 Este sistema también logra transmitir las coordenadas y el tamaño de los objetos detectados a otras computadores dentro de una red de local de Internet.
 
 %https://a-lab.ee/edu/sites/default/files/Ivask_BSc.pdf
-
-
 
 % https://ijarsct.co.in/Paper3399.pdf
 
@@ -599,7 +598,7 @@ En este trabajo, realizado por alumnos de la Universidad de GUAYAQUIL en el año 
 
 
 \subsubsection{Sistema basado en la detección y notificación de somnolencia en conductores de autos }
-En este trabajo, realizado por alumnos de la Universidad de Córdoba en el año 2015 se plantea el desarrollo que permite alertar a los conductores en estado de somnolencia leve, utilizando la tecnología de reconocimiento de objetos de Kinect y la librería OpenCV con el lenguaje C\# para el reconocimiento de imágenes. Además, se diseña una aplicación móvil del sistema operativo Android para la notificación de somnolencia utilizando una conexión socket tipo TCP. Para el procesamiento de imágenes, se utilizó el algoritmo Viola-Jones, el cual se basa en una nueva forma de representación de imágenes llamada ?Integral Image?, permitiendo que las características del detector se conmuten rápidamente.\cite{EstadodelAarte10}
+En este trabajo, realizado por alumnos de la Universidad de Córdoba en el año 2015 se plantea el desarrollo que permite alertar a los conductores en estado de somnolencia leve, utilizando la tecnología de reconocimiento de objetos de Kinect y la librería OpenCV con el lenguaje C\# para el reconocimiento de imágenes. Además, se diseña una aplicación móvil del sistema operativo Android para la notificación de somnolencia utilizando una conexión socket tipo TCP. Para el procesamiento de imágenes, se utilizó el algoritmo Viola-Jones, el cual se basa en una nueva forma de representación de imágenes llamada Integral Image, permitiendo que las características del detector se conmuten rápidamente.\cite{EstadodelAarte10}
 
 
 
@@ -680,7 +679,7 @@ Partiendo de la propuesta de solución y la metodología \emph{Top-down}, que nos 
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/topdowngeneral}
-\captionof{figure}{top-down}
+\captionof{figure}{Diagrama del sistema basado en la metodología Top-Down}
  \label{fig:topdown}
 \end{center} 
 
@@ -694,7 +693,7 @@ El módulo Central de procesamiento estará compuesto por un microordenador que se
 
 Este submódulo se hará cargo de analizar el rostro del conductor utilizando técnicas de visión artificial. Se tomarán en cuenta los siguientes parámetros para determinar si el conductor presenta o no signos de somnolencia: estado de los ojos (cerrados, abiertos) y estado de la boca (cerrada o abierta). \\
 
-Si el conductor presenta un estado de ojos cerrador por más de 5 segundos, se considerará como un estado de somnolencia, por lo que se activará una alarma para alertar al conductor. A su vez el sistema tomará un videoclip de por lo menos 10 segundos dónde se aprecie el momento en que el conductor presentó un estado de somnolencia. \\
+Si el conductor presenta un estado de ojos cerrador por más de 5 segundos, se considerará como un estado de somnolencia, por lo que se activará una alarma para alertar al conductor. A su vez el sistema tomará un videoclip dónde se apreciará el momento en que el conductor presentó un estado de somnolencia. \\
 
 \textbf{Módulo de Comunicaciones}\\
 
@@ -712,15 +711,15 @@ El sistema está dirigido principalmente para empresas cuya actividad esté enfoca
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/MapaCoberturaMexico}
-\captionof{figure}{Mapa de cobertura 3G/4G/5G, México.\cite{CoberturaNacional}}  
+\captionof{figure}{Mapa de cobertura 3G/4G/5G en México.\cite{CoberturaNacional}}  
  \label{fig:mapacoberturaN}
 \end{center} 
 
-Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura \ref{fig:mapacoberturaN}, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes, figura \ref{fig:mapacoberturaCDMX}.  
+Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura \ref{fig:mapacoberturaN}, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes.
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/CoberturaCDMX}
-\captionof{figure}{Mapa de cobertura 3G/4G/5G, Ciudad de México.\cite{CoberturaNacional}}
+\captionof{figure}{Mapa de cobertura 3G/4G/5G en la Ciudad de México.\cite{CoberturaNacional}}
  \label{fig:mapacoberturaCDMX}
 \end{center}
 
@@ -774,7 +773,7 @@ Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de l
 
 
 \clearpage
-\subsubsection{Análisis y Elección del microordenador}
+\subsubsection{Análisis y Elección del microordenador}\label{sec:microordenador}
 
 Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenador para permitir que el sistema sea portátil y pueda funcionar dentro de un automóvil.Por tanto, se realizó una investigación de los modelos disponibles y de mayor aceptación en el mercado, figura \ref{tab:microordenador}.
 
@@ -808,7 +807,7 @@ Debido a lo anterior, se concluyó que la Jetson Nano representa la mejor opción 
 
 
 \clearpage
-\subsubsection{Análisis y Elección de la alarma }
+\subsubsection{Análisis y Elección de la alarma }\label{sec:alarma}
 
 Dentro de la búsqueda de modelos de alarma se encontraron dos tipos de zumbadores, el zumbador activo y zumbador pasivo, donde el primero produce un tono audible fijo, al aplicar una tensión de corriente directa. Mientras que el segundo requiere de una señal oscilante, generalmente de tipo PWM, que indique la frecuencia y la duración de la señal.  \\
 
@@ -837,7 +836,7 @@ Debido a la posibilidad que ofrece el zumbador pasivo para controlar el tono y l
 
 
 
-\subsubsection{Análisis y Elección de la unidad de almacenamiento externa}
+\subsubsection{Análisis y Elección de la unidad de almacenamiento externa}\label{sec:almacenamientoexterno}
 
 Para la elección de la unidad de almacenamiento se consideró que la Jetson Nano requiere de una microSD de al menos 8GB de almacenamiento externo para la instalación del sistema operativo Raspbian oficial y tomando en cuenta que el tamaño compatible predeterminado más grande de Raspberry Pi es de 32GB, sin embargo, se puede formatear en caso de requerir capacidades más altas para que funcionen con las unidades.  
 
@@ -1239,7 +1238,7 @@ Se guardará el video de incidencia en la memoria externa en caso de no contar co
 
  
 \clearpage 
-\subsubsection{Análisis y Elección de la cámara digital}
+\subsubsection{Análisis y Elección de la cámara digital}\label{sec:camara}
 
 Para la búsqueda de modelos de cámaras digitales, se buscaron modelos que tuvieran compatibilidad con la Nvidia Jetson Nano debido a que el sistema será alojado en este micrordenador.  
 
@@ -1307,7 +1306,6 @@ Debido a que el presente proyecto se plantea resolver un problema de clasificaci
 En el caso mas simple de una red neuronal, las neuronas de la capa de entrada se limitan a recibir las señales de entrada. Estas se encargan de redistribuir estas señales a las neuronas de la capa de salida. A esto se le llama una red neuronal unicapa.
 
 
-
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/unicapa}
 \captionof{figure}{Redes Unicapa}
@@ -1319,7 +1317,7 @@ Utilizando la herramienta de \emph{PlayGround Tensorflow} podemos observar la ef
 Si se le pide a esta Red Neuronal que sombree el área del color de los puntos mostrados dentro de la gráfica, se puede observar que es incapaz de realizarlo de manera correcta.
 
 \begin{center}
-  \includegraphics[scale=0.7]{imagenes/unicapa2}
+  \includegraphics[scale=0.5]{imagenes/unicapa2}
 \captionof{figure}{Red Neuronal Unicapa}
  \label{fig:boost}
 \end{center}
@@ -2384,7 +2382,6 @@ Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y 
  \textbf{Principales casos de uso }& Análisis social, análisis en tiempo real, venta al por menor y mensajería & Gestión de IOT, análisis en tiempo real, desarrollo de aplicaciones, inventario y personalización & Almacenamiento en caché, colas, filtrado y estadísticas  & Juegos, comercio minorista, servicios financieros, publicidad y transmisión de medios  \\ \hline
  \textbf{Seguridad  }& Seguridad integrada para la autorización, el cifrado y la autenticación, pero la seguridad está desactivada de forma predeterminada para facilitar su uso dentro de los clústeres  & Seguridad incorporada para autorización, autenticación y encriptación  & Se inicia automáticamente en modo de protección y ofrece sugerencias de seguridad  & Seguridad integrada para datos y aplicaciones; software, hardware, instalaciones y red seguros del proveedor  \\ \hline
  \textbf{Escalabilidad }& Horizontal  & Horizontal  & Horizontal  & Horizontal  \\ \hline
- \textbf{Curva de aprendizaje  }& Difícil    & Medio   & Medio   &  - \\ \hline
 \end{tabular}
 
 \end{table}
@@ -2553,7 +2550,7 @@ Siguiendo los procesos de la Figura 4, se procede a dar un análisis superficial 
 
 \subsubsection{Elección de la Unidad Contenedora de Procesamiento}
 
-Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en base a los requerimientos del sistema. 
+Para el diseño de la unidad contenedora del módulo de procesamiento, se tomaron en cuenta los elementos físicos que estarán dentro de la unidad y sus respectivas medias. Cabe mencionar que los elementos que respectan al modelo del ordenador, el modelo de la cámara, el modelo del zumbador y el modelo de la microSD fueron previamente seleccionados en la secciones \ref{sec:microordenador}, \ref{sec:camara}, \ref{sec:alarma} y \ref{sec:almacenamientoexterno}. 
 \\
 Elementos físicos que contendrá la unidad:
 
@@ -2587,12 +2584,12 @@ Dimensiones 18 x 15mm.
  \label{fig:scaraindust}
 \end{center}
 
-\item Rasperry Camera Module V2\\
-Dimensiones de la placa: 38 x 38mm.
+\item Modulo de Cámara IMX219-160\\
+Dimensiones de la placa: 11 x 5.11 x 2.39 cm.
 
 \begin{center}
   \includegraphics[scale=.4]{imagenes/imx}
-\captionof{figure}{Raspberry Camera Module V2}
+\captionof{figure}{Modulo de Cámara IMX219-160}
  \label{fig:scaraindust}
 \end{center}
  
@@ -2801,13 +2798,12 @@ La Figura \ref{fig:DisenoMEB} a muestra la arquitectura del sistema de Estación 
 El diagrama de comunicación muestra las interacciones entre elementos que se involucran en cada requerimiento funcional.  Así mismo, dan profundidad al diagrama de Arquitectura del Módulo de Estación Base. La aplicación web hará uso de la Base de Datos (MongoDB) y el \emph{backend} de la aplicación web, que se realizará con Node.js. Mientras que para el despliegue de la aplicación web se requiere del servidor AWS Amplify para permitirle al usuario entrar a la aplicación web. El sistema almacenará el video de incidencia en Amazon S3, enviado desde el Módulo Central de Procesamiento, al cual se podrá acceder por medio de una URL prefirmada. El envío de incidencia requiere la interacción del Módulo Central de Procesamiento el cual se encargará de realizar y enviar el Reporte de Incidencia, posteriormente será almacenado en la Base de Datos (MongoDB).
 
 \begin{center} 
-  \includegraphics[scale=.5]{imagenes/diagramaMEB} 
+  \includegraphics[scale=.7]{imagenes/diagramaMEB} 
 \captionof{figure}{Diagrama de Comunicación - Módulo de Estación Base} 
-\label{fig:DisenoMEB} 
+\label{fig:DisenoMEB2} 
 \end{center} 
 
-
-\newpage
+\clearpage
 \subsubsection{Diseño de la Aplicación Web}
 
 Para el diseño y desarrollo de la Aplicación web, se  decidió utilizar el lenguaje Javascript, ya que este cuenta con las herramientas y/o frameworks que mejor se adaptan a los requisitos previamente definidos.
@@ -2941,7 +2937,7 @@ En al Figura \ref{fig:incident}, se puede observar la página desde dónde el admi
  
 En la Figura \ref{fig:location} se muestra la página web dónde el Administrador podrá consultar la ubicación de un conductor en tiempo real.
 
-\newpage
+\clearpage
 \subsubsection{Diseño de la Base de Datos}
 
 
@@ -3016,6 +3012,7 @@ El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas d
 
 
 \newpage
+\section{Referencias}
 
 %\bibliographystyle{apacite}
 
@@ -3039,12 +3036,17 @@ Sleepiness and alertness}. Publicado en: Kryger MH, Roth T, Dement WC,
 eds. \emph{Principles and Practice of Sleep Medicine}, 4th ed: Saunders; 
 2005:39-49.
 
-\bibitem{}
+\bibitem{TopDown} Metodología top-down. (s.f.) \url{http://163.10.22.82/OAS/modularizacion/metodologa_topdown.html}
+
+\bibitem{JetsonNano} nvidia. (s.f.). NVIDIA jetson nano. https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano/
+
+\bibitem {vision} David A. Forsyth, Jean Ponce, \emph{Computer Vision a Modern Approach}, Second Edition, Pearson, 2012
+
+\bibitem {CNNpresentacion} Todt, E., Krinski, B. A. (2019, 30 de noviembre). Convolutional neural network - CNN. \url{https://www.inf.ufpr.br/todt/IAaplicada/CNN_Presentation.pdf}
 
 \bibitem{sixfab} Sixfab. "Raspberry Pi IP54 Outdoor Project Enclosure - Sixfab". Sixfab. https://sixfab.com/product/raspberry-pi-ip54-outdoor-iot-project-enclosure/ (accedido el 2 de enero de 2023).
 
 \bibitem{kendall} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
-
 
 
 \bibitem{viola}Viola P.; Jones M, \emph{Rapid Object Detection
@@ -3052,6 +3054,7 @@ using a Boosted Cascade of Simple Features}. IEEE International Conference on Co
 
 
 \bibitem{CoberturaNacional} "Cobertura 3G / 4G / 5G Telcel Mobile - nPerf.com". Internet Speed test : Test your broadband connection - nPerf.com. https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/ (accedido el 22 de diciembre de 2022).
+
 
 
 \bibitem{algoritmosdeaprendizaje} https://www.alteryx.com/es-419/glossary/supervised-vs-unsupervised-learning\#:~:text=Hay\%20una\%20diferencia\%20clave\%20entre,etiquetados\%20con\%20la\%20respuesta\%20correcta
@@ -3110,7 +3113,6 @@ el 18 de marzo de 2022).
 
 \bibitem {deepedgebench} Stepahn Baller, Anshul Jindal \emph{DeepEdgeBench: Benchmarking Deep Neural Networks on Edge Devices}
 
-\bibitem {vision} David A. Forsyth, Jean Ponce, \emph{Computer Vision a Modern Approach}, Second Edition, Pearson, 2012
 
 \bibitem {mongo} Kyle Banker, \emph{MondoDB in Action}, Second Edition, Manning, 20216
 
