@@ -687,11 +687,6 @@ A continuación, se desglosan cada uno de los módulos: \\
 
 El módulo Central de procesamiento estará compuesto por un microordenador que será colocado dentro de un automóvil. Este microordenador será alimentado por el corriente proporcionado por dicho automóvil. Además, contará con una cámara digital que analizará el rostro del conductor después de que este encienda el automóvil. A este microordenador también le será acoplado un dispositivo que sea capaz de utilizar redes de telecomunicaciones móviles, esto para que sea posible la conexión con la Estación Base. Finalmente, también contará con una alarma para alertar al conductor si este presenta un estado de somnolencia. \\
 
-\textbf{Submódulo de Visión Artificial:}\\
-
-Este submódulo se hará cargo de analizar el rostro del conductor utilizando técnicas de visión artificial. Se tomarán en cuenta los siguientes parámetros para determinar si el conductor presenta o no signos de somnolencia: estado de los ojos (cerrados, abiertos) y estado de la boca (cerrada o abierta). \\
-
-Si el conductor presenta un estado de ojos cerrador por más de 5 segundos, se considerará como un estado de somnolencia, por lo que se activará una alarma para alertar al conductor. A su vez el sistema tomará un videoclip dónde se apreciará el momento en que el conductor presentó un estado de somnolencia. \\
 
 \textbf{Módulo de Comunicaciones}\\
 
@@ -1035,14 +1030,26 @@ Es una biblioteca de procesamiento de imágenes de código abierto, ampliamente ut
 
 
 
-
-
-
-
-
-
 \clearpage
 \subsubsection{Análisis del Submódulo Visión Artificial}
+
+
+\textbf{Submódulo de Visión Artificial:}\\
+
+El submódulo de visión artificial tiene como objetivo realizar la detección de somnolencia del conductor, analizando el rostro con distintas técnicas y algoritmos de visión artificial. 
+
+Si el conductor presenta un estado de somnolencia, se activará una alarma para alertar al conductor. A su vez el sistema tomará un videoclip dónde se apreciará el momento en que el conductor presentó un estado de somnolencia. \\ 
+
+Se tomarán en cuenta los siguientes parámetros para determinar si el conductor presenta o no signos de somnolencia:  
+
+Estado de los ojos (cerrados, abiertos). \\ 
+
+Estado de la boca (cerrada o abierta). \\  
+
+Bostezo. 
+
+
+
 \begin{itemize}
 
 \item \textbf{Requerimientos Funcionales}
