@@ -12,7 +12,16 @@
 \usepackage{float}
 \usepackage{tabularx}
 \usepackage{multicol}
-
+\usepackage[
+backend=biber,
+    style=numeric,
+    sortcites,
+    sorting=nty,
+    backref,
+    natbib,
+    hyperref
+]{biblatex}
+\bibliography{Referencias.bib}
 \marginsize{2cm}{2cm}{1cm}{1cm}
 \usepackage{fancyhdr}
 
@@ -47,7 +56,7 @@
 
 \newpage
 \section{Glosario de Abreviaturas}
-\textbf{Glosario de Abreviaturas}
+\textbf{Glosario de Abreviatuhras}
 
 \begin{itemize}
 
@@ -83,7 +92,7 @@ La somnolencia al conducir es reconocida como un factor que puede contribuir a l
 
 En el desarrollo logístico de empresas que se encargan de transportar a pasajeros o que se encargan de repartir paquetería, los datos pueden verse de forma más alarmante o preocupante, ya que, usualmente, las personas designadas como conductores se enfrentan a largas horas de jornada sin descanso y en muchos casos, rotan por horarios que pueden ser en el día o en la noche, aumentando el riesgo de accidentarse por el desbalance de tener un horario mixto.\\ 
 
-Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{TastreoSatelital}.\\ 
+Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{RastreoSatelital}.\\ 
 
 El rastreo satelital de vehículos funge como una de las principales opciones de sistemas capaces de indicar la ubicación de los vehículos en cuestión, sin embargo, el costo es elevado y periódico. \\
 
@@ -105,9 +114,9 @@ Uno de estos métodos está basado en el comportamiento del vehículo, el cual dete
 
 Existen también sistemas que además de analizar el comportamiento del vehículo también analizan su entorno. Esto sistemas cuentan con cámaras frente al vehículo, donde se digitaliza el entorno del vehículo; posteriormente se analizan parámetros como la reacción del conductor frente a la dirección de su vehículo con respecto a la carretera, velocidad, comportamiento del vehículo frente a baches en la carretera y distancia con respecto al vehículo que esta adelante. Si se detecta un comportamiento anormal en los parámetros anteriormente mencionados, se procede a realizar las alertas necesarias para advertir al conductor. No obstante, estos sistemas suelen ser costosos y no toman en cuenta el estado del conductor.  \\
 
-Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG). \cite{Sistemasdesomnolencia}  \\  
+Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG). \cite{SistemasdesomnolenciaEEG}  \\  
 
-Cabe mencionar que, entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede llegar a entorpecer el desempeño del conductor. \cite{Sistemasdesomnolencia}  \\
+Cabe mencionar que, entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede llegar a entorpecer el desempeño del conductor. \cite{SistemasdesomnolenciaCV}  \\
 
 Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que, los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia, sin embargo, son los métodos visuales más adecuados para dicho propósito. \cite{Sistemasdesomnolencia}   Por tanto, se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficacia en el sistema.  \\  
 
@@ -3125,159 +3134,7 @@ El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas d
 \section{Referencias}
 
 %\bibliographystyle{apacite}
-\bibliographystyle{unsrt} 
 
-\begin{thebibliography}{100} %10 significa el número máximo de items
-%Aquí ponga la bibliografía y referencias usadas
-
-%Artículo:
-
-\bibitem{WHO} World Health Organization. "Global status report on road safety 2018". World Health Organization (WHO). http://www.who.int/publications/i/item/9789241565684 (accedido el 26 de enero de 2022). 
-
-\bibitem{IMT} Paez Mario, Abarca Emilio. \emph{Herramientas para la seguridad en la movilidad, modelos predictivos de somnolencia en conductores}, Instituto Mexicano del Transporte, Septiembre 2017
-
-\bibitem{TastreoSatelital} Rastreo satelital de vehículos: ¿qué es mejor que el GPS tradicional? (s/f). Beetrack.com. Recuperado de https://www.beetrack.com/es/blog/rastreo-satelital-de-vehiculos 
-
-\bibitem{iot} Jim Chase, \emph{The Evolution of Internet of Things}, 
-
-\bibitem{Sistemasdesomnolencia}  "Sistemas de detección de somnolencia en conductores:Inicio, desarrollo y futuro", Revista Ingeniería y Región., vol. 13, n.º 1, pp. 159?168, 2015. Disponible: https://journalusco.edu.co/index.php/iregion/article/view/717/1372 
-
-\bibitem{intensidad} Roehrs T, Carskadon MA, Dement WC, Roth \emph{T. Daytime 
-Sleepiness and alertness}. Publicado en: Kryger MH, Roth T, Dement WC, 
-eds. \emph{Principles and Practice of Sleep Medicine}, 4th ed: Saunders; 
-2005:39-49.
-
-\bibitem{TopDown} Metodología top-down. (s.f.) \url{http://163.10.22.82/OAS/modularizacion/metodologa_topdown.html}
-
-\bibitem{JetsonNano} nvidia. (s.f.). NVIDIA jetson nano. https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano/
-
-\bibitem {vision} David A. Forsyth, Jean Ponce, \emph{Computer Vision a Modern Approach}, Second Edition, Pearson, 2012
-
-\bibitem {CNNpresentacion} Todt, E., Krinski, B. A. (2019, 30 de noviembre). Convolutional neural network - CNN. \url{https://www.inf.ufpr.br/todt/IAaplicada/CNN_Presentation.pdf}
-
-\bibitem{sixfab} Sixfab. "Raspberry Pi IP54 Outdoor Project Enclosure - Sixfab". Sixfab. https://sixfab.com/product/raspberry-pi-ip54-outdoor-iot-project-enclosure/ (accedido el 2 de enero de 2023).
-
-\bibitem{kendall} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
-
-
-\bibitem{viola}Viola P.; Jones M, \emph{Rapid Object Detection
-using a Boosted Cascade of Simple Features}. IEEE International Conference on Computer Vision and Pattern Recognition,2001
-
-
-\bibitem{CoberturaNacional} "Cobertura 3G / 4G / 5G Telcel Mobile - nPerf.com". Internet Speed test : Test your broadband connection - nPerf.com. https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/ (accedido el 22 de diciembre de 2022).
-
-
-
-\bibitem{algoritmosdeaprendizaje} https://www.alteryx.com/es-419/glossary/supervised-vs-unsupervised-learning\#:~:text=Hay\%20una\%20diferencia\%20clave\%20entre,etiquetados\%20con\%20la\%20respuesta\%20correcta
-
-
-\bibitem{EstadodelAarte1} Pachouly, S., Bhondve, N., Dalvi, A., Dhande, V., \& Bhamare, N. (2020, 6 de junio). Driver drowsiness detection using machine learning with visual behaviour. www.ijcrt.org. https://ijcrt.org/papers/IJCRT2006408.pdf
-
-\bibitem{EstadodelAarte2} Kanojia, G., Kanojiya, V., \& Mendonza, G. (2020, diciembre). Detection of drowsiness and distraction of drivers using cnn. https://www.trendytechjournals.com/files/issues/volume4/issue7-5.pdf
-
-\bibitem{EstadodelAarte3} Sri, M. K., \& Annamani, T. (2022, abril). Driver drowsiness detection system using convolutional neural networks. https://ijarsct.co.in/Paper3399.pdf 
-
-\bibitem{facedetection} Mayank Chauhan, Mukesh Sakle, \emph{Study \& Analysis of Different Face Detecion Techniques}
-
-
-\bibitem{EstadodelAarte4} Rodriguez, A., \& Luis, D. J. (2021, mayo). Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos. https://dspace.unitru.edu.pe/handle/UNITRU/16872
-
-
-\bibitem{EstadodelAarte5} M. Limaquispe y E. Sánchez. "SISTEMA DE DETECCIÓN DE SOMNOLENCIA MEDIANTE INTELIGENCIA ARTIFICIAL EN CONDUCTORES DE VEHÍCULOS PARA ALERTAR LA OCURRENCIA DE ACCIDENTES DE TRÁNSITO"". Repository. http://repositorio.unh.edu.pe/handle/UNH/2327
-
-\bibitem{EstadodelAarte6} Eugenio, B. L. H., Alejandra, G. P. K., \& Pichardo Iniesta José Alejandro. (2019, junio). Diseño de un sistema electrónico para detectar somnolencia en automovilistas por medio de la actividad ocular. https://tesis.ipn.mx/handle/123456789/27287
-
-\bibitem{EstadodelAarte7} Becerril, E. L., Ramírez, A. M., \& Velázquez, E. T. J. (s.f.). Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones. $https://uptexcoco.edomex.gob.mx/sites/uptexcoco.edomex.gob.mx/files/files/2020/articulos-Tesis/sistema_somnolencia.pdf$
-
-\bibitem{EstadodelAarte8} Solís, H. F. (2022, 13 de septiembre). Sistema de detección de somnolencia. https://riull.ull.es/xmlui/bitstream/handle/915/30312/Sistema%20de%20deteccion%20de%20somnolencia.pdf?sequence=1&amp;isAllowed=y
-
-\bibitem{EstadodelAarte9} Pacay, C., \& Blanca Fanny. (2020). Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. http://repositorio.ug.edu.ec/handle/redug/49449?mode=full
-
-\bibitem{EstadodelAarte10} E. L. Benavides y M. M. Medina. "Sistema Basado en la Detección y notificación de somnolencia para conductores de autos". Repositorio Universidad de Córdoba. https://repositorio.unicordoba.edu.co/bitstream/handle/ucordoba/536/Trabajo%20de%20grado.pdf?sequence=1&amp;isAllowed=y
-
-\bibitem{EstadodelAarte11} Adrián, Ñ. H. (2022, 30 de junio). Detección de somnolencia para conducción sin accidentes. http://hdl.handle.net/10045/124695
-
-\bibitem{EstadodelAarte12} Avila, R., \& Arturo, W. (2016). Geolocalización transaccionalidad mapa ecuador cne democracia localización ubicación. http://repositorio.ug.edu.ec/handle/redug/16806
-
-\bibitem{EstadodelAarte13} Vilca, G., \& Eduardo, J. (2016, 3 de agosto). Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android via la red Enterprise WLAN de la PUCP. https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7156
-
-\bibitem{EstadodelAarte14} Federico, A., Guillermo, C., \& Guzmán, P. (2018). Geolocalizacoón con LoRa mediante multilateración. https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/20293
-
-\bibitem{EstadodelAarte15} Ramírez, C. E. E., Flores, R. E. R., \& Hernández, J. A. V. (2018). Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades vasculares. https://tesis.ipn.mx/handle/123456789/27690
-
-\bibitem{EstadodelAarte16} Espinoza, B. R. A. V. (2017). Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística.
-
-
-\bibitem{EstadodelAarte17} Juan Carlos, C. P. (2017, 15 de febrero). Diseño de la red de acceso LTE en el distrito de Jesús María ¡https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7847
-
-\bibitem{conapra} M. Paez y Emilio Abarca. \emph{Resumen Boletines}, Instituto Mexicano del Transporte.
-https://imt.mx/resumen-boletines.html?IdArticulo=449\&amp;IdBoletin=168 (accedido 
-el 18 de marzo de 2022).
-
-
-\bibitem {NodeJs} Jonathan Wexler, \emph{Get Programming with Node.js}, Manning, 2019
-
-\bibitem {js} Marjin Haverbeke \emph{Eloquent Javascript}, Third Edition, No Starch Press, 2020
-
-
-\bibitem {AWS} Amazon, \emph{Amazon Amplify}, https://aws.amazon.com/es/amplify/
-
-\bibitem {deepedgebench} Stepahn Baller, Anshul Jindal \emph{DeepEdgeBench: Benchmarking Deep Neural Networks on Edge Devices}
-
-
-\bibitem {mongo} Kyle Banker, \emph{MondoDB in Action}, Second Edition, Manning, 20216
-
-\bibitem{Referencia0} Fernando Berzal, \emph{ Redes Neuronales y Deep Learning}, Granada, 2018
-
-\bibitem{python} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
-%Libro
-\bibitem{Referencia2}
-V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
-
-\bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
-
-
-\bibitem{nanovspi} Gunan Dewantoro, Jamil Mansuri, \emph{Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Jeston Nano}
-
-\bibitem{Referencia5} Aurélien Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow}, Segunda Edición , O'Reilly, 2009
-
-
-\bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with OpenCV}, Tercera Edición, O'Reilly, 2017
-
-\bibitem{Referncia8}Cuno Plister, \emph{Getting Started with Internet of Things},Primera Edición, O'Reilly, 2011
-
-\bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
-
-\bibitem{Referencia10} S. Pachouly, N. Bhondve, A. Dalvi, V. Dhande y N. Bhamare. "Driver drowsiness detection using machine learning with visual behaviour". https://ijcrt.org/papers/IJCRT2006408.pdf (accedido el 2 de noviembre de 2022).
-
-\bibitem{Referencian4} J. A. Castillo. \emph{WLAN: Qué es, definición, estándar 802.11 y diferencias con LAN.}
-https://www.profesionalreview.com/2020/03/07/wlan-que-es/ (accedido el 2 de noviembre de
-2022).
-
-\bibitem{Referencian5}Tarify.Win!\emph {Red WWAN ¿Qué es, para qué sirve y cómo
-funcionan?}https://tarify.win/definiciones/red-wwan/
-
-
-\bibitem{Referencian6}La Rosa, A. (2021, 13 julio). \emph{LPWAN como base de comunicaciones para IoT} Pandora 
-FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com/blog/es/que-eslpwan/?msclkid=08006fc5cf4611ecbc00aa3b275ed2b5
-
-\bibitem{Referencian7}\emph{LTE-M, el despegue esperado para IoT. Hablemos de empresas.} https://hablemosdeempresas.com/grandes-empresas/lte-m-despliegue-soluciones-iot/
-
-\bibitem{Referencian8}S{\'a}nchez Rosado, David,\emph{NB-IoT tecnolog{\'\i}as celulares narrow-band: an{\'a}lisis pr{\'a}ctico de las soluciones de Telef{\'o}nica y Vodafone},2019
-
-\bibitem{Referencian14} M. Cid. \emph{Categorías LTE o 4G: qué son y qué velocidades máximas ofrece cada una de ellas.} Xataka Móvil - Teléfonos móviles, tarifas, operadores de telefonía. https://www.xatakamovil.com/conectividad/categorias-lte-o-4g-que-son-y-que-velocidades-maximas-ofrece-cada-una-de-ellas
-
-\bibitem{Referencian15}\emph{¡No aceleres! Estos son los nuevos límites de velocidad 2022 en México.} ADNPolítico. https://politica.expansion.mx/mexico/2022/05/19/estos-son-nuevos-limites-velocidad-2022 
-
-\bibitem{Referencian16}\emph{MP4 - EcuRed.} EcuRed. https://www.ecured.cu/MP4\#:~:text=Un\%20archivo\%20de\%20MP4\%20lleva\%20sonido\%20y\%20video,de\%2020\%20segundos\%20de\%20clips\%20de\%20audio\%20(MP4/20s).
-
-\bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
-
-
-
-
-
-\end{thebibliography}
 
 \end{document}
 

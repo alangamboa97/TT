@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  4 FEB 2023 04:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  4 FEB 2023 06:28
 entering extended mode
 **./TT1.tex
 (TT1.tex
@@ -361,31 +361,9 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \colbreak@box=\box104
 \mc@col@check@num=\count285
 )
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
-Package: fancyhdr 2022/05/18 v4.0.3 Extensive control of page headers and foote
-rs
-\f@nch@headwidth=\skip58
-\f@nch@O@elh=\skip59
-\f@nch@O@erh=\skip60
-\f@nch@O@olh=\skip61
-\f@nch@O@orh=\skip62
-\f@nch@O@elf=\skip63
-\f@nch@O@erf=\skip64
-\f@nch@O@olf=\skip65
-\f@nch@O@orf=\skip66
-)
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/capt-of\capt-of.sty
-Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
-)
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
 
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-)
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
 .sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
@@ -394,15 +372,276 @@ Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
 ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
+) (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count286
 )
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
 ty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count287
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count288
+\c@listtotal=\count289
+\c@listcount=\count290
+\c@liststart=\count291
+\c@liststop=\count292
+\c@citecount=\count293
+\c@citetotal=\count294
+\c@multicitecount=\count295
+\c@multicitetotal=\count296
+\c@instcount=\count297
+\c@maxnames=\count298
+\c@minnames=\count299
+\c@maxitems=\count300
+\c@minitems=\count301
+\c@citecounter=\count302
+\c@maxcitecounter=\count303
+\c@savedcitecounter=\count304
+\c@uniquelist=\count305
+\c@uniquename=\count306
+\c@refsection=\count307
+\c@refsegment=\count308
+\c@maxextratitle=\count309
+\c@maxextratitleyear=\count310
+\c@maxextraname=\count311
+\c@maxextradate=\count312
+\c@maxextraalpha=\count313
+\c@abbrvpenalty=\count314
+\c@highnamepenalty=\count315
+\c@lownamepenalty=\count316
+\c@maxparens=\count317
+\c@parenlevel=\count318
+\blx@tempcnta=\count319
+\blx@tempcntb=\count320
+\blx@tempcntc=\count321
+\blx@maxsection=\count322
+\blx@maxsegment@0=\count323
+\blx@notetype=\count324
+\blx@parenlevel@text=\count325
+\blx@parenlevel@foot=\count326
+\blx@sectionciteorder@0=\count327
+\blx@entrysetcounter=\count328
+\blx@biblioinstance=\count329
+\labelnumberwidth=\skip58
+\labelalphawidth=\skip59
+\biblabelsep=\skip60
+\bibitemsep=\skip61
+\bibnamesep=\skip62
+\bibinitsep=\skip63
+\bibparsep=\skip64
+\bibhang=\skip65
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language80
+\c@mincomprange=\count330
+\c@maxcomprange=\count331
+\c@mincompwidth=\count332
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count333
+\c@savedafterword=\count334
+\c@annotator=\count335
+\c@savedannotator=\count336
+\c@author=\count337
+\c@savedauthor=\count338
+\c@bookauthor=\count339
+\c@savedbookauthor=\count340
+\c@commentator=\count341
+\c@savedcommentator=\count342
+\c@editor=\count343
+\c@savededitor=\count344
+\c@editora=\count345
+\c@savededitora=\count346
+\c@editorb=\count347
+\c@savededitorb=\count348
+\c@editorc=\count349
+\c@savededitorc=\count350
+\c@foreword=\count351
+\c@savedforeword=\count352
+\c@holder=\count353
+\c@savedholder=\count354
+\c@introduction=\count355
+\c@savedintroduction=\count356
+\c@namea=\count357
+\c@savednamea=\count358
+\c@nameb=\count359
+\c@savednameb=\count360
+\c@namec=\count361
+\c@savednamec=\count362
+\c@translator=\count363
+\c@savedtranslator=\count364
+\c@shortauthor=\count365
+\c@savedshortauthor=\count366
+\c@shorteditor=\count367
+\c@savedshorteditor=\count368
+\c@labelname=\count369
+\c@savedlabelname=\count370
+\c@institution=\count371
+\c@savedinstitution=\count372
+\c@lista=\count373
+\c@savedlista=\count374
+\c@listb=\count375
+\c@savedlistb=\count376
+\c@listc=\count377
+\c@savedlistc=\count378
+\c@listd=\count379
+\c@savedlistd=\count380
+\c@liste=\count381
+\c@savedliste=\count382
+\c@listf=\count383
+\c@savedlistf=\count384
+\c@location=\count385
+\c@savedlocation=\count386
+\c@organization=\count387
+\c@savedorganization=\count388
+\c@origlocation=\count389
+\c@savedoriglocation=\count390
+\c@origpublisher=\count391
+\c@savedorigpublisher=\count392
+\c@publisher=\count393
+\c@savedpublisher=\count394
+\c@language=\count395
+\c@savedlanguage=\count396
+\c@origlanguage=\count397
+\c@savedoriglanguage=\count398
+\c@pageref=\count399
+\c@savedpageref=\count400
+\shorthandwidth=\skip66
+\shortjournalwidth=\skip67
+\shortserieswidth=\skip68
+\shorttitlewidth=\skip69
+\shortauthorwidth=\skip70
+\shorteditorwidth=\skip71
+\locallabelnumberwidth=\skip72
+\locallabelalphawidth=\skip73
+\localshorthandwidth=\skip74
+\localshortjournalwidth=\skip75
+\localshortserieswidth=\skip76
+\localshorttitlewidth=\skip77
+\localshortauthorwidth=\skip78
+\localshorteditorwidth=\skip79
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+\c@textcitecount=\count401
+\c@textcitetotal=\count402
+\c@textcitemaxnames=\count403
+\c@biburlbigbreakpenalty=\count404
+\c@biburlbreakpenalty=\count405
+\c@biburlnumpenalty=\count406
+\c@biburlucpenalty=\count407
+\c@biburllcpenalty=\count408
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count409
+)
+Package biblatex Info: Trying to load natbib compatibility...
+Package biblatex Info: ... file 'blx-natbib.def' found.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-natbib.def
+File: blx-natbib.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bb
+x
+File: numeric.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
+bx
+File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count410
+\c@bbx:relatedtotal=\count411
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.cb
+x
+File: numeric.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)) (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.st
+y
+Package: fancyhdr 2022/05/18 v4.0.3 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip80
+\f@nch@O@elh=\skip81
+\f@nch@O@erh=\skip82
+\f@nch@O@olh=\skip83
+\f@nch@O@orh=\skip84
+\f@nch@O@elf=\skip85
+\f@nch@O@erf=\skip86
+\f@nch@O@olf=\skip87
+\f@nch@O@orf=\skip88
+) (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/capt-of\capt-of.sty
+Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
+)
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
 keys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -420,13 +659,11 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-)
 \@linkdim=\dimen190
-\Hy@linkcounter=\count286
-\Hy@pagecounter=\count287
- (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+\Hy@linkcounter=\count412
+\Hy@pagecounter=\count413
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
@@ -442,7 +679,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count288
+\Hy@SavedSpaceFactor=\count414
  (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -461,14 +698,9 @@ Package hyperref Info: Plain pages ON on input line 4205.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count289
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip17
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
+\c@Hy@tempcnt=\count415
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen191
-
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
@@ -477,7 +709,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count290
+\Fld@menulength=\count416
 \Field@Width=\dimen192
 \Fld@charsize=\dimen193
 Package hyperref Info: Hyper figures OFF on input line 6076.
@@ -494,9 +726,9 @@ LaTeX Info: Redefining \pageref on input line 6150.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count291
-\c@Item=\count292
-\c@Hfootnote=\count293
+\Hy@abspage=\count417
+\c@Item=\count418
+\c@Hfootnote=\count419
 )
 Package hyperref Info: Driver: hpdftex.
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -507,8 +739,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count294
-\c@bookmark@seq@number=\count295
+\Fld@listcount=\count420
+\c@bookmark@seq@number=\count421
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -521,7 +753,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip67
+\Hy@SectionHShift=\skip89
 )
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
@@ -532,21 +764,18 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 ) (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
 Package: pdfpages 2022/05/22 v0.5v Insert pages of external PDF documents (AM)
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
-)
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count296
-\calc@Bcount=\count297
+\calc@Acount=\count422
+\calc@Bcount=\count423
 \calc@Adimen=\dimen194
 \calc@Bdimen=\dimen195
-\calc@Askip=\skip68
-\calc@Bskip=\skip69
+\calc@Askip=\skip90
+\calc@Bskip=\skip91
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count298
-\calc@Cskip=\skip70
+\calc@Ccount=\count424
+\calc@Cskip=\skip92
 )
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
@@ -560,184 +789,81 @@ Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
 File: pppdftex.def 2022/05/22 v0.5v Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count299
+\pdfpages@includegraphics@status=\count425
 \AM@pagebox=\box105
 \AM@global@opts=\toks32
-\AM@pagecnt=\count300
+\AM@pagecnt=\count426
 \AM@toc@title=\toks33
-\c@AM@survey=\count301
+\c@AM@survey=\count427
 \AM@templatesizebox=\box106
 ) (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/shapepar\shapepar.sty
-\cutoutsep=\skip71
+\cutoutsep=\skip93
 Package: shapepar 2013/03/26 v 2.2x, Shaped paragraphs
 \SH@scale=\dimen257
 \SH@boxb=\box107
-\SH@ntries=\count302
+\SH@ntries=\count428
 \spec@bot=\dimen258
-\sqrtcount=\count303
+\sqrtcount=\count429
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-5.
+
+Package biblatex Warning: hyperref package option 'plainpages' enabled.
+(biblatex)                This may cause problems with hyperlinked back
+(biblatex)                references. 'plainpages=false' is recommended.
+
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count430
+\@quotereset=\count431
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
+4.
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count304
+\l__color_backend_stack_int=\count432
 \l__pdf_internal_box=\box108
-) (TT1.aux
-LaTeX Info: Redefining \. on input line 26.
-LaTeX Info: Redefining \% on input line 26.
-
-
-LaTeX Warning: Label `fig:neurona' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:boost' multiply defined.
-
-
-LaTeX Warning: Label `fig:DiagramadeactividadMEB' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:actividades' multiply defined.
-
-
-LaTeX Warning: Label `fig:landmark' multiply defined.
-
-
-LaTeX Warning: Label `fig:landmark' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:DocumentoIncidencias' multiply defined.
-
 )
+No file TT1.aux.
 \openout1 = `TT1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Info: Redefining \. on input line 35.
-LaTeX Info: Redefining \% on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count305
+\scratchcounter=\count433
 \scratchdimen=\dimen259
 \scratchbox=\box109
-\nofMPsegments=\count306
-\nofMParguments=\count307
+\nofMPsegments=\count434
+\nofMParguments=\count435
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count308
+\MPscratchCnt=\count436
 \MPscratchDim=\dimen260
-\MPnumerator=\count309
-\makeMPintoPDFobject=\count310
+\MPnumerator=\count437
+\makeMPintoPDFobject=\count438
 \everyMPtoPDFconversion=\toks35
 )
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -750,7 +876,31 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 35.
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\spanish.lb
+x
+File: spanish.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'latin1' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'latin1'.
+Package biblatex Info: Document encoding not detected as UTF8.
+(biblatex)             Setting 'casechanger=latex2e'.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-latex
+2e.sty
+Package: blx-case-latex2e 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+)
+\openout3 = `TT1.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'TT1.bbl' found.
+ (TT1.bbl)
+Package biblatex Info: Reference section=0 on input line 44.
+Package biblatex Info: Reference segment=0 on input line 44.
+Package hyperref Info: Link coloring ON on input line 44.
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -762,14 +912,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count311
+\c@section@level=\count439
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
-LaTeX Info: Redefining \nameref on input line 35.
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
  (TT1.out) (TT1.out)
-\@outlinefile=\write3
-\openout3 = `TT1.out'.
+\@outlinefile=\write4
+\openout4 = `TT1.out'.
 
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
@@ -779,144 +929,158 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-(TT1.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
-.
- (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
+\tf@toc=\write5
+\openout5 = `TT1.toc'.
+
+[1{C:/Users/alang/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+
+]
+
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+
+\tf@lof=\write6
+\openout6 = `TT1.lof'.
+
+[2]
+
+Package hyperref Warning: old lot file detected, not used; run LaTeX again.
+
+\tf@lot=\write7
+\openout7 = `TT1.lot'.
+
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+[5]
+
+LaTeX Warning: Citation 'WHO' on page 6 undefined on input line 88.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
+1.
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-6.
+91.
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-6.
+91.
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 6.
+(Font)              <12> on input line 91.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 6.
+(Font)              <8> on input line 91.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 6.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+(Font)              <6> on input line 91.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 91.
+
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 91.
+
 
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-[1{C:/Users/alang/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
-]
-Overfull \hbox (5.12357pt too wide) in paragraph at lines 47--47
- [][] [][][]\OT1/lmr/m/n/12 Propuesta de un sis-te-ma de geo-lo-ca-li-za-cion 
-y mo-ni-to-reo va GPS/GSM/GPRS 
- []
-
-[2])
-\tf@toc=\write4
-\openout4 = `TT1.toc'.
-
- [3] (TT1.lof
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+LaTeX Warning: Citation 'IMT' on page 6 undefined on input line 91.
 
 
-LaTeX Warning: Citation `Topdown' on page 4 undefined on input line 3.
-
-[4])
-\tf@lof=\write5
-\openout5 = `TT1.lof'.
-
- [5] (TT1.lot
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [6])
-\tf@lot=\write6
-\openout6 = `TT1.lot'.
-
- [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+LaTeX Warning: Citation 'RastreoSatelital' on page 6 undefined on input line 95
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 107--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-
- []
+LaTeX Warning: Citation 'Sistemasdesomnolencia' on page 7 undefined on input li
+ne 112.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
-
- []
-
-[11]
 Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+LaTeX Warning: Citation 'SistemasdesomnolenciaEEG' on page 7 undefined on input
+ line 117.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+
+LaTeX Warning: Citation 'SistemasdesomnolenciaCV' on page 7 undefined on input 
+line 119.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+[7]
+
+LaTeX Warning: Citation 'Sistemasdesomnolencia' on page 8 undefined on input li
+ne 121.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
@@ -926,205 +1090,306 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+LaTeX Warning: Reference `problema' on page 8 undefined on input line 132.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[12]
-<imagenes/propuestasolucion.jpg, id=753, 929.72343pt x 549.55313pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+[8]
+<imagenes/propuestasolucion.jpg, id=362, 929.72343pt x 549.55313pt>
 File: imagenes/propuestasolucion.jpg Graphic file (type jpg)
 <use imagenes/propuestasolucion.jpg>
-Package pdftex.def Info: imagenes/propuestasolucion.jpg  used on input line 141
+Package pdftex.def Info: imagenes/propuestasolucion.jpg  used on input line 150
 .
 (pdftex.def)             Requested size: 371.88278pt x 219.81735pt.
- [13 <./imagenes/propuestasolucion.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+ [9 <./imagenes/propuestasolucion.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
 
-LaTeX Warning: Citation `Topdown' on page 15 undefined on input line 219.
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
-<imagenes/Top-down.jpg, id=763, 812.03375pt x 261.97874pt>
+ []
+
+
+LaTeX Warning: Citation 'Topdown' on page 11 undefined on input line 228.
+
+<imagenes/Top-down.jpg, id=372, 812.03375pt x 261.97874pt>
 File: imagenes/Top-down.jpg Graphic file (type jpg)
 <use imagenes/Top-down.jpg>
-Package pdftex.def Info: imagenes/Top-down.jpg  used on input line 222.
+Package pdftex.def Info: imagenes/Top-down.jpg  used on input line 231.
 (pdftex.def)             Requested size: 454.7358pt x 146.70709pt.
 
-LaTeX Warning: Citation `Topdown' on page 15 undefined on input line 223.
+LaTeX Warning: Citation 'Topdown' on page 11 undefined on input line 232.
 
-[15] [16 <./imagenes/Top-down.jpg>] [17]
-<imagenes/JetsonNano.jpg, id=780, 632.3625pt x 355.3275pt>
+[11]
+
+LaTeX Warning: Citation 'kendall' on page 12 undefined on input line 241.
+
+[12 <./imagenes/Top-down.jpg>] [13]
+
+LaTeX Warning: Citation 'intensidad' on page 14 undefined on input line 281.
+
+
+LaTeX Warning: Citation 'JetsonNano' on page 14 undefined on input line 303.
+
+<imagenes/JetsonNano.jpg, id=387, 632.3625pt x 355.3275pt>
 File: imagenes/JetsonNano.jpg Graphic file (type jpg)
 <use imagenes/JetsonNano.jpg>
-Package pdftex.def Info: imagenes/JetsonNano.jpg  used on input line 297.
+Package pdftex.def Info: imagenes/JetsonNano.jpg  used on input line 306.
 (pdftex.def)             Requested size: 252.94052pt x 142.12846pt.
- [18 <./imagenes/JetsonNano.jpg>]
-<imagenes/neurona.png, id=788, 490.83376pt x 212.29312pt>
+
+LaTeX Warning: Citation 'vision' on page 14 undefined on input line 314.
+
+[14 <./imagenes/JetsonNano.jpg>]
+<imagenes/neurona.png, id=393, 490.83376pt x 212.29312pt>
 File: imagenes/neurona.png Graphic file (type png)
 <use imagenes/neurona.png>
-Package pdftex.def Info: imagenes/neurona.png  used on input line 313.
+Package pdftex.def Info: imagenes/neurona.png  used on input line 322.
 (pdftex.def)             Requested size: 245.41628pt x 106.1463pt.
+ [15 <./imagenes/neurona.png>]
 
-[19 <./imagenes/neurona.png>]
-<imagenes/cnn2.jpg, id=804, 1003.75pt x 341.275pt>
+LaTeX Warning: Citation 'Referencia0' on page 16 undefined on input line 348.
+
+<imagenes/cnn2.jpg, id=407, 1003.75pt x 341.275pt>
 File: imagenes/cnn2.jpg Graphic file (type jpg)
 <use imagenes/cnn2.jpg>
-Package pdftex.def Info: imagenes/cnn2.jpg  used on input line 361.
+Package pdftex.def Info: imagenes/cnn2.jpg  used on input line 370.
 (pdftex.def)             Requested size: 451.68333pt x 153.57233pt.
- [20 <./imagenes/cnn2.jpg>]
-<imagenes/maxpool.png, id=816, 164.25pt x 68.547pt>
+
+LaTeX Warning: Citation 'CNNpresentacion' on page 16 undefined on input line 37
+1.
+
+[16 <./imagenes/cnn2.jpg>]
+<imagenes/maxpool.png, id=418, 164.25pt x 68.547pt>
 File: imagenes/maxpool.png Graphic file (type png)
 <use imagenes/maxpool.png>
-Package pdftex.def Info: imagenes/maxpool.png  used on input line 380.
+Package pdftex.def Info: imagenes/maxpool.png  used on input line 389.
 (pdftex.def)             Requested size: 164.24959pt x 68.54681pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+
+LaTeX Warning: Citation 'viola' on page 17 undefined on input line 413.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
  []
 
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 411.
+d on input line 420.
 
-[21 <./imagenes/maxpool.png>]
-<imagenes/clasificadores.png, id=824, 994.46532pt x 234.1247pt>
+[17 <./imagenes/maxpool.png>]
+<imagenes/clasificadores.png, id=425, 994.46532pt x 234.1247pt>
 File: imagenes/clasificadores.png Graphic file (type png)
 <use imagenes/clasificadores.png>
-Package pdftex.def Info: imagenes/clasificadores.png  used on input line 420.
+Package pdftex.def Info: imagenes/clasificadores.png  used on input line 429.
 (pdftex.def)             Requested size: 497.23145pt x 117.06206pt.
-<imagenes/cdn-diagram.png, id=826, 722.7pt x 406.51875pt>
+
+
+LaTeX Warning: Citation 'viola' on page 18 undefined on input line 434.
+
+<imagenes/cdn-diagram.png, id=426, 722.7pt x 406.51875pt>
 File: imagenes/cdn-diagram.png Graphic file (type png)
 <use imagenes/cdn-diagram.png>
-Package pdftex.def Info: imagenes/cdn-diagram.png  used on input line 433.
+Package pdftex.def Info: imagenes/cdn-diagram.png  used on input line 442.
 (pdftex.def)             Requested size: 361.3491pt x 203.25887pt.
- [22 <./imagenes/clasificadores.png> <./imagenes/cdn-diagram.png>]
+[18 <./imagenes/clasificadores.png> <./imagenes/cdn-diagram.png>]
 
-LaTeX Warning: Citation `Referencian1' on page 23 undefined on input line 446.
-
-
-LaTeX Warning: Citation `Referencian2' on page 23 undefined on input line 446.
+LaTeX Warning: Citation 'Referencian1' on page 19 undefined on input line 455.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
+LaTeX Warning: Citation 'Referencian2' on page 19 undefined on input line 455.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--455
+LaTeX Warning: Citation 'Referencian5' on page 19 undefined on input line 463.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--464
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-58.
+67.
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 476--477
+
+LaTeX Warning: Citation 'Referencian6' on page 19 undefined on input line 477.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
 
  []
 
+
+LaTeX Warning: Citation 'Referencian7' on page 19 undefined on input line 487.
+
+[19]
+
+LaTeX Warning: Citation 'Referencian9' on page 20 undefined on input line 515.
+
+
+LaTeX Warning: Citation 'Referencian10' on page 20 undefined on input line 517.
+
+
+[20]
+
+LaTeX Warning: Citation 'Referencian11' on page 21 undefined on input line 525.
+
+
+
+LaTeX Warning: Citation 'Referencian12' on page 21 undefined on input line 532.
+
+
+
+LaTeX Warning: Citation 'Referencian13' on page 21 undefined on input line 533.
+
+
+[21]
+
+LaTeX Warning: Citation 'EstadodelAarte1' on page 22 undefined on input line 54
+1.
+
+
+LaTeX Warning: Citation 'EstadodelAarte2' on page 22 undefined on input line 54
+5.
+
+
+LaTeX Warning: Citation 'EstadodelAarte3' on page 22 undefined on input line 55
+1.
+
+
+LaTeX Warning: Citation 'EstadodelAarte4' on page 22 undefined on input line 56
+3.
+
+[22]
+
+LaTeX Warning: Citation 'EstadodelAarte5' on page 23 undefined on input line 58
+1.
+
+
+LaTeX Warning: Citation 'EstadodelAarte6' on page 23 undefined on input line 58
+4.
+
 [23]
 
-LaTeX Warning: Citation `Referencian9' on page 24 undefined on input line 506.
+LaTeX Warning: Citation 'EstadodelAarte7' on page 24 undefined on input line 59
+1.
 
 
-LaTeX Warning: Citation `Referencian10' on page 24 undefined on input line 508.
+LaTeX Warning: Citation 'EstadodelAarte8' on page 24 undefined on input line 59
+7.
 
+
+LaTeX Warning: Citation 'EstadodelAarte9' on page 24 undefined on input line 60
+4.
 
 [24]
 
-LaTeX Warning: Citation `Referencian11' on page 25 undefined on input line 516.
+LaTeX Warning: Citation 'EstadodelAarte10' on page 25 undefined on input line 6
+08.
 
 
-
-LaTeX Warning: Citation `Referencian12' on page 25 undefined on input line 523.
-
-
-
-LaTeX Warning: Citation `Referencian13' on page 25 undefined on input line 524.
+LaTeX Warning: Citation 'EstadodelAarte11' on page 25 undefined on input line 6
+13.
 
 
-[25] [26] [27] [28] [29]
-Overfull \hbox (4.54134pt too wide) in paragraph at lines 658--658
+LaTeX Warning: Citation 'EstadodelAarte12' on page 25 undefined on input line 6
+30.
+
+
+LaTeX Warning: Citation 'EstadodelAarte13' on page 25 undefined on input line 6
+49.
+
+[25]
+
+LaTeX Warning: Citation 'EstadodelAarte14' on page 26 undefined on input line 6
+66.
+
+
+Overfull \hbox (4.54134pt too wide) in paragraph at lines 667--667
 |[]\OT1/lmr/bx/n/12 Propuesta de un sis-te-ma de geo-lo-ca-li-za-cion y mo-ni-
 to-reo va GPS/GSM/GPRS
  []
 
-[30] [31]
-<imagenes/topdowngeneral.png, id=914, 924.45375pt x 290.08376pt>
+
+LaTeX Warning: Citation 'EstadodelAarte15' on page 26 undefined on input line 6
+74.
+
+
+LaTeX Warning: Citation 'EstadodelAarte16' on page 26 undefined on input line 6
+77.
+
+
+LaTeX Warning: Citation 'EstadodelAarte17' on page 26 undefined on input line 6
+80.
+
+[26] [27]
+
+LaTeX Warning: Reference `fig:topdown' on page 28 undefined on input line 685.
+
+<imagenes/topdowngeneral.png, id=475, 924.45375pt x 290.08376pt>
 File: imagenes/topdowngeneral.png Graphic file (type png)
 <use imagenes/topdowngeneral.png>
-Package pdftex.def Info: imagenes/topdowngeneral.png  used on input line 679.
+Package pdftex.def Info: imagenes/topdowngeneral.png  used on input line 688.
 (pdftex.def)             Requested size: 508.45114pt x 159.54655pt.
 
-Overfull \hbox (7.96715pt too wide) in paragraph at lines 679--680
+Overfull \hbox (7.96715pt too wide) in paragraph at lines 688--689
  [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 684--685
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 686--687
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 688--689
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 691--692
-
  []
 
 
@@ -1133,277 +1398,336 @@ Underfull \hbox (badness 10000) in paragraph at lines 693--694
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 696--697
+Underfull \hbox (badness 10000) in paragraph at lines 695--696
 
  []
 
-[32 <./imagenes/topdowngeneral.png>]
-<imagenes/MapaCoberturaMexico.jpg, id=921, 907.13907pt x 568.37344pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 700--701
+
+ []
+
+
+LaTeX Warning: Reference `sec:ASD' on page 28 undefined on input line 702.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--703
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 705--706
+
+ []
+
+[28 <./imagenes/topdowngeneral.png>]
+<imagenes/MapaCoberturaMexico.jpg, id=482, 907.13907pt x 568.37344pt>
 File: imagenes/MapaCoberturaMexico.jpg Graphic file (type jpg)
 <use imagenes/MapaCoberturaMexico.jpg>
 Package pdftex.def Info: imagenes/MapaCoberturaMexico.jpg  used on input line 7
-06.
+15.
 (pdftex.def)             Requested size: 453.56842pt x 284.18602pt.
-<imagenes/CoberturaCDMX.jpg, id=924, 392.96812pt x 347.04657pt>
+
+
+LaTeX Warning: Citation 'CoberturaNacional' on page 29 undefined on input line 
+716.
+
+
+LaTeX Warning: Reference `fig:mapacoberturaN' on page 29 undefined on input lin
+e 720.
+
+<imagenes/CoberturaCDMX.jpg, id=483, 392.96812pt x 347.04657pt>
 File: imagenes/CoberturaCDMX.jpg Graphic file (type jpg)
 <use imagenes/CoberturaCDMX.jpg>
-Package pdftex.def Info: imagenes/CoberturaCDMX.jpg  used on input line 714.
+Package pdftex.def Info: imagenes/CoberturaCDMX.jpg  used on input line 723.
 (pdftex.def)             Requested size: 353.66803pt x 312.33902pt.
- [33 <./imagenes/MapaCoberturaMexico.jpg>]
-[34 <./imagenes/CoberturaCDMX.jpg>] [35
 
-] [36] [37] [38]
-Overfull \hbox (3.00526pt too wide) in paragraph at lines 881--881
+LaTeX Warning: Citation 'CoberturaNacional' on page 29 undefined on input line 
+724.
+
+[29 <./imagenes/MapaCoberturaMexico.jpg>] [30 <./imagenes/CoberturaCDMX.jpg>]
+[31
+
+] [32] [33] [34]
+
+LaTeX Warning: Reference `solucion' on page 35 undefined on input line 883.
+
+
+LaTeX Warning: Reference `tab:microordenador' on page 35 undefined on input lin
+e 883.
+
+
+Overfull \hbox (3.00526pt too wide) in paragraph at lines 890--890
 []|\OT1/lmr/bx/n/12 Alimentacion| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 882--882
+Underfull \hbox (badness 10000) in paragraph at lines 891--891
 []|\OT1/lmr/m/n/12 Google
  []
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 882--882
+Underfull \hbox (badness 6001) in paragraph at lines 891--891
 \OT1/lmr/m/n/12 Co-ral Dev
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--883
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 []|\OT1/lmr/m/n/12 Rasperry
  []
 
 
-Underfull \hbox (badness 5260) in paragraph at lines 883--883
+Underfull \hbox (badness 5260) in paragraph at lines 892--892
 []|\OT1/lmr/m/n/12 1.5 GHZ 64 bit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--883
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 \OT1/lmr/m/n/12 Quad-Co-re Cor-tex
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--883
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 []|\OT1/lmr/m/n/12 1GB, 2GB,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--883
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 \OT1/lmr/m/n/12 4GB, 8GB
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 884--884
+Underfull \hbox (badness 10000) in paragraph at lines 893--893
 []|\OT1/lmr/m/n/12 Asus Tin-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 884--884
+Underfull \hbox (badness 10000) in paragraph at lines 893--893
 \OT1/lmr/m/n/12 ker-Board
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 884--884
+Underfull \hbox (badness 10000) in paragraph at lines 893--893
 []|\OT1/lmr/m/n/12 2GB/4GB
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 884--884
+Underfull \hbox (badness 3168) in paragraph at lines 893--893
 \OT1/lmr/m/n/12 dual- chan-nel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 884--884
+Underfull \hbox (badness 10000) in paragraph at lines 893--893
 []|\OT1/lmr/m/n/12 Integrated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 884--884
+Underfull \hbox (badness 10000) in paragraph at lines 893--893
 \OT1/lmr/m/n/12 GC7000 Li-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--885
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 []|\OT1/lmr/m/n/12 NVIDIA
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--885
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 \OT1/lmr/m/n/12 Jetson
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--885
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 []|\OT1/lmr/m/n/12 4 GB de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--885
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 \OT1/lmr/m/n/12 LPDDR4 de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--885
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 \OT1/lmr/m/n/12 well de 128
  []
 
-[39
+
+LaTeX Warning: Citation 'nanovspi' on page 35 undefined on input line 906.
+
+
+LaTeX Warning: Citation 'deepedgebench' on page 35 undefined on input line 906.
+
+
+
+LaTeX Warning: Reference `tab:microordenador' on page 35 undefined on input lin
+e 906.
+
+[35
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 908--909
+Underfull \hbox (badness 10000) in paragraph at lines 917--918
 
  []
 
-[40
+[36
 
 ]
-Overfull \hbox (10.44028pt too wide) in paragraph at lines 943--943
+Overfull \hbox (10.44028pt too wide) in paragraph at lines 952--952
 []|\OT1/lmr/m/n/12 Almacenamiento| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--943
+Underfull \hbox (badness 10000) in paragraph at lines 952--952
 []|\OT1/lmr/m/n/12 Speed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--943
+Underfull \hbox (badness 10000) in paragraph at lines 952--952
 []|\OT1/lmr/m/n/12 Video
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 944--944
+Underfull \hbox (badness 10000) in paragraph at lines 953--953
 []|\OT1/lmr/m/n/12 SanDisk
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 944--944
+Underfull \hbox (badness 10000) in paragraph at lines 953--953
 \OT1/lmr/m/n/12 Ex-tre-me
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 944--944
+Underfull \hbox (badness 1571) in paragraph at lines 953--953
 []|\OT1/lmr/m/n/12 32-256 (MAX
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 944--944
+Underfull \hbox (badness 10000) in paragraph at lines 953--953
 []|\OT1/lmr/m/n/12 Clase
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--945
+Underfull \hbox (badness 10000) in paragraph at lines 954--954
 []|\OT1/lmr/m/n/12 Kingston
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--945
+Underfull \hbox (badness 10000) in paragraph at lines 954--954
 \OT1/lmr/m/n/12 EN-DU-
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 945--945
+Underfull \hbox (badness 1571) in paragraph at lines 954--954
 []|\OT1/lmr/m/n/12 32-256 (MAX
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--945
+Underfull \hbox (badness 10000) in paragraph at lines 954--954
 []|\OT1/lmr/m/n/12 Clase
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
 []|\OT1/lmr/m/n/12 Samsung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
 []|\OT1/lmr/m/n/12 Clase
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
 []|\OT1/lmr/m/n/12 160
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
 \OT1/lmr/m/n/12 MB/s
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--946
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
 \TS1/lmr/m/n/12 $\OT1/lmr/m/n/12 883
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 947--947
+Underfull \hbox (badness 10000) in paragraph at lines 956--956
 []|\OT1/lmr/m/n/12 Kingston
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 947--947
+Underfull \hbox (badness 10000) in paragraph at lines 956--956
 \OT1/lmr/m/n/12 Can-vas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 947--947
+Underfull \hbox (badness 10000) in paragraph at lines 956--956
 []|\OT1/lmr/m/n/12 Clase
  []
 
 
-Overfull \hbox (2.12619pt too wide) in paragraph at lines 941--950
+Overfull \hbox (2.12619pt too wide) in paragraph at lines 950--959
 [][] 
  []
 
-[41
+[37
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 957--959
+Underfull \hbox (badness 10000) in paragraph at lines 966--968
 
  []
 
-<imagenes/programaclasico.png, id=970, 770.88pt x 578.16pt>
+<imagenes/programaclasico.png, id=533, 770.88pt x 578.16pt>
 File: imagenes/programaclasico.png Graphic file (type png)
 <use imagenes/programaclasico.png>
-Package pdftex.def Info: imagenes/programaclasico.png  used on input line 960.
+Package pdftex.def Info: imagenes/programaclasico.png  used on input line 969.
 (pdftex.def)             Requested size: 231.26578pt x 173.44933pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 966--967
+Underfull \hbox (badness 10000) in paragraph at lines 975--976
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 968--969
+Underfull \hbox (badness 10000) in paragraph at lines 977--978
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 970--971
+Underfull \hbox (badness 10000) in paragraph at lines 979--980
 
  []
 
-[42
+[38
 
- <./imagenes/programaclasico.png>] [43] [44
+ <./imagenes/programaclasico.png>]
+
+LaTeX Warning: Citation 'python' on page 39 undefined on input line 1014.
+
+[39] [40
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
+Underfull \hbox (badness 10000) in paragraph at lines 1046--1047
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1042
+Underfull \hbox (badness 10000) in paragraph at lines 1050--1051
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1046
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1055
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1048
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1057
 
  []
 
@@ -1419,13 +1743,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45
+[41
 
-] [46] [47]
-<imagenes/casosuso_vision.jpeg, id=999, 711.65875pt x 727.71875pt>
+] [42] [43]
+<imagenes/casosuso_vision.jpeg, id=568, 711.65875pt x 727.71875pt>
 File: imagenes/casosuso_vision.jpeg Graphic file (type jpg)
 <use imagenes/casosuso_vision.jpeg>
-Package pdftex.def Info: imagenes/casosuso_vision.jpeg  used on input line 1182
+Package pdftex.def Info: imagenes/casosuso_vision.jpeg  used on input line 1191
 .
 (pdftex.def)             Requested size: 284.65845pt x 291.08234pt.
 
@@ -1442,7 +1766,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (6.39964pt too wide) in paragraph at lines 1303--1321
+Overfull \hbox (6.39964pt too wide) in paragraph at lines 1312--1330
  [][] 
  []
 
@@ -1452,324 +1776,361 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[48
+[44
 
- <./imagenes/casosuso_vision.jpeg>] [49] [50] [51]
-<imagenes/imx.jpg, id=1017, 431.36156pt x 359.84438pt>
+ <./imagenes/casosuso_vision.jpeg>] [45] [46] [47]
+<imagenes/imx.jpg, id=593, 431.36156pt x 359.84438pt>
 File: imagenes/imx.jpg Graphic file (type jpg)
 <use imagenes/imx.jpg>
-Package pdftex.def Info: imagenes/imx.jpg  used on input line 1357.
+Package pdftex.def Info: imagenes/imx.jpg  used on input line 1366.
 (pdftex.def)             Requested size: 215.68025pt x 179.92174pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1388
+
+LaTeX Warning: Citation 'facedetection' on page 48 undefined on input line 1389
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1397
 []|\OT1/lmr/m/it/12 Neural
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1388
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1397
 \OT1/lmr/m/it/12 Net-works
  []
 
 
-Underfull \hbox (badness 5431) in paragraph at lines 1388--1388
+Underfull \hbox (badness 5431) in paragraph at lines 1397--1397
 \OT1/lmr/m/n/12 pre-ci-sos, es-pe-cial-men-te
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 1388--1388
+Underfull \hbox (badness 1173) in paragraph at lines 1397--1397
 \OT1/lmr/m/n/12 pa-ra los ca-sos de uso
  []
 
 
-Underfull \hbox (badness 7814) in paragraph at lines 1388--1388
+Underfull \hbox (badness 7814) in paragraph at lines 1397--1397
 \OT1/lmr/m/n/12 de re-co-no-ci-mien-to de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1388
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1397
 \OT1/lmr/m/n/12 image-nes/objetos, en
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 1388--1388
+Underfull \hbox (badness 1430) in paragraph at lines 1397--1397
 \OT1/lmr/m/n/12 com-pa-ra-cion con otros
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1389
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1398
 []|\OT1/lmr/m/it/12 Long
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1389
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1398
 \OT1/lmr/m/it/12 Short-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1389
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1398
 \OT1/lmr/m/it/12 Term
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1389
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1398
 \OT1/lmr/m/it/12 Me-mory
  []
 
 
-Underfull \hbox (badness 3724) in paragraph at lines 1389--1389
+Underfull \hbox (badness 3724) in paragraph at lines 1398--1398
 []|\OT1/lmr/m/n/12 Ideal pa-ra ta-reas co-
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 1389--1389
+Underfull \hbox (badness 3396) in paragraph at lines 1398--1398
 []|\OT1/lmr/m/n/12 Se re-quie-re una gran
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1389
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1398
 \OT1/lmr/m/n/12 can-ti-dad de compu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1390--1390
+Underfull \hbox (badness 10000) in paragraph at lines 1399--1399
 []|\OT1/lmr/m/it/12 General
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1390--1390
+Underfull \hbox (badness 10000) in paragraph at lines 1399--1399
 \OT1/lmr/m/it/12 Ad-ver-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1390--1390
+Underfull \hbox (badness 10000) in paragraph at lines 1399--1399
 \OT1/lmr/m/it/12 sa-rial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1390--1390
+Underfull \hbox (badness 10000) in paragraph at lines 1399--1399
 \OT1/lmr/m/it/12 Net-works
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 1392--1392
+Underfull \hbox (badness 1924) in paragraph at lines 1401--1401
 [][]\OT1/lmr/m/n/12 Util en la edi-cion de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1392--1392
+Underfull \hbox (badness 10000) in paragraph at lines 1401--1401
 \OT1/lmr/m/n/12 image-nes (Deep-fa-ke),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1392--1392
+Underfull \hbox (badness 10000) in paragraph at lines 1401--1401
 \OT1/lmr/m/n/12 ge-ne-ra-cion de per-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1392--1392
+Underfull \hbox (badness 10000) in paragraph at lines 1401--1401
 \OT1/lmr/m/n/12 so-na-jes de di-bu-jos
  []
 
 
-Underfull \hbox (badness 3039) in paragraph at lines 1392--1392
+Underfull \hbox (badness 3039) in paragraph at lines 1401--1401
 \OT1/lmr/m/n/12 ani-ma-dos, ilus-tra-cio-nes
  []
 
 
-Underfull \hbox (badness 1817) in paragraph at lines 1392--1392
+Underfull \hbox (badness 1817) in paragraph at lines 1401--1401
 []|\OT1/lmr/m/n/12 Capaz de apren-der la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1392--1392
+Underfull \hbox (badness 10000) in paragraph at lines 1401--1401
 \OT1/lmr/m/n/12 re-pre-sen-ta-cion in-ter-na
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 1392--1393
+Underfull \hbox (badness 1584) in paragraph at lines 1401--1402
 []|\OT1/lmr/m/n/12 Cuando ge-ne-ra nue-vos
  []
 
 
-Underfull \hbox (badness 1490) in paragraph at lines 1392--1393
+Underfull \hbox (badness 1490) in paragraph at lines 1401--1402
 \OT1/lmr/m/n/12 ca de eva-lua-cion pa-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1394--1394
+Underfull \hbox (badness 10000) in paragraph at lines 1403--1403
 []\OT1/lmr/m/n/12 Se re-quie-re mu-cho
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1394--1394
+Underfull \hbox (badness 10000) in paragraph at lines 1403--1403
 \OT1/lmr/m/n/12 el en-tre-na-mien-to del
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1395--1395
+Underfull \hbox (badness 10000) in paragraph at lines 1404--1404
 []|\OT1/lmr/m/it/12 Recurrent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1395--1395
+Underfull \hbox (badness 10000) in paragraph at lines 1404--1404
 \OT1/lmr/m/it/12 Neu-ral
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1395--1395
+Underfull \hbox (badness 10000) in paragraph at lines 1404--1404
 \OT1/lmr/m/it/12 Net-works
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 1395--1395
+Underfull \hbox (badness 1286) in paragraph at lines 1404--1404
 \OT1/lmr/m/n/12 ce-sa-mien-to del len-gua-
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 1395--1395
+Underfull \hbox (badness 1178) in paragraph at lines 1404--1404
 []|\OT1/lmr/m/n/12 Capacidad de re-cor-dar
  []
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 1395--1395
+Underfull \hbox (badness 4144) in paragraph at lines 1404--1404
 \OT1/lmr/m/n/12 in-for-ma-cion a lo lar-
  []
 
 
-Underfull \hbox (badness 3039) in paragraph at lines 1395--1396
+Underfull \hbox (badness 3039) in paragraph at lines 1404--1405
 []|\OT1/lmr/m/n/12 Los calcu-los re-quie-ren
  []
 
 
-Overfull \hbox (2.3205pt too wide) in paragraph at lines 1398--1398
+Overfull \hbox (2.3205pt too wide) in paragraph at lines 1407--1407
 []|\OT1/lmr/m/it/12 Multilayer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1398--1398
+Underfull \hbox (badness 10000) in paragraph at lines 1407--1407
 \OT1/lmr/m/it/12 Per-cep-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1398--1398
+Underfull \hbox (badness 10000) in paragraph at lines 1407--1407
 \OT1/lmr/m/it/12 tron?s
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 1400--1401
+Underfull \hbox (badness 1331) in paragraph at lines 1409--1410
 []|\OT1/lmr/m/n/12 Puede dis-tin-guir da-tos
  []
 
-[52
+[48
 
- <./imagenes/imx.jpg>] [53]
-<imagenes/unicapa.jpg, id=1028, 276.28218pt x 160.34906pt>
+ <./imagenes/imx.jpg>] [49]
+<imagenes/unicapa.jpg, id=605, 276.28218pt x 160.34906pt>
 File: imagenes/unicapa.jpg Graphic file (type jpg)
 <use imagenes/unicapa.jpg>
-Package pdftex.def Info: imagenes/unicapa.jpg  used on input line 1419.
+Package pdftex.def Info: imagenes/unicapa.jpg  used on input line 1428.
 (pdftex.def)             Requested size: 110.51091pt x 64.13847pt.
-<imagenes/unicapa2.jpg, id=1029, 1100.61188pt x 556.32843pt>
+<imagenes/unicapa2.jpg, id=606, 1100.61188pt x 556.32843pt>
 File: imagenes/unicapa2.jpg Graphic file (type jpg)
 <use imagenes/unicapa2.jpg>
-Package pdftex.def Info: imagenes/unicapa2.jpg  used on input line 1429.
+Package pdftex.def Info: imagenes/unicapa2.jpg  used on input line 1438.
 (pdftex.def)             Requested size: 550.3046pt x 278.16353pt.
 
-Overfull \hbox (79.1953pt too wide) in paragraph at lines 1429--1430
+Overfull \hbox (79.1953pt too wide) in paragraph at lines 1438--1439
  [] 
  []
 
-[54 <./imagenes/unicapa.jpg> <./imagenes/unicapa2.jpg>]
-<imagenes/multicapa.png, id=1034, 310.15875pt x 197.98969pt>
+[50 <./imagenes/unicapa.jpg> <./imagenes/unicapa2.jpg>]
+<imagenes/multicapa.png, id=612, 310.15875pt x 197.98969pt>
 File: imagenes/multicapa.png Graphic file (type png)
 <use imagenes/multicapa.png>
-Package pdftex.def Info: imagenes/multicapa.png  used on input line 1441.
+Package pdftex.def Info: imagenes/multicapa.png  used on input line 1450.
 (pdftex.def)             Requested size: 217.10963pt x 138.59183pt.
-<imagenes/capasocultas.jpg, id=1035, 1099.10625pt x 556.32843pt>
+<imagenes/capasocultas.jpg, id=613, 1099.10625pt x 556.32843pt>
 File: imagenes/capasocultas.jpg Graphic file (type jpg)
 <use imagenes/capasocultas.jpg>
-Package pdftex.def Info: imagenes/capasocultas.jpg  used on input line 1450.
+Package pdftex.def Info: imagenes/capasocultas.jpg  used on input line 1459.
 (pdftex.def)             Requested size: 439.6347pt x 222.52742pt.
- [55 <./imagenes/multicapa.png> <./imagenes/capasocultas.jpg>]
-<imagenes/funrelu.png, id=1042, 501.5538pt x 404.712pt>
+ [51 <./imagenes/multicapa.png> <./imagenes/capasocultas.jpg>]
+<imagenes/funrelu.png, id=622, 501.5538pt x 404.712pt>
 File: imagenes/funrelu.png Graphic file (type png)
 <use imagenes/funrelu.png>
-Package pdftex.def Info: imagenes/funrelu.png  used on input line 1464.
+Package pdftex.def Info: imagenes/funrelu.png  used on input line 1473.
 (pdftex.def)             Requested size: 200.61797pt x 161.88193pt.
-<imagenes/relu.jpg, id=1043, 1106.63437pt x 581.17125pt>
+<imagenes/relu.jpg, id=623, 1106.63437pt x 581.17125pt>
 File: imagenes/relu.jpg Graphic file (type jpg)
 <use imagenes/relu.jpg>
-Package pdftex.def Info: imagenes/relu.jpg  used on input line 1471.
+Package pdftex.def Info: imagenes/relu.jpg  used on input line 1480.
 (pdftex.def)             Requested size: 442.6459pt x 232.46437pt.
-<imagenes/funtanh.png, id=1044, 1204.5pt x 663.47874pt>
+<imagenes/funtanh.png, id=624, 1204.5pt x 663.47874pt>
 File: imagenes/funtanh.png Graphic file (type png)
 <use imagenes/funtanh.png>
-Package pdftex.def Info: imagenes/funtanh.png  used on input line 1481.
+Package pdftex.def Info: imagenes/funtanh.png  used on input line 1490.
 (pdftex.def)             Requested size: 240.89574pt x 132.69339pt.
- [56 <./imagenes/funrelu.png> <./imagenes/relu.jpg>]
-<imagenes/tanh.jpg, id=1050, 1090.82532pt x 553.31718pt>
+ [52 <./imagenes/funrelu.png> <./imagenes/relu.jpg>]
+<imagenes/tanh.jpg, id=632, 1090.82532pt x 553.31718pt>
 File: imagenes/tanh.jpg Graphic file (type jpg)
 <use imagenes/tanh.jpg>
-Package pdftex.def Info: imagenes/tanh.jpg  used on input line 1490.
+Package pdftex.def Info: imagenes/tanh.jpg  used on input line 1499.
 (pdftex.def)             Requested size: 436.3224pt x 221.32295pt.
- [57 <./imagenes/funtanh.png> <./imagenes/tanh.jpg>] [58]
-LaTeX Font Info:    Trying to load font information for OML+lmr on input line 1
-577.
 
+
+LaTeX Warning: Citation 'Referencia0' on page 53 undefined on input line 1505.
+
+[53 <./imagenes/funtanh.png> <./imagenes/tanh.jpg>]
+
+LaTeX Warning: Citation 'Referencian14' on page 54 undefined on input line 1513
+.
+
+
+LaTeX Warning: Reference `tab:CLTE' on page 54 undefined on input line 1514.
+
+[54]
+
+LaTeX Warning: Citation 'Referencian15' on page 55 undefined on input line 1556
+.
+
+LaTeX Font Info:    Trying to load font information for OML+lmr on input line 1
+586.
 (C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmr.fd
 File: omllmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <12> not available
-(Font)              Font shape `OML/lmm/m/it' tried instead on input line 1577.
-
- [59]
-Underfull \hbox (badness 10000) in paragraph at lines 1589--1590
-
- []
+(Font)              Font shape `OML/lmm/m/it' tried instead on input line 1586.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1626--1627
 
- []
+LaTeX Warning: Reference `tab:redes' on page 55 undefined on input line 1593.
 
-[60]
-Underfull \hbox (badness 10000) in paragraph at lines 1628--1629
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 1598--1599
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1630--1631
+Underfull \hbox (badness 10000) in paragraph at lines 1635--1636
+
+ []
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 1637--1638
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1638--1639
+Underfull \hbox (badness 10000) in paragraph at lines 1639--1640
 
  []
 
-[61]
-<imagenes/lte-mcobertura.png, id=1080, 459.96844pt x 348.55219pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1647--1648
+
+ []
+
+[57]
+<imagenes/lte-mcobertura.png, id=659, 459.96844pt x 348.55219pt>
 File: imagenes/lte-mcobertura.png Graphic file (type png)
 <use imagenes/lte-mcobertura.png>
-Package pdftex.def Info: imagenes/lte-mcobertura.png  used on input line 1681.
+Package pdftex.def Info: imagenes/lte-mcobertura.png  used on input line 1690.
 (pdftex.def)             Requested size: 229.98366pt x 174.27565pt.
- [62 <./imagenes/lte-mcobertura.png>] [63]
-<imagenes/handover.png, id=1095, 813.0375pt x 589.4522pt>
+ [58 <./imagenes/lte-mcobertura.png>]
+
+LaTeX Warning: Citation 'Referencian16' on page 59 undefined on input line 1717
+.
+
+
+LaTeX Warning: Reference `fig:handover' on page 59 undefined on input line 1735
+.
+
+
+LaTeX Warning: Citation 'Referencian17' on page 59 undefined on input line 1735
+.
+
+[59]
+<imagenes/handover.png, id=671, 813.0375pt x 589.4522pt>
 File: imagenes/handover.png Graphic file (type png)
 <use imagenes/handover.png>
-Package pdftex.def Info: imagenes/handover.png  used on input line 1735.
+Package pdftex.def Info: imagenes/handover.png  used on input line 1744.
 (pdftex.def)             Requested size: 406.51776pt x 294.72537pt.
 
 
-LaTeX Warning: Citation `Referencian18' on page 64 undefined on input line 1740
+LaTeX Warning: Citation 'Referencian18' on page 60 undefined on input line 1749
 .
 
-<imagenes/mapaLTE.png, id=1096, 367.3725pt x 215.30438pt>
+<imagenes/mapaLTE.png, id=672, 367.3725pt x 215.30438pt>
 File: imagenes/mapaLTE.png Graphic file (type png)
 <use imagenes/mapaLTE.png>
-Package pdftex.def Info: imagenes/mapaLTE.png  used on input line 1743.
+Package pdftex.def Info: imagenes/mapaLTE.png  used on input line 1752.
 (pdftex.def)             Requested size: 477.58417pt x 279.89565pt.
-[64 <./imagenes/handover.png>] [65 <./imagenes/mapaLTE.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1777--1778
+[60 <./imagenes/handover.png>] [61 <./imagenes/mapaLTE.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1786--1787
 
  []
 
@@ -1785,15 +2146,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[66
+[62
 
-] [67] [68]
-<imagenes/CasosdeusosMEB.png, id=1120, 720.6925pt x 512.91624pt>
+] [63] [64]
+<imagenes/CasosdeusosMEB.png, id=703, 720.6925pt x 512.91624pt>
 File: imagenes/CasosdeusosMEB.png Graphic file (type png)
 <use imagenes/CasosdeusosMEB.png>
-Package pdftex.def Info: imagenes/CasosdeusosMEB.png  used on input line 1911.
+Package pdftex.def Info: imagenes/CasosdeusosMEB.png  used on input line 1920.
 (pdftex.def)             Requested size: 396.38211pt x 282.1048pt.
- [69
+ [65
 
  <./imagenes/CasosdeusosMEB.png>]
 
@@ -1805,15 +2166,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[70] [71] [72
+[66] [67] [68
 
-] [73] [74] [75] [76]
-<imagenes/casosdeusoweb.png, id=1155, 703.62875pt x 603.25375pt>
+] [69] [70] [71] [72]
+<imagenes/casosdeusoweb.png, id=756, 703.62875pt x 603.25375pt>
 File: imagenes/casosdeusoweb.png Graphic file (type png)
 <use imagenes/casosdeusoweb.png>
-Package pdftex.def Info: imagenes/casosdeusoweb.png  used on input line 2302.
+Package pdftex.def Info: imagenes/casosdeusoweb.png  used on input line 2311.
 (pdftex.def)             Requested size: 422.18051pt x 361.95503pt.
- [77]
+ [73]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1835,689 +2196,610 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[78 <./imagenes/casosdeusoweb.png>] [79] [80] [81]
-Underfull \hbox (badness 10000) in paragraph at lines 2479--2480
+[74 <./imagenes/casosdeusoweb.png>] [75] [76] [77]
+Underfull \hbox (badness 10000) in paragraph at lines 2488--2489
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2487--2487
+Underfull \hbox (badness 10000) in paragraph at lines 2496--2496
 []|\OT1/lmr/m/n/12 NoSQL \OT1/lmr/m/it/12 wide-
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 2487--2487
+Underfull \hbox (badness 2495) in paragraph at lines 2496--2496
 []|\OT1/lmr/m/n/12 NoSQL Orien-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2487--2487
+Underfull \hbox (badness 10000) in paragraph at lines 2496--2496
 []|\OT1/lmr/m/n/12 NoSQL clave-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2487--2487
+Underfull \hbox (badness 10000) in paragraph at lines 2496--2496
 []|\OT1/lmr/m/n/12 NoSQL clave-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2488--2488
+Underfull \hbox (badness 10000) in paragraph at lines 2497--2497
 []|\OT1/lmr/m/n/12 Codigo abier-to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2488--2488
+Underfull \hbox (badness 10000) in paragraph at lines 2497--2497
 []|\OT1/lmr/m/n/12 Codigo abier-to
  []
 
 
-Overfull \hbox (3.70572pt too wide) in paragraph at lines 2489--2489
+Overfull \hbox (3.70572pt too wide) in paragraph at lines 2498--2498
 []|\OT1/lmr/bx/n/12 Cumplimiento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2490--2490
+Underfull \hbox (badness 10000) in paragraph at lines 2499--2499
 []|\OT1/lmr/bx/n/12 Lenguaje
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2490--2490
+Underfull \hbox (badness 10000) in paragraph at lines 2499--2499
 \OT1/lmr/bx/n/12 de con-sul-ta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2491--2491
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
 []|\OT1/lmr/bx/n/12 Principales
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2491--2491
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
 []|\OT1/lmr/m/n/12 Anali-sis so-cial,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2491--2491
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
 \OT1/lmr/m/n/12 po real, ven-ta
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 2491--2491
+Underfull \hbox (badness 1270) in paragraph at lines 2500--2500
 \OT1/lmr/m/n/12 al por me-nor y
  []
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 2491--2491
+Underfull \hbox (badness 1558) in paragraph at lines 2500--2500
 \OT1/lmr/m/n/12 llo de apli-ca-cio-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2491--2491
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
 []|\OT1/lmr/m/n/12 Almacenamiento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2491--2491
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
 \OT1/lmr/m/n/12 en cache, co-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2491--2491
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
 \OT1/lmr/m/n/12 las, fil-tra-do y
  []
 
 
-Underfull \hbox (badness 4024) in paragraph at lines 2491--2491
+Underfull \hbox (badness 4024) in paragraph at lines 2500--2500
 \OT1/lmr/m/n/12 mi-no-ris-ta, ser-vi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2491--2491
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
 \OT1/lmr/m/n/12 cios fi-nan-cie-ros,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2491--2491
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
 \OT1/lmr/m/n/12 pu-bli-ci-dad y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2491--2491
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
 \OT1/lmr/m/n/12 trans-mi-sion de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 []|\OT1/lmr/m/n/12 Seguridad in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 te-gra-da pa-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 la au-to-ri-za-cion,
  []
 
 
-Underfull \hbox (badness 3701) in paragraph at lines 2492--2492
+Underfull \hbox (badness 3701) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 el ci-fra-do y la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 au-ten-ti-ca-cion,
  []
 
 
-Underfull \hbox (badness 4036) in paragraph at lines 2492--2492
+Underfull \hbox (badness 4036) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 esta des-ac-ti-va-da
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 2492--2492
+Underfull \hbox (badness 1137) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 de for-ma pre-de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 ter-mi-na-da pa-ra
  []
 
 
-Underfull \hbox (badness 5119) in paragraph at lines 2492--2492
+Underfull \hbox (badness 5119) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 fa-ci-li-tar su uso
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 den-tro de los
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 2492--2492
+Underfull \hbox (badness 2689) in paragraph at lines 2501--2501
 []|\OT1/lmr/m/n/12 Seguridad in-cor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 []|\OT1/lmr/m/n/12 Se ini-cia au-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 tomati-ca-men-te
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 2492--2492
+Underfull \hbox (badness 1895) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 tec-cion y ofre-ce
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 su-ge-ren-cias de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 []|\OT1/lmr/m/n/12 Seguridad in-te-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 y apli-ca-cio-nes;
  []
 
 
-Underfull \hbox (badness 7740) in paragraph at lines 2492--2492
+Underfull \hbox (badness 7740) in paragraph at lines 2501--2501
 \OT1/lmr/m/n/12 re, ins-ta-la-cio-nes
  []
 
 
-Overfull \hbox (2.32904pt too wide) in paragraph at lines 2484--2495
+Overfull \hbox (2.32904pt too wide) in paragraph at lines 2493--2504
 [][] 
  []
 
-[82
+[78
 
-] [83] [84
+] [79]
 
-] [85
+LaTeX Warning: Citation 'js' on page 80 undefined on input line 2513.
+
+[80
+
+] [81
 
 ]
-<imagenes/amplify.png, id=1197, 821.31844pt x 335.00156pt>
+<imagenes/amplify.png, id=809, 821.31844pt x 335.00156pt>
 File: imagenes/amplify.png Graphic file (type png)
 <use imagenes/amplify.png>
-Package pdftex.def Info: imagenes/amplify.png  used on input line 2589.
+Package pdftex.def Info: imagenes/amplify.png  used on input line 2598.
 (pdftex.def)             Requested size: 410.6582pt x 167.50037pt.
- [86 <./imagenes/amplify.png>]
-<imagenes/respuesta.png, id=1203, 376.40625pt x 96.36pt>
+ [82 <./imagenes/amplify.png>]
+<imagenes/respuesta.png, id=816, 376.40625pt x 96.36pt>
 File: imagenes/respuesta.png Graphic file (type png)
 <use imagenes/respuesta.png>
-Package pdftex.def Info: imagenes/respuesta.png  used on input line 2620.
+Package pdftex.def Info: imagenes/respuesta.png  used on input line 2629.
 (pdftex.def)             Requested size: 188.20265pt x 48.17987pt.
- [87 <./imagenes/respuesta.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2648--2651
+ [83 <./imagenes/respuesta.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2657--2660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2648--2651
+Underfull \hbox (badness 10000) in paragraph at lines 2657--2660
 
  []
 
-<imagenes/diagrama_secuenciamc.jpeg, id=1209, 865.2325pt x 1284.8pt>
+<imagenes/diagrama_secuenciamc.jpeg, id=823, 865.2325pt x 1284.8pt>
 File: imagenes/diagrama_secuenciamc.jpeg Graphic file (type jpg)
 <use imagenes/diagrama_secuenciamc.jpeg>
 Package pdftex.def Info: imagenes/diagrama_secuenciamc.jpeg  used on input line
- 2653.
+ 2662.
 (pdftex.def)             Requested size: 432.61519pt x 642.39844pt.
-[88
+[84
 
-] [89 <./imagenes/diagrama_secuenciamc.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 2668--2670
+] [85 <./imagenes/diagrama_secuenciamc.jpeg>]
+
+LaTeX Warning: Reference `sec:microordenador' on page 86 undefined on input lin
+e 2671.
+
+
+LaTeX Warning: Reference `sec:camara' on page 86 undefined on input line 2671.
+
+
+LaTeX Warning: Reference `sec:alarma' on page 86 undefined on input line 2671.
+
+
+LaTeX Warning: Reference `sec:almacenamientoexterno' on page 86 undefined on in
+put line 2671.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2677--2679
 
  []
 
-<imagenes/nanodim.jpg, id=1222, 752.8125pt x 421.575pt>
+<imagenes/nanodim.jpg, id=834, 752.8125pt x 421.575pt>
 File: imagenes/nanodim.jpg Graphic file (type jpg)
 <use imagenes/nanodim.jpg>
-Package pdftex.def Info: imagenes/nanodim.jpg  used on input line 2674.
+Package pdftex.def Info: imagenes/nanodim.jpg  used on input line 2683.
 (pdftex.def)             Requested size: 451.69098pt x 252.94695pt.
-<imagenes/nano.jpg, id=1223, 517.18219pt x 405.76593pt>
+<imagenes/nano.jpg, id=835, 517.18219pt x 405.76593pt>
 File: imagenes/nano.jpg Graphic file (type jpg)
 <use imagenes/nano.jpg>
-Package pdftex.def Info: imagenes/nano.jpg  used on input line 2681.
+Package pdftex.def Info: imagenes/nano.jpg  used on input line 2690.
 (pdftex.def)             Requested size: 206.8692pt x 162.3035pt.
-[90 <./imagenes/nanodim.jpg>]
-<imagenes/KY-006.jpg, id=1228, 803.0pt x 803.0pt>
+[86 <./imagenes/nanodim.jpg> <./imagenes/nano.jpg>]
+<imagenes/KY-006.jpg, id=841, 803.0pt x 803.0pt>
 File: imagenes/KY-006.jpg Graphic file (type jpg)
 <use imagenes/KY-006.jpg>
-Package pdftex.def Info: imagenes/KY-006.jpg  used on input line 2691.
+Package pdftex.def Info: imagenes/KY-006.jpg  used on input line 2700.
 (pdftex.def)             Requested size: 160.59715pt x 160.59715pt.
 File: imagenes/imx.jpg Graphic file (type jpg)
 <use imagenes/imx.jpg>
-Package pdftex.def Info: imagenes/imx.jpg  used on input line 2700.
+Package pdftex.def Info: imagenes/imx.jpg  used on input line 2709.
 (pdftex.def)             Requested size: 172.54156pt x 143.9352pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2706--2707
+Underfull \hbox (badness 10000) in paragraph at lines 2715--2716
 
  []
 
-[91 <./imagenes/nano.jpg> <./imagenes/KY-006.jpg>]
-<imagenes/Jumpers.jpg, id=1234, 570.13pt x 503.8825pt>
+<imagenes/Jumpers.jpg, id=842, 570.13pt x 503.8825pt>
 File: imagenes/Jumpers.jpg Graphic file (type jpg)
 <use imagenes/Jumpers.jpg>
-Package pdftex.def Info: imagenes/Jumpers.jpg  used on input line 2709.
+Package pdftex.def Info: imagenes/Jumpers.jpg  used on input line 2718.
 (pdftex.def)             Requested size: 228.04796pt x 201.54942pt.
-<imagenes/MicroSD.png, id=1235, 220.825pt x 91.34125pt>
+[87 <./imagenes/KY-006.jpg>]
+<imagenes/MicroSD.png, id=850, 220.825pt x 91.34125pt>
 File: imagenes/MicroSD.png Graphic file (type png)
 <use imagenes/MicroSD.png>
-Package pdftex.def Info: imagenes/MicroSD.png  used on input line 2721.
+Package pdftex.def Info: imagenes/MicroSD.png  used on input line 2730.
 (pdftex.def)             Requested size: 110.41222pt x 45.6705pt.
- [92 <./imagenes/Jumpers.jpg> <./imagenes/MicroSD.png>]
-<imagenes/sixfabhat.png, id=1241, 353.82187pt x 319.94531pt>
+ [88 <./imagenes/Jumpers.jpg> <./imagenes/MicroSD.png>]
+<imagenes/sixfabhat.png, id=858, 353.82187pt x 319.94531pt>
 File: imagenes/sixfabhat.png Graphic file (type png)
 <use imagenes/sixfabhat.png>
-Package pdftex.def Info: imagenes/sixfabhat.png  used on input line 2729.
+Package pdftex.def Info: imagenes/sixfabhat.png  used on input line 2738.
 (pdftex.def)             Requested size: 141.52623pt x 127.97585pt.
-<imagenes/LE910.png, id=1242, 258.9675pt x 280.79906pt>
+<imagenes/LE910.png, id=859, 258.9675pt x 280.79906pt>
 File: imagenes/LE910.png Graphic file (type png)
 <use imagenes/LE910.png>
-Package pdftex.def Info: imagenes/LE910.png  used on input line 2739.
+Package pdftex.def Info: imagenes/LE910.png  used on input line 2748.
 (pdftex.def)             Requested size: 181.27599pt x 196.558pt.
- [93 <./imagenes/sixfabhat.png> <./imagenes/LE910.png>]
-<imagenes/lteantena.png, id=1249, 411.03563pt x 415.5525pt>
+ [89 <./imagenes/sixfabhat.png> <./imagenes/LE910.png>]
+<imagenes/lteantena.png, id=868, 411.03563pt x 415.5525pt>
 File: imagenes/lteantena.png Graphic file (type png)
 <use imagenes/lteantena.png>
-Package pdftex.def Info: imagenes/lteantena.png  used on input line 2753.
+Package pdftex.def Info: imagenes/lteantena.png  used on input line 2762.
 (pdftex.def)             Requested size: 164.41133pt x 166.21805pt.
- [94 <./imagenes/lteantena.png>]
-<imagenes/waveshare.jpg, id=1255, 584.1825pt x 432.86719pt>
+ [90 <./imagenes/lteantena.png>]
+<imagenes/waveshare.jpg, id=875, 584.1825pt x 432.86719pt>
 File: imagenes/waveshare.jpg Graphic file (type jpg)
 <use imagenes/waveshare.jpg>
-Package pdftex.def Info: imagenes/waveshare.jpg  used on input line 2768.
+Package pdftex.def Info: imagenes/waveshare.jpg  used on input line 2777.
 (pdftex.def)             Requested size: 350.51219pt x 259.7223pt.
-<imagenes/wavecompo.jpg, id=1256, 587.94656pt x 179.16937pt>
+<imagenes/wavecompo.jpg, id=876, 587.94656pt x 179.16937pt>
 File: imagenes/wavecompo.jpg Graphic file (type jpg)
 <use imagenes/wavecompo.jpg>
-Package pdftex.def Info: imagenes/wavecompo.jpg  used on input line 2776.
+Package pdftex.def Info: imagenes/wavecompo.jpg  used on input line 2785.
 (pdftex.def)             Requested size: 470.3579pt x 143.33568pt.
- [95 <./imagenes/waveshare.jpg> <./imagenes/wavecompo.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 2788--2790
+ [91 <./imagenes/waveshare.jpg> <./imagenes/wavecompo.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 2797--2799
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2788--2790
+Underfull \hbox (badness 10000) in paragraph at lines 2797--2799
 
  []
 
-<imagenes/actividades_vision.jpeg, id=1261, 819.06pt x 1284.8pt>
+<imagenes/actividades_vision.jpeg, id=884, 819.06pt x 1284.8pt>
 File: imagenes/actividades_vision.jpeg Graphic file (type jpg)
 <use imagenes/actividades_vision.jpeg>
 Package pdftex.def Info: imagenes/actividades_vision.jpeg  used on input line 2
-793.
+802.
 (pdftex.def)             Requested size: 368.5736pt x 578.15466pt.
-[96]
-<imagenes/flujo_vision.png, id=1266, 651.43375pt x 864.22874pt>
+[92]
+<imagenes/flujo_vision.png, id=889, 651.43375pt x 864.22874pt>
 File: imagenes/flujo_vision.png Graphic file (type png)
 <use imagenes/flujo_vision.png>
-Package pdftex.def Info: imagenes/flujo_vision.png  used on input line 2800.
+Package pdftex.def Info: imagenes/flujo_vision.png  used on input line 2809.
 (pdftex.def)             Requested size: 325.71606pt x 432.11331pt.
- [97 <./imagenes/actividades_vision.jpeg>] [98 <./imagenes/flujo_vision.png>]
-<imagenes/landmark.png, id=1277, 415.5525pt x 395.4775pt>
+ [93 <./imagenes/actividades_vision.jpeg>] [94 <./imagenes/flujo_vision.png>]
+<imagenes/landmark.png, id=901, 415.5525pt x 395.4775pt>
 File: imagenes/landmark.png Graphic file (type png)
 <use imagenes/landmark.png>
-Package pdftex.def Info: imagenes/landmark.png  used on input line 2818.
+Package pdftex.def Info: imagenes/landmark.png  used on input line 2827.
 (pdftex.def)             Requested size: 174.53085pt x 166.09941pt.
-<imagenes/MOR.png, id=1278, 209.28188pt x 164.86594pt>
+<imagenes/MOR.png, id=902, 209.28188pt x 164.86594pt>
 File: imagenes/MOR.png Graphic file (type png)
 <use imagenes/MOR.png>
-Package pdftex.def Info: imagenes/MOR.png  used on input line 2849.
+Package pdftex.def Info: imagenes/MOR.png  used on input line 2858.
 (pdftex.def)             Requested size: 104.64067pt x 82.43275pt.
- [99 <./imagenes/landmark.png (PNG copy)>] [100 <./imagenes/MOR.png>]
-<imagenes/DF-modCom.jpeg, id=1290, 492.84125pt x 914.41624pt>
+ [95 <./imagenes/landmark.png (PNG copy)>] [96 <./imagenes/MOR.png>]
+<imagenes/DF-modCom.jpeg, id=917, 492.84125pt x 914.41624pt>
 File: imagenes/DF-modCom.jpeg Graphic file (type jpg)
 <use imagenes/DF-modCom.jpeg>
-Package pdftex.def Info: imagenes/DF-modCom.jpeg  used on input line 2876.
+Package pdftex.def Info: imagenes/DF-modCom.jpeg  used on input line 2885.
 (pdftex.def)             Requested size: 295.70702pt x 548.65398pt.
-
-[101 <./imagenes/DF-modCom.jpeg>]
-<imagenes/DG-modCom.jpeg, id=1295, 814.04124pt x 835.12pt>
+ [97 <./imagenes/DF-modCom.jpeg>]
+<imagenes/DG-modCom.jpeg, id=924, 814.04124pt x 835.12pt>
 File: imagenes/DG-modCom.jpeg Graphic file (type jpg)
 <use imagenes/DG-modCom.jpeg>
-Package pdftex.def Info: imagenes/DG-modCom.jpeg  used on input line 2886.
+Package pdftex.def Info: imagenes/DG-modCom.jpeg  used on input line 2895.
 (pdftex.def)             Requested size: 407.01962pt x 417.55898pt.
- [102 <./imagenes/DG-modCom.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 2896--2897
+ [98 <./imagenes/DG-modCom.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 2905--2906
 
  []
 
-<imagenes/DisenoMEB.png, id=1301, 1064.97874pt x 533.995pt>
+
+LaTeX Warning: Reference `fig:DisenoMEB' on page 99 undefined on input line 290
+7.
+
+<imagenes/DisenoMEB.png, id=930, 1064.97874pt x 533.995pt>
 File: imagenes/DisenoMEB.png Graphic file (type png)
 <use imagenes/DisenoMEB.png>
-Package pdftex.def Info: imagenes/DisenoMEB.png  used on input line 2902.
+Package pdftex.def Info: imagenes/DisenoMEB.png  used on input line 2911.
 (pdftex.def)             Requested size: 532.48807pt x 266.99684pt.
 
-Overfull \hbox (32.00407pt too wide) in paragraph at lines 2902--2903
+Overfull \hbox (32.00407pt too wide) in paragraph at lines 2911--2912
  [] 
  []
 
-[103 <./imagenes/DisenoMEB.png>]
-<imagenes/diagramaMEB.jpeg, id=1308, 442.65375pt x 293.095pt>
+[99 <./imagenes/DisenoMEB.png>]
+<imagenes/diagramaMEB.jpeg, id=937, 442.65375pt x 293.095pt>
 File: imagenes/diagramaMEB.jpeg Graphic file (type jpg)
 <use imagenes/diagramaMEB.jpeg>
-Package pdftex.def Info: imagenes/diagramaMEB.jpeg  used on input line 2911.
+Package pdftex.def Info: imagenes/diagramaMEB.jpeg  used on input line 2920.
 (pdftex.def)             Requested size: 309.8555pt x 205.16508pt.
- [104 <./imagenes/diagramaMEB.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 2924--2925
+ [100 <./imagenes/diagramaMEB.jpeg>]
+
+LaTeX Warning: Citation 'NodeJs' on page 101 undefined on input line 2931.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2933--2934
 
  []
 
-<imagenes/diagramaclasesaw.jpg, id=1314, 763.85374pt x 643.40375pt>
+<imagenes/diagramaclasesaw.jpg, id=943, 763.85374pt x 643.40375pt>
 File: imagenes/diagramaclasesaw.jpg Graphic file (type jpg)
 <use imagenes/diagramaclasesaw.jpg>
-Package pdftex.def Info: imagenes/diagramaclasesaw.jpg  used on input line 2930
+Package pdftex.def Info: imagenes/diagramaclasesaw.jpg  used on input line 2939
 .
 (pdftex.def)             Requested size: 458.31578pt x 386.04523pt.
-[105
+
+LaTeX Warning: Reference `fig:clasesaw' on page 101 undefined on input line 294
+4.
+
+[101
 
  <./imagenes/diagramaclasesaw.jpg>]
-<imagenes/sec_reporte_incidencia.png, id=1321, 438.63875pt x 232.87pt>
+<imagenes/sec_reporte_incidencia.png, id=949, 438.63875pt x 232.87pt>
 File: imagenes/sec_reporte_incidencia.png Graphic file (type png)
 <use imagenes/sec_reporte_incidencia.png>
 Package pdftex.def Info: imagenes/sec_reporte_incidencia.png  used on input lin
-e 2939.
+e 2948.
 (pdftex.def)             Requested size: 263.18527pt x 139.72307pt.
-<imagenes/sec_ubicacion.png, id=1322, 536.0025pt x 221.82875pt>
+<imagenes/sec_ubicacion.png, id=950, 536.0025pt x 221.82875pt>
 File: imagenes/sec_ubicacion.png Graphic file (type png)
 <use imagenes/sec_ubicacion.png>
-Package pdftex.def Info: imagenes/sec_ubicacion.png  used on input line 2948.
+Package pdftex.def Info: imagenes/sec_ubicacion.png  used on input line 2957.
 (pdftex.def)             Requested size: 375.19919pt x 155.27905pt.
-<imagenes/sec_rcontrasena.jpg, id=1323, 507.8975pt x 319.1925pt>
+<imagenes/sec_rcontrasena.jpg, id=951, 507.8975pt x 319.1925pt>
 File: imagenes/sec_rcontrasena.jpg Graphic file (type jpg)
 <use imagenes/sec_rcontrasena.jpg>
-Package pdftex.def Info: imagenes/sec_rcontrasena.jpg  used on input line 2956.
+Package pdftex.def Info: imagenes/sec_rcontrasena.jpg  used on input line 2965.
 
 (pdftex.def)             Requested size: 304.74086pt x 191.51697pt.
- [106 <./imagenes/sec_reporte_incidencia.png> <./imagenes/sec_ubicacion.png> <.
+ [102 <./imagenes/sec_reporte_incidencia.png> <./imagenes/sec_ubicacion.png> <.
 /imagenes/sec_rcontrasena.jpg>]
-<imagenes/sec_confirmar.jpg, id=1330, 443.6575pt x 293.095pt>
+<imagenes/sec_confirmar.jpg, id=960, 443.6575pt x 293.095pt>
 File: imagenes/sec_confirmar.jpg Graphic file (type jpg)
 <use imagenes/sec_confirmar.jpg>
-Package pdftex.def Info: imagenes/sec_confirmar.jpg  used on input line 2964.
+Package pdftex.def Info: imagenes/sec_confirmar.jpg  used on input line 2973.
 (pdftex.def)             Requested size: 266.19655pt x 175.85834pt.
-<imagenes/sec_perfil.jpg, id=1331, 554.07pt x 293.095pt>
+<imagenes/sec_perfil.jpg, id=961, 554.07pt x 293.095pt>
 File: imagenes/sec_perfil.jpg Graphic file (type jpg)
 <use imagenes/sec_perfil.jpg>
-Package pdftex.def Info: imagenes/sec_perfil.jpg  used on input line 2972.
+Package pdftex.def Info: imagenes/sec_perfil.jpg  used on input line 2981.
 (pdftex.def)             Requested size: 332.44456pt x 175.85834pt.
-<imagenes/sec_registrar.jpg, id=1332, 420.57124pt x 293.095pt>
+<imagenes/sec_registrar.jpg, id=962, 420.57124pt x 293.095pt>
 File: imagenes/sec_registrar.jpg Graphic file (type jpg)
 <use imagenes/sec_registrar.jpg>
-Package pdftex.def Info: imagenes/sec_registrar.jpg  used on input line 2979.
+Package pdftex.def Info: imagenes/sec_registrar.jpg  used on input line 2988.
 (pdftex.def)             Requested size: 252.3447pt x 175.85834pt.
- [107 <./imagenes/sec_confirmar.jpg> <./imagenes/sec_perfil.jpg>]
-<imagenes/sec_modificar.jpg, id=1337, 507.8975pt x 293.095pt>
+ [103 <./imagenes/sec_confirmar.jpg> <./imagenes/sec_perfil.jpg>]
+<imagenes/sec_modificar.jpg, id=971, 507.8975pt x 293.095pt>
 File: imagenes/sec_modificar.jpg Graphic file (type jpg)
 <use imagenes/sec_modificar.jpg>
-Package pdftex.def Info: imagenes/sec_modificar.jpg  used on input line 2985.
+Package pdftex.def Info: imagenes/sec_modificar.jpg  used on input line 2994.
 (pdftex.def)             Requested size: 304.74086pt x 175.85834pt.
-<imagenes/sec_eliminar.jpg, id=1338, 516.93124pt x 313.17pt>
+<imagenes/sec_eliminar.jpg, id=972, 516.93124pt x 313.17pt>
 File: imagenes/sec_eliminar.jpg Graphic file (type jpg)
 <use imagenes/sec_eliminar.jpg>
-Package pdftex.def Info: imagenes/sec_eliminar.jpg  used on input line 2993.
+Package pdftex.def Info: imagenes/sec_eliminar.jpg  used on input line 3002.
 (pdftex.def)             Requested size: 310.16113pt x 187.90344pt.
-<imagenes/sec_estado.jpg, id=1339, 653.44125pt x 303.1325pt>
+<imagenes/sec_estado.jpg, id=973, 653.44125pt x 303.1325pt>
 File: imagenes/sec_estado.jpg Graphic file (type jpg)
 <use imagenes/sec_estado.jpg>
-Package pdftex.def Info: imagenes/sec_estado.jpg  used on input line 3001.
+Package pdftex.def Info: imagenes/sec_estado.jpg  used on input line 3010.
 (pdftex.def)             Requested size: 392.06776pt x 181.8809pt.
- [108 <./imagenes/sec_registrar.jpg> <./imagenes/sec_modificar.jpg> <./imagenes
+ [104 <./imagenes/sec_registrar.jpg> <./imagenes/sec_modificar.jpg> <./imagenes
 /sec_eliminar.jpg>]
-<imagenes/login.png, id=1344, 1445.4pt x 903.375pt>
+<imagenes/login.png, id=981, 1445.4pt x 903.375pt>
 File: imagenes/login.png Graphic file (type png)
 <use imagenes/login.png>
-Package pdftex.def Info: imagenes/login.png  used on input line 3011.
+Package pdftex.def Info: imagenes/login.png  used on input line 3020.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
-<imagenes/homescreen.png, id=1346, 1445.4pt x 903.375pt>
+
+
+LaTeX Warning: Reference `fig:login' on page 105 undefined on input line 3024.
+
+<imagenes/homescreen.png, id=982, 1445.4pt x 903.375pt>
 File: imagenes/homescreen.png Graphic file (type png)
 <use imagenes/homescreen.png>
-Package pdftex.def Info: imagenes/homescreen.png  used on input line 3018.
+Package pdftex.def Info: imagenes/homescreen.png  used on input line 3027.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
+[105 <./imagenes/sec_estado.jpg> <./imagenes/login.png>]
 
-[109 <./imagenes/sec_estado.jpg> <./imagenes/login.png>]
-<imagenes/profile.png, id=1353, 1445.4pt x 903.375pt>
+LaTeX Warning: Reference `fig:homescreen' on page 106 undefined on input line 3
+032.
+
+<imagenes/profile.png, id=989, 1445.4pt x 903.375pt>
 File: imagenes/profile.png Graphic file (type png)
 <use imagenes/profile.png>
-Package pdftex.def Info: imagenes/profile.png  used on input line 3026.
+Package pdftex.def Info: imagenes/profile.png  used on input line 3035.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
- [110 <./imagenes/homescreen.png> <./imagenes/profile.png>]
-<imagenes/incident.png, id=1360, 1445.4pt x 903.375pt>
+
+LaTeX Warning: Reference `fig:profile' on page 106 undefined on input line 3040
+.
+
+[106 <./imagenes/homescreen.png> <./imagenes/profile.png>]
+<imagenes/incident.png, id=997, 1445.4pt x 903.375pt>
 File: imagenes/incident.png Graphic file (type png)
 <use imagenes/incident.png>
-Package pdftex.def Info: imagenes/incident.png  used on input line 3034.
+Package pdftex.def Info: imagenes/incident.png  used on input line 3043.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
-<imagenes/location.png, id=1362, 1445.4pt x 903.375pt>
+
+
+LaTeX Warning: Reference `fig:incident' on page 107 undefined on input line 304
+8.
+
+<imagenes/location.png, id=998, 1445.4pt x 903.375pt>
 File: imagenes/location.png Graphic file (type png)
 <use imagenes/location.png>
-Package pdftex.def Info: imagenes/location.png  used on input line 3042.
+Package pdftex.def Info: imagenes/location.png  used on input line 3051.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
- [111 <./imagenes/incident.png> <./imagenes/location.png>] [112]
-<imagenes/ModeladoBD.png, id=1374, 1327.96124pt x 634.37pt>
+[107 <./imagenes/incident.png> <./imagenes/location.png>]
+
+LaTeX Warning: Reference `fig:location' on page 108 undefined on input line 305
+7.
+
+[108]
+<imagenes/ModeladoBD.png, id=1011, 1327.96124pt x 634.37pt>
 File: imagenes/ModeladoBD.png Graphic file (type png)
 <use imagenes/ModeladoBD.png>
-Package pdftex.def Info: imagenes/ModeladoBD.png  used on input line 3057.
+Package pdftex.def Info: imagenes/ModeladoBD.png  used on input line 3066.
 (pdftex.def)             Requested size: 398.39145pt x 190.31245pt.
-<imagenes/ModeloConductores.jpg, id=1375, 361.35pt x 74.52844pt>
+<imagenes/ModeloConductores.jpg, id=1012, 361.35pt x 74.52844pt>
 File: imagenes/ModeloConductores.jpg Graphic file (type jpg)
 <use imagenes/ModeloConductores.jpg>
-Package pdftex.def Info: imagenes/ModeloConductores.jpg  used on input line 306
-5.
+Package pdftex.def Info: imagenes/ModeloConductores.jpg  used on input line 307
+4.
 (pdftex.def)             Requested size: 325.21199pt x 67.07495pt.
- [113
+ [109
 
  <./imagenes/ModeladoBD.png> <./imagenes/ModeloConductores.jpg>]
-<imagenes/ModeloIncidencias.jpg, id=1381, 288.3272pt x 156.585pt>
+<imagenes/ModeloIncidencias.jpg, id=1021, 288.3272pt x 156.585pt>
 File: imagenes/ModeloIncidencias.jpg Graphic file (type jpg)
 <use imagenes/ModeloIncidencias.jpg>
-Package pdftex.def Info: imagenes/ModeloIncidencias.jpg  used on input line 307
-4.
+Package pdftex.def Info: imagenes/ModeloIncidencias.jpg  used on input line 308
+3.
 (pdftex.def)             Requested size: 259.49207pt x 140.92519pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3079--3080
+Underfull \hbox (badness 10000) in paragraph at lines 3088--3089
 
  []
 
-<imagenes/cognito.jpg, id=1382, 505.89pt x 467.49657pt>
+<imagenes/cognito.jpg, id=1022, 505.89pt x 467.49657pt>
 File: imagenes/cognito.jpg Graphic file (type jpg)
 <use imagenes/cognito.jpg>
-Package pdftex.def Info: imagenes/cognito.jpg  used on input line 3089.
+Package pdftex.def Info: imagenes/cognito.jpg  used on input line 3098.
 (pdftex.def)             Requested size: 252.94437pt x 233.74771pt.
-[114 <./imagenes/ModeloIncidencias.jpg> <./imagenes/cognito.jpg>] [115]
-[116]
-Underfull \hbox (badness 4660) in paragraph at lines 3143--3144
-[]\OT1/lmr/m/n/12 "Sistemas de de-tec-cion de som-no-len-cia en con-duc-to-res
-:Inicio, de-sa-rro-llo y fu-tu-
- []
-
-
-Underfull \hbox (badness 2119) in paragraph at lines 3143--3144
-\OT1/lmr/m/n/12 ro", Re-vis-ta In-ge-niera y Re-gion., vol. 13, n.\TS1/lmr/m
-/n/12 º \OT1/lmr/m/n/12 1, pp. 159?168, 2015. Dis-po-ni-ble:
- []
-
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-3150.
-(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
-File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 3152--3153
-[]\OT1/lmr/m/n/12 nvidia. (s.f.). NVI-DIA jetson nano. https://www.nvidia.com/e
-s-la/autonomous-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3158--3159
-[]\OT1/lmr/m/n/12 Sixfab. -asp-berry Pi IP54 Out-door Pro-ject En-clo-su-re - S
-ix-fab". Six-fab.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3158--3159
-\OT1/lmr/m/n/12 https://sixfab.com/product/raspberry-pi-ip54-outdoor-iot-projec
-t-enclosure/ (ac-ce-di-do
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3171--3172
-[]\OT1/lmr/m/n/12 https://www.alteryx.com/es-419/glossary/supervised-vs-unsuper
-vised-
- []
-
-
-Overfull \hbox (124.74988pt too wide) in paragraph at lines 3171--3172
-\OT1/lmr/m/n/12 learning#: :text=Hay$ $%20una$ $%20diferencia$ $%20clave$ $%20e
-ntre,etiquetados$ $%20con$ $%20la$ $%20respuesta$ $%20correcta 
- []
-
-[117]
-Underfull \hbox (badness 10000) in paragraph at lines 3176--3177
-[]\OT1/lmr/m/n/12 Kanojia, G., Ka-no-ji-ya, V., & Men-don-za, G. (2020, di-ciem
--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3176--3177
-\OT1/lmr/m/n/12 bre). De-tec-tion of drow-si-ness and dis-trac-tion of dri-vers
- using cnn.
- []
-
-
-Underfull \hbox (badness 5756) in paragraph at lines 3192--3193
-[]\OT1/lmr/m/n/12 Sols, H. F. (2022, 13 de sep-tiem-bre). Sis-te-ma de de-tec
--cion de som-no-len-cia.
- []
-
-
-Underfull \hbox (badness 1983) in paragraph at lines 3196--3197
-[]\OT1/lmr/m/n/12 E. L. Be-na-vi-des y M. M. Me-di-na. "Sis-te-ma Ba-sa-do en l
-a De-tec-cion y no-ti-fi-ca-
- []
-
-[118]
-Underfull \hbox (badness 1571) in paragraph at lines 3213--3216
-[]\OT1/lmr/m/n/12 M. Paez y Emi-lio Abar-ca. \OT1/lmr/m/it/12 Re-su-men Bo-le-t
-i-nes\OT1/lmr/m/n/12 , Ins-ti-tu-to Me-xi-cano del Trans-por-te.
- []
-
-
-Underfull \hbox (badness 1052) in paragraph at lines 3213--3216
-\OT1/lmr/m/n/12 https://imt.mx/resumen-boletines.html?IdArticulo=449&amp;IdBole
-tin=168 (ac-ce-di-do el
- []
-
-[119]
-Underfull \hbox (badness 10000) in paragraph at lines 3257--3259
-[]\OT1/lmr/m/n/12 Tarify.Win!\OT1/lmr/m/it/12 Red WWAN ?`Que es, pa-ra que si
-r-ve y como fun-cio-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3261--3263
-[]\OT1/lmr/m/n/12 La Ro-sa, A. (2021, 13 ju-lio). \OT1/lmr/m/it/12 LP-WAN co-mo
- ba-se de co-mu-ni-ca-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3261--3263
-\OT1/lmr/m/it/12 cio-nes pa-ra IoT \OT1/lmr/m/n/12 Pan-do-ra FMS-The Mo-ni-to-r
-ing Blog. Re-cu-pe-ra-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3261--3263
-\OT1/lmr/m/n/12 do 8 de ma-yo de 2022, de https://pandorafms.com/blog/es/que-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3264--3265
-[]\OT1/lmr/m/it/12 LTE-M, el des-pe-gue es-pe-ra-do pa-ra IoT. Ha-ble-mos de em
--pre-sas.
- []
-
-
-Underfull \hbox (badness 2460) in paragraph at lines 3268--3269
-[]\OT1/lmr/m/n/12 M. Cid. \OT1/lmr/m/it/12 Ca-te-goras LTE o 4G: que son y q
-ue ve-lo-ci-da-des maxi-mas ofre-ce ca-da
- []
-
-
-Underfull \hbox (badness 2343) in paragraph at lines 3268--3269
-\OT1/lmr/m/it/12 una de ellas. \OT1/lmr/m/n/12 Xa-ta-ka Movil - Telefo-nos m
-ovi-les, ta-ri-fas, ope-ra-do-res de te-le-fona.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3268--3269
-\OT1/lmr/m/n/12 https://www.xatakamovil.com/conectividad/categorias-lte-o-4g-qu
-e-son-y-que-velocidades-
- []
-
-
-Overfull \hbox (566.2965pt too wide) in paragraph at lines 3272--3273
-[]\OT1/lmr/m/it/12 MP4 - Ecu-Red. \OT1/lmr/m/n/12 Ecu-Red. https://www.ecured.c
-u/MP4#: :text=Un$ $%20archivo$ $%20de$ $%20MP4$ $%20lleva$ $%20sonido$ $%20y$ $
-%20video,de$ $%2020$ $%20segundos$ $%20de$ $%20clips$ $%20de$ $%20audio$ $%20(M
-P4/20s). 
- []
-
-[120] (TT1.aux
-LaTeX Info: Redefining \. on input line 26.
-LaTeX Info: Redefining \% on input line 26.
+[110 <./imagenes/ModeloIncidencias.jpg> <./imagenes/cognito.jpg>] [111]
+[112] [113] (TT1.aux
+LaTeX Info: Redefining \sptext on input line 30.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
 )
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `TT1.out' has not changed.
 (rerunfilecheck)             Checksum: 602C888AEEC43D54AFCC7731AAA4D722;25967.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                TT1
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'TT1.run.xml'.
+\openout1 = `TT1.run.xml'.
+
  ) 
 Here is how much of TeX's memory you used:
- 14781 strings out of 478927
- 233427 string characters out of 2852536
- 552259 words of memory out of 3000000
- 31898 multiletter control sequences out of 15000+600000
- 448691 words of font info for 56 fonts, out of 8000000 for 9000
+ 21692 strings out of 478927
+ 370078 string characters out of 2852536
+ 1098569 words of memory out of 3000000
+ 38832 multiletter control sequences out of 15000+600000
+ 448381 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,18n,66p,1340b,686s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}
-{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:
-/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Use
-rs/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Use
-rs/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Use
-rs/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Use
-rs/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Use
-rs/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Us
-ers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Us
-ers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Us
-ers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Use
-rs/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/User
-s/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users
-/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/a
-lang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/ala
-ng/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/ala
-ng/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/ala
-ng/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/alan
-g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on TT1.pdf (120 pages, 4948451 bytes).
+ 60i,18n,66p,1340b,1881s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{
+C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/U
+sers/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/U
+sers/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/U
+sers/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/U
+sers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/U
+sers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/
+Users/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/
+Users/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/
+Users/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/U
+sers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Us
+ers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Use
+rs/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users
+/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/a
+lang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/a
+lang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/a
+lang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on TT1.pdf (113 pages, 4831496 bytes).
 PDF statistics:
- 1585 PDF objects out of 1728 (max. 8388607)
- 400 named destinations out of 1000 (max. 500000)
+ 1176 PDF objects out of 1200 (max. 8388607)
+ 335 named destinations out of 1000 (max. 500000)
  976 words of extra memory for PDF output out of 10000 (max. 10000000)
 
