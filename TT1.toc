@@ -25,7 +25,6 @@
 \contentsline {subsubsection}{\numberline {5.1.9}LTE-M}{23}{subsubsection.5.1.9}%
 \contentsline {subsubsection}{\numberline {5.1.10}Teorema de Shannon-Hartley}{24}{subsubsection.5.1.10}%
 \contentsline {subsubsection}{\numberline {5.1.11}Geolocalizaci\'on}{25}{subsubsection.5.1.11}%
-\contentsline {subsubsection}{\numberline {5.1.12}Funcionamiento}{25}{subsubsection.5.1.12}%
 \contentsline {subsection}{\numberline {5.2}Estado del Arte}{26}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}\emph {Driver Drowsiness Detection Using Machine Learning with Visual Behaviour}}{26}{subsubsection.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.2.2}\emph {Detection Of Drowsiness And Distraction Of Drivers Using CNN}}{26}{subsubsection.5.2.2}%
@@ -67,9 +66,9 @@
 \contentsline {subsubsection}{\numberline {6.3.4}An\'alisis del Subm\'odulo de Cobertura}{60}{subsubsection.6.3.4}%
 \contentsline {subsection}{\numberline {6.4}An\'alisis del M\'odulo de Estaci\'on Base}{63}{subsection.6.4}%
 \contentsline {subsubsection}{\numberline {6.4.1}An\'alisis de la Aplicaci\'on Web}{69}{subsubsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.5}An\'alisis y Elecci\'on del manejador de bases de datos }{79}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}An\'alisis y Elecci\'on de lenguajes de programaci\'on web}{81}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}An\'alisis y Elecci\'on del servidor de alojamiento }{82}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.4.2}An\'alisis y Elecci\'on del manejador de bases de datos }{79}{subsubsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.3}An\'alisis y Elecci\'on de lenguajes de programaci\'on web}{81}{subsubsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.4}An\'alisis y Elecci\'on del servidor de alojamiento }{82}{subsubsection.6.4.4}%
 \contentsline {section}{\numberline {7}Cap\IeC {\'\i }tulo IV: Dise\~no}{85}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Dise\~no del M\'odulo Central de Procesamiento}{85}{subsection.7.1}%
 \contentsline {subsubsection}{\numberline {7.1.1}Elecci\'on de la Unidad Contenedora de Procesamiento}{87}{subsubsection.7.1.1}%
