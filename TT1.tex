@@ -100,16 +100,12 @@ Gracias a los avances tecnológicos en los últimos años, se han comenzado a desar
 %Falta referencias: https://pure.coventry.ac.uk/ws/portalfiles/portal/40893306/Binder3.pdf %
 Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores. Donde se han realizado diversos estudios y soluciones que intentan dar respuesta al problema de monitoreo de la somnolencia. \\
 
-Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, conductor y carretera repercuten en la eficacia del sistema \cite{Sistemasdesomnolencia}.  \\
+Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, conductor y carretera repercuten en la eficacia del sistema.  \\
 
-
-Existen también sistemas que además de analizar el comportamiento del vehículo también analizan su entorno. Esto sistemas cuentan con cámaras frente al vehículo, donde se digitaliza el entorno del vehículo; posteriormente se analizan parámetros como la reacción del conductor frente a la dirección de su vehículo con respecto a la carretera, velocidad, comportamiento del vehículo frente a baches en la carretera y distancia con respecto al vehículo que esta adelante. Si se detecta un comportamiento anormal en los parámetros anteriormente mencionados, se procede a realizar las alertas necesarias para advertir al conductor. No obstante, estos sistemas suelen ser costosos y no toman en cuenta el estado del conductor.  \\
-
-Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG). \cite{Sistemasdesomnolencia}  \\  
-
+Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG).\\  
 Cabe mencionar que, entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede llegar a entorpecer el desempeño del conductor. \cite{Sistemasdesomnolencia}  \\
 
-Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que, los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia, sin embargo, son los métodos visuales más adecuados para dicho propósito. \cite{Sistemasdesomnolencia}   Por tanto, se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficacia en el sistema.  \\  
+Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que, los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia, sin embargo, son los métodos visuales más adecuados para dicho propósito. \cite{Sistemasdesomnolencia}   Por tanto, se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficacia en el sistema. \\  
 
 Debido a las dificultades que pueden presentarse en los sistemas a la hora de detectar la somnolencia y la eficacia de este, así como las dificultades que muchos de los sistemas anteriores presentan en cuanto al espacio y potabilidad, se hará uso del método de análisis de características visuales para brindar una mejora y complemento a los sistemas actuales, usando visión artificial, además de integrar un sistema de monitoreo que permita a un tercero seguir la ubicación del conductor y registrar las incidencias del mismo.  \\
 
@@ -216,11 +212,11 @@ Debido a que el presente proyecto conjunta la parte de software con hardware, se
 
 \item \textbf{Top-Down}
 
-La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas partes pueden ser llamadas modulos o subrutinas. Cada módulo puede ser probado individualmente \cite{Topdown}.  
+La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas partes pueden ser llamadas modulos o subrutinas. Cada módulo puede ser probado individualmente \cite{TopDown}.  
 
 \begin{center}
   \includegraphics[scale=0.56]{imagenes/Top-down}
-\captionof{figure}{Descomposición en la metodología \emph{Top-Down}. \cite{Topdown}}
+\captionof{figure}{Descomposición en la metodología \emph{Top-Down}. \cite{TopDown}}
  \label{fig:neurona}
 \end{center}
 
@@ -229,7 +225,7 @@ Utilizando la metodología Top-Down, se puede dividir el sistema en módulos que s
 
 \item \textbf{UML}
 
-UML es el estándar de la industria para modelar sistemas orientados a objetos \cite{kendall}. UML incluye un conjunto de herramientas que permite visualizar la construcción de un sistema orientado a objetos. Al trabajar por iteraciones, se aborda de manera cada vez con más detalle el diseño de sistema, hasta que se defina con claridad las relaciones de cada uno de los objetos del sistema. Uno de las principales ventajas de UML es la reutilización de objetos, esto permite reducir costo de desarrollo así como de mantenimiento de los programas.En este proyecto se hará uso de uml para el análsis y diseño de cada módulo.
+UML es el estándar de la industria para modelar sistemas orientados a objetos \cite{kendall}. UML incluye un conjunto de herramientas que permite visualizar la construcción de un sistema orientado a objetos. Al trabajar por iteraciones, se aborda de manera cada vez con más detalle el diseño de sistema, hasta que se defina con claridad las relaciones de cada uno de los objetos del sistema. Uno de las principales ventajas de UML es la reutilización de objetos, esto permite reducir costo de desarrollo así como de mantenimiento de los programas. En este proyecto se hará uso de uml para el análsis y diseño de cada módulo.
 
 \end{itemize}
 
@@ -440,10 +436,10 @@ Además de esto, una CDN es capaz de detectar cambios en la información existente
 
 \subsubsection{Estándares y Protocolos de Comunicación Inalámbrica}
 
-Para transferir datos o información de un punto a otro sin la utilización de cableado o algún medio físico, tenemos las redes inalámbricas que utilizan ondas de radio para conectar a los 
+Para transferir datos o información de un punto a otro sin la utilización de cableado o algún medio físico, existen las redes inalámbricas que utilizan ondas de radio para conectar a los 
 dispositivos permitiendo así, a los dispositivos remotos, se conecten sin 
 dificultad y sin importar que estos dispositivos estén a unos metros o incluso a varios 
-kilómetros de distancia \cite{Referencian1}. Se dividen en 4 tipos dependiendo del alcance requerido y se definen por el estándar 802.11 del IEEE que es el organismo de estandarización internacional \cite{Referencian2}.
+kilómetros de distancia. Se dividen en 4 tipos dependiendo del alcance requerido y se definen por el estándar 802.11 del IEEE que es el organismo de estandarización internacional \cite{Referencian2}.
 
 \begin{itemize}
 
@@ -3140,26 +3136,61 @@ El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas d
 
 \bibitem{Sistemasdesomnolencia}  "Sistemas de detección de somnolencia en conductores:Inicio, desarrollo y futuro", Revista Ingeniería y Región., vol. 13, n.º 1, pp. 159?168, 2015. Disponible: https://journalusco.edu.co/index.php/iregion/article/view/717/1372 
 
+
+\bibitem{TopDown} Metodología top-down. (s.f.) \url{http://163.10.22.82/OAS/modularizacion/metodologa_topdown.html}
+
+
+\bibitem{kendall} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
+
+
 \bibitem{intensidad} Roehrs T, Carskadon MA, Dement WC, Roth \emph{T. Daytime 
 Sleepiness and alertness}. Publicado en: Kryger MH, Roth T, Dement WC, 
 eds. \emph{Principles and Practice of Sleep Medicine}, 4th ed: Saunders; 
 2005:39-49.
 
-\bibitem{TopDown} Metodología top-down. (s.f.) \url{http://163.10.22.82/OAS/modularizacion/metodologa_topdown.html}
-
 \bibitem{JetsonNano} nvidia. (s.f.). NVIDIA jetson nano. https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano/
 
 \bibitem {vision} David A. Forsyth, Jean Ponce, \emph{Computer Vision a Modern Approach}, Second Edition, Pearson, 2012
 
+
+\bibitem{Referencia0} Fernando Berzal, \emph{ Redes Neuronales y Deep Learning}, Granada, 2018
+
+
 \bibitem {CNNpresentacion} Todt, E., Krinski, B. A. (2019, 30 de noviembre). Convolutional neural network - CNN. \url{https://www.inf.ufpr.br/todt/IAaplicada/CNN_Presentation.pdf}
-
-\bibitem{sixfab} Sixfab. "Raspberry Pi IP54 Outdoor Project Enclosure - Sixfab". Sixfab. https://sixfab.com/product/raspberry-pi-ip54-outdoor-iot-project-enclosure/ (accedido el 2 de enero de 2023).
-
-\bibitem{kendall} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
 
 
 \bibitem{viola}Viola P.; Jones M, \emph{Rapid Object Detection
 using a Boosted Cascade of Simple Features}. IEEE International Conference on Computer Vision and Pattern Recognition,2001
+
+\bibitem{sixfab} Sixfab. "Raspberry Pi IP54 Outdoor Project Enclosure - Sixfab". Sixfab. https://sixfab.com/product/raspberry-pi-ip54-outdoor-iot-project-enclosure/ (accedido el 2 de enero de 2023).
+
+\bibitem{Referencian4} J. A. Castillo. \emph{WLAN: Qué es, definición, estándar 802.11 y diferencias con LAN.}
+https://www.profesionalreview.com/2020/03/07/wlan-que-es/ (accedido el 2 de noviembre de
+2022).
+
+
+
+\bibitem{Referencian5}Tarify.Win!\emph {Red WWAN ¿Qué es, para qué sirve y cómo
+funcionan?}https://tarify.win/definiciones/red-wwan/
+
+
+\bibitem{Referencian6}La Rosa, A. (2021, 13 julio). \emph{LPWAN como base de comunicaciones para IoT} Pandora 
+FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com/blog/es/que-eslpwan/?msclkid=08006fc5cf4611ecbc00aa3b275ed2b5
+
+\bibitem{Referencian7}\emph{LTE-M, el despegue esperado para IoT. Hablemos de empresas.} https://hablemosdeempresas.com/grandes-empresas/lte-m-despliegue-soluciones-iot/
+
+\bibitem{Referencian8}S{\'a}nchez Rosado, David,\emph{NB-IoT tecnolog{\'\i}as celulares narrow-band: an{\'a}lisis pr{\'a}ctico de las soluciones de Telef{\'o}nica y Vodafone},2019
+
+\bibitem{Referencian14} M. Cid. \emph{Categorías LTE o 4G: qué son y qué velocidades máximas ofrece cada una de ellas.} Xataka Móvil - Teléfonos móviles, tarifas, operadores de telefonía. https://www.xatakamovil.com/conectividad/categorias-lte-o-4g-que-son-y-que-velocidades-maximas-ofrece-cada-una-de-ellas
+
+\bibitem{Referencian15}\emph{¡No aceleres! Estos son los nuevos límites de velocidad 2022 en México.} ADNPolítico. https://politica.expansion.mx/mexico/2022/05/19/estos-son-nuevos-limites-velocidad-2022 
+
+\bibitem{Referencian16}\emph{MP4 - EcuRed.} EcuRed. https://www.ecured.cu/MP4\#:~:text=Un\%20archivo\%20de\%20MP4\%20lleva\%20sonido\%20y\%20video,de\%2020\%20segundos\%20de\%20clips\%20de\%20audio\%20(MP4/20s).
+
+\bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
+
+
+
 
 
 \bibitem{CoberturaNacional} "Cobertura 3G / 4G / 5G Telcel Mobile - nPerf.com". Internet Speed test : Test your broadband connection - nPerf.com. https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/ (accedido el 22 de diciembre de 2022).
@@ -3225,8 +3256,6 @@ el 18 de marzo de 2022).
 
 \bibitem {mongo} Kyle Banker, \emph{MondoDB in Action}, Second Edition, Manning, 20216
 
-\bibitem{Referencia0} Fernando Berzal, \emph{ Redes Neuronales y Deep Learning}, Granada, 2018
-
 \bibitem{python} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
 %Libro
 \bibitem{Referencia2}
@@ -3248,28 +3277,6 @@ V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,
 
 \bibitem{Referencia10} S. Pachouly, N. Bhondve, A. Dalvi, V. Dhande y N. Bhamare. "Driver drowsiness detection using machine learning with visual behaviour". https://ijcrt.org/papers/IJCRT2006408.pdf (accedido el 2 de noviembre de 2022).
 
-\bibitem{Referencian4} J. A. Castillo. \emph{WLAN: Qué es, definición, estándar 802.11 y diferencias con LAN.}
-https://www.profesionalreview.com/2020/03/07/wlan-que-es/ (accedido el 2 de noviembre de
-2022).
-
-\bibitem{Referencian5}Tarify.Win!\emph {Red WWAN ¿Qué es, para qué sirve y cómo
-funcionan?}https://tarify.win/definiciones/red-wwan/
-
-
-\bibitem{Referencian6}La Rosa, A. (2021, 13 julio). \emph{LPWAN como base de comunicaciones para IoT} Pandora 
-FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com/blog/es/que-eslpwan/?msclkid=08006fc5cf4611ecbc00aa3b275ed2b5
-
-\bibitem{Referencian7}\emph{LTE-M, el despegue esperado para IoT. Hablemos de empresas.} https://hablemosdeempresas.com/grandes-empresas/lte-m-despliegue-soluciones-iot/
-
-\bibitem{Referencian8}S{\'a}nchez Rosado, David,\emph{NB-IoT tecnolog{\'\i}as celulares narrow-band: an{\'a}lisis pr{\'a}ctico de las soluciones de Telef{\'o}nica y Vodafone},2019
-
-\bibitem{Referencian14} M. Cid. \emph{Categorías LTE o 4G: qué son y qué velocidades máximas ofrece cada una de ellas.} Xataka Móvil - Teléfonos móviles, tarifas, operadores de telefonía. https://www.xatakamovil.com/conectividad/categorias-lte-o-4g-que-son-y-que-velocidades-maximas-ofrece-cada-una-de-ellas
-
-\bibitem{Referencian15}\emph{¡No aceleres! Estos son los nuevos límites de velocidad 2022 en México.} ADNPolítico. https://politica.expansion.mx/mexico/2022/05/19/estos-son-nuevos-limites-velocidad-2022 
-
-\bibitem{Referencian16}\emph{MP4 - EcuRed.} EcuRed. https://www.ecured.cu/MP4\#:~:text=Un\%20archivo\%20de\%20MP4\%20lleva\%20sonido\%20y\%20video,de\%2020\%20segundos\%20de\%20clips\%20de\%20audio\%20(MP4/20s).
-
-\bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
 
 
 
