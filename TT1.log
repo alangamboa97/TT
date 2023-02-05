@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  5 FEB 2023 01:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  5 FEB 2023 04:52
 entering extended mode
 **./TT1.tex
 (TT1.tex
@@ -2131,13 +2131,13 @@ File: imagenes/MOR.png Graphic file (type png)
 Package pdftex.def Info: imagenes/MOR.png  used on input line 2817.
 (pdftex.def)             Requested size: 104.64067pt x 82.43275pt.
  [98 <./imagenes/landmark.png (PNG copy)>] [99 <./imagenes/MOR.png>]
-<imagenes/DF-modCom.jpeg, id=1275, 492.84125pt x 914.41624pt>
+<imagenes/DF-modCom.jpeg, id=1277, 492.84125pt x 914.41624pt>
 File: imagenes/DF-modCom.jpeg Graphic file (type jpg)
 <use imagenes/DF-modCom.jpeg>
 Package pdftex.def Info: imagenes/DF-modCom.jpeg  used on input line 2844.
 (pdftex.def)             Requested size: 295.70702pt x 548.65398pt.
  [100 <./imagenes/DF-modCom.jpeg>]
-<imagenes/DG-modCom.jpeg, id=1280, 814.04124pt x 835.12pt>
+<imagenes/DG-modCom.jpeg, id=1282, 814.04124pt x 835.12pt>
 File: imagenes/DG-modCom.jpeg Graphic file (type jpg)
 <use imagenes/DG-modCom.jpeg>
 Package pdftex.def Info: imagenes/DG-modCom.jpeg  used on input line 2854.
@@ -2147,7 +2147,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2864--2865
 
  []
 
-<imagenes/DisenoMEB.png, id=1286, 1064.97874pt x 533.995pt>
+<imagenes/DisenoMEB.png, id=1288, 1064.97874pt x 533.995pt>
 File: imagenes/DisenoMEB.png Graphic file (type png)
 <use imagenes/DisenoMEB.png>
 Package pdftex.def Info: imagenes/DisenoMEB.png  used on input line 2870.
@@ -2158,7 +2158,7 @@ Overfull \hbox (32.00407pt too wide) in paragraph at lines 2870--2871
  []
 
 [102 <./imagenes/DisenoMEB.png>]
-<imagenes/diagramaMEB.jpeg, id=1292, 442.65375pt x 293.095pt>
+<imagenes/diagramaMEB.jpeg, id=1294, 442.65375pt x 293.095pt>
 File: imagenes/diagramaMEB.jpeg Graphic file (type jpg)
 <use imagenes/diagramaMEB.jpeg>
 Package pdftex.def Info: imagenes/diagramaMEB.jpeg  used on input line 2879.
@@ -2168,7 +2168,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2892--2893
 
  []
 
-<imagenes/diagramaclasesaw.jpg, id=1299, 763.85374pt x 643.40375pt>
+<imagenes/diagramaclasesaw.jpg, id=1301, 763.85374pt x 643.40375pt>
 File: imagenes/diagramaclasesaw.jpg Graphic file (type jpg)
 <use imagenes/diagramaclasesaw.jpg>
 Package pdftex.def Info: imagenes/diagramaclasesaw.jpg  used on input line 2898
@@ -2177,18 +2177,18 @@ Package pdftex.def Info: imagenes/diagramaclasesaw.jpg  used on input line 2898
 [104
 
  <./imagenes/diagramaclasesaw.jpg>]
-<imagenes/sec_reporte_incidencia.png, id=1306, 438.63875pt x 232.87pt>
+<imagenes/sec_reporte_incidencia.png, id=1308, 438.63875pt x 232.87pt>
 File: imagenes/sec_reporte_incidencia.png Graphic file (type png)
 <use imagenes/sec_reporte_incidencia.png>
 Package pdftex.def Info: imagenes/sec_reporte_incidencia.png  used on input lin
 e 2907.
 (pdftex.def)             Requested size: 263.18527pt x 139.72307pt.
-<imagenes/sec_ubicacion.png, id=1307, 536.0025pt x 221.82875pt>
+<imagenes/sec_ubicacion.png, id=1309, 536.0025pt x 221.82875pt>
 File: imagenes/sec_ubicacion.png Graphic file (type png)
 <use imagenes/sec_ubicacion.png>
 Package pdftex.def Info: imagenes/sec_ubicacion.png  used on input line 2916.
 (pdftex.def)             Requested size: 375.19919pt x 155.27905pt.
-<imagenes/sec_rcontrasena.jpg, id=1308, 507.8975pt x 319.1925pt>
+<imagenes/sec_rcontrasena.jpg, id=1310, 507.8975pt x 319.1925pt>
 File: imagenes/sec_rcontrasena.jpg Graphic file (type jpg)
 <use imagenes/sec_rcontrasena.jpg>
 Package pdftex.def Info: imagenes/sec_rcontrasena.jpg  used on input line 2924.
@@ -2196,74 +2196,74 @@ Package pdftex.def Info: imagenes/sec_rcontrasena.jpg  used on input line 2924.
 (pdftex.def)             Requested size: 304.74086pt x 191.51697pt.
  [105 <./imagenes/sec_reporte_incidencia.png> <./imagenes/sec_ubicacion.png> <.
 /imagenes/sec_rcontrasena.jpg>]
-<imagenes/sec_confirmar.jpg, id=1315, 443.6575pt x 293.095pt>
+<imagenes/sec_confirmar.jpg, id=1317, 443.6575pt x 293.095pt>
 File: imagenes/sec_confirmar.jpg Graphic file (type jpg)
 <use imagenes/sec_confirmar.jpg>
 Package pdftex.def Info: imagenes/sec_confirmar.jpg  used on input line 2932.
 (pdftex.def)             Requested size: 266.19655pt x 175.85834pt.
-<imagenes/sec_perfil.jpg, id=1316, 554.07pt x 293.095pt>
+<imagenes/sec_perfil.jpg, id=1318, 554.07pt x 293.095pt>
 File: imagenes/sec_perfil.jpg Graphic file (type jpg)
 <use imagenes/sec_perfil.jpg>
 Package pdftex.def Info: imagenes/sec_perfil.jpg  used on input line 2940.
 (pdftex.def)             Requested size: 332.44456pt x 175.85834pt.
-<imagenes/sec_registrar.jpg, id=1317, 420.57124pt x 293.095pt>
+<imagenes/sec_registrar.jpg, id=1319, 420.57124pt x 293.095pt>
 File: imagenes/sec_registrar.jpg Graphic file (type jpg)
 <use imagenes/sec_registrar.jpg>
 Package pdftex.def Info: imagenes/sec_registrar.jpg  used on input line 2947.
 (pdftex.def)             Requested size: 252.3447pt x 175.85834pt.
  [106 <./imagenes/sec_confirmar.jpg> <./imagenes/sec_perfil.jpg>]
-<imagenes/sec_modificar.jpg, id=1322, 507.8975pt x 293.095pt>
+<imagenes/sec_modificar.jpg, id=1324, 507.8975pt x 293.095pt>
 File: imagenes/sec_modificar.jpg Graphic file (type jpg)
 <use imagenes/sec_modificar.jpg>
 Package pdftex.def Info: imagenes/sec_modificar.jpg  used on input line 2953.
 (pdftex.def)             Requested size: 304.74086pt x 175.85834pt.
-<imagenes/sec_eliminar.jpg, id=1323, 516.93124pt x 313.17pt>
+<imagenes/sec_eliminar.jpg, id=1325, 516.93124pt x 313.17pt>
 File: imagenes/sec_eliminar.jpg Graphic file (type jpg)
 <use imagenes/sec_eliminar.jpg>
 Package pdftex.def Info: imagenes/sec_eliminar.jpg  used on input line 2961.
 (pdftex.def)             Requested size: 310.16113pt x 187.90344pt.
-<imagenes/sec_estado.jpg, id=1324, 653.44125pt x 303.1325pt>
+<imagenes/sec_estado.jpg, id=1326, 653.44125pt x 303.1325pt>
 File: imagenes/sec_estado.jpg Graphic file (type jpg)
 <use imagenes/sec_estado.jpg>
 Package pdftex.def Info: imagenes/sec_estado.jpg  used on input line 2969.
 (pdftex.def)             Requested size: 392.06776pt x 181.8809pt.
  [107 <./imagenes/sec_registrar.jpg> <./imagenes/sec_modificar.jpg> <./imagenes
 /sec_eliminar.jpg>]
-<imagenes/login.png, id=1329, 1445.4pt x 903.375pt>
+<imagenes/login.png, id=1331, 1445.4pt x 903.375pt>
 File: imagenes/login.png Graphic file (type png)
 <use imagenes/login.png>
 Package pdftex.def Info: imagenes/login.png  used on input line 2979.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
-<imagenes/homescreen.png, id=1331, 1445.4pt x 903.375pt>
+<imagenes/homescreen.png, id=1333, 1445.4pt x 903.375pt>
 File: imagenes/homescreen.png Graphic file (type png)
 <use imagenes/homescreen.png>
 Package pdftex.def Info: imagenes/homescreen.png  used on input line 2986.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
 
 [108 <./imagenes/sec_estado.jpg> <./imagenes/login.png>]
-<imagenes/profile.png, id=1337, 1445.4pt x 903.375pt>
+<imagenes/profile.png, id=1339, 1445.4pt x 903.375pt>
 File: imagenes/profile.png Graphic file (type png)
 <use imagenes/profile.png>
 Package pdftex.def Info: imagenes/profile.png  used on input line 2994.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
  [109 <./imagenes/homescreen.png> <./imagenes/profile.png>]
-<imagenes/incident.png, id=1345, 1445.4pt x 903.375pt>
+<imagenes/incident.png, id=1347, 1445.4pt x 903.375pt>
 File: imagenes/incident.png Graphic file (type png)
 <use imagenes/incident.png>
 Package pdftex.def Info: imagenes/incident.png  used on input line 3002.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
-<imagenes/location.png, id=1347, 1445.4pt x 903.375pt>
+<imagenes/location.png, id=1349, 1445.4pt x 903.375pt>
 File: imagenes/location.png Graphic file (type png)
 <use imagenes/location.png>
 Package pdftex.def Info: imagenes/location.png  used on input line 3010.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
  [110 <./imagenes/incident.png> <./imagenes/location.png>] [111]
-<imagenes/ModeladoBD.png, id=1359, 1327.96124pt x 634.37pt>
+<imagenes/ModeladoBD.png, id=1361, 1327.96124pt x 634.37pt>
 File: imagenes/ModeladoBD.png Graphic file (type png)
 <use imagenes/ModeladoBD.png>
 Package pdftex.def Info: imagenes/ModeladoBD.png  used on input line 3025.
 (pdftex.def)             Requested size: 398.39145pt x 190.31245pt.
-<imagenes/ModeloConductores.jpg, id=1360, 361.35pt x 74.52844pt>
+<imagenes/ModeloConductores.jpg, id=1362, 361.35pt x 74.52844pt>
 File: imagenes/ModeloConductores.jpg Graphic file (type jpg)
 <use imagenes/ModeloConductores.jpg>
 Package pdftex.def Info: imagenes/ModeloConductores.jpg  used on input line 303
@@ -2272,7 +2272,7 @@ Package pdftex.def Info: imagenes/ModeloConductores.jpg  used on input line 303
  [112
 
  <./imagenes/ModeladoBD.png> <./imagenes/ModeloConductores.jpg>]
-<imagenes/ModeloIncidencias.jpg, id=1366, 288.3272pt x 156.585pt>
+<imagenes/ModeloIncidencias.jpg, id=1368, 288.3272pt x 156.585pt>
 File: imagenes/ModeloIncidencias.jpg Graphic file (type jpg)
 <use imagenes/ModeloIncidencias.jpg>
 Package pdftex.def Info: imagenes/ModeloIncidencias.jpg  used on input line 304
@@ -2283,7 +2283,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3047--3048
 
  []
 
-<imagenes/cognito.jpg, id=1367, 505.89pt x 467.49657pt>
+<imagenes/cognito.jpg, id=1369, 505.89pt x 467.49657pt>
 File: imagenes/cognito.jpg Graphic file (type jpg)
 <use imagenes/cognito.jpg>
 Package pdftex.def Info: imagenes/cognito.jpg  used on input line 3057.
@@ -2403,30 +2403,30 @@ P4/20s).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3224--3225
+Underfull \hbox (badness 10000) in paragraph at lines 3225--3226
 []\OT1/lmr/m/n/12 https://www.alteryx.com/es-419/glossary/supervised-vs-unsuper
 vised-
  []
 
 
-Overfull \hbox (124.74988pt too wide) in paragraph at lines 3224--3225
+Overfull \hbox (124.74988pt too wide) in paragraph at lines 3225--3226
 \OT1/lmr/m/n/12 learning#: :text=Hay$ $%20una$ $%20diferencia$ $%20clave$ $%20e
 ntre,etiquetados$ $%20con$ $%20la$ $%20respuesta$ $%20correcta 
  []
 
-
-Underfull \hbox (badness 1571) in paragraph at lines 3228--3231
+[118]
+Underfull \hbox (badness 1571) in paragraph at lines 3229--3232
 []\OT1/lmr/m/n/12 M. Paez y Emi-lio Abar-ca. \OT1/lmr/m/it/12 Re-su-men Bo-le-t
 i-nes\OT1/lmr/m/n/12 , Ins-ti-tu-to Me-xi-cano del Trans-por-te.
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 3228--3231
+Underfull \hbox (badness 1052) in paragraph at lines 3229--3232
 \OT1/lmr/m/n/12 https://imt.mx/resumen-boletines.html?IdArticulo=449&amp;IdBole
 tin=168 (ac-ce-di-do el
  []
 
-[118] [119] (TT1.aux
+[119] (TT1.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
@@ -2440,10 +2440,10 @@ Package rerunfilecheck Info: File `TT1.out' has not changed.
 (rerunfilecheck)             Checksum: 4F8C665FE42C289E0104DF1E40A54FE3;24289.
  ) 
 Here is how much of TeX's memory you used:
- 14774 strings out of 478927
- 233289 string characters out of 2852536
- 552256 words of memory out of 3000000
- 31895 multiletter control sequences out of 15000+600000
+ 14776 strings out of 478927
+ 233302 string characters out of 2852536
+ 552282 words of memory out of 3000000
+ 31896 multiletter control sequences out of 15000+600000
  448691 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,18n,66p,1340b,687s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2466,9 +2466,9 @@ ng/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/ala
 ng/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/ala
 ng/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/alan
 g/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on TT1.pdf (119 pages, 4941332 bytes).
+Output written on TT1.pdf (119 pages, 4942239 bytes).
 PDF statistics:
- 1565 PDF objects out of 1728 (max. 8388607)
- 396 named destinations out of 1000 (max. 500000)
+ 1569 PDF objects out of 1728 (max. 8388607)
+ 397 named destinations out of 1000 (max. 500000)
  952 words of extra memory for PDF output out of 10000 (max. 10000000)
 
