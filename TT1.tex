@@ -439,7 +439,7 @@ Además de esto, una CDN es capaz de detectar cambios en la información existente
 Para transferir datos o información de un punto a otro sin la utilización de cableado o algún medio físico, existen las redes inalámbricas que utilizan ondas de radio para conectar a los 
 dispositivos permitiendo así, a los dispositivos remotos, se conecten sin 
 dificultad y sin importar que estos dispositivos estén a unos metros o incluso a varios 
-kilómetros de distancia. Se dividen en 4 tipos dependiendo del alcance requerido y se definen por el estándar 802.11 del IEEE que es el organismo de estandarización internacional \cite{Referencian2}.
+kilómetros de distancia. Se dividen en 4 tipos dependiendo del alcance requerido y se definen por el estándar 802.11 del IEEE que es el organismo de estandarización internacional.
 
 \begin{itemize}
 
@@ -499,9 +499,9 @@ En el contexto de IoT, el alto rendimiento de datos significa que los dispositiv
 \end{itemize}
 \subsubsection{Teorema de Shannon-Hartley}
 
-Un sistema óptimo es el que cuenta con la capacidad de minimizar la probabilidad de error de bit a la salida del sistema, esto depende de las restricciones de la energía transmitida y del ancho de banda del canal\cite{Referencian9}.
+Un sistema óptimo es el que cuenta con la capacidad de minimizar la probabilidad de error de bit a la salida del sistema, esto depende de las restricciones de la energía transmitida y del ancho de banda del canal.
 
-El teorema de Shannon-Hartley establece la máxima cantidad de información que puede ser transmitida sin error con un ancho de banda específico y que está expuesto a la interferencia de ruido. La ecuación para la capacidad de canal es\cite{Referencian10}:
+El teorema de Shannon-Hartley establece la máxima cantidad de información que puede ser transmitida sin error con un ancho de banda específico y que está expuesto a la interferencia de ruido. La ecuación para la capacidad de canal es\cite{shannon}:
 
 
 \begin{equation}C= B\cdot log (1+\frac{S}{N}) 
@@ -509,15 +509,15 @@ El teorema de Shannon-Hartley establece la máxima cantidad de información que pu
 
 Donde C es la capacidad de canal, es decir, la velocidad máxima a 
 la que se puede transmitir la información a lo largo del canal sin error, medida en bits por 
-segundo, B es el ancho de banda en hertz, S es la potencia de la señal útil en watts y N es la potencia de ruido presente en el canal expresada en watts. Al término S/N se le conoce como relación señal a ruido\cite{Referencian11}.
+segundo, B es el ancho de banda en hertz, S es la potencia de la señal útil en watts y N es la potencia de ruido presente en el canal expresada en watts. Al término S/N se le conoce como relación señal a ruido.
 
 \subsubsection{Geolocalización}
 La Geolocalización consiste en la identificación de la posición de un dispositivo móvil en 
 el espacio real. El Sistema de Posicionamiento Global GPS por sus siglas en inglés es la forma más común y 
 precisa en que se realiza la localización geográfica, y es capaz de ubicar el aparato con 
 una precisión de unos pocos metros.
-El GPS es una red satelital que cuenta con al menos 30 satélites y que se mantienen en órbita alrededor de la tierra. Si bien el sistema en sus inicios tenía un propósito militar, en la actualidad cualquier persona puede ocuparlo\cite{Referencian12}.
-Cuando se solicita el posicionamiento por medio del GPS este envía señales de radio que permiten localizar a los satélites, el centro de comando transmite la información de la órbita, el tiempo y la posición de los otros satélites en el mismo sistema GPS. Estos satélites envían simultáneamente la información de tiempo y órbita a la tierra y finaliza cuando el dispositivo GPS utiliza la información recibida para determinar su localización la cual se interpreta mayormente en dos conjuntos: la latitud y longitud\cite{Referencian13}.
+El GPS es una red satelital que cuenta con al menos 30 satélites y que se mantienen en órbita alrededor de la tierra. Si bien el sistema en sus inicios tenía un propósito militar, en la actualidad cualquier persona puede ocuparlo.
+Cuando se solicita el posicionamiento por medio del GPS este envía señales de radio que permiten localizar a los satélites, el centro de comando transmite la información de la órbita, el tiempo y la posición de los otros satélites en el mismo sistema GPS. Estos satélites envían simultáneamente la información de tiempo y órbita a la tierra y finaliza cuando el dispositivo GPS utiliza la información recibida para determinar su localización la cual se interpreta mayormente en dos conjuntos: la latitud y longitud\cite{CoberturaNacional}.
 
 
 
@@ -540,81 +540,70 @@ En este trabajo realizado en la Universidad Anurag se presenta una forma de anal
 
 \subsubsection{Rasperry Pi based System for Visual Object Detection and Tracking}
 Este trabajo aborda la implementación de un sistema capaz de realizar el seguimiento de varios objetos mediante una cámara digital conectada a una Rasperry Pi. El motor de este sistema fue desarrollado utilizando C++ y se ejecuta sobre un sistema operativo basado en GNU/Linux.
-Este sistema también logra transmitir las coordenadas y el tamaño de los objetos detectados a otras computadores dentro de una red de local de Internet.
+Este sistema también logra transmitir las coordenadas y el tamaño de los objetos detectados a otras computadores dentro de una red de local de Internet.\cite{EstadodelAarte4}
 
 %https://a-lab.ee/edu/sites/default/files/Ivask_BSc.pdf
 
 % https://ijarsct.co.in/Paper3399.pdf
 
 \subsubsection{Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos}
-En este trabajo realizado en la facultad de Ingeniería de la Universidad Nacional de Trujillo, se desarrolló un sistema de extracción de características faciales tales como pestañeo, cabeceo y bostezos. Para la extracción de regiones de interés se utilizaron cascadas Haar, y la clasificación de estas características se realizó utilizando un modelo de red LeNet. Además el trabajo incluye la creación de una base de datos de las regiones de interés de la cara utilizando imágenes propias y también utilizando conjunto de datos externos. Para el desarrollo de este trabajo se utilizó el lenguaje de programación Python, junto con las librerías de OpenCV, Tensorflow y Keras.\cite{EstadodelAarte4}
+En este trabajo realizado en la facultad de Ingeniería de la Universidad Nacional de Trujillo, se desarrolló un sistema de extracción de características faciales tales como pestañeo, cabeceo y bostezos. Para la extracción de regiones de interés se utilizaron cascadas Haar, y la clasificación de estas características se realizó utilizando un modelo de red LeNet. Además el trabajo incluye la creación de una base de datos de las regiones de interés de la cara utilizando imágenes propias y también utilizando conjunto de datos externos. Para el desarrollo de este trabajo se utilizó el lenguaje de programación Python, junto con las librerías de OpenCV, Tensorflow y Keras.\cite{EstadodelAarte5}
 
 \subsubsection{Aplicación de visión por computador y \emph{machine learning} al guiado de un robot móvil basado en Rasperry Pi}
 
-Esta investigación realizada en la Universidad de Sevilla, detalla el desarrollo de un vehículo con guiado autónomo basado en visión artificial. Se utilizó una red neuronal convolucional para realizar el seguimiento de objetos. El sistema desarrollado consta de una integración de una computadora remota a la par de una Rasperry Pi.
+Esta investigación realizada en la Universidad de Sevilla, detalla el desarrollo de un vehículo con guiado autónomo basado en visión artificial. Se utilizó una red neuronal convolucional para realizar el seguimiento de objetos. El sistema desarrollado consta de una integración de una computadora remota a la par de una Rasperry Pi\cite{EstadodelAarte6}.
 
 \subsubsection{Evaluación de la plataforma Nvidia Jetson Nano para aplicaciones de visión artificial}
 
-Este trabajo de investigación aborda distintos proyectos tales como: Estimación de pose humana en tiempo real y Reconocimiento de matrícula en tiempo real sobre una Nvidia Jetson Nano. Se realizaron pruebas de rendimiento para conocer las limitaciones de la Jetson Nano. Los resultados presentados muestran que la Jetson Nano permite trabajar tanto como imágenes como con vídeos de forma fluida, aunque con ciertas limitaciones en el uso de redes neuronales profundas. Sin embargo, al utilizar la aceleración de hardware ofrecida por Nvdia, se redujo considerablemente los tiempos de ejecución de los procesos.
+Este trabajo de investigación aborda distintos proyectos tales como: Estimación de pose humana en tiempo real y Reconocimiento de matrícula en tiempo real sobre una Nvidia Jetson Nano. Se realizaron pruebas de rendimiento para conocer las limitaciones de la Jetson Nano. Los resultados presentados muestran que la Jetson Nano permite trabajar tanto como imágenes como con vídeos de forma fluida, aunque con ciertas limitaciones en el uso de redes neuronales profundas. Sin embargo, al utilizar la aceleración de hardware ofrecida por Nvdia, se redujo considerablemente los tiempos de ejecución de los procesos\cite{EstadodelAarte7}.
 %https://repositorio.uam.es/bitstream/handle/10486/698381/jimenez_varela_natalia_tfg.pdf?sequence=1
 
 \subsubsection{\emph{Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Jetson Nano}}
-Esta investigación realiza una comparación del rendimiento entre la Rasperry Pi y la Jetson Nano aplicado a un sistema de guía utilizando líneas rectas en el suelo. Los resultados de este trabajo muestran que ambas ofrecen un buen rendimiento. Sin embargo, la Jetson Nano demostró ser 20 segundos más rápida en cuanto al procesamiento de imágnes, y obtuvo un porcentaje del 100\% de efectividad al recorrer el trayecto trazado por el circuito de líneas. Por otro lado, la Rasperry Pi, obtuvo un porcentaje de 98\% de efectividad en cuanto al seguimiento del circuito. Por lo anterior, el estudio concluyó que la Jetson Nano ofrece un mejor rendimiento y efectividad en tareas de visión artificial.
+Esta investigación realiza una comparación del rendimiento entre la Rasperry Pi y la Jetson Nano aplicado a un sistema de guía utilizando líneas rectas en el suelo. Los resultados de este trabajo muestran que ambas ofrecen un buen rendimiento. Sin embargo, la Jetson Nano demostró ser 20 segundos más rápida en cuanto al procesamiento de imágnes, y obtuvo un porcentaje del 100\% de efectividad al recorrer el trayecto trazado por el circuito de líneas. Por otro lado, la Rasperry Pi, obtuvo un porcentaje de 98\% de efectividad en cuanto al seguimiento del circuito. Por lo anterior, el estudio concluyó que la Jetson Nano ofrece un mejor rendimiento y efectividad en tareas de visión artificial\cite{EstadodelAarte8}.
 
 %https://jurnal.unsyiah.ac.id/JRE/article/view/21324/17_4_7_239_246
 
 \subsubsection{Sistema de detección de somnolencia mediante inteligencia artificial en conductores de vehículos para alertar la ocurrencia de accidentes de tránsito}
 
-Este proyecto fue realizado por estudiantes de la Escuela Profesional de Ingeniería de Perú y consistió en llevar a cabo un sistema para la detección de la somnolencia y la distracción del conductor. El sistema se desarrolló utilizando C\# con EmguCV para detectar la distracción y orientación de los ojos utilizando técnicas de visión artificial. Además, cuenta con un sistema de alarma compuesto por un zumbador de 12v, que se activa a recibir la orden el microcontrolador al procesar el sistema de visión artificial junto a una red neuronal.\cite{EstadodelAarte5}
+Este proyecto fue realizado por estudiantes de la Escuela Profesional de Ingeniería de Perú y consistió en llevar a cabo un sistema para la detección de la somnolencia y la distracción del conductor. El sistema se desarrolló utilizando C\# con EmguCV para detectar la distracción y orientación de los ojos utilizando técnicas de visión artificial. Además, cuenta con un sistema de alarma compuesto por un zumbador de 12v, que se activa a recibir la orden el microcontrolador al procesar el sistema de visión artificial junto a una red neuronal.\cite{EstadodelAarte9}
 
 \subsubsection{Diseño de un sistema electrónico para detectar la somnolencia en automovilistas por medio de la actividad ocular}
-Este trabajo realizado por alumnos de la ESIME Culhuacán en el año 2019 detalla el diseño y la implementación de un sistema que se basa en la fusión de dos señales. Una de ellas proviene de la detección del estado de los ojos utilizando información proveniente de una cámara digital. Para lo anterior, se realiza una segmentación de las regiones de la piel y posteriormente se obtiene la ubicación y el rastero de los ojos. La segunda señal se obtiene a partir de los datos proveniente de un acelerómetro colocado sobre la cabeza del conductor, cuya función es detectar los cabeceos asociados con somnolencia. El procesamiento de dicha señal del acelerómetro se lleva a cabo con la ayuda de la Transformada Wavelet Discreta. Estas dos señales son correlacionadas para tener como salida dos alarmas secuenciales que son percibidas por el conductor. La primera le alerta sobre un primer estado de posible somnolencia y la segunda acciona un control difuso para el control momentáneo del auto y la corrección del volante para el seguimiento del carril. Los resultados obtenidos por este trabajo demuestran una eficacia para la detección de ojos cerrados del 86\% y para la detección de cabeceo superior al 90\%.\cite{EstadodelAarte6}
+Este trabajo realizado por alumnos de la ESIME Culhuacán en el año 2019 detalla el diseño y la implementación de un sistema que se basa en la fusión de dos señales. Una de ellas proviene de la detección del estado de los ojos utilizando información proveniente de una cámara digital. Para lo anterior, se realiza una segmentación de las regiones de la piel y posteriormente se obtiene la ubicación y el rastero de los ojos. La segunda señal se obtiene a partir de los datos proveniente de un acelerómetro colocado sobre la cabeza del conductor, cuya función es detectar los cabeceos asociados con somnolencia. El procesamiento de dicha señal del acelerómetro se lleva a cabo con la ayuda de la Transformada Wavelet Discreta. Estas dos señales son correlacionadas para tener como salida dos alarmas secuenciales que son percibidas por el conductor. La primera le alerta sobre un primer estado de posible somnolencia y la segunda acciona un control difuso para el control momentáneo del auto y la corrección del volante para el seguimiento del carril. Los resultados obtenidos por este trabajo demuestran una eficacia para la detección de ojos cerrados del 86\% y para la detección de cabeceo superior al 90\%.\cite{EstadodelAarte10}
 
 
 \subsubsection{Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones }
 
 En este artículo se muestra la implementación de un sistema de detección del estado de somnolencia en
 seres humanos, a través de la identificación de patrones faciales y la frecuencia de parpadeo de los ojos. Utilizando técnicas de inteligencia artificial, visión por computadora y un sistema embebido con cámara integrada para la adquisición de imágenes.El cual permite detectar en tiempo real el estado de fatiga de un conductor automovilístico y su grado de somnolencia, todo con el objetivo de disminuir la tasa de accidentes viales causados precisamente por la somnolencia en México. Se hizo uso del lenguaje de programación Python, bibliotecas como OpenCV, Dlib y Scipy, las cuales, fueron requeridas debido a los modelos predefinidos que
-establecen una mayor precisión en la detección de puntos faciales específicos, utilizando como referencia el método de predicción de 68 puntos específicos del rostro. El sistema propuesto tiene la característica de funcionar con luz de día en una primera etapa, y la idea es poder implementarlo en cualquier tipo de vehículo automotriz a un costo accesible a la mayoría de los propietarios de vehículos automotrices.\cite{EstadodelAarte7}
+establecen una mayor precisión en la detección de puntos faciales específicos, utilizando como referencia el método de predicción de 68 puntos específicos del rostro. El sistema propuesto tiene la característica de funcionar con luz de día en una primera etapa, y la idea es poder implementarlo en cualquier tipo de vehículo automotriz a un costo accesible a la mayoría de los propietarios de vehículos automotrices.\cite{EstadodelAarte11}
 
 
 %https://uptexcoco.edomex.gob.mx/sites/uptexcoco.edomex.gob.mx/files/files/2020/articulos-Tesis/sistema_somnolencia.pdf
 
 \subsubsection{Sistema de Detección de Somnolencia}
-En este trabajo de fin de grado, realizado por un alumno de la Universidad de La Laguna en el año 2022 se estudió el uso de los modelos de Redes Neuronales para la clasificación de imágenes. Enfocado en la resolución del problema de la somnolencia en los conductores. En el cual se utilizó el lenguaje de programación Python, junto con diversas librerías que facilitan la integración del modelo, y otras que ayudan en la captura de las imágenes.\cite{EstadodelAarte8}
+En este trabajo de fin de grado, realizado por un alumno de la Universidad de La Laguna en el año 2022 se estudió el uso de los modelos de Redes Neuronales para la clasificación de imágenes. Enfocado en la resolución del problema de la somnolencia en los conductores. En el cual se utilizó el lenguaje de programación Python, junto con diversas librerías que facilitan la integración del modelo, y otras que ayudan en la captura de las imágenes.\cite{EstadodelAarte12}
 
 %https://riull.ull.es/xmlui/bitstream/handle/915/30312/Sistema%20de%20deteccion%20de%20somnolencia.pdf?sequence=1&isAllowed=y
 
 
 \subsubsection{Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. }
 
-En este trabajo, realizado por alumnos de la Universidad de GUAYAQUIL en el año 2020-2021 se plantea el desarrollo un prototipo para la detección de la somnolencia del conductor de una cooperativa de transporte el cual dicho conductor se había sobrepasado el límite de horas de trabajo, usando la técnica de reconocimiento facial, basándose específicamente en el estado de los ojos. Para ello se realizó una investigación bibliográfica relacionada con patrones biométricos, inteligencia artificial y programación mediante Machine Learning, así como, las principales variables que permiten identificar un estado de somnolencia. Dentro de esta investigación también se determinan cuáles son los algoritmos a utilizar (CV2, Imutils, etc.) siendo la herramienta Python y su librería principal Visión por Computadora las seleccionadas para el estudio.\cite{EstadodelAarte9}
+En este trabajo, realizado por alumnos de la Universidad de GUAYAQUIL en el año 2020-2021 se plantea el desarrollo un prototipo para la detección de la somnolencia del conductor de una cooperativa de transporte el cual dicho conductor se había sobrepasado el límite de horas de trabajo, usando la técnica de reconocimiento facial, basándose específicamente en el estado de los ojos. Para ello se realizó una investigación bibliográfica relacionada con patrones biométricos, inteligencia artificial y programación mediante Machine Learning, así como, las principales variables que permiten identificar un estado de somnolencia. Dentro de esta investigación también se determinan cuáles son los algoritmos a utilizar (CV2, Imutils, etc.) siendo la herramienta Python y su librería principal Visión por Computadora las seleccionadas para el estudio.\cite{EstadodelAarte13}
 
 
 \subsubsection{Sistema basado en la detección y notificación de somnolencia en conductores de autos }
-En este trabajo, realizado por alumnos de la Universidad de Córdoba en el año 2015 se plantea el desarrollo que permite alertar a los conductores en estado de somnolencia leve, utilizando la tecnología de reconocimiento de objetos de Kinect y la librería OpenCV con el lenguaje C\# para el reconocimiento de imágenes. Además, se diseña una aplicación móvil del sistema operativo Android para la notificación de somnolencia utilizando una conexión socket tipo TCP. Para el procesamiento de imágenes, se utilizó el algoritmo Viola-Jones, el cual se basa en una nueva forma de representación de imágenes llamada Integral Image, permitiendo que las características del detector se conmuten rápidamente.\cite{EstadodelAarte10}
+En este trabajo, realizado por alumnos de la Universidad de Córdoba en el año 2015 se plantea el desarrollo que permite alertar a los conductores en estado de somnolencia leve, utilizando la tecnología de reconocimiento de objetos de Kinect y la librería OpenCV con el lenguaje C\# para el reconocimiento de imágenes. Además, se diseña una aplicación móvil del sistema operativo Android para la notificación de somnolencia utilizando una conexión socket tipo TCP. Para el procesamiento de imágenes, se utilizó el algoritmo Viola-Jones, el cual se basa en una nueva forma de representación de imágenes llamada Integral Image, permitiendo que las características del detector se conmuten rápidamente.\cite{EstadodelAarte14}
 
 
 
 \subsubsection{Detección de somnolencia para conducción sin accidentes}
-En este trabajo de fin de grado, realizado por un alumno de la Universidad de Alicante en el año 2022 se propuso crear una aplicación real para detectar la somnolencia al volante haciendo énfasis a un bajo coste económico. Donde se realizó una comparativa entre una solución mediante Machine Learning (ML) y Principal Component Analysis (PCA).\cite{EstadodelAarte11}
+En este trabajo de fin de grado, realizado por un alumno de la Universidad de Alicante en el año 2022 se propuso crear una aplicación real para detectar la somnolencia al volante haciendo énfasis a un bajo coste económico. Donde se realizó una comparativa entre una solución mediante Machine Learning (ML) y Principal Component Analysis (PCA).\cite{EstadodelAarte15}
 
 
 %http://hdl.handle.net/10045/124695
 
 
-\subsubsection{Implementación de un sistema web con geolocalización para medir la transaccionalidad del portal ABC de la democracia para el consejo nacional electoral (CNE)}
-En este proyecto de titulación de la Universidad de Guayaquil del año 2016, se 
-implementa un sistema de geolocalización para poder tener una mejor visión a través 
-de mapas virtuales de las personas y de las zonas geográficas de los productos o 
-servicios que se quieran introducir, apoyado en un cien por ciento de las 
-herramientas que Google Maps ofrece, se utilizó una aplicación popular y gratuita 
-para poder analizar los datos obtenidos con la localización, Google Analytics. En este 
-proyecto, sólo se pretendía visualizar mapas en la web, por lo que sólo fue necesario 
-usar los servicios que ofrece Google Maps por ser una aplicación gratuita con la 
-ayuda del api Javascript de Google Maps, se tuvieron en cuenta las limitaciones con 
-respecto al código libre, pero estás no afectaron el desempeño del sistema; los datos 
-obtenidos se recopilaban en una base de datos en MySQL.\cite{EstadodelAarte12}
+
 
 \subsubsection{Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android vía la red enterprise WLAN de la PUCP}
 En este proyecto de titulación de la Pontifica Universidad Católica Del 
@@ -633,24 +622,9 @@ se encuentran en un escenario para luego asociarlos a una localización y
 almacenarlos en una base de datos, para estimar la localización más probable se 
 utilizó el algoritmo de ML basado en el teorema de Bayes de probabilidad. En las 
 conclusiones señalan que este sistema obtuvo una precisión del 100\% en la 
-estimación del ambiente con un error menor de 2.4m en las pruebas realizadas.\cite{EstadodelAarte13}
+estimación del ambiente con un error menor de 2.4m en las pruebas realizadas.\cite{EstadodelAarte16}
 
-\subsubsection{Geolocalización con LoRa mediante multilateración}
-En esta tesis de la Universidad de la República de Uruguay del 2018 se desarrolló 
-un prototipo para la geolocalización animal en estudios de comportamiento. Para la 
-geolocalización se usó una tecnología nueva emergente llamada LoRa, tecnología de 
-radiofrecuencia de bajo consumo energético y largo alcance; usando un método de 
-multilateración para la geolocalización, técnica de navegación basada en la medición 
-de la diferencia de distancia a dos estaciones en posiciones conocidas, el proyecto se 
-conformó por tres puntos fijos o access points y nodos, que son los dispositivos 
-llevados por los animales de radio frecuencia. Los nodos envían señales de radio 
-frecuencia cada cierto tiempo, la señal emitida se recibe por los puntos fijos que, a 
-su vez, esa señal genera metadatos que se almacenan en una base de datos para 
-posteriormente realizar los cálculos en Geolocator , sistema de geolocalización 
-desarrollado en Python, y así, obtener la posición geográfica del nodo. Se concluyó 
-que el uso de LoRa para la geolocalización tiene gran potencial y que el alcance de 
-las señales fue eficiente, de igual manera se trata de una tecnología de bajo consumo 
-y que mantuvo los dispositivos con energía por meses.\cite{EstadodelAarte14}
+
 \subsubsection{Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades cardiovasculares}
 Tesis del Instituto Politécnico Nacional de la Escuela Superior de Ingeniería Mecánica 
 y Eléctrica Unidad Zacatenco del año 2018, donde se empleó un sensor de pulso 
@@ -658,13 +632,12 @@ cardiaco el cual proporciona información en tiempo real de los latidos del coraz
 mientras que un microcontrolador procesa los datos y, en caso de que se obtengan 
 los datos de que se está presentando una taquicardia, el microcontrolador solicita la 
 ubicación al módulo GPS y envía un mensaje de texto a través de GSM/GPRS a la 
-persona designada.\cite{EstadodelAarte15}
+persona designada.\cite{EstadodelAarte17}
 
 \subsubsection{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}
-Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de manera profunda las características y detalles de la tecnología GPS para determinar la influencia de un sistema de geolocalización en el control y monitoreo de vehículos con esta tecnología en una empresa logística. \cite{EstadodelAarte16}
+Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de manera profunda las características y detalles de la tecnología GPS para determinar la influencia de un sistema de geolocalización en el control y monitoreo de vehículos con esta tecnología en una empresa logística. \cite{EstadodelAarte18}
 
-\subsubsection{Diseño de la red de acceso LTE en el distrito de Jesús María}
-Tesis del año 2017 de la Pontifica Universidad Católica del Perú que tiene por objetivo analizar y diseñar una red usando la tecnología LTE, al desarrollar el proyecto se conocen las ventajas y desventajas de usar esta red así como la posibilidad de implementarla, también se realizan los cálculos de las coberturas y se dan a conocer las velocidades de enlace y el uso de diversos anchos de banda para su despliegue.\cite{EstadodelAarte17}
+
 
 \newpage
 \section{Capítulo III: Análisis}
@@ -1421,7 +1394,7 @@ Utilizando la herramienta de \emph{PlayGround Tensorflow} podemos observar la ef
 Si se le pide a esta Red Neuronal que sombree el área del color de los puntos mostrados dentro de la gráfica, se puede observar que es incapaz de realizarlo de manera correcta.
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/unicapa2}
+  \includegraphics[scale=0.35]{imagenes/unicapa2}
 \captionof{figure}{Red Neuronal Unicapa}
  \label{fig:boost}
 \end{center}
@@ -1488,7 +1461,7 @@ La función de la tangente hiperbólica toma cualquier valor real como valores de 
 \end{center}
 
 \end{itemize}
-Existe un tipo de Red Neuronal que integra los puntos anteriormente vistos: capas ocultas y funciones de activación. Este tipo de red se le conoce como Red Neuronal Convolucional. Cómo su nombre lo indica, estas redes se basan en el uso de la operación de convolución, además de hacer uso de las capas de ocultas y funciones de activación. Estas redes son de las mas eficientes en el campo de visión artificial. \cite{Referencia0}. Por lo tanto, se decidió hacer uso de una red convolucional para cumplir los requisitos previamente planteados.
+Existe un tipo de Red Neuronal que integra los puntos anteriormente vistos: capas ocultas y funciones de activación. Este tipo de red se le conoce como Red Neuronal Convolucional. Cómo su nombre lo indica, estas redes se basan en el uso de la operación de convolución, además de hacer uso de las capas de ocultas y funciones de activación. Estas redes son de las mas eficientes en el campo de visión artificial. \cite{Referencia2}. Por lo tanto, se decidió hacer uso de una red convolucional para cumplir los requisitos previamente planteados.
 
 \end{itemize}
 
@@ -3174,31 +3147,18 @@ https://www.profesionalreview.com/2020/03/07/wlan-que-es/ (accedido el 2 de novi
 funcionan?}https://tarify.win/definiciones/red-wwan/
 
 
+
 \bibitem{Referencian6}La Rosa, A. (2021, 13 julio). \emph{LPWAN como base de comunicaciones para IoT} Pandora 
 FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com/blog/es/que-eslpwan/?msclkid=08006fc5cf4611ecbc00aa3b275ed2b5
 
+
 \bibitem{Referencian7}\emph{LTE-M, el despegue esperado para IoT. Hablemos de empresas.} https://hablemosdeempresas.com/grandes-empresas/lte-m-despliegue-soluciones-iot/
 
-\bibitem{Referencian8}S{\'a}nchez Rosado, David,\emph{NB-IoT tecnolog{\'\i}as celulares narrow-band: an{\'a}lisis pr{\'a}ctico de las soluciones de Telef{\'o}nica y Vodafone},2019
 
-\bibitem{Referencian14} M. Cid. \emph{Categorías LTE o 4G: qué son y qué velocidades máximas ofrece cada una de ellas.} Xataka Móvil - Teléfonos móviles, tarifas, operadores de telefonía. https://www.xatakamovil.com/conectividad/categorias-lte-o-4g-que-son-y-que-velocidades-maximas-ofrece-cada-una-de-ellas
-
-\bibitem{Referencian15}\emph{¡No aceleres! Estos son los nuevos límites de velocidad 2022 en México.} ADNPolítico. https://politica.expansion.mx/mexico/2022/05/19/estos-son-nuevos-limites-velocidad-2022 
-
-\bibitem{Referencian16}\emph{MP4 - EcuRed.} EcuRed. https://www.ecured.cu/MP4\#:~:text=Un\%20archivo\%20de\%20MP4\%20lleva\%20sonido\%20y\%20video,de\%2020\%20segundos\%20de\%20clips\%20de\%20audio\%20(MP4/20s).
-
-\bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
-
-
-
+\bibitem{shannon} Gianluca Cornetta, \emph{Compromiso entre Modulación y Codificación}, Universidad San Pablo, Dep. de Ingeniería de Sistemas de Información y Telecomunicación
 
 
 \bibitem{CoberturaNacional} "Cobertura 3G / 4G / 5G Telcel Mobile - nPerf.com". Internet Speed test : Test your broadband connection - nPerf.com. https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/ (accedido el 22 de diciembre de 2022).
-
-
-
-\bibitem{algoritmosdeaprendizaje} https://www.alteryx.com/es-419/glossary/supervised-vs-unsupervised-learning\#:~:text=Hay\%20una\%20diferencia\%20clave\%20entre,etiquetados\%20con\%20la\%20respuesta\%20correcta
-
 
 \bibitem{EstadodelAarte1} Pachouly, S., Bhondve, N., Dalvi, A., Dhande, V., \& Bhamare, N. (2020, 6 de junio). Driver drowsiness detection using machine learning with visual behaviour. www.ijcrt.org. https://ijcrt.org/papers/IJCRT2006408.pdf
 
@@ -3206,38 +3166,64 @@ FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com
 
 \bibitem{EstadodelAarte3} Sri, M. K., \& Annamani, T. (2022, abril). Driver drowsiness detection system using convolutional neural networks. https://ijarsct.co.in/Paper3399.pdf 
 
-\bibitem{facedetection} Mayank Chauhan, Mukesh Sakle, \emph{Study \& Analysis of Different Face Detecion Techniques}
+\bibitem{EstadodelAarte4} Mayank Chauhan, Mukesh Sakle, \emph{Study \& Analysis of Different Face Detecion Techniques}
 
 
-\bibitem{EstadodelAarte4} Rodriguez, A., \& Luis, D. J. (2021, mayo). Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos. https://dspace.unitru.edu.pe/handle/UNITRU/16872
+\bibitem{EstadodelAarte5} Rodriguez, A., \& Luis, D. J. (2021, mayo). Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos. https://dspace.unitru.edu.pe/handle/UNITRU/16872
 
 
-\bibitem{EstadodelAarte5} M. Limaquispe y E. Sánchez. "SISTEMA DE DETECCIÓN DE SOMNOLENCIA MEDIANTE INTELIGENCIA ARTIFICIAL EN CONDUCTORES DE VEHÍCULOS PARA ALERTAR LA OCURRENCIA DE ACCIDENTES DE TRÁNSITO"". Repository. http://repositorio.unh.edu.pe/handle/UNH/2327
+\bibitem{EstadodelAarte6} M. Limaquispe y E. Sánchez. "SISTEMA DE DETECCIÓN DE SOMNOLENCIA MEDIANTE INTELIGENCIA ARTIFICIAL EN CONDUCTORES DE VEHÍCULOS PARA ALERTAR LA OCURRENCIA DE ACCIDENTES DE TRÁNSITO"". Repository. http://repositorio.unh.edu.pe/handle/UNH/2327
 
-\bibitem{EstadodelAarte6} Eugenio, B. L. H., Alejandra, G. P. K., \& Pichardo Iniesta José Alejandro. (2019, junio). Diseño de un sistema electrónico para detectar somnolencia en automovilistas por medio de la actividad ocular. https://tesis.ipn.mx/handle/123456789/27287
+\bibitem{EstadodelAarte7} Eugenio, B. L. H., Alejandra, G. P. K., \& Pichardo Iniesta José Alejandro. (2019, junio). Diseño de un sistema electrónico para detectar somnolencia en automovilistas por medio de la actividad ocular. https://tesis.ipn.mx/handle/123456789/27287
 
-\bibitem{EstadodelAarte7} Becerril, E. L., Ramírez, A. M., \& Velázquez, E. T. J. (s.f.). Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones. $https://uptexcoco.edomex.gob.mx/sites/uptexcoco.edomex.gob.mx/files/files/2020/articulos-Tesis/sistema_somnolencia.pdf$
+\bibitem{EstadodelAarte8} Becerril, E. L., Ramírez, A. M., \& Velázquez, E. T. J. (s.f.). Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones. $https://uptexcoco.edomex.gob.mx/sites/uptexcoco.edomex.gob.mx/files/files/2020/articulos-Tesis/sistema_somnolencia.pdf$
 
-\bibitem{EstadodelAarte8} Solís, H. F. (2022, 13 de septiembre). Sistema de detección de somnolencia. https://riull.ull.es/xmlui/bitstream/handle/915/30312/Sistema%20de%20deteccion%20de%20somnolencia.pdf?sequence=1&amp;isAllowed=y
+\bibitem{EstadodelAarte9} Solís, H. F. (2022, 13 de septiembre). Sistema de detección de somnolencia. https://riull.ull.es/xmlui/bitstream/handle/915/30312/Sistema%20de%20deteccion%20de%20somnolencia.pdf?sequence=1&amp;isAllowed=y
 
-\bibitem{EstadodelAarte9} Pacay, C., \& Blanca Fanny. (2020). Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. http://repositorio.ug.edu.ec/handle/redug/49449?mode=full
+\bibitem{EstadodelAarte10} Pacay, C., \& Blanca Fanny. (2020). Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. http://repositorio.ug.edu.ec/handle/redug/49449?mode=full
 
-\bibitem{EstadodelAarte10} E. L. Benavides y M. M. Medina. "Sistema Basado en la Detección y notificación de somnolencia para conductores de autos". Repositorio Universidad de Córdoba. https://repositorio.unicordoba.edu.co/bitstream/handle/ucordoba/536/Trabajo%20de%20grado.pdf?sequence=1&amp;isAllowed=y
+\bibitem{EstadodelAarte11} E. L. Benavides y M. M. Medina. "Sistema Basado en la Detección y notificación de somnolencia para conductores de autos". Repositorio Universidad de Córdoba. https://repositorio.unicordoba.edu.co/bitstream/handle/ucordoba/536/Trabajo%20de%20grado.pdf?sequence=1&amp;isAllowed=y
 
-\bibitem{EstadodelAarte11} Adrián, Ñ. H. (2022, 30 de junio). Detección de somnolencia para conducción sin accidentes. http://hdl.handle.net/10045/124695
+\bibitem{EstadodelAarte12} Adrián, Ñ. H. (2022, 30 de junio). Detección de somnolencia para conducción sin accidentes. http://hdl.handle.net/10045/124695
 
-\bibitem{EstadodelAarte12} Avila, R., \& Arturo, W. (2016). Geolocalización transaccionalidad mapa ecuador cne democracia localización ubicación. http://repositorio.ug.edu.ec/handle/redug/16806
+\bibitem{EstadodelAarte13} Avila, R., \& Arturo, W. (2016). Geolocalización transaccionalidad mapa ecuador cne democracia localización ubicación. http://repositorio.ug.edu.ec/handle/redug/16806
 
-\bibitem{EstadodelAarte13} Vilca, G., \& Eduardo, J. (2016, 3 de agosto). Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android via la red Enterprise WLAN de la PUCP. https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7156
+\bibitem{EstadodelAarte14} Vilca, G., \& Eduardo, J. (2016, 3 de agosto). Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android via la red Enterprise WLAN de la PUCP. https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7156
 
-\bibitem{EstadodelAarte14} Federico, A., Guillermo, C., \& Guzmán, P. (2018). Geolocalizacoón con LoRa mediante multilateración. https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/20293
+\bibitem{EstadodelAarte15} Federico, A., Guillermo, C., \& Guzmán, P. (2018). Geolocalizacoón con LoRa mediante multilateración. https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/20293
 
-\bibitem{EstadodelAarte15} Ramírez, C. E. E., Flores, R. E. R., \& Hernández, J. A. V. (2018). Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades vasculares. https://tesis.ipn.mx/handle/123456789/27690
+\bibitem{EstadodelAarte16} Ramírez, C. E. E., Flores, R. E. R., \& Hernández, J. A. V. (2018). Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades vasculares. https://tesis.ipn.mx/handle/123456789/27690
 
-\bibitem{EstadodelAarte16} Espinoza, B. R. A. V. (2017). Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística.
+\bibitem{EstadodelAarte17} Espinoza, B. R. A. V. (2017). Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística.
 
 
-\bibitem{EstadodelAarte17} Juan Carlos, C. P. (2017, 15 de febrero). Diseño de la red de acceso LTE en el distrito de Jesús María ¡https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7847
+\bibitem{EstadodelAarte18} Juan Carlos, C. P. (2017, 15 de febrero). Diseño de la red de acceso LTE en el distrito de Jesús María ¡https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7847
+
+\bibitem{python} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
+
+\bibitem{Referencia2}
+V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
+
+\bibitem{Referencian14} M. Cid. \emph{Categorías LTE o 4G: qué son y qué velocidades máximas ofrece cada una de ellas.} Xataka Móvil - Teléfonos móviles, tarifas, operadores de telefonía. https://www.xatakamovil.com/conectividad/categorias-lte-o-4g-que-son-y-que-velocidades-maximas-ofrece-cada-una-de-ellas
+
+\bibitem{Referencian15}\emph{¡No aceleres! Estos son los nuevos límites de velocidad 2022 en México.} ADNPolítico. https://politica.expansion.mx/mexico/2022/05/19/estos-son-nuevos-limites-velocidad-2022 
+
+\bibitem{Referencian16}\emph{MP4 - EcuRed.} EcuRed. https://www.ecured.cu/MP4\#:~:text=Un\%20archivo\%20de\%20MP4\%20lleva\%20sonido\%20y\%20video,de\%2020\%20segundos\%20de\%20clips\%20de\%20audio\%20(MP4/20s).
+
+
+
+
+
+
+
+
+\bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
+
+
+
+\bibitem{algoritmosdeaprendizaje} https://www.alteryx.com/es-419/glossary/supervised-vs-unsupervised-learning\#:~:text=Hay\%20una\%20diferencia\%20clave\%20entre,etiquetados\%20con\%20la\%20respuesta\%20correcta
+
+
 
 \bibitem{conapra} M. Paez y Emilio Abarca. \emph{Resumen Boletines}, Instituto Mexicano del Transporte.
 https://imt.mx/resumen-boletines.html?IdArticulo=449\&amp;IdBoletin=168 (accedido 
@@ -3256,10 +3242,9 @@ el 18 de marzo de 2022).
 
 \bibitem {mongo} Kyle Banker, \emph{MondoDB in Action}, Second Edition, Manning, 20216
 
-\bibitem{python} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
+
 %Libro
-\bibitem{Referencia2}
-V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
+
 
 \bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
 
