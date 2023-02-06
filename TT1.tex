@@ -95,21 +95,19 @@ Tomando en cuenta el contexto antes planteado, se analizará y diseñará en el pre
 
 La somnolencia es un fenómeno complejo de analizar debido a los factores que pueden intervenir. Algunas de las características más notorias de un estado de somnolencia, se pueden apreciar principalmente en el rostro de las personas: frecuencia de parpadeo, bostezos, movimientos faciales y cabeceos, los cuales son parámetros claves para determinar si una persona está en estado de somnolencia o vigilia.  \\
 
-Gracias a los avances tecnológicos en los últimos años, se han comenzado a desarrollar técnicas de visión artificial y aprendizaje automático que permiten detectar patrones de manera más eficiente. En el área del hardware, se han desarrollado microordenadores capaces de realizar tareas que requieran un nivel moderado de computación de una manera eficaz. Finalmente, en el área de telecomunicaciones, tecnologías como el 4G y avances en el área de \emph{Internet of Things} han permitido mayores velocidades de transmisión de datos, así como mayor cobertura dentro del territorio nacional.
+Gracias a los avances tecnológicos en los últimos años, se han comenzado a desarrollar técnicas de visión artificial y aprendizaje automático que permiten detectar patrones de manera más eficiente. En el área del hardware, se han desarrollado microordenadores capaces de realizar tareas que requieran un nivel moderado de computación de una manera eficaz. Finalmente, en el área de telecomunicaciones, tecnologías como el 4G y avances en el área de \emph{Internet of Things} han permitido mayores velocidades de transmisión de datos, así como mayor cobertura dentro del territorio nacional\cite{iot}.
 \\ 
 %Falta referencias: https://pure.coventry.ac.uk/ws/portalfiles/portal/40893306/Binder3.pdf %
-Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores. Donde se han realizado diversos estudios y soluciones que intentan dar respuesta al problema de monitoreo de la somnolencia. \\
+Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores.
 
 Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, conductor y carretera repercuten en la eficacia del sistema.  \\
 
 Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG).\\  
 Cabe mencionar que, entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede llegar a entorpecer el desempeño del conductor. \cite{Sistemasdesomnolencia}  \\
 
-Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que, los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia, sin embargo, son los métodos visuales más adecuados para dicho propósito. \cite{Sistemasdesomnolencia}   Por tanto, se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficacia en el sistema. \\  
+Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que, los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia, sin embargo, son los métodos visuales más adecuados para dicho propósito. \cite{Sistemasdesomnolencia}   Por tanto, se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficiencia.
 
-Debido a las dificultades que pueden presentarse en los sistemas a la hora de detectar la somnolencia y la eficacia de este, así como las dificultades que muchos de los sistemas anteriores presentan en cuanto al espacio y potabilidad, se hará uso del método de análisis de características visuales para brindar una mejora y complemento a los sistemas actuales, usando visión artificial, además de integrar un sistema de monitoreo que permita a un tercero seguir la ubicación del conductor y registrar las incidencias del mismo.  \\
-
-Actualmente existen varias opciones para la geolocalización de vehículos en tiempo real, pero con costos elevados, como lo es el rastreo satelital el cual requirere un pago servicio con una suscripción anual o mensual. Entonces, surge una oportunidad para desarollar soluciones más asequibles y que sean igualmente eficaces, como es el caso de las redes móviles LTE.
+Actualmente existen distintas opciones para la geolocalización de vehículos en tiempo real, pero con costos elevados, como lo es el rastreo satelital el cual requirere un pago servicio con una suscripción anual o mensual. Entonces, surge una oportunidad para desarollar soluciones más asequibles y que sean igualmente eficaces, como es el caso de las redes móviles LTE\cite{Referencia9}
 
 Dadas las posibles soluciones y escenarios antes mencionados se plantea la siguiente pregunta: ¿Cómo desarrollar un sistema portátil que pueda detectar la somnolencia y alertar al conductor, además de monitorear la ubicación en tiempo real y gestionar las incidencias detectadas en el conductor? 
 
@@ -194,7 +192,7 @@ Para el sistema de administración se corroborará que en los casos en que el sist
 
 \subsection{Justificación}
 
-Actualmente, nos encontramos en la era digital donde se han desarrollado diferentes avances tecnológicos tales como el internet de las cosas (IoT) el cual permite la comunicación con dispositivos y da pauta al desarrollo de sistemas inteligentes que resuelven problemas complejos de manera automática y eficaz en ambientes específicos, la inteligencia artificial, el machine learning, el procesamiento masivo de datos en menor tiempo, entre muchos otros. \\
+Actualmente, se han desarrollado diferentes avances tecnológicos tales como el internet de las cosas (IoT) el cual permite la comunicación con dispositivos y da pauta al desarrollo de sistemas inteligentes que resuelven problemas complejos de manera automática y eficaz en ambientes específicos, la inteligencia artificial, el machine learning, el procesamiento masivo de datos en menor tiempo, entre muchos otros. \\
 
 El sistema propuesto será capaz de detectar la somnolencia apoyado en estudios donde se analizan los aspectos fisiológicos y donde se delimitan los datos biométricos del estado de somnolencia obtenidos en diferentes pruebas, mediante el uso de visión artificial y deep learning para tener mejores resultados y posteriormente ser enviados a una estación base con ayuda de la tecnología de las redes inalámbricas. \\
 
@@ -1705,7 +1703,7 @@ Para el análisis de cobertura de la red LTE se tiene en cuenta el sistema \emph{
  \label{fig:handover}
 \end{center}
 
-La cobertura de LTE por Telcel es la más amplia del país \cite{Referencian18}, su mayor cobertura está concentrada en la Ciudad de México, por lo que existe una buena recepción, aunque en ocasiones debido a la saturación de la red o al transferir el servicio de la antena de una estación base a otra se puede encontrar alguna intermitencia o retraso, en estos casos el módulo va a pasar a modo de espera para enviar la información una vez se restablezca la red.
+La cobertura de LTE por Telcel es la más amplia del país \cite{CoberturaNacional}, su mayor cobertura está concentrada en la Ciudad de México, por lo que existe una buena recepción, aunque en ocasiones debido a la saturación de la red o al transferir el servicio de la antena de una estación base a otra se puede encontrar alguna intermitencia o retraso, en estos casos el módulo va a pasar a modo de espera para enviar la información una vez se restablezca la red.
 
 \begin{center}
   \includegraphics[scale=1.3]{imagenes/mapaLTE}
@@ -2464,7 +2462,7 @@ Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y 
 \end{table}
 
 
-Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación  como base el lenguaje JavaScript y  Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación. Otra característica importante es que es una base de datos multiplataforma, esto para que se realice información desde el sistema operativo Linux, que será utilizado en la Rasperry Pi.
+Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación  como base el lenguaje JavaScript y  Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación\cite{mongo}. Otra característica importante es que es una base de datos multiplataforma, esto para que se realice información desde el sistema operativo Linux, que será utilizado en la Nvidia Jetson Nano.
 
 \clearpage
 \subsubsection{Análisis y Elección de lenguajes de programación web}
@@ -2538,7 +2536,7 @@ AWS Amplify Hosting es un servicio de alojamiento e Integración Continua/Entrega
 \begin{itemize}
 \item \textbf{Implementación de contenido web con rapidez}
 
-AWS permite la implementación continua de una aplicación web estática o renderizada del lado del servidor, una página de inicio de la aplicación móvil o una aplicación progresiva en cada confirmación de código.
+AWS permite la implementación continua de una aplicación web estática o renderizada del lado del servidor, una página de inicio de la aplicación móvil o una aplicación progresiva en cada confirmación de código\cite{AWS}.
 
 
 \item \textbf{CDN}
@@ -2846,7 +2844,7 @@ A continuación se muestra el diagrama de Flujo del Módulo de Comunicaciones
  \label{fig:DF-modCom}
 \end{center}
 \newpage
-La ubicación del conductor será obtenida por el Módulo de Telemetría cada 10 segundos, esto con la intención de no consumir demasiados recursos de procesamiento y energía. Posteriormente será enviada a la Estación Base utilizando la interfaz SixFab-LTE. En caso de no contar con cobertura que permita la conexión a la estación base, la ubicación del  conductor será guardada en el almacenamiento interno de la Unidad de Procesamiento Central. Se realizaran handhshakes a la espera de respuesta de la Estación Base hasta que se obtenga una respuesta de enlace, posteriormente enviarán la o las ubicaciones almacenadas temporalmente hacia  a la Estación Base.
+La ubicación del conductor será obtenida por el Módulo de Telemetría cada 10 segundos, esto con la intención de no consumir demasiados recursos de procesamiento y energía. Posteriormente será enviada a la Estación Base utilizando la interfaz SixFab-LTE\cite{tracking}. En caso de no contar con cobertura que permita la conexión a la estación base, la ubicación del  conductor será guardada en el almacenamiento interno de la Unidad de Procesamiento Central. Se realizaran handhshakes a la espera de respuesta de la Estación Base hasta que se obtenga una respuesta de enlace, posteriormente enviarán la o las ubicaciones almacenadas temporalmente hacia  a la Estación Base.
 
 
 
@@ -3109,6 +3107,7 @@ El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas d
 
 \bibitem{Sistemasdesomnolencia}  "Sistemas de detección de somnolencia en conductores:Inicio, desarrollo y futuro", Revista Ingeniería y Región., vol. 13, n.º 1, pp. 159?168, 2015. Disponible: https://journalusco.edu.co/index.php/iregion/article/view/717/1372 
 
+\bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
 
 \bibitem{TopDown} Metodología top-down. (s.f.) \url{http://163.10.22.82/OAS/modularizacion/metodologa_topdown.html}
 
@@ -3158,7 +3157,7 @@ FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com
 \bibitem{shannon} Gianluca Cornetta, \emph{Compromiso entre Modulación y Codificación}, Universidad San Pablo, Dep. de Ingeniería de Sistemas de Información y Telecomunicación
 
 
-\bibitem{CoberturaNacional} "Cobertura 3G / 4G / 5G Telcel Mobile - nPerf.com". Internet Speed test : Test your broadband connection - nPerf.com. https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/ (accedido el 22 de diciembre de 2022).
+
 
 \bibitem{EstadodelAarte1} Pachouly, S., Bhondve, N., Dalvi, A., Dhande, V., \& Bhamare, N. (2020, 6 de junio). Driver drowsiness detection using machine learning with visual behaviour. www.ijcrt.org. https://ijcrt.org/papers/IJCRT2006408.pdf
 
@@ -3199,6 +3198,13 @@ FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com
 
 \bibitem{EstadodelAarte18} Juan Carlos, C. P. (2017, 15 de febrero). Diseño de la red de acceso LTE en el distrito de Jesús María ¡https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7847
 
+
+\bibitem{nanovspi} Gunan Dewantoro, Jamil Mansuri, \emph{Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Jeston Nano}
+
+
+\bibitem {deepedgebench} Stepahn Baller, Anshul Jindal \emph{DeepEdgeBench: Benchmarking Deep Neural Networks on Edge Devices}
+
+
 \bibitem{python} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
 
 \bibitem{Referencia2}
@@ -3210,15 +3216,28 @@ V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,
 
 \bibitem{Referencian16}\emph{MP4 - EcuRed.} EcuRed. https://www.ecured.cu/MP4\#:~:text=Un\%20archivo\%20de\%20MP4\%20lleva\%20sonido\%20y\%20video,de\%2020\%20segundos\%20de\%20clips\%20de\%20audio\%20(MP4/20s).
 
+\bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
 
+\bibitem{CoberturaNacional} "Cobertura 3G / 4G / 5G Telcel Mobile - nPerf.com". Internet Speed test : Test your broadband connection - nPerf.com. https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/ (accedido el 22 de diciembre de 2022).
+
+
+\bibitem {mongo} Kyle Banker, \emph{MondoDB in Action}, Second Edition, Manning, 20216
+
+\bibitem {js} Marjin Haverbeke \emph{Eloquent Javascript}, Third Edition, No Starch Press, 2020
+
+\bibitem {AWS} Amazon, \emph{Amazon Amplify}, https://aws.amazon.com/es/amplify/
 
 \bibitem{mor} Chandrakant Chandewar, Ashlesha Singh, \emph{Driver Drowsiness Alert System with Effective 
 Feature Extraction}, International Journal for research in emergin science and technology, 2018
 
+\bibitem{tracking} Quectel, \emph{Lte Standard- GNSS Application Note}, LTE Standard Sixfab Module Series, 2019
+
+
+\bibitem {NodeJs} Jonathan Wexler, \emph{Get Programming with Node.js}, Manning, 2019
 
 
 
-\bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
+
 
 
 
@@ -3231,17 +3250,11 @@ https://imt.mx/resumen-boletines.html?IdArticulo=449\&amp;IdBoletin=168 (accedid
 el 18 de marzo de 2022).
 
 
-\bibitem {NodeJs} Jonathan Wexler, \emph{Get Programming with Node.js}, Manning, 2019
-
-\bibitem {js} Marjin Haverbeke \emph{Eloquent Javascript}, Third Edition, No Starch Press, 2020
 
 
-\bibitem {AWS} Amazon, \emph{Amazon Amplify}, https://aws.amazon.com/es/amplify/
-
-\bibitem {deepedgebench} Stepahn Baller, Anshul Jindal \emph{DeepEdgeBench: Benchmarking Deep Neural Networks on Edge Devices}
 
 
-\bibitem {mongo} Kyle Banker, \emph{MondoDB in Action}, Second Edition, Manning, 20216
+
 
 
 %Libro
@@ -3250,8 +3263,6 @@ el 18 de marzo de 2022).
 \bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
 
 
-\bibitem{nanovspi} Gunan Dewantoro, Jamil Mansuri, \emph{Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Jeston Nano}
-
 \bibitem{Referencia5} Aurélien Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow}, Segunda Edición , O'Reilly, 2009
 
 
@@ -3259,10 +3270,9 @@ el 18 de marzo de 2022).
 
 \bibitem{Referncia8}Cuno Plister, \emph{Getting Started with Internet of Things},Primera Edición, O'Reilly, 2011
 
-\bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
+
 
 \bibitem{Referencia10} S. Pachouly, N. Bhondve, A. Dalvi, V. Dhande y N. Bhamare. "Driver drowsiness detection using machine learning with visual behaviour". https://ijcrt.org/papers/IJCRT2006408.pdf (accedido el 2 de noviembre de 2022).
-
 
 
 
