@@ -161,9 +161,7 @@ Las pruebas se dividirán en dos fases:\\
  
 \textbf{Fase 1:}
 
-En la primera fase se probará el sistema de somnolencia y el sistema de comunicaciones de manera separada, con el propósito de analizar los resultados obtenidos. El sistema de detección de somnolencia será colocado dentro del vehículo, sin embargo, dicho vehículo permanecerá estacionado y con el motor apago, esto con el fin de realizar pruebas de la precisión del sistema y poder ajustar parámetros en caso de ser necesario.\\  
-
-En un primer escenario se examinarán los siguientes signos de somnolencia sin el uso de gafas de sol:\\ 
+En la primera fase se probará el sistema de somnolencia y el sistema de comunicaciones de manera separada, con el propósito de analizar los resultados obtenidos. El sistema de detección de somnolencia será colocado dentro del vehículo, sin embargo, dicho vehículo permanecerá estacionado y con el motor apago, esto con el fin de realizar pruebas de la precisión del sistema y poder ajustar parámetros en caso de ser necesario.\\   
 
 Estado de los ojos:  
 
@@ -177,8 +175,6 @@ Bostezos:
 \begin{itemize}
 \item Apertura de la boca. 
 \end{itemize}
-
-En un segundo escenario se examinarán los mismos signos de somnolencia con el uso de gafas de sol.  \\
 
 Estas pruebas se realizarán tanto de noche como de día para comprobar la efectividad del sistema. En caso de ser necesario, se realizarán los ajustes correspondientes en los parámetros de análisis para mejorar la efectividad de las pruebas. Así mismo se verificará que la alarma se active correctamente al detectar somnolencia en el conductor.  \\
 
@@ -224,7 +220,6 @@ Utilizando la metodología Top-Down, se puede dividir el sistema en módulos que s
 \item \textbf{UML}
 
 UML es el estándar de la industria para modelar sistemas orientados a objetos \cite{kendall}. UML incluye un conjunto de herramientas que permite visualizar la construcción de un sistema orientado a objetos. Al trabajar por iteraciones, se aborda de manera cada vez con más detalle el diseño de sistema, hasta que se defina con claridad las relaciones de cada uno de los objetos del sistema. Uno de las principales ventajas de UML es la reutilización de objetos, esto permite reducir costo de desarrollo así como de mantenimiento de los programas. En este proyecto se hará uso de uml para el análsis y diseño de cada módulo.
-
 \end{itemize}
 
 
@@ -650,13 +645,12 @@ artificial. Se tomarán en cuenta los siguientes parámetros para determinar si el
 o no signos de somnolencia: 
 
 \begin{itemize}
-\item estado de los ojos (cerrados, abiertos.
-\item estado de la boca (cerrada o
-abierta).
+\item estado de los ojos (cerrados, abiertos).
+\item estado de la boca (cerrada o abierta).
 \end{itemize}  
   
-Si el conductor presenta un estado de ojos cerrador por más de 5 segundos, se considerará como
-un estado de somnolencia, por lo que se activará una alarma para alertar al conductor. A su vez
+Si el conductor presenta un estado de ojos cerrados por más de 5 segundos, se considerará como
+un estado de somnolencia, por lo que se activará una alarma para alertar al conductor.Así mismo se evaluará el grado de apertura de la boca para determinar si el conductor bosteza, si el conductor presenta más de un bostezo dentro de un minuto el sistema lo clasificará como somnolencia. A su vez
 el sistema tomará un videoclip dónde se aprecie el momento en que el conductor presentó un estado de somnolencia.
 
 
@@ -1049,38 +1043,38 @@ Con el uso de una cámara digital, se capturará video en tiempo real.
 \end{tabular}
 \end{table}
 
+%\begin{table}[h]
+%\centering
+%\caption{RF03- Preprocesar imagen}
+%\begin{tabular}{|ll|}
+%\hline
+%\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+%\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Preprocesar imagen}                                                             \\ \hline
+%\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  La imagen de entrada será preprocesada para mejorar la iluminación o eliminar el ruido de la imagen, entre otros factores. \\ \\ \textbf{Elementos:}
+%\\
+%\quad $\bullet$ Imagen\\
+
+%\end{tabular}} \\ \hline
+%\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+%Las imágenes serán preprocesadas para realizar la detección de características faciales.  
+
+%\end{tabular}}                                                    \\ \hline
+%\end{tabular}
+%\end{table}
+
+
+
 \begin{table}[h]
 \centering
-\caption{RF03- Preprocesar imagen}
+\caption{RF03- Detectar Características Faciales}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Preprocesar imagen}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  La imagen de entrada será preprocesada para mejorar la iluminación o eliminar el ruido de la imagen, entre otros factores. \\ \\ \textbf{Elementos:}
-\\
-\quad $\bullet$ Imagen\\
-
-\end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Las imágenes serán preprocesadas para realizar la detección de características faciales.  
-
-\end{tabular}}                                                    \\ \hline
-\end{tabular}
-\end{table}
-
-
-
-\begin{table}[h]
-\centering
-\caption{RF04- Detectar Características Faciales}
-\begin{tabular}{|ll|}
-\hline
-\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Detectar Características Faciales}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema detectará las características faciales más relevantes; rostro, ojos y boca del conductor, mediante el uso de un método de detección.  \\ \\ \textbf{Elementos:}
+\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Detectar Características Faciales}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema detectará las características faciales más relevantes; rostro, ojos y boca del conductor, mediante el uso de un método de detección facial.  \\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Imagen preprocesada \\
-\quad $\bullet$ Método de Detección
+\quad $\bullet$ Método de Detección Facial
  
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
@@ -1092,11 +1086,11 @@ El sistema obtendrá la imagen del rostro y en base a esta se obtendrán las imáge
 
 \begin{table}[h]
 \centering
-\caption{RF05- Clasificar imagen}
+\caption{RF04- Clasificar imagen}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Clasificar imagen}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Clasificar imagen}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema evaluará los signos de somnolencia, como el estado de los ojos y la apertura de la boca para clasificar la imagen en base a la presencia o ausencia de somnolencia mediante técnicas de aprendizaje automático y/o aprendizaje profundo. Así mismo se escalarán y se normalizarán las imágenes que servirán como entrada para dicho proceso.  \\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Técnicas de aprendizaje automático y/o aprendizaje profundo.
@@ -1107,16 +1101,13 @@ El sistema obtendrá el estado de somnolencia del conductor.
 \end{tabular}
 \end{table}
 
-
-
-
 \begin{table}[h]
 \centering
-\caption{RF06- Enviar señal de Alerta}
+\caption{RF05- Enviar señal de Alerta}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF06}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se enviará una señal de alerta al módulo central de procesamiento cuando se detecten signos de somnolencia en el conductor.\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Microordenador\\
@@ -1127,17 +1118,16 @@ El sistema obtendrá el estado de somnolencia del conductor.
 El módulo Central de procesamiento activará la alarma al recibir la señal de alerta. 
 \end{tabular}}                                                    \\ \hline
 \end{tabular}
-
 \end{table}
 
 
 \begin{table}[h]
 \centering
-\caption{RF07- Almacenar Incidencia}
+\caption{RF06- Almacenar Incidencia}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Almacenar Incidencia}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF07}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF06}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se almacenará un fragmento del video en caso de detectar somnolencia en el conductor.\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Microordenador\\
@@ -1149,11 +1139,11 @@ Se guardará el video de incidencia en caso de no contar con conexión inalámbrica
 \end{tabular}}                                                    \\ \hline
 \end{tabular}
 \end{table}
-
-
 \end{itemize}
-\clearpage
 
+
+
+\clearpage
 \begin{center}
 
   \includegraphics[scale=.4]{imagenes/casosuso_vision}
@@ -1201,8 +1191,8 @@ Se guardará el video de incidencia en caso de no contar con conexión inalámbrica
 
  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-
 \end{table}
+
 
 \begin{table}[h]
 \centering
@@ -2688,7 +2678,7 @@ Dimensiones de la placa: 11 x 5.11 x 2.39 cm.
  \label{fig:scaraindust}
 \end{center}
 
-Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc del Raspberry Pi 4. 
+Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc de la Jetson Nano. 
 Largo 10 cm. 
 
 \item Micro SD\\  
@@ -2708,7 +2698,7 @@ Dimensiones: 15 x 11 x 1 mm.
  \label{fig:scaraindust}
 \end{center}
 
-Este HAT celular proporciona una conexión de datos simplificada para proyectos de IoT remotos, en el campo, en todo el mundo, en todas partes. Comience a usar una conexión LTE de alta velocidad con bajo consumo de energía, además de contar con todo el software necesario para desarrollar en una  Raspberry Pi.
+Este HAT celular proporciona una conexión de datos simplificada para proyectos de IoT remotos, en el campo, en todo el mundo, en todas partes. Comience a usar una conexión LTE de alta velocidad con bajo consumo de energía, además de contar con todo el software necesario para desarrollar en una Jetson Nano.
 
 \item \textbf{LE 910Cx Mini PCIe Series Linux}
 
@@ -3074,7 +3064,7 @@ A continuación se muestra el funcionamiento de Amazon Cognito
 \item Finalmente, el usuario puede utilizar estas credenciales de AWS para obtener acceso a otros servicios como Amazon S3.
 \end{enumerate}
 
-Amazon Cognito se encuentra disponible en varias regiones alrededor del mundo. 
+Amazon Cognito se encuentra disponible en varias regiones alrededor del mundo. \\
 
 \textbf{Amazon S3 (\emph{Simple Storage Service})}
 
@@ -3089,9 +3079,9 @@ Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilizado 
 
 \newpage
 \section{Conclusiones}
-Con base en los objetivos planteados, se realizó el diseño y análisis del sistema, gracias a la metodología top-dow se dividió en módulos y submódulos que nos permitieron profundizar en cada uno de ellos, delimitando los elementos a utilizar y los algoritmos o herramientas que se utilizarán en la implementación del sistema para trabajo terminal ll, en el presente trabajo se obtuvieron los resultados de las investigaciones realizadas para la elección de cada uno de los elementos principales que conforman el sistema y posteriormente el resultado del diseño de cada módulo planteado.
-En el caso del Submódulo de Visión artificial, se decidió desarrollar de manera conjunta la detección de rostro s Haar y extracción de características una Red Neuronal Convolucional.En un principio estas se plantearon de manera separada, este cambio significó la simplificación del modelo para el análisis y diseño. Para el reconocimiento del rostro, ojos y boca dentro de la imagen se decidió utilizar las funciones Haar que se implementarán a través de las librarías de Open CV mientras que para el reconocimiento de signos de somnolencia se utilizarán las redes neuronales convolucionales en el caso de los ojos y para la boca se hará uso de la relación MOR y puntos de referencia faciales.
-En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades de investigación, se llegó a la conclusión de que esta opción no es viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, buena cobertura, así como una buena integración con la Rasperry Pi 4. De igual manera, al realizar los cálculos para el envío de fotogramas a la estación base sobrepasaba la máxima tasa de datos propuesta con anterioridad así que optamos por el uso de un compresor de video MP4 que tiene una relación de hasta 16:1 pero que no baja la calidad cómo para no poder cumplir con lo requerido en el funcionamiento del sistema y que varias fuentes mencionan que es el mejor formato para la compresión de videos. Para el envío del posicionamiento del GPS, se llegó a un intervalo de tiempo de 10 segundos que garantiza el correcto trazo de la ruta en el mapa de la página web al consultar las velocidades permitidas en la ciudad de México.
+Con base en los objetivos planteados, se realizó el diseño y análisis del sistema, utilizando la metodología top-down se dividió en módulos y submódulos que nos permitieron profundizar en cada uno de ellos, delimitando los elementos a utilizar y los algoritmos o herramientas que se utilizarán en la implementación del sistema para trabajo terminal 1, en el presente trabajo se obtuvieron los resultados de las investigaciones realizadas para la elección de cada uno de los elementos principales que conforman el sistema y posteriormente el resultado del diseño de cada módulo planteado.
+En el caso del Submódulo de Visión artificial, se decidió desarrollar de manera conjunta la detección decaracterísticas faciales y la clasificación de somnolencia. En un principio estas se plantearon de manera separada, este cambio significó la simplificación del modelo para el análisis y diseño. Para el reconocimiento del rostro, ojos y boca dentro de la imagen se decidió utilizar las funciones Haar que se implementarán a través de las librarías de Open CV mientras que para el reconocimiento de signos de somnolencia se utilizarán las redes neuronales convolucionales en el caso de los ojos y para la boca se hará uso de la relación MOR y puntos de referencia faciales.
+En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades de investigación, se llegó a la conclusión de que esta opción no es viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, buena cobertura, así como una buena integración con la Jetson Nano. De igual manera, al realizar los cálculos para el envío de fotogramas a la estación base sobrepasaba la máxima tasa de datos propuesta con anterioridad así que optamos por el uso de un compresor de video MP4 que tiene una relación de hasta 16:1 pero que no baja la calidad cómo para no poder cumplir con lo requerido en el funcionamiento del sistema y que varias fuentes mencionan que es el mejor formato para la compresión de videos. Para el envío del posicionamiento del GPS, se llegó a un intervalo de tiempo de 10 segundos que garantiza el correcto trazo de la ruta en el mapa de la página web al consultar las velocidades permitidas en la ciudad de México.
 Para el desarrollo de la Estación base, se decidió utilizar la suite de herramientas de Amazon Amplify la cual hace uso de Amplify Hosting y tiene integración directa con Github, esto quiere decir, que los cambios que se realicen en el repositorio se reflejarán de manera automática en la aplicación web. Además AWS Amplify ofrece su servicio de almacenamiento en la nube S3, que será utilizado para el almacenamiento del contenido multimedia mientras que el manejo de credenciales, se eligió Amazon Cognito, que se encargará de administrar las credenciales de acceso a la aplicación. Por otra parte, el gestor de base de datos a implementar será MongoDB el cual nos permite una modelar la base de datos de una manera sencilla y flexible. Para la aplicación web se utilizará Node.js y React los cuales nos permitirán realizar el frontend y backend de dicha aplicación. 
 El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas de somnolencia y alertar al conductor, además de poder obtener la ubicación del conductor en tiempo real la cual será monitoreada desde la aplicación web, que a su vez gestionará la información de los conductores y los reportes de incidencias enviados desde el módulo central de procesamiento. 
 
