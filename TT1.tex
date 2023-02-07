@@ -56,7 +56,7 @@
     \item \textbf{NB-IoT} \tab[4cm] \emph{Narrowband-Internet of Things}
     \item \textbf{CPU} \tab[4cm] \emph{Central Processing Unit}
     \item \textbf{GPU} \tab[4cm] \emph{Graphical Processing Unit}
-    \item \textbf{SBGD} 
+    \item \textbf{SBGD}  \tab[4cm] Sistema Gestor de Base de Datos
 \end{itemize}
 
 \newpage
@@ -132,7 +132,7 @@ Los problemas que resolverá el sistema se listan a continuación: \\
 
 
 \begin{center}
-  \includegraphics[scale=0.4]{imagenes/propuestasolucion}
+  \includegraphics[scale=0.4]{imagenes/diagramageneral}
 \captionof{figure}{Diagrama general del diseño preliminar de la arquitectura del sistema. }
  \label{fig:Arquitecturapreliminar} 
 \end{center} 
@@ -161,7 +161,7 @@ Las pruebas se dividirán en dos fases:\\
  
 \textbf{Fase 1:}
 
-En la primera fase se probará el sistema de somnolencia y el sistema de administración de manera separada, con el propósito de analizar los resultados obtenidos. Para el sistema de detección de somnolencia será colocado dentro del vehículo, sin embargo, dicho vehículo permanecerá estacionado y con el motor apago, esto con el fin de realizar pruebas de la precisión del sistema y poder ajustar parámetros en caso de ser necesario.\\  
+En la primera fase se probará el sistema de somnolencia y el sistema de comunicaciones de manera separada, con el propósito de analizar los resultados obtenidos. El sistema de detección de somnolencia será colocado dentro del vehículo, sin embargo, dicho vehículo permanecerá estacionado y con el motor apago, esto con el fin de realizar pruebas de la precisión del sistema y poder ajustar parámetros en caso de ser necesario.\\  
 
 En un primer escenario se examinarán los siguientes signos de somnolencia sin el uso de gafas de sol:\\ 
 
@@ -188,7 +188,7 @@ Para el sistema de administración se probará la aplicación web que incluye el ac
 
 En la segunda fase, se probará el sistema completo con el vehículo en movimiento, donde el sistema estará monitoreando el estado de somnolencia del conductor en todos sus trayectos.  \\
 
-Para el sistema de administración se corroborará que en los casos en que el sistema de somnolencia detecte una incidencia, esta sea enviada correctamente y pueda ser visualizada desde el sistema de administración. A su vez, se constará que la información de la ubicación geográfica del sujeto de prueba esté disponible en todo momento.  
+Para el sistema de administración se corroborará que en los casos en que el sistema de somnolencia detecte una incidencia, esta será enviada correctamente y pueda ser visualizada desde el sistema de administración. A su vez, se constará que la información de la ubicación geográfica del sujeto de prueba esté disponible en todo momento.  
 
 \subsection{Justificación}
 
@@ -233,28 +233,17 @@ UML es el estándar de la industria para modelar sistemas orientados a objetos \c
 
 \subsubsection{Objetivo General}
 
-Analizar y diseñar un sistema para la detección de síntomas de somnolencia y alerta del conductor. Además de ser capaz de obtener la ubicación del conductor en tiempo real para ser monitoreada desde una aplicación web que a su vez permita gestionar y visualizar los reportes de incidencias del mismo. 
+Diseñar un sistema portátil para la detección de síntomas de somnolencia y alerta del conductor. Además de ser capaz de obtener la ubicación del conductor en tiempo real para ser monitoreada desde una aplicación web que a su vez permita gestionar y visualizar los reportes de incidencias del mismo. 
 
 \subsubsection{Objetivos Específicos}
 
-\textbf{Para Trabajo Terminal 1:}
-
 \begin{itemize}
-\item Diseñar un sistema de visión artificial que sea capaz de detectar la somnolencia en conductores.
-\item Diseñar un sistema de geolocalización en tiempo real usando redes de telecomunicaciones.
+\item Diseñar un sistema de visión artificial que sea capaz de detectar y alertar la somnolencia en conductores.
+\item Integrar herramienttas de geolocalización en tiempo real usando redes de telecomunicaciones móviles.
 \item Diseñar un sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
-\item Diseñar un sistema de comunicaciones que permita la interconexión entre el sistema de visión artificial y el sistema de administración.  
+\item Integrar un sistema de comunicaciones que permita la interconexión Entre el sistema de visión artificial y el sistema de administración. 
 \end{itemize}
 
-
-\textbf{Para Trabajo Terminal 2:}
-
-\begin{itemize}
-\item Implementar un sistema de visión artificial que sea capaz de detectar la somnolencia en conductores.
-\item Implementar un sistema de geolocalización en tiempo real.
-\item Implementar un sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
-\item Implementar un sistema de comunicaciones que permita la interconexión entre el sistema de visión artificial y el sistema de administración.  
-\end{itemize}
 
 \newpage
 \section{Capítulo II: Marco de Referencia}
@@ -654,6 +643,22 @@ A continuación, se desglosan cada uno de los módulos: \\
 
 El módulo Central de procesamiento estará compuesto por un microordenador que será colocado dentro de un automóvil. Este microordenador será alimentado por el corriente proporcionado por dicho automóvil. Además, contará con una cámara digital que analizará el rostro del conductor después de que este encienda el automóvil. A este microordenador también le será acoplado un dispositivo que sea capaz de utilizar redes de telecomunicaciones móviles, esto para que sea posible la conexión con la Estación Base. Finalmente, también contará con una alarma para alertar al conductor si este presenta un estado de somnolencia. \\
 
+\textbf{Módulo de Visión Artificial}\\
+
+Este submódulo se hará cargo de analizar el rostro del conductor utilizando técnicas de visión
+artificial. Se tomarán en cuenta los siguientes parámetros para determinar si el conductor presenta
+o no signos de somnolencia: 
+
+\begin{itemize}
+\item estado de los ojos (cerrados, abiertos.
+\item estado de la boca (cerrada o
+abierta).
+\end{itemize}  
+  
+Si el conductor presenta un estado de ojos cerrador por más de 5 segundos, se considerará como
+un estado de somnolencia, por lo que se activará una alarma para alertar al conductor. A su vez
+el sistema tomará un videoclip dónde se aprecie el momento en que el conductor presentó un estado de somnolencia.
+
 
 \textbf{Módulo de Comunicaciones}\\
 
@@ -834,7 +839,6 @@ El video de la incidencia será eliminado.
 \end{tabular}
 \end{table}
 
-
 \clearpage
 \subsubsection{Análisis y Elección del microordenador}\label{sec:microordenador}
 
@@ -895,10 +899,8 @@ Para la elección de la alarma se obtuvieron dos de los principales modelos comer
 \end{itemize}
 
 Debido a la posibilidad que ofrece el zumbador pasivo para controlar el tono y la duración del mismo, además de su bajo coste en comparación con el zumbador activo KY-012, se optó por el zumbador de tipo pasivo, específicamente el modelo KY-006, en cual se pueden configurar los tonos desde la Nvidia Jetson Nano por medio del lenguaje Python. 
+
 \clearpage  
-
-
-
 \subsubsection{Análisis y Elección de la unidad de almacenamiento externa}\label{sec:almacenamientoexterno}
 
 Para utilizar una NVIDIA Jetson Nano, se requiere una tarjeta SD que contenga el sistema operativo y las aplicaciones. La tarjeta SD debe tener una capacidad de almacenamiento de al menos 8 GB. 
@@ -1005,29 +1007,37 @@ Es una biblioteca de procesamiento de imágenes de código abierto, ampliamente ut
 
 El submódulo de visión artificial tiene como objetivo realizar la detección de somnolencia del conductor, analizando el rostro con distintas técnicas y algoritmos de visión artificial. 
 
-Si el conductor presenta un estado de somnolencia, se activará una alarma para alertar al conductor. A su vez el sistema tomará un videoclip dónde se apreciará el momento en que el conductor presentó un estado de somnolencia. \\ 
-
-Se tomarán en cuenta los siguientes parámetros para determinar si el conductor presenta o no signos de somnolencia:  
-
-Estado de los ojos (cerrados, abiertos). \\ 
-
-Estado de la boca (cerrada o abierta). \\  
-
-Bostezo. 
-
-
-
 \begin{itemize}
 
 \item \textbf{Requerimientos Funcionales}
+
+
 \begin{table}[h]
 \centering
-\caption{RF01- Capturar Video en Tiempo Real}
+\caption{RF01- Ingresar al Campo Visual}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF01}}                                              & \emph{Capturar video en tiempo real}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema capturará video en todo momento\\ \\ \textbf{Elementos:}
+\multicolumn{1}{|l|}{\emph{RF01}}                                              & \emph{Ingresar al campo visual}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El conductor ingresará al campo visual de la cámara digital, posicionándose en el asiento del conductor\\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Conductor\\
+\quad $\bullet$ Cámara Digital
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+La cámara se posicionará para capturar el rostro del conductor en video como entrada para el sistema. 
+\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{RF02- Capturar Video }
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF02}}                                              & \emph{Capturar video}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema capturará video en todo momento.\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Conductor\\
 \quad $\bullet$ Cámara Digital\\
@@ -1037,62 +1047,44 @@ Bostezo.
 Con el uso de una cámara digital, se capturará video en tiempo real.
 \end{tabular}}                                                    \\ \hline
 \end{tabular}
-
 \end{table}
 
 \begin{table}[h]
 \centering
-\caption{RF02- Ingresar al Campo Visual}
+\caption{RF03- Preprocesar imagen}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF02}}                                              & \emph{Ingresar al campo visual}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El conductor ingresará al campo visual de la cámara digital, posicionándose en el asiento del conductor\\ \\ \textbf{Elementos:}
+\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Preprocesar imagen}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  La imagen de entrada será preprocesada para mejorar la iluminación o eliminar el ruido de la imagen, entre otros factores. \\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Conductor\\
-\quad $\bullet$ Cámara Digital
+\quad $\bullet$ Imagen\\
+
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando el software de procesamiento de imágenes el sistema podrá detectar el rostro del conductor.
+Las imágenes serán preprocesadas para realizar la detección de características faciales.  
+
 \end{tabular}}                                                    \\ \hline
 \end{tabular}
-
 \end{table}
+
 
 
 \begin{table}[h]
 \centering
-\caption{RF03- Reconocer Características Faciales}
+\caption{RF04- Detectar Características Faciales}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Reconocer Características Faciales}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:} El sistema detectará la posición de los ojos y la boca del conductor a partir de la detección del rostro.\\ \\ \textbf{Elementos:}
+\multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Detectar Características Faciales}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema detectará las características faciales más relevantes; rostro, ojos y boca del conductor, mediante el uso de un método de detección.  \\ \\ \textbf{Elementos:}
 \\
-\quad $\bullet$ Método de Detección de Rostro\\
-\quad $\bullet$ Cámara Digital
+\quad $\bullet$ Imagen preprocesada \\
+\quad $\bullet$ Método de Detección
+ 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando un método de detección de rostro el sistema podrá detectar el rostro del conductor.
-\end{tabular}}                                                    \\ \hline
-\end{tabular}
-
-\end{table}
-
-\begin{table}[h]
-\centering
-\caption{RF04- Detectar signos de somnolencia}
-\begin{tabular}{|ll|}
-\hline
-\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Detectar signos de somnolencia}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema detectará el estado de los ojos y la boca, y analizará si estos corresponden a los signos de somnolencia del conductor.\\ \\ \textbf{Elementos:}
-\\
-
-\quad $\bullet$ Red Neuronal Convolucional
-\end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El sistema obtendrá el estado de somnolencia del conductor utilizando una red neuronal convolucional. 
+El sistema obtendrá la imagen del rostro y en base a esta se obtendrán las imágenes de la boca y ojos del conductor detectados por dicho método.  
 \end{tabular}}                                                    \\ \hline
 \end{tabular}
 
@@ -1100,11 +1092,31 @@ El sistema obtendrá el estado de somnolencia del conductor utilizando una red ne
 
 \begin{table}[h]
 \centering
-\caption{RF05- Enviar señal de Alerta}
+\caption{RF05- Clasificar imagen}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Clasificar imagen}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema evaluará los signos de somnolencia, como el estado de los ojos y la apertura de la boca para clasificar la imagen en base a la presencia o ausencia de somnolencia mediante técnicas de aprendizaje automático y/o aprendizaje profundo. Así mismo se escalarán y se normalizarán las imágenes que servirán como entrada para dicho proceso.  \\ \\ \textbf{Elementos:}
+\\
+\quad $\bullet$ Técnicas de aprendizaje automático y/o aprendizaje profundo.
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+El sistema obtendrá el estado de somnolencia del conductor. 
+\end{tabular}}                                                    \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+\begin{table}[h]
+\centering
+\caption{RF06- Enviar señal de Alerta}
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF06}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se enviará una señal de alerta al módulo central de procesamiento cuando se detecten signos de somnolencia en el conductor.\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Microordenador\\
@@ -1121,22 +1133,21 @@ El módulo Central de procesamiento activará la alarma al recibir la señal de ale
 
 \begin{table}[h]
 \centering
-\caption{RF06- Almacenar Incidencia}
+\caption{RF07- Almacenar Incidencia}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Almacenar Incidencia}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se almacenará un fragmento del video en la memoria externa en caso de detectar somnolencia en el conductor.\\ \\ \textbf{Elementos:}
+\multicolumn{1}{|l|}{\emph{RF07}}                                              & \emph{Enviar señal de alerta}                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se almacenará un fragmento del video en caso de detectar somnolencia en el conductor.\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Microordenador\\
 \quad $\bullet$ Memoria Externa\\
 \quad $\bullet$ Video
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Se guardará el video de incidencia en la memoria externa en caso de no contar con conexión inalámbrica, para ser enviada posteriormente a un almacenamiento en la nube. 
+Se guardará el video de incidencia en caso de no contar con conexión inalámbrica, para ser enviada posteriormente a un srvicio almacenamiento en la nube. 
 \end{tabular}}                                                    \\ \hline
 \end{tabular}
-
 \end{table}
 
 
