@@ -223,7 +223,6 @@ UML es el estándar de la industria para modelar sistemas orientados a objetos \c
 \end{itemize}
 
 
-\newpage
 \subsection{Objetivos}
 
 \subsubsection{Objetivo General}
@@ -273,7 +272,7 @@ Jetson Nano es una computadora pequeña y poderosa que permite ejecutar múltiples
 
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/JetsonNano}
-\captionof{figure}{Kit para Desarrolladores Jetson Nano. }
+\captionof{figure}{Kit para Desarrolladores Jetson Nano \cite{JetsonNano}. }
  \label{fig:JetsonNano} 
 \end{center} 
 
@@ -479,6 +478,7 @@ En el contexto de IoT, el alto rendimiento de datos significa que los dispositiv
 
 \end{itemize}
 \end{itemize}
+\clearpage
 \subsubsection{Teorema de Shannon-Hartley}
 
 Un sistema óptimo es el que cuenta con la capacidad de minimizar la probabilidad de error de bit a la salida del sistema, esto depende de las restricciones de la energía transmitida y del ancho de banda del canal.
@@ -677,7 +677,7 @@ El sistema está dirigido principalmente para empresas cuya actividad esté enfoca
 Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura \ref{fig:mapacoberturaN}, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes.
 
 \begin{center}
-  \includegraphics[scale=0.9]{imagenes/CoberturaCDMX}
+  \includegraphics[scale=0.7]{imagenes/CoberturaCDMX}
 \captionof{figure}{Mapa de cobertura 3G/4G/5G en la Ciudad de México.\cite{CoberturaNacional}}
  \label{fig:mapacoberturaCDMX}
 \end{center}
@@ -966,34 +966,12 @@ Java        & Moderada             & Moderada              & Baja               
 
 
 Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje permite desarrollar ambos ámbitos de una manera integral\cite{python}.Por lo cual será utilizado a lo largo del proyecto.
-\clearpage
-\subsubsection{Análisis y Elección de herramientas de programación}
-
-\begin{itemize}
-
-\item \textbf{Tensorflow}
-
-Es una plataforma de código abierto para el aprendizaje automático y el procesamiento de datos. Permite  definir, optimizar y ejecutar operaciones matemáticas, especialmente aquellas que involucran tensores, que son arrays multidimensionales de datos.Una de las principales ventajas de esta herramienta es su capacidad para ejecutarse en diferentes plataformas, desde dispositivos móviles hasta servidores de alta capacidad y sistemas en la nube.
-
-\item \textbf{Keras}
-
-Es una biblioteca de software de código abierto para el desarrollo de redes neuronales escrita en Python.Permite la construcción de modelos mediante la definición de capas y la conexión de estas capas para crear una red neuronal completa. También proporciona una serie de funciones de alto nivel para la configuración de optimizadores, pérdidas y métricas, lo que facilita el proceso de entrenamiento y evaluación de un modelo.
-
-
-\item  \textbf{OpenCV}
-
-Es una biblioteca de procesamiento de imágenes de código abierto, ampliamente utilizada en la investigación académica y la industria. Permite el análisis de imágenes, la detección de objetos, el reconocimiento de patrones y la segmentación de imágenes.
-
-
-
-
-\end{itemize}
-
-
-
 
 
 \clearpage
+
+
+
 \subsubsection{Análisis del Submódulo Visión Artificial}
 
 
@@ -1312,8 +1290,25 @@ Se guardará el video de incidencia en caso de no contar con conexión inalámbrica
 
 \end{table}
 
+\clearpage
+\subsubsection{Análisis y Elección de herramientas de programación}
+
+\begin{itemize}
+
+\item  \textbf{OpenCV}
+
+Es una biblioteca de procesamiento de imágenes de código abierto, ampliamente utilizada en la investigación académica y la industria. Permite el análisis de imágenes, la detección de objetos, el reconocimiento de patrones y la segmentación de imágenes.
+
+\item \textbf{Tensorflow}
+
+Es una plataforma de código abierto para el aprendizaje automático y el procesamiento de datos. Permite  definir, optimizar y ejecutar operaciones matemáticas, especialmente aquellas que involucran tensores, que son arrays multidimensionales de datos.Una de las principales ventajas de esta herramienta es su capacidad para ejecutarse en diferentes plataformas, desde dispositivos móviles hasta servidores de alta capacidad y sistemas en la nube.
+
+\item \textbf{Keras}
+
+Es una biblioteca de software de código abierto para el desarrollo de redes neuronales escrita en Python.Permite la construcción de modelos mediante la definición de capas y la conexión de estas capas para crear una red neuronal completa. También proporciona una serie de funciones de alto nivel para la configuración de optimizadores, pérdidas y métricas, lo que facilita el proceso de entrenamiento y evaluación de un modelo.
+\end{itemize}
  
-\clearpage 
+
 \subsubsection{Análisis y Elección de la cámara digital}\label{sec:camara}
 
 Para la búsqueda de modelos de cámaras digitales, se buscaron modelos que tuvieran compatibilidad con la Nvidia Jetson Nano debido a que el sistema será alojado en este micrordenador.  
@@ -1327,7 +1322,7 @@ Se optó por utilizar la cámara IMX219-160, ya que cuenta con hasta 8 Megapixeles
 \end{center}
 
 
-
+\clearpage 
 \subsubsection{Análisis y Elección de algoritmos de visión artificial}
 
 Existen varios métodos utilizados para detectar rostros en imágenes y videos, algunos de los más comunes son:
@@ -1830,7 +1825,7 @@ El usuario administrador puede acceder a la interfaz de la aplicación web, hacie
 \end{tabular}
 
 \end{table}
-
+\clearpage 
 
 
 \begin{table}[h]
@@ -1850,7 +1845,7 @@ El usuario administrador podrá iniciar sesión en la aplicación web utilizando un
 
 \end{table}
 
-\clearpage
+
 \textbf{Requerimientos No Funcionales del Módulo de Estación Base}
 
 
@@ -1959,6 +1954,7 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 \end{tabular}
 
 \end{table}
+\clearpage 
 
 \begin{table}[h]
 \centering
@@ -1980,7 +1976,6 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 
 
 
-\clearpage
 \subsubsection{Análisis de la Aplicación Web}
 
 
@@ -2080,6 +2075,7 @@ El usuario administrador podrá confirmar la incidencia después de haber revisado
 \end{tabular}
 
 \end{table}
+
 
 \begin{table}[H]
 \centering
@@ -2266,7 +2262,7 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 
 
 \begin{center}
-  \includegraphics[scale=.6]{imagenes/casosdeusoweb}
+  \includegraphics[scale=.5]{imagenes/casosdeusoweb}
 \captionof{figure}{Diagrama de Casos de Uso - Aplicación Web }
  \label{fig:scaraindust}
 \end{center}
@@ -2462,10 +2458,11 @@ Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y 
 
 \end{table}
 
+\clearpage
 
 Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación  como base el lenguaje JavaScript y  Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación\cite{mongo}. Otra característica importante es que es una base de datos multiplataforma, esto para que se realice información desde el sistema operativo Linux, que será utilizado en la Nvidia Jetson Nano.
 
-\clearpage
+
 \subsubsection{Análisis y Elección de lenguajes de programación web}
 
 Con respecto al desarrollo web, se requiere un lenguaje de programación que pueda ofrecer felixbilidad e interoperabilidad para su futura implementación. El lenguaje de programación que cumple en estas características, es Javascript \cite{js}.
@@ -2610,9 +2607,9 @@ Después de haber analizado los distintos proveedores de alojamiento así como sus
 
 \clearpage
 \section{Capítulo IV: Diseño}
-Con base a los requerimientos definidos previande
+
 \subsection{Diseño del Módulo Central de Procesamiento}
-El sistema principal comenzará por verificar el estado del Submódulo de Visón Artificial, así como el de Comunicaciones y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Procesamiento de Imáganes. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
+El sistema principal comenzará por verificar el estado del Submódulo de Visón Artificial, así como el de Comunicaciones y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Visión Artificial. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
 Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Comunicaciones se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
 Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. \\\\
 
@@ -2872,7 +2869,7 @@ La Figura \ref{fig:DisenoMEB} a muestra la arquitectura del sistema de Estación 
 \end{center} 
 
 
-El diagrama de comunicación muestra las interacciones entre elementos que se involucran en cada requerimiento funcional.  Así mismo, dan profundidad al diagrama de Arquitectura del Módulo de Estación Base. La aplicación web hará uso de la Base de Datos (MongoDB) y el \emph{backend} de la aplicación web, que se realizará con Node.js. Mientras que para el despliegue de la aplicación web se requiere del servidor AWS Amplify para permitirle al usuario entrar a la aplicación web. El sistema almacenará el video de incidencia en Amazon S3, enviado desde el Módulo Central de Procesamiento, al cual se podrá acceder por medio de una URL prefirmada. El envío de incidencia requiere la interacción del Módulo Central de Procesamiento el cual se encargará de realizar y enviar el Reporte de Incidencia, posteriormente será almacenado en la Base de Datos (MongoDB).
+El diagrama de comunicación muestra las interacciones entre elementos que se involucran en cada requerimiento funcional.  Así mismo, dan profundidad al diagrama de Arquitectura del Módulo de Estación Base. La aplicación web hará uso de la Base de Datos (MongoDB) y el \emph{backend} de la aplicación web, que se realizará con Node.js. Mientras que para el despliegue de la aplicación web se requiere del servidor AWS Amplify para permitirle al usuario entrar a la aplicación web. El sistema almacenará el video de incidencia en Amazon S3, enviado desde el Módulo Central de Procesamiento, al cual se podrá acceder por medio del ID. El envío de incidencia requiere la interacción del Módulo Central de Procesamiento el cual se encargará de realizar y enviar el Reporte de Incidencia, posteriormente será almacenado en la Base de Datos (MongoDB).
 
 \begin{center} 
   \includegraphics[scale=.7]{imagenes/diagramaMEB} 
@@ -3014,7 +3011,7 @@ En al Figura \ref{fig:incident}, se puede observar la página desde dónde el admi
  
 En la Figura \ref{fig:location} se muestra la página web dónde el Administrador podrá consultar la ubicación de un conductor en tiempo real.
 
-\clearpage
+
 \subsubsection{Diseño de la Base de Datos}
 
 
@@ -3034,7 +3031,7 @@ El modelo de documento para la colección Conductores, se usará para registrar el
  \label{fig:DocumentoConductores}
 \end{center}
 
-El modelo de documento para la colección Incidencias, se usará para registrar el Reporte de Incidencia que presente un conductor, el cual será enviado desde el Módulo Central de Procesamiento, por tanto, se realizará una consulta previa a la colección Conductores para obtener el id, nombre y apellido del conductor en marcha. Posteriormente se realizará el reporte de la incidencia, el cual contendrá el Id del conductor, la fecha y hora de la incidencia, el nombre y apellido del conductor, y el estado de incidencia, este último muestra si la incidencia fue catalogada como descartada o confirmada por parte del Usuario Administrador después de revisar el video de la incidencia. Como se mencionó anteriormente, MongoDB permite anidar documentos, por lo que, dentro de este documento se encontrará anidado un segundo documento llamado Detalles, el cual registrará la Ubicación donde sé detectó la incidencia y la URL donde se encontrará almacenado el video.  
+El modelo de documento para la colección Incidencias, se usará para registrar el Reporte de Incidencia que presente un conductor, el cual será enviado desde el Módulo Central de Procesamiento, por tanto, se realizará una consulta previa a la colección Conductores para obtener el id, nombre y apellido del conductor en marcha. Posteriormente se realizará el reporte de la incidencia, el cual contendrá el Id del conductor, la fecha y hora de la incidencia, el nombre y apellido del conductor, y el estado de incidencia, este último muestra si la incidencia fue catalogada como descartada o confirmada por parte del Usuario Administrador después de revisar el video de la incidencia. Como se mencionó anteriormente, MongoDB permite anidar documentos, por lo que, dentro de este documento se encontrará anidado un segundo documento llamado Detalles, el cual registrará la Ubicación donde sé detectó la incidencia y el ID donde se encontrará almacenado el video.  
 
 
 \begin{center}
@@ -3046,9 +3043,9 @@ El modelo de documento para la colección Incidencias, se usará para registrar el
 Cabe señalar que los anteriores modelos muestran el campo Id, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres. Por tanto, se utilizará el id que proporcione Mongo DB en los documentos. \\
 
 
-\textbf{Amazon Cognito}
+\textbf{Amazon Cognito \\}
 
-Es una suite de herramientas que ofrece autenticación, autorización y administración de usuarios para aplicaciones móviles o web. Amazon Cognito utiliza dos componentes principales: los grupos de usuarios y grupos de identidades. Los grupos de usuarios se tratan de directorios que proporcionan a los usuarios de las aplicaciones opciones para inscribirse e iniciar sesión. Por otro lado, los grupos de indentidades conceden a los usuarios acceso a otros servicios de \emph{Amazon Web Services}
+Es una suite de herramientas que ofrece autenticación, autorización y administración de usuarios para aplicaciones móviles o web. Amazon Cognito utiliza dos componentes principales: los grupos de usuarios y grupos de identidades. Los grupos de usuarios se tratan de directorios que proporcionan a los usuarios de las aplicaciones opciones para inscribirse e iniciar sesión. Por otro lado, los grupos de indentidades conceden a los usuarios acceso a otros servicios de \emph{Amazon Web Services} 
 
 A continuación se muestra el funcionamiento de Amazon Cognito
 
