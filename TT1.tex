@@ -812,7 +812,7 @@ El Reporte de Incidencia será almacenado en la Base de Datos.
 \end{tabular}
 \end{table}
 
-
+\clearpage
 
 \begin{table}[H]
 \centering
@@ -833,7 +833,7 @@ El video de la incidencia será eliminado.
 \end{tabular}
 \end{table}
 
-\clearpage
+
 \subsubsection{Análisis y Elección del microordenador}\label{sec:microordenador}
 
 Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenador para permitir que el sistema sea portátil y pueda funcionar dentro de un automóvil.Por tanto, se realizó una investigación de los modelos disponibles y de mayor aceptación en el mercado, figura \ref{tab:microordenador}.
@@ -866,8 +866,6 @@ Debido a lo anterior, se concluyó que la Jetson Nano representa la mejor opción 
 
 
 
-
-\clearpage
 \subsubsection{Análisis y Elección de la alarma }\label{sec:alarma}
 
 Dentro de la búsqueda de modelos de alarma se encontraron dos tipos de zumbadores, el zumbador activo y zumbador pasivo, donde el primero produce un tono audible fijo, al aplicar una tensión de corriente directa. Mientras que el segundo requiere de una señal oscilante, generalmente de tipo PWM, que indique la frecuencia y la duración de la señal.  \\
@@ -1098,6 +1096,7 @@ El módulo Central de procesamiento activará la alarma al recibir la señal de ale
 \end{tabular}
 \end{table}
 
+\clearpage
 
 \begin{table}[h]
 \centering
@@ -1121,10 +1120,9 @@ Se guardará el video de incidencia en caso de no contar con conexión inalámbrica
 
 
 
-\clearpage
 \begin{center}
 
-  \includegraphics[scale=.4]{imagenes/casosuso_vision}
+  \includegraphics[scale=.5]{imagenes/casosuso_vision}
 \captionof{figure}{Diagrama de Casos de Uso - Submódulo de Visión Artificial}
  \label{fig:actividades}
  \end{center}
@@ -1339,7 +1337,7 @@ Existen varios métodos utilizados para detectar rostros en imágenes y videos, al
 
 \end{itemize}
 
-Debido a que el presente proyecto busca conseguir un ahorro en procesamiento, se decidió a utilizar cascadas Haar para la detección de rostro, ya que estas tienen un tiempo de respuesta mayor y requieren menos procesamiento que los demás métodos mencionados \cite{facedetection}
+Debido a que el presente proyecto busca conseguir un ahorro en procesamiento, se decidió a utilizar cascadas Haar para la detección de rostro, ya que estas tienen un tiempo de respuesta mayor y requieren menos procesamiento que los demás métodos mencionados.
 
 
 \begin{table}[H]
@@ -1644,16 +1642,17 @@ Actualemente, la compañia Telcel cuenta con la mayor cobertura de tecnología LTE
 \captionof{figure}{Mapa de Cobertura LTE-Telcel}
  \label{fig:prot}
 \end{center}
-\newpage
+
+
 \item\textbf{NB-IoT consume más energía en algunos casos}
 
 Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las velocidades de datos más bajas de NB-IoT requieren estos permanezcan en línea por más tiempo, lo que resulta en un mayor consumo de energía. En casos de uso móvil, NB-IoT también usa más energía
 
-
 \end{itemize}
 
-Por lo anterior, se decidió a utilizar el estándar LTE-M para nuestro proyecto. 
+Por lo anterior, se decidió a utilizar el estándar LTE-M. 
 
+\clearpage
 \subsubsection{Análisis del Submódulo de Datos }\label{sec:ASD}
 El objetivo que tiene el análisis de los datos es mandar fotogramas a la estación base para su futura gestión y validación, así como el almacenamiento de estos; de igual manera se pretende el envío de mensajes informativos para la estación base.
 Anteriormente se establecen las especificaciones que debe tener el material multimedia a utilizar, las características que debe tener el clip grabado es una profundidad de bits de mínimo 8  y una resolución de mínimo 960 x 540 píxeles comúnmente conocido como QHD o \emph{Quarter of High Definition} por sus siglas en inglés, que es lo mínimo necesario que requiere el sistema, todo esto en una secuencia de 30fps.
@@ -1694,7 +1693,7 @@ Ya sea cuando se pierde la calidad en una de ellas o cuando el dispositivo se va
 Para el análisis de cobertura de la red LTE se tiene en cuenta el sistema \emph{handoff} porque el dispositivo se va trasladando entre distintas celdas.
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/handover}
+  \includegraphics[scale=0.3]{imagenes/handover}
 \captionof{figure}{Esquema \emph{handover} entre dos celdas }
  \label{fig:handover}
 \end{center}
@@ -1702,7 +1701,7 @@ Para el análisis de cobertura de la red LTE se tiene en cuenta el sistema \emph{
 La cobertura de LTE por Telcel es la más amplia del país \cite{CoberturaNacional}, su mayor cobertura está concentrada en la Ciudad de México, por lo que existe una buena recepción, aunque en ocasiones debido a la saturación de la red o al transferir el servicio de la antena de una estación base a otra se puede encontrar alguna intermitencia o retraso, en estos casos el módulo va a pasar a modo de espera para enviar la información una vez se restablezca la red.
 
 \begin{center}
-  \includegraphics[scale=1.3]{imagenes/mapaLTE}
+  \includegraphics[scale=.9]{imagenes/mapaLTE}
 \captionof{figure}{Mapa de cobertura de la red LTE }
  \label{fig:mapaLTE}
 \end{center}
@@ -1710,6 +1709,7 @@ La cobertura de LTE por Telcel es la más amplia del país \cite{CoberturaNacional
 En el mapa de cobertura la zona verde hace referencia a zonas con cobertura garantizada y la zona amarilla cobertura no garantizada, en caso de realizar pruebas en las zonas amarillas del mapa se va a notar un cambio en la velocidad del dispositivo móvil ya sea para la transferencia de archivos o la conectividad a la red
 ocasionando un \emph{handoff fuerte}; por el otro lado, al estar realizando pruebas en la zona verde del mapa su \emph{handoff} será más suave.
 
+\clearpage
 \textbf{Alcances:}
 \begin{itemize}
 \item Envío de las coordenadas y mensaje informativo del posicionamiento del vehículo a la estación base.
@@ -1729,7 +1729,6 @@ ocasionando un \emph{handoff fuerte}; por el otro lado, al estar realizando prue
  
 
 
-\clearpage
 \subsection{Análisis del Módulo de Estación Base}
 El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.  
 
@@ -1801,10 +1800,7 @@ El Módulo de Procesamiento Central puede insertar el video en el almacenamiento 
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
 El usuario administrador puede realizar la inserción, modificación, eliminación y consulta de datos desde la aplicación web.  \end{tabular}}                                                    \\ \hline
 \end{tabular}
-
 \end{table}
-
-
 
 
 
@@ -1825,7 +1821,6 @@ El usuario administrador puede acceder a la interfaz de la aplicación web, hacie
 \end{tabular}
 
 \end{table}
-\clearpage 
 
 
 \begin{table}[h]
@@ -1845,7 +1840,7 @@ El usuario administrador podrá iniciar sesión en la aplicación web utilizando un
 
 \end{table}
 
-
+\clearpage
 \textbf{Requerimientos No Funcionales del Módulo de Estación Base}
 
 
@@ -1954,7 +1949,7 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 \end{tabular}
 
 \end{table}
-\clearpage 
+
 
 \begin{table}[h]
 \centering
@@ -1975,19 +1970,13 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 \end{table}
 
 
-
+\clearpage 
 \subsubsection{Análisis de la Aplicación Web}
-
-
 
 
 A continuación se listan los requerimientos Funcionales obtenidos
 
 \begin{itemize}
-
-
-
-
 
 
 \item \textbf{Análisis de Requerimientos Funcionales}
@@ -2414,7 +2403,7 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \end{tabular}
 
 \end{table}
-
+\clearpage
 
 \begin{table}[h]
 \centering
@@ -2436,10 +2425,11 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \end{table}
 
 \end{itemize}
-\clearpage
+
 
 \subsubsection{Análisis y Elección del manejador de bases de datos  }
 Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  \\
+
 
 
 \begin{table}[h]
@@ -2810,6 +2800,7 @@ Ojo Izquierdo & {[}42-46{]}                               \\ \hline
 
 Debido a que bostezar es un signo de cansancio, se propone medir el tamaño y la forma de la boca es necesario para identificar un bostezo. Para esto, se utilizara el \emph{Mouth Opening Ratio} que es un método que utiliza puntos de referencia para medir la apertura de la boca. Entre más grande sea este valor, más es la aperatura de la boca, por lo tanto cumple con las características de un bostezo.
 
+
 \begin{center}
   \includegraphics[scale=.5]{imagenes/MOR}
 \captionof{figure}{\emph{Mouth Opening Ratio}}
@@ -2830,8 +2821,7 @@ MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-
 De tal manera, cuanto mayor sea el valor del \emph{MOR}, mayor será la apertura de la boca. Por lo cuál, se tomará un valor de 0.60, que es un estándar establecido para el valor de un bostezo.\cite{mor}
 \end{itemize}
 
-
-\newpage
+\clearpage
 
 \subsection{Diseño del Módulo de Comunicaciones}
 Para el diseño de este módulo se tiene contemplado ejecutar dos procesos asíncronos, es decir, que se ejecutan al mismo tiempo o de manera paralela.
