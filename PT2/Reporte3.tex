@@ -1,0 +1,263 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{anysize}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{float}
+\marginsize{2cm}{2cm}{1cm}{1cm}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize UPIITA}
+%\fancyfoot[R]{\footnotesize Diseño}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{\footnotesize Proyecto Terminal 2}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{graphics}
+\usepackage{capt-of}
+\usepackage[pdftex=false,colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+\setlength\parindent{0pt}
+\usepackage[usenames]{color}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{shapepar}
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+
+\includegraphics[scale=0.45]{imagenes/ipn}
+\hspace{10cm}
+\includegraphics[scale=0.15]{imagenes/upiita}
+\\
+
+
+\begin{center}
+
+
+\textsc{\Large ``Sistema para el monitoreo, detección y alerta de somnolencia del conductor mediante visión artificial, comunicación inalámbrica y geolocalización''}\\[0.5cm]
+
+
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Primer Reporte Parcial}\\[0.4cm]
+
+\HRule \\[1.5cm]
+
+\begin{center}
+
+Lista de actividades
+ 
+
+\begin{itemize}
+\item Definir rutas del frontend
+\item Diseño de rutas del backend  
+\item Conexión Backend con Mongo DB
+\item Sistema de acceso con credenciales
+\item Creación de la base de datos no relacional
+\item	Investigación de modelos de Redes Neuronales Convolucionales
+\item Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos
+
+\end{itemize}
+
+\end{center}
+
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{\\Autores:}\\
+Alan Eduardo Gamboa Del Ángel\\
+Maite Paulette Díaz Martínez\\
+
+%Grupo:4MM6\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{flushright} \large
+\emph{Asesores:} \\
+M.en C. Niels Henrik Navarrete Manzanilla\\
+Dr. Rodolfo Vera Amaro\\
+
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+30 de Noviembre 2022
+
+\end{center}
+
+
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+
+\newpage
+\section{Definir rutas del frontend}
+
+\subsection{Objetivo}
+Crear las rutas mediante las que el cliente realizará las peticiones y tendrá acceso a las operaciones, así como su funcionamiento en cuanto a obtención de datos y comunicación con el resto de la aplicación.
+
+
+\subsection{Descripción}
+
+\subsection{Resultados}
+
+
+
+
+
+\newpage
+\section{Definir rutas del backend}
+
+\subsection{Objetivo}
+Crear las rutas mediante las que el cliente realizará las peticiones y tendrá acceso a las operaciones, así como su funcionamiento en cuanto a obtención de datos y comunicación con el resto de la aplicación.
+\subsection{Descripción}
+
+\subsection{Resultados}
+
+\newpage
+\section{Conexión Backend con Mongo DB}
+
+\subsection{Objetivo}
+
+\subsection{Descripción}
+
+\subsection{Resultados}
+
+
+\newpage
+\section{Sistema de acceso con credenciales}
+
+\subsection{Objetivo}
+
+\subsection{Descripción}
+
+\subsection{Resultados}
+
+
+
+\newpage
+\section{Creación de la base de datos No Relacional}
+Crear la base de datos en MongoDB.
+
+\subsection{Objetivo}
+
+\subsection{Descripción}
+
+\subsection{Resultados}
+
+
+\newpage
+\section{Investigación de modelos de Redes Neuronales Convolucionales}
+
+\subsection{Objetivo}
+Determinar distintos modelos de redes neuronales convolucionales que ofrezcan mejor eficiancia al clasificar imágenes.
+
+\subsection{Descripción}
+
+\subsection{Resultados}
+
+
+\newpage
+\section{Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}
+
+\subsection{Objetivo}
+Diseñar y realizar pruebas de los modelos de redes neuronales convolucionales previamente investigados para determinar el rendimiento y la precisión de cada uno
+
+\subsection{Descripción}
+
+\subsection{Resultados}
+
+
+\newpage
+\section{Conclusiones}
+Para el desarrollo de la Estación base, se decidió utilizar la suite de herramientas de Amazon Amplify. Se hará uso de Amplify Hosting, el cuál tiene una integración directa con Github, esto quiere decir, que los cambios que se realicen en el repositorio se reflejarán de manera automática en la aplicación web. Además, AWS Amplify ofrece su servicio de almacenamiento en la nube S3, este será de gran ayuda para almacenar contenido multimedia, en este caso los videos de incidencia de los conductores. Para el manejo de credenciales, se utilizará Amazon Cognito, que se encargará de administrar las credenciales de acceso a la aplicación. Para el manejo de datos, se estará utilizando MongoDB, un manejador NoSQL que trabaja con documentos.  Para el desarrollo de la aplicación, se decidió utilizar el lenguaje de programación Javascript, junto con NodeJs que nos ayudará a manejar varias peticiones al mismo tiempo. 
+Finalmente el análisis del sistema de comunicaciones,en un principio sólo se había contemplado el análisis de telemetría pero al ir realizando las actividades del tercer reporte e ir profundizando en algunos temas de comunicaciones, se decidió que también que se necesitaba el análisis de la cobertura y de los datos, es decir,de la transmisión de los fotogramas por lo que se incluyeron también en este reporte.
+
+\newpage
+\section{Bibliografia}
+%\bibliographystyle{apacite}
+
+\begin{thebibliography}{10} %10 significa el número máximo de items
+%Aquí ponga la bibliografía y referencias usadas
+
+%Artículo:
+
+
+\bibitem{Referencia1} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
+%Libro
+\bibitem{Referencia2}
+V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
+
+\bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
+
+\bibitem{Referencia4} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
+
+
+\bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with OpenCV}, Tercera Edición, O'Reilly, 2017
+
+\bibitem{Referncia8}Cuno Plister, \emph{Getting Started with Internet of Things},Primera Edición, O'Reilly, 2011
+
+\bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
+
+
+
+\bibitem{Referencia10} R. Marín. "Los gestores de bases de datos más usados en la actualidad". www.inesem.es. https://www.inesem.es/revistadigital/informatica-y-tics/los-gestores-de-bases-de-datos-mas-usados/ (accedido el 6 de noviembre de 2022). 
+
+\bibitem{Referencia11}  bigdata-analytics. "Qué es SQL, sintaxis, conceptos básicos y características". https://bigdata-analytics.es/sql/ (accedido el 6 de noviembre de 2022). 
+
+\bibitem{Referencia12}  CursosGratis. "Ventajas y desventajas de la base de datos relacional". https://aprendiendoaprogramar.es/blog/ventajas-y-desventajas-de-la-base-de-datos-relacional/ (accedido el 6 de noviembre de 2022). 
+
+\bibitem{Referencia13}  Unir. "Bases de Datos NoSQL: Qué son y cuáles son sus ventajas". mexico.unir.net. https://mexico.unir.net/ingenieria/noticias/bases-de-datos-nosql/
+
+\bibitem{Referencia14}  G. Cutipa. "Las 5 principales ventajas y desventajas de bases de datos relacionales y no relacionales: NoSQL vs SQL". https://guidocutipa.blog.bo/principales-ventajas-desventajas-bases-de-datos-relacionales-no-relacionales-nosql-vs-sql/ (accedido el 6 de noviembre de 2022). 
+
+\bibitem{Referencia15}  Roch Moraguez, E. (s. f.). Comparación entre las principales bases de datos nosql más populares. https://lovtechnology.com/comparacion-entre-principales-bases-de-datos-nosql-mas-populares/ 
+
+\bibitem{Referencia16} MongoDB. (s. f.). What is MongoDB? https://www.mongodb.com/docs/manual/
+
+\bibitem {NodeJs} Jonathan Wexler, \emph{Get Programming with Node.js}, Manning, 2019
+
+\bibitem {js} Marjin Haverbeke \emph{Eloquent Javascript}, Third Edition, No Starch Press, 2020
+
+\bibitem {AWS} Amazon, \emph{Amazon Amplify}, https://aws.amazon.com/es/amplify/
+
+\bibitem {hosting} Matt Ahlgren, \emph{Revisión de alojamiento A2}, https://www.websiterating.com/es/web-hosting/a2-hosting-review/
+
+\bibitem {bluehost} Tony Leong, \emph{Bluehost Review: 7 Pros \& 4 Cons of Bluehost (Server Speed Tested!)} https://www.bitcatcha.com/hosting-reviews/bluehost/
+
+\bibitem {bluehost} Tony Leong, \emph{HostGator Review: 9 Pros \& 5 Cons of HostGator (Server Speed Tested!)} https://www.bitcatcha.com/hosting-reviews/hostgator/
+
+
+
+\bibitem {SGBD SQL} Gonzalez, E. L. (s. f.). Cuadro comparativo de los sistemas gestores de base de datos. https://studylib.es/doc/9167711/cuadro-comparativo-de-los-sistemas-gestores-de-base-de-datos
+
+\bibitem {SGBD SQL y NoSQL} altexsoft. (octubre de 2021). Comparing Database Management Systems: MySQL, PostgreSQL, MSSQL Server, MongoDB, Elasticsearch, and others. https://www.altexsoft.com/blog/business/comparing-database-management-systems-mysql-postgresql-mssql-server-mongodb-elasticsearch-and-others/
+
+\bibitem {SGBD NoSQL} Joyce, K. E. (22 de junio de 2021). Comparación de bases de datosNoSQL para elegir la opción adecuada. https://www.computerweekly.com/es/consejo/Comparacion-de-bases-de-datosNoSQL-para-elegir-la-opcion-adecuada
+
+\end{thebibliography}
+
+
+
+
+\end{document}
+
+

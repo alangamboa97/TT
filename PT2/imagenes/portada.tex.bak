@@ -1,0 +1,48 @@
+\begin{titlepage}
+ 
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+ 
+
+\includegraphics[scale=0.45]{imagenes/upiita}
+\hspace{10cm}
+\includegraphics[scale=0.45]{imagenes/ipn}
+\begin{center}
+\textsc{\LARGE Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas}\\[1.5cm]
+ 
+\textsc{\Large ''Diseño, manufactura y control de un robot paletizador articulado de cuatro grados de libertad asistido por un sistema de visión artificial.''}\\[0.5cm]
+ 
+ 
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Trabajo Terminal 1}\\[0.4cm]
+
+\HRule \\[1.5cm]
+ 
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Autores:}\\
+César Ernesto López Pérez\\
+Maxixcatzin Orizaga Ramírez\\
+Carlos Emmanuel Baltazar Arzate\\
+
+%Grupo:4MM6\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{flushright} \large
+\emph{Asesores:} \\
+M.C Guillermo Puriel Gil\\
+Dr. José de Jesus Silva Lomelí\\
+
+\end{flushright}
+\end{minipage}
+ 
+\vfill
+ 
+{\large \today}
+ 
+\end{center}
+ 
+\end{titlepage}

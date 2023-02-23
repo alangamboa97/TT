@@ -1,0 +1,43 @@
+\begin{titlepage}
+ 
+\begin{center}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+ 
+
+\includegraphics{upiita}\vspace*{1cm}
+ 
+\textsc{\LARGE Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas}\\[1.5cm]
+ 
+\textsc{\Large Nombre de la práctica}\\[0.5cm]
+ 
+ 
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Materia}\\[0.4cm]
+ 
+\HRule \\[1.5cm]
+ 
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Autores:}\\
+Autor1\\
+Autor2\\
+Autor3\\
+Grupo:\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{flushright} \large
+\emph{Profesor:} \\
+M. en C. Rafael Martínez Martínez
+\end{flushright}
+\end{minipage}
+ 
+\vfill
+ 
+{\large \today}
+ 
+\end{center}
+ 
+\end{titlepage}
