@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require('cors')
 require('dotenv').config({ path: 'env' });
 
 const app = express();
@@ -12,6 +13,10 @@ app.get("/", (req,res) =>  {
 });
 
 
+//middlewares
+app.use(cors());
+app.use(express.json());
+
 //conexion mongo
 mongoose.set("strictQuery", true);
 mongoose.connect(URI, {
@@ -23,5 +28,7 @@ mongoose.connect(URI, {
 //levantar servidor
 app.listen(port,()=> console.log("servidor escuchando en el puerto", port));
 
-//rutas_backend
-app.get('/users', (req,res)=> res.send('Users Routes'))
+
+//rutas
+app.use('/incidents', require('./routes/incidents'))
+app.use('/users', require('./routes/users'))
