@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  23 FEB 2023 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.8)  25 FEB 2023 18:10
 entering extended mode
 **./Reporte3.tex
 (Reporte3.tex
@@ -578,6 +578,15 @@ LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 
 
+LaTeX Warning: Label `fig:MongoA' multiply defined.
+
+
+LaTeX Warning: Label `fig:MongoA' multiply defined.
+
+
+LaTeX Warning: Label `fig:MongoA' multiply defined.
+
+
 LaTeX Warning: Label `bluehost' multiply defined.
 
 )
@@ -737,60 +746,111 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lot=\write6
 \openout6 = `Reporte3.lot'.
 
- [3] [4] [5] [6] [7]
-[8] [9] [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+ [3] [4] [5]
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
+148.
+
+(C:\Users\alang\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<imagenes/mongod.jpg, id=199, 1014.79124pt x 442.65375pt>
+File: imagenes/mongod.jpg Graphic file (type jpg)
+<use imagenes/mongod.jpg>
+Package pdftex.def Info: imagenes/mongod.jpg  used on input line 151.
+(pdftex.def)             Requested size: 405.9093pt x 177.05835pt.
+<imagenes/mongohome.jpg, id=200, 842.39719pt x 347.04657pt>
+File: imagenes/mongohome.jpg Graphic file (type jpg)
+<use imagenes/mongohome.jpg>
+Package pdftex.def Info: imagenes/mongohome.jpg  used on input line 159.
+(pdftex.def)             Requested size: 421.19756pt x 173.52286pt.
+<imagenes/shared.jpg, id=201, 606.76688pt x 356.0803pt>
+File: imagenes/shared.jpg Graphic file (type jpg)
+<use imagenes/shared.jpg>
+Package pdftex.def Info: imagenes/shared.jpg  used on input line 167.
+(pdftex.def)             Requested size: 303.38269pt x 178.03972pt.
+ [6 <./imagenes/mongod.jpg> <./imagenes/mongohome.jpg>]
+<imagenes/storage.jpg, id=208, 605.26125pt x 243.91125pt>
+File: imagenes/storage.jpg Graphic file (type jpg)
+<use imagenes/storage.jpg>
+Package pdftex.def Info: imagenes/storage.jpg  used on input line 174.
+(pdftex.def)             Requested size: 302.62987pt x 121.95532pt.
+<imagenes/directory.jpg, id=209, 261.22594pt x 264.23718pt>
+File: imagenes/directory.jpg Graphic file (type jpg)
+<use imagenes/directory.jpg>
+Package pdftex.def Info: imagenes/directory.jpg  used on input line 182.
+(pdftex.def)             Requested size: 130.61264pt x 132.11826pt.
+<imagenes/confi_server.jpg, id=210, 685.8122pt x 266.49562pt>
+File: imagenes/confi_server.jpg Graphic file (type jpg)
+<use imagenes/confi_server.jpg>
+Package pdftex.def Info: imagenes/confi_server.jpg  used on input line 189.
+(pdftex.def)             Requested size: 342.90526pt x 133.24748pt.
+ [7 <./imagenes/shared.jpg> <./imagenes/storage.jpg> <./imagenes/directory.jpg>
+]
+<imagenes/mongo_connect.jpg, id=216, 691.83469pt x 218.31563pt>
+File: imagenes/mongo_connect.jpg Graphic file (type jpg)
+<use imagenes/mongo_connect.jpg>
+Package pdftex.def Info: imagenes/mongo_connect.jpg  used on input line 195.
+(pdftex.def)             Requested size: 345.91649pt x 109.15753pt.
+<imagenes/conexion.jpg, id=217, 621.07031pt x 338.01282pt>
+File: imagenes/conexion.jpg Graphic file (type jpg)
+<use imagenes/conexion.jpg>
+Package pdftex.def Info: imagenes/conexion.jpg  used on input line 205.
+(pdftex.def)             Requested size: 310.5344pt x 169.00598pt.
+ [8 <./imagenes/confi_server.jpg> <./imagenes/mongo_connect.jpg> <./imagenes/co
+nexion.jpg>] [9] [10] [11]
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 \OT1/lmr/m/n/12 https://www.inesem.es/revistadigital/informatica-y-tics/los-ges
 tores-de-bases-de-datos-mas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 []\OT1/lmr/m/n/12 CursosGratis. "Ven-ta-jas y des-ven-ta-jas de la ba-se de da-
 tos re-la-cio-nal".
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 \OT1/lmr/m/n/12 https://aprendiendoaprogramar.es/blog/ventajas-y-desventajas-de
 -la-base-de-datos-
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 239--240
+Underfull \hbox (badness 5008) in paragraph at lines 312--313
 []\OT1/lmr/m/n/12 Matt Ahl-gren, \OT1/lmr/m/it/12 Re-vi-sion de alo-ja-mien-to
  A2\OT1/lmr/m/n/12 , https://www.websiterating.com/es/web-
  []
 
-[12]
-Underfull \hbox (badness 5008) in paragraph at lines 247--248
+[14]
+Underfull \hbox (badness 5008) in paragraph at lines 320--321
 []\OT1/lmr/m/n/12 Gonzalez, E. L. (s. f.). Cua-dro com-pa-ra-ti-vo de los sis-t
 e-mas ges-to-res de ba-se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 []\OT1/lmr/m/n/12 altexsoft. (oc-tu-bre de 2021). Com-pa-ring Da-ta-ba-se Ma-na
 -ge-ment Sys-tems:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 \OT1/lmr/m/n/12 MySQL, Post-greSQL, MSSQL Ser-ver, Mon-goDB, Elas-tic-search, a
 nd others.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 \OT1/lmr/m/n/12 https://www.altexsoft.com/blog/business/comparing-database-mana
 gement-systems-mysql-
  []
 
-[13pdfTeX warning (ext4): destination with the same identifier (name{cite.blueh
+[15pdfTeX warning (ext4): destination with the same identifier (name{cite.blueh
 ost}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.258 \end{document}
+l.331 \end{document}
                     ] (Reporte3.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
@@ -802,23 +862,25 @@ Package rerunfilecheck Info: File `Reporte3.out' has not changed.
 (rerunfilecheck)             Checksum: 3166F5583E93FA6E559B7432E7D3BEC6;4385.
  ) 
 Here is how much of TeX's memory you used:
- 13374 strings out of 478927
- 204423 string characters out of 2852536
- 534220 words of memory out of 3000000
- 30903 multiletter control sequences out of 15000+600000
- 453521 words of font info for 56 fonts, out of 8000000 for 9000
+ 13534 strings out of 478927
+ 207926 string characters out of 2852536
+ 534268 words of memory out of 3000000
+ 31041 multiletter control sequences out of 15000+600000
+ 453831 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,66p,953b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C
-:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}<C:/
-Users/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/
-Users/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:
-/Users/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/
-Users/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/U
-sers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb>
-Output written on Reporte3.pdf (14 pages, 286779 bytes).
+ 60i,12n,66p,953b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}
+{C:/Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/
+Users/alang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}<C:/Us
+ers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Us
+ers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/U
+sers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Us
+ers/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Use
+rs/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Use
+rs/alang/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Reporte3.pdf (16 pages, 763268 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
- 251 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 326 PDF objects out of 1000 (max. 8388607)
+ 80 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -112,7 +112,7 @@ Dr. Rodolfo Vera Amaro\\
 \section{Definir rutas del frontend}
 
 \subsection{Objetivo}
-Crear las rutas mediante las que el cliente realizará las peticiones y tendrá acceso a las operaciones, así como su funcionamiento en cuanto a obtención de datos y comunicación con el resto de la aplicación.
+Definir e implementar las rutas que tendrá la aplicación, así como si serán públicas o privadas y la información que se desplegará en cada una de las mismas.
 
 
 \subsection{Descripción}
@@ -135,18 +135,86 @@ Crear las rutas mediante las que el cliente realizará las peticiones y tendrá ac
 \newpage
 \section{Conexión Backend con Mongo DB}
 
+
+
+
+
+
 \subsection{Objetivo}
+Realizar la conexión de NodeJs con la base de datos MongoDb.
 
 \subsection{Descripción}
 
+Como primer paso, se debe ingresar a la página web \url{https:\\mongodb.com} y registrarse.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/mongod}
+\captionof{figure}{Página web MongoDb Atlas. }
+ \label{fig:MongoA} 
+\end{center} 
+
+Después de haber iniciado sesión, daremos click al botón \emph{Create} para crear un cluster al cuál podremos conectarnos para utilizar los servicios de Mongo Atlas.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/mongohome}
+\captionof{figure}{Página Principal MongoDB}
+ \label{fig:MongoA} 
+\end{center} 
+
+Posteriormente, se seleccionarán los ajustes del cluster a crear, será un cluster compartido ya que esta opción es grátis.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/shared}
+\captionof{figure}{Página Creación de Cluster}
+ \label{fig:MongoA} 
+\end{center} 
+
+De igual manera, se mantendrán los valores por default en cuanto al almacenamiento y la versión de Mongo a utilizar.
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/storage}
+\captionof{figure}{Página Creación de Cluster}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/directory}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/confi_server}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:MongoA} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/mongo_connect}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+
 \subsection{Resultados}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/conexion}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:MongoA} 
+\end{center} 
+
 
 
 \newpage
 \section{Sistema de acceso con credenciales}
 
-\subsection{Objetivo}
 
+\subsection{Objetivo}
+Establecer los roles de cada tipo de usuario con sus respectivos permisos de acceso a la aplicación web utilizando Amazon Cognito
 \subsection{Descripción}
 
 \subsection{Resultados}
@@ -155,9 +223,11 @@ Crear las rutas mediante las que el cliente realizará las peticiones y tendrá ac
 
 \newpage
 \section{Creación de la base de datos No Relacional}
-Crear la base de datos en MongoDB.
+
 
 \subsection{Objetivo}
+Crear la base de datos en MongoDB.
+
 
 \subsection{Descripción}
 
@@ -179,7 +249,7 @@ Determinar distintos modelos de redes neuronales convolucionales que ofrezcan me
 \section{Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}
 
 \subsection{Objetivo}
-Diseñar y realizar pruebas de los modelos de redes neuronales convolucionales previamente investigados para determinar el rendimiento y la precisión de cada uno
+Diseñar y realizar pruebas de los modelos de redes neuronales convolucionales previamente investigados para determinar el rendimiento y la precisión de cada uno.
 
 \subsection{Descripción}
 
