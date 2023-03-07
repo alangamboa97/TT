@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.5)  5 MAR 2023 12:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.5)  7 MAR 2023 12:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -571,6 +571,33 @@ LaTeX Warning: Label `fig:MongoA' multiply defined.
 
 LaTeX Warning: Label `fig:MongoA' multiply defined.
 
+
+LaTeX Warning: Label `fig:MongoA' multiply defined.
+
+
+LaTeX Warning: Label `fig:MongoA' multiply defined.
+
+
+LaTeX Warning: Label `fig:MongoA' multiply defined.
+
+
+LaTeX Warning: Label `fig:cognito' multiply defined.
+
+
+LaTeX Warning: Label `fig:cognito' multiply defined.
+
+
+LaTeX Warning: Label `fig:cognito' multiply defined.
+
+
+LaTeX Warning: Label `fig:cognito' multiply defined.
+
+
+LaTeX Warning: Label `fig:cognito' multiply defined.
+
+
+LaTeX Warning: Label `fig:cognito' multiply defined.
+
 )
 \openout1 = `Reporte3.aux'.
 
@@ -725,78 +752,143 @@ LaTeX Info: Redefining \% on input line 1.
 \openout6 = `Reporte3.lot'.
 
  [3]
-<imagenes/create.png, id=204, 676.5275pt x 70.2625pt>
+<imagenes/create.png, id=224, 676.5275pt x 70.2625pt>
 File: imagenes/create.png Graphic file (type png)
 <use imagenes/create.png>
 Package pdftex.def Info: imagenes/create.png  used on input line 126.
 (pdftex.def)             Requested size: 338.26291pt x 35.13115pt.
-<imagenes/router.png, id=205, 623.32875pt x 356.33125pt>
+<imagenes/router.png, id=225, 623.32875pt x 356.33125pt>
 File: imagenes/router.png Graphic file (type png)
 <use imagenes/router.png>
 Package pdftex.def Info: imagenes/router.png  used on input line 135.
 (pdftex.def)             Requested size: 311.6636pt x 178.16518pt.
-<imagenes/import.png, id=206, 768.8725pt x 30.1125pt>
+<imagenes/import.png, id=226, 768.8725pt x 30.1125pt>
 File: imagenes/import.png Graphic file (type png)
 <use imagenes/import.png>
 Package pdftex.def Info: imagenes/import.png  used on input line 143.
 (pdftex.def)             Requested size: 461.32706pt x 18.06763pt.
+<imagenes/routes.png, id=227, 477.785pt x 510.90875pt>
+File: imagenes/routes.png Graphic file (type png)
+<use imagenes/routes.png>
+Package pdftex.def Info: imagenes/routes.png  used on input line 153.
+(pdftex.def)             Requested size: 286.6732pt x 306.5476pt.
  [4 <./imagenes/create.png> <./imagenes/router.png> <./imagenes/import.png>] [5
-]
+ <./imagenes/routes.png>]
+<imagenes/cli.png, id=240, 813.0375pt x 74.2775pt>
+File: imagenes/cli.png Graphic file (type png)
+<use imagenes/cli.png>
+Package pdftex.def Info: imagenes/cli.png  used on input line 189.
+(pdftex.def)             Requested size: 487.82626pt x 44.56683pt.
+ [6 <./imagenes/cli.png>]
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-178.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+213.
+ (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<imagenes/mongod.jpg, id=219, 1014.79124pt x 442.65375pt>
+<imagenes/mongod.jpg, id=248, 1014.79124pt x 442.65375pt>
 File: imagenes/mongod.jpg Graphic file (type jpg)
 <use imagenes/mongod.jpg>
-Package pdftex.def Info: imagenes/mongod.jpg  used on input line 181.
+Package pdftex.def Info: imagenes/mongod.jpg  used on input line 216.
 (pdftex.def)             Requested size: 405.9093pt x 177.05835pt.
-<imagenes/mongohome.jpg, id=220, 842.39719pt x 347.04657pt>
+<imagenes/mongohome.jpg, id=249, 842.39719pt x 347.04657pt>
 File: imagenes/mongohome.jpg Graphic file (type jpg)
 <use imagenes/mongohome.jpg>
-Package pdftex.def Info: imagenes/mongohome.jpg  used on input line 189.
+Package pdftex.def Info: imagenes/mongohome.jpg  used on input line 224.
 (pdftex.def)             Requested size: 421.19756pt x 173.52286pt.
-<imagenes/shared.jpg, id=221, 606.76688pt x 356.0803pt>
+<imagenes/shared.jpg, id=250, 606.76688pt x 356.0803pt>
 File: imagenes/shared.jpg Graphic file (type jpg)
 <use imagenes/shared.jpg>
-Package pdftex.def Info: imagenes/shared.jpg  used on input line 197.
+Package pdftex.def Info: imagenes/shared.jpg  used on input line 232.
 (pdftex.def)             Requested size: 303.38269pt x 178.03972pt.
- [6 <./imagenes/mongod.jpg> <./imagenes/mongohome.jpg>]
-<imagenes/storage.jpg, id=228, 605.26125pt x 243.91125pt>
+
+[7 <./imagenes/mongod.jpg> <./imagenes/mongohome.jpg>]
+<imagenes/storage.jpg, id=256, 605.26125pt x 243.91125pt>
 File: imagenes/storage.jpg Graphic file (type jpg)
 <use imagenes/storage.jpg>
-Package pdftex.def Info: imagenes/storage.jpg  used on input line 204.
+Package pdftex.def Info: imagenes/storage.jpg  used on input line 239.
 (pdftex.def)             Requested size: 302.62987pt x 121.95532pt.
-<imagenes/directory.jpg, id=229, 261.22594pt x 264.23718pt>
+<imagenes/directory.jpg, id=257, 261.22594pt x 264.23718pt>
 File: imagenes/directory.jpg Graphic file (type jpg)
 <use imagenes/directory.jpg>
-Package pdftex.def Info: imagenes/directory.jpg  used on input line 212.
+Package pdftex.def Info: imagenes/directory.jpg  used on input line 247.
 (pdftex.def)             Requested size: 130.61264pt x 132.11826pt.
-<imagenes/confi_server.jpg, id=230, 685.8122pt x 266.49562pt>
+<imagenes/confi_server.jpg, id=258, 685.8122pt x 266.49562pt>
 File: imagenes/confi_server.jpg Graphic file (type jpg)
 <use imagenes/confi_server.jpg>
-Package pdftex.def Info: imagenes/confi_server.jpg  used on input line 219.
+Package pdftex.def Info: imagenes/confi_server.jpg  used on input line 254.
 (pdftex.def)             Requested size: 342.90526pt x 133.24748pt.
- [7 <./imagenes/shared.jpg> <./imagenes/storage.jpg> <./imagenes/directory.jpg>
+ [8 <./imagenes/shared.jpg> <./imagenes/storage.jpg> <./imagenes/directory.jpg>
 ]
-<imagenes/mongo_connect.jpg, id=235, 691.83469pt x 218.31563pt>
+<imagenes/mongo_connect.jpg, id=263, 691.83469pt x 218.31563pt>
 File: imagenes/mongo_connect.jpg Graphic file (type jpg)
 <use imagenes/mongo_connect.jpg>
-Package pdftex.def Info: imagenes/mongo_connect.jpg  used on input line 225.
+Package pdftex.def Info: imagenes/mongo_connect.jpg  used on input line 260.
 (pdftex.def)             Requested size: 345.91649pt x 109.15753pt.
-<imagenes/conexion.jpg, id=236, 621.07031pt x 338.01282pt>
+<imagenes/conexion.jpg, id=264, 621.07031pt x 338.01282pt>
 File: imagenes/conexion.jpg Graphic file (type jpg)
 <use imagenes/conexion.jpg>
-Package pdftex.def Info: imagenes/conexion.jpg  used on input line 235.
+Package pdftex.def Info: imagenes/conexion.jpg  used on input line 270.
 (pdftex.def)             Requested size: 310.5344pt x 169.00598pt.
- [8 <./imagenes/confi_server.jpg> <./imagenes/mongo_connect.jpg> <./imagenes/co
-nexion.jpg>] [9] [10] [11] [12] [13]
+ [9 <./imagenes/confi_server.jpg> <./imagenes/mongo_connect.jpg> <./imagenes/co
+nexion.jpg>]
+<imagenes/cognito.png, id=269, 573.14125pt x 520.94624pt>
+File: imagenes/cognito.png Graphic file (type png)
+<use imagenes/cognito.png>
+Package pdftex.def Info: imagenes/cognito.png  used on input line 307.
+(pdftex.def)             Requested size: 286.56992pt x 260.47249pt.
+ [10 <./imagenes/cognito.png>]
+<imagenes/add.png, id=275, 719.68875pt x 69.25874pt>
+File: imagenes/add.png Graphic file (type png)
+<use imagenes/add.png>
+Package pdftex.def Info: imagenes/add.png  used on input line 329.
+(pdftex.def)             Requested size: 503.77869pt x 48.48077pt.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 307.
+Overfull \hbox (3.2947pt too wide) in paragraph at lines 329--330
+ [] 
+ []
 
-[14] (./Reporte3.aux
+<imagenes/menu.png, id=276, 1029.8475pt x 271.0125pt>
+File: imagenes/menu.png Graphic file (type png)
+<use imagenes/menu.png>
+Package pdftex.def Info: imagenes/menu.png  used on input line 337.
+(pdftex.def)             Requested size: 514.9225pt x 135.5059pt.
+
+Overfull \hbox (14.4385pt too wide) in paragraph at lines 337--338
+ [] 
+ []
+
+<imagenes/console.png, id=277, 860.21375pt x 557.08125pt>
+File: imagenes/console.png Graphic file (type png)
+<use imagenes/console.png>
+Package pdftex.def Info: imagenes/console.png  used on input line 353.
+(pdftex.def)             Requested size: 430.10582pt x 278.53995pt.
+[11 <./imagenes/add.png> <./imagenes/menu.png>]
+<imagenes/pools.png, id=284, 1034.86626pt x 442.65375pt>
+File: imagenes/pools.png Graphic file (type png)
+<use imagenes/pools.png>
+Package pdftex.def Info: imagenes/pools.png  used on input line 361.
+(pdftex.def)             Requested size: 517.43185pt x 221.32632pt.
+
+Overfull \hbox (16.94786pt too wide) in paragraph at lines 361--362
+ [] 
+ []
+
+<imagenes/admin.png, id=285, 1111.15125pt x 529.98pt>
+File: imagenes/admin.png Graphic file (type png)
+<use imagenes/admin.png>
+Package pdftex.def Info: imagenes/admin.png  used on input line 367.
+(pdftex.def)             Requested size: 444.45262pt x 211.98824pt.
+[12 <./imagenes/console.png> <./imagenes/pools.png>]
+<imagenes/users.png, id=293, 1028.84375pt x 466.74374pt>
+File: imagenes/users.png Graphic file (type png)
+<use imagenes/users.png>
+Package pdftex.def Info: imagenes/users.png  used on input line 373.
+(pdftex.def)             Requested size: 411.53021pt x 186.69418pt.
+ [13 <./imagenes/admin.png> <./imagenes/users.png>] [14] [15] [16] [17]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 434.
+
+[18] (./Reporte3.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
@@ -807,23 +899,23 @@ Package rerunfilecheck Info: File `Reporte3.out' has not changed.
 (rerunfilecheck)             Checksum: 3166F5583E93FA6E559B7432E7D3BEC6;4385.
  ) 
 Here is how much of TeX's memory you used:
- 14134 strings out of 480171
- 226893 string characters out of 5893654
- 528976 words of memory out of 5000000
- 31762 multiletter control sequences out of 15000+600000
+ 14251 strings out of 480171
+ 229193 string characters out of 5893654
+ 529024 words of memory out of 5000000
+ 31857 multiletter control sequences out of 15000+600000
  519660 words of font info for 58 fonts, out of 8000000 for 9000
  42 hyphenation exceptions out of 8191
- 60i,11n,63p,951b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,63p,951b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}</usr/share
 /texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri1
 2.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Reporte3.pdf (15 pages, 762194 bytes).
+Output written on Reporte3.pdf (19 pages, 1111016 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 306 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 373 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 

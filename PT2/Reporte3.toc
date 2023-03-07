@@ -2,30 +2,30 @@
 \contentsline {section}{\numberline {1}Definir rutas del frontend}{4}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Objetivo}{4}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Descripci\'on}{4}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Resultados}{4}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Definir rutas del backend}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Objetivo}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Descripci\'on}{5}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Resultados}{5}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Conexi\'on Backend con Mongo DB}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Objetivo}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Descripci\'on}{6}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Resultados}{8}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Sistema de acceso con credenciales}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Objetivo}{9}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Descripci\'on}{9}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Resultados}{9}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Creaci\'on de la base de datos No Relacional}{10}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Objetivo}{10}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Descripci\'on}{10}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Resultados}{10}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Investigaci\'on de modelos de Redes Neuronales Convolucionales}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Objetivo}{11}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Descripci\'on}{11}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Resultados}{11}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Dise\~no de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}{12}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Objetivo}{12}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Descripci\'on}{12}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Resultados}{12}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Conclusiones}{13}{section.8}%
-\contentsline {section}{\numberline {9}Bibliografia}{14}{section.9}%
+\contentsline {subsection}{\numberline {1.3}Resultados}{5}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Definir rutas del backend}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Objetivo}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Descripci\'on}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Resultados}{6}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Conexi\'on Backend con Mongo DB}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Objetivo}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Descripci\'on}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Resultados}{9}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Sistema de acceso con credenciales}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Objetivo}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Descripci\'on}{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Resultados}{12}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Creaci\'on de la base de datos No Relacional}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Objetivo}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Descripci\'on}{14}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Resultados}{14}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Investigaci\'on de modelos de Redes Neuronales Convolucionales}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Objetivo}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Descripci\'on}{15}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Resultados}{15}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Dise\~no de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}{16}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Objetivo}{16}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Descripci\'on}{16}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Resultados}{16}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Conclusiones}{17}{section.8}%
+\contentsline {section}{\numberline {9}Bibliografia}{18}{section.9}%

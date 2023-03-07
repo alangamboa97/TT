@@ -145,10 +145,34 @@ Dentro de nuestro proyecto creado, ingresamos al archivo \emph{index.js}. Dentro
  \label{fig:MongoA} 
 \end{center} 
 
+La importación de estás librerías permitiran diseñar las rutas del frontend que se utilizarán en el proyecto.
+
+En el mismo archivo \emph{index.js} se creará una variable con el nombre de router que contendrá todas las rutas del fronted de la aplicación.
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/routes}
+\captionof{figure}{Creación proyecto de react}
+ \label{fig:MongoA} 
+\end{center} 
+
 
 \subsection{Resultados}
 
+\begin{itemize}
+\item \textbf{Path:} "/\\ \textbf{Descripción:} En esta dirección se encontará la el formulario para poder iniciar sesión o registrarse
 
+\item \textbf{Path:} "/home \\  \textbf{Descripción:} Esta dirección será la página principal de la aplicación dónde se mostrarán las incidencias más recientes así como una lista de todos los conductores
+
+\item \textbf{Path:} "/conductor/id \\ \textbf{Descripción:} Esta dirección mostrará el perfil del conductor de id correspondiente
+
+\item \textbf{Path:} "/detalle\textunderscore incidencia \\ \textbf{Descripción:} Esta dirección mostrará cada incidencia mostrando detalles como hora, fecha, coordenadas
+
+\item \textbf{Path:}  "/conductor/id/ubicacion \\ \textbf{Descripción:} En esta vista se mostrará la ubicación en tiempo real de cada conductor
+
+
+\item \textbf{Path:} "/conductor/id/incidencias \\ \textbf{Descripción:} En esta vista se mostrará todas las incidencias registradas por cada conductor
+
+\end{itemize}
 
 
 
@@ -158,6 +182,17 @@ Dentro de nuestro proyecto creado, ingresamos al archivo \emph{index.js}. Dentro
 \subsection{Objetivo}
 Crear las rutas mediante las que el cliente realizará las peticiones y tendrá acceso a las operaciones, así como su funcionamiento en cuanto a obtención de datos y comunicación con el resto de la aplicación.
 \subsection{Descripción}
+
+Para poder utilizar los servicios de Amazon Amplify, necesitamos dirigirnos al directorio root de nuestro proyecto y ejectutar el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/cli}
+\captionof{figure}{Página web MongoDb Atlas. }
+ \label{fig:MongoA} 
+\end{center} 
+
+Como primer paso, se necesita especificaf que estará utilizando el \emph{SDK} de Amazon Amplify:
+
 
 
 \subsection{Resultados}
@@ -248,7 +283,97 @@ De igual manera, se mantendrán los valores por default en cuanto al almacenamien
 Establecer los roles de cada tipo de usuario con sus respectivos permisos de acceso a la aplicación web utilizando Amazon Cognito
 \subsection{Descripción}
 
+Amazon Cognito funciona utilizando \emph{pools} de usuarios. Un pool de usuarios es un directorio almacenado en los servicios de Amazon. Los beneficios que ofrece estar registrado en un pool de usuarios de Amazon Cognito son los siguientes:
+
+
+
+\begin{itemize}
+
+\item Servicio de registro e inicio de sesión
+\item Gestión del directorio de usuarios
+\item Servicios de seguridad tales como verificación de dos pasos
+\item Acceso a servicios de la suite de AWS	tales como S3 o Dynamodb
+
+
+
+
+\end{itemize}
+
+
+\textbf{Funcionamiento}
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/cognito}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:cognito} 
+\end{center} 
+
+
+\begin{itemize}
+\item Como primer paso el usuario inicia sesión a través de un grupo de usuarios y recibe tokens del grupo de usuarios después de un
+autenticación exitosa.
+
+\item Posteriormente la aplicación intercambia los tokens del grupo de usuarios por las credenciales de AWS a través de un grupo de identidades.
+
+\item Finalmente, el usuario puede usar esas credenciales de AWS para acceder a otros servicios de AWS, como
+Amazon S3 o DynamoDB.
+
+\end{itemize}
+
+\textbf{Implementación}
+
+Para poder hacer uso de Amazon Cognito en nuestra aplicación debemos de introducir el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.7]{imagenes/add}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:cognito} 
+\end{center} 
+
+Obteniendo el siguiente menú:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/menu}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:cognito} 
+\end{center} 
+
+Dejamos seleccionado la primera opción, la cual nos permitirá utilizar los servicios de autenticación ofrecidos por Amazon Cognito, además de otros serivios de la suite de AWS.
+
+Finalmente utilizamos el comando \emph{amplify push} para desplegar los cambios a nuestra aplicación.
+
+
+
+
+
 \subsection{Resultados}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/console}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:cognito} 
+\end{center} 
+
+Entrando a nuestra consola de AWS, en la sección de Amazon Cognito, se puede observar dos grupos de usuarios, uno de tipo Administrador, el cual puede realizar cambios a la configuración de la aplicación, y otro de tipo de Usuario, el cual sólo puede hacer uso del sistema de inició de sesión y registro ofrecido por Cognito.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/pools}
+\captionof{figure}{Grupos de usuario}
+ \label{fig:cognito} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/admin}
+\captionof{figure}{Grupos de usuario}
+ \label{fig:cognito} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/users}
+\captionof{figure}{Grupos de usuario}
+ \label{fig:cognito} 
+\end{center} 
 
 
 
@@ -261,6 +386,8 @@ Crear la base de datos en MongoDB.
 
 
 \subsection{Descripción}
+
+
 
 \subsection{Resultados}
 
