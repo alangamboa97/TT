@@ -119,6 +119,11 @@ Definir e implementar las rutas que tendrá la aplicación, así como si serán públ
 
 \subsection{Descripción}
 
+\textbf{Rutas públicas vs rutas protegidas}
+
+Cuando se habla de una ruta protegida en React, se referiere a programar un bloqueo en ciertas rutas a la cual se le restringe el acceso al usuario. Esto comunmente se realiza para la validación de inicio de sesión de usuarios. Sí el usuario no tiene una sesión iniciada, no podrá acceder a las rutas protegidas de la aplicación. Por otro lado, las rutas públicas son todas aquellas las cuales no requieren contar con una sesión iniciada, y pueden ser accesadas por cualquier tipo de usuario.
+
+
 Como primer paso, se necesita crear un proyecto de React utilizando el siguiente comando:
 
 
@@ -137,33 +142,65 @@ Posteriomente, se realiza la instalación del moudelo \emph{React Router Dom} uti
  \label{fig:MongoA} 
 \end{center} 
 
-Dentro de nuestro proyecto creado, ingresamos al archivo \emph{index.js}. Dentro de este archivo, importamos dos librerías ofrecidas por el módulo de \emph{react router dom} utilizando la línea de código siguiente:
+Utilizando la librería \emph{useAuthenticator} ofrecida por el paquete de React Dom, crearemos un archivo de nombre \emph{RequireAuth.js} el cuál contendrá una función la cual se encargará de validar si existe una sesión iniciada previamente.
 
 \begin{center}
-  \includegraphics[scale=0.6]{imagenes/import}
-\captionof{figure}{Creación proyecto de react}
- \label{fig:MongoA} 
+  \includegraphics[scale=0.5]{imagenes/auth}
+\captionof{figure}{Función RequireAuth}
+ \label{fig:auth} 
 \end{center} 
 
-La importación de estás librerías permitiran diseñar las rutas del frontend que se utilizarán en el proyecto.
-
-En el mismo archivo \emph{index.js} se creará una variable con el nombre de router que contendrá todas las rutas del fronted de la aplicación.
+Posteriormente, se necesita contar con una página de Login, la cuál permitirá validar que se encuentre una sesión inciada por parte del usuario, para así poder acceder a las rutas protegidas.
 
 \begin{center}
-  \includegraphics[scale=0.6]{imagenes/routes}
-\captionof{figure}{Creación proyecto de react}
- \label{fig:MongoA} 
+  \includegraphics[scale=0.6]{imagenes/loginjs}
+\captionof{figure}{Componente Login}
+ \label{fig:loginjs} 
 \end{center} 
+
+
+Para indicar a React, que se desea implementar una ruta protegida, se necesita ir al componente de dicha ruta e ingresar el siguiente código:
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/homejs}
+\captionof{figure}{Ruta protegida del componente Home}
+ \label{fig:homejs} 
+\end{center} 
+
+En dicho componente, se hace uso de las librerías \emph{useAuthenticator} y \emph{Authenticator} las cuales son ofrecidas por los servicios de Amazon Amplify. Se tendrá que hacer esto para todos los componentes que deseemos mantener como rutas protegidas.
+
+
+Finalmente, dentro de nuestro componente \textbf{App.js}, crearemos una función que contendrá el directorio de rutas tanto públicas como protegidas:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/routesjs}
+\captionof{figure}{Directorio de rutas}
+ \label{fig:routesjs} 
+\end{center} 
+
+Las rutas protedigas, estarán dentro de las etiquetas \textbf{<RequireAuth></RequireAuth>}, mientras que las públicas, irán dentro de las etiquetas \textbf{<Route></Route>}.
 
 
 \subsection{Resultados}
+
+Como resultado de todo lo anterior, tendrémos una página de Login que utilizando los servicios de AWS Amplify y Cognito, permitirá iniciar sesión así como registrar a nuevos usuarios.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/loginpage}
+\captionof{figure}{Página de Login}
+ \label{fig:loginpage} 
+\end{center} 
+
+Si intentamos ingresar a las pa?inas de Conductores, Incidencias o Ubicacion, nos redigirá a la página de Login, debido a que estas páginas fueron definidas como rutas protegidas. Por lo tanto el usuario debe haber inciado sesión para poder acceder a las mismas.
+
 
 \begin{itemize}
 \item \textbf{Path:} "/\\ \textbf{Descripción:} En esta dirección se encontará la el formulario para poder iniciar sesión o registrarse
 
 \item \textbf{Path:} "/home \\  \textbf{Descripción:} Esta dirección será la página principal de la aplicación dónde se mostrarán las incidencias más recientes así como una lista de todos los conductores
 
-\item \textbf{Path:} "/conductor/id \\ \textbf{Descripción:} Esta dirección mostrará el perfil del conductor de id correspondiente
+\item \textbf{Path:} "/conductor/\\ \textbf{Descripción:} Esta dirección mostrará el perfil del conductor de id correspondiente
 
 \item \textbf{Path:} "/detalle\textunderscore incidencia \\ \textbf{Descripción:} Esta dirección mostrará cada incidencia mostrando detalles como hora, fecha, coordenadas
 
