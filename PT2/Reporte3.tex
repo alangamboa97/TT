@@ -305,13 +305,25 @@ Como resultado, tenemos el endpoint de nuestro modelo de GraphQL y nuestra API K
 Realizar la conexión de NodeJs con la base de datos MongoDb.
 
 \subsection{Descripción}
+Para realizar la conexión y la integración de los servicios de DynamoDB hacía nuestra API, se hará uso de AppSync. Las API de GraphQL creadas con AWS AppSync brindan a los desarrolladores frontend la capacidad de consultar varias bases de datos, microservicios y API desde un único punto de conexión de GraphQL. 
 
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/appsync}
+\captionof{figure}{Página web MongoDb Atlas. }
+ \label{fig:MongoA} 
+\end{center} 
 
+AWS AppSync crea las API sin servidor de GraphQL y de publicación o suscripción que simplifican el desarrollo de aplicaciones a través de un único punto de conexión para consultar, actualizar o publicar datos.
 
 \subsection{Resultados}
 
+Después de haber realizado los pasos de la sección \ref{Backend}, si ejecutamos el comando \emph{amplify status}, la consola de Amplify nos retornara el endpoint de GraphQL junto con AppSync correspondiente, el cuál se utilizará para realizar todas las operaciones con respecto al almacenamiento de datos
 
-
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/appsyncendpoint}
+\captionof{figure}{Página web MongoDb Atlas. }
+ \label{fig:MongoA} 
+\end{center} 
 
 
 \newpage
