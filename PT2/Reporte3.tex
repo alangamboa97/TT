@@ -253,15 +253,51 @@ Posteriormente, declaramos una aplicación de ExpressJs la cuál nos permitirá eje
  \label{fig:MongoA} 
 \end{center} 
 
+Finalmente, se necesitan definir las rutas de las APIs que se estarán utilizando en el proyecto, las cuales serán dos, la primera se encargará de la aplicación web, y la segunda de realizar la comunicación con el Módulo Central de Procesamiento.
 
+Para agregar una api, se necesita ejecutar el siguiente comando desde el directorio raíz del proyecto.
+
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/addapi}
+\captionof{figure}{Página web MongoDb Atlas. }
+ \label{fig:MongoA} 
+\end{center} 
+
+La consola de AWS Amplify requerirá introducir parámetros con los cuales serán construida nuestra API, para el presente proyecto se estará utilizando una arquitectura mediante GraphQL, por lo cual seleccionaremos dicha opción.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/graphql}
+\captionof{figure}{Página web MongoDb Atlas. }
+ \label{fig:MongoA} 
+\end{center} 
+
+Antes de poder publicar nuestra API en AWS Amplify, se necesita definir el Schema con el cuál se hará el manejo de datos. A contiuación se muestran dichos schemas:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/schema}
+\captionof{figure}{Página web MongoDb Atlas. }
+ \label{fig:MongoA} 
+\end{center} 
+
+Finalmente, ejecutaremos el comando \emph{amplify push}, el cuál publicará la API hacía AWS amplify, generando el endpoint correspondiente a dicha API
+
+
+	
 
 \subsection{Resultados}
 
+Como resultado, tenemos el endpoint de nuestro modelo de GraphQL y nuestra API Key generada por Amplify
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/endpoints}
+\captionof{figure}{Página web MongoDb Atlas. }
+ \label{fig:MongoA} 
+\end{center} 
+
+
 \newpage
 \section{Conexión Backend con Mongo DB}
-
-
-
 
 
 
@@ -270,67 +306,10 @@ Realizar la conexión de NodeJs con la base de datos MongoDb.
 
 \subsection{Descripción}
 
-Como primer paso, se debe ingresar a la página web \url{https:\\mongodb.com} y registrarse.
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/mongod}
-\captionof{figure}{Página web MongoDb Atlas. }
- \label{fig:MongoA} 
-\end{center} 
-
-Después de haber iniciado sesión, daremos click al botón \emph{Create} para crear un cluster al cuál podremos conectarnos para utilizar los servicios de Mongo Atlas.
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/mongohome}
-\captionof{figure}{Página Principal MongoDB}
- \label{fig:Mongoe} 
-\end{center} 
-
-Posteriormente, se seleccionarán los ajustes del cluster a crear, será un cluster compartido ya que esta opción es grátis.
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/shared}
-\captionof{figure}{Página Creación de Cluster}
- \label{fig:Mongoi} 
-\end{center} 
-
-De igual manera, se mantendrán los valores por default en cuanto al almacenamiento y la versión de Mongo a utilizar.
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/storage}
-\captionof{figure}{Página Creación de Cluster}
- \label{fig:Mongoo} 
-\end{center} 
-
-
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/directory}
-\captionof{figure}{Directorio del Backend}
- \label{fig:Mongou} 
-\end{center} 
-
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/confi_server}
-\captionof{figure}{Directorio del Backend}
- \label{fig:Mongox} 
-\end{center} 
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/mongo_connect}
-\captionof{figure}{Directorio del Backend}
- \label{fig:Mongof} 
-\end{center} 
-
 
 
 \subsection{Resultados}
 
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/conexion}
-\captionof{figure}{Directorio del Backend}
- \label{fig:Mongon} 
-\end{center} 
 
 
 
@@ -440,6 +419,35 @@ Entrando a nuestra consola de AWS, en la sección de Amazon Cognito, se puede obs
 \newpage
 \section{Creación de la base de datos No Relacional}
 
+Debido a problemas de integración junto con los servicios de autenticación y de despliegue de Amplify, se decidió utilizar el sistema de gestión de bases de datos DynamoDB.
+
+DynamoDB es un servicio de base de datos NoSQL Ofrecido por Amazon Web Services. DynamoDB trabaja con tablas. Estas a su vez, contienen parámetros importantes que se mencionarán a continuación.
+
+
+
+\begin{itemize}
+\item \textbf{\emph{Primary Key}}: Se trada de una clave primaria simple, compuesta por un solo atributo denominado clave de partición. Una clave primaria puede ser una clave de partición o una combinación de clave de partición y clave de ordenación. La clave primaria debe ser única en toda la tabla.
+\begin{itemize}
+\item \textbf{\emph{Parition Key}}: Es la llave principal por la cual se agruparán los datos, y determina cómo se particiona la información.
+
+\item \textbf{\emph{Sort Key}}: Es llave de ordenamiento de los datos.
+
+\end{itemize}
+
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/dynamo}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:cognito} 
+\end{center} 
+
+
+DynamoDB almacena los datos como grupos de atributos, conocidos como elementos. Los elementos son similares a las filas o registros de otros sistemas de bases de datos. DynamoDB almacena y recupera cada elemento en función del valor de la clave principal, que debe ser único.
+
+DynamoDB utiliza el valor de la clave de partición como parámetro de entrada para una función hash interna. El resultado de la función hash determina la partición en la que se almacena el elemento. La ubicación de cada elemento viene determinada por el valor hash de su clave de partición
+
+Todos los elementos con la misma clave de partición se almacenan juntos y, para las claves de partición compuestas, se ordenan por el valor de la clave de ordenación. DynamoDB divide las particiones por clave de ordenación si el tamaño de la colección crece más de 10 GB.
 
 \subsection{Objetivo}
 Crear la base de datos en MongoDB.
@@ -447,10 +455,16 @@ Crear la base de datos en MongoDB.
 
 \subsection{Descripción}
 
+Para crear nuestras tablas de DynamoDB, se debe ingresar a la consola de AWS.
 
-
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/aws}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:cognito} 
+\end{center} 
 \subsection{Resultados}
 
+Una vez dentro, ingresamos a la sección del servicio de DynamoDB
 
 \newpage
 \section{Investigación de modelos de Redes Neuronales Convolucionales}
