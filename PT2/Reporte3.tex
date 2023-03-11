@@ -214,7 +214,7 @@ Si intentamos ingresar a las pa?inas de Conductores, Incidencias o Ubicacion, no
 
 
 \newpage
-\section{Definir rutas del backend}
+\section{Definir rutas del backend} \label{Backend}
 
 \subsection{Objetivo}
 Crear las rutas mediante las que el cliente realizará las peticiones y tendrá acceso a las operaciones, así como su funcionamiento en cuanto a obtención de datos y comunicación con el resto de la aplicación.
@@ -465,6 +465,17 @@ Para crear nuestras tablas de DynamoDB, se debe ingresar a la consola de AWS.
 \subsection{Resultados}
 
 Una vez dentro, ingresamos a la sección del servicio de DynamoDB
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/tables}
+\captionof{figure}{Directorio del Backend}
+ \label{fig:cognito} 
+\end{center} 
+
+Como se puede observar, gracias a los pasos realizados en la sección \ref{Backend}, DynamoDB crea automáticamente las tablas creadas en base a los schemas definidos previamente.
+
+
 
 \newpage
 \section{Investigación de modelos de Redes Neuronales Convolucionales}
