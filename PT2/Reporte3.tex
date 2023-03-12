@@ -121,7 +121,7 @@ Definir e implementar las rutas que tendrá la aplicación, así como si serán públ
 
 \textbf{Rutas públicas vs rutas protegidas}
 
-Cuando se habla de una ruta protegida en React, se referiere a programar un bloqueo en ciertas rutas a la cual se le restringe el acceso al usuario. Esto comunmente se realiza para la validación de inicio de sesión de usuarios. Sí el usuario no tiene una sesión iniciada, no podrá acceder a las rutas protegidas de la aplicación. Por otro lado, las rutas públicas son todas aquellas las cuales no requieren contar con una sesión iniciada, y pueden ser accesadas por cualquier tipo de usuario.
+Cuando se habla de una ruta protegida en React, se referiere a programar un bloqueo en ciertas rutas a la cual se le restringe el acceso al usuario. Esto comunmente se realiza para la validación de inicio de sesión de usuarios. Sí el usuario no tiene una sesión iniciada, no podrá acceder a las rutas protegidas de la aplicación. Por otro lado, las rutas públicas son todas aquellas las cuales no requieren contar con una sesión iniciada, y pueden ser accesadas por cualquier tipo de usuario\cite{dom}.
 
 
 Como primer paso, se necesita crear un proyecto de React utilizando el siguiente comando:
@@ -138,7 +138,7 @@ Posteriomente, se realiza la instalación del moudelo \emph{React Router Dom} uti
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/router}
-\captionof{figure}{Creación proyecto de react}
+\captionof{figure}{Instalación React Router DOM}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -224,7 +224,7 @@ Para poder utilizar los servicios de Amazon Amplify, necesitamos dirigirnos al d
 
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/cli}
-\captionof{figure}{Página web MongoDb Atlas. }
+\captionof{figure}{Instalación Amplify CLI}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -232,7 +232,7 @@ Posteriormente, se necesita especificar la región en la cual queremos alojar nue
 
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/region}
-\captionof{figure}{Página web MongoDb Atlas. }
+\captionof{figure}{Configuración del proyecto}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -241,7 +241,7 @@ Utilizando un editor de código, se necesita especificar que estará utilizando el
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/sdk}
-\captionof{figure}{Página web MongoDb Atlas. }
+\captionof{figure}{Implementación del SDK de Amplify}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -249,7 +249,7 @@ Posteriormente, declaramos una aplicación de ExpressJs la cuál nos permitirá eje
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/expressjs}
-\captionof{figure}{Página web MongoDb Atlas. }
+\captionof{figure}{Creación de aplicación de Express}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -260,7 +260,7 @@ Para agregar una api, se necesita ejecutar el siguiente comando desde el directo
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/addapi}
-\captionof{figure}{Página web MongoDb Atlas. }
+\captionof{figure}{Amplify add api}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -268,7 +268,7 @@ La consola de AWS Amplify requerirá introducir parámetros con los cuales serán c
 
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/graphql}
-\captionof{figure}{Página web MongoDb Atlas. }
+\captionof{figure}{Configuración de parámetros de GraphQL}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -276,7 +276,7 @@ Antes de poder publicar nuestra API en AWS Amplify, se necesita definir el Schem
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/schema}
-\captionof{figure}{Página web MongoDb Atlas. }
+\captionof{figure}{Definició de Schemas para el manejo de datos}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -291,7 +291,7 @@ Como resultado, tenemos el endpoint de nuestro modelo de GraphQL y nuestra API K
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/endpoints}
-\captionof{figure}{Página web MongoDb Atlas. }
+\captionof{figure}{Generación de Endpoint de GraphQL}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -309,7 +309,7 @@ Para realizar la conexión y la integración de los servicios de DynamoDB hacía nu
 
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/appsync}
-\captionof{figure}{Página web MongoDb Atlas. }
+\captionof{figure}{Funcionamiento de Appsync}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -321,7 +321,7 @@ Después de haber realizado los pasos de la sección \ref{Backend}, si ejecutamos 
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/appsyncendpoint}
-\captionof{figure}{Página web MongoDb Atlas. }
+\captionof{figure}{Generación de endpoint de GraphQL}
  \label{fig:MongoA} 
 \end{center} 
 
@@ -356,7 +356,7 @@ Amazon Cognito funciona utilizando \emph{pools} de usuarios. Un pool de usuarios
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/cognito}
-\captionof{figure}{Directorio del Backend}
+\captionof{figure}{Funcionamiento de Amazon Cognito}
  \label{fig:cognito} 
 \end{center} 
 
@@ -378,7 +378,7 @@ Para poder hacer uso de Amazon Cognito en nuestra aplicación debemos de introduc
 
 \begin{center}
   \includegraphics[scale=0.7]{imagenes/add}
-\captionof{figure}{Directorio del Backend}
+\captionof{figure}{Implementación de Amazon Cognito en el proyecto}
  \label{fig:cognito} 
 \end{center} 
 
@@ -386,7 +386,7 @@ Obteniendo el siguiente menú:
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/menu}
-\captionof{figure}{Directorio del Backend}
+\captionof{figure}{Menu de configuración de Amazon Cognito}
  \label{fig:cognito} 
 \end{center} 
 
@@ -402,7 +402,7 @@ Finalmente utilizamos el comando \emph{amplify push} para desplegar los cambios 
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/console}
-\captionof{figure}{Directorio del Backend}
+\captionof{figure}{Implementación completada}
  \label{fig:cognito} 
 \end{center} 
 
@@ -450,7 +450,7 @@ DynamoDB es un servicio de base de datos NoSQL Ofrecido por Amazon Web Services.
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/dynamo}
-\captionof{figure}{Directorio del Backend}
+\captionof{figure}{Tablas en DynamoDB}
  \label{fig:cognito} 
 \end{center} 
 
@@ -471,7 +471,7 @@ Para crear nuestras tablas de DynamoDB, se debe ingresar a la consola de AWS.
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/aws}
-\captionof{figure}{Directorio del Backend}
+\captionof{figure}{Consola de AWS}
  \label{fig:cognito} 
 \end{center} 
 \subsection{Resultados}
@@ -481,7 +481,7 @@ Una vez dentro, ingresamos a la sección del servicio de DynamoDB
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/tables}
-\captionof{figure}{Directorio del Backend}
+\captionof{figure}{Tablas generadas mediante los schemas definidos}
  \label{fig:cognito} 
 \end{center} 
 
@@ -525,7 +525,11 @@ Finalmente el análisis del sistema de comunicaciones,en un principio sólo se hab
 
 %Artículo:
 
+\bibitem{dom}F. Martinez. \emph{Protección de rutas con React Router Dom}, DEV Community. https://dev.to/franklin030601/proteccion-de-rutas-con-react-router-dom-144j (accedido el 7 de marzo de 2023).
 
+\bibitem{dynamo} \emph{¿Qué es Amazon DynamoDB?}, Amazon Docs. https://docs.aws.amazon.com/es-es/amazondynamodb/latest/developerguide/Introduction.html (accedido el 2 de marzo de 2023).
+
+\bibitem{appsync} \emph{API sin servidor de GraphQL y de publicación o suscripción $-$ AWS AppSync $-$ Amazon Web Services}. Amazon Web Services, Inc. https://aws.amazon.com/es/appsync/ (accedido el 12 de marzo de 2023).  
 
 
 \end{thebibliography}
