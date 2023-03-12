@@ -297,6 +297,66 @@ Como resultado, tenemos el endpoint de nuestro modelo de GraphQL y nuestra API K
 
 
 \newpage
+
+\section{Creación de la base de datos No Relacional}
+
+Debido a problemas de integración junto con los servicios de autenticación y de despliegue de Amplify, se decidió utilizar el sistema de gestión de bases de datos DynamoDB.
+
+DynamoDB es un servicio de base de datos NoSQL Ofrecido por Amazon Web Services. DynamoDB trabaja con tablas. Estas a su vez, contienen parámetros importantes que se mencionarán a continuación.
+
+
+
+\begin{itemize}
+\item \textbf{\emph{Primary Key}}: Se trada de una clave primaria simple, compuesta por un solo atributo denominado clave de partición. Una clave primaria puede ser una clave de partición o una combinación de clave de partición y clave de ordenación. La clave primaria debe ser única en toda la tabla.
+\begin{itemize}
+\item \textbf{\emph{Parition Key}}: Es la llave principal por la cual se agruparán los datos, y determina cómo se particiona la información.
+
+\item \textbf{\emph{Sort Key}}: Es llave de ordenamiento de los datos.
+
+\end{itemize}
+
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/dynamo}
+\captionof{figure}{Tablas en DynamoDB}
+ \label{fig:cognito} 
+\end{center} 
+
+
+DynamoDB almacena los datos como grupos de atributos, conocidos como elementos. Los elementos son similares a las filas o registros de otros sistemas de bases de datos. DynamoDB almacena y recupera cada elemento en función del valor de la clave principal, que debe ser único.
+
+DynamoDB utiliza el valor de la clave de partición como parámetro de entrada para una función hash interna. El resultado de la función hash determina la partición en la que se almacena el elemento. La ubicación de cada elemento viene determinada por el valor hash de su clave de partición
+
+Todos los elementos con la misma clave de partición se almacenan juntos y, para las claves de partición compuestas, se ordenan por el valor de la clave de ordenación. DynamoDB divide las particiones por clave de ordenación si el tamaño de la colección crece más de 10 GB\cite{dynamo}.
+
+\subsection{Objetivo}
+Crear la base de datos en MongoDB.
+
+
+\subsection{Descripción}
+
+Para crear nuestras tablas de DynamoDB, se debe ingresar a la consola de AWS.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/aws}
+\captionof{figure}{Consola de AWS}
+ \label{fig:cognito} 
+\end{center} 
+\subsection{Resultados}
+
+Una vez dentro, ingresamos a la sección del servicio de DynamoDB
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/tables}
+\captionof{figure}{Tablas generadas mediante los schemas definidos}
+ \label{fig:cognito} 
+\end{center} 
+
+Como se puede observar, gracias a los pasos realizados en la sección \ref{Backend}, DynamoDB crea automáticamente las tablas creadas en base a los schemas definidos previamente.
+
+\newpage
 \section{Conexión Backend con Mongo DB}
 
 
@@ -334,7 +394,7 @@ Después de haber realizado los pasos de la sección \ref{Backend}, si ejecutamos 
 Establecer los roles de cada tipo de usuario con sus respectivos permisos de acceso a la aplicación web utilizando Amazon Cognito
 \subsection{Descripción}
 
-Amazon Cognito funciona utilizando \emph{pools} de usuarios. Un pool de usuarios es un directorio almacenado en los servicios de Amazon. Los beneficios que ofrece estar registrado en un pool de usuarios de Amazon Cognito son los siguientes:
+Amazon Cognito funciona utilizando \emph{pools} de usuarios. Un pool de usuarios es un directorio almacenado en los servicios de Amazon\cite{cognito}. Los beneficios que ofrece estar registrado en un pool de usuarios de Amazon Cognito son los siguientes:
 
 
 
@@ -428,64 +488,6 @@ Entrando a nuestra consola de AWS, en la sección de Amazon Cognito, se puede obs
 
 
 
-\newpage
-\section{Creación de la base de datos No Relacional}
-
-Debido a problemas de integración junto con los servicios de autenticación y de despliegue de Amplify, se decidió utilizar el sistema de gestión de bases de datos DynamoDB.
-
-DynamoDB es un servicio de base de datos NoSQL Ofrecido por Amazon Web Services. DynamoDB trabaja con tablas. Estas a su vez, contienen parámetros importantes que se mencionarán a continuación.
-
-
-
-\begin{itemize}
-\item \textbf{\emph{Primary Key}}: Se trada de una clave primaria simple, compuesta por un solo atributo denominado clave de partición. Una clave primaria puede ser una clave de partición o una combinación de clave de partición y clave de ordenación. La clave primaria debe ser única en toda la tabla.
-\begin{itemize}
-\item \textbf{\emph{Parition Key}}: Es la llave principal por la cual se agruparán los datos, y determina cómo se particiona la información.
-
-\item \textbf{\emph{Sort Key}}: Es llave de ordenamiento de los datos.
-
-\end{itemize}
-
-\end{itemize}
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/dynamo}
-\captionof{figure}{Tablas en DynamoDB}
- \label{fig:cognito} 
-\end{center} 
-
-
-DynamoDB almacena los datos como grupos de atributos, conocidos como elementos. Los elementos son similares a las filas o registros de otros sistemas de bases de datos. DynamoDB almacena y recupera cada elemento en función del valor de la clave principal, que debe ser único.
-
-DynamoDB utiliza el valor de la clave de partición como parámetro de entrada para una función hash interna. El resultado de la función hash determina la partición en la que se almacena el elemento. La ubicación de cada elemento viene determinada por el valor hash de su clave de partición
-
-Todos los elementos con la misma clave de partición se almacenan juntos y, para las claves de partición compuestas, se ordenan por el valor de la clave de ordenación. DynamoDB divide las particiones por clave de ordenación si el tamaño de la colección crece más de 10 GB.
-
-\subsection{Objetivo}
-Crear la base de datos en MongoDB.
-
-
-\subsection{Descripción}
-
-Para crear nuestras tablas de DynamoDB, se debe ingresar a la consola de AWS.
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/aws}
-\captionof{figure}{Consola de AWS}
- \label{fig:cognito} 
-\end{center} 
-\subsection{Resultados}
-
-Una vez dentro, ingresamos a la sección del servicio de DynamoDB
-
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/tables}
-\captionof{figure}{Tablas generadas mediante los schemas definidos}
- \label{fig:cognito} 
-\end{center} 
-
-Como se puede observar, gracias a los pasos realizados en la sección \ref{Backend}, DynamoDB crea automáticamente las tablas creadas en base a los schemas definidos previamente.
 
 
 
@@ -531,6 +533,7 @@ Finalmente el análisis del sistema de comunicaciones,en un principio sólo se hab
 
 \bibitem{appsync} \emph{API sin servidor de GraphQL y de publicación o suscripción $-$ AWS AppSync $-$ Amazon Web Services}. Amazon Web Services, Inc. https://aws.amazon.com/es/appsync/ (accedido el 12 de marzo de 2023).  
 
+\bibitem{cognito} \emph{AWS | Gestión de identidades y autenticación de usuario en la nube}, Amazon Web Services, Inc. https://aws.amazon.com/es/cognito/ (accedido el 8 de marzo de 2023).
 
 \end{thebibliography}
 
