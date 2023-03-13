@@ -192,7 +192,7 @@ Como resultado de todo lo anterior, tendrémos una página de Login que utilizando
  \label{fig:loginpage} 
 \end{center} 
 
-Si intentamos ingresar a las pa?inas de Conductores, Incidencias o Ubicacion, nos redigirá a la página de Login, debido a que estas páginas fueron definidas como rutas protegidas. Por lo tanto el usuario debe haber inciado sesión para poder acceder a las mismas.
+Si intentamos ingresar a las paginas de Conductores, Incidencias o Ubicacion, nos redigirá a la página de Login, debido a que estas páginas fueron definidas como rutas protegidas. Por lo tanto el usuario debe haber inciado sesión para poder acceder a las mismas.
 
 
 \begin{itemize}
@@ -534,7 +534,7 @@ La familia de modelos EfficientNet, lanzada por Google en 2019, es una extensión
 \end{itemize}
 
 \begin{center}
-  \includegraphics[scale=0.6]{imagenes/modelos_keras}
+  \includegraphics[scale=0.8]{imagenes/modelos_keras}
 \captionof{figure}{Modelos de aprendizaje profundo disponibles en Keras.\cite{keras}  }
  \label{fig:Keras} 
 \end{center} 
@@ -543,9 +543,9 @@ La tabla hace referencia al nombre del modelo y el tamaño del modelo en MB, por 
 
 El tiempo de inferencia es importante porque puede afectar la capacidad del modelo para procesar datos en tiempo real y afectar la experiencia del usuario en aplicaciones en línea. Dos de las arquitecturas de redes neuronales convolucionales que se enfocan a reducir el tiempo de inferencia son MobileNet y EfficientNet. Estas arquitecturas permiten ser ejecutadas en dispositivos con recursos limitados como teléfonos móviles y dispositivos integrados, debido a que pueden procesar imágenes más rápidamente que otras arquitecturas más complejas. 
  
-\textbf{Aprendizaje por transferencia}
+\textbf{Aprendizaje por transferencia}\\
 
-El Transfer Learning, o aprendizaje transferido en español, se refiere al conjunto de métodos que permiten transferir conocimientos adquiridos gracias a la resolución de problemas para resolver otros problemas. La utilización de métodos de Transfer Learning en Deep Learning consiste principalmente en explotar redes neuronales pre-entrenadas. Generalmente, estos modelos corresponden a algoritmos de alto rendimiento que han sido desarrollados y entrenados sobre grandes bases de datos y que son hoy de libre acceso.
+El Transfer Learning, o aprendizaje transferido en español, se refiere al conjunto de métodos que permiten transferir conocimientos adquiridos gracias a la resolución de problemas para resolver otros problemas. La utilización de métodos de Transfer Learning en Deep Learning consiste principalmente en explotar redes neuronales pre-entrenadas. Generalmente, estos modelos corresponden a algoritmos de alto rendimiento que han sido desarrollados y entrenados sobre grandes bases de datos y que son hoy de libre acceso \cite{TLe}.
 
 
 El aprendizaje por transferencia nos permite hacer uso de los modelos pre-entrenados y modificar la estructura de estos modelos en base a los objetivos deseados, en lugar de entrenar una red neuronal desde cero para cada tarea, se utilizan los pesos de una red neuronal pre-entrenada como punto de partida y se ajustan con el objetivo de resolver una nueva tarea. 
@@ -555,9 +555,9 @@ La idea detrás del transfer learning es que muchas tareas de aprendizaje profund
 
 \subsection{Resultados}
 
-Como resultado de la investigación, los modelos MobileNet y EfficientNet serán propuestos como base para realizar la clasificaión de imágenes de ojos abiertos o cerrados. 
+Como resultado de la investigación, los modelos MobileNet y EfficientNet serán propuestos como base para realizar la clasificaión de imágenes. 
 
-\newpage
+\clearpage
 \section{Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}
 
 \subsection{Objetivo}
@@ -581,7 +581,7 @@ Parte de los datos del data set original se separaron en dos carpetas, en la pri
 
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/dv}
+  \includegraphics[scale=0.7]{imagenes/dv}
 \captionof{figure}{Dataset a trabajar desde Google Colab. }
  \label{fig:DataGC} 
 \end{center} 
@@ -593,7 +593,7 @@ Ya que los modelos pre entrenados con los que se trabajó son en base a imágenes 
 
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/librerias.JPG}
+  \includegraphics[scale=0.4]{imagenes/librerias.JPG}
 \captionof{figure}{Librerías utilizadas y repositorio en drive del dataset.}
  \label{fig:Librerias} 
 \end{center} 
@@ -612,26 +612,94 @@ Posteriormente se exporto el modelo y se visualizó la arquitectura de la red.
 
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/effnet.JPG}
-\captionof{figure}{Exportación del modelo EfficientNet}
- \label{fig:EfficientNet} 
+\captionof{figure}{Exportación del modelo MobileNet}
+ \label{fig:MMobileNet} 
 \end{center} 
 
-Se aplicaron modificaciones a partir de la 4 última capa, se agregaron nuevas capas y la función de activación sigmoid.
+Se aplicaron modificaciones a partir de la cuarta última capa, se agregaron nuevas capas y la función de activación sigmoid.
 
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/effinettl.JPG}
-\captionof{figure}{Modificación del modelo EfficientNet}
- \label{fig:EfficientNetTL} 
+\captionof{figure}{Modificación del modelo Mobilnet}
+ \label{fig:MobileNetTL} 
 \end{center} 
+
+Finalmente se entrena el modelo MobileNet 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/entrenamientoen.JPG}
+\captionof{figure}{Entrenamiento del modelo MobileNet}
+ \label{fig:EfficientEn} 
+\end{center} 
+
+
+Para el modelo EfficientNet se realizó el mismo procedimiento que en el modelo EfficientNet.
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/entrenamientomn.JPG}
+\captionof{figure}{Entrenamiento del modelo EfficientNet}
+ \label{fig:MobileNetEn} 
+\end{center} 
+
+La gráfica muestra el las epocas y la precisión obtenida en cada una de ellas, así como la precisión de los datos ocupados para la validación dentro del entrenamiento. 
+
+MobileNet
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ENgrafico.JPG}
+\captionof{figure}{Gráfica de precisión en cada epoca del modelo MobileNet. }
+ \label{fig:GraficaEN} 
+\end{center} 
+
+EfficientNet
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/MNgrafico.JPG}
+\captionof{figure}{Gráfica de precisión en cada epoca del modelo EfficientNet.}
+ \label{fig:GraficaMN} 
+\end{center} 
+
 
 \subsection{Resultados}
 
+Una vez entrenados los modelos se realizaron las pruebas de los modelos EfficientNet y MobileNet para ojos cerrado y abiertos.
+Se obtuvieron los siguientes resultados:
+
+ MobileNet
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_cerradoEN.JPG}
+\captionof{figure}{Predicción 1 para del modelo MobileNet. }
+ \label{fig:Prueba1} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_abiertoEN.JPG}
+\captionof{figure}{Predicción 2 para del modelo MobileNet. }
+ \label{fig:Prueb2} 
+\end{center} 
+
+
+EfficientNet
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_cerradoMN.JPG}
+\captionof{figure}{Predicción 1 para del modelo EfficientNet.}
+ \label{fig:Prueba3} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_abiertoMN.JPG}
+\captionof{figure}{Predicción 2 para del modelo EfficientNet.}
+ \label{fig:Prueba4} 
+\end{center} 
 
 \newpage
 \section{Conclusiones}
 
-
-hgg h
+Se implementó una página de Login utilizando los servicios de AWS Amplify y Cognito, lo que permite la autenticación y registro de usuarios en la aplicación. También se han definido rutas protegidas para garantizar que solo los usuarios autenticados puedan acceder a ciertas secciones de la aplicación. Además, se ha utilizado DynamoDB para almacenar los datos de la aplicación y se ha creado una API sin servidor de GraphQL utilizando AWS AppSync para simplificar el desarrollo de la aplicación. Los modelos MobileNet y EfficientNet han sido investigados y propuestos como base para la clasificación de imágenes de ojos abiertos y cerrados. Aunque se han realizado pruebas con los modelos MobileNet y EfficientNet para la clasificación de imágenes de ojos abiertos y cerrados, se necesita seguir trabajando en la mejora del sistema y la realización de pruebas adicionales para mejorar su eficiencia y precisión. Es posible que el sistema aún presente problemas de sobreajuste o sesgo, lo que puede afectar su capacidad para generalizar a nuevos datos. El proyecto ha logrado implementar una aplicación escalable utilizando los servicios de AWS, pero se requiere seguir trabajando en la optimización y evaluación de los modelos de aprendizaje automático para mejorar la eficiencia y precisión del sistema.
 
 
 \newpage
@@ -653,25 +721,14 @@ hgg h
 
 \bibitem{tff} TensorFlow. (2021). tf.keras.applications.mobilenet. TensorFlow API documentation. [Online]. Disponible en: https://www.tensorflow.org/api\_docs/python/tf/keras/applications/mobilenet [Accedido el 13 de marzo de 2023].
 
-\bibitem{keras} [1] Keras. (2021). Keras Applications. [Online]. Disponible en: https://keras.io/api/applications/ [Accedido el 13 de marzo de 2023].
+\bibitem{keras} Keras. (2021). Keras Applications. [Online]. Disponible en: https://keras.io/api/applications/ [Accedido el 13 de marzo de 2023].
 
-
-
-
-
-
-
-
-
-
+\bibitem{TLe}M. Arroyo, "¿Qué es el Transfer Learning?," Data Scientist, 2019. [Online]. Available: \url{ https://datascientest.com/es/que-es-el-transfer-learning#:~:text=%E2%80%9CEl%20Transfer%20Learning%2C%20o%20aprendizaje,el%20crecimiento%20del%20Deep%20Learning. }[Accessed: 13-Mar-2023].
 
 \bibitem{dataset} Marek Ruzicka Lab. (s.f.). Eye Dataset. [Online]. Disponible en: http://mrl.cs.vsb.cz/eyedataset/ [Accedido el 13 de marzo de 2023].
 
 
-
 \end{thebibliography}
-
-
 
 
 \end{document}

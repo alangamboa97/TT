@@ -32,5 +32,13 @@
 \contentsline {figure}{\numberline {31}{\ignorespaces Dataset a trabajar desde Google Colab. }}{25}{figure.31}%
 \contentsline {figure}{\numberline {32}{\ignorespaces Librer\IeC {\'\i }as utilizadas y repositorio en drive del dataset.}}{25}{figure.32}%
 \contentsline {figure}{\numberline {33}{\ignorespaces Preparaci\'on de los datos de entrada}}{26}{figure.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Exportaci\'on del modelo EfficientNet}}{26}{figure.34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Modificaci\'on del modelo EfficientNet}}{27}{figure.35}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Exportaci\'on del modelo MobileNet}}{26}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Modificaci\'on del modelo Mobilnet}}{27}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Entrenamiento del modelo MobileNet}}{27}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Entrenamiento del modelo EfficientNet}}{27}{figure.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Gr\'afica de precisi\'on en cada epoca del modelo MobileNet. }}{28}{figure.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Gr\'afica de precisi\'on en cada epoca del modelo EfficientNet.}}{28}{figure.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Predicci\'on 1 para del modelo MobileNet. }}{28}{figure.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Predicci\'on 2 para del modelo MobileNet. }}{29}{figure.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Predicci\'on 1 para del modelo EfficientNet.}}{29}{figure.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Predicci\'on 2 para del modelo EfficientNet.}}{30}{figure.43}%
