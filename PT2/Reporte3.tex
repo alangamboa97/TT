@@ -95,7 +95,7 @@ Dr. Rodolfo Vera Amaro\\
 
 \vfill
 
-30 de Noviembre 2022
+13 de Marzo 2023
 
 \end{center}
 
@@ -494,13 +494,68 @@ Entrando a nuestra consola de AWS, en la sección de Amazon Cognito, se puede obs
 \newpage
 \section{Investigación de modelos de Redes Neuronales Convolucionales}
 
+
 \subsection{Objetivo}
 Determinar distintos modelos de redes neuronales convolucionales que ofrezcan mejor eficiancia al clasificar imágenes.
 
 \subsection{Descripción}
+Para realizar la investigación de los modelos de redes neuronales convolucionales se consultó la documentación que ofrece Tensorflow y Keras. Dentro de las aplicaciones en Tensorflow se encuentran disponibles distintos modelos de aprendizaje profundo pre entrenados, los cuales se pueden utilizar para predicción y extracción de características, lo cual nos permitirá realizar una clasificación dentro de una imagen. Además de estas aplicaciones pre-entrenadas, TensorFlow.keras también proporciona una variedad de capas de redes neuronales, funciones de pérdida, optimizadores y métricas para construir y entrenar modelos personalizados. 
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/tf}
+\captionof{figure}{Documentación de Tensorflow referente a las aplicaciones con keras\cite{tff}.  }
+ \label{fig:AppsKeras} 
+\end{center} 
+
+Existen diversas familias de modelos de aprendizaje preentrenados, cada uno de ellos diseñado para resolver diferentes problemas en el aprendizaje profundo. Algunas de las familias más populares de modelos de redes neuronales convolucionales para la clasificación de imágenes son las siguientes:
+
+\begin{itemize}
+\item VGG: 
+La familia de modelos VGG, lanzada por el Visual Geometry Group de la Universidad de Oxford en 2014, es conocida por su simplicidad y efectividad en tareas de clasificación de imágenes. Los modelos de esta familia se utilizan comúnmente como modelos base en tareas de transferencia de aprendizaje.
+
+\item Inception: 
+La familia de modelos Inception, lanzada por Google en 2014, se enfoca en mejorar la eficiencia y la precisión de los modelos convolucionales mediante la utilización de módulos de convolución en paralelo y convolución 1x1. Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes y detección de objetos.
+
+\item DenseNet: 
+La familia de modelos DenseNet, lanzada por la Universidad de California, Berkeley en 2016, se enfoca en mejorar la propagación de características a través de la red convolucional mediante conexiones densas entre capas. Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes.
+
+\item MobileNet: 
+La familia de modelos MobileNet, lanzada por Google en 2017, se enfoca en reducir el tamaño y la complejidad de los modelos convolucionales para que sean más eficientes en términos de recursos computacionales. Los modelos de esta familia se utilizan comúnmente en aplicaciones móviles y en dispositivos con recursos limitados.
+
+\item ConvNeXt: 
+La familia de modelos ConvNeXt, lanzada por Facebook en 2017, se enfoca en mejorar la eficiencia y la precisión de los modelos convolucionales al utilizar módulos de convolución multi-ramificados. Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes y detección de objetos.
+
+\item NasNet:
+La familia de modelos NasNet, lanzada por Google en 2018, se enfoca en automatizar el diseño de arquitecturas de redes neuronales convolucionales utilizando búsqueda de arquitectura neuronal automatizada (NAS). Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes y detección de objetos.
+
+\item EfficientNet: 
+La familia de modelos EfficientNet, lanzada por Google en 2019, es una extensión de los modelos MobileNet que se enfoca en maximizar el desempeño del modelo mientras se mantiene el tamaño y la complejidad reducidos. Los modelos de esta familia han superado consistentemente el desempeño en comparación con otros modelos en cuanto a la clasificación de imágenes.
+
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/modelos_keras}
+\captionof{figure}{Modelos de aprendizaje profundo disponibles en Keras.\cite{keras}  }
+ \label{fig:Keras} 
+\end{center} 
+
+La tabla hace referencia al nombre del modelo y el tamaño del modelo en MB, por otro lado la precisión top-1 y top-5 se refiere al rendimiento del modelo en el conjunto de datos de validación de ImageNet(base de datos de imágenes etiquetadas para el entrenamiento y evaluación de modelos de visión por computadora). La profundidad se refiere a la profundidad topológica de la red incluyendo capas de activación, capas de normalización por lotes, etc. El tiempo por paso de inferencia es el promedio de 30 lotes y 10 repeticiones, se refiere al tiempo que tarda un modelo de aprendizaje en procesar una única muestra de entrada y producir una salida. 
+
+El tiempo de inferencia es importante porque puede afectar la capacidad del modelo para procesar datos en tiempo real y afectar la experiencia del usuario en aplicaciones en línea. Dos de las arquitecturas de redes neuronales convolucionales que se enfocan a reducir el tiempo de inferencia son MobileNet y EfficientNet. Estas arquitecturas permiten ser ejecutadas en dispositivos con recursos limitados como teléfonos móviles y dispositivos integrados, debido a que pueden procesar imágenes más rápidamente que otras arquitecturas más complejas. 
+ 
+\textbf{Aprendizaje por transferencia}
+
+El Transfer Learning, o aprendizaje transferido en español, se refiere al conjunto de métodos que permiten transferir conocimientos adquiridos gracias a la resolución de problemas para resolver otros problemas. La utilización de métodos de Transfer Learning en Deep Learning consiste principalmente en explotar redes neuronales pre-entrenadas. Generalmente, estos modelos corresponden a algoritmos de alto rendimiento que han sido desarrollados y entrenados sobre grandes bases de datos y que son hoy de libre acceso.
+
+
+El aprendizaje por transferencia nos permite hacer uso de los modelos pre-entrenados y modificar la estructura de estos modelos en base a los objetivos deseados, en lugar de entrenar una red neuronal desde cero para cada tarea, se utilizan los pesos de una red neuronal pre-entrenada como punto de partida y se ajustan con el objetivo de resolver una nueva tarea. 
+
+La idea detrás del transfer learning es que muchas tareas de aprendizaje profundo tienen características similares y comparten patrones comunes en los datos. Al transferir el conocimiento de una tarea a otra, se pueden aprovechar los conocimientos previamente adquiridos para mejorar la eficiencia y la precisión del modelo en la nueva tarea.
+
 
 \subsection{Resultados}
 
+Como resultado de la investigación, los modelos MobileNet y EfficientNet serán propuestos como base para realizar la clasificaión de imágenes de ojos abiertos o cerrados. 
 
 \newpage
 \section{Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}
@@ -510,13 +565,74 @@ Diseñar y realizar pruebas de los modelos de redes neuronales convolucionales pr
 
 \subsection{Descripción}
 
+Para realizar el entrenamiento de los modelos EfficientNet y MobileNet se hizo uso de google colab el cual nos permite ejecutar código de Python en el navegador.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/ggco.JPG}
+\captionof{figure}{Entorno de trabajo Google Colab.  }
+ \label{fig:GoogleCo} 
+\end{center} 
+
+
+
+Se requirió de un dataset con imágenes de ojos abiertos y cerrados para entrenar los modelos, el dataset que se utilizó es el siguiente: MRL Eye Dataset\cite{dataset}.
+
+Parte de los datos del data set original se separaron en dos carpetas, en la primera carpeta se colocaron las imágenes con ojos cerrados y en la segunda carpeta las imágenes de ojos abiertos. Posteriormente se subieron las carpetas a un repositorio en drive para trabajar desde Google Colab. El dataset con el cual se trabajó contiene 3242 imágenes de las cuales 1840 son imágenes de ojos cerrados y 1402 son de con ojos abiertos. 
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/dv}
+\captionof{figure}{Dataset a trabajar desde Google Colab. }
+ \label{fig:DataGC} 
+\end{center} 
+
+
+
+Se importaron las librerías a utilizar y el repositorio de drive para hacer uso del dataset, así mismo se definieron 2 clases, la primera para ojos abiertos y la segunda para ojos cerrados. 
+Ya que los modelos pre entrenados con los que se trabajó son en base a imágenes con dimensión de 244 x 244, se definió el tamaño de la imagen en 224.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/librerias.JPG}
+\captionof{figure}{Librerías utilizadas y repositorio en drive del dataset.}
+ \label{fig:Librerias} 
+\end{center} 
+
+
+Es necesario convertir las imágenes en un arreglo de datos con su respectiva clase por lo que se creo una función con dicho proposito, posteriormente se etiquetaron los datos y se normalizaron para obtener las entradas de datos, donde X contiene los pixeles de las imágenes en tamaño 224x224 en 3 planos (rgb) y Y contiene el arreglo de etiquetas 0 y 1, que corresponden a la clase a la que pertenece cada imagen. 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/pdata}
+\captionof{figure}{Preparación de los datos de entrada}
+ \label{fig:Data} 
+\end{center} 
+
+
+Posteriormente se exporto el modelo y se visualizó la arquitectura de la red.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/effnet.JPG}
+\captionof{figure}{Exportación del modelo EfficientNet}
+ \label{fig:EfficientNet} 
+\end{center} 
+
+Se aplicaron modificaciones a partir de la 4 última capa, se agregaron nuevas capas y la función de activación sigmoid.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/effinettl.JPG}
+\captionof{figure}{Modificación del modelo EfficientNet}
+ \label{fig:EfficientNetTL} 
+\end{center} 
+
 \subsection{Resultados}
 
 
 \newpage
 \section{Conclusiones}
-Para el desarrollo de la Estación base, se decidió utilizar la suite de herramientas de Amazon Amplify. Se hará uso de Amplify Hosting, el cuál tiene una integración directa con Github, esto quiere decir, que los cambios que se realicen en el repositorio se reflejarán de manera automática en la aplicación web. Además, AWS Amplify ofrece su servicio de almacenamiento en la nube S3, este será de gran ayuda para almacenar contenido multimedia, en este caso los videos de incidencia de los conductores. Para el manejo de credenciales, se utilizará Amazon Cognito, que se encargará de administrar las credenciales de acceso a la aplicación. Para el manejo de datos, se estará utilizando MongoDB, un manejador NoSQL que trabaja con documentos.  Para el desarrollo de la aplicación, se decidió utilizar el lenguaje de programación Javascript, junto con NodeJs que nos ayudará a manejar varias peticiones al mismo tiempo. 
-Finalmente el análisis del sistema de comunicaciones,en un principio sólo se había contemplado el análisis de telemetría pero al ir realizando las actividades del tercer reporte e ir profundizando en algunos temas de comunicaciones, se decidió que también que se necesitaba el análisis de la cobertura y de los datos, es decir,de la transmisión de los fotogramas por lo que se incluyeron también en este reporte.
+
+
+hgg h
+
 
 \newpage
 \section{Bibliografia}
@@ -534,6 +650,24 @@ Finalmente el análisis del sistema de comunicaciones,en un principio sólo se hab
 \bibitem{appsync} \emph{API sin servidor de GraphQL y de publicación o suscripción $-$ AWS AppSync $-$ Amazon Web Services}. Amazon Web Services, Inc. https://aws.amazon.com/es/appsync/ (accedido el 12 de marzo de 2023).  
 
 \bibitem{cognito} \emph{AWS | Gestión de identidades y autenticación de usuario en la nube}, Amazon Web Services, Inc. https://aws.amazon.com/es/cognito/ (accedido el 8 de marzo de 2023).
+
+\bibitem{tff} TensorFlow. (2021). tf.keras.applications.mobilenet. TensorFlow API documentation. [Online]. Disponible en: https://www.tensorflow.org/api\_docs/python/tf/keras/applications/mobilenet [Accedido el 13 de marzo de 2023].
+
+\bibitem{keras} [1] Keras. (2021). Keras Applications. [Online]. Disponible en: https://keras.io/api/applications/ [Accedido el 13 de marzo de 2023].
+
+
+
+
+
+
+
+
+
+
+
+\bibitem{dataset} Marek Ruzicka Lab. (s.f.). Eye Dataset. [Online]. Disponible en: http://mrl.cs.vsb.cz/eyedataset/ [Accedido el 13 de marzo de 2023].
+
+
 
 \end{thebibliography}
 
