@@ -1,0 +1,701 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{anysize}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{float}
+\marginsize{2cm}{2cm}{1cm}{1cm}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize UPIITA}
+%\fancyfoot[R]{\footnotesize Diseño}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{\footnotesize Proyecto Terminal 2}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{graphics}
+\usepackage{capt-of}
+\usepackage[pdftex=false,colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+\setlength\parindent{0pt}
+\usepackage[usenames]{color}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{shapepar}
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+
+\includegraphics[scale=0.45]{imagenes/ipn}
+\hspace{10cm}
+\includegraphics[scale=0.15]{imagenes/upiita}
+\\
+
+
+\begin{center}
+
+
+\textsc{\Large ``Sistema para el monitoreo, detección y alerta de somnolencia del conductor mediante visión artificial, comunicación inalámbrica y geolocalización''}\\[0.5cm]
+
+
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Segundo Reporte Parcial}\\[0.4cm]
+
+\HRule \\[1.5cm]
+
+\begin{center}
+
+Lista de actividades
+ 
+
+\begin{itemize}
+\item Maquetación web
+\item Investigación de la documentación del módulo 3G/4G LTE-Base Hat  
+\item Enlace de Amazon S3 con el sistema backend
+\item Creación de los servicios backend
+\item Familiarizarse con el entorno de desarrollo de la NVIDIA Jetson Nano
+\item Implementar algoritmo para la detección del rostro y ojos
+\item Implementar puntos faciales en el rostro y métrica MOR
+
+\end{itemize}
+
+\end{center}
+
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{\\Autores:}\\
+Alan Eduardo Gamboa Del Ángel\\
+Maite Paulette Díaz Martínez\\
+
+%Grupo:4MM6\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{flushright} \large
+\emph{Asesores:} \\
+M.en C. Niels Henrik Navarrete Manzanilla\\
+Dr. Rodolfo Vera Amaro\\
+
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+13 de Marzo 2023
+
+\end{center}
+
+
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+
+\newpage
+\section{Maquetación web}
+
+\subsection{Objetivo}
+Definir e implementar las rutas que tendrá la aplicación, así como si serán públicas o privadas y la información que se desplegará en cada una de las mismas.
+
+
+
+
+\subsection{Descripción}
+
+\textbf{Rutas públicas vs rutas protegidas}
+
+Cuando se habla de una ruta protegida en React, se referiere a programar un bloqueo en ciertas rutas a la cual se le restringe el acceso al usuario. Esto comunmente se realiza para la validación de inicio de sesión de usuarios. Sí el usuario no tiene una sesión iniciada, no podrá acceder a las rutas protegidas de la aplicación. Por otro lado, las rutas públicas son todas aquellas las cuales no requieren contar con una sesión iniciada, y pueden ser accesadas por cualquier tipo de usuario\cite{dom}.
+
+
+Como primer paso, se necesita crear un proyecto de React utilizando el siguiente comando:
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/create}
+\captionof{figure}{Creación proyecto de react}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+Posteriomente, se realiza la instalación del moudelo \emph{React Router Dom} utilizando el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/router}
+\captionof{figure}{Instalación React Router DOM}
+ \label{fig:MongoA} 
+\end{center} 
+
+Utilizando la librería \emph{useAuthenticator} ofrecida por el paquete de React Dom, crearemos un archivo de nombre \emph{RequireAuth.js} el cuál contendrá una función la cual se encargará de validar si existe una sesión iniciada previamente.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/auth}
+\captionof{figure}{Función RequireAuth}
+ \label{fig:auth} 
+\end{center} 
+
+Posteriormente, se necesita contar con una página de Login, la cuál permitirá validar que se encuentre una sesión inciada por parte del usuario, para así poder acceder a las rutas protegidas.
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/loginjs}
+\captionof{figure}{Componente Login}
+ \label{fig:loginjs} 
+\end{center} 
+
+
+Para indicar a React, que se desea implementar una ruta protegida, se necesita ir al componente de dicha ruta e ingresar el siguiente código:
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/homejs}
+\captionof{figure}{Ruta protegida del componente Home}
+ \label{fig:homejs} 
+\end{center} 
+
+En dicho componente, se hace uso de las librerías \emph{useAuthenticator} y \emph{Authenticator} las cuales son ofrecidas por los servicios de Amazon Amplify. Se tendrá que hacer esto para todos los componentes que deseemos mantener como rutas protegidas.
+
+
+Finalmente, dentro de nuestro componente \textbf{App.js}, crearemos una función que contendrá el directorio de rutas tanto públicas como protegidas:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/routesjs}
+\captionof{figure}{Directorio de rutas}
+ \label{fig:routesjs} 
+\end{center} 
+
+Las rutas protedigas, estarán dentro de las etiquetas \textbf{<RequireAuth></RequireAuth>}, mientras que las públicas, irán dentro de las etiquetas \textbf{<Route></Route>}.
+
+
+\subsection{Resultados}
+
+Como resultado de todo lo anterior, tendrémos una página de Login que utilizando los servicios de AWS Amplify y Cognito, permitirá iniciar sesión así como registrar a nuevos usuarios.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/loginpage}
+\captionof{figure}{Página de Login}
+ \label{fig:loginpage} 
+\end{center} 
+
+Si intentamos ingresar a las paginas de Conductores, Incidencias o Ubicacion, nos redigirá a la página de Login, debido a que estas páginas fueron definidas como rutas protegidas. Por lo tanto el usuario debe haber inciado sesión para poder acceder a las mismas.
+
+
+\begin{itemize}
+\item \textbf{Path:} "/\\ \textbf{Descripción:} En esta dirección se encontará la el formulario para poder iniciar sesión o registrarse
+
+\item \textbf{Path:} "/home \\  \textbf{Descripción:} Esta dirección será la página principal de la aplicación dónde se mostrarán las incidencias más recientes así como una lista de todos los conductores
+
+\item \textbf{Path:} "/conductor/\\ \textbf{Descripción:} Esta dirección mostrará el perfil del conductor de id correspondiente
+
+\item \textbf{Path:} "/detalle\textunderscore incidencia \\ \textbf{Descripción:} Esta dirección mostrará cada incidencia mostrando detalles como hora, fecha, coordenadas
+
+\item \textbf{Path:}  "/conductor/id/ubicacion \\ \textbf{Descripción:} En esta vista se mostrará la ubicación en tiempo real de cada conductor
+
+
+\item \textbf{Path:} "/conductor/id/incidencias \\ \textbf{Descripción:} En esta vista se mostrará todas las incidencias registradas por cada conductor
+
+\end{itemize}
+
+
+
+\newpage
+\section{Investigación de la documentación del módulo 3G/4G LTE-Base Hat} \label{base_hat}
+
+\subsection{Objetivo}
+Crear las rutas mediante las que el cliente realizará las peticiones y tendrá acceso a las operaciones, así como su funcionamiento en cuanto a obtención de datos y comunicación con el resto de la aplicación.
+\subsection{Descripción}
+
+Para poder utilizar los servicios de Amazon Amplify, necesitamos dirigirnos al directorio root de nuestro proyecto y ejectutar el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/cli}
+\captionof{figure}{Instalación Amplify CLI}
+ \label{fig:MongoA} 
+\end{center} 
+
+Posteriormente, se necesita especificar la región en la cual queremos alojar nuestra aplicación web:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/region}
+\captionof{figure}{Configuración del proyecto}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+Utilizando un editor de código, se necesita especificar que estará utilizando el \emph{SDK} de Amazon Amplify:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/sdk}
+\captionof{figure}{Implementación del SDK de Amplify}
+ \label{fig:MongoA} 
+\end{center} 
+
+Posteriormente, declaramos una aplicación de ExpressJs la cuál nos permitirá ejecutar entre otras cosas, peticiones HTTP para la comunicación con la base de datos.
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/expressjs}
+\captionof{figure}{Creación de aplicación de Express}
+ \label{fig:MongoA} 
+\end{center} 
+
+Finalmente, se necesitan definir las rutas de las APIs que se estarán utilizando en el proyecto, las cuales serán dos, la primera se encargará de la aplicación web, y la segunda de realizar la comunicación con el Módulo Central de Procesamiento.
+
+Para agregar una api, se necesita ejecutar el siguiente comando desde el directorio raíz del proyecto.
+
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/addapi}
+\captionof{figure}{Amplify add api}
+ \label{fig:MongoA} 
+\end{center} 
+
+La consola de AWS Amplify requerirá introducir parámetros con los cuales serán construida nuestra API, para el presente proyecto se estará utilizando una arquitectura mediante GraphQL, por lo cual seleccionaremos dicha opción.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/graphql}
+\captionof{figure}{Configuración de parámetros de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
+Antes de poder publicar nuestra API en AWS Amplify, se necesita definir el Schema con el cuál se hará el manejo de datos. A contiuación se muestran dichos schemas:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/schema}
+\captionof{figure}{Definició de Schemas para el manejo de datos}
+ \label{fig:MongoA} 
+\end{center} 
+
+Finalmente, ejecutaremos el comando \emph{amplify push}, el cuál publicará la API hacía AWS amplify, generando el endpoint correspondiente a dicha API
+
+
+	
+
+\subsection{Resultados}
+
+Como resultado, tenemos el endpoint de nuestro modelo de GraphQL y nuestra API Key generada por Amplify
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/endpoints}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+\newpage
+
+\section{Enlace de Amazon S3 con el sistema backend}
+
+\subsection{Objetivo}
+Crear la aplicación web a desarrollar e implementar el sistema de diseño de manera local
+
+
+\subsection{Descripción}
+
+
+ 
+\subsection{Resultados}
+
+Una vez dentro, ingresamos a la sección del servicio de DynamoDB
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/tables}
+\captionof{figure}{Tablas generadas mediante los schemas definidos}
+ \label{fig:cognito} 
+\end{center} 
+
+Como se puede observar, gracias a los pasos realizados en la sección \ref{Backend}, DynamoDB crea automáticamente las tablas creadas en base a los schemas definidos previamente.
+
+\newpage
+\section{Creación de los servicios backend}
+
+
+
+\subsection{Objetivo}
+Realizar la conexión de NodeJs con la base de datos MongoDb.
+
+\subsection{Descripción}
+Para realizar la conexión y la integración de los servicios de DynamoDB hacía nuestra API, se hará uso de AppSync. Las API de GraphQL creadas con AWS AppSync brindan a los desarrolladores frontend la capacidad de consultar varias bases de datos, microservicios y API desde un único punto de conexión de GraphQL. 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/appsync}
+\captionof{figure}{Funcionamiento de Appsync}
+ \label{fig:MongoA} 
+\end{center} 
+
+AWS AppSync crea las API sin servidor de GraphQL y de publicación o suscripción que simplifican el desarrollo de aplicaciones a través de un único punto de conexión para consultar, actualizar o publicar datos.
+
+\subsection{Resultados}
+
+Después de haber realizado los pasos de la sección \ref{Backend}, si ejecutamos el comando \emph{amplify status}, la consola de Amplify nos retornara el endpoint de GraphQL junto con AppSync correspondiente, el cuál se utilizará para realizar todas las operaciones con respecto al almacenamiento de datos
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/appsyncendpoint}
+\captionof{figure}{Generación de endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+\newpage
+\section{Sistema de acceso con credenciales}
+
+
+\subsection{Objetivo}
+Establecer los roles de cada tipo de usuario con sus respectivos permisos de acceso a la aplicación web utilizando Amazon Cognito
+\subsection{Descripción}
+
+Amazon Cognito funciona utilizando \emph{pools} de usuarios. Un pool de usuarios es un directorio almacenado en los servicios de Amazon\cite{cognito}. Los beneficios que ofrece estar registrado en un pool de usuarios de Amazon Cognito son los siguientes:
+
+
+
+\begin{itemize}
+
+\item Servicio de registro e inicio de sesión
+\item Gestión del directorio de usuarios
+\item Servicios de seguridad tales como verificación de dos pasos
+\item Acceso a servicios de la suite de AWS	tales como S3 o Dynamodb
+
+
+
+
+\end{itemize}
+
+
+\textbf{Funcionamiento}
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/cognito}
+\captionof{figure}{Funcionamiento de Amazon Cognito}
+ \label{fig:cognito} 
+\end{center} 
+
+
+\begin{itemize}
+\item Como primer paso el usuario inicia sesión a través de un grupo de usuarios y recibe tokens del grupo de usuarios después de un
+autenticación exitosa.
+
+\item Posteriormente la aplicación intercambia los tokens del grupo de usuarios por las credenciales de AWS a través de un grupo de identidades.
+
+\item Finalmente, el usuario puede usar esas credenciales de AWS para acceder a otros servicios de AWS, como
+Amazon S3 o DynamoDB.
+
+\end{itemize}
+
+\textbf{Implementación}
+
+Para poder hacer uso de Amazon Cognito en nuestra aplicación debemos de introducir el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.7]{imagenes/add}
+\captionof{figure}{Implementación de Amazon Cognito en el proyecto}
+ \label{fig:cognito} 
+\end{center} 
+
+Obteniendo el siguiente menú:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/menu}
+\captionof{figure}{Menu de configuración de Amazon Cognito}
+ \label{fig:cognito} 
+\end{center} 
+
+Dejamos seleccionado la primera opción, la cual nos permitirá utilizar los servicios de autenticación ofrecidos por Amazon Cognito, además de otros serivios de la suite de AWS.
+
+Finalmente utilizamos el comando \emph{amplify push} para desplegar los cambios a nuestra aplicación.
+
+
+
+
+
+\subsection{Resultados}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/console}
+\captionof{figure}{Implementación completada}
+ \label{fig:cognito} 
+\end{center} 
+
+Entrando a nuestra consola de AWS, en la sección de Amazon Cognito, se puede observar dos grupos de usuarios, uno de tipo Administrador, el cual puede realizar cambios a la configuración de la aplicación, y otro de tipo de Usuario, el cual sólo puede hacer uso del sistema de inició de sesión y registro ofrecido por Cognito.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/pools}
+\captionof{figure}{Grupos de usuario}
+ \label{fig:cognito} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/admin}
+\captionof{figure}{Grupos de usuario}
+ \label{fig:cognito} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/users}
+\captionof{figure}{Grupos de usuario}
+ \label{fig:cognito} 
+\end{center} 
+
+
+
+
+
+
+\newpage
+\section{Investigación de modelos de Redes Neuronales Convolucionales}
+
+
+\subsection{Objetivo}
+Determinar distintos modelos de redes neuronales convolucionales que ofrezcan mejor eficiancia al clasificar imágenes.
+
+\subsection{Descripción}
+Para realizar la investigación de los modelos de redes neuronales convolucionales se consultó la documentación que ofrece Tensorflow y Keras. Dentro de las aplicaciones en Tensorflow se encuentran disponibles distintos modelos de aprendizaje profundo pre entrenados, los cuales se pueden utilizar para predicción y extracción de características, lo cual nos permitirá realizar una clasificación dentro de una imagen. Además de estas aplicaciones pre-entrenadas, TensorFlow.keras también proporciona una variedad de capas de redes neuronales, funciones de pérdida, optimizadores y métricas para construir y entrenar modelos personalizados. 
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/tf}
+\captionof{figure}{Documentación de Tensorflow referente a las aplicaciones con keras\cite{tff}.  }
+ \label{fig:AppsKeras} 
+\end{center} 
+
+Existen diversas familias de modelos de aprendizaje preentrenados, cada uno de ellos diseñado para resolver diferentes problemas en el aprendizaje profundo. Algunas de las familias más populares de modelos de redes neuronales convolucionales para la clasificación de imágenes son las siguientes:
+
+\begin{itemize}
+\item VGG: 
+La familia de modelos VGG, lanzada por el Visual Geometry Group de la Universidad de Oxford en 2014, es conocida por su simplicidad y efectividad en tareas de clasificación de imágenes. Los modelos de esta familia se utilizan comúnmente como modelos base en tareas de transferencia de aprendizaje.
+
+\item Inception: 
+La familia de modelos Inception, lanzada por Google en 2014, se enfoca en mejorar la eficiencia y la precisión de los modelos convolucionales mediante la utilización de módulos de convolución en paralelo y convolución 1x1. Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes y detección de objetos.
+
+\item DenseNet: 
+La familia de modelos DenseNet, lanzada por la Universidad de California, Berkeley en 2016, se enfoca en mejorar la propagación de características a través de la red convolucional mediante conexiones densas entre capas. Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes.
+
+\item MobileNet: 
+La familia de modelos MobileNet, lanzada por Google en 2017, se enfoca en reducir el tamaño y la complejidad de los modelos convolucionales para que sean más eficientes en términos de recursos computacionales. Los modelos de esta familia se utilizan comúnmente en aplicaciones móviles y en dispositivos con recursos limitados.
+
+\item ConvNeXt: 
+La familia de modelos ConvNeXt, lanzada por Facebook en 2017, se enfoca en mejorar la eficiencia y la precisión de los modelos convolucionales al utilizar módulos de convolución multi-ramificados. Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes y detección de objetos.
+
+\item NasNet:
+La familia de modelos NasNet, lanzada por Google en 2018, se enfoca en automatizar el diseño de arquitecturas de redes neuronales convolucionales utilizando búsqueda de arquitectura neuronal automatizada (NAS). Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes y detección de objetos.
+
+\item EfficientNet: 
+La familia de modelos EfficientNet, lanzada por Google en 2019, es una extensión de los modelos MobileNet que se enfoca en maximizar el desempeño del modelo mientras se mantiene el tamaño y la complejidad reducidos. Los modelos de esta familia han superado consistentemente el desempeño en comparación con otros modelos en cuanto a la clasificación de imágenes.
+
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.8]{imagenes/modelos_keras}
+\captionof{figure}{Modelos de aprendizaje profundo disponibles en Keras.\cite{keras}  }
+ \label{fig:Keras} 
+\end{center} 
+
+La tabla hace referencia al nombre del modelo y el tamaño del modelo en MB, por otro lado la precisión top-1 y top-5 se refiere al rendimiento del modelo en el conjunto de datos de validación de ImageNet(base de datos de imágenes etiquetadas para el entrenamiento y evaluación de modelos de visión por computadora). La profundidad se refiere a la profundidad topológica de la red incluyendo capas de activación, capas de normalización por lotes, etc. El tiempo por paso de inferencia es el promedio de 30 lotes y 10 repeticiones, se refiere al tiempo que tarda un modelo de aprendizaje en procesar una única muestra de entrada y producir una salida. 
+
+El tiempo de inferencia es importante porque puede afectar la capacidad del modelo para procesar datos en tiempo real y afectar la experiencia del usuario en aplicaciones en línea. Dos de las arquitecturas de redes neuronales convolucionales que se enfocan a reducir el tiempo de inferencia son MobileNet y EfficientNet. Estas arquitecturas permiten ser ejecutadas en dispositivos con recursos limitados como teléfonos móviles y dispositivos integrados, debido a que pueden procesar imágenes más rápidamente que otras arquitecturas más complejas. 
+ 
+\textbf{Aprendizaje por transferencia}\\
+
+El Transfer Learning, o aprendizaje transferido en español, se refiere al conjunto de métodos que permiten transferir conocimientos adquiridos gracias a la resolución de problemas para resolver otros problemas. La utilización de métodos de Transfer Learning en Deep Learning consiste principalmente en explotar redes neuronales pre-entrenadas. Generalmente, estos modelos corresponden a algoritmos de alto rendimiento que han sido desarrollados y entrenados sobre grandes bases de datos y que son hoy de libre acceso \cite{TLe}.
+
+
+El aprendizaje por transferencia nos permite hacer uso de los modelos pre-entrenados y modificar la estructura de estos modelos en base a los objetivos deseados, en lugar de entrenar una red neuronal desde cero para cada tarea, se utilizan los pesos de una red neuronal pre-entrenada como punto de partida y se ajustan con el objetivo de resolver una nueva tarea. 
+
+La idea detrás del transfer learning es que muchas tareas de aprendizaje profundo tienen características similares y comparten patrones comunes en los datos. Al transferir el conocimiento de una tarea a otra, se pueden aprovechar los conocimientos previamente adquiridos para mejorar la eficiencia y la precisión del modelo en la nueva tarea.
+
+
+\subsection{Resultados}
+
+Como resultado de la investigación, los modelos MobileNet y EfficientNet serán propuestos como base para realizar la clasificaión de imágenes. 
+
+\clearpage
+\section{Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}
+
+\subsection{Objetivo}
+Diseñar y realizar pruebas de los modelos de redes neuronales convolucionales previamente investigados para determinar el rendimiento y la precisión de cada uno.
+
+\subsection{Descripción}
+
+Para realizar el entrenamiento de los modelos EfficientNet y MobileNet se hizo uso de google colab el cual nos permite ejecutar código de Python en el navegador.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/ggco.JPG}
+\captionof{figure}{Entorno de trabajo Google Colab.  }
+ \label{fig:GoogleCo} 
+\end{center} 
+
+
+
+Se requirió de un dataset con imágenes de ojos abiertos y cerrados para entrenar los modelos, el dataset que se utilizó es el siguiente: MRL Eye Dataset\cite{dataset}.
+
+Parte de los datos del data set original se separaron en dos carpetas, en la primera carpeta se colocaron las imágenes con ojos cerrados y en la segunda carpeta las imágenes de ojos abiertos. Posteriormente se subieron las carpetas a un repositorio en drive para trabajar desde Google Colab. El dataset con el cual se trabajó contiene 3242 imágenes de las cuales 1840 son imágenes de ojos cerrados y 1402 son de con ojos abiertos. 
+
+
+\begin{center}
+  \includegraphics[scale=0.7]{imagenes/dv}
+\captionof{figure}{Dataset a trabajar desde Google Colab. }
+ \label{fig:DataGC} 
+\end{center} 
+
+
+
+Se importaron las librerías a utilizar y el repositorio de drive para hacer uso del dataset, así mismo se definieron 2 clases, la primera para ojos abiertos y la segunda para ojos cerrados. 
+Ya que los modelos pre entrenados con los que se trabajó son en base a imágenes con dimensión de 244 x 244, se definió el tamaño de la imagen en 224.
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/librerias.JPG}
+\captionof{figure}{Librerías utilizadas y repositorio en drive del dataset.}
+ \label{fig:Librerias} 
+\end{center} 
+
+
+Es necesario convertir las imágenes en un arreglo de datos con su respectiva clase por lo que se creo una función con dicho proposito, posteriormente se etiquetaron los datos y se normalizaron para obtener las entradas de datos, donde X contiene los pixeles de las imágenes en tamaño 224x224 en 3 planos (rgb) y Y contiene el arreglo de etiquetas 0 y 1, que corresponden a la clase a la que pertenece cada imagen. 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/pdata}
+\captionof{figure}{Preparación de los datos de entrada}
+ \label{fig:Data} 
+\end{center} 
+
+
+Posteriormente se exporto el modelo y se visualizó la arquitectura de la red.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/effnet.JPG}
+\captionof{figure}{Exportación del modelo MobileNet}
+ \label{fig:MMobileNet} 
+\end{center} 
+
+Se aplicaron modificaciones a partir de la cuarta última capa, se agregaron nuevas capas y la función de activación sigmoid.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/effinettl.JPG}
+\captionof{figure}{Modificación del modelo Mobilnet}
+ \label{fig:MobileNetTL} 
+\end{center} 
+
+Finalmente se entrena el modelo MobileNet 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/entrenamientoen.JPG}
+\captionof{figure}{Entrenamiento del modelo MobileNet}
+ \label{fig:EfficientEn} 
+\end{center} 
+
+
+Para el modelo EfficientNet se realizó el mismo procedimiento que en el modelo EfficientNet.
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/entrenamientomn.JPG}
+\captionof{figure}{Entrenamiento del modelo EfficientNet}
+ \label{fig:MobileNetEn} 
+\end{center} 
+
+La gráfica muestra el las epocas y la precisión obtenida en cada una de ellas, así como la precisión de los datos ocupados para la validación dentro del entrenamiento. 
+
+MobileNet
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ENgrafico.JPG}
+\captionof{figure}{Gráfica de precisión en cada epoca del modelo MobileNet. }
+ \label{fig:GraficaEN} 
+\end{center} 
+
+EfficientNet
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/MNgrafico.JPG}
+\captionof{figure}{Gráfica de precisión en cada epoca del modelo EfficientNet.}
+ \label{fig:GraficaMN} 
+\end{center} 
+
+
+\subsection{Resultados}
+
+Una vez entrenados los modelos se realizaron las pruebas de los modelos EfficientNet y MobileNet para ojos cerrado y abiertos.
+Se obtuvieron los siguientes resultados:
+
+ MobileNet
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_cerradoEN.JPG}
+\captionof{figure}{Predicción 1 para del modelo MobileNet. }
+ \label{fig:Prueba1} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_abiertoEN.JPG}
+\captionof{figure}{Predicción 2 para del modelo MobileNet. }
+ \label{fig:Prueb2} 
+\end{center} 
+
+
+EfficientNet
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_cerradoMN.JPG}
+\captionof{figure}{Predicción 1 para del modelo EfficientNet.}
+ \label{fig:Prueba3} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_abiertoMN.JPG}
+\captionof{figure}{Predicción 2 para del modelo EfficientNet.}
+ \label{fig:Prueba4} 
+\end{center} 
+
+\newpage
+\section{Conclusiones}
+
+Se implementó una página de Login utilizando los servicios de AWS Amplify y Cognito, lo que permite la autenticación y registro de usuarios en la aplicación. También se han definido rutas protegidas para garantizar que solo los usuarios autenticados puedan acceder a ciertas secciones de la aplicación. Además, se ha utilizado DynamoDB para almacenar los datos de la aplicación y se ha creado una API sin servidor de GraphQL utilizando AWS AppSync para simplificar el desarrollo de la aplicación. Los modelos MobileNet y EfficientNet han sido investigados y propuestos como base para la clasificación de imágenes de ojos abiertos y cerrados. Aunque se han realizado pruebas con los modelos MobileNet y EfficientNet para la clasificación de imágenes de ojos abiertos y cerrados, se necesita seguir trabajando en la mejora del sistema y la realización de pruebas adicionales para mejorar su eficiencia y precisión. Es posible que el sistema aún presente problemas de sobreajuste o sesgo, lo que puede afectar su capacidad para generalizar a nuevos datos. El proyecto ha logrado implementar una aplicación escalable utilizando los servicios de AWS, pero se requiere seguir trabajando en la optimización y evaluación de los modelos de aprendizaje automático para mejorar la eficiencia y precisión del sistema.
+
+
+\newpage
+\section{Bibliografia}
+%\bibliographystyle{apacite}
+
+\begin{thebibliography}{10} %10 significa el número máximo de items
+%Aquí ponga la bibliografía y referencias usadas
+
+%Artículo:
+
+\bibitem{dom}F. Martinez. \emph{Protección de rutas con React Router Dom}, DEV Community. https://dev.to/franklin030601/proteccion-de-rutas-con-react-router-dom-144j (accedido el 7 de marzo de 2023).
+
+\bibitem{dynamo} \emph{¿Qué es Amazon DynamoDB?}, Amazon Docs. https://docs.aws.amazon.com/es-es/amazondynamodb/latest/developerguide/Introduction.html (accedido el 2 de marzo de 2023).
+
+\bibitem{appsync} \emph{API sin servidor de GraphQL y de publicación o suscripción $-$ AWS AppSync $-$ Amazon Web Services}. Amazon Web Services, Inc. https://aws.amazon.com/es/appsync/ (accedido el 12 de marzo de 2023).  
+
+\bibitem{cognito} \emph{AWS | Gestión de identidades y autenticación de usuario en la nube}, Amazon Web Services, Inc. https://aws.amazon.com/es/cognito/ (accedido el 8 de marzo de 2023).
+
+\bibitem{tff} TensorFlow. (2021). tf.keras.applications.mobilenet. TensorFlow API documentation. [Online]. Disponible en: https://www.tensorflow.org/api\_docs/python/tf/keras/applications/mobilenet [Accedido el 13 de marzo de 2023].
+
+\bibitem{keras} Keras. (2021). Keras Applications. [Online]. Disponible en: https://keras.io/api/applications/ [Accedido el 13 de marzo de 2023].
+
+\bibitem{TLe}M. Arroyo, "¿Qué es el Transfer Learning?," Data Scientist, 2019. [Online]. Available: \url{ https://datascientest.com/es/que-es-el-transfer-learning#:~:text=%E2%80%9CEl%20Transfer%20Learning%2C%20o%20aprendizaje,el%20crecimiento%20del%20Deep%20Learning. }[Accessed: 13-Mar-2023].
+
+\bibitem{dataset} Marek Ruzicka Lab. (s.f.). Eye Dataset. [Online]. Disponible en: http://mrl.cs.vsb.cz/eyedataset/ [Accedido el 13 de marzo de 2023].
+
+
+\end{thebibliography}
+
+
+\end{document}
+
+
