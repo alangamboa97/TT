@@ -14,31 +14,7 @@
 \contentsline {figure}{\numberline {13}{\ignorespaces Configuraci\'on de par\'ametros de GraphQL}}{9}{figure.13}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Definici\'o de Schemas para el manejo de datos}}{10}{figure.14}%
 \contentsline {figure}{\numberline {15}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{11}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Tablas en DynamoDB}}{12}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Consola de AWS}}{13}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Tablas generadas mediante los schemas definidos}}{13}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Funcionamiento de Appsync}}{14}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Generaci\'on de endpoint de GraphQL}}{15}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Funcionamiento de Amazon Cognito}}{16}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Implementaci\'on de Amazon Cognito en el proyecto}}{17}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Menu de configuraci\'on de Amazon Cognito}}{17}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Implementaci\'on completada}}{18}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Grupos de usuario}}{18}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Grupos de usuario}}{19}{figure.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Grupos de usuario}}{19}{figure.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Documentaci\'on de Tensorflow referente a las aplicaciones con keras\cite {tff}. }}{20}{figure.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Modelos de aprendizaje profundo disponibles en Keras.\cite {keras} }}{22}{figure.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Entorno de trabajo Google Colab. }}{24}{figure.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Dataset a trabajar desde Google Colab. }}{25}{figure.31}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Librer\IeC {\'\i }as utilizadas y repositorio en drive del dataset.}}{25}{figure.32}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Preparaci\'on de los datos de entrada}}{26}{figure.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Exportaci\'on del modelo MobileNet}}{26}{figure.34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Modificaci\'on del modelo Mobilnet}}{27}{figure.35}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Entrenamiento del modelo MobileNet}}{27}{figure.36}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Entrenamiento del modelo EfficientNet}}{27}{figure.37}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Gr\'afica de precisi\'on en cada epoca del modelo MobileNet. }}{28}{figure.38}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Gr\'afica de precisi\'on en cada epoca del modelo EfficientNet.}}{28}{figure.39}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Predicci\'on 1 para del modelo MobileNet. }}{28}{figure.40}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Predicci\'on 2 para del modelo MobileNet. }}{29}{figure.41}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Predicci\'on 1 para del modelo EfficientNet.}}{29}{figure.42}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Predicci\'on 2 para del modelo EfficientNet.}}{30}{figure.43}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Tablas generadas mediante los schemas definidos}}{12}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Funcionamiento de Appsync}}{13}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Generaci\'on de endpoint de GraphQL}}{14}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Funcionamiento de Amazon Cognito}}{16}{figure.19}%

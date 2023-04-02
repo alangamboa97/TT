@@ -352,31 +352,58 @@ Después de haber realizado los pasos de la sección \ref{Backend}, si ejecutamos 
 
 
 \newpage
-\section{Sistema de acceso con credenciales}
+\section{Familiarizarse con el entorno de desarrollo de la NVIDIA Jetson Nano}
 
 
 \subsection{Objetivo}
-Establecer los roles de cada tipo de usuario con sus respectivos permisos de acceso a la aplicación web utilizando Amazon Cognito
+Investigar la documentación ofrecida por NVIDIA sobre el uso y entorno de desarrollo de la jetson nano.
+ 
 \subsection{Descripción}
 
-Amazon Cognito funciona utilizando \emph{pools} de usuarios. Un pool de usuarios es un directorio almacenado en los servicios de Amazon\cite{cognito}. Los beneficios que ofrece estar registrado en un pool de usuarios de Amazon Cognito son los siguientes:
+\textbf{Instalación en la tarjeta microSD}
+
+El Jetson Nano Developer Kit utiliza una tarjeta microSD como dispositivo de arranque y almacenamiento principal. Por tanto fue necesario instalar un entorno de desarrollo en la propia placa, para lo cual se requirio de una tarjeta microSD de un minímo recomendado de 32 GB de acuerdo a la documentación Nvidia.  \cite{Nvidia}.\\
+
+Como primer paso se descargo el \emph{Jetson Nano Developer Kit SD Card Image} \cite{sdimage} y posteriormente se instalo en la tarjeta microSD desde el sistema operativo Linux, utilizando los siguentes pasos:
+\begin{enumerate}
+
+\item Se abrio una terminal y se inserto la tarjeta microSD. 
+\item Se uso el siguiente comando para mostrar que dispositivo de disco se le asignó:
+
+\begin{verbatim}
+dmesg | tail | awk '\$3 == "sd" {print}'
+\end{verbatim}
 
 
+\item Se  escribio la imagen de la tarjeta SD comprimida (previamente descargada) en la tarjeta microSD con el comando:
+
+\begin{verbatim}
+/usr/bin/unzip -p ~/Downloads/jetson_nano_devkit_sd_card.zip | 
+sudo /bin/dd of=/dev/sda bs=1M status=progress
+\end{verbatim}
+
+\item Finalmente se expulso del dispositivo de disco desde la linea de comando utilizando:
+
+\begin{verbatim}
+sudo eject /dev/sda
+\end{verbatim}
+\end{enumerate}
+
+\textbf{Configuración y primer arranque}\\
+
+Jetson Nano Developer Kit permite dos formas de interactuar, la primera es por medio de otra computadora y la segunda haciendo uso de una pantalla, teclado y mouse conectados. Adicionalmente el kit de desarrollo no cuenta con una fuente de alimentación incluida por lo que se utilizó  una fuente de alimentación Micro-USB(5V-2A).\\
+
+Para iniciar el kit de desarrollo se conectó el mouse, la pantalla, el teclado y la funete de alimentación, posteriormente se realizó la configuración inicial del sistema operativo el cual incluyó lo siguiente:
 
 \begin{itemize}
-
-\item Servicio de registro e inicio de sesión
-\item Gestión del directorio de usuarios
-\item Servicios de seguridad tales como verificación de dos pasos
-\item Acceso a servicios de la suite de AWS	tales como S3 o Dynamodb
-
-
-
-
+\item Revisar y acepter el EULA del software NVIDIA Jetson.
+\item Seleccionar el idioma del sistema, la distribución del teclado y la zona horaria
+\item Crear nombre de usuario, contraseña y nombre de la computadora.
+\item Seleccione el tamaño de partición de la aplicación: se recomienda utilizar el tamaño máximo sugerido.
 \end{itemize}
 
 
-\textbf{Funcionamiento}
+
 
 
 \begin{center}
@@ -386,70 +413,10 @@ Amazon Cognito funciona utilizando \emph{pools} de usuarios. Un pool de usuarios
 \end{center} 
 
 
-\begin{itemize}
-\item Como primer paso el usuario inicia sesión a través de un grupo de usuarios y recibe tokens del grupo de usuarios después de un
-autenticación exitosa.
-
-\item Posteriormente la aplicación intercambia los tokens del grupo de usuarios por las credenciales de AWS a través de un grupo de identidades.
-
-\item Finalmente, el usuario puede usar esas credenciales de AWS para acceder a otros servicios de AWS, como
-Amazon S3 o DynamoDB.
-
-\end{itemize}
-
-\textbf{Implementación}
-
-Para poder hacer uso de Amazon Cognito en nuestra aplicación debemos de introducir el siguiente comando:
-
-\begin{center}
-  \includegraphics[scale=0.7]{imagenes/add}
-\captionof{figure}{Implementación de Amazon Cognito en el proyecto}
- \label{fig:cognito} 
-\end{center} 
-
-Obteniendo el siguiente menú:
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/menu}
-\captionof{figure}{Menu de configuración de Amazon Cognito}
- \label{fig:cognito} 
-\end{center} 
-
-Dejamos seleccionado la primera opción, la cual nos permitirá utilizar los servicios de autenticación ofrecidos por Amazon Cognito, además de otros serivios de la suite de AWS.
-
-Finalmente utilizamos el comando \emph{amplify push} para desplegar los cambios a nuestra aplicación.
-
-
-
 
 
 \subsection{Resultados}
 
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/console}
-\captionof{figure}{Implementación completada}
- \label{fig:cognito} 
-\end{center} 
-
-Entrando a nuestra consola de AWS, en la sección de Amazon Cognito, se puede observar dos grupos de usuarios, uno de tipo Administrador, el cual puede realizar cambios a la configuración de la aplicación, y otro de tipo de Usuario, el cual sólo puede hacer uso del sistema de inició de sesión y registro ofrecido por Cognito.
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/pools}
-\captionof{figure}{Grupos de usuario}
- \label{fig:cognito} 
-\end{center} 
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/admin}
-\captionof{figure}{Grupos de usuario}
- \label{fig:cognito} 
-\end{center} 
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/users}
-\captionof{figure}{Grupos de usuario}
- \label{fig:cognito} 
-\end{center} 
 
 
 
@@ -457,214 +424,38 @@ Entrando a nuestra consola de AWS, en la sección de Amazon Cognito, se puede obs
 
 
 \newpage
-\section{Investigación de modelos de Redes Neuronales Convolucionales}
+\section{Implementar algoritmo para la detección del rostro y ojos  }
 
 
 \subsection{Objetivo}
-Determinar distintos modelos de redes neuronales convolucionales que ofrezcan mejor eficiancia al clasificar imágenes.
+realizar la detección de rostro y ojos en la Jetson Nano .
 
 \subsection{Descripción}
-Para realizar la investigación de los modelos de redes neuronales convolucionales se consultó la documentación que ofrece Tensorflow y Keras. Dentro de las aplicaciones en Tensorflow se encuentran disponibles distintos modelos de aprendizaje profundo pre entrenados, los cuales se pueden utilizar para predicción y extracción de características, lo cual nos permitirá realizar una clasificación dentro de una imagen. Además de estas aplicaciones pre-entrenadas, TensorFlow.keras también proporciona una variedad de capas de redes neuronales, funciones de pérdida, optimizadores y métricas para construir y entrenar modelos personalizados. 
 
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/tf}
-\captionof{figure}{Documentación de Tensorflow referente a las aplicaciones con keras\cite{tff}.  }
- \label{fig:AppsKeras} 
-\end{center} 
-
-Existen diversas familias de modelos de aprendizaje preentrenados, cada uno de ellos diseñado para resolver diferentes problemas en el aprendizaje profundo. Algunas de las familias más populares de modelos de redes neuronales convolucionales para la clasificación de imágenes son las siguientes:
-
-\begin{itemize}
-\item VGG: 
-La familia de modelos VGG, lanzada por el Visual Geometry Group de la Universidad de Oxford en 2014, es conocida por su simplicidad y efectividad en tareas de clasificación de imágenes. Los modelos de esta familia se utilizan comúnmente como modelos base en tareas de transferencia de aprendizaje.
-
-\item Inception: 
-La familia de modelos Inception, lanzada por Google en 2014, se enfoca en mejorar la eficiencia y la precisión de los modelos convolucionales mediante la utilización de módulos de convolución en paralelo y convolución 1x1. Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes y detección de objetos.
-
-\item DenseNet: 
-La familia de modelos DenseNet, lanzada por la Universidad de California, Berkeley en 2016, se enfoca en mejorar la propagación de características a través de la red convolucional mediante conexiones densas entre capas. Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes.
-
-\item MobileNet: 
-La familia de modelos MobileNet, lanzada por Google en 2017, se enfoca en reducir el tamaño y la complejidad de los modelos convolucionales para que sean más eficientes en términos de recursos computacionales. Los modelos de esta familia se utilizan comúnmente en aplicaciones móviles y en dispositivos con recursos limitados.
-
-\item ConvNeXt: 
-La familia de modelos ConvNeXt, lanzada por Facebook en 2017, se enfoca en mejorar la eficiencia y la precisión de los modelos convolucionales al utilizar módulos de convolución multi-ramificados. Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes y detección de objetos.
-
-\item NasNet:
-La familia de modelos NasNet, lanzada por Google en 2018, se enfoca en automatizar el diseño de arquitecturas de redes neuronales convolucionales utilizando búsqueda de arquitectura neuronal automatizada (NAS). Los modelos de esta familia se utilizan comúnmente en tareas de clasificación de imágenes y detección de objetos.
-
-\item EfficientNet: 
-La familia de modelos EfficientNet, lanzada por Google en 2019, es una extensión de los modelos MobileNet que se enfoca en maximizar el desempeño del modelo mientras se mantiene el tamaño y la complejidad reducidos. Los modelos de esta familia han superado consistentemente el desempeño en comparación con otros modelos en cuanto a la clasificación de imágenes.
-
-\end{itemize}
-
-\begin{center}
-  \includegraphics[scale=0.8]{imagenes/modelos_keras}
-\captionof{figure}{Modelos de aprendizaje profundo disponibles en Keras.\cite{keras}  }
- \label{fig:Keras} 
-\end{center} 
-
-La tabla hace referencia al nombre del modelo y el tamaño del modelo en MB, por otro lado la precisión top-1 y top-5 se refiere al rendimiento del modelo en el conjunto de datos de validación de ImageNet(base de datos de imágenes etiquetadas para el entrenamiento y evaluación de modelos de visión por computadora). La profundidad se refiere a la profundidad topológica de la red incluyendo capas de activación, capas de normalización por lotes, etc. El tiempo por paso de inferencia es el promedio de 30 lotes y 10 repeticiones, se refiere al tiempo que tarda un modelo de aprendizaje en procesar una única muestra de entrada y producir una salida. 
-
-El tiempo de inferencia es importante porque puede afectar la capacidad del modelo para procesar datos en tiempo real y afectar la experiencia del usuario en aplicaciones en línea. Dos de las arquitecturas de redes neuronales convolucionales que se enfocan a reducir el tiempo de inferencia son MobileNet y EfficientNet. Estas arquitecturas permiten ser ejecutadas en dispositivos con recursos limitados como teléfonos móviles y dispositivos integrados, debido a que pueden procesar imágenes más rápidamente que otras arquitecturas más complejas. 
- 
-\textbf{Aprendizaje por transferencia}\\
-
-El Transfer Learning, o aprendizaje transferido en español, se refiere al conjunto de métodos que permiten transferir conocimientos adquiridos gracias a la resolución de problemas para resolver otros problemas. La utilización de métodos de Transfer Learning en Deep Learning consiste principalmente en explotar redes neuronales pre-entrenadas. Generalmente, estos modelos corresponden a algoritmos de alto rendimiento que han sido desarrollados y entrenados sobre grandes bases de datos y que son hoy de libre acceso \cite{TLe}.
-
-
-El aprendizaje por transferencia nos permite hacer uso de los modelos pre-entrenados y modificar la estructura de estos modelos en base a los objetivos deseados, en lugar de entrenar una red neuronal desde cero para cada tarea, se utilizan los pesos de una red neuronal pre-entrenada como punto de partida y se ajustan con el objetivo de resolver una nueva tarea. 
-
-La idea detrás del transfer learning es que muchas tareas de aprendizaje profundo tienen características similares y comparten patrones comunes en los datos. Al transferir el conocimiento de una tarea a otra, se pueden aprovechar los conocimientos previamente adquiridos para mejorar la eficiencia y la precisión del modelo en la nueva tarea.
 
 
 \subsection{Resultados}
 
-Como resultado de la investigación, los modelos MobileNet y EfficientNet serán propuestos como base para realizar la clasificaión de imágenes. 
+
 
 \clearpage
-\section{Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}
+\section{Implementar puntos faciales en el rostro y la metrica MOR}
 
 \subsection{Objetivo}
-Diseñar y realizar pruebas de los modelos de redes neuronales convolucionales previamente investigados para determinar el rendimiento y la precisión de cada uno.
+Implementar la detección con puntos faciales en el rostro y la metrica mor para detectar si la boca se encuentra abierta o cerrada.
 
 \subsection{Descripción}
 
-Para realizar el entrenamiento de los modelos EfficientNet y MobileNet se hizo uso de google colab el cual nos permite ejecutar código de Python en el navegador.
 
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/ggco.JPG}
-\captionof{figure}{Entorno de trabajo Google Colab.  }
- \label{fig:GoogleCo} 
-\end{center} 
-
-
-
-Se requirió de un dataset con imágenes de ojos abiertos y cerrados para entrenar los modelos, el dataset que se utilizó es el siguiente: MRL Eye Dataset\cite{dataset}.
-
-Parte de los datos del data set original se separaron en dos carpetas, en la primera carpeta se colocaron las imágenes con ojos cerrados y en la segunda carpeta las imágenes de ojos abiertos. Posteriormente se subieron las carpetas a un repositorio en drive para trabajar desde Google Colab. El dataset con el cual se trabajó contiene 3242 imágenes de las cuales 1840 son imágenes de ojos cerrados y 1402 son de con ojos abiertos. 
-
-
-\begin{center}
-  \includegraphics[scale=0.7]{imagenes/dv}
-\captionof{figure}{Dataset a trabajar desde Google Colab. }
- \label{fig:DataGC} 
-\end{center} 
-
-
-
-Se importaron las librerías a utilizar y el repositorio de drive para hacer uso del dataset, así mismo se definieron 2 clases, la primera para ojos abiertos y la segunda para ojos cerrados. 
-Ya que los modelos pre entrenados con los que se trabajó son en base a imágenes con dimensión de 244 x 244, se definió el tamaño de la imagen en 224.
-
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/librerias.JPG}
-\captionof{figure}{Librerías utilizadas y repositorio en drive del dataset.}
- \label{fig:Librerias} 
-\end{center} 
-
-
-Es necesario convertir las imágenes en un arreglo de datos con su respectiva clase por lo que se creo una función con dicho proposito, posteriormente se etiquetaron los datos y se normalizaron para obtener las entradas de datos, donde X contiene los pixeles de las imágenes en tamaño 224x224 en 3 planos (rgb) y Y contiene el arreglo de etiquetas 0 y 1, que corresponden a la clase a la que pertenece cada imagen. 
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/pdata}
-\captionof{figure}{Preparación de los datos de entrada}
- \label{fig:Data} 
-\end{center} 
-
-
-Posteriormente se exporto el modelo y se visualizó la arquitectura de la red.
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/effnet.JPG}
-\captionof{figure}{Exportación del modelo MobileNet}
- \label{fig:MMobileNet} 
-\end{center} 
-
-Se aplicaron modificaciones a partir de la cuarta última capa, se agregaron nuevas capas y la función de activación sigmoid.
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/effinettl.JPG}
-\captionof{figure}{Modificación del modelo Mobilnet}
- \label{fig:MobileNetTL} 
-\end{center} 
-
-Finalmente se entrena el modelo MobileNet 
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/entrenamientoen.JPG}
-\captionof{figure}{Entrenamiento del modelo MobileNet}
- \label{fig:EfficientEn} 
-\end{center} 
-
-
-Para el modelo EfficientNet se realizó el mismo procedimiento que en el modelo EfficientNet.
-
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/entrenamientomn.JPG}
-\captionof{figure}{Entrenamiento del modelo EfficientNet}
- \label{fig:MobileNetEn} 
-\end{center} 
-
-La gráfica muestra el las epocas y la precisión obtenida en cada una de ellas, así como la precisión de los datos ocupados para la validación dentro del entrenamiento. 
-
-MobileNet
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/ENgrafico.JPG}
-\captionof{figure}{Gráfica de precisión en cada epoca del modelo MobileNet. }
- \label{fig:GraficaEN} 
-\end{center} 
-
-EfficientNet
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/MNgrafico.JPG}
-\captionof{figure}{Gráfica de precisión en cada epoca del modelo EfficientNet.}
- \label{fig:GraficaMN} 
-\end{center} 
 
 
 \subsection{Resultados}
 
-Una vez entrenados los modelos se realizaron las pruebas de los modelos EfficientNet y MobileNet para ojos cerrado y abiertos.
-Se obtuvieron los siguientes resultados:
-
- MobileNet
-
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/ojo_cerradoEN.JPG}
-\captionof{figure}{Predicción 1 para del modelo MobileNet. }
- \label{fig:Prueba1} 
-\end{center} 
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/ojo_abiertoEN.JPG}
-\captionof{figure}{Predicción 2 para del modelo MobileNet. }
- \label{fig:Prueb2} 
-\end{center} 
-
-
-EfficientNet
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/ojo_cerradoMN.JPG}
-\captionof{figure}{Predicción 1 para del modelo EfficientNet.}
- \label{fig:Prueba3} 
-\end{center} 
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/ojo_abiertoMN.JPG}
-\captionof{figure}{Predicción 2 para del modelo EfficientNet.}
- \label{fig:Prueba4} 
-\end{center} 
 
 \newpage
 \section{Conclusiones}
 
-Se implementó una página de Login utilizando los servicios de AWS Amplify y Cognito, lo que permite la autenticación y registro de usuarios en la aplicación. También se han definido rutas protegidas para garantizar que solo los usuarios autenticados puedan acceder a ciertas secciones de la aplicación. Además, se ha utilizado DynamoDB para almacenar los datos de la aplicación y se ha creado una API sin servidor de GraphQL utilizando AWS AppSync para simplificar el desarrollo de la aplicación. Los modelos MobileNet y EfficientNet han sido investigados y propuestos como base para la clasificación de imágenes de ojos abiertos y cerrados. Aunque se han realizado pruebas con los modelos MobileNet y EfficientNet para la clasificación de imágenes de ojos abiertos y cerrados, se necesita seguir trabajando en la mejora del sistema y la realización de pruebas adicionales para mejorar su eficiencia y precisión. Es posible que el sistema aún presente problemas de sobreajuste o sesgo, lo que puede afectar su capacidad para generalizar a nuevos datos. El proyecto ha logrado implementar una aplicación escalable utilizando los servicios de AWS, pero se requiere seguir trabajando en la optimización y evaluación de los modelos de aprendizaje automático para mejorar la eficiencia y precisión del sistema.
+
 
 
 \newpage
@@ -684,13 +475,14 @@ Se implementó una página de Login utilizando los servicios de AWS Amplify y Cogn
 
 \bibitem{cognito} \emph{AWS | Gestión de identidades y autenticación de usuario en la nube}, Amazon Web Services, Inc. https://aws.amazon.com/es/cognito/ (accedido el 8 de marzo de 2023).
 
-\bibitem{tff} TensorFlow. (2021). tf.keras.applications.mobilenet. TensorFlow API documentation. [Online]. Disponible en: https://www.tensorflow.org/api\_docs/python/tf/keras/applications/mobilenet [Accedido el 13 de marzo de 2023].
 
-\bibitem{keras} Keras. (2021). Keras Applications. [Online]. Disponible en: https://keras.io/api/applications/ [Accedido el 13 de marzo de 2023].
 
-\bibitem{TLe}M. Arroyo, "¿Qué es el Transfer Learning?," Data Scientist, 2019. [Online]. Available: \url{ https://datascientest.com/es/que-es-el-transfer-learning#:~:text=%E2%80%9CEl%20Transfer%20Learning%2C%20o%20aprendizaje,el%20crecimiento%20del%20Deep%20Learning. }[Accessed: 13-Mar-2023].
 
-\bibitem{dataset} Marek Ruzicka Lab. (s.f.). Eye Dataset. [Online]. Disponible en: http://mrl.cs.vsb.cz/eyedataset/ [Accedido el 13 de marzo de 2023].
+
+
+\bibitem{Nvidia} NVIDIA, "Get Started with the Jetson Nano Developer Kit", NVIDIA Developer, 2019. [Online]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro. [Accedido: Abril 02 2023].
+
+\bibitem{sdimage} Nvidia Developer, "Get Started with Jetson Nano Devkit," Nvidia Developer. [En línea]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#write. [Accedido: 2 de abril de 2023].
 
 
 \end{thebibliography}
