@@ -217,24 +217,36 @@ Si intentamos ingresar a las paginas de Conductores, Incidencias o Ubicacion, no
 \section{Investigación de la documentación del módulo 3G/4G LTE-Base Hat} \label{base_hat}
 
 \subsection{Objetivo}
-Crear las rutas mediante las que el cliente realizará las peticiones y tendrá acceso a las operaciones, así como su funcionamiento en cuanto a obtención de datos y comunicación con el resto de la aplicación.
+Familiarizarse con las distintas funciones y comandos, así como el entorno de desarrollo que ofrece el dispositivo Base-Hat
+
 \subsection{Descripción}
 
-Para poder utilizar los servicios de Amazon Amplify, necesitamos dirigirnos al directorio root de nuestro proyecto y ejectutar el siguiente comando:
+Para el presente proyecto, se hará uso del Base-Hat SIM7600G-H 4G para Jetson Nano. 
 
 \begin{center}
-  \includegraphics[scale=0.6]{imagenes/cli}
+  \includegraphics[scale=0.6]{imagenes/hat}
 \captionof{figure}{Instalación Amplify CLI}
- \label{fig:MongoA} 
+ \label{fig:hat} 
 \end{center} 
 
-Posteriormente, se necesita especificar la región en la cual queremos alojar nuestra aplicación web:
+En primer lugar, utilizando la terminal del sistema operativo Ubuntu, se ingresan los siguientes comandos:
 
 \begin{center}
-  \includegraphics[scale=0.6]{imagenes/region}
-\captionof{figure}{Configuración del proyecto}
- \label{fig:MongoA} 
+  \includegraphics[scale=0.6]{imagenes/libraries}
+\captionof{figure}{Instalación de librerías}
+ \label{fig:libraries} 
 \end{center} 
+
+Los comandos ingresados en la figura \ref{fig:libraries} se encargan de instalar todas las librarías y el software necesario para poder comenzar a utilizar la red LTE mediante el módulo SIM7600G-H. Además también se crea un directorio que contendrá la configuración de usuario así como un cuenta enlazada al módulo.
+
+Posteriormente, probamos que el puerto GPIO de nuestra Jetson Nano esté funcionando con los siguientes comandos:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/gpio}
+\captionof{figure}{Instalación de librerías}
+ \label{fig:gpio} 
+\end{center}
+
 
 
 Utilizando un editor de código, se necesita especificar que estará utilizando el \emph{SDK} de Amazon Amplify:
@@ -264,23 +276,7 @@ Para agregar una api, se necesita ejecutar el siguiente comando desde el directo
  \label{fig:MongoA} 
 \end{center} 
 
-La consola de AWS Amplify requerirá introducir parámetros con los cuales serán construida nuestra API, para el presente proyecto se estará utilizando una arquitectura mediante GraphQL, por lo cual seleccionaremos dicha opción.
 
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/graphql}
-\captionof{figure}{Configuración de parámetros de GraphQL}
- \label{fig:MongoA} 
-\end{center} 
-
-Antes de poder publicar nuestra API en AWS Amplify, se necesita definir el Schema con el cuál se hará el manejo de datos. A contiuación se muestran dichos schemas:
-
-\begin{center}
-  \includegraphics[scale=0.55]{imagenes/schema}
-\captionof{figure}{Definició de Schemas para el manejo de datos}
- \label{fig:MongoA} 
-\end{center} 
-
-Finalmente, ejecutaremos el comando \emph{amplify push}, el cuál publicará la API hacía AWS amplify, generando el endpoint correspondiente a dicha API
 
 
 	
@@ -327,23 +323,49 @@ Ingresamos el nombre de nuestro espacio de almacenamiento:
   \includegraphics[scale=0.55]{imagenes/name}
 \captionof{figure}{Generación de Endpoint de GraphQL}
  \label{fig:MongoA} 
-\end{center} 
+\end{center}
 
+Después, se necesita establecer cuantos usuarios, así como cuales podrán acceder a dicho servicio:
 
-
- 
-\subsection{Resultados}
-
-Una vez dentro, ingresamos a la sección del servicio de DynamoDB
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/rules}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
 
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/tables}
+  \includegraphics[scale=0.55]{imagenes/rulesauth}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/guestrules}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/push}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+
+
+\subsection{Resultados}
+
+Al ingresar a la consola de servicios de AWS, en la sección de buckets de S3, se puede observar que se encuentra el bucket recién creado llamado \emph{videos175126-dev}.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/buckets}
 \captionof{figure}{Tablas generadas mediante los schemas definidos}
  \label{fig:cognito} 
 \end{center} 
 
-Como se puede observar, gracias a los pasos realizados en la sección \ref{Backend}, DynamoDB crea automáticamente las tablas creadas en base a los schemas definidos previamente.
+
 
 \newpage
 \section{Creación de los servicios backend}
@@ -351,10 +373,12 @@ Como se puede observar, gracias a los pasos realizados en la sección \ref{Backen
 
 
 \subsection{Objetivo}
-Realizar la conexión de NodeJs con la base de datos MongoDb.
+Desarrollar los servicios que constituyen las funciones de la API, tales como obtención, creación y eliminación. Además, crear de los servicios que llevarán a cabo las funciones internas en la plataforma.
 
 \subsection{Descripción}
-Para realizar la conexión y la integración de los servicios de DynamoDB hacía nuestra API, se hará uso de AppSync. Las API de GraphQL creadas con AWS AppSync brindan a los desarrolladores frontend la capacidad de consultar varias bases de datos, microservicios y API desde un único punto de conexión de GraphQL. 
+Al estar trabajando con GraphQL dentro del proyecto, la manera en que se podrán realizar las operaciones \emph{CRUD - (Create, Read, Update, Delete)}, será mediante funciones JSON.
+
+Para comprobar que la API permite dichas operaciones, se debe ingresar a la consola de AWS y dirigirse a la sección de AWS AppSync
 
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/appsync}
