@@ -301,10 +301,34 @@ Como resultado, tenemos el endpoint de nuestro modelo de GraphQL y nuestra API K
 \section{Enlace de Amazon S3 con el sistema backend}
 
 \subsection{Objetivo}
-Crear la aplicación web a desarrollar e implementar el sistema de diseño de manera local
+Configurar e implementar la comunicación entre el sistema de alojamiento Amazon S3 y el sistema backend
 
 
 \subsection{Descripción}
+Utilizando un editor de código, y desde el directorio raíz de la aplicación, se deberá introducir el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/addstorage}
+\captionof{figure}{Configuración de servicio de almacenamiento S3}
+ \label{fig:addstorage} 
+\end{center} 
+
+Posteriormente, se requiere especificar que tipo de servicio de almacenamiento se integrará a la aplicación (multimedia o base de datos NoSQL). Para el presente proyecto, se utilizará el almacenamiento de contenido multimedia, por lo tanto, se seleccionará dicha opción.
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/content}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
+Ingresamos el nombre de nuestro espacio de almacenamiento:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/name}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
 
 
  
