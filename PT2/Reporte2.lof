@@ -8,20 +8,30 @@
 \contentsline {figure}{\numberline {7}{\ignorespaces P\'agina de Login}}{7}{figure.7}%
 \contentsline {figure}{\numberline {8}{\ignorespaces Instalaci\'on Amplify CLI}}{8}{figure.8}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Instalaci\'on de librer\IeC {\'\i }as}}{8}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Implementaci\'on del SDK de Amplify}}{9}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Creaci\'on de aplicaci\'on de Express}}{9}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Amplify add api}}{9}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Configuraci\'on de par\'ametros de GraphQL}}{9}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Definici\'o de Schemas para el manejo de datos}}{10}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{11}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Configuraci\'on de servicio de almacenamiento S3}}{12}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{12}{figure.17}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Instalaci\'on de librer\IeC {\'\i }as}}{9}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Implementaci\'on del SDK de Amplify}}{9}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Creaci\'on de aplicaci\'on de Express}}{9}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Amplify add api}}{10}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{10}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Configuraci\'on de servicio de almacenamiento S3}}{11}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{11}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{11}{figure.17}%
 \contentsline {figure}{\numberline {18}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{12}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{13}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{13}{figure.20}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{12}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{12}{figure.20}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{13}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{14}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Tablas generadas mediante los schemas definidos}}{14}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Funcionamiento de Appsync}}{15}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Generaci\'on de endpoint de GraphQL}}{16}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Funcionamiento de Amazon Cognito}}{18}{figure.26}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Tablas generadas mediante los schemas definidos}}{13}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Funci\'on getConductor}}{14}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Funci\'on listConductors}}{15}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Funci\'on getIncidencia}}{15}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Funci\'on listIncidencias}}{16}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Funci\'on createConductor}}{16}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Funci\'on updateConductor}}{17}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Funci\'on deleteConductor}}{17}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Funci\'on createIncidencia}}{18}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Funci\'on oncreateIncidencia}}{18}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Consola de AWS}}{19}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Funcionamiento de Appsync}}{19}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Crear Conductor}}{20}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Resultado}}{20}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Funcionamiento de Amazon Cognito}}{22}{figure.36}%

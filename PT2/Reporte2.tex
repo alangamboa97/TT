@@ -376,27 +376,140 @@ Al ingresar a la consola de servicios de AWS, en la sección de buckets de S3, se
 Desarrollar los servicios que constituyen las funciones de la API, tales como obtención, creación y eliminación. Además, crear de los servicios que llevarán a cabo las funciones internas en la plataforma.
 
 \subsection{Descripción}
-Al estar trabajando con GraphQL dentro del proyecto, la manera en que se podrán realizar las operaciones \emph{CRUD - (Create, Read, Update, Delete)}, será mediante funciones JSON.
 
-Para comprobar que la API permite dichas operaciones, se debe ingresar a la consola de AWS y dirigirse a la sección de AWS AppSync
+GraphQL trabaja con 3 tipos de archivos:
+
+\begin{itemize}
+\item \emph{Queries:} Este archivo contiene las funciones que permitirán acceder a los datos.
+
+\item \emph{Mutations:} En este archivo se encuentran todas las funciones que permitirán realizar el manejo de datos (actualizar, eliminar, agregar)
+
+\item \emph{Subscriptions:} Las \emph{subscriptions} en GraphQL son funciones de consulta especiales, que se envían a travez de un punto de conexión websocket. Permiten realizar cierta operación cada vez que se ejecuta una acción en el backend.
+\end{itemize}
+Para comenzar con el archivo de \emph{Queries}se tienen las siguientes funciones:
 
 \begin{center}
-  \includegraphics[scale=0.4]{imagenes/appsync}
+  \includegraphics[scale=0.5]{imagenes/getconductor}
+\captionof{figure}{Función getConductor}
+ \label{fig:getConductor} 
+\end{center}
+
+La función de la figura \ref{getConductor}, obtiene los datos de un solo Conductor.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/listconductors}
+\captionof{figure}{Función listConductors}
+ \label{fig:listConductors} 
+\end{center}
+
+La función de la figura \ref{fig:listConductors} obtiene todos los datos de todos los conductores almacenados en la base de datos.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/getincidencia}
+\captionof{figure}{Función getIncidencia}
+ \label{fig:getIncidencia} 
+\end{center}
+
+La función de la figura \ref{fig:getIncidencia} obtiene los datos de una sola Incidencia.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/listIncidencias}
+\captionof{figure}{Función listIncidencias}
+ \label{fig:listIncidencias} 
+\end{center}
+
+La función de la figura \ref{fig:listIncidencias} obtiene los datos de todas las incidencias de almacenadas en la base de datos.
+
+En cuanto al archivo de \emph{Mutations} se tienen las siguientes funciones:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/createconductor}
+\captionof{figure}{Función createConductor}
+ \label{fig:createConductor} 
+\end{center}
+
+La función de la figura \ref{fig:createConductor} se encarga de crear el registro de un conductor en la base de datos.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/updateConductor}
+\captionof{figure}{Función updateConductor}
+ \label{fig:updateConductor} 
+\end{center}
+
+La función de la figura \ref{fig:updateConductor} se encarga de modificar datos del registro de un conductor.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/deleteconductor}
+\captionof{figure}{Función deleteConductor}
+ \label{fig:deleteConductor} 
+\end{center}
+
+La función de la figura \ref{fig:deleteConductor} se encarga de eliminar un conductor de la base de datos.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/createIncidencia}
+\captionof{figure}{Función createIncidencia}
+ \label{fig:createIncidencia} 
+\end{center}
+
+La función de la figura \ref{fig:createIncidencia} se encarga de crear una Incidencia en la base de datos.
+
+Para el archivo de \emph{subscriptions} se tienen la siguiente función:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/oncreateIncidencia}
+\captionof{figure}{Función oncreateIncidencia}
+ \label{fig:oncreateIncidencia} 
+\end{center}	
+
+La función de la figura \ref{fig:oncreateIncidencia} se encarga de realizar una consulta cada vez que una Incidencia nueva es dada de alta en la base de datos.
+
+
+
+Al estar trabajando con GraphQL dentro del proyecto, la manera en que se podrán realizar las operaciones \emph{CRUD - (Create, Read, Update, Delete)}, será mediante funciones JSON.
+
+Para comprobar que la API permite dichas operaciones, se debe ingresar a la consola de AWS y dirigirse a la sección de AWS AppSync. 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/consola}
+\captionof{figure}{Consola de AWS}
+ \label{fig:awsconsole} 
+\end{center} 
+
+Posteriormente se necesita ingresar a la sección de consultas.
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/funciones}
 \captionof{figure}{Funcionamiento de Appsync}
  \label{fig:MongoA} 
 \end{center} 
 
-AWS AppSync crea las API sin servidor de GraphQL y de publicación o suscripción que simplifican el desarrollo de aplicaciones a través de un único punto de conexión para consultar, actualizar o publicar datos.
+
+AWS permite elegir si realizar un \emph{query}, \emph{mutation}, o \emph{subscription} mediante código JSON
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/crear}
+\captionof{figure}{Crear Conductor}
+ \label{fig:crearConductor} 
+\end{center} 
+
+En la figura \ref{fig:crearConductor} se puede apreciar una sentencia JSON que permite utilizar las funciones previamente creadas para dar de alta un conductor.
+
+
 
 \subsection{Resultados}
 
-Después de haber realizado los pasos de la sección \ref{Backend}, si ejecutamos el comando \emph{amplify status}, la consola de Amplify nos retornara el endpoint de GraphQL junto con AppSync correspondiente, el cuál se utilizará para realizar todas las operaciones con respecto al almacenamiento de datos
-
+Como resultado tenemos un log que nos muestra la entrada creada
 \begin{center}
-  \includegraphics[scale=0.55]{imagenes/appsyncendpoint}
-\captionof{figure}{Generación de endpoint de GraphQL}
- \label{fig:MongoA} 
+  \includegraphics[scale=0.4]{imagenes/log}
+\captionof{figure}{Resultado}
+ \label{fig:crearConductor} 
 \end{center} 
+
 
 
 \newpage
