@@ -95,7 +95,7 @@ Dr. Rodolfo Vera Amaro\\
 
 \vfill
 
-13 de Marzo 2023
+21 de Abril 2023
 
 \end{center}
 
@@ -112,102 +112,74 @@ Dr. Rodolfo Vera Amaro\\
 \section{Maquetación web}
 
 \subsection{Objetivo}
-Definir e implementar las rutas que tendrá la aplicación, así como si serán públicas o privadas y la información que se desplegará en cada una de las mismas.
+Crear la aplicación web e implementar el sistema de diseño de manera local.
 
 
 
 
 \subsection{Descripción}
 
-\textbf{Rutas públicas vs rutas protegidas}
+\textbf{ReactJs}
 
-Cuando se habla de una ruta protegida en React, se referiere a programar un bloqueo en ciertas rutas a la cual se le restringe el acceso al usuario. Esto comunmente se realiza para la validación de inicio de sesión de usuarios. Sí el usuario no tiene una sesión iniciada, no podrá acceder a las rutas protegidas de la aplicación. Por otro lado, las rutas públicas son todas aquellas las cuales no requieren contar con una sesión iniciada, y pueden ser accesadas por cualquier tipo de usuario\cite{dom}.
+Para el desarrollo del front-end del presente proyecto, se hará uso de la librería de diseño de ReactJs. ReactJs facilia la creación de componentes reutilizables e interactivos para las interfaces de usuario.
 
+Los componentes que darán lugar a las vistas del presente proyecto son los siguientes:
 
-Como primer paso, se necesita crear un proyecto de React utilizando el siguiente comando:
+\begin{itemize}
 
+\item Layout.jsx: Este componente será la vista principal de la Aplicación Web. Se trata de un diseño tipo \emph{dashboard} que contendrá una sección principal que contendrá etiquetas para poder ingresar a las diferentes vistas de la aplicación. Además estará compuesta también de una sección secundaría que mostrará el contenido de dichas vistas.
 
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/create}
-\captionof{figure}{Creación proyecto de react}
- \label{fig:MongoA} 
-\end{center} 
+\item Incidencias.jsx: Este componente se encargará de mostrar todas las incidencias registradas en la base de datos. Las incidencias serán desplegadas en forma de lista.
 
 
-Posteriomente, se realiza la instalación del moudelo \emph{React Router Dom} utilizando el siguiente comando:
+\item Incidencias.jsx: Este componente de mostrar un reporte de incidencia a detalle. Contendrá una ventana que permitirá ver el video del momento de la incidencia registrada. Así como los datos de la fecha y hora. Además de botones para poder confirmar o rechazar la incidencia. Finalmente contendrá el nombre del conductor además de una opción para poder consultar la ubicación en tiempo real del conductor.
 
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/router}
-\captionof{figure}{Instalación React Router DOM}
- \label{fig:MongoA} 
-\end{center} 
+\item Ubicación.jsx: Este componente mostrará la ubicación en tiempo real del conductor con ayuda del servicio de diseño de mapas Leaflet.
 
-Utilizando la librería \emph{useAuthenticator} ofrecida por el paquete de React Dom, crearemos un archivo de nombre \emph{RequireAuth.js} el cuál contendrá una función la cual se encargará de validar si existe una sesión iniciada previamente.
+\item Conductores.jsx: Este componente mostrará todos los conductores registrados en la base de datos en forma de lista. 
 
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/auth}
-\captionof{figure}{Función RequireAuth}
- \label{fig:auth} 
-\end{center} 
+\end{itemize}
 
-Posteriormente, se necesita contar con una página de Login, la cuál permitirá validar que se encuentre una sesión inciada por parte del usuario, para así poder acceder a las rutas protegidas.
-
-\begin{center}
-  \includegraphics[scale=0.6]{imagenes/loginjs}
-\captionof{figure}{Componente Login}
- \label{fig:loginjs} 
-\end{center} 
-
-
-Para indicar a React, que se desea implementar una ruta protegida, se necesita ir al componente de dicha ruta e ingresar el siguiente código:
-
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/homejs}
-\captionof{figure}{Ruta protegida del componente Home}
- \label{fig:homejs} 
-\end{center} 
-
-En dicho componente, se hace uso de las librerías \emph{useAuthenticator} y \emph{Authenticator} las cuales son ofrecidas por los servicios de Amazon Amplify. Se tendrá que hacer esto para todos los componentes que deseemos mantener como rutas protegidas.
-
-
-Finalmente, dentro de nuestro componente \textbf{App.js}, crearemos una función que contendrá el directorio de rutas tanto públicas como protegidas:
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/routesjs}
-\captionof{figure}{Directorio de rutas}
- \label{fig:routesjs} 
-\end{center} 
-
-Las rutas protedigas, estarán dentro de las etiquetas \textbf{<RequireAuth></RequireAuth>}, mientras que las públicas, irán dentro de las etiquetas \textbf{<Route></Route>}.
 
 
 \subsection{Resultados}
 
-Como resultado de todo lo anterior, tendrémos una página de Login que utilizando los servicios de AWS Amplify y Cognito, permitirá iniciar sesión así como registrar a nuevos usuarios.
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/loginpage}
-\captionof{figure}{Página de Login}
- \label{fig:loginpage} 
-\end{center} 
-
-Si intentamos ingresar a las paginas de Conductores, Incidencias o Ubicacion, nos redigirá a la página de Login, debido a que estas páginas fueron definidas como rutas protegidas. Por lo tanto el usuario debe haber inciado sesión para poder acceder a las mismas.
-
+De acuerdo con los componentes explicados anteriormente, las vistas que contendrá la aplicación web son las siguientes:
 
 \begin{itemize}
-\item \textbf{Path:} "/\\ \textbf{Descripción:} En esta dirección se encontará la el formulario para poder iniciar sesión o registrarse
 
-\item \textbf{Path:} "/home \\  \textbf{Descripción:} Esta dirección será la página principal de la aplicación dónde se mostrarán las incidencias más recientes así como una lista de todos los conductores
+\item Página Principal
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/principal}
+\captionof{figure}{Página Principal - Layout.jsx}
+ \label{fig:vista_principal} 
+\end{center} 
 
-\item \textbf{Path:} "/conductor/\\ \textbf{Descripción:} Esta dirección mostrará el perfil del conductor de id correspondiente
+\item Reporte de Incidencia
+	
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/incidencia}
+\captionof{figure}{Vista Reporte Incidencia Incidencia - Incidencia.jsx}
+ \label{fig:vista_incidencia} 
+\end{center} 
 
-\item \textbf{Path:} "/detalle\textunderscore incidencia \\ \textbf{Descripción:} Esta dirección mostrará cada incidencia mostrando detalles como hora, fecha, coordenadas
+\item Ubicación
 
-\item \textbf{Path:}  "/conductor/id/ubicacion \\ \textbf{Descripción:} En esta vista se mostrará la ubicación en tiempo real de cada conductor
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ubicacion}
+\captionof{figure}{Vista Ubicacion}
+ \label{fig:vista_ubicacion} 
+\end{center} 
+
+\item Conductores
+
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/conductores}
+\captionof{figure}{Vista Conductores - Conductores.jsx}
+ \label{fig:vista_conductores} 
+\end{center} 
 
 
-\item \textbf{Path:} "/conductor/id/incidencias \\ \textbf{Descripción:} En esta vista se mostrará todas las incidencias registradas por cada conductor
 
 \end{itemize}
 
@@ -225,7 +197,7 @@ Para el presente proyecto, se hará uso del Base-Hat SIM7600G-H 4G para Jetson Na
 
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/hat}
-\captionof{figure}{Instalación Amplify CLI}
+\captionof{figure}{Módulo Base-Hat SIM7600G-H}
  \label{fig:hat} 
 \end{center} 
 
@@ -247,34 +219,26 @@ Posteriormente, probamos que el puerto GPIO de nuestra Jetson Nano esté funciona
  \label{fig:gpio} 
 \end{center}
 
+Después de haber realizado los pasos anteriores, el pin con el nombre NET deberá parpadear constantemente, lo que significa que el módulo está listo para ser utilizado.
 
-
-Utilizando un editor de código, se necesita especificar que estará utilizando el \emph{SDK} de Amazon Amplify:
-
-\begin{center}
-  \includegraphics[scale=0.55]{imagenes/sdk}
-\captionof{figure}{Implementación del SDK de Amplify}
- \label{fig:MongoA} 
-\end{center} 
-
-Posteriormente, declaramos una aplicación de ExpressJs la cuál nos permitirá ejecutar entre otras cosas, peticiones HTTP para la comunicación con la base de datos.
+Para realizar la compunicación LTE, primero se ingresa a la librería minicom utilizando los siguientes comandos:
 
 \begin{center}
-  \includegraphics[scale=0.55]{imagenes/expressjs}
-\captionof{figure}{Creación de aplicación de Express}
- \label{fig:MongoA} 
-\end{center} 
+  \includegraphics[scale=0.6]{imagenes/minicom}
+\captionof{figure}{Minicom}
+ \label{fig:gpio} 
+\end{center}
 
-Finalmente, se necesitan definir las rutas de las APIs que se estarán utilizando en el proyecto, las cuales serán dos, la primera se encargará de la aplicación web, y la segunda de realizar la comunicación con el Módulo Central de Procesamiento.
-
-Para agregar una api, se necesita ejecutar el siguiente comando desde el directorio raíz del proyecto.
-
+Posteriormente, se necesita actualizar los drivers:
 
 \begin{center}
-  \includegraphics[scale=0.55]{imagenes/addapi}
-\captionof{figure}{Amplify add api}
- \label{fig:MongoA} 
-\end{center} 
+  \includegraphics[scale=0.6]{imagenes/drivers}
+\captionof{figure}{Actualización de drivers}
+ \label{fig:gpio} 
+\end{center}
+
+
+
 
 
 
@@ -283,13 +247,6 @@ Para agregar una api, se necesita ejecutar el siguiente comando desde el directo
 
 \subsection{Resultados}
 
-Como resultado, tenemos el endpoint de nuestro modelo de GraphQL y nuestra API Key generada por Amplify
-
-\begin{center}
-  \includegraphics[scale=0.55]{imagenes/endpoints}
-\captionof{figure}{Generación de Endpoint de GraphQL}
- \label{fig:MongoA} 
-\end{center} 
 
 
 \newpage
