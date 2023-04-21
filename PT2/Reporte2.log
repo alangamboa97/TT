@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  21 APR 2023 06:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.6)  21 APR 2023 06:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1009,1486 +1009,154 @@ Underfull \hbox (badness 10000) in paragraph at lines 520--521
 <imagenes/JNmicrosd.jpeg, id=437, 1284.8pt x 963.6pt>
 File: imagenes/JNmicrosd.jpeg Graphic file (type jpg)
 <use imagenes/JNmicrosd.jpeg>
-Package pdftex.def Info: imagenes/JNmicrosd.jpeg  used on input line 610.
+Package pdftex.def Info: imagenes/JNmicrosd.jpeg  used on input line 611.
 (pdftex.def)             Requested size: 385.44298pt x 289.08223pt.
- [23]
+ [23 <./imagenes/JNmicrosd.jpeg>]
 <imagenes/JNconexiones.jpeg, id=442, 1284.8pt x 1272.755pt>
 File: imagenes/JNconexiones.jpeg Graphic file (type jpg)
 <use imagenes/JNconexiones.jpeg>
-Package pdftex.def Info: imagenes/JNconexiones.jpeg  used on input line 616.
+Package pdftex.def Info: imagenes/JNconexiones.jpeg  used on input line 617.
 (pdftex.def)             Requested size: 256.95544pt x 254.5465pt.
 <imagenes/JN.jpeg, id=443, 1606.0pt x 1374.13374pt>
 File: imagenes/JN.jpeg Graphic file (type jpg)
 <use imagenes/JN.jpeg>
-Package pdftex.def Info: imagenes/JN.jpeg  used on input line 622.
+Package pdftex.def Info: imagenes/JN.jpeg  used on input line 623.
 (pdftex.def)             Requested size: 321.19432pt x 274.82188pt.
- [24 <./imagenes/JNmicrosd.jpeg> <./imagenes/JNconexiones.jpeg>]
-<imagenes/librerias.jpeg, id=449, 573.14125pt x 203.76125pt>
+<imagenes/librerias.jpeg, id=444, 573.14125pt x 203.76125pt>
 File: imagenes/librerias.jpeg Graphic file (type jpg)
 <use imagenes/librerias.jpeg>
-Package pdftex.def Info: imagenes/librerias.jpeg  used on input line 628.
+Package pdftex.def Info: imagenes/librerias.jpeg  used on input line 629.
 (pdftex.def)             Requested size: 487.17236pt x 173.19786pt.
-
-Overfull \hbox (16.06306pt too wide) in paragraph at lines 628--629
- [] 
- []
-
+ [24 <./imagenes/JNconexiones.jpeg> <./imagenes/JN.jpeg>]
 <imagenes/pycharm.jpeg, id=450, 1606.0pt x 1003.75pt>
 File: imagenes/pycharm.jpeg Graphic file (type jpg)
 <use imagenes/pycharm.jpeg>
-Package pdftex.def Info: imagenes/pycharm.jpeg  used on input line 634.
-(pdftex.def)             Requested size: 642.38864pt x 401.49289pt.
-
-Overfull \hbox (171.27934pt too wide) in paragraph at lines 634--635
- [] 
- []
-
-[25 <./imagenes/JN.jpeg> <./imagenes/librerias.jpeg>] [26 <./imagenes/pycharm.j
-peg>]
+Package pdftex.def Info: imagenes/pycharm.jpeg  used on input line 635.
+(pdftex.def)             Requested size: 481.80373pt x 301.12732pt.
+ [25 <./imagenes/librerias.jpeg> <./imagenes/pycharm.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 650--651
 
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.653 ...o MobileNetV2 utilizando la función load_
-                                                  model de Keras, y asignó e...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ... la función load_model de Keras, y asignó
-                                                   el modelo a la variable m...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ...gnó el modelo a la variable model. Despué
-                                                  s, se cargó una imagen en ...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ...lo a la variable model. Después, se cargó
-                                                   una imagen en formato JPG...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ...ve/DATASET/pruebas/d utilizando la funció
-                                                  n imread de OpenCV, y asig...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ...ndo la función imread de OpenCV, y asignó
-                                                   la imagen a la variable i...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ...ior procesamiento. Finalmente, se utilizó
-                                                   la función imshow de Matp...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ...amiento. Finalmente, se utilizó la funció
-                                                  n imshow de Matplotlib par...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ...en cargada en una ventana de visualizació
-                                                  n, después de realizar una...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ...a en una ventana de visualización, despué
-                                                  s de realizar una conversi...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ...zación, después de realizar una conversió
-                                                  n de espacio de color de B...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 653.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.653 ...e color de BGR a RGB utilizando la funció
-                                                  n cvtColor de OpenCV para ...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.654 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.654 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (2695.97102pt too wide) in paragraph at lines 653--654
-\OT1/lmr/m/n/12 do lla-ma-do Mo-bi-le-NetV2 uti-li-zan-do la fun-ci^^Son load$[
-]\OML/lmm/m/it/12 odeldeKeras; yasign[]elmodeloalavariablemodel:Despu[]s; secar
-g[]unaimagenenformatoJPGdesdelarutadearchivo=content=drive=MyDrive=DATASET=prue
-bas=dutilizandolafunci[]nimreaddeOpenCV; yasign[]laimagenalavariableimgparasupo
-steriorprocesamiento:Finalmente; seutiliz[]lafunci[]nimshowdeMatplotlibparamost
-rarlaimagencargadaenunaventanadevisualizaci[]n; despu[]sderealizarunaconversi[]
-ndeespaciodecolordeBGRaRGButilizandolafunci[]ncvtColordeOpenCVparaasegurarquela
-imagensemostraracorrectamenteencoloresenlasalida:[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.654 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-<imagenes/RoCNN1.jpeg, id=459, 713.66624pt x 570.13pt>
+<imagenes/RoCNN1.jpeg, id=455, 713.66624pt x 570.13pt>
 File: imagenes/RoCNN1.jpeg Graphic file (type jpg)
 <use imagenes/RoCNN1.jpeg>
-Package pdftex.def Info: imagenes/RoCNN1.jpeg  used on input line 656.
+Package pdftex.def Info: imagenes/RoCNN1.jpeg  used on input line 655.
 (pdftex.def)             Requested size: 428.20305pt x 342.08064pt.
-! Missing $ inserted.
-<inserted text> 
-                $
-l.661 ...es fueron asignados a las variables face_
-                                                  cascade y eye_cascade, res...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 661.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.661 ...a a escala de grises utilizando la funció
-                                                  n cvtColor de OpenCV. Post...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 661.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.661 ... en escala de grises utilizando la funció
-                                                  n detectMultiScale de Open...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 661.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.661 ...nción detectMultiScale de OpenCV con pará
-                                                  metros específicos de esca...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 661.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.661 ...ultiScale de OpenCV con parámetros especí
-                                                  ficos de escala, y las coo...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   \begingroup 
-l.661 ...ultiScale de OpenCV con parámetros especí
-                                                  ficos de escala, y las coo...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 661.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 661.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.661 ...n la imagen original utilizando la funció
-                                                  n rectangle de OpenCV. Fin...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 661.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.661 ...ón rectangle de OpenCV. Finalmente mostró
-                                                   la imagen con los cuadros...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 661.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.661 ...lrededor de los ojos utilizando la funció
-                                                  n imshow de Matplotlib.
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.662 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.662 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.662 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (2587.81618pt too wide) in paragraph at lines 661--662
-\OT1/lmr/m/n/12 a las va-ria-bles face$[]\OML/lmm/m/it/12 ascadeyeye[]ascade; r
-espectivamente:Laimagenfueconvertidaaescaladegrisesutilizandolafunci[]ncvtColor
-deOpenCV:Posteriormentesedetectaronlosojosenlaimagenenescaladegrisesutilizandol
-afunci[]ndetectMultiScaledeOpenCVconpar[]metrosespec[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.662 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[27
+[26
 
  <./imagenes/RoCNN1.jpeg>]
-<imagenes/RoCNN2.jpeg, id=466, 898.35625pt x 511.9125pt>
+<imagenes/RoCNN2.jpeg, id=460, 898.35625pt x 511.9125pt>
 File: imagenes/RoCNN2.jpeg Graphic file (type jpg)
 <use imagenes/RoCNN2.jpeg>
-Package pdftex.def Info: imagenes/RoCNN2.jpeg  used on input line 664.
+Package pdftex.def Info: imagenes/RoCNN2.jpeg  used on input line 663.
 (pdftex.def)             Requested size: 539.0179pt x 307.14987pt.
 
-Overfull \hbox (38.5339pt too wide) in paragraph at lines 664--665
+Overfull \hbox (38.5339pt too wide) in paragraph at lines 663--664
  [] 
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.669 ...regiones de interés en las variables roi_
-                                                  gray y roi_color para su p...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.670 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.670 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.670 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-<imagenes/RoCNN3.jpeg, id=467, 742.775pt x 762.85pt>
+<imagenes/RoCNN3.jpeg, id=461, 742.775pt x 762.85pt>
 File: imagenes/RoCNN3.jpeg Graphic file (type jpg)
 <use imagenes/RoCNN3.jpeg>
-Package pdftex.def Info: imagenes/RoCNN3.jpeg  used on input line 675.
+Package pdftex.def Info: imagenes/RoCNN3.jpeg  used on input line 674.
 (pdftex.def)             Requested size: 445.66843pt x 457.71353pt.
-[28 <./imagenes/RoCNN2.jpeg>]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.680 ...interés y almacenada en la variable eyes_
-                                                  roi fue redimensionada a u...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 680.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.680 ...le eyes_roi fue redimensionada a un tamañ
-                                                  o de 224x224. El resultado...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 680.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.680 ...tamaño de 224x224. El resultado se guardó
-                                                   en la variable final_imag...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 680.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.680 ...le final_image. Posteriormente see agregó
-                                                   una dimensión adicional a...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 680.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.680 ...e. Posteriormente see agregó una dimensió
-                                                  n adicional a la imagen re...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 680.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.680 ...nsionada en el eje 0 utilizando la funció
-                                                  n np. expand_dime (). Esto...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 680.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.680 ...ofundo que esperan un lote (batch) de imá
-                                                  genes como entrada. El res...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 680.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.680 ...enes como entrada. El resultado se guardó
-                                                   nuevamente en la variable...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.681 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.681 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (1693.91014pt too wide) in paragraph at lines 680--681
-\OT1/lmr/m/n/12 eyes$[]\OML/lmm/m/it/12 oifueredimensionadaauntama[]ode\OT1/lmr
-/m/n/12 224\OML/lmm/m/it/12 x\OT1/lmr/m/n/12 224\OML/lmm/m/it/12 :Elresultadose
-guard[]enlavariablefinal[]mage:Posteriormenteseeagreg[]unadimensi[]nadicionalal
-aimagenredimensionadaeneleje\OT1/lmr/m/n/12 0\OML/lmm/m/it/12 utilizandolafunci
-[]nnp:expand[]ime\OT1/lmr/m/n/12 ()\OML/lmm/m/it/12 :Estosehizoparaadecuarelfor
-matodeentradarequeridopormuchosmodelosdeaprendizajeprofundoqueesperanunlote\OT1
-/lmr/m/n/12 (\OML/lmm/m/it/12 batch\OT1/lmr/m/n/12 )\OML/lmm/m/it/12 deim[]gene
-scomoentrada:Elresultadoseguard[]nuevamenteenlavariablefinal[]mage:[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.681 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.682 ...e guardó nuevamente en la variable final_
-                                                  image.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.683 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.683 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.683 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.684 ... entrenado. La imagen normalizada "final_
-                                                  image" se utilizó como ent...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 684.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.684 ...agen normalizada "final_image" se utilizó
-                                                   como entrada para el mode...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 684.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.684 ...delo, y se obtuvo una salida de predicció
-                                                  n basada en los datos de l...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.685 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.685 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (503.32355pt too wide) in paragraph at lines 684--685
-\OT1/lmr/m/n/12 lo de apren-di-za-je pro-fun-do pre-via-men-te en-tre-na-do. La
- ima-gen nor-ma-li-za-da "final$[]\OML/lmm/m/it/12 mage\OT1/lmr/m/n/12 "\OML/lm
-m/m/it/12 seutiliz[]comoentradaparaelmodelo; yseobtuvounasalidadepredicci[]nbas
-adaenlosdatosdelaimagenprocesada:[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.685 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[29 <./imagenes/RoCNN3.jpeg>]
-<imagenes/RoCNN4.jpeg, id=476, 567.11874pt x 293.095pt>
+[27 <./imagenes/RoCNN2.jpeg>] [28 <./imagenes/RoCNN3.jpeg>]
+<imagenes/RoCNN4.jpeg, id=470, 567.11874pt x 293.095pt>
 File: imagenes/RoCNN4.jpeg Graphic file (type jpg)
 <use imagenes/RoCNN4.jpeg>
-Package pdftex.def Info: imagenes/RoCNN4.jpeg  used on input line 692.
+Package pdftex.def Info: imagenes/RoCNN4.jpeg  used on input line 691.
 (pdftex.def)             Requested size: 340.27386pt x 175.85834pt.
-<imagenes/ReRoCNN.png, id=477, 1140.26pt x 888.31876pt>
+<imagenes/ReRoCNN.png, id=471, 1140.26pt x 888.31876pt>
 File: imagenes/ReRoCNN.png Graphic file (type png)
 <use imagenes/ReRoCNN.png>
-Package pdftex.def Info: imagenes/ReRoCNN.png  used on input line 704.
+Package pdftex.def Info: imagenes/ReRoCNN.png  used on input line 703.
 (pdftex.def)             Requested size: 342.08064pt x 266.49768pt.
- [30 <./imagenes/RoCNN4.jpeg> <./imagenes/ReRoCNN.png>] [31]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.718 ...ostro que se obtuvo del modelo dlib. get_
-                                                  frontal_face_detector ( )....
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 718.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.718 ...detector ( ). Posteriormente, se descargó
-                                                   el archivo  hape_predicto...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.719 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.719 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (533.09332pt too wide) in paragraph at lines 718--719
+ [29 <./imagenes/RoCNN4.jpeg>] [30 <./imagenes/ReRoCNN.png>]
+Overfull \hbox (22.07036pt too wide) in paragraph at lines 717--718
 \OT1/lmr/m/n/12 tro. Pa-ra ello, se re-qui-ri^^So un de-tec-tor de ros-tro que 
-se ob-tu-vo del mo-de-lo dlib. get$[]\OML/lmm/m/it/12 rontal[]ace[]etector\OT1/
-lmr/m/n/12 ()\OML/lmm/m/it/12 :Posteriormente; sedescarg[]elarchivohape[]redict
-or[]\OT1/lmr/m/n/12 8[]\OML/lmm/m/it/12 ace[]andmarks:datparalospuntosdereferen
-cia:[]$ 
+se ob-tu-vo del mo-de-lo dlib. get[]frontal[]face[]detector().
  []
 
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.719 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.728 face_
-           utils de imutils: Para funciones auxiliares relacionadas con el p...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.729 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.729 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (162.5924pt too wide) in paragraph at lines 722--729
-\OT1/lmr/m/n/12 eu-cli-dia-na en-tre dos pun-tos en un plano. face$[]\OML/lmm/m
-/it/12 tilsdeimutils \OT1/lmr/m/n/12 : \OML/lmm/m/it/12 Parafuncionesauxiliares
-relacionadasconelprocesamientoderostros:[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.729 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.744 top_
-          lip = shape[50:53]: Extrae las coordenadas de los puntos 50 a 52 d...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.745 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.745 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (325.9692pt too wide) in paragraph at lines 744--745
-[]\OT1/lmr/m/n/12 top$[]\OML/lmm/m/it/12 ip \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 
-shape\OT1/lmr/m/n/12 [50 : 53] : \OML/lmm/m/it/12 Extraelascoordenadasdelospunt
-os\OT1/lmr/m/n/12 50\OML/lmm/m/it/12 a\OT1/lmr/m/n/12 52\OML/lmm/m/it/12 delcon
-juntodecoordenadasshape; querepresentanlospuntosenellabiosuperiorizquierdodelac
-ara:[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.745 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.746 top_
-          lip = np. concatenate((top_lip, shape [61 : 64])): Concatena las c...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.747 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.747 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (654.30664pt too wide) in paragraph at lines 746--747
-[]\OT1/lmr/m/n/12 top$[]\OML/lmm/m/it/12 ip \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 
-np:concatenate\OT1/lmr/m/n/12 ((\OML/lmm/m/it/12 top[]ip; shape\OT1/lmr/m/n/12 
-[61 : 64])) : \OML/lmm/m/it/12 Concatenalascoordenadasdelospuntos\OT1/lmr/m/n/1
-2 50\OML/lmm/m/it/12 a\OT1/lmr/m/n/12 52\OML/lmm/m/it/12 conlascoordenadasdelos
-puntos\OT1/lmr/m/n/12 61\OML/lmm/m/it/12 a\OT1/lmr/m/n/12 63\OML/lmm/m/it/12 de
-lconjuntodecoordenadasshape; querepresentanlospuntosenellabiosuperiorderechodel
-acara:[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.747 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.748 low_
-          lip = shape[56:59]: Extrae las coordenadas de los puntos 56 a 58 d...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.749 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.749 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (326.27124pt too wide) in paragraph at lines 748--749
-[]\OT1/lmr/m/n/12 low$[]\OML/lmm/m/it/12 ip \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 
-shape\OT1/lmr/m/n/12 [56 : 59] : \OML/lmm/m/it/12 Extraelascoordenadasdelospunt
-os\OT1/lmr/m/n/12 56\OML/lmm/m/it/12 a\OT1/lmr/m/n/12 58\OML/lmm/m/it/12 delcon
-juntodecoordenadasshape; querepresentanlospuntosenellabioinferiorizquierdodelac
-ara:[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.749 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.750 low_
-          lip = np. concatenate((low_lip, shape[65:68])): Concatena las coor...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.751 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.751 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (656.63159pt too wide) in paragraph at lines 750--751
-[]\OT1/lmr/m/n/12 low$[]\OML/lmm/m/it/12 ip \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 
-np:concatenate\OT1/lmr/m/n/12 ((\OML/lmm/m/it/12 low[]ip; shape\OT1/lmr/m/n/12 
-[65 : 68])) : \OML/lmm/m/it/12 Concatenalascoordenadasdelospuntos\OT1/lmr/m/n/1
-2 56\OML/lmm/m/it/12 a\OT1/lmr/m/n/12 58\OML/lmm/m/it/12 conlascoordenadasdelos
-puntos\OT1/lmr/m/n/12 65\OML/lmm/m/it/12 a\OT1/lmr/m/n/12 67\OML/lmm/m/it/12 de
-lconjuntodecoordenadasshape; querepresentanlospuntosenellabioinferiorderechodel
-acara:[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.751 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.752 top_
-          mean = np. mean(top_lip, axis=0): Calcula el promedio de las coord...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.753 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.753 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (105.25665pt too wide) in paragraph at lines 752--753
-[]\OT1/lmr/m/n/12 top$[]\OML/lmm/m/it/12 ean \OT1/lmr/m/n/12 = \OML/lmm/m/it/12
- np:mean\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 top[]ip; axis \OT1/lmr/m/n/12 = 0) : 
-\OML/lmm/m/it/12 Calculaelpromediodelascoordenadasenellabiosuperiormientrasquel
-ow[]ean \OT1/lmr/m/n/12 =
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.753 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.754 distance = dist. euclidean(top_
-                                     mean,low_mean): Calcula la distancia eu...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 754.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.754 ... de la apertura de la boca o la separació
-                                                  n entre los labios.
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.755 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.755 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (771.26988pt too wide) in paragraph at lines 754--755
-[]\OT1/lmr/m/n/12 distance = dist. euclidean(top$[]\OML/lmm/m/it/12 ean; low[]e
-an\OT1/lmr/m/n/12 ) : \OML/lmm/m/it/12 Calculaladistanciaeuclidianaentrelosdosp
-untosobtenidosanteriormente; querepresentanelcentrodellabiosuperioreinferior:Es
-tadistanciaeslamedidadelaaperturadelabocaolaseparaci[]nentreloslabios:[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.755 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[32
+[31
 
 ]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.779 face_
-           model: Utiliza la función \dlib.get_frontal_face_detector() para ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 779.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.779 face_model: Utiliza la funció
-                                   n \dlib.get_frontal_face_detector() para ...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Undefined control sequence.
-l.779 face_model: Utiliza la función \dlib
-                                          .get_frontal_face_detector() para ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 779.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.779 ...ctor() para obtener un modelo de detecció
-                                                  n de rostros frontal.
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 780.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.780 ..._face_landmarks. dat utilizando la funció
-                                                  n dlib.shape_predictor( ) ...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 780.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.780 ...or( ) para obtener un modelo de predicció
-                                                  n de 68 puntos faciales.
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.781 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.781 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (128.15593pt too wide) in paragraph at lines 779--781
-[]\OT1/lmr/m/n/12 face$[]\OML/lmm/m/it/12 odel \OT1/lmr/m/n/12 : \OML/lmm/m/it/
-12 Utilizalafunci[]n:get[]rontal[]ace[]etector\OT1/lmr/m/n/12 ()\OML/lmm/m/it/1
-2 paraobtenerunmodelodedetecci[]nderostrosfrontal:landmark[]odel \OT1/lmr/m/n/1
-2 :
+Overfull \hbox (54.44234pt too wide) in paragraph at lines 769--770
+[]\OT1/lmr/m/n/12 Captura de vi-deo: Se ini-cia la cap-tu-ra de vi-deo des-de l
+a c^^Sama-ra web uti-li-zan-do la fun-ci^^Son cv2.VideoCapture(0),
  []
 
 
-Overfull \hbox (348.92099pt too wide) in paragraph at lines 779--781
-\OML/lmm/m/it/12 Secargaelmodelopre \OMS/lmsy/m/n/12 ^^@ \OML/lmm/m/it/12 entre
-nadoshape[]redictor[]\OT1/lmr/m/n/12 8[]\OML/lmm/m/it/12 ace[]andmarks:datutili
-zandolafunci[]ndlib:shape[]redictor\OT1/lmr/m/n/12 ()\OML/lmm/m/it/12 paraobten
-erunmodelodepredicci[]nde\OT1/lmr/m/n/12 68\OML/lmm/m/it/12 puntosfaciales:[]$ 
-
+Overfull \hbox (29.77908pt too wide) in paragraph at lines 777--779
+\OT1/lmr/m/n/12 de ros-tros fron-tal. land-mark[]model: Se car-ga el mo-de-lo p
+re-entrenado sha-pe[]predictor[]68[]face[]landmarks.
  []
 
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.781 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Overfull \hbox (10.53394pt too wide) in paragraph at lines 787--787
- []\OT1/lmtt/m/n/12 landmark_model = dlib.shape_predictor('shape_predictor_68_f
-ace_landmarks.dat')[] 
+[32]
+Overfull \hbox (160.24133pt too wide) in paragraph at lines 816--816
+[]\OT1/lmtt/m/n/12 cv2.putText(frame,f'FPS:{fps}',(frame.shape[1]-120,frame.sha
+pe[0]-20),cv2.FONT_HERSHEY_PLAIN,2,(0,200,0),3)[] 
  []
 
 
-Overfull \hbox (189.61603pt too wide) in paragraph at lines 818--818
- []\OT1/lmtt/m/n/12 cv2.putText(frame,f'FPS:{fps}',(frame.shape[1]-120,frame.sh
-ape[0]-20),cv2.FONT_HERSHEY_PLAIN,2,(0,200,0),3)[] 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.820 ...2.cvtColor() y se utiliza el modelo face_
-                                                  model para detectar los ro...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.821 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.821 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (9.76723pt too wide) in paragraph at lines 820--821
+Overfull \hbox (9.76723pt too wide) in paragraph at lines 818--819
 []\OT1/lmr/m/n/12 7. De-tec-ci^^Son del ros-tro: Se con-vier-te ca-da cua-dro a
  es-ca-la de gri-ses uti-li-zan-do la fun-ci^^Son cv2.cvtColor()
  []
 
 
-Overfull \hbox (973.87299pt too wide) in paragraph at lines 820--821
-\OT1/lmr/m/n/12 y se uti-li-za el mo-de-lo face$[]\OML/lmm/m/it/12 odelparadete
-ctarlosrostrosenlaimagen:Luego; paracadarostrodetectadoenlaimagen; sedetectanlo
-slandmarksopuntosfacialesutilizandoelmodelodelandmark[]odelpreviamentedefinido;
- finalemntelospuntosfacialesdetectadosseconviertenenunarregloNumPy:[]$ 
+Overfull \hbox (326.96642pt too wide) in paragraph at lines 854--854
+[]\OT1/lmtt/m/n/12 cv2.putText(frame, f'Limite de apertura superado',(frame.sha
+pe[1]//2 - 170 ,frame.shape[0]//2),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,200),2)[] 
+ []
+
+
+Overfull \hbox (33.06268pt too wide) in paragraph at lines 856--857
+\OT1/lmr/m/n/12 te-cla q pa-ra fi-na-li-zar. cam.release(): Li-be-ra los re-cur
+-sos del ob-je-to de la c^^Sama-ra y cv2.destroyAllWindows()
  []
 
 [33]
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.821 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.842 ...cia del labio: Se llama a la función cal_
-                                                  yawn( ) para calcular la d...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.843 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.843 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (239.83765pt too wide) in paragraph at lines 842--843
-[]\OT1/lmr/m/n/12 9. C^^Salcu-lo de la dis-tan-cia del la-bio: Se lla-ma a la f
-un-ci^^Son cal$[]\OML/lmm/m/it/12 awn\OT1/lmr/m/n/12 ()\OML/lmm/m/it/12 paracal
-cularladistanciadellabio; querepresentalaaperturadelabocayseimprime:[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.843 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Undefined control sequence.
-l.850 ...alculada con un umbral predefinido (\yawn
-                                                  _thresh) para determinar s...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.850 ...lculada con un umbral predefinido (\yawn_
-                                                  thresh) para determinar si...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 850.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.850 ...) para determinar si se ha superado el lí
-                                                  mite de apertura de la boc...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   \begingroup 
-l.850 ...) para determinar si se ha superado el lí
-                                                  mite de apertura de la boc...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 850.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 850.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.850 ... límite de apertura de la boca. Si es así
-                                                  , se muestra.
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   \begingroup 
-l.850 ... límite de apertura de la boca. Si es así
-                                                  , se muestra.
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 850.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.851 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.851 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.851 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.851 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (50.56618pt too wide) in paragraph at lines 850--851
-\OT1/lmr/m/n/12 um-bral pre-de-fi-ni-do ($[]\OML/lmm/m/it/12 hresh\OT1/lmr/m/n/
-12 )\OML/lmm/m/it/12 paradeterminarsisehasuperadoell[]$ 
- []
-
-! Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.851 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Overfull \hbox (356.34111pt too wide) in paragraph at lines 856--856
- []\OT1/lmtt/m/n/12 cv2.putText(frame, f'Limite de apertura superado',(frame.sh
-ape[1]//2 - 170 ,frame.shape[0]//2),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,200),2)[] 
- []
-
-! Undefined control sequence.
-l.858 ...os recursos del objeto de la cámara y \cv
-                                                  2.destroyAllWindows(): cie...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[34]
-<imagenes/codigomor1.jpeg, id=502, 1606.0pt x 1015.795pt>
+<imagenes/codigomor1.jpeg, id=494, 1606.0pt x 1015.795pt>
 File: imagenes/codigomor1.jpeg Graphic file (type jpg)
 <use imagenes/codigomor1.jpeg>
-Package pdftex.def Info: imagenes/codigomor1.jpeg  used on input line 874.
-(pdftex.def)             Requested size: 642.38864pt x 406.3108pt.
-
-Overfull \hbox (141.90465pt too wide) in paragraph at lines 874--875
- [] 
- []
-
-<imagenes/codigomor2.jpeg, id=503, 1606.0pt x 1015.795pt>
+Package pdftex.def Info: imagenes/codigomor1.jpeg  used on input line 872.
+(pdftex.def)             Requested size: 481.80373pt x 304.74084pt.
+<imagenes/codigomor2.jpeg, id=495, 1606.0pt x 1015.795pt>
 File: imagenes/codigomor2.jpeg Graphic file (type jpg)
 <use imagenes/codigomor2.jpeg>
-Package pdftex.def Info: imagenes/codigomor2.jpeg  used on input line 880.
-(pdftex.def)             Requested size: 642.38864pt x 406.3108pt.
-
-Overfull \hbox (141.90465pt too wide) in paragraph at lines 880--881
- [] 
- []
-
-[35 <./imagenes/codigomor1.jpeg>]
-<imagenes/PruebaMOR1.jpeg, id=508, 642.4pt x 506.89375pt>
+Package pdftex.def Info: imagenes/codigomor2.jpeg  used on input line 878.
+(pdftex.def)             Requested size: 481.80373pt x 304.74084pt.
+ [34 <./imagenes/codigomor1.jpeg>]
+<imagenes/PruebaMOR1.jpeg, id=500, 642.4pt x 506.89375pt>
 File: imagenes/PruebaMOR1.jpeg Graphic file (type jpg)
 <use imagenes/PruebaMOR1.jpeg>
-Package pdftex.def Info: imagenes/PruebaMOR1.jpeg  used on input line 886.
+Package pdftex.def Info: imagenes/PruebaMOR1.jpeg  used on input line 884.
 (pdftex.def)             Requested size: 256.95544pt x 202.7539pt.
- [36 <./imagenes/codigomor2.jpeg> <./imagenes/PruebaMOR1.jpeg>]
-<imagenes/PruebaMOR2.jpeg, id=514, 1606.0pt x 1003.75pt>
+<imagenes/PruebaMOR2.jpeg, id=501, 1606.0pt x 1003.75pt>
 File: imagenes/PruebaMOR2.jpeg Graphic file (type jpg)
 <use imagenes/PruebaMOR2.jpeg>
-Package pdftex.def Info: imagenes/PruebaMOR2.jpeg  used on input line 892.
+Package pdftex.def Info: imagenes/PruebaMOR2.jpeg  used on input line 890.
 (pdftex.def)             Requested size: 481.80373pt x 301.12732pt.
-<imagenes/PruebaMOR3.jpeg, id=515, 1606.0pt x 1003.75pt>
+ [35 <./imagenes/codigomor2.jpeg> <./imagenes/PruebaMOR1.jpeg>]
+<imagenes/PruebaMOR3.jpeg, id=506, 1606.0pt x 1003.75pt>
 File: imagenes/PruebaMOR3.jpeg Graphic file (type jpg)
 <use imagenes/PruebaMOR3.jpeg>
-Package pdftex.def Info: imagenes/PruebaMOR3.jpeg  used on input line 898.
+Package pdftex.def Info: imagenes/PruebaMOR3.jpeg  used on input line 896.
 (pdftex.def)             Requested size: 481.80373pt x 301.12732pt.
- [37 <./imagenes/PruebaMOR2.jpeg> <./imagenes/PruebaMOR3.jpeg>] [38]
-Underfull \hbox (badness 3989) in paragraph at lines 935--936
-\OT1/lmr/m/n/12 l^^S^^Pnea]. Dis-po-ni-ble: https://developer.nvidia.com/embedd
-ed/learn/get-started-jetson-
+ [36 <./imagenes/PruebaMOR2.jpeg> <./imagenes/PruebaMOR3.jpeg>] [37]
+Underfull \hbox (badness 2884) in paragraph at lines 925--926
+[]\OT1/lmr/m/n/12 Waveshare Elec-tro-nics, \OT1/lmr/m/it/12 SIM7600G-H 4G for J
+etson Nano - Wa-vesha-re Wi-ki\OT1/lmr/m/n/12 , Wa-
  []
 
 
-! LaTeX Error: \begin{itemize} on input line 537 ended by \end{document}.
+Underfull \hbox (badness 4739) in paragraph at lines 933--934
+\OT1/lmr/m/n/12 ni-ble: https://developer.nvidia.com/embedded/learn/get-started
+-jetson-nano-devkit#write.
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.947 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[39] (Reporte2.aux
+[38] (Reporte2.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
@@ -2500,38 +1168,28 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Reporte2.out' has not changed.
 (rerunfilecheck)             Checksum: 2318AA1C7793B3A743ADF55E0F6E25C8;4603.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 537 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 14699 strings out of 478338
- 244323 string characters out of 2835756
+ 14675 strings out of 478338
+ 243987 string characters out of 2835756
  554637 words of memory out of 3000000
- 32688 multiletter control sequences out of 15000+600000
+ 32665 multiletter control sequences out of 15000+600000
  519660 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,13n,77p,875b,780s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-mathsy.enc}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
-ps/lm/lm-rm.enc}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-mathit.enc}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
-ps/lm/lm-rmtt.enc}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
-ps/lm/lm-rmsc.enc}<C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmbx12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmcsc10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmmi12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmmi8.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/lm/lmr10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/font
-s/type1/public/lm/lmr12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/lm/lmr8.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/lm/lmri12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmsy10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Reporte2.pdf (40 pages, 3843338 bytes).
+ 72i,13n,77p,855b,780s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.en
+c}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}
+{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}
+<C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
+b><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10
+.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr1
+0.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+ri12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmtt12.pfb>
+Output written on Reporte2.pdf (39 pages, 3797869 bytes).
 PDF statistics:
- 613 PDF objects out of 1000 (max. 8388607)
- 130 named destinations out of 1000 (max. 500000)
+ 587 PDF objects out of 1000 (max. 8388607)
+ 129 named destinations out of 1000 (max. 500000)
  481 words of extra memory for PDF output out of 10000 (max. 10000000)
 

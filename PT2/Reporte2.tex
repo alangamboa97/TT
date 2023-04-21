@@ -599,6 +599,7 @@ cd /opt/pycharm-2022.2.4/bin
 sh pycharm.sh
 \end{verbatim}
 
+\end{itemize}
 
 
 \subsection{Resultados}
@@ -631,7 +632,7 @@ Se instaló la imagen para la Jetson Nano en la placa de desarrollo, y se realizó
 \end{center} 
 
 \begin{center}
-  \includegraphics[scale=0.4]{imagenes/pycharm.jpeg}
+  \includegraphics[scale=0.3]{imagenes/pycharm.jpeg}
 \captionof{figure}{Instalación del IDE PyCharm.}
  \label{fig:pycharm} 
 \end{center} 
@@ -646,11 +647,9 @@ realizar la detección de rostro y ojos en la Jetson Nano .
 
 \subsection{Descripción}
 
+Para el siguiente desarrollo se utilizó Google Colab desde el kit de desarrollo Jetson Nano, las pruebas y la implementación se realizarón con una imagen como entrada.\\
 
-Para el siguiente desarrollo se utilizo Google Colab desde el kit de desarrollo Jetson Nano, las pruebas y la implementación se realizarón con una imagen como entrada.\\
-
-
-Desde Google Colabse se importaron las bibliotecas TensorFlow, Keras, Matplotlib, OpenCV y NumPy en Python. Luego, se cargó el modelo de aprendizaje profundo previamente entrenado llamado MobileNetV2 utilizando la función load_model de Keras, y asignó el modelo a la variable model. Después, se cargó una imagen en formato JPG desde la ruta de archivo /content/drive/MyDrive/DATASET/pruebas/d utilizando la función imread de OpenCV, y asignó la imagen a la variable img para su posterior procesamiento. Finalmente, se utilizó la función imshow de Matplotlib para mostrar la imagen cargada en una ventana de visualización, después de realizar una conversión de espacio de color de BGR a RGB utilizando la función cvtColor de OpenCV para asegurar que la imagen se mostrara correctamente en colores en la salida.
+Desde Google Colab se se importaron las bibliotecas TensorFlow, Keras, Matplotlib, OpenCV y NumPy en Python. Luego, se cargó el modelo de aprendizaje profundo previamente entrenado llamado MobileNetV2 utilizando la función load model de Keras, y asignó el modelo a la variable model. Después, se cargó una imagen en formato JPG desde la ruta de archivo \/content/drive/MyDrive/DATASET/pruebas/d utilizando la función imread de OpenCV, y asignó la imagen a la variable img para su posterior procesamiento. Finalmente, se utilizó la función imshow de Matplotlib para mostrar la imagen cargada en una ventana de visualización, después de realizar una conversión de espacio de color de BGR a RGB utilizando la función cvtColor de OpenCV para asegurar que la imagen se mostrara correctamente en colores en la salida.
 
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/RoCNN1.jpeg}
@@ -658,7 +657,7 @@ Desde Google Colabse se importaron las bibliotecas TensorFlow, Keras, Matplotlib
  \label{fig:RoCNN1} 
 \end{center} 
 
-Se cargaron dos clasificadores en cascada (Haar cascades) para la detección de rostros y ojos, utilizando las rutas de archivo predefinidas en la biblioteca OpenCV. Los clasificadores fueron asignados a las variables face_cascade y eye_cascade, respectivamente. La imagen fue convertida a escala de grises utilizando la función cvtColor de OpenCV. Posteriormente se detectaron los ojos en la imagen en escala de grises utilizando la función detectMultiScale de OpenCV con parámetros específicos de escala, y las coordenadas y dimensiones de los ojos detectados se guardaron en la variable eyes. Se dibujaron cuadros alrededor de los ojos detectados en la imagen original utilizando la función rectangle de OpenCV. Finalmente mostró la imagen con los cuadros delimitadores alrededor de los ojos utilizando la función imshow de Matplotlib.
+Se cargaron dos clasificadores en cascada (Haar cascades) para la detección de rostros y ojos, utilizando las rutas de archivo predefinidas en la biblioteca OpenCV. Los clasificadores fueron asignados a las variables face\_cascade y eye\_cascade, respectivamente. La imagen fue convertida a escala de grises utilizando la función cvtColor. Posteriormente se detectaron los ojos en la imagen en escala de grises utilizando la función detectMultiScale de OpenCV con parámetros específicos de escala, y las coordenadas y dimensiones de los ojos detectados se guardaron en la variable eyes. Se dibujaron cuadros alrededor de los ojos detectados en la imagen original utilizando la función rectangle. Finalmente mostró la imagen con los cuadros delimitadores alrededor de los ojos utilizando la función imshow de Matplotlib.
 
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/RoCNN2.jpeg}
@@ -666,7 +665,7 @@ Se cargaron dos clasificadores en cascada (Haar cascades) para la detección de r
  \label{fig:RoCNN2} 
 \end{center} 
 
-Se realizó una detección adicional de los ojos dentro de las regiones de interés (ROI) definidas por los cuadros delimitadores, y se guardaron los datos de las regiones de interés en las variables roi_gray y roi_color para su posterior procesamiento.
+Se realizó una detección adicional de los ojos dentro de las regiones de interés (ROI) definidas por los cuadros delimitadores, y se guardaron los datos de las regiones de interés en las variables roi\_gray y roi\_color para su posterior procesamiento.
 
 Se verificó si se detectaron ojos en las regiones de interés, y se mostró la imagen recortada de los ojos utilizando la función imshow de Matplotlib, después de realizar una conversión de espacio de color de BGR a RGB utilizando la función cvtColor de OpenCV para asegurar que la imagen se muestre correctamente en colores en la salida.
 
@@ -677,11 +676,11 @@ Se verificó si se detectaron ojos en las regiones de interés, y se mostró la ima
  \label{fig:RoCNN3} 
 \end{center} 
 
-La imagen de los ojos previamente recortada como región de interés y almacenada en la variable eyes_roi fue redimensionada a un tamaño de 224x224. El resultado se guardó en la variable final_image. Posteriormente see agregó una dimensión adicional a la imagen redimensionada en el eje 0 utilizando la función np. expand_dime (). Esto se hizo para adecuar el formato de entrada requerido por muchos modelos de aprendizaje profundo que esperan un lote (batch) de imágenes como entrada. El resultado se guardó nuevamente en la variable final_image.
+La imagen de los ojos previamente recortada como región de interés y almacenada en la variable eyes\_roi fue redimensionada a un tamaño de 224 x 224. El resultado se guardó en la variable final\_image. Posteriormente see agregó una dimensión adicional a la imagen redimensionada en el eje 0 utilizando la función np. expand\_dime (). Esto se hizo para adecuar el formato de entrada requerido por muchos modelos de aprendizaje profundo que esperan un lote (batch) de imágenes como entrada. El resultado se guardó nuevamente en la variable final\_image.
 
-La imagen se normalizó dividiéndola por 255.0 para asegurar que los valores de los píxeles estén en el rango de 0 a 1. La imagen normalizada se guardó nuevamente en la variable final_image.
+La imagen se normalizó dividiéndola por 255.0 para asegurar que los valores de los píxeles estén en el rango de 0 a 1. La imagen normalizada se guardó nuevamente en la variable final\_image.
 
-Finalmente, se utilizó la función "model.predict()" para realizar una predicción utilizando un modelo de aprendizaje profundo previamente entrenado. La imagen normalizada "final_image" se utilizó como entrada para el modelo, y se obtuvo una salida de predicción basada en los datos de la imagen procesada. 
+Finalmente, se utilizó la función model.predict() para realizar una predicción utilizando un modelo de aprendizaje profundo previamente entrenado. La imagen normalizada final\_image se utilizó como entrada para el modelo, y se obtuvo una salida de predicción basada en los datos de la imagen procesada. 
 
 El modelo previamente entrenado utiliza dos categorías. Si la predicción muestra un valor entre 0.5 y 1, se cataloga como un ojo abierto, mientras que un valor entre 0 y 0.49 se cataloga como un ojo cerrado, ya que la red entrenada utiliza en su última capa la función sigmoide para clasificación binaria, devolviendo valores entre 0 y 1.
 
@@ -715,7 +714,7 @@ Implementar la detección con puntos faciales en el rostro y la metrica mor para 
 
 \subsection{Descripción}
 
-Se realizó un programa en PyCharm en la Jetson Nano para implementar puntos faciales en el rostro. Para ello, se requirió un detector de rostro que se obtuvo del modelo dlib. get_frontal_face_detector ( ). Posteriormente, se descargó el archivo  hape_predictor_68_face_landmarks. dat para los puntos de referencia. 
+Se realizó un programa en PyCharm en la Jetson Nano para implementar puntos faciales en el rostro. Para ello, se requirió un detector de rostro que se obtuvo del modelo dlib. get\_frontal\_face\_detector(). Posteriormente, se descargó el archivo  hape\_predictor\_68\_face\_landmarks. dat para los puntos de referencia. 
 
 El proceso de implemetaión fue el siguiente:
 
@@ -725,7 +724,7 @@ cv2: Para procesamiento de imágenes y video utilizando OpenCV.
 dlib: Para la detección de rostros y puntos faciales.
 time: Para medir el tiempo y calcular el FPS (cuadros por segundo) del video.
 distance de scipy.spatial: Para calcular la distancia euclidiana entre dos puntos en un plano.
-face_utils de imutils: Para funciones auxiliares relacionadas con el procesamiento de rostros.
+face\_utils de imutils: Para funciones auxiliares relacionadas con el procesamiento de rostros.
 
 
 \begin{verbatim}
@@ -738,20 +737,19 @@ from imutils import face_utils
 \end{verbatim}
 
 
-
 Esta función calcula la distancia entre los puntos faciales asignados a la boca, tomando como entrada el arreglo de puntos faciales detectados por dlib. Los puntos faciales se dividen en los puntos correspondientes al labio superior e inferior, se calcula el promedio de coordenadas de cada conjunto de puntos, y finalmente se calcula la distancia euclidiana entre los dos promedios. Esta distancia se utiliza como medida de la apertura de la boca.
 
-top_lip = shape[50:53]: Extrae las coordenadas de los puntos 50 a 52 del conjunto de coordenadas shape, que representan los puntos en el labio superior izquierdo de la cara.
+top\_lip = shape[50:53]: Extrae las coordenadas de los puntos 50 a 52 del conjunto de coordenadas shape, que representan los puntos en el labio superior izquierdo de la cara.
 
-top_lip = np. concatenate((top_lip, shape [61 : 64])): Concatena las coordenadas de los puntos 50 a 52 con las coordenadas de los puntos 61 a 63 del conjunto de coordenadas shape, que representan los puntos en el labio superior derecho de la cara.
+top\_lip = np. concatenate((top\_lip, shape [61 : 64])): Concatena las coordenadas de los puntos 50 a 52 con las coordenadas de los puntos 61 a 63 del conjunto de coordenadas shape, que representan los puntos en el labio superior derecho de la cara.
 
-low_lip = shape[56:59]: Extrae las coordenadas de los puntos 56 a 58 del conjunto de coordenadas shape, que representan los puntos en el labio inferior izquierdo de la cara.
+low\_lip = shape[56:59]: Extrae las coordenadas de los puntos 56 a 58 del conjunto de coordenadas shape, que representan los puntos en el labio inferior izquierdo de la cara.
 
-low_lip = np. concatenate((low_lip, shape[65:68])): Concatena las coordenadas de los puntos 56 a 58 con las coordenadas de los puntos 65 a 67 del conjunto de coordenadas shape, que representan los puntos en el labio inferior derecho de la cara.
+low\_lip = np. concatenate((low\_lip, shape[65:68])): Concatena las coordenadas de los puntos 56 a 58 con las coordenadas de los puntos 65 a 67 del conjunto de coordenadas shape, que representan los puntos en el labio inferior derecho de la cara.
 
-top_mean = np. mean(top_lip, axis=0): Calcula el promedio de las coordenadas en el labio superior mientras que low_mean = np. mean(low_lip, axis=0): Calcula el promedio de las coordenadas en el labio inferior
+top\_mean = np. mean(top\_lip, axis=0): Calcula el promedio de las coordenadas en el labio superior mientras que low\_mean = np. mean(low\_lip, axis=0): Calcula el promedio de las coordenadas en el labio inferior
 
-distance = dist. euclidean(top_mean,low_mean): Calcula la distancia euclidiana entre los dos puntos obtenidos anteriormente, que representan el centro del labio superior e inferior. Esta distancia es la medida de la apertura de la boca o la separación entre los labios.
+distance = dist. euclidean(top\_mean,low\_mean): Calcula la distancia euclidiana entre los dos puntos obtenidos anteriormente, que representan el centro del labio superior e inferior. Esta distancia es la medida de la apertura de la boca o la separación entre los labios.
 
 \begin{verbatim}
 def cal_yawn(shape):
@@ -768,7 +766,7 @@ def cal_yawn(shape):
 	return distance
 \end{verbatim}
 
-Captura de video: Se inicia la captura de video desde la cámara web utilizando la función cv2. VideoCapture(0), donde 0 representa el índice de la cámara web predeterminada en el sistema.
+Captura de video: Se inicia la captura de video desde la cámara web utilizando la función cv2.VideoCapture(0), donde 0 representa el índice de la cámara web predeterminada en el sistema.
 
 \begin{verbatim}
 cam = cv2.VideoCapture(0)
@@ -776,8 +774,8 @@ cam = cv2.VideoCapture(0)
 
 Carga de modelos: Se cargan dos modelos necesarios para el programa:
 
-face_model: Utiliza la función \dlib.get_frontal_face_detector() para obtener un modelo de detección de rostros frontal.
-landmark_model: Se carga el modelo pre-entrenado shape_predictor_68_face_landmarks. dat utilizando la función dlib.shape_predictor( ) para obtener un modelo de predicción de 68 puntos faciales.
+face\_model: Utiliza la función dlib.get\_frontal\_face\_detector() para obtener un modelo de detección de rostros frontal.
+landmark\_model: Se carga el modelo pre-entrenado shape\_predictor\_68\_face\_landmarks. dat utilizando la función dlib.shape\_predictor( ) para obtener un modelo de predicción de 68 puntos faciales.
 
 
 \begin{verbatim}
@@ -802,7 +800,7 @@ while True :
 
 6. Medición del FPS: Se calcula el tiempo transcurrido entre cuadros consecutivos para estimar el FPS del video. 
 
-ctime = time. time(): Obtiene el tiempo actual en segundos utilizando la 
+ctime = time.time(): Obtiene el tiempo actual en segundos utilizando la 
 
 fps = int(1/(ctime-ptime)): Calcula la tasa de cuadros por segundo (FPS)
 
@@ -817,7 +815,7 @@ ctime = time.time()
 	cv2.putText(frame,f'FPS:{fps}',(frame.shape[1]-120,frame.shape[0]-20),cv2.FONT_HERSHEY_PLAIN,2,(0,200,0),3)
 \end{verbatim}
 
-7. Detección del rostro: Se convierte cada cuadro a escala de grises utilizando la función cv2.cvtColor() y se utiliza el modelo face_model para detectar los rostros en la imagen. Luego, para cada rostro detectado en la imagen, se detectan los landmarks o puntos faciales utilizando el modelo de landmark_model previamente definido, finalemnte los  puntos faciales detectados se convierten en un arreglo NumPy.
+7. Detección del rostro: Se convierte cada cuadro a escala de grises utilizando la función cv2.cvtColor() y se utiliza el modelo face\_model para detectar los rostros en la imagen. Luego, para cada rostro detectado en la imagen, se detectan los landmarks o puntos faciales utilizando el modelo de landmark\_model previamente definido, finalemnte los  puntos faciales detectados se convierten en un arreglo NumPy.
 
 \begin{verbatim}
 #Deteccion del rostro
@@ -832,14 +830,14 @@ ctime = time.time()
 
 8. Marcado del labio: Se dibujan contornos alrededor del labio superior e inferior utilizando la función cv2.drawContours() en cada cuadro.
 
-Se utiliza la variable "shape" que contiene los puntos de referencia (landmarks), se extraen los puntos de referencia del labio inferior y superior y Se utiliza la función "cv2.drawContours()" de OpenCV para dibujar los contornos del labio inferior y superior en la imagen o marco (frame). 
+Se utiliza la variable shape que contiene los puntos de referencia (landmarks), se extraen los puntos de referencia del labio inferior y superior y Se utiliza la función cv2.drawContours() de OpenCV para dibujar los contornos del labio inferior y superior en la imagen o marco (frame). 
 
 \begin{verbatim}
 		lip = shape[48:60]
 		cv2.drawContours(frame,[lip],-1,(0, 165, 255),thickness=3)
 \end{verbatim}
 
-9. Cálculo de la distancia del labio: Se llama a la función cal_yawn( ) para calcular la distancia del labio, que representa la apertura de la boca y se imprime.
+9. Cálculo de la distancia del labio: Se llama a la función cal\_yawn( ) para calcular la distancia del labio, que representa la apertura de la boca y se imprime.
 
 \begin{verbatim}
 	#Calcular la distancia del labio
@@ -847,7 +845,7 @@ Se utiliza la variable "shape" que contiene los puntos de referencia (landmarks)
 	   # print(lip_dist)
 \end{verbatim}
 
-10. Detección de límite de apertura de la boca: Se compara la distancia del labio calculada con un umbral predefinido (\yawn_thresh) para determinar si se ha superado el límite de apertura de la boca. Si es así, se muestra.
+10. Detección de límite de apertura de la boca: Se compara la distancia del labio calculada con un umbral predefinido (yawn\_thresh) para determinar si se ha superado el límite de apertura de la boca. Si es así, se muestra.
 
 \begin{verbatim}
 if lip_dist > yawn_thresh :
@@ -855,7 +853,7 @@ if lip_dist > yawn_thresh :
 
 \end{verbatim}
 
-cv2.imshow('Webcam', frame): Muestra el marco de video capturado en una ventana hasta pulsar la tecla q para finalizar. cam.release(): Libera los recursos del objeto de la cámara y cv2. destroyAllWindows() cierra todas las ventanas de visualización creadas por OpenCV.
+cv2.imshow('Webcam', frame): Muestra el marco de video capturado en una ventana hasta pulsar la tecla q para finalizar. cam.release(): Libera los recursos del objeto de la cámara y cv2.destroyAllWindows() cierra todas las ventanas de visualización creadas por OpenCV.
 
 \begin{verbatim}
 #mostramos los cuadros 
@@ -935,10 +933,6 @@ En general, se realizó el desarrollo de aplicaciones utilizando diferentes tecno
 \bibitem{sdimage} Nvidia Developer, "Get Started with Jetson Nano Devkit," Nvidia Developer. [En línea]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#write. [Accedido: 2 de abril de 2023].
 
 \bibitem{JetsonInf}Dusty, N. "Building the Repo - NVIDIA Jetson Inference," GitHub. [Online]. Disponible en: https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md. [Accedido en: 02-abr-2023].
-
-
-
-
 
 
 \end{thebibliography}
