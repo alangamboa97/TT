@@ -488,7 +488,7 @@ Investigar la documentación ofrecida por NVIDIA sobre el uso y entorno de desarr
 \textbf{Instalación en la tarjeta microSD}
 
 
-El Jetson Nano Developer Kit utiliza una tarjeta microSD como dispositivo de arranque y almacenamiento principal. Por tanto, fue necesario instalar una entorno de desarrollo en la propia placa, para lo cual se requirió una tarjeta microSD de un mínimo recomendado de 32 GB de acuerdo a la documentación de Nvidia \cite{Nvidia}.
+El Jetson Nano Developer Kit utiliza una tarjeta microSD como dispositivo de arranque y almacenamiento principal. Por tanto, fue necesario instalar una entorno de desarrollo en la propia placa, para lo cual se requirió una tarjeta microSD de un mínimo recomendado de 32 GB de acuerdo a la documentación de Nvidia \cite{Nvidia}.\\
 
 Como primer paso, se descargó el \emph{Jetson Nano Developer Kit SD Card Image} \cite{sdimage}, la imagen para la Jetson Nano se refiere a un archivo de imagen del sistema operativo específicamente diseñado y optimizado para ser utilizado en la placa de desarrollo NVIDIA Jetson Nano, la imagen generalmente incluye un sistema operativo Linux, controladores de hardware específicos para la Jetson Nano, y una configuración predefinida que permite aprovechar las capacidades de procesamiento de la placa.\\
 
@@ -558,7 +558,7 @@ pip3 install numpy
 \end{verbatim}
 
 
-\item Instalación de imutils: \\
+\item Instalación de imutils: 
 Se utilizó pip para instalar imutils, una biblioteca de Python para manipulación de imágenes y video, con el siguiente comando:
 \begin{verbatim}
 pip3 install imutils
@@ -608,8 +608,8 @@ Se instaló la imagen para la Jetson Nano en la placa de desarrollo, y se realizó
 
 
 \begin{center}
-  \includegraphics[scale=0.3]{imagenes/JNmicrosd}
-\captionof{figure}{Ranura para tarjeta microSD para almacenamiento.jpeg}
+  \includegraphics[scale=0.2]{imagenes/JNmicrosd}
+\captionof{figure}{Ranura para tarjeta microSD para almacenamiento}
  \label{fig:JNmicrosd} 
 \end{center}
 
@@ -649,7 +649,7 @@ realizar la detección de rostro y ojos en la Jetson Nano .
 
 Para el siguiente desarrollo se utilizó Google Colab desde el kit de desarrollo Jetson Nano, las pruebas y la implementación se realizarón con una imagen como entrada.\\
 
-Desde Google Colab se se importaron las bibliotecas TensorFlow, Keras, Matplotlib, OpenCV y NumPy en Python. Luego, se cargó el modelo de aprendizaje profundo previamente entrenado llamado MobileNetV2 utilizando la función load model de Keras, y asignó el modelo a la variable model. Después, se cargó una imagen en formato JPG desde la ruta de archivo \/content/drive/MyDrive/DATASET/pruebas/d utilizando la función imread de OpenCV, y asignó la imagen a la variable img para su posterior procesamiento. Finalmente, se utilizó la función imshow de Matplotlib para mostrar la imagen cargada en una ventana de visualización, después de realizar una conversión de espacio de color de BGR a RGB utilizando la función cvtColor de OpenCV para asegurar que la imagen se mostrara correctamente en colores en la salida.
+Desde Google Colab se importaron las bibliotecas TensorFlow, Keras, Matplotlib, OpenCV y NumPy en Python. Luego, se cargó el modelo de aprendizaje profundo previamente entrenado llamado MobileNetV2 utilizando la función load model de Keras, y se asignó el modelo a la variable model. Después, se cargó una imagen en formato JPG desde la ruta de archivo \/content/drive/MyDrive/DATASET/pruebas/d utilizando la función imread de OpenCV, y asignó la imagen a la variable img para su posterior procesamiento. Finalmente, se utilizó la función imshow de Matplotlib para mostrar la imagen cargada en una ventana de visualización, después de realizar una conversión de espacio de color de BGR a RGB utilizando la función cvtColor de OpenCV para asegurar que la imagen se mostrara correctamente en colores en la salida.
 
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/RoCNN1.jpeg}
@@ -700,7 +700,7 @@ Como se pudo observar en la figura anterior, el valor de la predicción fue de 0.
 Se cargó el modelo previamente entrenado y una imagen de un conductor en la cual se implementó un clasificador en cascada para detectar el rostro y otro para detectar los ojos en la imagen. Los ojos detectados se encerraron con cuadros verdes y se guardó la región de interés (ROI) de los ojos detectados, donde finalmente se realizó una predicción utilizando el modelo previamente entrenado.
 
 \begin{center}
-  \includegraphics[scale=0.3]{imagenes/ReRoCNN.png}
+  \includegraphics[scale=0.4]{imagenes/ReRoCNN.png}
 \captionof{figure}{Implementación para la detección de rostro y ojos aplicando el modelo entredo}
  \label{fig:ReRoCNN} 
 \end{center} 
@@ -717,6 +717,10 @@ Implementar la detección con puntos faciales en el rostro y la metrica mor para 
 Se realizó un programa en PyCharm en la Jetson Nano para implementar puntos faciales en el rostro. Para ello, se requirió un detector de rostro que se obtuvo del modelo dlib. get\_frontal\_face\_detector(). Posteriormente, se descargó el archivo  hape\_predictor\_68\_face\_landmarks. dat para los puntos de referencia. 
 
 El proceso de implemetaión fue el siguiente:
+
+\begin{itemize}
+
+\item
 
 Importación de bibliotecas: Se importan las siguientes bibliotecas necesarias para el programa:
 numpy: Para operaciones numéricas en Python.
@@ -736,8 +740,8 @@ from scipy.spatial import distance as dist
 from imutils import face_utils
 \end{verbatim}
 
-
-Esta función calcula la distancia entre los puntos faciales asignados a la boca, tomando como entrada el arreglo de puntos faciales detectados por dlib. Los puntos faciales se dividen en los puntos correspondientes al labio superior e inferior, se calcula el promedio de coordenadas de cada conjunto de puntos, y finalmente se calcula la distancia euclidiana entre los dos promedios. Esta distancia se utiliza como medida de la apertura de la boca.
+\item
+Se creó la función calcula la distancia entre los puntos faciales asignados a la boca, tomando como entrada el arreglo de puntos faciales detectados por dlib. Los puntos faciales se dividen en los puntos correspondientes al labio superior e inferior, se calcula el promedio de coordenadas de cada conjunto de puntos, y finalmente se calcula la distancia euclidiana entre los dos promedios. Esta distancia se utiliza como medida de la apertura de la boca.
 
 top\_lip = shape[50:53]: Extrae las coordenadas de los puntos 50 a 52 del conjunto de coordenadas shape, que representan los puntos en el labio superior izquierdo de la cara.
 
@@ -765,13 +769,13 @@ def cal_yawn(shape):
 	distance = dist.euclidean(top_mean,low_mean)
 	return distance
 \end{verbatim}
-
+\item
 Captura de video: Se inicia la captura de video desde la cámara web utilizando la función cv2.VideoCapture(0), donde 0 representa el índice de la cámara web predeterminada en el sistema.
 
 \begin{verbatim}
 cam = cv2.VideoCapture(0)
 \end{verbatim}
-
+\item
 Carga de modelos: Se cargan dos modelos necesarios para el programa:
 
 face\_model: Utiliza la función dlib.get\_frontal\_face\_detector() para obtener un modelo de detección de rostros frontal.
@@ -787,6 +791,7 @@ landmark_model = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
 5. Bucle principal del programa: Se inicia un bucle infinito para capturar y procesar los cuadros del video en tiempo real.
 
 \begin{verbatim}
+
 #Variables
 yawn_thresh = 35
 ptime = 0
@@ -797,8 +802,8 @@ while True :
 		break
 
 \end{verbatim}
-
-6. Medición del FPS: Se calcula el tiempo transcurrido entre cuadros consecutivos para estimar el FPS del video. 
+\item
+Medición del FPS: Se calcula el tiempo transcurrido entre cuadros consecutivos para estimar el FPS del video. 
 
 ctime = time.time(): Obtiene el tiempo actual en segundos utilizando la 
 
@@ -815,7 +820,7 @@ ctime = time.time()
 	cv2.putText(frame,f'FPS:{fps}',(frame.shape[1]-120,frame.shape[0]-20),cv2.FONT_HERSHEY_PLAIN,2,(0,200,0),3)
 \end{verbatim}
 
-7. Detección del rostro: Se convierte cada cuadro a escala de grises utilizando la función cv2.cvtColor() y se utiliza el modelo face\_model para detectar los rostros en la imagen. Luego, para cada rostro detectado en la imagen, se detectan los landmarks o puntos faciales utilizando el modelo de landmark\_model previamente definido, finalemnte los  puntos faciales detectados se convierten en un arreglo NumPy.
+\item Detección del rostro: Se convierte cada cuadro a escala de grises utilizando la función cv2.cvtColor() y se utiliza el modelo face\_model para detectar los rostros en la imagen. Luego, para cada rostro detectado en la imagen, se detectan los landmarks o puntos faciales utilizando el modelo de landmark\_model previamente definido, finalemnte los  puntos faciales detectados se convierten en un arreglo NumPy.
 
 \begin{verbatim}
 #Deteccion del rostro
@@ -828,7 +833,7 @@ ctime = time.time()
 		shape = face_utils.shape_to_np(shapes)
 \end{verbatim}
 
-8. Marcado del labio: Se dibujan contornos alrededor del labio superior e inferior utilizando la función cv2.drawContours() en cada cuadro.
+\item Marcado del labio: Se dibujan contornos alrededor del labio superior e inferior utilizando la función cv2.drawContours() en cada cuadro.
 
 Se utiliza la variable shape que contiene los puntos de referencia (landmarks), se extraen los puntos de referencia del labio inferior y superior y Se utiliza la función cv2.drawContours() de OpenCV para dibujar los contornos del labio inferior y superior en la imagen o marco (frame). 
 
@@ -837,7 +842,7 @@ Se utiliza la variable shape que contiene los puntos de referencia (landmarks), 
 		cv2.drawContours(frame,[lip],-1,(0, 165, 255),thickness=3)
 \end{verbatim}
 
-9. Cálculo de la distancia del labio: Se llama a la función cal\_yawn( ) para calcular la distancia del labio, que representa la apertura de la boca y se imprime.
+\item Cálculo de la distancia del labio: Se llama a la función cal\_yawn( ) para calcular la distancia del labio, que representa la apertura de la boca y se imprime.
 
 \begin{verbatim}
 	#Calcular la distancia del labio
@@ -845,7 +850,7 @@ Se utiliza la variable shape que contiene los puntos de referencia (landmarks), 
 	   # print(lip_dist)
 \end{verbatim}
 
-10. Detección de límite de apertura de la boca: Se compara la distancia del labio calculada con un umbral predefinido (yawn\_thresh) para determinar si se ha superado el límite de apertura de la boca. Si es así, se muestra.
+\item Detección de límite de apertura de la boca: Se compara la distancia del labio calculada con un umbral predefinido (yawn\_thresh) para determinar si se ha superado el límite de apertura de la boca. Si es así, se muestra.
 
 \begin{verbatim}
 if lip_dist > yawn_thresh :
@@ -853,6 +858,7 @@ if lip_dist > yawn_thresh :
 
 \end{verbatim}
 
+\item 
 cv2.imshow('Webcam', frame): Muestra el marco de video capturado en una ventana hasta pulsar la tecla q para finalizar. cam.release(): Libera los recursos del objeto de la cámara y cv2.destroyAllWindows() cierra todas las ventanas de visualización creadas por OpenCV.
 
 \begin{verbatim}
@@ -864,9 +870,11 @@ cam.release()
 cv2.destroyAllWindows()
 \end{verbatim}
 
+\end{itemize}
+
 \subsection{Resultados}
 
-En resumen, se detectó el rostro y se aplicaron los landmark points para medir la apertura de la boca en tiempo real utilizando una cámara web. Además, se mostró un mensaje si se superaba un umbral predefinido y se imprimió el valor de cada medición.
+Se detectó el rostro y se aplicaron los landmark points para medir la apertura de la boca en tiempo real utilizando una cámara web. Además, se mostró un mensaje si se superaba un umbral predefinido y se imprimió el valor de cada medición.
 
  \begin{center}
   \includegraphics[scale=0.3]{imagenes/codigomor1.jpeg}
@@ -906,7 +914,7 @@ Se realizó una investigación de la documentación del módulo 3G/4G LTE-Base Hat S
 Se realizó la configuración e implementación de la comunicación entre el sistema de almacenamiento Amazon S3 y el sistema backend de una aplicación, con capturas de pantalla de los comandos y pasos necesarios, y se describe el desarrollo de servicios backend utilizando GraphQL.
 Se detalla la implementación de la detección de rostro y la aplicación de landmark points para medir la apertura de la boca en tiempo real utilizando una cámara web, con la muestra de mensajes y valores de medición.
 Se describe la implementación de un clasificador en cascada para detectar rostros y ojos en una imagen de un conductor, con el almacenamiento de regiones de interés (ROI) de los ojos detectados y predicciones utilizando un modelo previamente entrenado.
-Se realizó una descripción de la instalación de la imagen para la Jetson Nano, la configuración y armado de periféricos de entrada, la instalación de Python y librerías requeridas, y la familiarización con el entorno de desarrollo de NVIDIA, explorando herramientas y configuraciones de la Jetson Nano.
+Se realizó una descripción de la instalación de la imagen para la Jetson Nano, la configuración y armado de periféricos de entrada, la instalación de Python y librerías requeridas, y la familiarización con el entorno de desarrollo de NVIDIA, explorando herramientas y configuraciones de la Jetson Nano. \\
 
 En general, se realizó el desarrollo de aplicaciones utilizando diferentes tecnologías y plataformas, incluyendo el front-end con ReactJs, la configuración de módulos de comunicación LTE, la implementación de servicios backend con GraphQL, y la detección de rostros y ojos en imágenes en tiempo real y en imágenes fijas. También se describen los pasos para la instalación y configuración de la Jetson Nano, una plataforma de desarrollo de NVIDIA.
 
