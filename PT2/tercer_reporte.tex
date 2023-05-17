@@ -1,0 +1,601 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{anysize}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{float}
+\marginsize{2cm}{2cm}{1cm}{1cm}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize UPIITA}
+%\fancyfoot[R]{\footnotesize Diseño}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{\footnotesize Proyecto Terminal 2}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{graphics}
+\usepackage{capt-of}
+\usepackage[pdftex=false,colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+\setlength\parindent{0pt}
+\usepackage[usenames]{color}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{shapepar}
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+
+\includegraphics[scale=0.45]{imagenes/ipn}
+\hspace{10cm}
+\includegraphics[scale=0.15]{imagenes/upiita}
+\\
+
+
+\begin{center}
+
+
+\textsc{\Large ``Sistema para el monitoreo, detección y alerta de somnolencia del conductor mediante visión artificial, comunicación inalámbrica y geolocalización''}\\[0.5cm]
+
+
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Tercer Reporte Parcial Reporte Parcial}\\[0.4cm]
+
+\HRule \\[1.5cm]
+
+\begin{center}
+
+Lista de actividades
+ 
+
+\begin{itemize}
+\item Implementación del sistema de Geolocalización
+\item Despliegue de la aplicación web 
+\item Realizar la conexión de la aplicación web con el Módulo Central de Procesamiento
+\item Implementación del modelo de red neuronal para la detección de somnolencia en la Jetson Nano
+\item Realizar la integración de los periféricos al Módulo Central de Procesamiento
+
+
+\end{itemize}
+
+\end{center}
+
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{\\Autores:}\\
+Alan Eduardo Gamboa Del Ángel\\
+Maite Paulette Díaz Martínez\\
+
+%Grupo:4MM6\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{flushright} \large
+\emph{Asesores:} \\
+M.en C. Niels Henrik Navarrete Manzanilla\\
+Dr. Rodolfo Vera Amaro\\
+
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+19 de Mayo 2023
+
+\end{center}
+
+
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+
+\newpage
+\section{Implementación del Sistema de Geolocalización}
+
+\subsection{Objetivo}
+Implementar el sistema de geolocalización en la Jetson Nano.
+Además de mostrar en la aplicación web la ubicación en tiempo
+real.
+
+
+
+\subsection{Descripción}
+
+\textbf{ReactJs}
+
+Para el desarrollo del front-end del presente proyecto, se hará uso de la librería de diseño de ReactJs. ReactJs facilia la creación de componentes reutilizables e interactivos para las interfaces de usuario.
+
+Los componentes que darán lugar a las vistas del presente proyecto son los siguientes:
+
+\begin{itemize}
+
+\item Layout.jsx: Este componente será la vista principal de la Aplicación Web. Se trata de un diseño tipo \emph{dashboard} que contendrá una sección principal que contendrá etiquetas para poder ingresar a las diferentes vistas de la aplicación. Además estará compuesta también de una sección secundaría que mostrará el contenido de dichas vistas.
+
+\item Incidencias.jsx: Este componente se encargará de mostrar todas las incidencias registradas en la base de datos. Las incidencias serán desplegadas en forma de lista.
+
+
+\item Incidencias.jsx: Este componente de mostrar un reporte de incidencia a detalle. Contendrá una ventana que permitirá ver el video del momento de la incidencia registrada. Así como los datos de la fecha y hora. Además de botones para poder confirmar o rechazar la incidencia. Finalmente contendrá el nombre del conductor además de una opción para poder consultar la ubicación en tiempo real del conductor.
+
+\item Ubicación.jsx: Este componente mostrará la ubicación en tiempo real del conductor con ayuda del servicio de diseño de mapas Leaflet.
+
+\item Conductores.jsx: Este componente mostrará todos los conductores registrados en la base de datos en forma de lista. 
+
+\end{itemize}
+
+
+
+\subsection{Resultados}
+
+De acuerdo con los componentes explicados anteriormente, las vistas que contendrá la aplicación web son las siguientes:
+
+\begin{itemize}
+
+\item Página Principal
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/principal}
+\captionof{figure}{Página Principal - Layout.jsx}
+ \label{fig:vista_principal} 
+\end{center} 
+
+\item Reporte de Incidencia
+	
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/incidencia}
+\captionof{figure}{Vista Reporte Incidencia Incidencia - Incidencia.jsx}
+ \label{fig:vista_incidencia} 
+\end{center} 
+
+\item Ubicación
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ubicacion}
+\captionof{figure}{Vista Ubicacion}
+ \label{fig:vista_ubicacion} 
+\end{center} 
+
+\item Conductores
+
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/conductores}
+\captionof{figure}{Vista Conductores - Conductores.jsx}
+ \label{fig:vista_conductores} 
+\end{center} 
+
+
+
+\end{itemize}
+
+
+
+\newpage
+\section{Despliegue de la aplicación web} \label{base_hat}
+
+\subsection{Objetivo}
+Desplegar el frontend y backend de la aplicación en su totalidad
+en un servidor dedicado para que pueda ser accesible desde cualquier dispositivo con acceso a internet y con un navegador.
+\subsection{Descripción}
+
+Para poder alojar y desplegar la aplicación web en un servicio de \emph{hosting}, se utilizará Amplify Hosting.	
+
+Se necesita ingresar a la consola de AWS y seleccionar el servicio de Amplify Hosting
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/hosting}
+\captionof{figure}{Módulo Base-Hat SIM7600G-H}
+ \label{fig:hat} 
+\end{center} 
+
+Hosting requiere algúna fuente de alojamiento de código para poder desplegar la apliación web. En este caso, la aplicación web fue alojada utilizando \emph{Github}, por lo tanto, se selecciona esta opción.
+
+Posteriormente, se requiere seleccionar el repositorio el cual será alojado, en este caso, el nombre de dicho repositorio es \emph{eb}. A su vez, se selecciona la ramificación \emph{main} para ser desplegada.
+
+
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/repo}
+\captionof{figure}{Instalación de librerías}
+ \label{fig:libraries} 
+\end{center} 
+
+Los comandos ingresados en la figura \ref{fig:libraries} se encargan de instalar todas las librarías y el software necesario para poder comenzar a utilizar la red LTE mediante el módulo SIM7600G-H. Además también se crea un directorio que contendrá la configuración de usuario así como un cuenta enlazada al módulo.
+
+Posteriormente, probamos que el puerto GPIO de nuestra Jetson Nano esté funcionando con los siguientes comandos:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/gpio}
+\captionof{figure}{Instalación de librerías}
+ \label{fig:gpio} 
+\end{center}
+
+Después de haber realizado los pasos anteriores, el pin con el nombre NET deberá parpadear constantemente, lo que significa que el módulo está listo para ser utilizado.
+
+Para realizar la compunicación LTE, primero se ingresa a la librería minicom utilizando los siguientes comandos:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/minicom}
+\captionof{figure}{Minicom}
+ \label{fig:gpio} 
+\end{center}
+
+Posteriormente, se necesita actualizar los drivers:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/drivers}
+\captionof{figure}{Actualización de drivers}
+ \label{fig:gpio} 
+\end{center}
+
+Finalmente se establece una dirección IP con el siguiente comando:
+
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/modulo}
+\captionof{figure}{Establecer dirección IP}
+ \label{fig:gpio} 
+\end{center}
+
+
+
+
+
+	
+
+\subsection{Resultados}
+Se realizó la investigación para conocer los pasos necesarios para establecer comunicación LTE utilizando el módulo SIM7600G-H para la NVIDIA Jetson Nano.
+
+
+\newpage
+
+\section{Realizar la conexión de la aplicación web con el Módulo Central de Procesamiento´}
+
+\subsection{Objetivo}
+Implementación de técnicas y configuraciones necesarias para realizar la conexión de la aplicación web
+
+
+\subsection{Descripción}
+Para realizar la conexión del Módulo Central de Procesamiento y la apliación web, se utilizó la librería \textbf{Boto3}
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/addstorage}
+\captionof{figure}{Configuración de servicio de almacenamiento S3}
+ \label{fig:addstorage} 
+\end{center} 
+
+Posteriormente, se requiere especificar que tipo de servicio de almacenamiento se integrará a la aplicación (multimedia o base de datos NoSQL). Para el presente proyecto, se utilizará el almacenamiento de contenido multimedia, por lo tanto, se seleccionará dicha opción.
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/content}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
+Ingresamos el nombre de nuestro espacio de almacenamiento:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/name}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+Después, se necesita establecer cuantos usuarios, así como cuales podrán acceder a dicho servicio:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/rules}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/rulesauth}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/guestrules}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/push}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+
+
+\subsection{Resultados}
+
+Al ingresar a la consola de servicios de AWS, en la sección de buckets de S3, se puede observar que se encuentra el bucket recién creado llamado \emph{videos175126-dev}.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/buckets}
+\captionof{figure}{Tablas generadas mediante los schemas definidos}
+ \label{fig:cognito} 
+\end{center} 
+
+
+
+\newpage
+\section{Implementación del modelo de red neuronal para la detección de somnolencia en la Jetson Nano}
+
+
+
+\subsection{Objetivo}
+Integrar la red neuronal entrenada en conjunto con los
+algoritmos de detección de rostro y ojos, y la metrica MOR.
+	
+\subsection{Descripción}
+
+GraphQL trabaja con 3 tipos de archivos:
+
+\begin{itemize}
+\item \emph{Queries:} Este archivo contiene las funciones que permitirán acceder a los datos.
+
+\item \emph{Mutations:} En este archivo se encuentran todas las funciones que permitirán realizar el manejo de datos (actualizar, eliminar, agregar)
+
+\item \emph{Subscriptions:} Las \emph{subscriptions} en GraphQL son funciones de consulta especiales, que se envían a travez de un punto de conexión websocket. Permiten realizar cierta operación cada vez que se ejecuta una acción en el backend.
+\end{itemize}
+Para comenzar con el archivo de \emph{Queries}se tienen las siguientes funciones:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/getconductor}
+\captionof{figure}{Función getConductor}
+ \label{fig:getConductor} 
+\end{center}
+
+La función de la figura \ref{getConductor}, obtiene los datos de un solo Conductor.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/listconductors}
+\captionof{figure}{Función listConductors}
+ \label{fig:listConductors} 
+\end{center}
+
+La función de la figura \ref{fig:listConductors} obtiene todos los datos de todos los conductores almacenados en la base de datos.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/getincidencia}
+\captionof{figure}{Función getIncidencia}
+ \label{fig:getIncidencia} 
+\end{center}
+
+La función de la figura \ref{fig:getIncidencia} obtiene los datos de una sola Incidencia.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/listIncidencias}
+\captionof{figure}{Función listIncidencias}
+ \label{fig:listIncidencias} 
+\end{center}
+
+La función de la figura \ref{fig:listIncidencias} obtiene los datos de todas las incidencias de almacenadas en la base de datos.
+
+En cuanto al archivo de \emph{Mutations} se tienen las siguientes funciones:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/createconductor}
+\captionof{figure}{Función createConductor}
+ \label{fig:createConductor} 
+\end{center}
+
+La función de la figura \ref{fig:createConductor} se encarga de crear el registro de un conductor en la base de datos.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/updateConductor}
+\captionof{figure}{Función updateConductor}
+ \label{fig:updateConductor} 
+\end{center}
+
+La función de la figura \ref{fig:updateConductor} se encarga de modificar datos del registro de un conductor.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/deleteconductor}
+\captionof{figure}{Función deleteConductor}
+ \label{fig:deleteConductor} 
+\end{center}
+
+La función de la figura \ref{fig:deleteConductor} se encarga de eliminar un conductor de la base de datos.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/createIncidencia}
+\captionof{figure}{Función createIncidencia}
+ \label{fig:createIncidencia} 
+\end{center}
+
+La función de la figura \ref{fig:createIncidencia} se encarga de crear una Incidencia en la base de datos.
+
+Para el archivo de \emph{subscriptions} se tienen la siguiente función:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/oncreateIncidencia}
+\captionof{figure}{Función oncreateIncidencia}
+ \label{fig:oncreateIncidencia} 
+\end{center}	
+
+La función de la figura \ref{fig:oncreateIncidencia} se encarga de realizar una consulta cada vez que una Incidencia nueva es dada de alta en la base de datos.
+
+
+
+Al estar trabajando con GraphQL dentro del proyecto, la manera en que se podrán realizar las operaciones \emph{CRUD - (Create, Read, Update, Delete)}, será mediante funciones JSON.
+
+Para comprobar que la API permite dichas operaciones, se debe ingresar a la consola de AWS y dirigirse a la sección de AWS AppSync. 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/consola}
+\captionof{figure}{Consola de AWS}
+ \label{fig:awsconsole} 
+\end{center} 
+
+Posteriormente se necesita ingresar a la sección de consultas.
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/funciones}
+\captionof{figure}{Funcionamiento de Appsync}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+AWS permite elegir si realizar un \emph{query}, \emph{mutation}, o \emph{subscription} mediante código JSON
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/crear}
+\captionof{figure}{Crear Conductor}
+ \label{fig:crearConductor} 
+\end{center} 
+
+En la figura \ref{fig:crearConductor} se puede apreciar una sentencia JSON que permite utilizar las funciones previamente creadas para dar de alta un conductor.
+
+
+
+\subsection{Resultados}
+
+Como resultado tenemos un log que nos muestra la entrada creada
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/log}
+\captionof{figure}{Resultado}
+ \label{fig:crearConductor} 
+\end{center} 
+
+
+
+\newpage
+\section{Realizar la integración de los periféricos al Módulo Central de Procesamiento}
+
+
+\subsection{Objetivo}
+Integrar dentro de un contenedor los periféricos junto con la Jetson Nano
+\subsection{Descripción}
+
+\textbf{Instalación en la tarjeta microSD}
+
+El Jetson Nano Developer Kit utiliza una tarjeta microSD como dispositivo de arranque y almacenamiento principal. Por tanto fue necesario instalar un entorno de desarrollo en la propia placa, para lo cual se requirio de una tarjeta microSD de un minímo recomendado de 32 GB de acuerdo a la documentación Nvidia.  \cite{Nvidia}.\\
+
+Como primer paso se descargo el \emph{Jetson Nano Developer Kit SD Card Image} \cite{sdimage} y posteriormente se instalo en la tarjeta microSD desde el sistema operativo Linux, utilizando los siguentes pasos:
+\begin{enumerate}
+
+\item Se abrio una terminal y se inserto la tarjeta microSD. 
+\item Se uso el siguiente comando para mostrar que dispositivo de disco se le asignó:
+
+\begin{verbatim}
+dmesg | tail | awk '\$3 == "sd" {print}'
+\end{verbatim}
+
+
+\item Se  escribio la imagen de la tarjeta SD comprimida (previamente descargada) en la tarjeta microSD con el comando:
+
+\begin{verbatim}
+/usr/bin/unzip -p ~/Downloads/jetson_nano_devkit_sd_card.zip | 
+sudo /bin/dd of=/dev/sda bs=1M status=progress
+\end{verbatim}
+
+\item Finalmente se expulso del dispositivo de disco desde la linea de comando utilizando:
+
+\begin{verbatim}
+sudo eject /dev/sda
+\end{verbatim}
+\end{enumerate}
+
+\textbf{Configuración y primer arranque}\\
+
+Jetson Nano Developer Kit permite dos formas de interactuar, la primera es por medio de otra computadora y la segunda haciendo uso de una pantalla, teclado y mouse conectados. Adicionalmente el kit de desarrollo no cuenta con una fuente de alimentación incluida por lo que se utilizó  una fuente de alimentación Micro-USB(5V-2A).\\
+
+Para iniciar el kit de desarrollo se conectó el mouse, la pantalla, el teclado y la funete de alimentación, posteriormente se realizó la configuración inicial del sistema operativo el cual incluyó lo siguiente:
+
+\begin{itemize}
+\item Revisar y acepter el EULA del software NVIDIA Jetson.
+\item Seleccionar el idioma del sistema, la distribución del teclado y la zona horaria
+\item Crear nombre de usuario, contraseña y nombre de la computadora.
+\item Seleccione el tamaño de partición de la aplicación: se recomienda utilizar el tamaño máximo sugerido.
+\end{itemize}
+
+
+
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/cognito}
+\captionof{figure}{Funcionamiento de Amazon Cognito}
+ \label{fig:cognito} 
+\end{center} 
+
+
+
+
+\subsection{Resultados}
+
+
+
+
+
+
+
+\newpage
+
+
+\newpage
+\section{Conclusiones}
+
+
+
+
+\newpage
+\section{Bibliografia}
+%\bibliographystyle{apacite}
+
+\begin{thebibliography}{10} %10 significa el número máximo de items
+%Aquí ponga la bibliografía y referencias usadas
+
+%Artículo:
+
+\bibitem {react} React Dev Team, \emph{React}, React. https://react.dev/ (accedido el 1 de abril de 2023).
+
+\bibitem {waveshare} Waveshare Electronics, \emph{SIM7600G-H 4G for Jetson Nano - Waveshare Wiki}, Waveshare Electronics\url{https://www.waveshare.com/wiki/SIM7600G-H_4G_for_Jetson_Nano_4G_connecting} (accedido el 16 de abril de 2023).
+
+\bibitem {graphql} Facebook Dev Team, \emph{Introduction to GraphQL | GraphQL | A query language for your API} https://graphql.org/learn/ (accedido el 4 de abril de 2023).
+
+
+
+
+
+\bibitem{Nvidia} NVIDIA, "Get Started with the Jetson Nano Developer Kit", NVIDIA Developer, 2019. [Online]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro. [Accedido: Abril 02 2023].
+
+\bibitem{sdimage} Nvidia Developer, "Get Started with Jetson Nano Devkit," Nvidia Developer. [En línea]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#write. [Accedido: 2 de abril de 2023].
+
+\bibitem{JetsonInf}Dusty, N. "Building the Repo - NVIDIA Jetson Inference," GitHub. [Online]. Disponible en: https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md. [Accedido en: 02-abr-2023].
+
+
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}
+
+
