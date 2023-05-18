@@ -52,7 +52,7 @@
 
 
 \HRule \\[0.4cm]
-{ \huge \bfseries Tercer Reporte Parcial Reporte Parcial}\\[0.4cm]
+{ \huge \bfseries Tercer Reporte Parcial}\\[0.4cm]
 
 \HRule \\[1.5cm]
 
@@ -112,76 +112,18 @@ Dr. Rodolfo Vera Amaro\\
 
 \subsection{Objetivo}
 Implementar el sistema de geolocalización en la Jetson Nano.
-Además de mostrar en la aplicación web la ubicación en tiempo
-real.
+Además de mostrar en la aplicación web la ubicación en tiempo real.
 
 
 
 \subsection{Descripción}
-
-\textbf{ReactJs}
-
-Para el desarrollo del front-end del presente proyecto, se hará uso de la librería de diseño de ReactJs. ReactJs facilia la creación de componentes reutilizables e interactivos para las interfaces de usuario.
-
-Los componentes que darán lugar a las vistas del presente proyecto son los siguientes:
-
-\begin{itemize}
-
-\item Layout.jsx: Este componente será la vista principal de la Aplicación Web. Se trata de un diseño tipo \emph{dashboard} que contendrá una sección principal que contendrá etiquetas para poder ingresar a las diferentes vistas de la aplicación. Además estará compuesta también de una sección secundaría que mostrará el contenido de dichas vistas.
-
-\item Incidencias.jsx: Este componente se encargará de mostrar todas las incidencias registradas en la base de datos. Las incidencias serán desplegadas en forma de lista.
-
-
-\item Incidencias.jsx: Este componente de mostrar un reporte de incidencia a detalle. Contendrá una ventana que permitirá ver el video del momento de la incidencia registrada. Así como los datos de la fecha y hora. Además de botones para poder confirmar o rechazar la incidencia. Finalmente contendrá el nombre del conductor además de una opción para poder consultar la ubicación en tiempo real del conductor.
-
-\item Ubicación.jsx: Este componente mostrará la ubicación en tiempo real del conductor con ayuda del servicio de diseño de mapas Leaflet.
-
-\item Conductores.jsx: Este componente mostrará todos los conductores registrados en la base de datos en forma de lista. 
-
-\end{itemize}
+Para el sistema de geolocalización por parte de la aplicación web, se utilizará el servicio de \emph{Amazon Location Services}
 
 
 
-\subsection{Resultados}
-
-De acuerdo con los componentes explicados anteriormente, las vistas que contendrá la aplicación web son las siguientes:
-
-\begin{itemize}
-
-\item Página Principal
-\begin{center}
-  \includegraphics[scale=0.3]{imagenes/principal}
-\captionof{figure}{Página Principal - Layout.jsx}
- \label{fig:vista_principal} 
-\end{center} 
-
-\item Reporte de Incidencia
-	
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/incidencia}
-\captionof{figure}{Vista Reporte Incidencia Incidencia - Incidencia.jsx}
- \label{fig:vista_incidencia} 
-\end{center} 
-
-\item Ubicación
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/ubicacion}
-\captionof{figure}{Vista Ubicacion}
- \label{fig:vista_ubicacion} 
-\end{center} 
-
-\item Conductores
-
-\begin{center}
-  \includegraphics[scale=0.3]{imagenes/conductores}
-\captionof{figure}{Vista Conductores - Conductores.jsx}
- \label{fig:vista_conductores} 
-\end{center} 
 
 
-
-\end{itemize}
+ \subsection{Resultados}
 
 
 
