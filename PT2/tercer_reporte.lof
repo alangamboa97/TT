@@ -1,26 +1,38 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces C\'odigo que permite obtener la posici\'on GPS parte 1}}{5}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces C\'odigo que permite obtener la posici\'on GPS parte 2}}{5}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces C\'odigo que permite oibtener la posici\'on GPS parte 3}}{6}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces C\'odigo que permite obtener la posici\'on GPS parte 4}}{6}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Mapa creado en AWS - MyMap}}{7}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces C\'odigo para obtener la ubicaci\'on geogr\'afica en la aplicaci\'on web}}{8}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces coordenadas geogr\'aficas en la Jetson Nano}}{8}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Detalles del mapa creado en AWS}}{9}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces coordenadas geogr\'aficas que recibe la p\'agina web }}{9}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Amplify Hosting }}{10}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces ramificaci\'on de repositorio de Github}}{11}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Acceso a la p\'agina web desde el buscador}}{11}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Red 4G LTE activa por medio de la interfaz wwan0}}{13}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Conexi\'on hac\IeC {\'\i }a Aws}}{13}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces C\'odigo de somnolencia parte 1}}{14}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces C\'odigo de somnolencia parte 2}}{15}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces C\'odigo de somnolencia parte 3}}{15}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces C\'odigo de somnolencia parte 4}}{16}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Grabaci\'on del video y el envi\'o del video hac\IeC {\'\i }a la p\'agina web}}{16}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Prueba de somnolencia ojos abiertos}}{17}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Prueba de somnolencia ojos cerrados}}{17}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Prueba de la metrica MOR 1}}{18}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Prueba de la metrica MOR 2}}{18}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Carcasa sin armar}}{19}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Carcasa armada con la Jetson Nano y perif\'ericos integrados}}{20}{figure.25}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Intalaci\'on de bibliotecas}}{4}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Instalaci\'on de comandos}}{4}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Prueba de SIM7600G }}{4}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Comandos GPS para pruebas.}}{5}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces C\'odigo que permite obtener la posici\'on GPS parte 1}}{5}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces C\'odigo que permite obtener la posici\'on GPS parte 2}}{6}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces C\'odigo que permite oibtener la posici\'on GPS parte 3}}{6}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces C\'odigo que permite obtener la posici\'on GPS parte 4}}{7}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Mapa creado en AWS - MyMap}}{8}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces C\'odigo para obtener la ubicaci\'on geogr\'afica en la aplicaci\'on web}}{9}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Coordenadas geogr\'aficas en la Jetson Nano}}{9}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Detalles del mapa creado en AWS}}{10}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Coordenadas geogr\'aficas que recibe la p\'agina web }}{10}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Amplify Hosting }}{11}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces ramificaci\'on de repositorio de Github}}{12}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Acceso a la p\'agina web desde el buscador}}{12}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Abrir minicom por comando.}}{13}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Verificar conexi\'on.}}{13}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Descarga del driver.}}{13}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Instalar driver.}}{14}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Comando para comprobar interfaz wwan0.}}{14}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Habilitar la interfaz wwan0.}}{14}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Comunicar por Minicom.}}{14}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Asignar IP.}}{14}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Red 4G LTE activa por medio de la interfaz wwan0}}{15}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Conexi\'on con boto3 hac\IeC {\'\i }a Aws}}{16}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces C\'odigo de somnolencia parte 1}}{17}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces C\'odigo de somnolencia parte 2}}{18}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces C\'odigo de somnolencia parte 3}}{18}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces C\'odigo de somnolencia parte 4}}{19}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Grabaci\'on del video y el envi\'o del video hac\IeC {\'\i }a la p\'agina web}}{19}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Prueba de somnolencia ojos abiertos}}{20}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Prueba de somnolencia ojos cerrados}}{20}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Prueba de la metrica MOR 1}}{21}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Prueba de la metrica MOR 2}}{21}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Carcasa sin armar}}{22}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Carcasa armada con la Jetson Nano y perif\'ericos integrados}}{23}{figure.37}%

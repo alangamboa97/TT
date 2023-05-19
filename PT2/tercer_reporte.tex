@@ -118,54 +118,60 @@ real.
 
 \subsection{Descripción}
 
-\textbf{Habilitar GPS y obtener datos de posición GPS desde la Jetson Nano }
+\textbf{Habilitar GPS y obtener datos de posición GPS desde la Jetson Nano \cite{Waveshare}}
 
-Se inicio habilitando el GPS en la Jetson Nano a través de la terminal:
-\begin{itemize}
+Se inició abriendo una terminal e instalando bibliotecas con los siguientes comandos.
 
-\item Configuración del puerto serial: 
+Se remplazó your\_user\_name con el nombre de usuario nano.
 
-\begin{lstlisting}
-sudo stty -F /dev/ttyTHS1 115200
-\end{lstlisting}
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/SIM7600G-1.JPG}
+\captionof{figure}{Intalación de bibliotecas}
+ \label{fig:SIM7600G-1.JPG} 
+\end{center} 
 
-/dev/ttyTHS1 es el dispositivo del puerto serial utilizado y 115200 es la velocidad de transmisión.\\
-
-\item Habilitar el GPS: 
-el comando echo envia comandos AT al módulo GPS y habilita su funcionalidad.
-
-\begin{lstlisting}
-echo "AT+CGNSPWR=1" > /dev/ttyTHS1
-\end{lstlisting}
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/SIM7600G-2.JPG}
+\captionof{figure}{Instalación de comandos}
+ \label{fig:SIM7600G-2.JPG} 
+\end{center} 
 
 
-\item Verificar el estado del GPS:  
-El comando cat, lee la salida del puerto serial y verificar el estado del GPS. 
+Se colocó el DIP en ON y se ejecutó minicom con el comando AT para probar la SIM7600.
 
-\begin{lstlisting}
-cat /dev/ttyTHS1
-\end{lstlisting}
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/SIM7600G-3.JPG}
+\captionof{figure}{ Prueba de SIM7600G }
+ \label{fig:SIM7600G-3.JPG} 
+\end{center} 
 
+Ejemplos de GPS: Se conectó la antena GPS y se colocó el receptor en un lugar abierto. Se ejecutaron los siguientes comandos para probar el GPS.
 
-Al ejecutar el comando cat /dev/ttyTHS1 en la terminal, se mostrará la salida del puerto serial /dev/ttyTHS1. Si el GPS se habilitó correctamente, se observará la respuesta del módulo GPS indicando que está listo para recibir datos de posición. Esta respuesta confirmará que el GPS está funcionando correctamente y listo para proporcionar información de ubicación.\\
-\end{itemize}
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/SIM7600G-4.JPG}
+\captionof{figure}{Comandos GPS para pruebas.}
+ \label{fig:SIM7600G-4.JPG} 
+\end{center} 
+
+Comunicación por Minicom:
+
 
 Para obtener los datos de posición GPS, fue necesario interactuar con el módulo SIM7600X a través del programa en Python:
 
 \begin{center}
-  \includegraphics[scale=0.6]{imagenes/GPSpy1.JPG}
+  \includegraphics[scale=0.62]{imagenes/GPSpy1.JPG}
 \captionof{figure}{Código que permite obtener la posición GPS parte 1}
  \label{fig:GPSpy1} 
 \end{center} 
 
 \begin{center}
-  \includegraphics[scale=0.6]{imagenes/GPSpy2.JPG}
+  \includegraphics[scale=0.62]{imagenes/GPSpy2.JPG}
 \captionof{figure}{Código que permite obtener la posición GPS parte 2}
  \label{fig:GPSpy2} 
 \end{center} 
 
 \begin{center}
-  \includegraphics[scale=0.6]{imagenes/GPSpy3.JPG}
+  \includegraphics[scale=0.62]{imagenes/GPSpy3.JPG}
 \captionof{figure}{Código que permite oibtener la posición GPS parte 3}
  \label{fig:GPSpy3} 
 \end{center} 
@@ -186,19 +192,19 @@ Para crear el mapa se inició sesión en la Consola de administración de AWS. Lueg
 
 Una vez que creado el mapa en AWS Maps, se agrego y configuro un rastreador para realizar el seguimiento del dispositivo llamado "mydevice" en el mapa. Los rastreadores se encargaron de recopilar y actualizar la ubicación de los dispositivos, brindando información en tiempo real.\\
 
-A continuación, se presenta un resumen de cómo se creó un rastreador en AWS Maps:
+A continuación, se presenta un resumen de cómo se creó un rastreador en AWS Maps:\\
 
 En la página del mapa en la consola de administración de AWS Maps, se hizo clic en "Crear rastreador". Se seleccionó un nombre para el rastreador y se especificó la región de AWS donde se deseaba crear. Se procedió a configurar los detalles del rastreador, como la frecuencia de actualización de la ubicación de los dispositivos en este caso cada 10m envía las coordenadas. Finalmente, se hizo clic en "Crear rastreador" para finalizar la configuración del mismo.
 
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/Mymapaws.png}
+  \includegraphics[scale=0.55]{imagenes/Mymapaws.png}
 \captionof{figure}{Mapa creado en AWS - MyMap}
  \label{fig:Mymapa} 
 \end{center} 
 
 
-\textbf{Ubicación geográfica en la Aplicación web}
+\textbf{Ubicación geográfica en la Aplicación web}\\
 
 Para obtener el historial de posiciones de un dispositivo, se definió la función llamada "getDevicePosition". Posteriormente, se utilizó la función "client.getDevicePositionHistory" con el argumento "params" para solicitar el historial de posiciones del dispositivo. Después, se creó la variable "tempPosMarkers" para almacenar los resultados obtenidos al mapear los elementos de "data.DevicePositions". Para cada elemento "devPos" en "data.DevicePositions", se imprimió su posición en la consola y se generó un nuevo objeto con propiedades "index", "Long" y "lat", que representaban los valores de la posición del dispositivo. Este archivo se guardó con la extensión .jsx.
 
@@ -211,11 +217,12 @@ Para obtener el historial de posiciones de un dispositivo, se definió la función
 
 \subsection{Resultados}
 
-Obtención de coordenadas geográficas 
+
+Obtención de coordenadas geográficas desde la Jetson Nano 
 
 \begin{center}
-  \includegraphics[scale=0.55]{imagenes/Mymapaws2.png}
-\captionof{figure}{coordenadas geográficas en la Jetson Nano}
+  \includegraphics[scale=0.53]{imagenes/Mymapaws2.png}
+\captionof{figure}{Coordenadas geográficas en la Jetson Nano}
  \label{fig:Mymapadet} 
 \end{center} 
 
@@ -223,7 +230,7 @@ Obtención de coordenadas geográficas
 Mapa creado en AWS Maps 
 
 \begin{center}
-  \includegraphics[scale=0.55]{imagenes/Mymapaws2.png}
+  \includegraphics[scale=0.53]{imagenes/Mymapaws2.png}
 \captionof{figure}{Detalles del mapa creado en AWS}
  \label{fig:Mymapadet} 
 \end{center} 
@@ -232,8 +239,8 @@ Mapa creado en AWS Maps
 coordenadas geográficas que recibe la página web 
 
 \begin{center}
-  \includegraphics[scale=0.65]{imagenes/RealTimeMap2}
-\captionof{figure}{coordenadas geográficas que recibe la página web }
+  \includegraphics[scale=1]{imagenes/RealTimeMap2}
+\captionof{figure}{Coordenadas geográficas que recibe la página web }
  \label{fig:CorGeo} 
 \end{center} 
 
@@ -242,11 +249,10 @@ coordenadas geográficas que recibe la página web
 \section{Despliegue de la aplicación web} \label{base_hat}
 
 \subsection{Objetivo}
-Desplegar el frontend y backend de la aplicación en su totalidad
-en un servidor dedicado para que pueda ser accesible desde cualquier dispositivo con acceso a internet y con un navegador.
+Desplegar el frontend y backend de la aplicación en su totalidad en un servidor dedicado para que pueda ser accesible desde cualquier dispositivo con acceso a internet y con un navegador.
 \subsection{Descripción}
 
-Para poder alojar y desplegar la aplicación web en un servicio de \emph{hosting}, se utilizará Amplify Hosting.	
+Para poder alojar y desplegar la aplicación web en un servicio de \emph{hosting}, se utilizará Amplify Hosting \cite{AwsAmplify}.	
 
 Se necesita ingresar a la consola de AWS y seleccionar el servicio de Amplify Hosting
 
@@ -280,7 +286,7 @@ https://main.dcst1c83llut3.amplifyapp.com/login
 
 \newpage
 
-\section{Realizar la conexión de la aplicación web con el Módulo Central de Procesamiento´}
+\section{Realizar la conexión de la aplicación web con el Módulo Central de Procesamiento}
 
 \subsection{Objetivo}
 Implementación de técnicas y configuraciones necesarias para realizar la conexión de la aplicación web
@@ -288,19 +294,85 @@ Implementación de técnicas y configuraciones necesarias para realizar la conexió
 
 \subsection{Descripción}
 
-La primer configuración que se realizó, fue la habilitación y activación de la red 4G Lte en la Jetson Nano por medio de la interfaz wwan0, que nos permite conectarnos a internet por medio de la red celular.
+La primer configuración que se realizó, fue la habilitación y activación de la red 4G Lte en la Jetson Nano por medio de la interfaz wwan0 \cite{Waveshare} , que nos permite conectarnos a internet por medio de la red celular, se utilizó una SIM Telcel para adquirir GB y poder acceder a internet.\\
+
+Se abrió una terminal y se ejecutaron los siguinete comandos para abrir minicom por comando:
+
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/4glte1.JPG}
+\captionof{figure}{Abrir minicom por comando.}
+ \label{fig:4glte1} 
+\end{center} 
 
 
-Posteriormente se realizó la conexión del Módulo Central de Procesamiento y la apliación web, se utilizó la librería \textbf{Boto3}
+El siguiente comando se utilizó para verificar la conexión.
 
-Boto3 es una biblioteca de Python desarrollada por Amazon Web Services (AWS) que permite interactuar con los servicios de AWS de manera programática. Proporciona una interfaz de programación de aplicaciones (API) fácil de usar para acceder y administrar recursos en la nube de AWS.
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/4glte2.JPG}
+\captionof{figure}{Verificar conexión.}
+ \label{fig:4glte2} 
+\end{center} 
 
-Para crear una conexión a AWS Amplify utilizando Boto3, se siguieron los siguientes pasos:
+Posteriormente se descargó el controlador con los siguinetes comandos:
+
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/4glte3.JPG}
+\captionof{figure}{Descarga del driver.}
+ \label{fig:4glte3} 
+\end{center} 
+
+Se usó el permiso de root para instalar el controlador:
+
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/4glte4.JPG}
+\captionof{figure}{Instalar driver.}
+ \label{fig:4glte4} 
+\end{center} 
+
+Se comprobó si se reconoce la interfaz wwan0.
+
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/4glte5.JPG}
+\captionof{figure}{Comando para comprobar interfaz wwan0.}
+ \label{fig:4glte5} 
+\end{center} 
+
+Se habilitó la interfaz wwan0.
+
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/4glte6.JPG}
+\captionof{figure}{Habilitar la interfaz wwan0.}
+ \label{fig:4glte6} 
+\end{center} 
+
+Se realizó la comunicación por Minicom:
+
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/4glte7.JPG}
+\captionof{figure}{Comunicar por Minicom.}
+ \label{fig:4glte7} 
+\end{center} 
+
+Se asignó la IP:
+
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/4glte8.JPG}
+\captionof{figure}{Asignar IP.}
+ \label{fig:4glte8} 
+\end{center} 
+
+
+Posteriormente se realizó la conexión del Módulo Central de Procesamiento y la apliación web, se utilizó la librería \textbf{Boto3}\\
+
+Boto3 es una biblioteca de Python desarrollada por Amazon Web Services (AWS) que permite interactuar con los servicios de AWS de manera programática. Proporciona una interfaz de programación de aplicaciones (API) fácil de usar para acceder y administrar recursos en la nube de AWS \cite{Boto3}.\\
+
+Para crear una conexión a AWS Amplify utilizando Boto3, se siguieron los siguientes pasos :\\
 
 En primer lugar, se instaló Boto3 utilizando el comando: pip install boto3. A continuación, se configuraron las credenciales de AWS, proporcionando las claves de acceso de IAM que otorgan acceso a los servicios de AWS. Estas credenciales se configuraron manualmente en el archivo de configuración. Luego, se importó el módulo Boto3 en el script de Python y se creó una conexión al servicio de AWS Amplify utilizando las credenciales configuradas anteriormente. A partir de la conexión establecida, se pudieron utilizar los métodos proporcionados por el cliente de Boto3 para interactuar con AWS Amplify.
 
 
 \subsection{Resultados}
+Red 4G LTE activa en la Jetson Nano
 
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/4glte.jpeg}
@@ -311,11 +383,10 @@ En primer lugar, se instaló Boto3 utilizando el comando: pip install boto3. A co
 Conexión a AWS Amplify utilizando Boto3
 
 \begin{center}
-  \includegraphics[scale=0.85]{imagenes/ConexionPw.JPG}
-\captionof{figure}{Conexión hacía Aws}
+  \includegraphics[scale=0.87]{imagenes/ConexionPw.JPG}
+\captionof{figure}{Conexión con boto3 hacía Aws}
  \label{fig:addstorage} 
 \end{center} 
-
 
 
 \newpage
@@ -327,11 +398,11 @@ Integrar la red neuronal entrenada en conjunto con los
 algoritmos de detección de rostro y ojos, y la metrica MOR.
 	
 \subsection{Descripción}
-Se cargó el modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. Luego, se inicializó la cámara para capturar el flujo de video utilizando el método gstreamer pipeline. A continuación, se inició un bucle infinito para procesar cada cuadro de video capturado. Dentro del bucle, cada cuadro de video se convirtió a escala de grises y se utilizaron clasificadores de cascada de Haar para detectar caras y ojos en el cuadro de video. Posteriormente, se extrajo el área de interés correspondiente a cada ojo detectado.
+Se cargó el modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. Luego, se inicializó la cámara para capturar el flujo de video utilizando el método gstreamer pipeline. A continuación, se inició un bucle infinito para procesar cada cuadro de video capturado. Dentro del bucle, cada cuadro de video se convirtió a escala de grises y se utilizaron clasificadores de cascada de Haar \cite{haarcascades} para detectar caras y ojos en el cuadro de video. Posteriormente, se extrajo el área de interés correspondiente a cada ojo detectado.
 Se realizó el preprocesamiento necesario en cada ojo para que coincidiera con el formato de entrada del modelo y se llevó a cabo una predicción utilizando el modelo entrenado para determinar si los ojos estaban cerrados o abiertos. Se calculó un puntaje basado en el número de ojos cerrados detectados y se mostró este puntaje junto con un texto que indica si los ojos estaban cerrados o abiertos en el cuadro de video. Si el puntaje supera el umbral determinado, se consideraba que la persona estaba somnolienta y se activaba una alerta. El bucle continúa hasta que se presiona la tecla 'q', momento en el cual se liberaran los recursos de la cámara y se cierran las ventanas de visualización
 
 \begin{center}
-  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia1.JPG}
+  \includegraphics[scale=0.7]{imagenes/CodigoSomnolencia1.JPG}
 \captionof{figure}{Código de somnolencia parte 1}
  \label{fig:Somnolencia1} 
 \end{center}
@@ -354,7 +425,7 @@ Se realizó el preprocesamiento necesario en cada ojo para que coincidiera con el
  \label{fig:Somnolencia1} 
 \end{center}
 
-El archivo respecto a la métrica MOR, se complementó con la grabación del video y el envió del video hacía la página web.
+El archivo respecto a la métrica MOR \cite{68LandPoints}, se complementó con la grabación del video y el envió del video hacía la página web.
 
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/MORcodigo1.JPG}
@@ -402,9 +473,9 @@ El archivo respecto a la métrica MOR, se complementó con la grabación del video 
 Integrar dentro de un contenedor los periféricos junto con la Jetson Nano
 \subsection{Descripción}
 
-Se integraron los periféricos dentro del contenedor para la Jetson Nano.
+Se integraron los periféricos dentro del contenedor para la Jetson Nano.\\
 
-El contenedor de la Jetson Nano es una carcasa de metal con un ventilador de refrigeración de 5 V, diseñado específicamente para ser compatible con la placa de desarrollo NVIDIA Jetson Nano (versión B01 con 4 GB de RAM).
+El contenedor de la Jetson Nano es una carcasa de metal con un ventilador de refrigeración de 5 V, diseñado específicamente para ser compatible con la placa de desarrollo NVIDIA Jetson Nano (versión B01 con 4 GB de RAM).\\
 
 Esta carcasa ofrece varias características adicionales, como soporte para reinicio de cámara, un botón de encendido y una compatibilidad específica con la cámara Waveshare IMX219 Series. Además, el contenedor también tiene soporte para adaptadores inalámbricos Wireless-AC8265, lo que permite la conectividad Wi-Fi y Bluetooth en la Jetson Nano. Otra característica destacada es la compatibilidad con el módulo de placa de expansión LTE CAT4 basado en SIM7600G-H. Este módulo proporciona capacidades de comunicación inalámbrica, como llamadas telefónicas, mensajes de texto (SMS) y posicionamiento GPS utilizando los sistemas BeiDou y Glonass.
 
@@ -418,7 +489,7 @@ Esta carcasa ofrece varias características adicionales, como soporte para reinic
 
 \subsection{Resultados}
 
-contenedor de la Jetson nano y los periféricos integrados:
+Contenedor de la Jetson nano junto con los periféricos integrados:
 
 
 \begin{center}
@@ -431,32 +502,29 @@ contenedor de la Jetson nano y los periféricos integrados:
 \newpage
 \section{Conclusiones}
 
-En conclusión, en este proyecto se habilitó el GPS en la Jetson Nano a través de la terminal utilizando comandos AT y se verificó su estado mediante la lectura de la salida del puerto serial. Luego, se interactuó con el módulo SIM7600X a través de un programa en Python para obtener los datos de posición GPS. Se utilizó AWS Maps, un servicio de Amazon Web Services, para crear un mapa personalizado en la nube. Se configuraron la apariencia y la funcionalidad del mapa, incluyendo los estilos de visualización, las capas de datos y las interacciones del usuario.  Se implementó una función para obtener el historial de posiciones del dispositivo, utilizando la función "client.getDevicePositionHistory" de AWS. Los resultados se mapearon en un objeto que contenía las propiedades de la posición del dispositivo. Se guardó este archivo con extensión .jsx. Para desplegar la aplicación web en su totalidad, se utilizó Amplify Hosting como servicio de hosting. Se seleccionó el repositorio alojado en GitHub y se configuró la conexión utilizando la biblioteca Boto3 de Python, que permite interactuar con los servicios de AWS. Además, se cargó un modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. Se utilizó la cámara de la Jetson Nano para capturar el flujo de video y se procesó cada cuadro de video para detectar caras y ojos. Se realizó una predicción utilizando el modelo entrenado para determinar si los ojos estaban cerrados o abiertos. Se mostró un puntaje y un texto indicando si los ojos estaban cerrados o abiertos, y se activó una alerta si el puntaje superaba un umbral establecido. Finalmente se integraron los periféricos junto con la Jetson nano dentro de una carcasa de metal.
+En conclusión, en este proyecto se habilitó el GPS en la Jetson Nano a través de la terminal utilizando comandos GPS y se verificó su estado. Luego, se interactuó con el módulo SIM7600X a través de un programa en Python para obtener los datos de posición GPS. Se utilizó AWS Maps, un servicio de Amazon Web Services, para crear un mapa personalizado en la nube. Se configuraron la apariencia y la funcionalidad del mapa, incluyendo los estilos de visualización, las capas de datos y las interacciones del usuario.  Se implementó una función para obtener el historial de posiciones del dispositivo, utilizando la función "client.getDevicePositionHistory" de AWS. Los resultados se mapearon en un objeto que contenía las propiedades de la posición del dispositivo. Se guardó este archivo con extensión .jsx. Para desplegar la aplicación web en su totalidad, se utilizó Amplify Hosting como servicio de hosting. Se seleccionó el repositorio alojado en GitHub y se configuró la conexión utilizando la biblioteca Boto3 de Python, que permite interactuar con los servicios de AWS. Además, se cargó un modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. Se utilizó la cámara de la Jetson Nano para capturar el flujo de video y se procesó cada cuadro de video para detectar caras y ojos. Se realizó una predicción utilizando el modelo entrenado para determinar si los ojos estaban cerrados o abiertos. Se mostró un puntaje y un texto indicando si los ojos estaban cerrados o abiertos, y se activó una alerta si el puntaje superaba un umbral establecido. Finalmente se integraron los periféricos junto con la Jetson nano dentro de una carcasa de metal.\\
 
-Este proyecto integró el uso del GPS en la Jetson Nano, la visualización de datos geográficos en un mapa personalizado utilizando AWS Maps, la obtención de historial de posiciones del dispositivo, el despliegue de una aplicación web utilizando Amplify Hosting, la detección de ojos cerrados y abiertos utilizando un modelo de red neuronal convolucional y la integración de los périfericos con la Jetson Nano dentro de una carcasa de metal.
+En esta etapa del proyecto se integró el uso del GPS en la Jetson Nano, la visualización de datos geográficos en un mapa personalizado utilizando AWS Maps, la obtención de historial de posiciones del dispositivo, el despliegue de una aplicación web utilizando Amplify Hosting, la detección de ojos cerrados y abiertos utilizando un modelo de red neuronal convolucional y la integración de los périfericos con la Jetson Nano dentro de una carcasa de metal.
 
 
 \newpage
 \section{Bibliografia}
 %\bibliographystyle{apacite}
 
-\begin{thebibliography}{10} %10 significa el número máximo de items
+\begin{thebibliography}{50} %10 significa el número máximo de items
 %Aquí ponga la bibliografía y referencias usadas
 
-%Artículo:
+\bibitem {Waveshare} Waveshare. (Fecha de acceso: 2023, Mayo 15). SIM7600G-H 4G for Jetson Nano. Recuperado de: https://www.waveshare.com/wiki/SIM7600G-H\_4G\_for\_Jetson\_Nano
 
-\bibitem {react} React Dev Team, \emph{React}, React. https://react.dev/ (accedido el 1 de abril de 2023).
+\bibitem {AwsAmplify} Amazon Web Services. "Setting Up AWS Amplify with GitHub". Recuperado de: https://docs.aws.amazon.com/es\_es/amplify/latest/userguide/setting-up-GitHub-access.html
 
-\bibitem {waveshare} Waveshare Electronics, \emph{SIM7600G-H 4G for Jetson Nano - Waveshare Wiki}, Waveshare Electronics\url{https://www.waveshare.com/wiki/SIM7600G-H_4G_for_Jetson_Nano_4G_connecting} (accedido el 16 de abril de 2023).
+\bibitem {Boto3} Amazon Web Services. "Using IAM Authentication for RDS Database Engines". Recuperado de: https://docs.aws.amazon.com/es\_es/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Connecting.Python.html
 
-\bibitem {graphql} Facebook Dev Team, \emph{Introduction to GraphQL | GraphQL | A query language for your API} https://graphql.org/learn/ (accedido el 4 de abril de 2023).
+\bibitem {haarcascades} OpenCV. "OpenCV Haar cascades". Recuperado de: https://github.com/opencv/opencv/tree/master/data/haarcascades
+
+\bibitem  {68LandPoints} GitHub. "68-points-face-landmark topics". Recuperado de: https://github.com/topics/68-points-face-landmark 
 
 
-\bibitem{Nvidia} NVIDIA, "Get Started with the Jetson Nano Developer Kit", NVIDIA Developer, 2019. [Online]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro. [Accedido: Abril 02 2023].
-
-\bibitem{sdimage} Nvidia Developer, "Get Started with Jetson Nano Devkit," Nvidia Developer. [En línea]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#write. [Accedido: 2 de abril de 2023].
-
-\bibitem{JetsonInf}Dusty, N. "Building the Repo - NVIDIA Jetson Inference," GitHub. [Online]. Disponible en: https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md. [Accedido en: 02-abr-2023].
 
 
 \end{thebibliography}
