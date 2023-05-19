@@ -1,33 +1,26 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces P\'agina Principal - Layout.jsx}}{5}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Vista Reporte Incidencia Incidencia - Incidencia.jsx}}{5}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Vista Ubicacion}}{6}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Vista Conductores - Conductores.jsx}}{6}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces M\'odulo Base-Hat SIM7600G-H}}{7}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Instalaci\'on de librer\IeC {\'\i }as}}{8}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Instalaci\'on de librer\IeC {\'\i }as}}{8}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Minicom}}{9}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Actualizaci\'on de drivers}}{9}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Establecer direcci\'on IP}}{9}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Configuraci\'on de servicio de almacenamiento S3}}{10}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{10}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{10}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{11}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{11}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{11}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Generaci\'on de Endpoint de GraphQL}}{12}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Tablas generadas mediante los schemas definidos}}{12}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Funci\'on getConductor}}{13}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Funci\'on listConductors}}{14}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Funci\'on getIncidencia}}{14}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Funci\'on listIncidencias}}{15}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Funci\'on createConductor}}{15}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Funci\'on updateConductor}}{16}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Funci\'on deleteConductor}}{16}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Funci\'on createIncidencia}}{17}{figure.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Funci\'on oncreateIncidencia}}{17}{figure.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Consola de AWS}}{18}{figure.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Funcionamiento de Appsync}}{18}{figure.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Crear Conductor}}{19}{figure.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Resultado}}{19}{figure.31}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Funcionamiento de Amazon Cognito}}{21}{figure.32}%
+\contentsline {figure}{\numberline {1}{\ignorespaces C\'odigo que permite obtener la posici\'on GPS parte 1}}{5}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces C\'odigo que permite obtener la posici\'on GPS parte 2}}{5}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces C\'odigo que permite oibtener la posici\'on GPS parte 3}}{6}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces C\'odigo que permite obtener la posici\'on GPS parte 4}}{6}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Mapa creado en AWS - MyMap}}{7}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces C\'odigo para obtener la ubicaci\'on geogr\'afica en la aplicaci\'on web}}{8}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces coordenadas geogr\'aficas en la Jetson Nano}}{8}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Detalles del mapa creado en AWS}}{9}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces coordenadas geogr\'aficas que recibe la p\'agina web }}{9}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Amplify Hosting }}{10}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces ramificaci\'on de repositorio de Github}}{11}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Acceso a la p\'agina web desde el buscador}}{11}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Red 4G LTE activa por medio de la interfaz wwan0}}{13}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Conexi\'on hac\IeC {\'\i }a Aws}}{13}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces C\'odigo de somnolencia parte 1}}{14}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces C\'odigo de somnolencia parte 2}}{15}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces C\'odigo de somnolencia parte 3}}{15}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces C\'odigo de somnolencia parte 4}}{16}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Grabaci\'on del video y el envi\'o del video hac\IeC {\'\i }a la p\'agina web}}{16}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Prueba de somnolencia ojos abiertos}}{17}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Prueba de somnolencia ojos cerrados}}{17}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Prueba de la metrica MOR 1}}{18}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Prueba de la metrica MOR 2}}{18}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Carcasa sin armar}}{19}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Carcasa armada con la Jetson Nano y perif\'ericos integrados}}{20}{figure.25}%

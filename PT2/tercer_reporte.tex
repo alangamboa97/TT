@@ -13,7 +13,7 @@
 \usepackage{float}
 \marginsize{2cm}{2cm}{1cm}{1cm}
 \usepackage{fancyhdr}
-
+\usepackage{listings}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\footnotesize UPIITA}
@@ -52,7 +52,7 @@
 
 
 \HRule \\[0.4cm]
-{ \huge \bfseries Tercer Reporte Parcial Reporte Parcial}\\[0.4cm]
+{ \huge \bfseries Tercer Reporte Parcial}\\[0.4cm]
 
 \HRule \\[1.5cm]
 
@@ -116,73 +116,126 @@ Además de mostrar en la aplicación web la ubicación en tiempo
 real.
 
 
-
 \subsection{Descripción}
 
-\textbf{ReactJs}
+\textbf{Habilitar GPS y obtener datos de posición GPS desde la Jetson Nano }
 
-Para el desarrollo del front-end del presente proyecto, se hará uso de la librería de diseño de ReactJs. ReactJs facilia la creación de componentes reutilizables e interactivos para las interfaces de usuario.
-
-Los componentes que darán lugar a las vistas del presente proyecto son los siguientes:
-
+Se inicio habilitando el GPS en la Jetson Nano a través de la terminal:
 \begin{itemize}
 
-\item Layout.jsx: Este componente será la vista principal de la Aplicación Web. Se trata de un diseño tipo \emph{dashboard} que contendrá una sección principal que contendrá etiquetas para poder ingresar a las diferentes vistas de la aplicación. Además estará compuesta también de una sección secundaría que mostrará el contenido de dichas vistas.
+\item Configuración del puerto serial: 
 
-\item Incidencias.jsx: Este componente se encargará de mostrar todas las incidencias registradas en la base de datos. Las incidencias serán desplegadas en forma de lista.
+\begin{lstlisting}
+sudo stty -F /dev/ttyTHS1 115200
+\end{lstlisting}
+
+/dev/ttyTHS1 es el dispositivo del puerto serial utilizado y 115200 es la velocidad de transmisión.\\
+
+\item Habilitar el GPS: 
+el comando echo envia comandos AT al módulo GPS y habilita su funcionalidad.
+
+\begin{lstlisting}
+echo "AT+CGNSPWR=1" > /dev/ttyTHS1
+\end{lstlisting}
 
 
-\item Incidencias.jsx: Este componente de mostrar un reporte de incidencia a detalle. Contendrá una ventana que permitirá ver el video del momento de la incidencia registrada. Así como los datos de la fecha y hora. Además de botones para poder confirmar o rechazar la incidencia. Finalmente contendrá el nombre del conductor además de una opción para poder consultar la ubicación en tiempo real del conductor.
+\item Verificar el estado del GPS:  
+El comando cat, lee la salida del puerto serial y verificar el estado del GPS. 
 
-\item Ubicación.jsx: Este componente mostrará la ubicación en tiempo real del conductor con ayuda del servicio de diseño de mapas Leaflet.
+\begin{lstlisting}
+cat /dev/ttyTHS1
+\end{lstlisting}
 
-\item Conductores.jsx: Este componente mostrará todos los conductores registrados en la base de datos en forma de lista. 
 
+Al ejecutar el comando cat /dev/ttyTHS1 en la terminal, se mostrará la salida del puerto serial /dev/ttyTHS1. Si el GPS se habilitó correctamente, se observará la respuesta del módulo GPS indicando que está listo para recibir datos de posición. Esta respuesta confirmará que el GPS está funcionando correctamente y listo para proporcionar información de ubicación.\\
 \end{itemize}
 
+Para obtener los datos de posición GPS, fue necesario interactuar con el módulo SIM7600X a través del programa en Python:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/GPSpy1.JPG}
+\captionof{figure}{Código que permite obtener la posición GPS parte 1}
+ \label{fig:GPSpy1} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/GPSpy2.JPG}
+\captionof{figure}{Código que permite obtener la posición GPS parte 2}
+ \label{fig:GPSpy2} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/GPSpy3.JPG}
+\captionof{figure}{Código que permite oibtener la posición GPS parte 3}
+ \label{fig:GPSpy3} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.7]{imagenes/GPSpy4.JPG}
+\captionof{figure}{Código que permite obtener la posición GPS parte 4}
+ \label{fig:GPSpy4} 
+\end{center} 
+
+\textbf{AWS Maps}\\
+
+AWS Maps es un servicio de Amazon Web Services que proporciona capacidades de mapas y geolocalización en la nube. Permite a crear, visualizar y analizar datos geoespaciales en aplicaciones y servicios.\\
+
+Se creó un mapa en AWS Maps donde se configuró la apariencia y funcionalidad del mismo, incluyendo los estilos de visualización, las capas de datos y las interacciones del usuario. El propósito de este mapa es mostrar información geográfica, como ubicaciones, rutas, geovallas, puntos de interés, entre otros. La configuración del mapa permitió personalizar su aspecto y adaptarlo a las necesidades del proyecto.\\
+
+Para crear el mapa se inició sesión en la Consola de administración de AWS. Luego,se accedió a la página de AWS Maps Service en la consola de administración. A continuación, se hizo clic en "Crear mapa" para comenzar a crear el mapa.En el proceso de creación, se seleccionó un nombre para el mapa y se especificó la región de AWS donde se deseaba crearlo. Seguidamente, se eligió el estilo de mapa y posteriormente  se configurarón las capas del mapa, pudiendo agregar capas para mostrar datos como carreteras, edificios, ríos, y también pudo agregar sus propios datos geoespaciales como capas personalizadas, finalmente, se  de creo el mapa.\\
+
+Una vez que creado el mapa en AWS Maps, se agrego y configuro un rastreador para realizar el seguimiento del dispositivo llamado "mydevice" en el mapa. Los rastreadores se encargaron de recopilar y actualizar la ubicación de los dispositivos, brindando información en tiempo real.\\
+
+A continuación, se presenta un resumen de cómo se creó un rastreador en AWS Maps:
+
+En la página del mapa en la consola de administración de AWS Maps, se hizo clic en "Crear rastreador". Se seleccionó un nombre para el rastreador y se especificó la región de AWS donde se deseaba crear. Se procedió a configurar los detalles del rastreador, como la frecuencia de actualización de la ubicación de los dispositivos en este caso cada 10m envía las coordenadas. Finalmente, se hizo clic en "Crear rastreador" para finalizar la configuración del mismo.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Mymapaws.png}
+\captionof{figure}{Mapa creado en AWS - MyMap}
+ \label{fig:Mymapa} 
+\end{center} 
+
+
+\textbf{Ubicación geográfica en la Aplicación web}
+
+Para obtener el historial de posiciones de un dispositivo, se definió la función llamada "getDevicePosition". Posteriormente, se utilizó la función "client.getDevicePositionHistory" con el argumento "params" para solicitar el historial de posiciones del dispositivo. Después, se creó la variable "tempPosMarkers" para almacenar los resultados obtenidos al mapear los elementos de "data.DevicePositions". Para cada elemento "devPos" en "data.DevicePositions", se imprimió su posición en la consola y se generó un nuevo objeto con propiedades "index", "Long" y "lat", que representaban los valores de la posición del dispositivo. Este archivo se guardó con la extensión .jsx.
+
+\begin{center}
+  \includegraphics[scale=0.35]{imagenes/RealTimeMap}
+\captionof{figure}{Código para obtener la ubicación geográfica en la aplicación web}
+ \label{fig:RealTimeMap} 
+\end{center} 
 
 
 \subsection{Resultados}
 
-De acuerdo con los componentes explicados anteriormente, las vistas que contendrá la aplicación web son las siguientes:
-
-\begin{itemize}
-
-\item Página Principal
-\begin{center}
-  \includegraphics[scale=0.3]{imagenes/principal}
-\captionof{figure}{Página Principal - Layout.jsx}
- \label{fig:vista_principal} 
-\end{center} 
-
-\item Reporte de Incidencia
-	
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/incidencia}
-\captionof{figure}{Vista Reporte Incidencia Incidencia - Incidencia.jsx}
- \label{fig:vista_incidencia} 
-\end{center} 
-
-\item Ubicación
+Obtención de coordenadas geográficas 
 
 \begin{center}
-  \includegraphics[scale=0.4]{imagenes/ubicacion}
-\captionof{figure}{Vista Ubicacion}
- \label{fig:vista_ubicacion} 
-\end{center} 
-
-\item Conductores
-
-\begin{center}
-  \includegraphics[scale=0.3]{imagenes/conductores}
-\captionof{figure}{Vista Conductores - Conductores.jsx}
- \label{fig:vista_conductores} 
+  \includegraphics[scale=0.55]{imagenes/Mymapaws2.png}
+\captionof{figure}{coordenadas geográficas en la Jetson Nano}
+ \label{fig:Mymapadet} 
 \end{center} 
 
 
+Mapa creado en AWS Maps 
 
-\end{itemize}
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/Mymapaws2.png}
+\captionof{figure}{Detalles del mapa creado en AWS}
+ \label{fig:Mymapadet} 
+\end{center} 
 
+
+coordenadas geográficas que recibe la página web 
+
+\begin{center}
+  \includegraphics[scale=0.65]{imagenes/RealTimeMap2}
+\captionof{figure}{coordenadas geográficas que recibe la página web }
+ \label{fig:CorGeo} 
+\end{center} 
 
 
 \newpage
@@ -199,7 +252,8 @@ Se necesita ingresar a la consola de AWS y seleccionar el servicio de Amplify Ho
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/hosting}
-\captionof{figure}{Módulo Base-Hat SIM7600G-H}
+\captionof{figure}{Amplify Hosting
+}
  \label{fig:hat} 
 \end{center} 
 
@@ -207,60 +261,22 @@ Hosting requiere algúna fuente de alojamiento de código para poder desplegar la 
 
 Posteriormente, se requiere seleccionar el repositorio el cual será alojado, en este caso, el nombre de dicho repositorio es \emph{eb}. A su vez, se selecciona la ramificación \emph{main} para ser desplegada.
 
-
-
 \begin{center}
-  \includegraphics[scale=0.6]{imagenes/repo}
-\captionof{figure}{Instalación de librerías}
+  \includegraphics[scale=0.5]{imagenes/repo}
+\captionof{figure}{ramificación de repositorio de Github}
  \label{fig:libraries} 
 \end{center} 
 
-Los comandos ingresados en la figura \ref{fig:libraries} se encargan de instalar todas las librarías y el software necesario para poder comenzar a utilizar la red LTE mediante el módulo SIM7600G-H. Además también se crea un directorio que contendrá la configuración de usuario así como un cuenta enlazada al módulo.
-
-Posteriormente, probamos que el puerto GPIO de nuestra Jetson Nano esté funcionando con los siguientes comandos:
-
-\begin{center}
-  \includegraphics[scale=0.6]{imagenes/gpio}
-\captionof{figure}{Instalación de librerías}
- \label{fig:gpio} 
-\end{center}
-
-Después de haber realizado los pasos anteriores, el pin con el nombre NET deberá parpadear constantemente, lo que significa que el módulo está listo para ser utilizado.
-
-Para realizar la compunicación LTE, primero se ingresa a la librería minicom utilizando los siguientes comandos:
-
-\begin{center}
-  \includegraphics[scale=0.6]{imagenes/minicom}
-\captionof{figure}{Minicom}
- \label{fig:gpio} 
-\end{center}
-
-Posteriormente, se necesita actualizar los drivers:
-
-\begin{center}
-  \includegraphics[scale=0.6]{imagenes/drivers}
-\captionof{figure}{Actualización de drivers}
- \label{fig:gpio} 
-\end{center}
-
-Finalmente se establece una dirección IP con el siguiente comando:
-
-
-\begin{center}
-  \includegraphics[scale=0.6]{imagenes/modulo}
-\captionof{figure}{Establecer dirección IP}
- \label{fig:gpio} 
-\end{center}
-
-
-
-
-
-	
 
 \subsection{Resultados}
-Se realizó la investigación para conocer los pasos necesarios para establecer comunicación LTE utilizando el módulo SIM7600G-H para la NVIDIA Jetson Nano.
+Acceso a la pagina web desde el buscador con la siguiente URL: \\
+https://main.dcst1c83llut3.amplifyapp.com/login
 
+\begin{center}
+  \includegraphics[scale=.45]{imagenes/paginaweb.JPG}
+\captionof{figure}{Acceso a la página web desde el buscador}
+ \label{fig:libraries} 
+\end{center} 
 
 \newpage
 
@@ -271,68 +287,33 @@ Implementación de técnicas y configuraciones necesarias para realizar la conexió
 
 
 \subsection{Descripción}
-Para realizar la conexión del Módulo Central de Procesamiento y la apliación web, se utilizó la librería \textbf{Boto3}
 
-\begin{center}
-  \includegraphics[scale=0.55]{imagenes/addstorage}
-\captionof{figure}{Configuración de servicio de almacenamiento S3}
- \label{fig:addstorage} 
-\end{center} 
-
-Posteriormente, se requiere especificar que tipo de servicio de almacenamiento se integrará a la aplicación (multimedia o base de datos NoSQL). Para el presente proyecto, se utilizará el almacenamiento de contenido multimedia, por lo tanto, se seleccionará dicha opción.
-
-\begin{center}
-  \includegraphics[scale=0.55]{imagenes/content}
-\captionof{figure}{Generación de Endpoint de GraphQL}
- \label{fig:MongoA} 
-\end{center} 
-
-Ingresamos el nombre de nuestro espacio de almacenamiento:
-
-\begin{center}
-  \includegraphics[scale=0.55]{imagenes/name}
-\captionof{figure}{Generación de Endpoint de GraphQL}
- \label{fig:MongoA} 
-\end{center}
-
-Después, se necesita establecer cuantos usuarios, así como cuales podrán acceder a dicho servicio:
-
-\begin{center}
-  \includegraphics[scale=0.55]{imagenes/rules}
-\captionof{figure}{Generación de Endpoint de GraphQL}
- \label{fig:MongoA} 
-\end{center}
+La primer configuración que se realizó, fue la habilitación y activación de la red 4G Lte en la Jetson Nano por medio de la interfaz wwan0, que nos permite conectarnos a internet por medio de la red celular.
 
 
-\begin{center}
-  \includegraphics[scale=0.55]{imagenes/rulesauth}
-\captionof{figure}{Generación de Endpoint de GraphQL}
- \label{fig:MongoA} 
-\end{center}
+Posteriormente se realizó la conexión del Módulo Central de Procesamiento y la apliación web, se utilizó la librería \textbf{Boto3}
 
-\begin{center}
-  \includegraphics[scale=0.55]{imagenes/guestrules}
-\captionof{figure}{Generación de Endpoint de GraphQL}
- \label{fig:MongoA} 
-\end{center}
+Boto3 es una biblioteca de Python desarrollada por Amazon Web Services (AWS) que permite interactuar con los servicios de AWS de manera programática. Proporciona una interfaz de programación de aplicaciones (API) fácil de usar para acceder y administrar recursos en la nube de AWS.
 
-\begin{center}
-  \includegraphics[scale=0.55]{imagenes/push}
-\captionof{figure}{Generación de Endpoint de GraphQL}
- \label{fig:MongoA} 
-\end{center}
+Para crear una conexión a AWS Amplify utilizando Boto3, se siguieron los siguientes pasos:
 
+En primer lugar, se instaló Boto3 utilizando el comando: pip install boto3. A continuación, se configuraron las credenciales de AWS, proporcionando las claves de acceso de IAM que otorgan acceso a los servicios de AWS. Estas credenciales se configuraron manualmente en el archivo de configuración. Luego, se importó el módulo Boto3 en el script de Python y se creó una conexión al servicio de AWS Amplify utilizando las credenciales configuradas anteriormente. A partir de la conexión establecida, se pudieron utilizar los métodos proporcionados por el cliente de Boto3 para interactuar con AWS Amplify.
 
 
 \subsection{Resultados}
 
-Al ingresar a la consola de servicios de AWS, en la sección de buckets de S3, se puede observar que se encuentra el bucket recién creado llamado \emph{videos175126-dev}.
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/4glte.jpeg}
+\captionof{figure}{Red 4G LTE activa por medio de la interfaz wwan0}
+ \label{fig:4GLTE} 
+\end{center} 
 
+Conexión a AWS Amplify utilizando Boto3
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/buckets}
-\captionof{figure}{Tablas generadas mediante los schemas definidos}
- \label{fig:cognito} 
+  \includegraphics[scale=0.85]{imagenes/ConexionPw.JPG}
+\captionof{figure}{Conexión hacía Aws}
+ \label{fig:addstorage} 
 \end{center} 
 
 
@@ -341,145 +322,75 @@ Al ingresar a la consola de servicios de AWS, en la sección de buckets de S3, se
 \section{Implementación del modelo de red neuronal para la detección de somnolencia en la Jetson Nano}
 
 
-
 \subsection{Objetivo}
 Integrar la red neuronal entrenada en conjunto con los
 algoritmos de detección de rostro y ojos, y la metrica MOR.
 	
 \subsection{Descripción}
-
-GraphQL trabaja con 3 tipos de archivos:
-
-\begin{itemize}
-\item \emph{Queries:} Este archivo contiene las funciones que permitirán acceder a los datos.
-
-\item \emph{Mutations:} En este archivo se encuentran todas las funciones que permitirán realizar el manejo de datos (actualizar, eliminar, agregar)
-
-\item \emph{Subscriptions:} Las \emph{subscriptions} en GraphQL son funciones de consulta especiales, que se envían a travez de un punto de conexión websocket. Permiten realizar cierta operación cada vez que se ejecuta una acción en el backend.
-\end{itemize}
-Para comenzar con el archivo de \emph{Queries}se tienen las siguientes funciones:
+Se cargó el modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. Luego, se inicializó la cámara para capturar el flujo de video utilizando el método gstreamer pipeline. A continuación, se inició un bucle infinito para procesar cada cuadro de video capturado. Dentro del bucle, cada cuadro de video se convirtió a escala de grises y se utilizaron clasificadores de cascada de Haar para detectar caras y ojos en el cuadro de video. Posteriormente, se extrajo el área de interés correspondiente a cada ojo detectado.
+Se realizó el preprocesamiento necesario en cada ojo para que coincidiera con el formato de entrada del modelo y se llevó a cabo una predicción utilizando el modelo entrenado para determinar si los ojos estaban cerrados o abiertos. Se calculó un puntaje basado en el número de ojos cerrados detectados y se mostró este puntaje junto con un texto que indica si los ojos estaban cerrados o abiertos en el cuadro de video. Si el puntaje supera el umbral determinado, se consideraba que la persona estaba somnolienta y se activaba una alerta. El bucle continúa hasta que se presiona la tecla 'q', momento en el cual se liberaran los recursos de la cámara y se cierran las ventanas de visualización
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/getconductor}
-\captionof{figure}{Función getConductor}
- \label{fig:getConductor} 
+  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia1.JPG}
+\captionof{figure}{Código de somnolencia parte 1}
+ \label{fig:Somnolencia1} 
 \end{center}
 
-La función de la figura \ref{getConductor}, obtiene los datos de un solo Conductor.
-
-
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/listconductors}
-\captionof{figure}{Función listConductors}
- \label{fig:listConductors} 
+  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia2.JPG}
+\captionof{figure}{Código de somnolencia parte 2}
+ \label{fig:Somnolencia1} 
 \end{center}
 
-La función de la figura \ref{fig:listConductors} obtiene todos los datos de todos los conductores almacenados en la base de datos.
-
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/getincidencia}
-\captionof{figure}{Función getIncidencia}
- \label{fig:getIncidencia} 
+  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia3.JPG}
+\captionof{figure}{Código de somnolencia parte 3}
+ \label{fig:Somnolencia1} 
 \end{center}
 
-La función de la figura \ref{fig:getIncidencia} obtiene los datos de una sola Incidencia.
-
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/listIncidencias}
-\captionof{figure}{Función listIncidencias}
- \label{fig:listIncidencias} 
+  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia4.JPG}
+\captionof{figure}{Código de somnolencia parte 4}
+ \label{fig:Somnolencia1} 
 \end{center}
 
-La función de la figura \ref{fig:listIncidencias} obtiene los datos de todas las incidencias de almacenadas en la base de datos.
-
-En cuanto al archivo de \emph{Mutations} se tienen las siguientes funciones:
+El archivo respecto a la métrica MOR, se complementó con la grabación del video y el envió del video hacía la página web.
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/createconductor}
-\captionof{figure}{Función createConductor}
- \label{fig:createConductor} 
+  \includegraphics[scale=0.6]{imagenes/MORcodigo1.JPG}
+\captionof{figure}{ Grabación del video y el envió del video hacía la página web}
+ \label{fig:Somnolencia1} 
 \end{center}
-
-La función de la figura \ref{fig:createConductor} se encarga de crear el registro de un conductor en la base de datos.
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/updateConductor}
-\captionof{figure}{Función updateConductor}
- \label{fig:updateConductor} 
-\end{center}
-
-La función de la figura \ref{fig:updateConductor} se encarga de modificar datos del registro de un conductor.
-
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/deleteconductor}
-\captionof{figure}{Función deleteConductor}
- \label{fig:deleteConductor} 
-\end{center}
-
-La función de la figura \ref{fig:deleteConductor} se encarga de eliminar un conductor de la base de datos.
-
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/createIncidencia}
-\captionof{figure}{Función createIncidencia}
- \label{fig:createIncidencia} 
-\end{center}
-
-La función de la figura \ref{fig:createIncidencia} se encarga de crear una Incidencia en la base de datos.
-
-Para el archivo de \emph{subscriptions} se tienen la siguiente función:
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/oncreateIncidencia}
-\captionof{figure}{Función oncreateIncidencia}
- \label{fig:oncreateIncidencia} 
-\end{center}	
-
-La función de la figura \ref{fig:oncreateIncidencia} se encarga de realizar una consulta cada vez que una Incidencia nueva es dada de alta en la base de datos.
-
-
-
-Al estar trabajando con GraphQL dentro del proyecto, la manera en que se podrán realizar las operaciones \emph{CRUD - (Create, Read, Update, Delete)}, será mediante funciones JSON.
-
-Para comprobar que la API permite dichas operaciones, se debe ingresar a la consola de AWS y dirigirse a la sección de AWS AppSync. 
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/consola}
-\captionof{figure}{Consola de AWS}
- \label{fig:awsconsole} 
-\end{center} 
-
-Posteriormente se necesita ingresar a la sección de consultas.
-
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/funciones}
-\captionof{figure}{Funcionamiento de Appsync}
- \label{fig:MongoA} 
-\end{center} 
-
-
-AWS permite elegir si realizar un \emph{query}, \emph{mutation}, o \emph{subscription} mediante código JSON
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/crear}
-\captionof{figure}{Crear Conductor}
- \label{fig:crearConductor} 
-\end{center} 
-
-En la figura \ref{fig:crearConductor} se puede apreciar una sentencia JSON que permite utilizar las funciones previamente creadas para dar de alta un conductor.
-
-
 
 \subsection{Resultados}
 
-Como resultado tenemos un log que nos muestra la entrada creada
+
 \begin{center}
-  \includegraphics[scale=0.4]{imagenes/log}
-\captionof{figure}{Resultado}
+  \includegraphics[scale=0.4]{imagenes/OE.jpeg}
+\captionof{figure}{Prueba de somnolencia ojos abiertos}
  \label{fig:crearConductor} 
 \end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/CE.jpeg}
+\captionof{figure}{Prueba de somnolencia ojos cerrados}
+ \label{fig:crearConductor} 
+\end{center} 
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/MOR2.jpeg}
+\captionof{figure}{Prueba de la metrica MOR 1}
+ \label{fig:crearConductor} 
+\end{center} 
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/MOR1.jpeg}
+\captionof{figure}{Prueba de la metrica MOR 2}
+ \label{fig:crearConductor} 
+\end{center} 
+
 
 
 
@@ -491,76 +402,38 @@ Como resultado tenemos un log que nos muestra la entrada creada
 Integrar dentro de un contenedor los periféricos junto con la Jetson Nano
 \subsection{Descripción}
 
-\textbf{Instalación en la tarjeta microSD}
+Se integraron los periféricos dentro del contenedor para la Jetson Nano.
 
-El Jetson Nano Developer Kit utiliza una tarjeta microSD como dispositivo de arranque y almacenamiento principal. Por tanto fue necesario instalar un entorno de desarrollo en la propia placa, para lo cual se requirio de una tarjeta microSD de un minímo recomendado de 32 GB de acuerdo a la documentación Nvidia.  \cite{Nvidia}.\\
+El contenedor de la Jetson Nano es una carcasa de metal con un ventilador de refrigeración de 5 V, diseñado específicamente para ser compatible con la placa de desarrollo NVIDIA Jetson Nano (versión B01 con 4 GB de RAM).
 
-Como primer paso se descargo el \emph{Jetson Nano Developer Kit SD Card Image} \cite{sdimage} y posteriormente se instalo en la tarjeta microSD desde el sistema operativo Linux, utilizando los siguentes pasos:
-\begin{enumerate}
-
-\item Se abrio una terminal y se inserto la tarjeta microSD. 
-\item Se uso el siguiente comando para mostrar que dispositivo de disco se le asignó:
-
-\begin{verbatim}
-dmesg | tail | awk '\$3 == "sd" {print}'
-\end{verbatim}
-
-
-\item Se  escribio la imagen de la tarjeta SD comprimida (previamente descargada) en la tarjeta microSD con el comando:
-
-\begin{verbatim}
-/usr/bin/unzip -p ~/Downloads/jetson_nano_devkit_sd_card.zip | 
-sudo /bin/dd of=/dev/sda bs=1M status=progress
-\end{verbatim}
-
-\item Finalmente se expulso del dispositivo de disco desde la linea de comando utilizando:
-
-\begin{verbatim}
-sudo eject /dev/sda
-\end{verbatim}
-\end{enumerate}
-
-\textbf{Configuración y primer arranque}\\
-
-Jetson Nano Developer Kit permite dos formas de interactuar, la primera es por medio de otra computadora y la segunda haciendo uso de una pantalla, teclado y mouse conectados. Adicionalmente el kit de desarrollo no cuenta con una fuente de alimentación incluida por lo que se utilizó  una fuente de alimentación Micro-USB(5V-2A).\\
-
-Para iniciar el kit de desarrollo se conectó el mouse, la pantalla, el teclado y la funete de alimentación, posteriormente se realizó la configuración inicial del sistema operativo el cual incluyó lo siguiente:
-
-\begin{itemize}
-\item Revisar y acepter el EULA del software NVIDIA Jetson.
-\item Seleccionar el idioma del sistema, la distribución del teclado y la zona horaria
-\item Crear nombre de usuario, contraseña y nombre de la computadora.
-\item Seleccione el tamaño de partición de la aplicación: se recomienda utilizar el tamaño máximo sugerido.
-\end{itemize}
-
-
-
+Esta carcasa ofrece varias características adicionales, como soporte para reinicio de cámara, un botón de encendido y una compatibilidad específica con la cámara Waveshare IMX219 Series. Además, el contenedor también tiene soporte para adaptadores inalámbricos Wireless-AC8265, lo que permite la conectividad Wi-Fi y Bluetooth en la Jetson Nano. Otra característica destacada es la compatibilidad con el módulo de placa de expansión LTE CAT4 basado en SIM7600G-H. Este módulo proporciona capacidades de comunicación inalámbrica, como llamadas telefónicas, mensajes de texto (SMS) y posicionamiento GPS utilizando los sistemas BeiDou y Glonass.
 
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/cognito}
-\captionof{figure}{Funcionamiento de Amazon Cognito}
- \label{fig:cognito} 
+  \includegraphics[scale=0.25]{imagenes/Perifericos1.jpeg}
+\captionof{figure}{Carcasa sin armar}
+ \label{fig:crearConductor} 
 \end{center} 
-
-
 
 
 \subsection{Resultados}
 
+contenedor de la Jetson nano y los periféricos integrados:
 
 
-
-
-
-
-\newpage
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/Perifericos2.jpeg}
+\captionof{figure}{Carcasa armada con la Jetson Nano y periféricos integrados}
+ \label{fig:crearConductor} 
+\end{center} 
 
 
 \newpage
 \section{Conclusiones}
 
+En conclusión, en este proyecto se habilitó el GPS en la Jetson Nano a través de la terminal utilizando comandos AT y se verificó su estado mediante la lectura de la salida del puerto serial. Luego, se interactuó con el módulo SIM7600X a través de un programa en Python para obtener los datos de posición GPS. Se utilizó AWS Maps, un servicio de Amazon Web Services, para crear un mapa personalizado en la nube. Se configuraron la apariencia y la funcionalidad del mapa, incluyendo los estilos de visualización, las capas de datos y las interacciones del usuario.  Se implementó una función para obtener el historial de posiciones del dispositivo, utilizando la función "client.getDevicePositionHistory" de AWS. Los resultados se mapearon en un objeto que contenía las propiedades de la posición del dispositivo. Se guardó este archivo con extensión .jsx. Para desplegar la aplicación web en su totalidad, se utilizó Amplify Hosting como servicio de hosting. Se seleccionó el repositorio alojado en GitHub y se configuró la conexión utilizando la biblioteca Boto3 de Python, que permite interactuar con los servicios de AWS. Además, se cargó un modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. Se utilizó la cámara de la Jetson Nano para capturar el flujo de video y se procesó cada cuadro de video para detectar caras y ojos. Se realizó una predicción utilizando el modelo entrenado para determinar si los ojos estaban cerrados o abiertos. Se mostró un puntaje y un texto indicando si los ojos estaban cerrados o abiertos, y se activó una alerta si el puntaje superaba un umbral establecido. Finalmente se integraron los periféricos junto con la Jetson nano dentro de una carcasa de metal.
 
+Este proyecto integró el uso del GPS en la Jetson Nano, la visualización de datos geográficos en un mapa personalizado utilizando AWS Maps, la obtención de historial de posiciones del dispositivo, el despliegue de una aplicación web utilizando Amplify Hosting, la detección de ojos cerrados y abiertos utilizando un modelo de red neuronal convolucional y la integración de los périfericos con la Jetson Nano dentro de una carcasa de metal.
 
 
 \newpage
@@ -579,18 +452,11 @@ Para iniciar el kit de desarrollo se conectó el mouse, la pantalla, el teclado y
 \bibitem {graphql} Facebook Dev Team, \emph{Introduction to GraphQL | GraphQL | A query language for your API} https://graphql.org/learn/ (accedido el 4 de abril de 2023).
 
 
-
-
-
 \bibitem{Nvidia} NVIDIA, "Get Started with the Jetson Nano Developer Kit", NVIDIA Developer, 2019. [Online]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro. [Accedido: Abril 02 2023].
 
 \bibitem{sdimage} Nvidia Developer, "Get Started with Jetson Nano Devkit," Nvidia Developer. [En línea]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#write. [Accedido: 2 de abril de 2023].
 
 \bibitem{JetsonInf}Dusty, N. "Building the Repo - NVIDIA Jetson Inference," GitHub. [Online]. Disponible en: https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md. [Accedido en: 02-abr-2023].
-
-
-
-
 
 
 \end{thebibliography}
