@@ -1,0 +1,117 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Diagrama general del dise\~no preliminar de la arquitectura del sistema. }}{14}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Descomposici\'on en la metodolog\IeC {\'\i }a \emph {Top-Down}. \cite {TopDown}}}{16}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Kit para Desarrolladores Jetson Nano \cite {JetsonNano}. }}{18}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces M\'odelo est\'andar de una neurona artificial}}{19}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Arquitectura general de una Red Neuronal Convolucional \cite {CNNpresentacion}.}}{20}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Ejemplo de Max Pooling}}{21}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Boosting}}{22}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Arquitectura de una CDN}}{22}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Diagrama del sistema basado en la metodolog\IeC {\'\i }a Top-Down}}{31}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Mapa de cobertura 3G/4G/5G en M\'exico.\cite {CoberturaNacional}}}{33}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Mapa de cobertura 3G/4G/5G en la Ciudad de M\'exico.\cite {CoberturaNacional}}}{33}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Programa cl\'asico vs Machine Learning}}{40}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de Casos de Uso - Subm\'odulo de Visi\'on Artificial}}{44}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Modulo de C\'amara IMX219-160}}{48}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Redes Unicapa}}{51}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Red Neuronal Unicapa}}{51}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Redes Neuronales Multicapa}}{52}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una}}{52}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Representaci\'on Gr\'afica de la Funci\'on ReLu}}{53}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la funci\'on de Activaci\'on ReLu}}{53}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Representaci\'on gr\'afica de la funci\'on Tangente Hiperb\'olica}}{54}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la funci\'on de Activaci\'on Tanh}}{54}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Mapa de Cobertura LTE-Telcel}}{59}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Esquema \emph {handover} entre dos celdas }}{61}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Mapa de cobertura de la red LTE }}{61}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Diagrama de Casos de Usos del M\'odulo de Estaci\'on Base}}{65}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de Casos de Uso - Aplicaci\'on Web }}{74}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Planes de Alojamiento AWS Amplify}}{81}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Tiempos de Respuesta de servidores de HostGator}}{82}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Diagrama de Secuencia - M\'odulo Central de Procesamiento}}{84}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Dimensiones Nvidia Jetson Nano}}{85}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Nvidia Jetson Nano}}{86}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Zumbador Pasivo KY-006}}{86}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Modulo de C\'amara IMX219-160}}{86}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Jumpers}}{87}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Micro SD}}{87}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces LTE Base HAT}}{87}{figure.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces LE 910Cx Mini PCIe Series Linux}}{88}{figure.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}}{88}{figure.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Carcasa Waveshare}}{89}{figure.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Componentes de la Unidad Contenedora de Procesamiento}}{89}{figure.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Diagrama de Actividades - Subm\'odulo de Visi\'on Artificial}}{91}{figure.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Diagrama de Flujo - Subm\'odulo de Visi\'on Artificial}}{92}{figure.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Puntos de referencia}}{93}{figure.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces \emph {Mouth Opening Ratio}}}{94}{figure.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Diagrama de Flujo del M\'odulo de Comunicaciones}}{95}{figure.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Diagrama Actividades del M\'odulo de Comunicaciones}}{96}{figure.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Diagrama de Dise\~no - M\'odulo de Estaci\'on Base}}{97}{figure.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Diagrama de Comunicaci\'on - M\'odulo de Estaci\'on Base}}{98}{figure.49}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Diagrama de Clases - Aplicaci\'on Web}}{99}{figure.50}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Diagrama de Secuencia Detalle Reporte Incidencia }}{100}{figure.51}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Diagrama de Secuencia Consultar Ubicaci\'on}}{100}{figure.52}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Diagrama de Secuencia Recuperar Contrase\~na }}{100}{figure.53}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Diagrama de Secuencia Confirmar Incidencia}}{101}{figure.54}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Diagrama de Secuencia Consultar Perfil}}{101}{figure.55}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Diagrama de Secuencia Registrar Conductor }}{102}{figure.56}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Diagrama de Secuencia Modificar Conductor}}{102}{figure.57}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Diagrama de Secuencia Eliminar Conductor }}{102}{figure.58}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Diagrama de Secuencia Estado de los Perif\'ericos }}{103}{figure.59}%
+\contentsline {figure}{\numberline {60}{\ignorespaces P\'agina Inicio de Sesi\'on }}{103}{figure.60}%
+\contentsline {figure}{\numberline {61}{\ignorespaces P\'agina Principal}}{104}{figure.61}%
+\contentsline {figure}{\numberline {62}{\ignorespaces P\'agina Perfil del Conductor }}{104}{figure.62}%
+\contentsline {figure}{\numberline {63}{\ignorespaces P\'agina Detalle de Incidencia }}{105}{figure.63}%
+\contentsline {figure}{\numberline {64}{\ignorespaces P\'agina Ubicaci\'on en Tiempo Real }}{105}{figure.64}%
+\contentsline {figure}{\numberline {65}{\ignorespaces Modelo propuesto para la base de datos en MongoDB}}{106}{figure.65}%
+\contentsline {figure}{\numberline {66}{\ignorespaces Documento de Registro de Conductores}}{106}{figure.66}%
+\contentsline {figure}{\numberline {67}{\ignorespaces Documento de registro de Incidencias}}{107}{figure.67}%
+\contentsline {figure}{\numberline {68}{\ignorespaces Arquitectura Amazon Cognito}}{108}{figure.68}%
+\contentsline {figure}{\numberline {69}{\ignorespaces Intalaci?n de bibliotecas}}{109}{figure.69}%
+\contentsline {figure}{\numberline {70}{\ignorespaces Instalaci?n de comandos}}{109}{figure.70}%
+\contentsline {figure}{\numberline {71}{\ignorespaces Prueba de SIM7600G }}{109}{figure.71}%
+\contentsline {figure}{\numberline {72}{\ignorespaces Comandos GPS para pruebas.}}{110}{figure.72}%
+\contentsline {figure}{\numberline {73}{\ignorespaces C?digo que permite obtener la posici?n GPS parte 1}}{110}{figure.73}%
+\contentsline {figure}{\numberline {74}{\ignorespaces C?digo que permite obtener la posici?n GPS parte 2}}{111}{figure.74}%
+\contentsline {figure}{\numberline {75}{\ignorespaces C?digo que permite oibtener la posici?n GPS parte 3}}{111}{figure.75}%
+\contentsline {figure}{\numberline {76}{\ignorespaces C?digo que permite obtener la posici?n GPS parte 4}}{112}{figure.76}%
+\contentsline {figure}{\numberline {77}{\ignorespaces Mapa creado en AWS - MyMap}}{113}{figure.77}%
+\contentsline {figure}{\numberline {78}{\ignorespaces C?digo para obtener la ubicaci?n geogr?fica en la aplicaci?n web}}{114}{figure.78}%
+\contentsline {figure}{\numberline {79}{\ignorespaces Coordenadas geogr?ficas en la Jetson Nano}}{114}{figure.79}%
+\contentsline {figure}{\numberline {80}{\ignorespaces Detalles del mapa creado en AWS}}{115}{figure.80}%
+\contentsline {figure}{\numberline {81}{\ignorespaces Coordenadas geogr\'aficas que recibe la p\'agina web }}{115}{figure.81}%
+\contentsline {figure}{\numberline {82}{\ignorespaces Abrir minicom por comando.}}{115}{figure.82}%
+\contentsline {figure}{\numberline {83}{\ignorespaces Verificar conexi?n.}}{116}{figure.83}%
+\contentsline {figure}{\numberline {84}{\ignorespaces Descarga del driver.}}{116}{figure.84}%
+\contentsline {figure}{\numberline {85}{\ignorespaces Instalar driver.}}{116}{figure.85}%
+\contentsline {figure}{\numberline {86}{\ignorespaces Comando para comprobar interfaz wwan0.}}{116}{figure.86}%
+\contentsline {figure}{\numberline {87}{\ignorespaces Habilitar la interfaz wwan0.}}{116}{figure.87}%
+\contentsline {figure}{\numberline {88}{\ignorespaces Comunicar por Minicom.}}{117}{figure.88}%
+\contentsline {figure}{\numberline {89}{\ignorespaces Asignar IP.}}{117}{figure.89}%
+\contentsline {figure}{\numberline {90}{\ignorespaces Red 4G LTE activa por medio de la interfaz wwan0}}{118}{figure.90}%
+\contentsline {figure}{\numberline {91}{\ignorespaces Conexi\'on con boto3 hac\IeC {\'\i }a AWS}}{118}{figure.91}%
+\contentsline {figure}{\numberline {92}{\ignorespaces Instalaci\'on Amplify CLI}}{120}{figure.92}%
+\contentsline {figure}{\numberline {93}{\ignorespaces Amplify add api}}{120}{figure.93}%
+\contentsline {figure}{\numberline {94}{\ignorespaces Configuraci\'on de par\'ametros de GraphQL}}{120}{figure.94}%
+\contentsline {figure}{\numberline {95}{\ignorespaces Arquitectura Amazon Cognito}}{121}{figure.95}%
+\contentsline {figure}{\numberline {96}{\ignorespaces Implementaci\'on de Amazon Cognito en el proyecto}}{121}{figure.96}%
+\contentsline {figure}{\numberline {97}{\ignorespaces Menu de configuraci\'on de Amazon Cognito}}{122}{figure.97}%
+\contentsline {figure}{\numberline {98}{\ignorespaces Implementaci?n completada}}{122}{figure.98}%
+\contentsline {figure}{\numberline {99}{\ignorespaces Grupos de usuario}}{123}{figure.99}%
+\contentsline {figure}{\numberline {100}{\ignorespaces Grupos de usuario}}{123}{figure.100}%
+\contentsline {figure}{\numberline {101}{\ignorespaces Grupos de usuario}}{124}{figure.101}%
+\contentsline {figure}{\numberline {102}{\ignorespaces Funci?n getConductor}}{124}{figure.102}%
+\contentsline {figure}{\numberline {103}{\ignorespaces Funci?n listConductors}}{125}{figure.103}%
+\contentsline {figure}{\numberline {104}{\ignorespaces Funci?n getIncidencia}}{125}{figure.104}%
+\contentsline {figure}{\numberline {105}{\ignorespaces Funci?n listIncidencias}}{126}{figure.105}%
+\contentsline {figure}{\numberline {106}{\ignorespaces Funci?n createConductor}}{126}{figure.106}%
+\contentsline {figure}{\numberline {107}{\ignorespaces Funci?n updateConductor}}{127}{figure.107}%
+\contentsline {figure}{\numberline {108}{\ignorespaces Funci?n deleteConductor}}{127}{figure.108}%
+\contentsline {figure}{\numberline {109}{\ignorespaces Funci?n createIncidencia}}{128}{figure.109}%
+\contentsline {figure}{\numberline {110}{\ignorespaces Funci?n oncreateIncidencia}}{128}{figure.110}%
+\contentsline {figure}{\numberline {111}{\ignorespaces Consola de AWS}}{129}{figure.111}%
+\contentsline {figure}{\numberline {112}{\ignorespaces Funcionamiento de Appsync}}{129}{figure.112}%
+\contentsline {figure}{\numberline {113}{\ignorespaces Crear Conductor}}{130}{figure.113}%
+\contentsline {figure}{\numberline {114}{\ignorespaces Amplify Hosting }}{131}{figure.114}%
+\contentsline {figure}{\numberline {115}{\ignorespaces ramificaci?n de repositorio de Github}}{132}{figure.115}%
+\contentsline {figure}{\numberline {116}{\ignorespaces Acceso a la p\'agina web desde el navegador}}{132}{figure.116}%
