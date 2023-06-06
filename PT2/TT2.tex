@@ -76,18 +76,22 @@ The system will make use of computer vision techniques, such as Haar Cascades fo
 \newpage
 \section{Capítulo I: Introducción }
 
-De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018, publicado por la Organización Mundial de la Salud (OMS), el número anual de muertes por accidentes de tránsito llego a los 1,35 millones. Sin embargo, las consecuencias de estos accidentes no solamente afectan al conductor y a los pasajeros del vehículo, sino que también involucran a los peatones, ciclistas y motociclistas, en particular aquellos que residen en países en desarrollo \cite{WHO}.
+De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018 publicado por la Organización Mundial de la Salud (OMS), se registraron alrededor de 1,35 millones de muertes anuales debido a accidentes de tránsito. Estas cifras alarmantes no solo afectan a los conductores y pasajeros, sino también a los peatones, ciclistas y motociclistas, especialmente en países en desarrollo.\cite{WHO}.
 \\
 
-La somnolencia al conducir es reconocida como un factor que puede contribuir a los percances viales. De acuerdo a datos de CONAPRA, en México cada año mueren en promedio 16,500 mexicanos por percances de este tipo. Con base en estimaciones hechas por el Secretariado Técnico del Consejo Nacional para Prevención de Accidentes (STCONAPRA), los accidentes viales le cuestan al país alrededor de 150 mil millones de pesos que representan el 1.7 \% del Producto Interno Bruto (PIB), sumando costos directos e indirectos. La somnolencia, al momento de conducir se trata de un fenómeno complejo que implica disminuciones en los niveles de alerta y conciencia por parte del conductor. Esta situación se convierte en un detonador de accidentes pues disminuye en el sujeto la capacidad de identificar situaciones de riesgo y por tanto evitar el peligro \cite{IMT}. \\
+Para abordar esta problemática, se busca prevenir la somnolencia al conducir, la cual es reconocida como un factor contribuyente a los accidentes viales. En México, por ejemplo, se estima que anualmente fallecen en promedio 16,500 personas debido a estos percances. Además, los accidentes viales representan un costo significativo para el país, estimado en alrededor de 150 mil millones de pesos, equivalente al 1.7 \% del Producto Interno Bruto (PIB), considerando costos directos e indirectos. \cite{IMT}. \\
 
 En el desarrollo logístico de empresas que se encargan de transportar a pasajeros o que se encargan de repartir paquetería, los datos pueden verse de forma más alarmante o preocupante, ya que, usualmente, las personas designadas como conductores se enfrentan a largas horas de jornada sin descanso y en muchos casos, rotan por horarios que pueden ser en el día o en la noche, aumentando el riesgo de accidentarse por el desbalance de tener un horario mixto.\\ 
 
 Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{TastreoSatelital}.\\ 
 
-El rastreo satelital de vehículos funge como una de las principales opciones de sistemas capaces de indicar la ubicación de los vehículos en cuestión, sin embargo, el costo es elevado y periódico. \\
+Teniendo en cuenta este contexto, resulta relevante analizar y diseñar un sistema que aborde la problemática de la somnolencia al conducir. Este sistema se basará en el uso de una cámara digital y algoritmos de visión artificial para detectar signos de somnolencia en el conductor. Además, se incluirá un sistema de administración que permitirá la geolocalización en tiempo real, así como la gestión de conductores y reportes de incidencias.
 
-Tomando en cuenta el contexto antes planteado, se analizará y diseñará en el presente documento un sistema que alerte a un conductor con somnolencia, mediante el uso de una cámara digital y algoritmos de visión artificial, además de incluir un sistema de administración que permita la geolocalización del sistema en tiempo real, así como la gestión de conductores y reportes de incidencias. 
+\\
+El desarrollo de este sistema busca aprovechar los avances tecnológicos recientes en el campo de la visión artificial y el aprendizaje automático, así como la disponibilidad de microordenadores eficientes y las mejoras en las tecnologías de telecomunicaciones, como el 4G y el Internet de las Cosas (IoT). Estas tecnologías permitirán detectar y prevenir los síntomas de fatiga y somnolencia en los conductores, brindando una solución más asequible y efectiva en comparación con las opciones tradicionales de rastreo satelital.
+
+\\
+En resumen, el objetivo principal del presente trabajo es desarrollar un sistema portátil que pueda detectar la somnolencia al conducir, alertar al conductor y monitorear la ubicación en tiempo real, además de gestionar las incidencias detectadas. 
   
 
 \newpage
@@ -106,9 +110,9 @@ Por otra parte, se encuentran los métodos que se basan en el análisis de variabl
 Cabe mencionar que, entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede llegar a entorpecer el desempeño del conductor. \cite{Sistemasdesomnolencia}  \\
 
 Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que, los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia, sin embargo, son los métodos visuales más adecuados para dicho propósito. \cite{Sistemasdesomnolencia}   Por tanto, se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficiencia.
-
+\\
 Actualmente existen distintas opciones para la geolocalización de vehículos en tiempo real, pero con costos elevados, como lo es el rastreo satelital el cual requirere un pago servicio con una suscripción anual o mensual. Entonces, surge una oportunidad para desarollar soluciones más asequibles y que sean igualmente eficaces, como es el caso de las redes móviles LTE\cite{Referencia9}
-
+\\
 Dadas las posibles soluciones y escenarios antes mencionados se plantea la siguiente pregunta: ¿Cómo desarrollar un sistema portátil que pueda detectar la somnolencia y alertar al conductor, además de monitorear la ubicación en tiempo real y gestionar las incidencias detectadas en el conductor? 
 
 
@@ -2461,17 +2465,23 @@ Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación  como base el l
 
 \subsubsection{Análisis y Elección de lenguajes de programación web}
 
-Con respecto al desarrollo web, se requiere un lenguaje de programación que pueda ofrecer felixbilidad e interoperabilidad para su futura implementación. El lenguaje de programación que cumple en estas características, es Javascript \cite{js}.
+Al igual que en el desarrollo del \emph{backend}, existen diversas opciones para el desarrollo del frontend, e incluso en mayor medida. En este caso, los elementos fundamentales para el desarrollo del frontend de una aplicación son HTML, JavaScript y CSS. 
+
+JavaScript ha experimentado una evolución significativa y cuenta con una comunidad considerable, lo cual lo posiciona como uno de los principales lenguajes para el desarrollo frontend. 
 
 
-JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, también es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa
+
 
 A continuación se describen sus características más importantes:
 
 \begin{itemize}
-\item \textbf{Veloz}
 
-Como lenguaje de programación interpretado, no tiene que compilarse cada vez que se ejecuta, lo que hace que el desarrollo y la depuración sean más rápidos para comenzar. Además, JavaScript encuentra más velocidad al ejecutarse como un script del lado del cliente, ejecutándose en el navegador sin conectarse al servidor y ahorrando recursos valiosos para cada usuario adicional.
+\item \textbf{Versatilidad}
+
+JavaScript es un lenguaje que permite crear interactividad y dinamismo en las aplicaciones web. Su capacidad para manipular el contenido y la apariencia de una página en tiempo real, así como interactuar con elementos del DOM (Document Object Model), lo convierte en una elección ideal para crear interfaces de usuario interactivas y atractivas.
+
+\item \textbf{Multiplataforma}
+Javascript puede ser ejecutado en prácticamente cualquier navegador web moderno sin necesidad de plugins o complementos adicionales. Esto asegura que las aplicaciones frontend desarrolladas con JavaScript sean accesibles y funcionen de manera consistente en diferentes entornos y dispositivos.
 
 \item \textbf{Procesamiento asíncrono}
 
@@ -2488,7 +2498,7 @@ JavaScript permite realizar funcionalidades básicas en el lado del cliente. Esto
 
 \clearpage
 
-\subsubsection{Análisis y Elección del servidor de alojamiento  }
+\subsubsection{Análisis y Elección del servidor de alojamiento}
 Para el presente proyecto se requiere una capacidad de almacenamiento que nos permita el uso de archivos multimedia, concretamente archivos de video.
 
 \begin{table}[H]
@@ -3085,9 +3095,9 @@ Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilizado 
 
 \textbf{Habilitar GPS y obtener datos de posici?n GPS desde la Jetson Nano \cite{Waveshare}}
 
-Se inici? abriendo una terminal e instalando bibliotecas con los siguientes comandos.
+Se inicia abriendo una terminal e instalando bibliotecas con los siguientes comandos.
 
-Se remplaz? your\_user\_name con el nombre de usuario nano.
+Se remplaza your\_user\_name con el nombre de usuario nano.
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/SIM7600G-1.JPG}
@@ -3102,7 +3112,7 @@ Se remplaz? your\_user\_name con el nombre de usuario nano.
 \end{center} 
 
 
-Se coloc? el DIP en ON y se ejecut? minicom con el comando AT para probar la SIM7600.
+Se coloca el DIP en ON y se ejecut? minicom con el comando AT para probar la SIM7600.
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/SIM7600G-3.JPG}
@@ -3118,10 +3128,10 @@ Ejemplos de GPS: Se conect? la antena GPS y se coloc? el receptor en un lugar ab
  \label{fig:SIM7600G-4.JPG} 
 \end{center} 
 
-Comunicaci?n por Minicom:
+Comunicación por Minicom:
 
 
-Para obtener los datos de posici?n GPS, fue necesario interactuar con el m?dulo SIM7600X a trav?s del programa en Python:
+Para obtener los datos de posici?n GPS, fue necesario interactuar con el módulo SIM7600X a través del programa en Python:
 
 \begin{center}
   \includegraphics[scale=0.62]{imagenes/GPSpy1.JPG}
@@ -3207,7 +3217,7 @@ coordenadas geográficas que recibe la página web
 
 
 \subsubsection{Realizar la conexión de la aplicación web con el Módulo Central de Procesamiento}
-La primer configuraci?n que se realiz?, fue la habilitaci?n y activaci?n de la red 4G Lte en la Jetson Nano por medio de la interfaz wwan0 \cite{Waveshare} , que nos permite conectarnos a internet por medio de la red celular, se utiliz? una SIM Telcel para adquirir GB y poder acceder a internet.\\
+La primer configuraci?n que se realiza, fue la habilitación y activación de la red 4G Lte en la Jetson Nano por medio de la interfaz wwan0 \cite{Waveshare} , que nos permite conectarnos a internet por medio de la red celular, se utiliza una SIM Telcel para adquirir GB y poder acceder a internet.\\
 
 Se abri? una terminal y se ejecutaron los siguinete comandos para abrir minicom por comando:
 
@@ -3218,7 +3228,7 @@ Se abri? una terminal y se ejecutaron los siguinete comandos para abrir minicom 
 \end{center} 
 
 
-El siguiente comando se utiliz? para verificar la conexi?n.
+El siguiente comando se utiliza para verificar la conexi?n.
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/4glte2.JPG}
@@ -3226,7 +3236,7 @@ El siguiente comando se utiliz? para verificar la conexi?n.
  \label{fig:4glte2} 
 \end{center} 
 
-Posteriormente se descarg? el controlador con los siguinetes comandos:
+Posteriormente se descarga el controlador con los siguinetes comandos:
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/4glte3.JPG}
@@ -3234,7 +3244,7 @@ Posteriormente se descarg? el controlador con los siguinetes comandos:
  \label{fig:4glte3} 
 \end{center} 
 
-Se us? el permiso de root para instalar el controlador:
+Se usa el permiso de root para instalar el controlador:
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/4glte4.JPG}
@@ -3242,7 +3252,7 @@ Se us? el permiso de root para instalar el controlador:
  \label{fig:4glte4} 
 \end{center} 
 
-Se comprob? si se reconoce la interfaz wwan0.
+Se comprobueba si se reconoce la interfaz wwan0.
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/4glte5.JPG}
@@ -3250,7 +3260,7 @@ Se comprob? si se reconoce la interfaz wwan0.
  \label{fig:4glte5} 
 \end{center} 
 
-Se habilit? la interfaz wwan0.
+Se habilita la interfaz wwan0.
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/4glte6.JPG}
@@ -3258,7 +3268,7 @@ Se habilit? la interfaz wwan0.
  \label{fig:4glte6} 
 \end{center} 
 
-Se realiz? la comunicaci?n por Minicom:
+Se realiza la comunicación por Minicom:
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/4glte7.JPG}
@@ -3266,7 +3276,7 @@ Se realiz? la comunicaci?n por Minicom:
  \label{fig:4glte7} 
 \end{center} 
 
-Se asign? la IP:
+Se asigna la IP:
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/4glte8.JPG}
@@ -3275,13 +3285,13 @@ Se asign? la IP:
 \end{center} 
 
 
-Posteriormente se realiz? la conexi?n del M?dulo Central de Procesamiento y la apliaci?n web, se utiliz? la librer?a \textbf{Boto3}\\
+Posteriormente se realiza la conexión del Módulo Central de Procesamiento y la aplicaciónn web, se utiliza la librería \textbf{Boto3}\\
 
-Boto3 es una biblioteca de Python desarrollada por Amazon Web Services (AWS) que permite interactuar con los servicios de AWS de manera program?tica. Proporciona una interfaz de programaci?n de aplicaciones (API) f?cil de usar para acceder y administrar recursos en la nube de AWS \cite{Boto3}.\\
+Boto3 es una biblioteca de Python desarrollada por Amazon Web Services (AWS) que permite interactuar con los servicios de AWS. Proporciona una interfaz de programación de aplicaciones (API) fácil de usar para acceder y administrar recursos en la nube de AWS \cite{Boto3}.\\
 
-Para crear una conexi?n a AWS Amplify utilizando Boto3, se siguieron los siguientes pasos :\\
+Para crear una conexión a AWS Amplify utilizando Boto3, se siguieron los siguientes pasos :\\
 
-En primer lugar, se instal? Boto3 utilizando el comando: pip install boto3. A continuaci?n, se configuraron las credenciales de AWS, proporcionando las claves de acceso de IAM que otorgan acceso a los servicios de AWS. Estas credenciales se configuraron manualmente en el archivo de configuraci?n. Luego, se import? el m?dulo Boto3 en el script de Python y se cre? una conexi?n al servicio de AWS Amplify utilizando las credenciales configuradas anteriormente. A partir de la conexi?n establecida, se pudieron utilizar los m?todos proporcionados por el cliente de Boto3 para interactuar con AWS Amplify.
+En primer lugar, se instalá Boto3 utilizando el comando: \emph{pip install boto3}. A continuación, se configuraron las credenciales de AWS, proporcionando las claves de acceso de IAM que otorgan acceso a los servicios de AWS. Estas credenciales se configuraron manualmente en el archivo de configuración. Luego, se importa el módulo Boto3 en el script de Python y se crea una conexión al servicio de AWS Amplify utilizando las credenciales configuradas anteriormente. A partir de la conexión establecida, se pudieron utilizar los métodos proporcionados por el cliente de Boto3 para interactuar con AWS Amplify.
 
 ed 4G LTE activa en la Jetson Nano
 
@@ -3307,7 +3317,7 @@ Conexi?n a AWS Amplify utilizando Boto3
 \subsubsection{Definición de rutas del frontend}
 
 \begin{itemize}
-\item \textbf{Path:} "/\\ \textbf{Descripción:} En esta direcci?n se encontar? la el formulario para poder iniciar sesi?n o registrarse
+\item \textbf{Path:} "/\\ \textbf{Descripción:} En esta dirección se encontará la el formulario para poder iniciar sesión o registrarse
 
 \item \textbf{Path:} "/home \\  \textbf{Descripción:} Esta dirección será la página principal de la aplicación dónde se mostrarán las incidencias más recientes así como una lista de todos los conductores
 
@@ -3379,7 +3389,7 @@ DynamoDb es un servicio de base de datos NoSQL ofrecido en la misma suite de AWS
 Para el sistema de autenticación, se utilizará Amazon Cognito.
 
 
-Para poder hacer uso de Amazon Cognito en nuestra aplicaci?n debemos de introducir el siguiente comando:
+Para poder hacer uso de Amazon Cognito en nuestra aplicación debemos de introducir el siguiente comando:
 
 \begin{center}
   \includegraphics[scale=0.7]{imagenes/add}
@@ -3398,11 +3408,11 @@ Obteniendo el siguiente menú:
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/console}
-\captionof{figure}{Implementaci?n completada}
+\captionof{figure}{Implementación completada}
  \label{fig:cognito} 
 \end{center} 
 
-Entrando a nuestra consola de AWS, en la secci?n de Amazon Cognito, se puede observar dos grupos de usuarios, uno de tipo Administrador, el cual puede realizar cambios a la configuración de la aplicaci?n, y otro de tipo de Usuario, el cual sólo puede hacer uso del sistema de inició de sesión y registro ofrecido por Cognito.
+Entrando a nuestra consola de AWS, en la secci?n de Amazon Cognito, se puede observar dos grupos de usuarios, uno de tipo Administrador, el cual puede realizar cambios a la configuración de la aplicación, y otro de tipo de Usuario, el cual sólo puede hacer uso del sistema de inició de sesión y registro ofrecido por Cognito.
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/pools}
@@ -3432,16 +3442,16 @@ Para comenzar con el archivo de \emph{Queries}se tienen las siguientes funciones
  \label{fig:getConductor} 
 \end{center}
 
-La funci?n de la figura \ref{getConductor}, obtiene los datos de un solo Conductor.
+La función de la figura \ref{getConductor}, obtiene los datos de un solo Conductor.
 
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/listconductors}
-\captionof{figure}{Funci?n listConductors}
+\captionof{figure}{Función listConductors}
  \label{fig:listConductors} 
 \end{center}
 
-La funci?n de la figura \ref{fig:listConductors} obtiene todos los datos de todos los conductores almacenados en la base de datos.
+La función de la figura \ref{fig:listConductors} obtiene todos los datos de todos los conductores almacenados en la base de datos.
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/getincidencia}
@@ -3449,7 +3459,7 @@ La funci?n de la figura \ref{fig:listConductors} obtiene todos los datos de todo
  \label{fig:getIncidencia} 
 \end{center}
 
-La funci?n de la figura \ref{fig:getIncidencia} obtiene los datos de una sola Incidencia.
+La función de la figura \ref{fig:getIncidencia} obtiene los datos de una sola Incidencia.
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/listIncidencias}
@@ -3457,17 +3467,17 @@ La funci?n de la figura \ref{fig:getIncidencia} obtiene los datos de una sola In
  \label{fig:listIncidencias} 
 \end{center}
 
-La funci?n de la figura \ref{fig:listIncidencias} obtiene los datos de todas las incidencias de almacenadas en la base de datos.
+La función de la figura \ref{fig:listIncidencias} obtiene los datos de todas las incidencias de almacenadas en la base de datos.
 
 En cuanto al archivo de \emph{Mutations} se tienen las siguientes funciones:
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/createconductor}
-\captionof{figure}{Funci?n createConductor}
+\captionof{figure}{Función createConductor}
  \label{fig:createConductor} 
 \end{center}
 
-La funci?n de la figura \ref{fig:createConductor} se encarga de crear el registro de un conductor en la base de datos.
+La función de la figura \ref{fig:createConductor} se encarga de crear el registro de un conductor en la base de datos.
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/updateConductor}
@@ -3493,9 +3503,9 @@ La funci?n de la figura \ref{fig:deleteConductor} se encarga de eliminar un cond
  \label{fig:createIncidencia} 
 \end{center}
 
-La funci?n de la figura \ref{fig:createIncidencia} se encarga de crear una Incidencia en la base de datos.
+La función de la figura \ref{fig:createIncidencia} se encarga de crear una Incidencia en la base de datos.
 
-Para el archivo de \emph{subscriptions} se tienen la siguiente funci?n:
+Para el archivo de \emph{subscriptions} se tienen la siguiente función:
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/oncreateIncidencia}
@@ -3507,7 +3517,7 @@ La funci?n de la figura \ref{fig:oncreateIncidencia} se encarga de realizar una 
 
 
 
-Al estar trabajando con GraphQL dentro del proyecto, la manera en que se podr?n realizar las operaciones \emph{CRUD - (Create, Read, Update, Delete)}, ser? mediante funciones JSON.
+Al estar trabajando con GraphQL dentro del proyecto, la manera en que se podrán realizar las operaciones \emph{CRUD - (Create, Read, Update, Delete)}, será mediante funciones JSON.
 
 Para comprobar que la API permite dichas operaciones, se debe ingresar a la consola de AWS y dirigirse a la secci?n de AWS AppSync. 
 
@@ -3517,7 +3527,7 @@ Para comprobar que la API permite dichas operaciones, se debe ingresar a la cons
  \label{fig:awsconsole} 
 \end{center} 
 
-Posteriormente se necesita ingresar a la secci?n de consultas.
+Posteriormente se necesita ingresar a la sección de consultas.
 
 
 \begin{center}
@@ -3586,9 +3596,27 @@ https://main.dcst1c83llut3.amplifyapp.com/login
 \subsubsection{Implementación de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}
 
 
+\subsubsection{Implementación de puntos faciales para detectar el estado el nivel de apertura de los ojos}
 
 
-\section{Conclusiones}
+\newpage
+
+\section{Pruebas}
+
+\newpage
+
+\section{Validación y Resultados}
+
+
+
+\subsubsection{Proceso de Validación}
+
+
+
+\newpage
+
+
+\section{Conclusiones y aportaciones}
 Con base en los objetivos planteados, se realizó el diseño y análisis del sistema, utilizando la metodología top-down se dividió en módulos y submódulos que nos permitieron profundizar en cada uno de ellos, delimitando los elementos a utilizar y los algoritmos o herramientas que se utilizarán en la implementación del sistema para trabajo terminal 1, en el presente trabajo se obtuvieron los resultados de las investigaciones realizadas para la elección de cada uno de los elementos principales que conforman el sistema y posteriormente el resultado del diseño de cada módulo planteado.
 En el caso del Submódulo de Visión artificial, se decidió desarrollar de manera conjunta la detección decaracterísticas faciales y la clasificación de somnolencia. En un principio estas se plantearon de manera separada, este cambio significó la simplificación del modelo para el análisis y diseño. Para el reconocimiento del rostro, ojos y boca dentro de la imagen se decidió utilizar las funciones Haar que se implementarán a través de las librarías de Open CV mientras que para el reconocimiento de signos de somnolencia se utilizarán las redes neuronales convolucionales en el caso de los ojos y para la boca se hará uso de la relación MOR y puntos de referencia faciales.
 En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades de investigación, se llegó a la conclusión de que esta opción no es viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, buena cobertura, así como una buena integración con la Jetson Nano. De igual manera, al realizar los cálculos para el envío de fotogramas a la estación base sobrepasaba la máxima tasa de datos propuesta con anterioridad así que optamos por el uso de un compresor de video MP4 que tiene una relación de hasta 16:1 pero que no baja la calidad cómo para no poder cumplir con lo requerido en el funcionamiento del sistema y que varias fuentes mencionan que es el mejor formato para la compresión de videos. Para el envío del posicionamiento del GPS, se llegó a un intervalo de tiempo de 10 segundos que garantiza el correcto trazo de la ruta en el mapa de la página web al consultar las velocidades permitidas en la ciudad de México.
