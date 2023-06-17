@@ -78,8 +78,14 @@
 \contentsline {subsubsection}{\numberline {7.3.2}Dise\~no de la Base de Datos}{106}{subsubsection.7.3.2}%
 \contentsline {section}{\numberline {8}Implementaci\'on}{109}{section.8}%
 \contentsline {subsection}{\numberline {8.1}M\'odulo Central de Procesamiento}{109}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Dise\~no de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}{109}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}Entorno de desarrollo en la NVIDIA Jetson Nano}{109}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}Implementaci\'on de puntos faciales para detectar el nivel de apertura de los ojos y boca}{109}{subsubsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.4}Detecci\'on de somnolecia}{109}{subsubsection.8.1.4}%
+\contentsline {subsubsection}{\numberline {8.1.5}Integraci\'on de los perif\'ericos y accesorios al M\'odulo Central de Procesamiento}{109}{subsubsection.8.1.5}%
+\contentsline {subsubsection}{\numberline {8.1.6}Integraci\'on del subsistema}{109}{subsubsection.8.1.6}%
 \contentsline {subsection}{\numberline {8.2}M\'odulo de Comunicaciones}{109}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Implementaci\'on del sistema de Geolocalizaci\'on}{109}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.1}Implemetaci\'on del sistema de Geolocalizaci\'on}{109}{subsubsection.8.2.1}%
 \contentsline {subsubsection}{\numberline {8.2.2}Realizar la conexi\'on de la aplicaci\'on web con el M\'odulo Central de Procesamiento}{115}{subsubsection.8.2.2}%
 \contentsline {subsection}{\numberline {8.3}M\'odulo de Estaci\'on Base}{119}{subsection.8.3}%
 \contentsline {subsubsection}{\numberline {8.3.1}Definici\'on de rutas del frontend}{119}{subsubsection.8.3.1}%
@@ -89,9 +95,8 @@
 \contentsline {subsubsection}{\numberline {8.3.5}Creaci\'on de la base de datos no relacional}{121}{subsubsection.8.3.5}%
 \contentsline {subsubsection}{\numberline {8.3.6}Creaci\'on de los servicios backend}{124}{subsubsection.8.3.6}%
 \contentsline {subsubsection}{\numberline {8.3.7}Despliegue de la aplicaci\'on web}{131}{subsubsection.8.3.7}%
-\contentsline {subsubsection}{\numberline {8.3.8}Implementaci\'on de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}{133}{subsubsection.8.3.8}%
-\contentsline {section}{\numberline {9}Pruebas}{134}{section.9}%
-\contentsline {section}{\numberline {10}Validaci\'on y Resultados}{135}{section.10}%
-\contentsline {subsubsection}{\numberline {10.0.1}Proceso de Validaci\'on}{135}{subsubsection.10.0.1}%
-\contentsline {section}{\numberline {11}Conclusiones y aportaciones}{136}{section.11}%
-\contentsline {section}{\numberline {12}Referencias}{137}{section.12}%
+\contentsline {section}{\numberline {9}Pruebas}{133}{section.9}%
+\contentsline {section}{\numberline {10}Validaci\'on y Resultados}{134}{section.10}%
+\contentsline {subsubsection}{\numberline {10.0.1}Proceso de Validaci\'on}{134}{subsubsection.10.0.1}%
+\contentsline {section}{\numberline {11}Conclusiones y aportaciones}{135}{section.11}%
+\contentsline {section}{\numberline {12}Referencias}{136}{section.12}%
