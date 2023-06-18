@@ -85,12 +85,12 @@ En el desarrollo logístico de empresas que se encargan de transportar a pasajero
 
 Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{TastreoSatelital}.\\ 
 
-Teniendo en cuenta este contexto, resulta relevante analizar y diseñar un sistema que aborde la problemática de la somnolencia al conducir. Este sistema se basará en el uso de una cámara digital y algoritmos de visión artificial para detectar signos de somnolencia en el conductor. Además, se incluirá un sistema de administración que permitirá la geolocalización en tiempo real, así como la gestión de conductores y reportes de incidencias.
+Teniendo en cuenta este contexto, resulta relevante analizar y diseñar un sistema que aborde la problemática de la somnolencia al conducir. Este sistema se basará en el uso de una cámara digital y algoritmos de visión artificial para detectar signos de somnolencia en el conductor. Además, se incluirá un sistema de administración que permitirá la geolocalización en tiempo real, así como la gestión de conductores y reportes de incidencias.\\
 
-\\
-El desarrollo de este sistema busca aprovechar los avances tecnológicos recientes en el campo de la visión artificial y el aprendizaje automático, así como la disponibilidad de microordenadores eficientes y las mejoras en las tecnologías de telecomunicaciones, como el 4G y el Internet de las Cosas (IoT). Estas tecnologías permitirán detectar y prevenir los síntomas de fatiga y somnolencia en los conductores, brindando una solución más asequible y efectiva en comparación con las opciones tradicionales de rastreo satelital.
 
-\\
+El desarrollo de este sistema busca aprovechar los avances tecnológicos recientes en el campo de la visión artificial y el aprendizaje automático, así como la disponibilidad de microordenadores eficientes y las mejoras en las tecnologías de telecomunicaciones, como el 4G y el Internet de las Cosas (IoT). Estas tecnologías permitirán detectar y prevenir los síntomas de fatiga y somnolencia en los conductores, brindando una solución más asequible y efectiva en comparación con las opciones tradicionales de rastreo satelital.\\
+
+
 En resumen, el objetivo principal del presente trabajo es desarrollar un sistema portátil que pueda detectar la somnolencia al conducir, alertar al conductor y monitorear la ubicación en tiempo real, además de gestionar las incidencias detectadas. 
   
 
@@ -3077,17 +3077,90 @@ Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilizado 
 
 
 
-
-
-
-
 \newpage
 \section{Implementación}
 
 \subsection{Módulo Central de Procesamiento}
 \subsubsection{Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}
-
 \subsubsection{Entorno de desarrollo en la NVIDIA Jetson Nano}
+
+El Jetson Nano Developer Kit utiliza una tarjeta microSD como dispositivo de arranque y almacenamiento principal. Por tanto, fue necesario instalar una entorno de desarrollo en la propia placa, para lo cual se requirió una tarjeta microSD de un mínimo recomendado de 32 GB de acuerdo a la documentación de Nvidia \cite{Nvidia}.\\
+
+Como primer paso, se descargó el \emph{JetPack SDK 4.6.3} \cite{JetPackSDK},el cual se refiere a un archivo de imagen del sistema operativo específicamente diseñado y optimizado para ser utilizado en la placa de desarrollo NVIDIA Jetson Nano, la imagen incluye un sistema operativo Linux, controladores de hardware específicos para la Jetson Nano y una configuración predefinida. Para el presente proyecto se utilizó la última versión disponible para la Jetson Nano 4GB, JetPack SDK 4.6.3 \cite{JetPackSDK}.\\
+
+Posteriormente se instaló la imagen en la tarjeta microSD con el apoyo de BalenaEtcher 1.7.9 que se utilizó para crear una unidad de arranque. 
+
+\begin{center}
+  \includegraphics[scale=0.2]{imagenes/Balena.JPG}
+\captionof{figure}{Instalación del JetPack SDK realizado con BalenaEtcher.}
+ \label{fig:BalenaEtcher} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.2]{imagenes/JNconexiones.jpeg}
+\captionof{figure}{Periféricos de entrada para el Kit de desarrollo Jetson Nano.}
+ \label{fig:JNconexiones} 
+\end{center}  
+
+\textbf{Configuración y primer arranque}\\
+
+Para iniciar e interactuaar con el kit de desarrollo, se reqquirió conectar un mouse, pantalla, teclado y una fuente de alimentación, cabe mencionar que estos elementos no se incluyen en con la compra del kit de desarrollo Jetson Nano. Posteriormente, se realizó la configuración inicial del sistema operativo, el cual incluyó los siguientes pasos:
+
+\begin{itemize}
+\item Revisar y aceptar el EULA del software NVIDIA Jetson.
+\item Seleccionar el idioma del sistema, la distribución del teclado y la zona horaria.
+\item Crear un nombre de usuario, contraseña y nombre de la computadora.
+\item Selecionar el tamaño de partición de la aplicación, se utilizó el tamaño máximo sugerido.
+\end{itemize}
+
+\textbf{Intalación de librerias y dependencias}\\
+
+Después de haber iniciado la Jetson Nano, se abrió una terminal y se ingresaron los siguientes comandos:
+
+\begin{enumerate}
+\item 
+\begin{verbatim}
+sudo apt-get update 
+sudo apt-get upgrade 
+\end{verbatim}
+\end{enumerate}
+
+Se instalo Jetson Stats,la cual es una herramienta de monitoreo del sistema que proporciona información de rendimiento de Jetson en tiempo real. Muestra información sobre el uso de la CPU, la GPU, la memoria y otros recursos del sistema. jtop muestra la salida de los monitores de energía Jetson y los sensores de temperatura \cite{JetStats}.
+Comandos usados para la intalación de Jetson Stats: 
+
+\begin{enumerate}
+\item Requiere instalar Python 3
+\begin{verbatim}
+sudo apt install python3-pip
+\end{verbatim}
+
+\item Instalar Jetson Stats
+\begin{verbatim}
+sudo pip3 install -U jetson-stats
+\end{verbatim}
+
+\item Una vez instalado se debe reiniciar la maquina
+\begin{verbatim}
+sudo reboot
+\end{verbatim}
+
+\item Una vez reiniciado se puede hacer uso del comando jtop
+\begin{verbatim}
+jtop
+\end{verbatim}
+\end{enumerate}
+
+\begin{center}
+  \includegraphics[scale=0.2]{imagenes/Jtop.jpeg}
+\captionof{figure}{Interfaz despues de la intación de Jetson Stats.}
+ \label{fig:Jtop} 
+\end{center}  
+
+
+Los pasos para la instalación fueron los siguientes:
+
+
+
 
 
 \subsubsection{Implementación de puntos faciales para detectar el nivel de apertura de los ojos y boca}
@@ -3816,8 +3889,11 @@ el 18 de marzo de 2022).
 
 \bibitem{Referencia10} S. Pachouly, N. Bhondve, A. Dalvi, V. Dhande y N. Bhamare. "Driver drowsiness detection using machine learning with visual behaviour". https://ijcrt.org/papers/IJCRT2006408.pdf (accedido el 2 de noviembre de 2022).
 
+\bibitem{Nvidia} NVIDIA, "Get Started with the Jetson Nano Developer Kit", NVIDIA Developer, 2019. [Online]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro. [Accedido: Abril 02 2023].
 
+\bibitem{JetPackSDK} nvidia. (s.f.). JetPack SDK 4.6.3. NVIDIA Developer. https://developer.nvidia.com/jetpack-sdk-463
 
+\bibitem{JetStats} Kangalow. (2023, 7 de febrero). Jtop: The ultimate tool for monitoring NVIDIA jetson devices - jetsonhacks. JetsonHacks. https://jetsonhacks.com/2023/02/07/jtop-the-ultimate-tool-for-monitoring-nvidia-jetson-devices/ 
 
 
 \end{thebibliography}
