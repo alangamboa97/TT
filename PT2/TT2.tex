@@ -3115,52 +3115,117 @@ Para iniciar e interactuaar con el kit de desarrollo, se reqquirió conectar un m
 
 \textbf{Intalación de librerias y dependencias}\\
 
-Después de haber iniciado la Jetson Nano, se abrió una terminal y se ingresaron los siguientes comandos:
+Después de haber iniciado la Jetson Nano, se abrió una terminal y se ingresaron los siguientes comandos para la instalación de las librerias a utilizar:
 
 \begin{enumerate}
-\item 
+\item Actualizar el sistema
 \begin{verbatim}
 sudo apt-get update 
 sudo apt-get upgrade 
 \end{verbatim}
+
+\item dlib
+\begin{verbatim}
+pip3 install dlib
+\end{verbatim}
+
+\item boto3
+\begin{verbatim}
+sudo pip3 install boto3
+\end{verbatim}
+
+\item imutils
+\begin{verbatim}
+pip3 install imutils
+\end{verbatim}
+
+\item geocoder
+\begin{verbatim}
+pip3 install geocoder
+\end{verbatim}
+
+\item Tensorflow
+En el caso de Tensorflow se debe instalar una versión compatible con Python 3.6 y la versión instalada del JetPack \cite{Tensorflow}.
+\begin{verbatim}
+sudo apt-get update
+sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
+sudo apt-get install python3-pip
+sudo pip3 install -U pip testresources setuptools
+sudo ln -s /usr/include/locale.h /usr/include/xlocale.h
+sudo pip3 install -U numpy==1.19.4 future mock keras_preprocessing keras_applications gast==0.2.1 protobuf pybind11 cython pkgconfig packaging
+sudo pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v461 tensorflow
+\end{verbatim}
+
+\item Keras
+\begin{verbatim}
+pip3 install keras==2.7.0
+\end{verbatim}
+
 \end{enumerate}
+
 
 Se instalo Jetson Stats,la cual es una herramienta de monitoreo del sistema que proporciona información de rendimiento de Jetson en tiempo real. Muestra información sobre el uso de la CPU, la GPU, la memoria y otros recursos del sistema. jtop muestra la salida de los monitores de energía Jetson y los sensores de temperatura \cite{JetStats}.
 Comandos usados para la intalación de Jetson Stats: 
 
-\begin{enumerate}
-\item Requiere instalar Python 3
 \begin{verbatim}
 sudo apt install python3-pip
-\end{verbatim}
-
-\item Instalar Jetson Stats
-\begin{verbatim}
 sudo pip3 install -U jetson-stats
-\end{verbatim}
-
-\item Una vez instalado se debe reiniciar la maquina
-\begin{verbatim}
 sudo reboot
-\end{verbatim}
-
-\item Una vez reiniciado se puede hacer uso del comando jtop
-\begin{verbatim}
 jtop
 \end{verbatim}
-\end{enumerate}
 
 \begin{center}
-  \includegraphics[scale=0.2]{imagenes/Jtop.jpeg}
-\captionof{figure}{Interfaz despues de la intación de Jetson Stats.}
+  \includegraphics[scale=0.6]{imagenes/Jtop.jpeg}
+\captionof{figure}{Interfaz despues de la instalación de Jetson Stats.}
  \label{fig:Jtop} 
 \end{center}  
 
+Archivo Swap
 
-Los pasos para la instalación fueron los siguientes:
+El swap es un espacio de intercambio, que bien puede ser una partición lógica en el disco o simplemente un archivo. En lugar de utilizar espacio en memoria RAM, el swap utiliza espacio en disco duro para almacenar datos temporales, reduciendo así el uso de la RAM. El conjunto combinado de memoria RAM y swap crean una memoria virtual mayor a la que trae el ordenador por defecto. Así, el Kernel de Linux puede ejecutar procesos que requieren de más memoria de la que se encuentra físicamente disponible \cite{SwapFile}.
+Comandos utilizados para configrar memoria virtual:
 
+\begin{verbatim}
+sudo systemctl disable nvzramconfig
+sudo fallocate -l 4G /mnt/4G.swap
+sudo mkswap /mnt/4G.swap
+sudo swapon /mnt/4G.swap
 
+cd ..
+cd ..
+cd etc/
 
+sudo gedit fstab
+\end{verbatim}
+
+El comando gedit abre un archivo el cual se debe modificar añadiendo la siguiente linea y posteriormente guardando los cambios realizados. 
+\begin{verbatim}
+/mnt/4G.swap	none	swap	sw	0	0
+\end{verbatim}
+
+Luego, se verifico el tamaño de todos los intercambios:
+\begin{verbatim}
+free -h
+\end{verbatim}
+
+Para habilitar la memoria zram de nuevo se utiliza el comando:
+\begin{verbatim}
+sudo systemctl enable nvzramconfig
+\end{verbatim}
+
+OpenCV con CUDA (Arquitectura de dispositivo unificado de cómputo)
+Por defecto la versión del JetPack SDK 4.6.3 viene instalado con OpenCV 4.1.1 sin CUDA, el cual es un marco que permite la computación paralela en la GPU. Para activar CUDA se utilizó el sript proporcionado en el repositiorio de github \cite{CUDA} que ademas instala la version 4.5 de OpenCV:
+
+\begin{verbatim}
+git clone https://github.com/mdegans/nano_build_opencv.git
+cd nano_build_opencv/
+gedit build_opencv.sh
+\end{verbatim}
+
+El archivo se modificó colocando la variable JOBS=4 despues de haber modificado el archivo de intercambio (\textit{swapfile}), posteriormente se corrió el archivo.
+\begin{verbatim}
+./build_opencv.sh 4.5.4
+\end{verbatim}
 
 
 \subsubsection{Implementación de puntos faciales para detectar el nivel de apertura de los ojos y boca}
@@ -3170,8 +3235,22 @@ Los pasos para la instalación fueron los siguientes:
 
 \subsubsection{Integración de los periféricos y accesorios al Módulo Central de Procesamiento}
 
-\subsubsection{Integración del subsistema}
 
+Se integraron los periféricos dentro del contenedor para la Jetson Nano.\\
+
+El contenedor de la Jetson Nano es una carcasa de metal con un ventilador de refrigeración de 5 V, diseñado específicamente para ser compatible con la placa de desarrollo NVIDIA Jetson Nano (versión B01 con 4 GB de RAM).\\
+
+Esta carcasa ofrece varias características adicionales, como soporte para reinicio de cámara, un botón de encendido y una compatibilidad específica con la cámara Waveshare IMX219 Series. Además, el contenedor también tiene soporte para adaptadores inalámbricos Wireless-AC8265, lo que permite la conectividad Wi-Fi y Bluetooth en la Jetson Nano. Otra característica destacada es la compatibilidad con el módulo de placa de expansión LTE CAT4 basado en SIM7600G-H. Este módulo proporciona capacidades de comunicación inalámbrica, como llamadas telefónicas, mensajes de texto (SMS) y posicionamiento GPS utilizando los sistemas BeiDou y Glonass.
+
+Contenedor de la Jetson nano junto con los periféricos integrados:
+
+
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/Perifericos2.jpeg}
+\captionof{figure}{Carcasa armada con la Jetson Nano y periféricos integrados}
+ \label{fig:crearConductor} 
+\end{center} 
+\subsubsection{Integración del subsistema}
 
 
 \subsection{Módulo de Comunicaciones}
@@ -3891,9 +3970,15 @@ el 18 de marzo de 2022).
 
 \bibitem{Nvidia} NVIDIA, "Get Started with the Jetson Nano Developer Kit", NVIDIA Developer, 2019. [Online]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro. [Accedido: Abril 02 2023].
 
-\bibitem{JetPackSDK} nvidia. (s.f.). JetPack SDK 4.6.3. NVIDIA Developer. https://developer.nvidia.com/jetpack-sdk-463
+\bibitem{JetPackSDK} nvidia. "JetPack SDK 4.6.3". NVIDIA Developer. https://developer.nvidia.com/jetpack-sdk-463 (accedido el 17 de junio de 2023).
 
-\bibitem{JetStats} Kangalow. (2023, 7 de febrero). Jtop: The ultimate tool for monitoring NVIDIA jetson devices - jetsonhacks. JetsonHacks. https://jetsonhacks.com/2023/02/07/jtop-the-ultimate-tool-for-monitoring-nvidia-jetson-devices/ 
+\bibitem{JetStats} Kangalow. "Jtop: The ultimate tool for monitoring NVIDIA jetson devices - jetsonhacks". JetsonHacks. https://jetsonhacks.com/2023/02/07/jtop-the-ultimate-tool-for-monitoring-nvidia-jetson-devices/ (accedido el 17 de junio de 2023).
+
+\bibitem{SwapFile} N. Escobar. "Para qué sirve el Swap en Linux y cómo cambiarlo". Hipertextual. https://hipertextual.com/2015/09/swap-en-linux (accedido el 19 de junio de 2023).
+
+\bibitem{Tensorflow} nvidia. "JetPack SDK 4.6.3". NVIDIA Developer. https://developer.nvidia.com/jetpack-sdk-463 (accedido el 17 de junio de 2023).
+
+\bibitem{CUDA} Nakai-Omer. "GitHub - mdegans/nano\_build\_opencv: Build opencv on nvidia jetson nano". GitHub. https://github.com/mdegans/nano\_build\_opencv (accedido el 20 de junio de 2023).
 
 
 \end{thebibliography}

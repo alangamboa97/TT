@@ -80,23 +80,23 @@
 \contentsline {subsection}{\numberline {8.1}M\'odulo Central de Procesamiento}{109}{subsection.8.1}%
 \contentsline {subsubsection}{\numberline {8.1.1}Dise\~no de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}{109}{subsubsection.8.1.1}%
 \contentsline {subsubsection}{\numberline {8.1.2}Entorno de desarrollo en la NVIDIA Jetson Nano}{109}{subsubsection.8.1.2}%
-\contentsline {subsubsection}{\numberline {8.1.3}Implementaci\'on de puntos faciales para detectar el nivel de apertura de los ojos y boca}{111}{subsubsection.8.1.3}%
-\contentsline {subsubsection}{\numberline {8.1.4}Detecci\'on de somnolecia}{111}{subsubsection.8.1.4}%
-\contentsline {subsubsection}{\numberline {8.1.5}Integraci\'on de los perif\'ericos y accesorios al M\'odulo Central de Procesamiento}{111}{subsubsection.8.1.5}%
-\contentsline {subsubsection}{\numberline {8.1.6}Integraci\'on del subsistema}{111}{subsubsection.8.1.6}%
-\contentsline {subsection}{\numberline {8.2}M\'odulo de Comunicaciones}{111}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Implemetaci\'on del sistema de Geolocalizaci\'on}{111}{subsubsection.8.2.1}%
-\contentsline {subsubsection}{\numberline {8.2.2}Realizar la conexi\'on de la aplicaci\'on web con el M\'odulo Central de Procesamiento}{117}{subsubsection.8.2.2}%
-\contentsline {subsection}{\numberline {8.3}M\'odulo de Estaci\'on Base}{121}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Definici\'on de rutas del frontend}{121}{subsubsection.8.3.1}%
-\contentsline {subsubsection}{\numberline {8.3.2}Definici\'on de rutas del backend}{122}{subsubsection.8.3.2}%
-\contentsline {subsubsection}{\numberline {8.3.3}Conexi\'on Backend con DynamoDB}{122}{subsubsection.8.3.3}%
-\contentsline {subsubsection}{\numberline {8.3.4}Implementaci\'on de sistema de acceso con credenciales}{123}{subsubsection.8.3.4}%
-\contentsline {subsubsection}{\numberline {8.3.5}Creaci\'on de la base de datos no relacional}{123}{subsubsection.8.3.5}%
-\contentsline {subsubsection}{\numberline {8.3.6}Creaci\'on de los servicios backend}{126}{subsubsection.8.3.6}%
-\contentsline {subsubsection}{\numberline {8.3.7}Despliegue de la aplicaci\'on web}{133}{subsubsection.8.3.7}%
-\contentsline {section}{\numberline {9}Pruebas}{135}{section.9}%
-\contentsline {section}{\numberline {10}Validaci\'on y Resultados}{136}{section.10}%
-\contentsline {subsubsection}{\numberline {10.0.1}Proceso de Validaci\'on}{136}{subsubsection.10.0.1}%
-\contentsline {section}{\numberline {11}Conclusiones y aportaciones}{137}{section.11}%
-\contentsline {section}{\numberline {12}Referencias}{138}{section.12}%
+\contentsline {subsubsection}{\numberline {8.1.3}Implementaci\'on de puntos faciales para detectar el nivel de apertura de los ojos y boca}{113}{subsubsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.4}Detecci\'on de somnolecia}{113}{subsubsection.8.1.4}%
+\contentsline {subsubsection}{\numberline {8.1.5}Integraci\'on de los perif\'ericos y accesorios al M\'odulo Central de Procesamiento}{113}{subsubsection.8.1.5}%
+\contentsline {subsubsection}{\numberline {8.1.6}Integraci\'on del subsistema}{114}{subsubsection.8.1.6}%
+\contentsline {subsection}{\numberline {8.2}M\'odulo de Comunicaciones}{114}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Implemetaci\'on del sistema de Geolocalizaci\'on}{114}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Realizar la conexi\'on de la aplicaci\'on web con el M\'odulo Central de Procesamiento}{120}{subsubsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.3}M\'odulo de Estaci\'on Base}{124}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Definici\'on de rutas del frontend}{124}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Definici\'on de rutas del backend}{125}{subsubsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.3}Conexi\'on Backend con DynamoDB}{125}{subsubsection.8.3.3}%
+\contentsline {subsubsection}{\numberline {8.3.4}Implementaci\'on de sistema de acceso con credenciales}{126}{subsubsection.8.3.4}%
+\contentsline {subsubsection}{\numberline {8.3.5}Creaci\'on de la base de datos no relacional}{126}{subsubsection.8.3.5}%
+\contentsline {subsubsection}{\numberline {8.3.6}Creaci\'on de los servicios backend}{129}{subsubsection.8.3.6}%
+\contentsline {subsubsection}{\numberline {8.3.7}Despliegue de la aplicaci\'on web}{136}{subsubsection.8.3.7}%
+\contentsline {section}{\numberline {9}Pruebas}{138}{section.9}%
+\contentsline {section}{\numberline {10}Validaci\'on y Resultados}{139}{section.10}%
+\contentsline {subsubsection}{\numberline {10.0.1}Proceso de Validaci\'on}{139}{subsubsection.10.0.1}%
+\contentsline {section}{\numberline {11}Conclusiones y aportaciones}{140}{section.11}%
+\contentsline {section}{\numberline {12}Referencias}{141}{section.12}%

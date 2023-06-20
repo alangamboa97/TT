@@ -69,52 +69,53 @@
 \contentsline {figure}{\numberline {68}{\ignorespaces Arquitectura Amazon Cognito}}{108}{figure.68}%
 \contentsline {figure}{\numberline {69}{\ignorespaces Instalaci\'on del JetPack SDK realizado con BalenaEtcher.}}{109}{figure.69}%
 \contentsline {figure}{\numberline {70}{\ignorespaces Perif\'ericos de entrada para el Kit de desarrollo Jetson Nano.}}{110}{figure.70}%
-\contentsline {figure}{\numberline {71}{\ignorespaces Interfaz despues de la intaci\'on de Jetson Stats.}}{111}{figure.71}%
-\contentsline {figure}{\numberline {72}{\ignorespaces Intalaci?n de bibliotecas}}{112}{figure.72}%
-\contentsline {figure}{\numberline {73}{\ignorespaces Instalaci?n de comandos}}{112}{figure.73}%
-\contentsline {figure}{\numberline {74}{\ignorespaces Prueba de SIM7600G }}{112}{figure.74}%
-\contentsline {figure}{\numberline {75}{\ignorespaces Comandos GPS para pruebas.}}{112}{figure.75}%
-\contentsline {figure}{\numberline {76}{\ignorespaces C?digo que permite obtener la posici?n GPS parte 1}}{113}{figure.76}%
-\contentsline {figure}{\numberline {77}{\ignorespaces C?digo que permite obtener la posici?n GPS parte 2}}{113}{figure.77}%
-\contentsline {figure}{\numberline {78}{\ignorespaces C?digo que permite oibtener la posici?n GPS parte 3}}{114}{figure.78}%
-\contentsline {figure}{\numberline {79}{\ignorespaces C?digo que permite obtener la posici?n GPS parte 4}}{114}{figure.79}%
-\contentsline {figure}{\numberline {80}{\ignorespaces Mapa creado en AWS - MyMap}}{115}{figure.80}%
-\contentsline {figure}{\numberline {81}{\ignorespaces C?digo para obtener la ubicaci?n geogr?fica en la aplicaci?n web}}{116}{figure.81}%
-\contentsline {figure}{\numberline {82}{\ignorespaces Coordenadas geogr?ficas en la Jetson Nano}}{116}{figure.82}%
-\contentsline {figure}{\numberline {83}{\ignorespaces Detalles del mapa creado en AWS}}{117}{figure.83}%
-\contentsline {figure}{\numberline {84}{\ignorespaces Coordenadas geogr\'aficas que recibe la p\'agina web }}{117}{figure.84}%
-\contentsline {figure}{\numberline {85}{\ignorespaces Abrir minicom por comando.}}{117}{figure.85}%
-\contentsline {figure}{\numberline {86}{\ignorespaces Verificar conexi?n.}}{118}{figure.86}%
-\contentsline {figure}{\numberline {87}{\ignorespaces Descarga del driver.}}{118}{figure.87}%
-\contentsline {figure}{\numberline {88}{\ignorespaces Instalar driver.}}{118}{figure.88}%
-\contentsline {figure}{\numberline {89}{\ignorespaces Comando para comprobar interfaz wwan0.}}{118}{figure.89}%
-\contentsline {figure}{\numberline {90}{\ignorespaces Habilitar la interfaz wwan0.}}{118}{figure.90}%
-\contentsline {figure}{\numberline {91}{\ignorespaces Comunicar por Minicom.}}{119}{figure.91}%
-\contentsline {figure}{\numberline {92}{\ignorespaces Asignar IP.}}{119}{figure.92}%
-\contentsline {figure}{\numberline {93}{\ignorespaces Red 4G LTE activa por medio de la interfaz wwan0}}{120}{figure.93}%
-\contentsline {figure}{\numberline {94}{\ignorespaces Conexi\'on con boto3 hac\IeC {\'\i }a AWS}}{120}{figure.94}%
-\contentsline {figure}{\numberline {95}{\ignorespaces Instalaci\'on Amplify CLI}}{122}{figure.95}%
-\contentsline {figure}{\numberline {96}{\ignorespaces Amplify add api}}{122}{figure.96}%
-\contentsline {figure}{\numberline {97}{\ignorespaces Configuraci\'on de par\'ametros de GraphQL}}{122}{figure.97}%
-\contentsline {figure}{\numberline {98}{\ignorespaces Arquitectura Amazon Cognito}}{123}{figure.98}%
-\contentsline {figure}{\numberline {99}{\ignorespaces Implementaci\'on de Amazon Cognito en el proyecto}}{123}{figure.99}%
-\contentsline {figure}{\numberline {100}{\ignorespaces Menu de configuraci\'on de Amazon Cognito}}{124}{figure.100}%
-\contentsline {figure}{\numberline {101}{\ignorespaces Implementaci\'on completada}}{124}{figure.101}%
-\contentsline {figure}{\numberline {102}{\ignorespaces Grupos de usuario}}{125}{figure.102}%
-\contentsline {figure}{\numberline {103}{\ignorespaces Grupos de usuario}}{125}{figure.103}%
-\contentsline {figure}{\numberline {104}{\ignorespaces Grupos de usuario}}{126}{figure.104}%
-\contentsline {figure}{\numberline {105}{\ignorespaces Funci?n getConductor}}{126}{figure.105}%
-\contentsline {figure}{\numberline {106}{\ignorespaces Funci\'on listConductors}}{127}{figure.106}%
-\contentsline {figure}{\numberline {107}{\ignorespaces Funci?n getIncidencia}}{127}{figure.107}%
-\contentsline {figure}{\numberline {108}{\ignorespaces Funci?n listIncidencias}}{128}{figure.108}%
-\contentsline {figure}{\numberline {109}{\ignorespaces Funci\'on createConductor}}{128}{figure.109}%
-\contentsline {figure}{\numberline {110}{\ignorespaces Funci?n updateConductor}}{129}{figure.110}%
-\contentsline {figure}{\numberline {111}{\ignorespaces Funci?n deleteConductor}}{129}{figure.111}%
-\contentsline {figure}{\numberline {112}{\ignorespaces Funci?n createIncidencia}}{130}{figure.112}%
-\contentsline {figure}{\numberline {113}{\ignorespaces Funci?n oncreateIncidencia}}{130}{figure.113}%
-\contentsline {figure}{\numberline {114}{\ignorespaces Consola de AWS}}{131}{figure.114}%
-\contentsline {figure}{\numberline {115}{\ignorespaces Funcionamiento de Appsync}}{131}{figure.115}%
-\contentsline {figure}{\numberline {116}{\ignorespaces Crear Conductor}}{132}{figure.116}%
-\contentsline {figure}{\numberline {117}{\ignorespaces Amplify Hosting }}{133}{figure.117}%
-\contentsline {figure}{\numberline {118}{\ignorespaces ramificaci?n de repositorio de Github}}{134}{figure.118}%
-\contentsline {figure}{\numberline {119}{\ignorespaces Acceso a la p\'agina web desde el navegador}}{134}{figure.119}%
+\contentsline {figure}{\numberline {71}{\ignorespaces Interfaz despues de la instalaci\'on de Jetson Stats.}}{112}{figure.71}%
+\contentsline {figure}{\numberline {72}{\ignorespaces Carcasa armada con la Jetson Nano y perif\'ericos integrados}}{114}{figure.72}%
+\contentsline {figure}{\numberline {73}{\ignorespaces Intalaci?n de bibliotecas}}{115}{figure.73}%
+\contentsline {figure}{\numberline {74}{\ignorespaces Instalaci?n de comandos}}{115}{figure.74}%
+\contentsline {figure}{\numberline {75}{\ignorespaces Prueba de SIM7600G }}{115}{figure.75}%
+\contentsline {figure}{\numberline {76}{\ignorespaces Comandos GPS para pruebas.}}{115}{figure.76}%
+\contentsline {figure}{\numberline {77}{\ignorespaces C?digo que permite obtener la posici?n GPS parte 1}}{116}{figure.77}%
+\contentsline {figure}{\numberline {78}{\ignorespaces C?digo que permite obtener la posici?n GPS parte 2}}{116}{figure.78}%
+\contentsline {figure}{\numberline {79}{\ignorespaces C?digo que permite oibtener la posici?n GPS parte 3}}{117}{figure.79}%
+\contentsline {figure}{\numberline {80}{\ignorespaces C?digo que permite obtener la posici?n GPS parte 4}}{117}{figure.80}%
+\contentsline {figure}{\numberline {81}{\ignorespaces Mapa creado en AWS - MyMap}}{118}{figure.81}%
+\contentsline {figure}{\numberline {82}{\ignorespaces C?digo para obtener la ubicaci?n geogr?fica en la aplicaci?n web}}{119}{figure.82}%
+\contentsline {figure}{\numberline {83}{\ignorespaces Coordenadas geogr?ficas en la Jetson Nano}}{119}{figure.83}%
+\contentsline {figure}{\numberline {84}{\ignorespaces Detalles del mapa creado en AWS}}{120}{figure.84}%
+\contentsline {figure}{\numberline {85}{\ignorespaces Coordenadas geogr\'aficas que recibe la p\'agina web }}{120}{figure.85}%
+\contentsline {figure}{\numberline {86}{\ignorespaces Abrir minicom por comando.}}{120}{figure.86}%
+\contentsline {figure}{\numberline {87}{\ignorespaces Verificar conexi?n.}}{121}{figure.87}%
+\contentsline {figure}{\numberline {88}{\ignorespaces Descarga del driver.}}{121}{figure.88}%
+\contentsline {figure}{\numberline {89}{\ignorespaces Instalar driver.}}{121}{figure.89}%
+\contentsline {figure}{\numberline {90}{\ignorespaces Comando para comprobar interfaz wwan0.}}{121}{figure.90}%
+\contentsline {figure}{\numberline {91}{\ignorespaces Habilitar la interfaz wwan0.}}{121}{figure.91}%
+\contentsline {figure}{\numberline {92}{\ignorespaces Comunicar por Minicom.}}{122}{figure.92}%
+\contentsline {figure}{\numberline {93}{\ignorespaces Asignar IP.}}{122}{figure.93}%
+\contentsline {figure}{\numberline {94}{\ignorespaces Red 4G LTE activa por medio de la interfaz wwan0}}{123}{figure.94}%
+\contentsline {figure}{\numberline {95}{\ignorespaces Conexi\'on con boto3 hac\IeC {\'\i }a AWS}}{123}{figure.95}%
+\contentsline {figure}{\numberline {96}{\ignorespaces Instalaci\'on Amplify CLI}}{125}{figure.96}%
+\contentsline {figure}{\numberline {97}{\ignorespaces Amplify add api}}{125}{figure.97}%
+\contentsline {figure}{\numberline {98}{\ignorespaces Configuraci\'on de par\'ametros de GraphQL}}{125}{figure.98}%
+\contentsline {figure}{\numberline {99}{\ignorespaces Arquitectura Amazon Cognito}}{126}{figure.99}%
+\contentsline {figure}{\numberline {100}{\ignorespaces Implementaci\'on de Amazon Cognito en el proyecto}}{126}{figure.100}%
+\contentsline {figure}{\numberline {101}{\ignorespaces Menu de configuraci\'on de Amazon Cognito}}{127}{figure.101}%
+\contentsline {figure}{\numberline {102}{\ignorespaces Implementaci\'on completada}}{127}{figure.102}%
+\contentsline {figure}{\numberline {103}{\ignorespaces Grupos de usuario}}{128}{figure.103}%
+\contentsline {figure}{\numberline {104}{\ignorespaces Grupos de usuario}}{128}{figure.104}%
+\contentsline {figure}{\numberline {105}{\ignorespaces Grupos de usuario}}{129}{figure.105}%
+\contentsline {figure}{\numberline {106}{\ignorespaces Funci?n getConductor}}{129}{figure.106}%
+\contentsline {figure}{\numberline {107}{\ignorespaces Funci\'on listConductors}}{130}{figure.107}%
+\contentsline {figure}{\numberline {108}{\ignorespaces Funci?n getIncidencia}}{130}{figure.108}%
+\contentsline {figure}{\numberline {109}{\ignorespaces Funci?n listIncidencias}}{131}{figure.109}%
+\contentsline {figure}{\numberline {110}{\ignorespaces Funci\'on createConductor}}{131}{figure.110}%
+\contentsline {figure}{\numberline {111}{\ignorespaces Funci?n updateConductor}}{132}{figure.111}%
+\contentsline {figure}{\numberline {112}{\ignorespaces Funci?n deleteConductor}}{132}{figure.112}%
+\contentsline {figure}{\numberline {113}{\ignorespaces Funci?n createIncidencia}}{133}{figure.113}%
+\contentsline {figure}{\numberline {114}{\ignorespaces Funci?n oncreateIncidencia}}{133}{figure.114}%
+\contentsline {figure}{\numberline {115}{\ignorespaces Consola de AWS}}{134}{figure.115}%
+\contentsline {figure}{\numberline {116}{\ignorespaces Funcionamiento de Appsync}}{134}{figure.116}%
+\contentsline {figure}{\numberline {117}{\ignorespaces Crear Conductor}}{135}{figure.117}%
+\contentsline {figure}{\numberline {118}{\ignorespaces Amplify Hosting }}{136}{figure.118}%
+\contentsline {figure}{\numberline {119}{\ignorespaces ramificaci?n de repositorio de Github}}{137}{figure.119}%
+\contentsline {figure}{\numberline {120}{\ignorespaces Acceso a la p\'agina web desde el navegador}}{137}{figure.120}%
