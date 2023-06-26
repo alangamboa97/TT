@@ -3091,7 +3091,7 @@ Como primer paso, se descargó el \emph{JetPack SDK 4.6.3} \cite{JetPackSDK},el c
 Posteriormente se instaló la imagen en la tarjeta microSD con el apoyo de BalenaEtcher 1.7.9 que se utilizó para crear una unidad de arranque. 
 
 \begin{center}
-  \includegraphics[scale=0.2]{imagenes/Balena.JPG}
+  \includegraphics[scale=0.6]{imagenes/Balena.JPG}
 \captionof{figure}{Instalación del JetPack SDK realizado con BalenaEtcher.}
  \label{fig:BalenaEtcher} 
 \end{center} 
@@ -3160,8 +3160,14 @@ sudo pip3 install --extra-index-url https://developer.download.nvidia.com/comput
 \begin{verbatim}
 pip3 install keras==2.7.0
 \end{verbatim}
-
 \end{enumerate}
+
+Se importaron las librerias con Python3 para verificar que hayan sido correctamente instaladas.
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/librerias2.jpeg}
+\captionof{figure}{Importación de librerías instaladas con Python.}
+ \label{fig:Librerias} 
+\end{center}  
 
 
 Se instalo Jetson Stats,la cual es una herramienta de monitoreo del sistema que proporciona información de rendimiento de Jetson en tiempo real. Muestra información sobre el uso de la CPU, la GPU, la memoria y otros recursos del sistema. jtop muestra la salida de los monitores de energía Jetson y los sensores de temperatura \cite{JetStats}.
@@ -3213,6 +3219,13 @@ Para habilitar la memoria zram de nuevo se utiliza el comando:
 sudo systemctl enable nvzramconfig
 \end{verbatim}
 
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/swap.jpeg}
+\captionof{figure}{verificación del archivo swap credo.}
+ \label{fig:Swap} 
+\end{center}  
+
+
 OpenCV con CUDA (Arquitectura de dispositivo unificado de cómputo)
 Por defecto la versión del JetPack SDK 4.6.3 viene instalado con OpenCV 4.1.1 sin CUDA, el cual es un marco que permite la computación paralela en la GPU. Para activar CUDA se utilizó el sript proporcionado en el repositiorio de github \cite{CUDA} que ademas instala la version 4.5 de OpenCV:
 
@@ -3227,9 +3240,18 @@ El archivo se modificó colocando la variable JOBS=4 despues de haber modificado 
 ./build_opencv.sh 4.5.4
 \end{verbatim}
 
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/OpencvCuda.jpeg}
+\captionof{figure}{Visualización de la instalación exitosa de OpenCV con Cuda en Jtop.}
+ \label{fig:Swap} 
+\end{center}  
+
 
 \subsubsection{Implementación de puntos faciales para detectar el nivel de apertura de los ojos y boca}
 
+
+
+se definió una función 
 
 \subsubsection{Detección de somnolecia}
 
