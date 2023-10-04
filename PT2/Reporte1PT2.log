@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.3)  4 OCT 2023 12:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.3)  4 OCT 2023 12:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -732,12 +732,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-<imagenes/ipn.jpg, id=107, 180.675pt x 232.87pt>
+<imagenes/ipn.jpg, id=103, 180.675pt x 232.87pt>
 File: imagenes/ipn.jpg Graphic file (type jpg)
 <use imagenes/ipn.jpg>
 Package pdftex.def Info: imagenes/ipn.jpg  used on input line 41.
 (pdftex.def)             Requested size: 81.303pt x 104.79051pt.
-<imagenes/upiita.png, id=108, 722.7pt x 568.1225pt>
+<imagenes/upiita.png, id=104, 722.7pt x 568.1225pt>
 File: imagenes/upiita.png Graphic file (type png)
 <use imagenes/upiita.png>
 Package pdftex.def Info: imagenes/upiita.png  used on input line 43.
@@ -790,431 +790,6 @@ known/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <./imagenes/i
 pn.jpg> <./imagenes/upiita.png>] (Reporte1PT2.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2 ...A{^3}n de rutas del frontend}{4}{section.1}
-                                                  %
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<argument> ...ame }{\numberline {1}Definici\~A{^3}
-                                                  n de rutas del frontend}\h...
-l.2 ...A{^3}n de rutas del frontend}{4}{section.1}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<argument> ...inici\~A{^3}n de rutas del frontend}
-                                                  \hyper@linkend 
-l.2 ...A{^3}n de rutas del frontend}{4}{section.1}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2 ...A{^3}n de rutas del frontend}{4}{section.1}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.2 ...A{^3}n de rutas del frontend}{4}{section.1}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.2 ...A{^3}n de rutas del frontend}{4}{section.1}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.4 ... {1.2}Descripci\~A{^3}n}{4}{subsection.1.2}
-                                                  %
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<argument> ... }{\numberline {1.2}Descripci\~A{^3}
-                                                  n}\hyper@linkend 
-l.4 ... {1.2}Descripci\~A{^3}n}{4}{subsection.1.2}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<argument> ...{\numberline {1.2}Descripci\~A{^3}n}
-                                                  \hyper@linkend 
-l.4 ... {1.2}Descripci\~A{^3}n}{4}{subsection.1.2}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.4 ... {1.2}Descripci\~A{^3}n}{4}{subsection.1.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.4 ... {1.2}Descripci\~A{^3}n}{4}{subsection.1.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.4 ... {1.2}Descripci\~A{^3}n}{4}{subsection.1.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
-.
-(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-! Missing $ inserted.
-<inserted text> 
-                $
-l.10 ...ase de datos No Relacional}{13}{section.3}
-                                                  %
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<argument> ...tname }{\numberline {3}Creaci\~A{^3}
-                                                  n de la base de datos No R...
-l.10 ...ase de datos No Relacional}{13}{section.3}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<argument> ...n de la base de datos No Relacional}
-                                                  \hyper@linkend 
-l.10 ...ase de datos No Relacional}{13}{section.3}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.10 ...ase de datos No Relacional}{13}{section.3}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.10 ...ase de datos No Relacional}{13}{section.3}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.10 ...ase de datos No Relacional}{13}{section.3}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.16 ...4.2}Descripci\~A{^3}n}{15}{subsection.4.2}
-                                                  %
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<argument> ... }{\numberline {4.2}Descripci\~A{^3}
-                                                  n}\hyper@linkend 
-l.16 ...4.2}Descripci\~A{^3}n}{15}{subsection.4.2}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<argument> ...{\numberline {4.2}Descripci\~A{^3}n}
-                                                  \hyper@linkend 
-l.16 ...4.2}Descripci\~A{^3}n}{15}{subsection.4.2}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.16 ...4.2}Descripci\~A{^3}n}{15}{subsection.4.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.16 ...4.2}Descripci\~A{^3}n}{15}{subsection.4.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.16 ...4.2}Descripci\~A{^3}n}{15}{subsection.4.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.20 ...5.2}Descripci\~A{^3}n}{17}{subsection.5.2}
-                                                  %
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<argument> ... }{\numberline {5.2}Descripci\~A{^3}
-                                                  n}\hyper@linkend 
-l.20 ...5.2}Descripci\~A{^3}n}{17}{subsection.5.2}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<argument> ...{\numberline {5.2}Descripci\~A{^3}n}
-                                                  \hyper@linkend 
-l.20 ...5.2}Descripci\~A{^3}n}{17}{subsection.5.2}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.20 ...5.2}Descripci\~A{^3}n}{17}{subsection.5.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.20 ...5.2}Descripci\~A{^3}n}{17}{subsection.5.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.20 ...5.2}Descripci\~A{^3}n}{17}{subsection.5.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.22 ...r ojos cerrados y abiertos}{21}{section.6}
-                                                  %
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<argument> ...e detectar ojos cerrados y abiertos}
-                                                  \hyper@linkend 
-l.22 ...r ojos cerrados y abiertos}{21}{section.6}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.22 ...r ojos cerrados y abiertos}{21}{section.6}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.22 ...r ojos cerrados y abiertos}{21}{section.6}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.24 ...6.2}Descripci\~A{^3}n}{21}{subsection.6.2}
-                                                  %
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<argument> ... }{\numberline {6.2}Descripci\~A{^3}
-                                                  n}\hyper@linkend 
-l.24 ...6.2}Descripci\~A{^3}n}{21}{subsection.6.2}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<argument> ...{\numberline {6.2}Descripci\~A{^3}n}
-                                                  \hyper@linkend 
-l.24 ...6.2}Descripci\~A{^3}n}{21}{subsection.6.2}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.24 ...6.2}Descripci\~A{^3}n}{21}{subsection.6.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.24 ...6.2}Descripci\~A{^3}n}{21}{subsection.6.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.24 ...6.2}Descripci\~A{^3}n}{21}{subsection.6.2}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 )
 \tf@toc=\write4
 \openout4 = `Reporte1PT2.toc'.
@@ -1225,45 +800,44 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.103 \newpage
-               [1{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
-s/lm/lm-mathit.enc}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dv
-ips/lm/lm-ts1.enc}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
-ps/lm/lm-mathsy.enc}]
-<imagenes/create.png, id=157, 676.5275pt x 70.2625pt>
+               [1]
+
+LaTeX Warning: Citation `dom' on page 2 undefined on input line 119.
+
+<imagenes/create.png, id=147, 676.5275pt x 70.2625pt>
 File: imagenes/create.png Graphic file (type png)
 <use imagenes/create.png>
 Package pdftex.def Info: imagenes/create.png  used on input line 126.
 (pdftex.def)             Requested size: 338.26291pt x 35.13115pt.
-<imagenes/router.png, id=158, 623.32875pt x 356.33125pt>
+<imagenes/router.png, id=148, 623.32875pt x 356.33125pt>
 File: imagenes/router.png Graphic file (type png)
 <use imagenes/router.png>
 Package pdftex.def Info: imagenes/router.png  used on input line 135.
 (pdftex.def)             Requested size: 311.6636pt x 178.16518pt.
-<imagenes/auth.png, id=159, 955.57pt x 289.08pt>
+<imagenes/auth.png, id=149, 955.57pt x 289.08pt>
 File: imagenes/auth.png Graphic file (type png)
 <use imagenes/auth.png>
 Package pdftex.def Info: imagenes/auth.png  used on input line 143.
 (pdftex.def)             Requested size: 477.78383pt x 144.53964pt.
- [2 <./imagenes/create.png> <./imagenes/router.png>]
-<imagenes/loginjs.png, id=169, 800.9925pt x 437.635pt>
+[2 <./imagenes/create.png> <./imagenes/router.png>]
+<imagenes/loginjs.png, id=158, 800.9925pt x 437.635pt>
 File: imagenes/loginjs.png Graphic file (type png)
 <use imagenes/loginjs.png>
 Package pdftex.def Info: imagenes/loginjs.png  used on input line 151.
 (pdftex.def)             Requested size: 480.5992pt x 262.58302pt.
-<imagenes/homejs.png, id=170, 870.25125pt x 497.86pt>
+<imagenes/homejs.png, id=159, 870.25125pt x 497.86pt>
 File: imagenes/homejs.png Graphic file (type png)
 <use imagenes/homejs.png>
 Package pdftex.def Info: imagenes/homejs.png  used on input line 161.
 (pdftex.def)             Requested size: 435.12456pt x 248.92938pt.
-
-[3 <./imagenes/auth.png> <./imagenes/loginjs.png>]
-<imagenes/routesjs.png, id=179, 485.815pt x 496.85625pt>
+ [3 <./imagenes/auth.png> <./imagenes/loginjs.png>]
+<imagenes/routesjs.png, id=168, 485.815pt x 496.85625pt>
 File: imagenes/routesjs.png Graphic file (type png)
 <use imagenes/routesjs.png>
 Package pdftex.def Info: imagenes/routesjs.png  used on input line 172.
 (pdftex.def)             Requested size: 242.9069pt x 248.4275pt.
  [4 <./imagenes/homejs.png> <./imagenes/routesjs.png>]
-<imagenes/loginpage.png, id=188, 1353.055pt x 589.20125pt>
+<imagenes/loginpage.png, id=177, 1353.055pt x 589.20125pt>
 File: imagenes/loginpage.png Graphic file (type png)
 <use imagenes/loginpage.png>
 Package pdftex.def Info: imagenes/loginpage.png  used on input line 184.
@@ -1274,62 +848,72 @@ Overfull \hbox (40.72842pt too wide) in paragraph at lines 184--185
  []
 
 [5 <./imagenes/loginpage.png>]
-<imagenes/cli.png, id=195, 813.0375pt x 74.2775pt>
+<imagenes/cli.png, id=184, 813.0375pt x 74.2775pt>
 File: imagenes/cli.png Graphic file (type png)
 <use imagenes/cli.png>
 Package pdftex.def Info: imagenes/cli.png  used on input line 218.
 (pdftex.def)             Requested size: 487.82626pt x 44.56683pt.
-<imagenes/region.png, id=196, 682.55pt x 211.79124pt>
+<imagenes/region.png, id=185, 682.55pt x 211.79124pt>
 File: imagenes/region.png Graphic file (type png)
 <use imagenes/region.png>
 Package pdftex.def Info: imagenes/region.png  used on input line 226.
 (pdftex.def)             Requested size: 409.53316pt x 127.07571pt.
-<imagenes/sdk.png, id=197, 891.33pt x 157.58875pt>
+<imagenes/sdk.png, id=186, 891.33pt x 157.58875pt>
 File: imagenes/sdk.png Graphic file (type png)
 <use imagenes/sdk.png>
 Package pdftex.def Info: imagenes/sdk.png  used on input line 235.
 (pdftex.def)             Requested size: 490.23302pt x 86.67407pt.
-<imagenes/expressjs.png, id=198, 622.325pt x 115.43124pt>
+<imagenes/expressjs.png, id=187, 622.325pt x 115.43124pt>
 File: imagenes/expressjs.png Graphic file (type png)
 <use imagenes/expressjs.png>
 Package pdftex.def Info: imagenes/expressjs.png  used on input line 243.
 (pdftex.def)             Requested size: 342.2798pt x 63.48737pt.
  [6 <./imagenes/cli.png> <./imagenes/region.png> <./imagenes/sdk.png>]
-<imagenes/addapi.png, id=210, 571.13374pt x 106.3975pt>
+<imagenes/addapi.png, id=199, 571.13374pt x 106.3975pt>
 File: imagenes/addapi.png Graphic file (type png)
 <use imagenes/addapi.png>
 Package pdftex.def Info: imagenes/addapi.png  used on input line 254.
 (pdftex.def)             Requested size: 314.12453pt x 58.5188pt.
-<imagenes/graphql.png, id=211, 1044.90375pt x 327.2225pt>
+<imagenes/graphql.png, id=200, 1044.90375pt x 327.2225pt>
 File: imagenes/graphql.png Graphic file (type png)
 <use imagenes/graphql.png>
 Package pdftex.def Info: imagenes/graphql.png  used on input line 262.
 (pdftex.def)             Requested size: 417.9541pt x 130.88667pt.
-<imagenes/schema.png, id=212, 661.47125pt x 613.29124pt>
+<imagenes/schema.png, id=201, 661.47125pt x 613.29124pt>
 File: imagenes/schema.png Graphic file (type png)
 <use imagenes/schema.png>
 Package pdftex.def Info: imagenes/schema.png  used on input line 270.
 (pdftex.def)             Requested size: 363.8103pt x 337.31122pt.
  [7 <./imagenes/expressjs.png> <./imagenes/addapi.png> <./imagenes/graphql.png>
 ]
-<imagenes/endpoints.jpg, id=223, 874.26625pt x 581.17125pt>
+<imagenes/endpoints.jpg, id=212, 874.26625pt x 581.17125pt>
 File: imagenes/endpoints.jpg Graphic file (type jpg)
 <use imagenes/endpoints.jpg>
 Package pdftex.def Info: imagenes/endpoints.jpg  used on input line 285.
 (pdftex.def)             Requested size: 480.84793pt x 319.64517pt.
  [8 <./imagenes/schema.png>] [9 <./imagenes/endpoints.jpg>]
-<imagenes/dynamo.jpg, id=235, 803.0pt x 487.8225pt>
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
+04.
+ (C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<imagenes/dynamo.jpg, id=224, 803.0pt x 487.8225pt>
 File: imagenes/dynamo.jpg Graphic file (type jpg)
 <use imagenes/dynamo.jpg>
 Package pdftex.def Info: imagenes/dynamo.jpg  used on input line 313.
 (pdftex.def)             Requested size: 401.49902pt x 243.91064pt.
- [10 <./imagenes/dynamo.jpg>]
-<imagenes/aws.png, id=244, 755.82375pt x 465.74pt>
+
+
+LaTeX Warning: Citation `dynamo' on page 10 undefined on input line 323.
+
+[10{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.en
+c} <./imagenes/dynamo.jpg>]
+<imagenes/aws.png, id=232, 755.82375pt x 465.74pt>
 File: imagenes/aws.png Graphic file (type png)
 <use imagenes/aws.png>
 Package pdftex.def Info: imagenes/aws.png  used on input line 334.
 (pdftex.def)             Requested size: 377.91095pt x 232.86943pt.
-<imagenes/tables.png, id=245, 1062.97125pt x 351.3125pt>
+<imagenes/tables.png, id=233, 1062.97125pt x 351.3125pt>
 File: imagenes/tables.png Graphic file (type png)
 <use imagenes/tables.png>
 Package pdftex.def Info: imagenes/tables.png  used on input line 344.
@@ -1340,24 +924,27 @@ Overfull \hbox (31.00034pt too wide) in paragraph at lines 344--345
  []
 
 [11 <./imagenes/aws.png> <./imagenes/tables.png>]
-<imagenes/appsync.png, id=255, 1184.425pt x 471.7625pt>
+<imagenes/appsync.png, id=243, 1184.425pt x 471.7625pt>
 File: imagenes/appsync.png Graphic file (type png)
 <use imagenes/appsync.png>
 Package pdftex.def Info: imagenes/appsync.png  used on input line 363.
 (pdftex.def)             Requested size: 473.76161pt x 188.70164pt.
-<imagenes/appsyncendpoint.png, id=257, 584.1825pt x 358.33875pt>
+<imagenes/appsyncendpoint.png, id=245, 584.1825pt x 358.33875pt>
 File: imagenes/appsyncendpoint.png Graphic file (type png)
 <use imagenes/appsyncendpoint.png>
 Package pdftex.def Info: imagenes/appsyncendpoint.png  used on input line 375.
 (pdftex.def)             Requested size: 321.30136pt x 197.08691pt.
  [12 <./imagenes/appsync.png>] [13 <./imagenes/appsyncendpoint.png>]
-<imagenes/cognito.png, id=271, 573.14125pt x 520.94624pt>
+
+LaTeX Warning: Citation `cognito' on page 14 undefined on input line 389.
+
+<imagenes/cognito.png, id=258, 573.14125pt x 520.94624pt>
 File: imagenes/cognito.png Graphic file (type png)
 <use imagenes/cognito.png>
 Package pdftex.def Info: imagenes/cognito.png  used on input line 410.
 (pdftex.def)             Requested size: 286.56992pt x 260.47249pt.
- [14 <./imagenes/cognito.png>]
-<imagenes/add.png, id=279, 719.68875pt x 69.25874pt>
+[14 <./imagenes/cognito.png>]
+<imagenes/add.png, id=265, 719.68875pt x 69.25874pt>
 File: imagenes/add.png Graphic file (type png)
 <use imagenes/add.png>
 Package pdftex.def Info: imagenes/add.png  used on input line 432.
@@ -1367,7 +954,7 @@ Overfull \hbox (3.2947pt too wide) in paragraph at lines 432--433
  [] 
  []
 
-<imagenes/menu.png, id=280, 1029.8475pt x 271.0125pt>
+<imagenes/menu.png, id=266, 1029.8475pt x 271.0125pt>
 File: imagenes/menu.png Graphic file (type png)
 <use imagenes/menu.png>
 Package pdftex.def Info: imagenes/menu.png  used on input line 440.
@@ -1377,13 +964,13 @@ Overfull \hbox (14.4385pt too wide) in paragraph at lines 440--441
  [] 
  []
 
-<imagenes/console.png, id=281, 860.21375pt x 557.08125pt>
+<imagenes/console.png, id=267, 860.21375pt x 557.08125pt>
 File: imagenes/console.png Graphic file (type png)
 <use imagenes/console.png>
 Package pdftex.def Info: imagenes/console.png  used on input line 456.
 (pdftex.def)             Requested size: 430.10582pt x 278.53995pt.
 [15 <./imagenes/add.png> <./imagenes/menu.png>]
-<imagenes/pools.png, id=290, 1034.86626pt x 442.65375pt>
+<imagenes/pools.png, id=276, 1034.86626pt x 442.65375pt>
 File: imagenes/pools.png Graphic file (type png)
 <use imagenes/pools.png>
 Package pdftex.def Info: imagenes/pools.png  used on input line 464.
@@ -1393,94 +980,97 @@ Overfull \hbox (16.94786pt too wide) in paragraph at lines 464--465
  [] 
  []
 
-<imagenes/admin.png, id=291, 1111.15125pt x 529.98pt>
+<imagenes/admin.png, id=277, 1111.15125pt x 529.98pt>
 File: imagenes/admin.png Graphic file (type png)
 <use imagenes/admin.png>
 Package pdftex.def Info: imagenes/admin.png  used on input line 470.
 (pdftex.def)             Requested size: 444.45262pt x 211.98824pt.
 [16 <./imagenes/console.png> <./imagenes/pools.png>]
-<imagenes/users.png, id=300, 1028.84375pt x 466.74374pt>
+<imagenes/users.png, id=286, 1028.84375pt x 466.74374pt>
 File: imagenes/users.png Graphic file (type png)
 <use imagenes/users.png>
 Package pdftex.def Info: imagenes/users.png  used on input line 476.
 (pdftex.def)             Requested size: 411.53021pt x 186.69418pt.
  [17 <./imagenes/admin.png> <./imagenes/users.png>]
-<imagenes/ggco.JPG, id=309, 923.70094pt x 478.03593pt>
+<imagenes/ggco.JPG, id=295, 923.70094pt x 478.03593pt>
 File: imagenes/ggco.JPG Graphic file (type jpg)
 <use imagenes/ggco.JPG>
 Package pdftex.def Info: imagenes/ggco.JPG  used on input line 495.
 (pdftex.def)             Requested size: 277.11243pt x 143.41188pt.
-<imagenes/dv.jpg, id=311, 247.67531pt x 230.36063pt>
+
+
+LaTeX Warning: Citation `dataset' on page 18 undefined on input line 502.
+
+<imagenes/dv.jpg, id=296, 247.67531pt x 230.36063pt>
 File: imagenes/dv.jpg Graphic file (type jpg)
 <use imagenes/dv.jpg>
 Package pdftex.def Info: imagenes/dv.jpg  used on input line 508.
 (pdftex.def)             Requested size: 173.37152pt x 161.25133pt.
- [18
+[18
 
  <./imagenes/ggco.JPG> <./imagenes/dv.jpg>]
-<imagenes/librerias.JPG, id=320, 980.16188pt x 386.94562pt>
+<imagenes/librerias.JPG, id=304, 980.16188pt x 386.94562pt>
 File: imagenes/librerias.JPG Graphic file (type jpg)
 <use imagenes/librerias.JPG>
 Package pdftex.def Info: imagenes/librerias.JPG  used on input line 520.
 (pdftex.def)             Requested size: 392.05782pt x 154.7755pt.
-<imagenes/pdata.jpg, id=321, 872.50969pt x 686.565pt>
+<imagenes/pdata.jpg, id=305, 872.50969pt x 686.565pt>
 File: imagenes/pdata.jpg Graphic file (type jpg)
 <use imagenes/pdata.jpg>
 Package pdftex.def Info: imagenes/pdata.jpg  used on input line 529.
 (pdftex.def)             Requested size: 348.9977pt x 274.62112pt.
-<imagenes/effnet.JPG, id=322, 630.85687pt x 715.17188pt>
+<imagenes/effnet.JPG, id=306, 630.85687pt x 715.17188pt>
 File: imagenes/effnet.JPG Graphic file (type jpg)
 <use imagenes/effnet.JPG>
 Package pdftex.def Info: imagenes/effnet.JPG  used on input line 538.
 (pdftex.def)             Requested size: 252.33827pt x 286.06367pt.
-
-[19 <./imagenes/librerias.JPG> <./imagenes/pdata.jpg>]
-<imagenes/effinettl.JPG, id=329, 647.41875pt x 700.86844pt>
+ [19 <./imagenes/librerias.JPG> <./imagenes/pdata.jpg>]
+<imagenes/effinettl.JPG, id=313, 647.41875pt x 700.86844pt>
 File: imagenes/effinettl.JPG Graphic file (type jpg)
 <use imagenes/effinettl.JPG>
 Package pdftex.def Info: imagenes/effinettl.JPG  used on input line 546.
 (pdftex.def)             Requested size: 258.9629pt x 280.3424pt.
  [20 <./imagenes/effnet.JPG> <./imagenes/effinettl.JPG>]
-<imagenes/entrenamientoen.JPG, id=336, 861.2175pt x 258.21469pt>
+<imagenes/entrenamientoen.JPG, id=320, 861.2175pt x 258.21469pt>
 File: imagenes/entrenamientoen.JPG Graphic file (type jpg)
 <use imagenes/entrenamientoen.JPG>
 Package pdftex.def Info: imagenes/entrenamientoen.JPG  used on input line 554.
 (pdftex.def)             Requested size: 344.4809pt x 103.28404pt.
-<imagenes/entrenamientomn.JPG, id=337, 820.56563pt x 225.84375pt>
+<imagenes/entrenamientomn.JPG, id=321, 820.56563pt x 225.84375pt>
 File: imagenes/entrenamientomn.JPG Graphic file (type jpg)
 <use imagenes/entrenamientomn.JPG>
 Package pdftex.def Info: imagenes/entrenamientomn.JPG  used on input line 564.
 (pdftex.def)             Requested size: 328.22043pt x 90.33589pt.
-<imagenes/ENgrafico.JPG, id=338, 372.64218pt x 249.18094pt>
+<imagenes/ENgrafico.JPG, id=322, 372.64218pt x 249.18094pt>
 File: imagenes/ENgrafico.JPG Graphic file (type jpg)
 <use imagenes/ENgrafico.JPG>
 Package pdftex.def Info: imagenes/ENgrafico.JPG  used on input line 574.
 (pdftex.def)             Requested size: 149.05423pt x 99.6706pt.
-<imagenes/MNgrafico.JPG, id=339, 338.01282pt x 228.10219pt>
+<imagenes/MNgrafico.JPG, id=323, 338.01282pt x 228.10219pt>
 File: imagenes/MNgrafico.JPG Graphic file (type jpg)
 <use imagenes/MNgrafico.JPG>
 Package pdftex.def Info: imagenes/MNgrafico.JPG  used on input line 582.
 (pdftex.def)             Requested size: 135.20271pt x 91.23924pt.
- [21 <./imagenes/entrenamientoen.JPG> <./imagenes/entrenamientomn.JPG> <./image
-nes/ENgrafico.JPG> <./imagenes/MNgrafico.JPG>]
-<imagenes/ojo_cerradoEN.JPG, id=348, 862.72313pt x 481.8pt>
+
+[21 <./imagenes/entrenamientoen.JPG> <./imagenes/entrenamientomn.JPG> <./imagen
+es/ENgrafico.JPG> <./imagenes/MNgrafico.JPG>]
+<imagenes/ojo_cerradoEN.JPG, id=332, 862.72313pt x 481.8pt>
 File: imagenes/ojo_cerradoEN.JPG Graphic file (type jpg)
 <use imagenes/ojo_cerradoEN.JPG>
 Package pdftex.def Info: imagenes/ojo_cerradoEN.JPG  used on input line 597.
 (pdftex.def)             Requested size: 345.08313pt x 192.71658pt.
-<imagenes/ojo_abiertoEN.JPG, id=349, 862.72313pt x 481.8pt>
+<imagenes/ojo_abiertoEN.JPG, id=333, 862.72313pt x 481.8pt>
 File: imagenes/ojo_abiertoEN.JPG Graphic file (type jpg)
 <use imagenes/ojo_abiertoEN.JPG>
 Package pdftex.def Info: imagenes/ojo_abiertoEN.JPG  used on input line 603.
 (pdftex.def)             Requested size: 345.08313pt x 192.71658pt.
-<imagenes/ojo_cerradoMN.JPG, id=350, 819.06pt x 489.32813pt>
+<imagenes/ojo_cerradoMN.JPG, id=334, 819.06pt x 489.32813pt>
 File: imagenes/ojo_cerradoMN.JPG Graphic file (type jpg)
 <use imagenes/ojo_cerradoMN.JPG>
 Package pdftex.def Info: imagenes/ojo_cerradoMN.JPG  used on input line 612.
 (pdftex.def)             Requested size: 327.6182pt x 195.72777pt.
-
-[22 <./imagenes/ojo_cerradoEN.JPG> <./imagenes/ojo_abiertoEN.JPG>]
-<imagenes/ojo_abiertoMN.JPG, id=357, 879.285pt x 508.14844pt>
+ [22 <./imagenes/ojo_cerradoEN.JPG> <./imagenes/ojo_abiertoEN.JPG>]
+<imagenes/ojo_abiertoMN.JPG, id=341, 879.285pt x 508.14844pt>
 File: imagenes/ojo_abiertoMN.JPG Graphic file (type jpg)
 <use imagenes/ojo_abiertoMN.JPG>
 Package pdftex.def Info: imagenes/ojo_abiertoMN.JPG  used on input line 618.
@@ -1509,59 +1099,33 @@ LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `Reporte1PT2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Reporte1PT2.out':
-(rerunfilecheck)             Before: 03538E30AAECD5CD3F18AEF5DEC1A27F;3858
-(rerunfilecheck)             After:  A8E31EB19ACB428D832FC090FF05FECE;3648.
+Package rerunfilecheck Info: File `Reporte1PT2.out' has not changed.
+(rerunfilecheck)             Checksum: A8E31EB19ACB428D832FC090FF05FECE;3648.
  ) 
 Here is how much of TeX's memory you used:
- 14637 strings out of 478339
- 242308 string characters out of 2835756
- 545465 words of memory out of 3000000
- 32651 multiletter control sequences out of 15000+600000
- 524637 words of font info for 61 fonts, out of 8000000 for 9000
+ 14617 strings out of 478339
+ 242114 string characters out of 2835756
+ 544393 words of memory out of 3000000
+ 32639 multiletter control sequences out of 15000+600000
+ 524261 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,13n,77p,546b,600s stack positions out of 10000i,1000n,20000p,200000b,80000s
-
-pdfTeX warning (dest): name{cite.dataset} has been referenced but does not exis
-t, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.cognito} has been referenced but does not exis
-t, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.dynamo} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.dom} has been referenced but does not exist, r
-eplaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.8} has been referenced but does not exist, 
-replaced by a fixed one
-
-<C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
-b><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10
-.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcs
-c10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mmi12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+ 72i,13n,77p,550b,600s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.
+pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi
+10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+csc10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
 /lmr10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
 m/lmr12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmr8.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 lm/lmri12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/lm/lmsy10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/lm/lmtt12.pfb>
-Output written on Reporte1PT2.pdf (25 pages, 3009040 bytes).
+c/lm/lmtt12.pfb>
+Output written on Reporte1PT2.pdf (25 pages, 2968446 bytes).
 PDF statistics:
- 455 PDF objects out of 1000 (max. 8388607)
- 104 named destinations out of 1000 (max. 500000)
- 424 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 422 PDF objects out of 1000 (max. 8388607)
+ 99 named destinations out of 1000 (max. 500000)
+ 416 words of extra memory for PDF output out of 10000 (max. 10000000)
 
