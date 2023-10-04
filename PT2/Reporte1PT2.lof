@@ -1,0 +1,42 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Creaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n proyecto de react}}{4}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Instalaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n React Router DOM}}{4}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Funci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n RequireAuth}}{5}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Componente Login}}{5}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Ruta protegida del componente Home}}{6}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Directorio de rutas}}{6}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces P\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }gina de Login}}{7}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Instalaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n Amplify CLI}}{9}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Configuraci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n del proyecto}}{9}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Implementaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n del SDK de Amplify}}{9}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Creaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n de aplicaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n de Express}}{10}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Amplify add api}}{10}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Configuraci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n de par\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }metros de GraphQL}}{10}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Definici\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf } de Schemas para el manejo de datos}}{11}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Generaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n de Endpoint de GraphQL}}{12}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Tablas en DynamoDB}}{13}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Consola de AWS}}{14}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Tablas generadas mediante los schemas definidos}}{14}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Funcionamiento de Appsync}}{15}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Generaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n de endpoint de GraphQL}}{16}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Funcionamiento de Amazon Cognito}}{17}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Implementaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n de Amazon Cognito en el proyecto}}{18}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Menu de configuraci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n de Amazon Cognito}}{18}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Implementaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n completada}}{19}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Grupos de usuario}}{19}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Grupos de usuario}}{20}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Grupos de usuario}}{20}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Entorno de trabajo Google Colab. }}{21}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Dataset a trabajar desde Google Colab. }}{22}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Librer\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }as utilizadas y repositorio en drive del dataset.}}{22}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Preparaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n de los datos de entrada}}{23}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Exportaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n del modelo MobileNet}}{23}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Modificaci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n del modelo Mobilnet}}{24}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Entrenamiento del modelo MobileNet}}{24}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Entrenamiento del modelo EfficientNet}}{24}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Gr\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }fica de precisi\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n en cada epoca del modelo MobileNet. }}{25}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Gr\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }fica de precisi\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n en cada epoca del modelo EfficientNet.}}{25}{figure.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Predicci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n 1 para del modelo MobileNet. }}{25}{figure.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Predicci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n 2 para del modelo MobileNet. }}{26}{figure.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Predicci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n 1 para del modelo EfficientNet.}}{26}{figure.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Predicci\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }n 2 para del modelo EfficientNet.}}{27}{figure.41}%

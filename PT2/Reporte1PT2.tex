@@ -1,0 +1,659 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{anysize}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{float}
+\marginsize{2cm}{2cm}{1cm}{1cm}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize UPIITA}
+%\fancyfoot[R]{\footnotesize Diseño}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{\footnotesize Proyecto Terminal 2}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{graphics}
+\usepackage{capt-of}
+\usepackage[pdftex=false,colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+\setlength\parindent{0pt}
+\usepackage[usenames]{color}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{shapepar}
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+
+\includegraphics[scale=0.45]{imagenes/ipn}
+\hspace{10cm}
+\includegraphics[scale=0.15]{imagenes/upiita}
+\\
+
+
+\begin{center}
+
+
+\textsc{\Large ``Sistema para el monitoreo, detección y alerta de somnolencia del conductor mediante visión artificial, comunicación inalámbrica y geolocalización''}\\[0.5cm]
+
+
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Primer Reporte Parcial}\\[0.4cm]
+
+\HRule \\[1.5cm]
+
+\begin{center}
+
+Lista de actividades
+ 
+
+\begin{itemize}
+\item Definir rutas del frontend
+\item Diseño de rutas del backend  
+\item Conexión Backend con Mongo DB
+\item Sistema de acceso con credenciales
+\item Creación de la base de datos no relacional
+\item Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos
+\end{itemize}
+\end{center}
+
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{\\Autores:}\\
+Alan Eduardo Gamboa Del Ángel\\
+Maite Paulette Díaz Martínez\\
+
+%Grupo:4MM6\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{flushright} \large
+\emph{Asesores:} \\
+M.en C. Niels Henrik Navarrete Manzanilla\\
+Dr. Rodolfo Vera Amaro\\
+
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+05 de Octubre 2023
+
+\end{center}
+
+
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+%e\listoffigures
+\newpage
+%\listoftables
+
+\newpage
+\section{Definir rutas del frontend}
+
+\subsection{Objetivo}
+Definir e implementar las rutas que tendrá la aplicación, así como si serán públicas o privadas y la información que se desplegará en cada una de las mismas.
+
+
+\subsection{Descripción}
+
+\textbf{Rutas públicas vs rutas protegidas}
+
+Cuando se habla de una ruta protegida en React, se referiere a programar un bloqueo en ciertas rutas a la cual se le restringe el acceso al usuario. Esto comunmente se realiza para la validación de inicio de sesión de usuarios. Sí el usuario no tiene una sesión iniciada, no podrá acceder a las rutas protegidas de la aplicación. Por otro lado, las rutas públicas son todas aquellas las cuales no requieren contar con una sesión iniciada, y pueden ser accesadas por cualquier tipo de usuario\cite{dom}.
+
+
+Como primer paso, se necesita crear un proyecto de React utilizando el siguiente comando:
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/create}
+\captionof{figure}{Creación proyecto de react}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+Posteriomente, se realiza la instalación del modelo \emph{React Router Dom} utilizando el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/router}
+\captionof{figure}{Instalación React Router DOM}
+ \label{fig:MongoA} 
+\end{center} 
+
+Utilizando la librería \emph{useAuthenticator} ofrecida por el paquete de React Dom, crearemos un archivo de nombre \emph{RequireAuth.js} el cuál contendrá una función la cual se encargará de validar si existe una sesión iniciada previamente.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/auth}
+\captionof{figure}{Función RequireAuth}
+ \label{fig:auth} 
+\end{center} 
+
+Posteriormente, se necesita contar con una página de Login, la cuál permitirá validar que se encuentre una sesión inciada por parte del usuario, para así poder acceder a las rutas protegidas.
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/loginjs}
+\captionof{figure}{Componente Login}
+ \label{fig:loginjs} 
+\end{center} 
+
+
+Para indicar a React, que se desea implementar una ruta protegida, se necesita ir al componente de dicha ruta e ingresar el siguiente código:
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/homejs}
+\captionof{figure}{Ruta protegida del componente Home}
+ \label{fig:homejs} 
+\end{center} 
+
+En dicho componente, se hace uso de las librerías \emph{useAuthenticator} y \emph{Authenticator} las cuales son ofrecidas por los servicios de Amazon Amplify. Se tendrá que hacer esto para todos los componentes que deseemos mantener como rutas protegidas.
+
+
+Finalmente, dentro de nuestro componente \textbf{App.js}, crearemos una función que contendrá el directorio de rutas tanto públicas como protegidas:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/routesjs}
+\captionof{figure}{Directorio de rutas}
+ \label{fig:routesjs} 
+\end{center} 
+
+Las rutas protedigas, estarán dentro de las etiquetas \textbf{<RequireAuth></RequireAuth>}, mientras que las públicas, irán dentro de las etiquetas \textbf{<Route></Route>}.
+
+
+\subsection{Resultados}
+Como resultado de todo lo anterior, se obtuvo una página de Login que utilizando los servicios de AWS Amplify y Cognito, permitirá iniciar sesión así como registrar a nuevos usuarios.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/loginpage}
+\captionof{figure}{Página de Login}
+ \label{fig:loginpage} 
+\end{center} 
+
+Si intentamos ingresar a las paginas de Conductores, Incidencias o Ubicacion, nos redigirá a la página de Login, debido a que estas páginas fueron definidas como rutas protegidas. Por lo tanto el usuario debe haber inciado sesión para poder acceder a las mismas.
+
+
+\begin{itemize}
+\item \textbf{Path:} "/\\ \textbf{Descripción:} En esta dirección se encontrará la el formulario para poder iniciar sesión o registrarse
+
+\item \textbf{Path:} "/home \\  \textbf{Descripción:} Esta dirección será la página principal de la aplicación dónde se mostrarán las incidencias más recientes así como una lista de todos los conductores
+
+\item \textbf{Path:} "/conductor/\\ \textbf{Descripción:} Esta dirección mostrará el perfil del conductor de id correspondiente
+
+\item \textbf{Path:} "/detalle\textunderscore incidencia \\ \textbf{Descripción:} Esta dirección mostrará cada incidencia mostrando detalles como hora, fecha, coordenadas
+
+\item \textbf{Path:}  "/conductor/id/ubicacion \\ \textbf{Descripción:} En esta vista se mostrará la ubicación en tiempo real de cada conductor
+
+
+\item \textbf{Path:} "/conductor/id/incidencias \\ \textbf{Descripción:} En esta vista se mostrará todas las incidencias registradas por cada conductor
+
+\end{itemize}
+
+
+\section{Definir rutas del backend} \label{Backend}
+
+\subsection{Objetivo}
+Crear las rutas mediante las que el cliente realizará las peticiones y tendrá acceso a las operaciones, así como su funcionamiento en cuanto a obtención de datos y comunicación con el resto de la aplicación.
+\subsection{Descripción}
+
+Para poder utilizar los servicios de Amazon Amplify, necesitamos dirigirnos al directorio root de nuestro proyecto y ejectutar el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/cli}
+\captionof{figure}{Instalación Amplify CLI}
+ \label{fig:MongoA} 
+\end{center} 
+
+Posteriormente, se necesita especificar la región en la cual queremos alojar nuestra aplicación web:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/region}
+\captionof{figure}{Configuración del proyecto}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+Utilizando un editor de código, se necesita especificar que estará utilizando el \emph{SDK} de Amazon Amplify:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/sdk}
+\captionof{figure}{Implementación del SDK de Amplify}
+ \label{fig:MongoA} 
+\end{center} 
+
+Posteriormente, declaramos una aplicación de ExpressJs la cuál nos permitirá ejecutar entre otras cosas, peticiones HTTP para la comunicación con la base de datos.
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/expressjs}
+\captionof{figure}{Creación de aplicación de Express}
+ \label{fig:MongoA} 
+\end{center} 
+
+Finalmente, se necesitan definir las rutas de las APIs que se estarán utilizando en el proyecto, las cuales serán dos, la primera se encargará de la aplicación web, y la segunda de realizar la comunicación con el Módulo Central de Procesamiento.
+
+Para agregar una api, se necesita ejecutar el siguiente comando desde el directorio raíz del proyecto.
+
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/addapi}
+\captionof{figure}{Amplify add api}
+ \label{fig:MongoA} 
+\end{center} 
+
+La consola de AWS Amplify requerirá introducir parámetros con los cuales serán construida nuestra API, para el presente proyecto se estará utilizando una arquitectura mediante GraphQL, por lo cual seleccionaremos dicha opción.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/graphql}
+\captionof{figure}{Configuración de parámetros de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
+Antes de poder publicar nuestra API en AWS Amplify, se necesita definir el Schema con el cuál se hará el manejo de datos. A contiuación se muestran dichos schemas:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/schema}
+\captionof{figure}{Definición de Schemas para el manejo de datos}
+ \label{fig:MongoA} 
+\end{center} 
+
+Finalmente, ejecutaremos el comando \emph{amplify push}, el cuál publicará la API hacáa AWS amplify, generando el endpoint correspondiente a dicha API
+
+
+	
+
+\subsection{Resultados}
+
+Como resultado, tenemos el endpoint de nuestro modelo de GraphQL y nuestra API Key generada por Amplify
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/endpoints}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+\newpage
+
+\section{Creación de la base de datos No Relacional}
+
+Debido a problemas de integración junto con los servicios de autenticación y de despliegue de Amplify, se decidió utilizar el sistema de gestión de bases de datos DynamoDB.
+
+DynamoDB es un servicio de base de datos NoSQL Ofrecido por Amazon Web Services. DynamoDB trabaja con tablas. Estas a su vez, contienen parámetros importantes que se mencionarón a continuación.
+
+
+
+\begin{itemize}
+\item \textbf{\emph{Primary Key}}: Se trada de una clave primaria simple, compuesta por un solo atributo denominado clave de partición. Una clave primaria puede ser una clave de partición o una combinación de clave de partición y clave de ordenación. La clave primaria debe ser única en toda la tabla.
+\begin{itemize}
+\item \textbf{\emph{Parition Key}}: Es la llave principal por la cual se agruparán los datos, y determina cómo se particiona la información.
+
+\item \textbf{\emph{Sort Key}}: Es llave de ordenamiento de los datos.
+
+\end{itemize}
+
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/dynamo}
+\captionof{figure}{Tablas en DynamoDB}
+ \label{fig:cognito} 
+\end{center} 
+
+
+DynamoDB almacena los datos como grupos de atributos, conocidos como elementos. Los elementos son similares a las filas o registros de otros sistemas de bases de datos. DynamoDB almacena y recupera cada elemento en función del valor de la clave principal, que debe ser único.
+
+DynamoDB utiliza el valor de la clave de partición como parámetro de entrada para una función hash interna. El resultado de la función hash determina la partición en la que se almacena el elemento. La ubicación de cada elemento viene determinada por el valor hash de su clave de partición
+
+Todos los elementos con la misma clave de partición se almacenan juntos y, para las claves de partición compuestas, se ordenan por el valor de la clave de ordenación. DynamoDB divide las particiones por clave de ordenación si el tamaño de la colección crece más de 10 GB\cite{dynamo}.
+
+\subsection{Objetivo}
+Crear la base de datos en MongoDB.
+
+
+\subsection{Descripción}
+
+Para crear nuestras tablas de DynamoDB, se debe ingresar a la consola de AWS.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/aws}
+\captionof{figure}{Consola de AWS}
+ \label{fig:cognito} 
+\end{center} 
+\subsection{Resultados}
+
+Una vez dentro, ingresamos a la sección del servicio de DynamoDB
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/tables}
+\captionof{figure}{Tablas generadas mediante los schemas definidos}
+ \label{fig:cognito} 
+\end{center} 
+
+Como se puede observar, gracias a los pasos realizados en la sección \ref{Backend}, DynamoDB crea automáticamente las tablas creadas en base a los schemas definidos previamente.
+
+\newpage
+\section{Conexión Backend con la base de datos }
+
+
+
+\subsection{Objetivo}
+Realizar la conexión de NodeJs con la base de datos MongoDb.
+
+\subsection{Descripción}
+Para realizar la conexión y la integración de los servicios de DynamoDB hacáa nuestra API, se hará uso de AppSync. Las API de GraphQL creadas con AWS AppSync brindan a los desarrolladores frontend la capacidad de consultar varias bases de datos, microservicios y API desde un único punto de conexión de GraphQL. 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/appsync}
+\captionof{figure}{Funcionamiento de Appsync}
+ \label{fig:MongoA} 
+\end{center} 
+
+AWS AppSync crea las API sin servidor de GraphQL y de publicación o suscripción que simplifican el desarrollo de aplicaciones a través de un único punto de conexión para consultar, actualizar o publicar datos.
+
+\subsection{Resultados}
+
+Despues de haber realizado los pasos de la sección \ref{Backend}, si ejecutamos el comando \emph{amplify status}, la consola de Amplify nos retornara el endpoint de GraphQL junto con AppSync correspondiente, el cuál se utilizará para realizar todas las operaciones con respecto al almacenamiento de datos
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/appsyncendpoint}
+\captionof{figure}{Generación de endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+\newpage
+\section{Sistema de acceso con credenciales}
+
+
+\subsection{Objetivo}
+Establecer los roles de cada tipo de usuario con sus respectivos permisos de acceso a la aplicación web utilizando Amazon Cognito
+\subsection{Descripción}
+
+Amazon Cognito funciona utilizando \emph{pools} de usuarios. Un pool de usuarios es un directorio almacenado en los servicios de Amazon\cite{cognito}. Los beneficios que ofrece estar registrado en un pool de usuarios de Amazon Cognito son los siguientes:
+
+
+
+\begin{itemize}
+
+\item Servicio de registro e inicio de sesión
+\item Gestión del directorio de usuarios
+\item Servicios de seguridad tales como verificación de dos pasos
+\item Acceso a servicios de la suite de AWS	tales como S3 o Dynamodb
+
+
+
+
+\end{itemize}
+
+
+\textbf{Funcionamiento}
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/cognito}
+\captionof{figure}{Funcionamiento de Amazon Cognito}
+ \label{fig:cognito} 
+\end{center} 
+
+
+\begin{itemize}
+\item Como primer paso el usuario inicia sesión a través de un grupo de usuarios y recibe tokens del grupo de usuarios después de un
+autenticación exitosa.
+
+\item Posteriormente la aplicación intercambia los tokens del grupo de usuarios por las credenciales de AWS a través de un grupo de identidades.
+
+\item Finalmente, el usuario puede usar esas credenciales de AWS para acceder a otros servicios de AWS, como
+Amazon S3 o DynamoDB.
+
+\end{itemize}
+
+\textbf{Implementación}
+
+Para poder hacer uso de Amazon Cognito en nuestra aplicación debemos de introducir el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.7]{imagenes/add}
+\captionof{figure}{Implementación de Amazon Cognito en el proyecto}
+ \label{fig:cognito} 
+\end{center} 
+
+Obteniendo el siguiente menú:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/menu}
+\captionof{figure}{Menu de configuración de Amazon Cognito}
+ \label{fig:cognito} 
+\end{center} 
+
+Dejamos seleccionado la primera opción, la cual nos permitirá utilizar los servicios de autenticación ofrecidos por Amazon Cognito, además de otros serivios de la suite de AWS.
+
+Finalmente utilizamos el comando \emph{amplify push} para desplegar los cambios a nuestra aplicación.
+
+
+
+
+
+\subsection{Resultados}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/console}
+\captionof{figure}{Implementación completada}
+ \label{fig:cognito} 
+\end{center} 
+
+Entrando a nuestra consola de AWS, en la sección de Amazon Cognito, se puede observar dos grupos de usuarios, uno de tipo Administrador, el cual puede realizar cambios a la configuración de la aplicación, y otro de tipo de Usuario, el cual sólo puede hacer uso del sistema de inició de sesión y registro ofrecido por Cognito.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/pools}
+\captionof{figure}{Grupos de usuario}
+ \label{fig:cognito} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/admin}
+\captionof{figure}{Grupos de usuario}
+ \label{fig:cognito} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/users}
+\captionof{figure}{Grupos de usuario}
+ \label{fig:cognito} 
+\end{center} 
+
+
+
+
+\clearpage
+\section{Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}
+
+\subsection{Objetivo}
+Diseñar y realizar pruebas de los modelos de redes neuronales convolucionales previamente investigados para determinar el rendimiento y la precisión de cada uno.
+
+\subsection{Descripción}
+
+Para realizar el entrenamiento de los modelos EfficientNet y MobileNet se hizo uso de google colab el cual nos permite ejecutar código de Python en el navegador.
+
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/ggco.JPG}
+\captionof{figure}{Entorno de trabajo Google Colab.  }
+ \label{fig:GoogleCo} 
+\end{center} 
+
+
+
+Se requirirá de un dataset con imágenes de ojos abiertos y cerrados para entrenar los modelos, el dataset que se utilizá es el siguiente: MRL Eye Dataset\cite{dataset}.
+
+Parte de los datos del data set original se separaron en dos carpetas, en la primera carpeta se colocaron las imágenes con ojos cerrados y en la segunda carpeta las imágenes de ojos abiertos. Posteriormente se subieron las carpetas a un repositorio en drive para trabajar desde Google Colab. El dataset con el cual se trabajó contiene 3242 imágenes de las cuales 1840 son imágenes de ojos cerrados y 1402 son de con ojos abiertos. 
+
+
+\begin{center}
+  \includegraphics[scale=0.7]{imagenes/dv}
+\captionof{figure}{Dataset a trabajar desde Google Colab. }
+ \label{fig:DataGC} 
+\end{center} 
+
+
+
+Se importaron las libreráas a utilizar y el repositorio de drive para hacer uso del dataset, así mismo se definieron 2 clases, la primera para ojos abiertos y la segunda para ojos cerrados. 
+Ya que los modelos pre entrenados con los que se trabaj? son en base a im?genes con dimensi?n de 244 x 244, se defini? el tama?o de la imagen en 224.
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/librerias.JPG}
+\captionof{figure}{Librer?as utilizadas y repositorio en drive del dataset.}
+ \label{fig:Librerias} 
+\end{center} 
+
+
+Es necesario convertir las im?genes en un arreglo de datos con su respectiva clase por lo que se creo una funci?n con dicho proposito, posteriormente se etiquetaron los datos y se normalizaron para obtener las entradas de datos, donde X contiene los pixeles de las im?genes en tama?o 224x224 en 3 planos (rgb) y Y contiene el arreglo de etiquetas 0 y 1, que corresponden a la clase a la que pertenece cada imagen. 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/pdata}
+\captionof{figure}{Preparaci?n de los datos de entrada}
+ \label{fig:Data} 
+\end{center} 
+
+
+Posteriormente se exporto el modelo y se visualiz? la arquitectura de la red.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/effnet.JPG}
+\captionof{figure}{Exportaci?n del modelo MobileNet}
+ \label{fig:MMobileNet} 
+\end{center} 
+
+Se aplicaron modificaciones a partir de la cuarta ?ltima capa, se agregaron nuevas capas y la funci?n de activaci?n sigmoid.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/effinettl.JPG}
+\captionof{figure}{Modificaci?n del modelo Mobilnet}
+ \label{fig:MobileNetTL} 
+\end{center} 
+
+Finalmente se entrena el modelo MobileNet 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/entrenamientoen.JPG}
+\captionof{figure}{Entrenamiento del modelo MobileNet}
+ \label{fig:EfficientEn} 
+\end{center} 
+
+
+Para el modelo EfficientNet se realiz? el mismo procedimiento que en el modelo EfficientNet.
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/entrenamientomn.JPG}
+\captionof{figure}{Entrenamiento del modelo EfficientNet}
+ \label{fig:MobileNetEn} 
+\end{center} 
+
+La gr?fica muestra el las epocas y la precisi?n obtenida en cada una de ellas, as? como la precisi?n de los datos ocupados para la validaci?n dentro del entrenamiento. 
+
+MobileNet
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ENgrafico.JPG}
+\captionof{figure}{Gr?fica de precisi?n en cada epoca del modelo MobileNet. }
+ \label{fig:GraficaEN} 
+\end{center} 
+
+EfficientNet
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/MNgrafico.JPG}
+\captionof{figure}{Gr?fica de precisi?n en cada epoca del modelo EfficientNet.}
+ \label{fig:GraficaMN} 
+\end{center} 
+
+
+\subsection{Resultados}
+
+Una vez entrenados los modelos se realizaron las pruebas de los modelos EfficientNet y MobileNet para ojos cerrado y abiertos.
+Se obtuvieron los siguientes resultados:
+
+ MobileNet
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_cerradoEN.JPG}
+\captionof{figure}{Predicci?n 1 para del modelo MobileNet. }
+ \label{fig:Prueba1} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_abiertoEN.JPG}
+\captionof{figure}{Predicci?n 2 para del modelo MobileNet. }
+ \label{fig:Prueb2} 
+\end{center} 
+
+
+EfficientNet
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_cerradoMN.JPG}
+\captionof{figure}{Predicci?n 1 para del modelo EfficientNet.}
+ \label{fig:Prueba3} 
+\end{center} 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ojo_abiertoMN.JPG}
+\captionof{figure}{Predicci?n 2 para del modelo EfficientNet.}
+ \label{fig:Prueba4} 
+\end{center} 
+
+
+
+
+%\newpage
+%\section{Conclusiones}
+
+
+\newpage
+\section{Bibliografia}
+%\bibliographystyle{apacite}
+
+\begin{thebibliography}{10} %10 significa el número máximo de items
+%Aquí ponga la bibliografía y referencias usadas
+
+%Artículo:
+
+\bibitem {react} React Dev Team, \emph{React}, React. https://react.dev/ (accedido el 1 de abril de 2023).
+
+\bibitem {waveshare} Waveshare Electronics, \emph{SIM7600G-H 4G for Jetson Nano - Waveshare Wiki}, Waveshare Electronics\url{https://www.waveshare.com/wiki/SIM7600G-H_4G_for_Jetson_Nano_4G_connecting} (accedido el 16 de abril de 2023).
+
+\bibitem {graphql} Facebook Dev Team, \emph{Introduction to GraphQL | GraphQL | A query language for your API} https://graphql.org/learn/ (accedido el 4 de abril de 2023).
+
+
+
+\bibitem{Nvidia} NVIDIA, "Get Started with the Jetson Nano Developer Kit", NVIDIA Developer, 2019. [Online]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro. [Accedido: Abril 02 2023].
+
+\bibitem{sdimage} Nvidia Developer, "Get Started with Jetson Nano Devkit," Nvidia Developer. [En línea]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#write. [Accedido: 2 de abril de 2023].
+
+\bibitem{JetsonInf}Dusty, N. "Building the Repo - NVIDIA Jetson Inference," GitHub. [Online]. Disponible en: https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md. [Accedido en: 02-abr-2023].
+
+
+\end{thebibliography}
+
+
+\end{document}
+
+
