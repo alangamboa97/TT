@@ -94,7 +94,7 @@ Dr. Rodolfo Vera Amaro\\
 
 \vfill
 
-19 de Mayo 2023
+07 de Diciembre 2023
 
 \end{center}
 
@@ -286,7 +286,7 @@ https://main.dcst1c83llut3.amplifyapp.com/login
 
 \newpage
 
-\section{Realizar la conexión de la aplicación web con el Módulo Central de Procesamiento}
+\section{Conexión de la aplicación web con el Módulo Central de Procesamiento}
 
 \subsection{Objetivo}
 Implementación de técnicas y configuraciones necesarias para realizar la conexión de la aplicación web
@@ -390,16 +390,15 @@ Conexión a AWS Amplify utilizando Boto3
 
 
 \newpage
-\section{Implementación del modelo de red neuronal para la detección de somnolencia en la Jetson Nano}
+\section{Aplicar el algoritmo de detección con el módulo central de procesamiento}
 
 
 \subsection{Objetivo}
-Integrar la red neuronal entrenada en conjunto con los
-algoritmos de detección de rostro y ojos, y la metrica MOR.
+Integrar el sistema e detección de somnolencia junto con la obtención de los datos de incidencia. 
 	
 \subsection{Descripción}
-Se cargó el modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. Luego, se inicializó la cámara para capturar el flujo de video utilizando el método gstreamer pipeline. A continuación, se inició un bucle infinito para procesar cada cuadro de video capturado. Dentro del bucle, cada cuadro de video se convirtió a escala de grises y se utilizaron clasificadores de cascada de Haar \cite{haarcascades} para detectar caras y ojos en el cuadro de video. Posteriormente, se extrajo el área de interés correspondiente a cada ojo detectado.
-Se realizó el preprocesamiento necesario en cada ojo para que coincidiera con el formato de entrada del modelo y se llevó a cabo una predicción utilizando el modelo entrenado para determinar si los ojos estaban cerrados o abiertos. Se calculó un puntaje basado en el número de ojos cerrados detectados y se mostró este puntaje junto con un texto que indica si los ojos estaban cerrados o abiertos en el cuadro de video. Si el puntaje supera el umbral determinado, se consideraba que la persona estaba somnolienta y se activaba una alerta. El bucle continúa hasta que se presiona la tecla 'q', momento en el cual se liberaran los recursos de la cámara y se cierran las ventanas de visualización
+Se cargó el modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. sinembargo,debido a los recursos limitados de la jetson nano, los fps resultantes en tiempo real al correr el script fueron de 1 a 3 fps. Como resultado perdemos capturas por segundo del rostro que brindan información para la predicción en tiempo real. Por tanto se optó por una alternativa que utiliza menos recursos de la GPU para poder realizar más capturas por segundo y no perder información que permita detectar de una forma correcta los ojos y la boca del conductor y que a su vez permita medir la somnolencia.  
+Se realizó una captura del video y se procedió a detectar el rostro del conductor, posteriormente se aplicó una malla de puntos faciales la cual nos permite tomar los puntos requeridos, en este caso se uso los puntos que referencian el ojo derecho, el ojo izquierdo y la boca para medir la distancia entre puntos y detectar si se encuentran abiertos o cerrados. Posteriormente se aplicó la logica que permite medir la duración de los parpadeos y bostezos, tomando en cuenta la duración se establecieron parámetros definidos que permitan detectar un posible caso de somnolencia. 
 
 \begin{center}
   \includegraphics[scale=0.7]{imagenes/CodigoSomnolencia1.JPG}
@@ -435,20 +434,6 @@ El archivo respecto a la métrica MOR \cite{68LandPoints}, se complementó con la 
 
 \subsection{Resultados}
 
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/OE.jpeg}
-\captionof{figure}{Prueba de somnolencia ojos abiertos}
- \label{fig:crearConductor} 
-\end{center} 
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/CE.jpeg}
-\captionof{figure}{Prueba de somnolencia ojos cerrados}
- \label{fig:crearConductor} 
-\end{center} 
-
-
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/MOR2.jpeg}
 \captionof{figure}{Prueba de la metrica MOR 1}
@@ -466,11 +451,11 @@ El archivo respecto a la métrica MOR \cite{68LandPoints}, se complementó con la 
 
 
 \newpage
-\section{Realizar la integración de los periféricos al Módulo Central de Procesamiento}
+\section{Integración de los periféricos al Módulo Central de Procesamiento}
 
 
 \subsection{Objetivo}
-Integrar dentro de un contenedor los periféricos junto con la Jetson Nano
+Integrar dentro de un contenedor los periféricos junto con la Jetson Nano.
 \subsection{Descripción}
 
 Se integraron los periféricos dentro del contenedor para la Jetson Nano.\\
@@ -502,9 +487,9 @@ Contenedor de la Jetson nano junto con los periféricos integrados:
 \newpage
 \section{Conclusiones}
 
-En conclusión, en este proyecto se habilitó el GPS en la Jetson Nano a través de la terminal utilizando comandos GPS y se verificó su estado. Luego, se interactuó con el módulo SIM7600X a través de un programa en Python para obtener los datos de posición GPS. Se utilizó AWS Maps, un servicio de Amazon Web Services, para crear un mapa personalizado en la nube. Se configuraron la apariencia y la funcionalidad del mapa, incluyendo los estilos de visualización, las capas de datos y las interacciones del usuario.  Se implementó una función para obtener el historial de posiciones del dispositivo, utilizando la función "client.getDevicePositionHistory" de AWS. Los resultados se mapearon en un objeto que contenía las propiedades de la posición del dispositivo. Se guardó este archivo con extensión .jsx. Para desplegar la aplicación web en su totalidad, se utilizó Amplify Hosting como servicio de hosting. Se seleccionó el repositorio alojado en GitHub y se configuró la conexión utilizando la biblioteca Boto3 de Python, que permite interactuar con los servicios de AWS. Además, se cargó un modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. Se utilizó la cámara de la Jetson Nano para capturar el flujo de video y se procesó cada cuadro de video para detectar caras y ojos. Se realizó una predicción utilizando el modelo entrenado para determinar si los ojos estaban cerrados o abiertos. Se mostró un puntaje y un texto indicando si los ojos estaban cerrados o abiertos, y se activó una alerta si el puntaje superaba un umbral establecido. Finalmente se integraron los periféricos junto con la Jetson nano dentro de una carcasa de metal.\\
+En conclusión, en este proyecto se habilitó el GPS en la Jetson Nano a través de la terminal utilizando comandos GPS y se verificó su estado. Luego, se interactuó con el módulo SIM7600X a través de un programa en Python para obtener los datos de posición GPS. Se utilizó AWS Maps, un servicio de Amazon Web Services, para crear un mapa personalizado en la nube. Se configuraron la apariencia y la funcionalidad del mapa, incluyendo los estilos de visualización, las capas de datos y las interacciones del usuario.  Se implementó una función para obtener el historial de posiciones del dispositivo, utilizando la función "client.getDevicePositionHistory" de AWS. Los resultados se mapearon en un objeto que contenía las propiedades de la posición del dispositivo. Se guardó este archivo con extensión .jsx. Para desplegar la aplicación web en su totalidad, se utilizó Amplify Hosting como servicio de hosting. Se seleccionó el repositorio alojado en GitHub y se configuró la conexión utilizando la biblioteca Boto3 de Python, que permite interactuar con los servicios de AWS. Además, aplico el algoritmo para detectar la somnolencia tomando como parámetros los ojos y la boca. Se utilizó la cámara de la Jetson Nano para capturar el flujo de video y se procesó cada cuadro de video para detectar caras y ojos. Se mostrarón los resultados y un texto indicando si el estado es activo o somnoliento y se envió un mensaje de alerta si el puntaje superaba un umbral establecido. Finalmente se integraron los periféricos junto con la Jetson nano dentro de una carcasa de metal.\\
 
-En esta etapa del proyecto se integró el uso del GPS en la Jetson Nano, la visualización de datos geográficos en un mapa personalizado utilizando AWS Maps, la obtención de historial de posiciones del dispositivo, el despliegue de una aplicación web utilizando Amplify Hosting, la detección de ojos cerrados y abiertos utilizando un modelo de red neuronal convolucional y la integración de los périfericos con la Jetson Nano dentro de una carcasa de metal.
+En esta etapa del proyecto se integró el uso del GPS en la Jetson Nano, la visualización de datos geográficos en un mapa personalizado utilizando AWS Maps, la obtención de historial de posiciones del dispositivo, el despliegue de una aplicación web utilizando Amplify Hosting, la detección de ojos cerrados y abiertos utilizando puntos faciales y la integración de los périfericos con la Jetson Nano dentro de un contenedor de metal.
 
 
 \newpage
