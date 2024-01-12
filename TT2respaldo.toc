@@ -1,0 +1,102 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Glosario de Abreviaturas}{10}{section.1}%
+\contentsline {section}{\numberline {2}Resumen}{11}{section.2}%
+\contentsline {section}{\numberline {3}Abstract}{11}{section.3}%
+\contentsline {section}{\numberline {4}Cap\IeC {\'\i }tulo I: Introducci\'on}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Planteamiento del problema}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Propuesta de soluci\'on}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Alcances}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Escenario de pruebas}{15}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Justificaci\'on}{16}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Metodolog\IeC {\'\i }a}{17}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Objetivos}{18}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Objetivo General}{18}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Objetivos Espec\IeC {\'\i }ficos}{18}{subsubsection.4.7.2}%
+\contentsline {section}{\numberline {5}Cap\IeC {\'\i }tulo II: Marco de Referencia}{19}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Marco Te\'orico}{19}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Somnolencia}{19}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Jetson Nano}{19}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Visi\'on Artificial}{19}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Red Neuronal}{20}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}Redes Neuronales Convolucionales}{20}{subsubsection.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.6}Cascadas Haar}{22}{subsubsection.5.1.6}%
+\contentsline {subsubsection}{\numberline {5.1.7}\emph {Content Delivery Network}}{23}{subsubsection.5.1.7}%
+\contentsline {subsubsection}{\numberline {5.1.8}\emph {Cloud Computing}}{24}{subsubsection.5.1.8}%
+\contentsline {subsubsection}{\numberline {5.1.9}GraphQL}{24}{subsubsection.5.1.9}%
+\contentsline {subsubsection}{\numberline {5.1.10}Est\'andares y Protocolos de Comunicaci\'on Inal\'ambrica}{24}{subsubsection.5.1.10}%
+\contentsline {subsubsection}{\numberline {5.1.11}LTE-M}{25}{subsubsection.5.1.11}%
+\contentsline {subsubsection}{\numberline {5.1.12}Teorema de Shannon-Hartley}{26}{subsubsection.5.1.12}%
+\contentsline {subsubsection}{\numberline {5.1.13}Geolocalizaci\'on}{26}{subsubsection.5.1.13}%
+\contentsline {subsection}{\numberline {5.2}Estado del Arte}{27}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}\emph {Driver Drowsiness Detection Using Machine Learning with Visual Behaviour}}{27}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}\emph {Detection Of Drowsiness And Distraction Of Drivers Using CNN}}{27}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}\emph {Driver Drowsiness Detection System Using Convolutional Neural Networks}}{27}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Rasperry Pi based System for Visual Object Detection and Tracking}{27}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.5}Dise\~no e implementaci\'on de sistema de visi\'on artificial para alerta y detecci\'on de somnolencia mediante aprendizaje profundo aplicable en conductores de veh\IeC {\'\i }culos}{27}{subsubsection.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.6}Aplicaci\'on de visi\'on por computador y \emph {machine learning} al guiado de un robot m\'ovil basado en Rasperry Pi}{28}{subsubsection.5.2.6}%
+\contentsline {subsubsection}{\numberline {5.2.7}Evaluaci\'on de la plataforma Nvidia Jetson Nano para aplicaciones de visi\'on artificial}{28}{subsubsection.5.2.7}%
+\contentsline {subsubsection}{\numberline {5.2.8}\emph {Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Jetson Nano}}{28}{subsubsection.5.2.8}%
+\contentsline {subsubsection}{\numberline {5.2.9}Sistema de detecci\'on de somnolencia mediante inteligencia artificial en conductores de veh\IeC {\'\i }culos para alertar la ocurrencia de accidentes de tr\'ansito}{28}{subsubsection.5.2.9}%
+\contentsline {subsubsection}{\numberline {5.2.10}Dise\~no de un sistema electr\'onico para detectar la somnolencia en automovilistas por medio de la actividad ocular}{29}{subsubsection.5.2.10}%
+\contentsline {subsubsection}{\numberline {5.2.11}Sistema para la detecci\'on del estado de somnolencia en seres humanos, con reconocimiento de patrones }{29}{subsubsection.5.2.11}%
+\contentsline {subsubsection}{\numberline {5.2.12}Sistema de Detecci\'on de Somnolencia}{29}{subsubsection.5.2.12}%
+\contentsline {subsubsection}{\numberline {5.2.13}Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. }{29}{subsubsection.5.2.13}%
+\contentsline {subsubsection}{\numberline {5.2.14}Sistema basado en la detecci\'on y notificaci\'on de somnolencia en conductores de autos }{30}{subsubsection.5.2.14}%
+\contentsline {subsubsection}{\numberline {5.2.15}Detecci\'on de somnolencia para conducci\'on sin accidentes}{30}{subsubsection.5.2.15}%
+\contentsline {subsubsection}{\numberline {5.2.16}Dise\~no e implementaci\'on de un sistema de geolocalizaci\'on en interiores para plataforma Android v\IeC {\'\i }a la red enterprise WLAN de la PUCP}{30}{subsubsection.5.2.16}%
+\contentsline {subsubsection}{\numberline {5.2.17}Propuesta de un sistema de geolocalizaci\'on y monitoreo v\IeC {\'\i }a GPS/GSM/GPRS aplicado a un puls\'ometro para personas con enfermedades cardiovasculares}{31}{subsubsection.5.2.17}%
+\contentsline {subsubsection}{\numberline {5.2.18}Influencia de un sistema de geolocalizaci\'on en el control y monitoreo de veh\IeC {\'\i }culos con dispositivos GPS en una empresa log\IeC {\'\i }stica}{31}{subsubsection.5.2.18}%
+\contentsline {section}{\numberline {6}Cap\IeC {\'\i }tulo III: An\'alisis}{32}{section.6}%
+\contentsline {subsection}{\numberline {6.1}An\'alisis y delimitaci\'on de la zona geogr\'afica }{33}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}An\'alisis del M\'odulo Central de Procesamiento}{35}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}An\'alisis y Elecci\'on del microordenador}{38}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}An\'alisis y Elecci\'on de la alarma }{39}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}An\'alisis y Elecci\'on de la unidad de almacenamiento externa}{40}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}An\'alisis y Elecci\'on de lenguajes de programaci\'on para el microordenador}{41}{subsubsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.5}An\'alisis del Subm\'odulo Visi\'on Artificial}{43}{subsubsection.6.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.6}An\'alisis y Elecci\'on de herramientas de programaci\'on}{49}{subsubsection.6.2.6}%
+\contentsline {subsubsection}{\numberline {6.2.7}An\'alisis y Elecci\'on de la c\'amara digital}{49}{subsubsection.6.2.7}%
+\contentsline {subsubsection}{\numberline {6.2.8}An\'alisis y Elecci\'on de algoritmos de visi\'on artificial}{50}{subsubsection.6.2.8}%
+\contentsline {subsubsection}{\numberline {6.2.9}An\'alisis y Elecci\'on del modelo de Red Neuronal}{52}{subsubsection.6.2.9}%
+\contentsline {subsection}{\numberline {6.3}An\'alisis del M\'odulo de Comunicaciones}{56}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}An\'alisis del Subm\'odulo de Telemetr\IeC {\'\i }a }{57}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}An\'alisis y Elecci\'on de Protocolos de comunicaci\'on inal\'ambrica }{57}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}An\'alisis del Subm\'odulo de Datos }{61}{subsubsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.4}An\'alisis del Subm\'odulo de Cobertura}{61}{subsubsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.4}An\'alisis del M\'odulo de Estaci\'on Base}{63}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}An\'alisis de la Aplicaci\'on Web}{69}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}An\'alisis y Elecci\'on del manejador de bases de datos }{78}{subsubsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.3}An\'alisis y Elecci\'on de lenguajes de programaci\'on web}{80}{subsubsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.4}An\'alisis y Elecci\'on del servidor de alojamiento}{81}{subsubsection.6.4.4}%
+\contentsline {section}{\numberline {7}Cap\IeC {\'\i }tulo IV: Dise\~no}{84}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Dise\~no del M\'odulo Central de Procesamiento}{84}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Elecci\'on de la Unidad Contenedora de Procesamiento}{86}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Dise\~no del Subm\'odulo de Visi\'on Artificial}{91}{subsubsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.2}Dise\~no del M\'odulo de Comunicaciones}{96}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Dise\~no de la Estaci\'on Base}{98}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Dise\~no de la Aplicaci\'on Web}{100}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Dise\~no de la Base de Datos}{107}{subsubsection.7.3.2}%
+\contentsline {section}{\numberline {8}Implementaci\'on}{110}{section.8}%
+\contentsline {subsection}{\numberline {8.1}M\'odulo Central de Procesamiento}{110}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Dise\~no de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}{110}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}Entorno de desarrollo en la NVIDIA Jetson Nano}{110}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}Implementaci\'on de puntos faciales para detectar el nivel de apertura de los ojos y boca}{113}{subsubsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.4}Detecci\'on de somnolecia}{113}{subsubsection.8.1.4}%
+\contentsline {subsubsection}{\numberline {8.1.5}Integraci\'on de los perif\'ericos y accesorios al M\'odulo Central de Procesamiento}{113}{subsubsection.8.1.5}%
+\contentsline {subsubsection}{\numberline {8.1.6}Integraci\'on del subsistema}{114}{subsubsection.8.1.6}%
+\contentsline {subsection}{\numberline {8.2}M\'odulo de Comunicaciones}{114}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Implemetaci\'on del sistema de Geolocalizaci\'on}{114}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Realizar la conexi\'on de la aplicaci\'on web con el M\'odulo Central de Procesamiento}{117}{subsubsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.3}M\'odulo de Estaci\'on Base}{120}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Definici\'on de rutas del frontend}{120}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Definici\'on de rutas del backend}{122}{subsubsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.3}Creaci\'on de la base de datos no relacional}{123}{subsubsection.8.3.3}%
+\contentsline {subsubsection}{\numberline {8.3.4}Conexi\'on backend con la base de datos}{124}{subsubsection.8.3.4}%
+\contentsline {subsubsection}{\numberline {8.3.5}Implementaci\'on de sistema de acceso con credenciales}{124}{subsubsection.8.3.5}%
+\contentsline {subsubsection}{\numberline {8.3.6}Creaci\'on de los servicios backend}{125}{subsubsection.8.3.6}%
+\contentsline {subsubsection}{\numberline {8.3.7}Despliegue de la aplicaci\'on web}{127}{subsubsection.8.3.7}%
+\contentsline {section}{\numberline {9}Pruebas}{128}{section.9}%
+\contentsline {section}{\numberline {10}Validaci\'on y Resultados}{129}{section.10}%
+\contentsline {subsubsection}{\numberline {10.0.1}Proceso de Validaci\'on}{129}{subsubsection.10.0.1}%
+\contentsline {section}{\numberline {11}Conclusiones y aportaciones}{130}{section.11}%
+\contentsline {section}{\numberline {12}Referencias}{131}{section.12}%

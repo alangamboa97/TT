@@ -51,114 +51,115 @@
 
 \begin{itemize}
 
-    \item \textbf{CNN} \tab[4cm] \emph{Convolutional Neural Network}
-    \item \textbf{LTE-M} \tab[4cm] \emph{Long Term Evolution for Machines}
-    \item \textbf{NB-IoT} \tab[4cm] \emph{Narrowband-Internet of Things}
+    %\item \textbf{CNN} \tab[4cm] \emph{Convolutional Neural Network}
     \item \textbf{CPU} \tab[4cm] \emph{Central Processing Unit}
     \item \textbf{GPU} \tab[4cm] \emph{Graphical Processing Unit}
+    \item \textbf{LTE} \tab[4cm] \emph{Long Term Evolution for Machines}
+    \item \textbf{RAM} \tab[4cm] \emph{Random Access Memory}
     \item \textbf{SBGD}  \tab[4cm] Sistema Gestor de Base de Datos
+    \item \textbf{SQL} \tab[4cm] \emph{Structured Query Language}
+    
 \end{itemize}
 
 \newpage
 \section{Resumen}
 
-El sistema hará uso de técnicas de visión artificial, tales como las Cascadas Haar para la detección de rostro, ojos y boca del conductor a partir de la entrada de video en tiempo real, así como la propuesta del uso de una red neuronal convolucional entrenada para poder detectar el estado de los ojos. El sistema utilizará puntos de referencia faciales para marcar la posición de la boca y posteriormente se obtendrá la relación de apertura de la boca, con el fin de detectar si se trata de un bostezo. Si el sistema detecta somnolencia, se activará una alarma con intención de alertar al conductor, a su vez, se realizará un reporte de incidencia el cual será enviado a una base de datos. El sistema utilizará una Jetson Nano para su funcionamiento de manera portátil. Como parte del sistema se analizó y diseñó un sistema de administración que permitirá al usuario verificar y visualizar la información de los reportes de incidencia y la información de cada conductor. Para el cual se diseñó una aplicación web que le permita al usuario acceder a la información y adicionalmente monitorear la ubicación en tiempo real del conductor. \\
+El sistema propuesto para la detección de somnolencia en conductores utiliza técnicas de visión artificial para analizar en tiempo real la posición del rostro, los ojos y la boca a través de un flujo de video. Se clasifican los estados de los ojos y la boca para identificar síntomas de somnolencia mediante puntos de referencia faciales. La medición de la relación de apertura en los ojos y la boca se realiza mediante el seguimiento de parpadeos y bostezos. En caso de detectar somnolencia, el sistema activa una alarma y genera un reporte de incidencia enviado a una base de datos. Se emplea una Jetson Nano para la portabilidad del sistema. A su vez, se ha desarrollado una aplicación web que ofrece el monitoreo en tiempo real de la ubicación del conductor, además de proporcionar un sistema de administración que permite a los usuarios acceder y visualizar la información de los reportes de incidencia, así como detalles específicos de cada conductor.
+\\
 
-\emph{\textbf{Palabras Clave:}} Somnolencia, Visión artificial, Geolocalización, Alerta, Red Neuronal Convolucional, Aplicación web.
+\emph{\textbf{Palabras Clave:}} Somnolencia, Visión artificial, Geolocalización, Alerta, Aplicación web, Sistema de administración.
 
 \section{Abstract}
-The system will make use of computer vision techniques, such as Haar Cascades for the detection of the driver's face, eyes and mouth from the video input in real time, as well as the proposal of the use of a convolutional neural network trained to to be able to detect the state of the eyes. The system will use facial reference points to mark the position of the mouth and then the mouth opening ratio will be obtained, in order to detect if it is a yawn. If the system detects drowsiness, an alarm will be activated with the intention of alerting the driver, in turn, an incident report will be made which will be sent to a database. The system will use a Jetson Nano for portable operation. As part of the system, an administration system was analyzed and designed that will allow the user to verify and view the information of the incident reports and the information of each driver. For which a web application was designed that allows the user to access the information and additionally monitor the location in real time of the driver.\\
+The proposed system for detecting drowsiness in drivers uses artificial vision techniques to analyze in real-time the position of the face, eyes, and mouth through a video stream. The states of the eyes and mouth are classified to identify drowsiness symptoms using facial reference points. The measurement of the opening ratio in the eyes and mouth is carried out through tracking blinks and yawns. If drowsiness is detected, the system activates an alarm and generates an incident report sent to a database. A Jetson Nano is used for system portability. Additionally, a web application has been developed that provides real-time monitoring of the driver's location, along with offering an administration system that allows users to access and visualize information from incident reports, as well as specific details for each driver.\\
 
 
-\emph{\textbf{Keywords:}} Drowsiness, Computer Vision, Geolocation, Alert, Convolutional Neural Network.
+\emph{\textbf{Keywords:} Drowsiness, Artificial Vision, Geolocation, Alert, Web Application, Management System.} 
 
 
 \newpage
-\section{Capítulo I: Introducción }
+\section{Capítulo I: Introducción}
 
-De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018 publicado por la Organización Mundial de la Salud (OMS), se registraron alrededor de 1,35 millones de muertes anuales debido a accidentes de tránsito. Estas cifras alarmantes no solo afectan a los conductores y pasajeros, sino también a los peatones, ciclistas y motociclistas, especialmente en países en desarrollo.\cite{WHO}.
-\\
+De acuerdo con el Informe sobre la situación mundial de la seguridad vial 2018, publicado por la Organización Mundial de la Salud (OMS), se registraron alrededor de 1,35 millones de muertes anuales debido a accidentes de tránsito. Estas cifras alarmantes no solo afectan a los conductores y pasajeros, sino también a los peatones, ciclistas y motociclistas, especialmente en países en desarrollo \cite{WHO}. 
+\\ 
+Para abordar esta problemática, se busca prevenir la somnolencia al conducir, la cual es reconocida como un factor contribuyente a los accidentes viales. En México, por ejemplo, se estima que anualmente fallecen en promedio 16,500 personas debido a estos percances. Además, los accidentes viales representan un costo significativo para el país, estimado en alrededor de 150 mil millones de pesos, equivalente al 1.7\% del Producto Interno Bruto (PIB), considerando costos directos e indirectos \cite{IMT}.
+\\ 
+En el desarrollo logístico de empresas que se encargan de transportar a pasajeros o que se encargan de repartir paquetería, los datos pueden verse de forma más alarmante o preocupante, ya que, usualmente, las personas designadas como conductores se enfrentan a largas horas de jornada sin descanso y, en muchos casos, rotan por horarios que pueden ser en el día o en la noche, aumentando el riesgo de accidentarse por el desbalance de tener un horario mixto.
+\\ 
+Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy en día son un recurso determinante para la planificación de rutas de distribución al optimizarlas y, lo más importante, al estar en constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{RastreoSatelital}.
+\\ 
 
-Para abordar esta problemática, se busca prevenir la somnolencia al conducir, la cual es reconocida como un factor contribuyente a los accidentes viales. En México, por ejemplo, se estima que anualmente fallecen en promedio 16,500 personas debido a estos percances. Además, los accidentes viales representan un costo significativo para el país, estimado en alrededor de 150 mil millones de pesos, equivalente al 1.7 \% del Producto Interno Bruto (PIB), considerando costos directos e indirectos. \cite{IMT}. \\
+Teniendo en cuenta este contexto, resulta relevante analizar y diseñar un sistema que aborde la problemática de la somnolencia al conducir. Este sistema se basará en el uso de una cámara digital y algoritmos de visión artificial para detectar signos de somnolencia en el conductor. Además, se incluirá un sistema de administración que permitirá la geolocalización en tiempo real, así como la gestión de conductores y reportes de incidencias.
+\\ 
 
-En el desarrollo logístico de empresas que se encargan de transportar a pasajeros o que se encargan de repartir paquetería, los datos pueden verse de forma más alarmante o preocupante, ya que, usualmente, las personas designadas como conductores se enfrentan a largas horas de jornada sin descanso y en muchos casos, rotan por horarios que pueden ser en el día o en la noche, aumentando el riesgo de accidentarse por el desbalance de tener un horario mixto.\\ 
+El desarrollo de este sistema busca aprovechar los avances tecnológicos recientes en el campo de la visión artificial y el aprendizaje automático, así como la disponibilidad de microordenadores eficientes y las mejoras en las tecnologías de telecomunicaciones, como el 4G y el Internet de las Cosas (IoT). Estas tecnologías permitirán detectar y alertar los síntomas de somnolencia en los conductores, brindando una solución más asequible en comparación con las opciones tradicionales de rastreo satelital. \\
 
-Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy es un recurso determinante para la planificación de rutas de distribución al optimizar las mismas y, lo más importante, al estar en un constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{TastreoSatelital}.\\ 
-
-Teniendo en cuenta este contexto, resulta relevante analizar y diseñar un sistema que aborde la problemática de la somnolencia al conducir. Este sistema se basará en el uso de una cámara digital y algoritmos de visión artificial para detectar signos de somnolencia en el conductor. Además, se incluirá un sistema de administración que permitirá la geolocalización en tiempo real, así como la gestión de conductores y reportes de incidencias.\\
-
-
-El desarrollo de este sistema busca aprovechar los avances tecnológicos recientes en el campo de la visión artificial y el aprendizaje automático, así como la disponibilidad de microordenadores eficientes y las mejoras en las tecnologías de telecomunicaciones, como el 4G y el Internet de las Cosas (IoT). Estas tecnologías permitirán detectar y prevenir los síntomas de fatiga y somnolencia en los conductores, brindando una solución más asequible y efectiva en comparación con las opciones tradicionales de rastreo satelital.\\
-
-
-En resumen, el objetivo principal del presente trabajo es desarrollar un sistema portátil que pueda detectar la somnolencia al conducir, alertar al conductor y monitorear la ubicación en tiempo real, además de gestionar las incidencias detectadas. 
+En resumen, el objetivo principal del presente trabajo es desarrollar un sistema portátil que pueda detectar la somnolencia al conducir, alertar al conductor y monitorear la ubicación en tiempo real, además de gestionar las incidencias detectadas. \\
   
 
 \newpage
-\subsection{Planteamiento del problema} \label{problema}
+\subsection{Planteamiento del problema} \label{planteamientodelproblema}
 
-La somnolencia es un fenómeno complejo de analizar debido a los factores que pueden intervenir. Algunas de las características más notorias de un estado de somnolencia, se pueden apreciar principalmente en el rostro de las personas: frecuencia de parpadeo, bostezos, movimientos faciales y cabeceos, los cuales son parámetros claves para determinar si una persona está en estado de somnolencia o vigilia.  \\
+La somnolencia es un fenómeno complejo de analizar debido a los factores que pueden intervenir. Algunas de las características más notorias de un estado de somnolencia se pueden apreciar principalmente en el rostro de las personas: frecuencia de parpadeo, bostezos, movimientos faciales y cabeceos, los cuales son parámetros clave para determinar si una persona está en estado de somnolencia o vigilia.\\
 
-Gracias a los avances tecnológicos en los últimos años, se han comenzado a desarrollar técnicas de visión artificial y aprendizaje automático que permiten detectar patrones de manera más eficiente. En el área del hardware, se han desarrollado microordenadores capaces de realizar tareas que requieran un nivel moderado de computación de una manera eficaz. Finalmente, en el área de telecomunicaciones, tecnologías como el 4G y avances en el área de \emph{Internet of Things} han permitido mayores velocidades de transmisión de datos, así como mayor cobertura dentro del territorio nacional\cite{iot}.
-\\ 
-%Falta referencias: https://pure.coventry.ac.uk/ws/portalfiles/portal/40893306/Binder3.pdf %
+Gracias a los avances tecnológicos en los últimos años, se han desarrollado técnicas de visión artificial y aprendizaje automático que permiten detectar patrones de manera más eficiente. En el área del hardware, se han desarrollado microordenadores capaces de realizar tareas que requieran un nivel moderado de computación de manera eficaz. Finalmente, en el área de telecomunicaciones, tecnologías como el 4G y avances en el \emph{Internet of Things} han permitido mayores velocidades de transmisión de datos, así como mayor cobertura dentro del territorio nacional \cite{iot}. \\ 
+
 Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores.
 
-Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, conductor y carretera repercuten en la eficacia del sistema.  \\
+Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, del conductor y de la carretera repercuten en la eficacia del sistema. \\
 
-Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG).\\  
-Cabe mencionar que, entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede llegar a entorpecer el desempeño del conductor. \cite{Sistemasdesomnolencia}  \\
+Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG). Entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede entorpecer el desempeño del conductor. 
+\\
 
-Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que, los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia, sin embargo, son los métodos visuales más adecuados para dicho propósito. \cite{Sistemasdesomnolencia}   Por tanto, se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficiencia.
+Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia. Se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficiencia. \cite{Sisdesomnolencia}.
 \\
-Actualmente existen distintas opciones para la geolocalización de vehículos en tiempo real, pero con costos elevados, como lo es el rastreo satelital el cual requirere un pago servicio con una suscripción anual o mensual. Entonces, surge una oportunidad para desarollar soluciones más asequibles y que sean igualmente eficaces, como es el caso de las redes móviles LTE\cite{Referencia9}
+
+Actualmente existen distintas opciones para la geolocalización de vehículos en tiempo real, pero con costos elevados, como lo es el rastreo satelital, el cual requiere un pago por servicio con una suscripción anual o mensual. Entonces, surge una oportunidad para desarrollar soluciones más asequibles y que sean igualmente eficaces, como es el caso de las redes móviles LTE \cite{GeolocalizacionVehiculos}.
 \\
-Dadas las posibles soluciones y escenarios antes mencionados se plantea la siguiente pregunta: ¿Cómo desarrollar un sistema portátil que pueda detectar la somnolencia y alertar al conductor, además de monitorear la ubicación en tiempo real y gestionar las incidencias detectadas en el conductor? 
+Dadas las posibles soluciones antes mencionadas, se plantea la siguiente pregunta: ¿Cómo desarrollar un sistema portátil que pueda detectar la somnolencia, alertar al conductor, además de monitorear la ubicación en tiempo real y gestionar las incidencias detectadas en el conductor? 
 
 
 \subsection{Propuesta de solución} \label{solucion}
 
-Como respuesta a la problemática planteada en la sección \ref{problema}, se propone el desarrollo de un sistema portátil que sea capaz de detectar somnolencia en conductores y su vez activar una alarma que permita alertar al conductor. Como parte del sistema, un subsistema que permita la administración y validación de las incidencias reportadas, así como el monitoreo GPS del conductor en tiempo real dentro de la Ciudad de México.  \\
+Como respuesta a la problemática planteada en la sección \ref{planteamientodelproblema}, se propone el desarrollo de un sistema portátil que sea capaz de detectar somnolencia en conductores y a su vez activar una alarma que permita alertar al conductor. Como parte del sistema, un subsistema permitirá la administración y validación de las incidencias reportadas, así como el monitoreo GPS del conductor en tiempo real dentro de la Ciudad de México.
+\\
 
 Los problemas que resolverá el sistema se listan a continuación: \\
 
 \begin{itemize}
-\item El sistema será portátil por lo que se hará uso de un microordenador para poder ser instalado y que funcione dentro de un vehículo. 
-\item Mediante una cámara digital conectada al microordenador, el sistema analizará el rostro del conductor en tiempo real, tomando en cuenta parámetros de análisis tales como; rostro, ojos y boca del conductor. 
-\item El sistema hará uso de técnicas de visión artificial para poder detectar si el conductor presenta signos de somnolencia. 
-\item En caso de presentarse un caso de somnolencia, el sistema activará una alarma para alertar al conductor. 
-\item Al mismo tiempo, el sistema realizará y almacenará un reporte de incidencia que contendrá datos como fecha, hora, ubicación geográfica, y un pequeño video clip que muestre el momento en que el conductor presentó signos de somnolencia. 
-\item Posteriormente, el sistema hará uso de redes de telecomunicaciones móviles para enviar el reporte de incidencia previamente generado hacía una estación base que funcionará mediante una aplicación web, dónde un administrador podrá verificar este reporte con el fin de confirmar que se trata de un caso de somnolencia y no un falso positivo. 
+\item El sistema será portátil, por lo que se hará uso de un microordenador para poder ser instalado y que funcione dentro de un vehículo.
+\item Mediante una cámara digital conectada al microordenador, el sistema analizará el rostro del conductor en tiempo real, tomando en cuenta como parámetros de análisis los ojos y la boca del conductor.
+\item El sistema hará uso de técnicas de visión artificial para poder detectar si el conductor presenta signos de somnolencia.
+\item En caso de presentarse un caso de somnolencia, el sistema activará una alarma para alertar al conductor.
+\item Al mismo tiempo, el sistema realizará y almacenará un reporte de incidencia que contendrá datos como fecha, hora, ubicación geográfica y un pequeño videoclip que muestre el momento en que el conductor presentó signos de somnolencia.
+\item Posteriormente, el sistema hará uso de redes de telecomunicaciones móviles para enviar el reporte de incidencia previamente generado hacia una estación base que funcionará mediante una aplicación web, donde un administrador podrá verificar este reporte con el fin de confirmar que se trata de un caso de somnolencia y no un falso positivo.
 \item A su vez, el administrador podrá consultar la ubicación en tiempo real del conductor desde la misma estación base.
-\item En la figura 1 se muestra la propuesta del diagrama general de diseño de la arquitectura del sistema.    
-
+\item En la Figura 1 se muestra la propuesta del diagrama general de diseño de la arquitectura del sistema.
 \end{itemize}
 
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/diagramageneral2}
-\captionof{figure}{Diagrama general del diseño preliminar de la arquitectura del sistema. }
+\captionof{figure}{Diagrama general del diseño de la arquitectura del sistema.}
  \label{fig:Arquitecturapreliminar} 
 \end{center} 
 
 
 \subsection{Alcances}
 
-A continuación, se describen los alcances de la propuesta de solución: 
+A continuación, se describen los alcances de la propuesta de solución:
 
 \begin{itemize}
-\item Detectar síntomas de somnolencia del conductor.
+\item Detectar posibles síntomas de somnolencia del conductor.
 \item Alertar al conductor mediante una alarma en caso de que se detecten síntomas de somnolencia.
-\item El sistema realizará un reporte de incidencia al detectar somnolencia. 
-\item Solicitar el posicionamiento por medio de una tecnología de geolocalización en tiempo real. 
+\item El sistema realizará un reporte de incidencia al detectar somnolencia.
+\item Solicitar el posicionamiento mediante una tecnología de geolocalización en tiempo real.
 \item La transmisión de los datos del módulo de procesamiento se realizará mediante una red inalámbrica.
-\item Se trazará la ruta en el mapa de la trayectoria ejecutada por el conductor y se mostrará en la aplicación web.
-\item Las pruebas a realizar serán en la Ciudad de México donde se cuente con cobertura de redes móviles garantizada.
-\item La aplicación web permitirá consultar las incidencias de los conductores, así como la fecha y hora de estas, además de la ubicación de cada conductor en tiempo real. 
-
+\item Se marcará la posición GPS en el mapa del conductor y se visualizará en la aplicación web.
+\item Las pruebas a realizar se llevarán a cabo en la Ciudad de México, que cuenta con cobertura de redes móviles.
+\item La aplicación web permitirá consultar las incidencias de cada conductor registrado y la ubicación del conductor en tiempo real.
 \end{itemize}
 
- 
+\clearpage
 \subsection{Escenario de pruebas}
 
 Las pruebas se dividirán en dos fases:\\
@@ -168,6 +169,27 @@ Las pruebas se dividirán en dos fases:\\
 En la primera fase se probará el sistema de somnolencia y el sistema de comunicaciones de manera separada, con el propósito de analizar los resultados obtenidos. El sistema de detección de somnolencia será colocado dentro del vehículo, sin embargo, dicho vehículo permanecerá estacionado y con el motor apago, esto con el fin de realizar pruebas de la precisión del sistema y poder ajustar parámetros en caso de ser necesario.\\   
 
 Estado de los ojos:  
+
+-bostezos por minuto 
+-arpadeos por minuto 
+-ojos cerrados 
+-duracion de los ojos 
+
+De acuerdo a los objetivos especificos se evaluara. 
+
+\begin{itemize}
+\item El sistema de visión artificial sea capaz de detectar somnolencia.
+\item alertar al conductor en caso de detectar incidencia 
+\item Evaluar incidencia 
+
+\item  interconexión entre el sistema de visión artificial y el sistema de administración. 
+
+\item Visualización en tiempo real de la ubicación GPS del conductos usando redes de telecomunicaciones móviles.
+\item Funcionalidad del sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
+
+\end{itemize}
+
+
 
 \begin{itemize}
 \item Abiertos, cerrados. 
@@ -180,52 +202,38 @@ Bostezos:
 \item Apertura de la boca. 
 \end{itemize}
 
-Estas pruebas se realizarán tanto de noche como de día para comprobar la efectividad del sistema. En caso de ser necesario, se realizarán los ajustes correspondientes en los parámetros de análisis para mejorar la efectividad de las pruebas. Así mismo se verificará que la alarma se active correctamente al detectar somnolencia en el conductor.  \\
-
-Para el sistema de administración se probará la aplicación web que incluye el acceso a la geolocalización del sistema en tiempo real, así como pruebas de estrés al servidor de alojamiento, con el fin de conocer la eficacia de respuesta del sistema durante periodos de tráfico de datos elevados. \\
+Estas pruebas se realizarán durante el día con diferentes conductores para comprobar la detección de somnolencia. Asimismo, se verificará que la alarma se active correctamente al detectar somnolencia en el conductor.
+\\
+Para el sistema de administración, se probará la aplicación web que incluye el acceso al sistema, la geolocalización del conductor en tiempo real y la visualización de las incidencias.
+\\
  
 \textbf{Fase 2:}
 
-En la segunda fase, se probará el sistema completo con el vehículo en movimiento, donde el sistema estará monitoreando el estado de somnolencia del conductor en todos sus trayectos.  \\
-
-Para el sistema de administración se corroborará que en los casos en que el sistema de somnolencia detecte una incidencia, esta será enviada correctamente y pueda ser visualizada desde el sistema de administración. A su vez, se constará que la información de la ubicación geográfica del sujeto de prueba esté disponible en todo momento.  
+En la segunda fase, se probará el sistema completo con el vehículo en movimiento, donde el sistema estará monitoreando el estado de somnolencia del conductor durante el trayecto. 
+\\
+Para el sistema de administración, se corroborará que, en los casos en que el sistema de somnolencia detecte una incidencia, esta será enviada correctamente y podrá ser visualizada desde el sistema de administración. A su vez, se constatará que la información de la ubicación geográfica del sujeto de prueba esté disponible en tiempo real.a información de la ubicación geográfica del sujeto de prueba esté disponible en tiempo real.  
 
 \subsection{Justificación}
 
-Actualmente, se han desarrollado diferentes avances tecnológicos tales como el internet de las cosas (IoT) el cual permite la comunicación con dispositivos y da pauta al desarrollo de sistemas inteligentes que resuelven problemas complejos de manera automática y eficaz en ambientes específicos, la inteligencia artificial, el machine learning, el procesamiento masivo de datos en menor tiempo, entre muchos otros. \\
+Actualmente, se han desarrollado diferentes avances tecnológicos tales como el internet de las cosas (IoT) el cual permite la comunicación con dispositivos y da pauta al desarrollo de sistemas inteligentes que resuelven problemas complejos de manera automática y eficaz en ambientes específicos, la inteligencia artificial, el machine learning, el procesamiento masivo de datos en menor tiempo, entre muchos otros. 
+\\\\
+El sistema propuesto será capaz de detectar la somnolencia apoyado en el análisis de los aspectos fisiológicos del rostro, donde se delimitan los datos biométricos del estado de somnolencia mediante el uso de visión artificial. Estos datos serán posteriormente enviados a una estación base con ayuda de redes inalámbricas. 
+\\
+Al haber accidentes de tránsito por somnolencia en México, este proyecto tiene como objetivo implementar un sistema de detección de somnolencia mediante visión artificial y el uso de una alarma auditiva para que el conductor se mantenga alerta. Además, se busca integrar un sistema que permita el monitoreo del vehículo mediante la geolocalización del mismo y un sistema interactivo con el usuario. Este sistema permitirá visualizar las incidencias que puedan presentarse por parte de los conductores, con el fin de obtener registros que nos permitan realizar estadísticas y recabar información relevante para retroalimentar el rendimiento de cada conductor.
+\\ 
 
-El sistema propuesto será capaz de detectar la somnolencia apoyado en estudios donde se analizan los aspectos fisiológicos y donde se delimitan los datos biométricos del estado de somnolencia obtenidos en diferentes pruebas, mediante el uso de visión artificial y deep learning para tener mejores resultados y posteriormente ser enviados a una estación base con ayuda de la tecnología de las redes inalámbricas. \\
-
-Al haber accidentes de tránsito por somnolencia en México, con este proyecto se pretende prevenirlos e integrar un sistema que permita el monitoreo del vehículo mediante la geolocalización del mismo, el uso de una alarma auditiva para que el conductor se mantenga alerta, así como un sistema interactivo con los usuarios que permita visualizar las incidencias que se puedan presentar por parte de los conductores.\\ 
-
-Ofreciendo así un sistema que utilice las tecnologías de la nueva generación que permitan el monitoreo, la detección y la alerta del conductor. 
+Ofreciendo así un sistema portátil de monitoreo, detección de somnolencia y alerta, que incluye una aplicación web con registros detallados de incidencias y estadísticas para evaluar la eficiencia de los conductores.
 
 
 \subsection{Metodología}
 
+\textbf{Scrum}
 
-Debido a que el presente proyecto conjunta la parte de software con hardware, se estarán implementando dos metodologías.  
-
-\begin{itemize}
-
-\item \textbf{Top-Down}
-
-La metodología de diseño \emph{Top-Down} consiste en dividir un problema complejo en problemas o partes más pequeñas con mayor facilidad de resolución. A este proceso se le llama \emph{Descomposición}. Estas partes pueden ser llamadas modulos o subrutinas. Cada módulo puede ser probado individualmente \cite{TopDown}.  
-
-\begin{center}
-  \includegraphics[scale=0.56]{imagenes/Top-down}
-\captionof{figure}{Descomposición en la metodología \emph{Top-Down}. \cite{TopDown}}
- \label{fig:neurona}
-\end{center}
-
-Utilizando la metodología Top-Down, se puede dividir el sistema en módulos que serán independientes de sí mismo, esto con la finalidad de ahorrar tiempo, así como recursos para su mantenimiento. Por lo tanto, en este proyecto se comenzará entendiendo el problema general para posteriormente poder realizar una subdivisión de problemas más pequeños para ser resueltos de manera invididual.
-
-
-\item \textbf{UML}
-
-UML es el estándar de la industria para modelar sistemas orientados a objetos \cite{kendall}. UML incluye un conjunto de herramientas que permite visualizar la construcción de un sistema orientado a objetos. Al trabajar por iteraciones, se aborda de manera cada vez con más detalle el diseño de sistema, hasta que se defina con claridad las relaciones de cada uno de los objetos del sistema. Uno de las principales ventajas de UML es la reutilización de objetos, esto permite reducir costo de desarrollo así como de mantenimiento de los programas. En este proyecto se hará uso de uml para el análsis y diseño de cada módulo.
-\end{itemize}
-
+La metodología ágil permite adaptar la forma de trabajo a las condiciones del proyecto, consiguiendo flexibilidad e inmediatez en la respuesta para amoldar el proyecto y su desarrollo a las circunstancias específicas del entorno.
+\\\\
+La metodología ágil utilizada en el presente proyecto es \emph{Scrum}, la cual se caracteriza por ser la «metodología del caos» que se basa en una estructura de desarrollo incremental; esto es, cualquier ciclo de desarrollo del producto y/o servicio se desgrana en «pequeños proyectos» divididos en distintas etapas: análisis, desarrollo y testing. En la etapa de desarrollo encontramos lo que se conoce como interacciones del proceso o Sprint, es decir, entregas regulares y parciales del producto final. Esta metodología permite abordar proyectos complejos que exigen una flexibilidad y una rapidez esencial a la hora de ejecutar los resultados. La estrategia irá orientada a gestionar y normalizar los errores que se puedan producir en desarrollos demasiado largos, a través de reuniones frecuentes para asegurar el cumplimiento de los objetivos establecidos \cite{Scrum}.
+\\
+El sistema se dividió en módulos que se trabajaron en diferentes etapas: análisis, desarrollo y finalmente pruebas. Las actividades para cada módulo se distribuyeron en periodos de entrega de tal manera que se pudiera trabajar en todos los módulos y avanzar en cada uno de ellos.
 
 \subsection{Objetivos}
 
@@ -239,7 +247,7 @@ Diseñar un sistema portátil para la detección de síntomas de somnolencia y alert
 \item Diseñar un sistema de visión artificial que sea capaz de detectar y alertar la somnolencia en conductores.
 \item Integrar herramienttas de geolocalización en tiempo real usando redes de telecomunicaciones móviles.
 \item Diseñar un sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
-\item Integrar un sistema de comunicaciones que permita la interconexión Entre el sistema de visión artificial y el sistema de administración. 
+\item Integrar un sistema de comunicaciones que permita la interconexión entre el sistema de visión artificial y el sistema de administración. 
 \end{itemize}
 
 
@@ -250,7 +258,8 @@ Diseñar un sistema portátil para la detección de síntomas de somnolencia y alert
 
 \subsubsection{Somnolencia}
 
-La somnolencia es la necesidad o tendencia que tiene una persona a quedarse dormido. La intensidad de somnolencia está determinada por la calidad de sueño, la cantidad, y el ritmo circadiano de la persona \cite{intensidad}.
+La somnolencia es la necesidad o tendencia que tiene una persona a quedarse dormido. La intensidad de somnolencia está determinada por la calidad de sueño, la cantidad, y el ritmo circadiano de la persona    \cite{Intensidad}. 
+\\
 
 Se han propuesto tres clases de métodos para poder medir el grado de somnolencia en una persona:
 
@@ -282,9 +291,10 @@ Jetson Nano es una computadora pequeña y poderosa que permite ejecutar múltiples
 
 
 \subsubsection{Visión Artificial}
-Se puede definir como el conjunto de técnicas para la extracción de información de imágenes digitales. El tipo de información obtenida de una imagen puede ser de identificación, mediciones para navegación, o aplicaciones de realidad aumentada.El campo de visión artificial puede verse como una parte de la informática. La teoría de algoritmos y el aprendizaje automático son esenciales para el desarrollo de algoritmos de visión artificial.
-La visión artificial está compuesta generalmente por un conjunto de procesos destinados a realizar el análsis de imágenes:captación de imágenes, memorización de la información, proceso e interpretación de los resultados \cite{vision}.
 
+La visión artificial es un campo de la IA que permite que las computadoras y los sistemas obtengan información significativa de imágenes digitales, videos y otras entradas visuales, y tomen acciones o hagan recomendaciones basadas en esa información. La visión artificial necesita de muchos datos. Ejecuta análisis de datos una y otra vez hasta identificar diferencias y, finalmente, reconocer imágenes \cite{IBMvision}.
+
+La visión artificial es una tecnología que utilizan las máquinas para reconocer automáticamente las imágenes y describirlas de manera precisa y eficiente.Las aplicaciones de visión artificial utilizan inteligencia artificial y el machine learning (IA/ML) para procesar estos datos con precisión para la identificación de objetos y el reconocimiento facial, así como para la clasificación, la recomendación, el monitoreo y la detección \cite{IAaws}
 
 \subsubsection{Red Neuronal}
 
@@ -315,11 +325,10 @@ y_j(t)= F(y_j(t-1), z_j(t)) = F(y_j(t-1),net_j(t))
 
 \subsubsection{Redes Neuronales Convolucionales}
 
-Las redes neuronales convolucionales, tambien conocidas como \emph{redes convolutivas}, son redes neuronales artificiales que se utilizan comunmente para resolver problemas que requieren el procesamiento de imágenes. Sus casos de uso más frecuentes van desde la detección de objetos, hasta generar una descripción textual del contenido de una imagen. Particularmente, sus entradas y salidas pueden ser estructuradas. Esto quiere decir, que en lugar de recibir un vector de entradas, se puede recibir un vector (1D), matriz (2D) o tensor($>2D$). En el caso de señales bidimensionales, las entradas pueden pertenecer a los pixeles de una imágen capturada por una cámara{Referencia0}.
+Las redes neuronales convolucionales, tambien conocidas como \emph{redes convolutivas}, son redes neuronales artificiales que se utilizan comunmente para resolver problemas que requieren el procesamiento de imágenes. Sus casos de uso más frecuentes van desde la detección de objetos, hasta generar una descripción textual del contenido de una imagen. Particularmente, sus entradas y salidas pueden ser estructuradas. Esto quiere decir, que en lugar de recibir un vector de entradas, se puede recibir un vector (1D), matriz (2D) o tensor($>2D$). En el caso de señales bidimensionales, las entradas pueden pertenecer a los pixeles de una imágen capturada por una cámara \cite{Referencia0}.
 
 Como su nombre lo indica, esta red neuronal utiliza la operación de convolución. La convolución es una operación matemática que se realiza sobre dos funciones para producir una tercera que se suele interpretar versión modificada (filtrada) de las funciones originales \cite{Referencia0}.
-
-\
+\\
 
 La convolución entre las funciones \emph{f} y {g} se representa de la siguiente manera:
 \begin{equation}
@@ -382,7 +391,7 @@ Flattening consiste en convertir los datos de salida de la capa convolucional a 
 
 \end{itemize}
 \subsubsection{Cascadas Haar}
-Existen técnicas de visión artificial que permiten el reconocimiento de objetos en una imágen o cuadros en un video. Entre los que más destacan, se encuentran las Cascadas Haar. Esta técnica fue presentada por primera vez por Viola y Jones. Las Cascadas Haar implica entrenar una serie de clasificadores simples  y luego combinar su salida.\\
+Existen técnicas de visión artificial que permiten el reconocimiento de objetos en una imágen o cuadros en un video. Entre los que más destacan, se encuentran las Cascadas Haar. Esta técnica fue presentada por primera vez por Viola y Jones. Las Cascadas Haar implica entrenar una serie de clasificadores simples  y luego combinar su salida \cite{viola}.\\
 
 Posteiormente estas salidas de transforman en un \emph{clasificador h(x)} como una suma de valores de \emph{aprendices débiles}:
 
@@ -403,27 +412,23 @@ que también son conocidos como \emph{desicion stumps} consideradas como la forma
  \label{fig:boost}
 \end{center}
 
-Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles\cite{viola}.
+Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles \cite{viola}.
 
 
 \subsubsection{\emph{Content Delivery Network}}
 
-Una Red de Distribución de Contenido, o CDN por sus siglas en inglés, es de una red de servidores que se encarga de mejorar el rendimiento en la carga y descarga de contenido de la red. Los componentes de una CDN se encuentran distribuidos en diferentes nodos. Estos componentes pueden ser servidores y se encuentran con contenido replicado alrededor del mundo. El trabajo de una CDN consiste en redirigir la solicitudes de los clientes a un servidor ubicado geográficamente cerca de estos. En consecuencia, los clientes obtienen los datos solicitados a una velocidad más rápida.
+Una Red de Distribución de Contenido, o CDN por sus siglas en inglés. Es una red de servidores interconectados que acelera la carga de las páginas web para las aplicaciones que tienen un uso intensivo de datos. CDN puede significar red de entrega de contenido o red de distribución de contenido. Cuando un usuario visita un sitio web, los datos del servidor de ese sitio tienen que viajar a través de Internet para llegar a la computadora del usuario. Si el usuario se encuentra lejos de ese servidor, un archivo de gran tamaño, como un video o una imagen del sitio web, se demorará mucho en cargar. En su lugar, el contenido del sitio web se almacena en servidores de CDN ubicados geográficamente más cerca de los usuarios, por lo que el contenido llega a sus computadoras mucho más rápido \cite{CDN}. 
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/cdn-diagram} 
-\captionof{figure}{Arquitectura de una CDN}
+\captionof{figure}{Arquitectura de una CDN \cite{CDNimg}.}
  \label{fig:boost}
 \end{center}
 
 Además de esto, una CDN es capaz de detectar cambios en la información existente, así como detectar la disponibilidad de nuevo contenido en los servidores de origen.
 
 \subsubsection{\emph{Cloud Computing}}
-El Cloud Computing, o computación en la nube, se refiere a la entrega de servicios informáticos a través de Internet, permitiendo el acceso bajo demanda a recursos compartidos como almacenamiento, servidores, bases de datos, redes y software. En lugar de tener que mantener y administrar infraestructuras locales, los usuarios pueden utilizar recursos en la nube de forma flexible y escalable, pagando solo por lo que utilizan.
-
-\subsubsection{GraphQL}
-
-
+El Cloud Computing, o computación en la nube, se refiere a la entrega de servicios informáticos a través de Internet, permitiendo el acceso bajo demanda a recursos compartidos como almacenamiento, servidores, bases de datos, redes y software. En lugar de tener que mantener y administrar infraestructuras locales, los usuarios pueden utilizar recursos en la nube de forma flexible y escalable, pagando solo por lo que utilizan \cite{IBMCC}.
 
 \subsubsection{Estándares y Protocolos de Comunicación Inalámbrica}
 
@@ -438,8 +443,8 @@ kilómetros de distancia. Se dividen en 4 tipos dependiendo del alcance requerido
 
 Usan ondas de radio pero transmite a uno o varios puntos de acceso inalámbrico donde un usuario inalámbrico puede conectarse a la red, al disponer de un ancho de banda más elevado ofrece una mejor cobertura. \\\\
 Como ejemplo de estas redes se tienen la tecnologías 4G y 5G. 
-Son conocidas como redes de largo alcance con cobertura de hasta 100km, pueden dar soporte a gran parte del territorio geográfico\cite{Referencian5}. 
-
+Son conocidas como redes de largo alcance con cobertura de hasta 100km, pueden dar soporte a gran parte del territorio geográfico \cite{Referencian5}. 
+\end{itemize}
 En esta red se incluyen:
 \begin{itemize}
 \item \textbf{Celulares}\\
@@ -455,147 +460,126 @@ cuanto a los esquemas de modulación, el alcance geográfico, la cantidad de infor
 transmitida y a sus capacidades de encriptación y autenticación\cite{Referencian6}.
 \end{itemize}
 
-Las interfaces de comunicación inalámbrica LPWAN consideradas son:
 
-\subsubsection{LTE-M}
-LTE-M es el término simplificado de la industria para el estándar tecnológico de Área Amplia de Baja Potencia (LPWA por sus siglas en inglés). Se refiere específicamente a la tecnología LTE CatM1.
+\subsubsection{LTE}
 
-Es una tecnología de área amplia de baja potencia que admite IoT a través de dispositivos poco complejos y proporciona una cobertura extendida, al tiempo que permite la reutilización de la base instalada de LTE.\\
-
-Las redes LTE-M coexistirán con las redes móviles 2G, 3G y 4G y se beneficiarán de todas las características de seguridad y privacidad de las redes móviles, como la confidencialidad de la identidad del usuario, la autenticación de la entidad, la privacidad, la integridad de los datos y la identificación del equipo móvil\cite{Referencian7}.
-
-A continuación se describen las ventajas principales de LTE-M:
+LTE (Long-Term Evolution) es un estándar inalámbrico de cuarta generación (4G) que proporciona mayor capacidad de red y velocidad para teléfonos móviles y otros dispositivos celulares en comparación con la tecnología de tercera generación (3G). Las capas superiores de LTE se basan en el Protocolo de control de transmisión/Protocolo de Internet, lo que da como resultado una red basada exclusivamente en el Protocolo de Internet, como la de las comunicaciones por cable. LTE admite transmisiones de datos como tráfico mixto de datos, voz, vídeo y mensajería \cite{LTE}.
+\\\\
+LTE ofrece a los usuarios varias funciones, incluidas las siguientes:
 
 \begin{itemize}
-\item \textbf{Ahorro de Energía}
 
-LTE-M permite que los dispositivos IoT usen un modo de ahorro de energía, que les permite "ir a dormir" cuando no están en uso. Y tampoco tienen que despertarse para enviar solo la actualización de ubicación, sino que pueden extender los tiempos de suspensión por un período de tiempo más largo. LTE-M también permite que los dispositivos usen recepción discontinua extendida (eDRX). Cuando el dispositivo está fuera del modo suspendido, verifica periódicamente la información del enlace descendente. Con eDRX, se aumenta el tiempo de verificación de la radio, lo que reduce el consumo de energía.
+\item \textbf{Transmisión de audio y vídeo.} LTE tiene velocidades de descarga y carga más rápidas que 2G y 3G.
 
-\item \textbf{Cobertura}
+\item \textbf{Conexión a servicios en tiempo real.} Con voz sobre LTE, los usuarios pueden hablar con otras personas sin experimentar retrasos ni fluctuaciones.
 
+\item \textbf{Velocidades aún más rápidas con LTE-Advanced.} Las velocidades de descarga y carga con LTE-Advanced son dos o tres veces más rápidas que las de LTE estándar. Todos los dispositivos LTE Advanced son compatibles con versiones anteriores del estándar LTE.
 
-Las redes LTE-M/Cat-M1/Cat-M2 pueden utilizar la infraestructura 4G LTE existente. Esta es una ventaja significativa, ya que más del 50 por ciento de las conexiones móviles globales se realizan en redes 4G. 
-
-Con una pérdida de acoplamiento máxima (MCL) de 156 decibelios (dB), 14 dB más alta que LTE, las redes LTE-M también ofrecen mayor cobertura y mejor penetración en interiores. La señal puede manejar muchas interferencias de edificios y otras estructuras que obstruyen su camino.
-
-\item \textbf{Velocidad de Transferencia}
-
-Comparado con LTE, LTE-M no es particularmente rápido. Pero 1 megabit por segundo para transmisiones de enlace ascendente y descendente es excepcional en comparación con redes más antiguas como 2G y 3G (UMTS) y otras LPWAN. (Es varias veces más rápido que NB-IoT). Y eso es más que suficiente para la mayoría de las aplicaciones de IoT. Es factible para aplicaciones con necesidades de datos pequeñas e incluso casos de uso que involucran transmisión de video.
-
-
-En el contexto de IoT, el alto rendimiento de datos significa que los dispositivos que usan LTE-M pueden recibir fácilmente actualizaciones por aire (OTA), y las transmisiones de datos consumirán menos energía, porque el dispositivo puede volver al modo de ahorro de energía más rápido.
-
+\item \textbf{Agregación de operadores.} Esta función LTE-Advanced mejoró la capacidad de la red, agregando ancho de banda de hasta 100 MHz en cinco operadores (bandas) componentes con un ancho de banda de 20 MHz cada uno. Los teléfonos LTE-A combinan frecuencias de múltiples operadores de componentes para mejorar la señal, la velocidad y la confiabilidad.
 
 \end{itemize}
-\end{itemize}
+
+
+
 \clearpage
 \subsubsection{Teorema de Shannon-Hartley}
 
 Un sistema óptimo es el que cuenta con la capacidad de minimizar la probabilidad de error de bit a la salida del sistema, esto depende de las restricciones de la energía transmitida y del ancho de banda del canal.
 
-El teorema de Shannon-Hartley establece la máxima cantidad de información que puede ser transmitida sin error con un ancho de banda específico y que está expuesto a la interferencia de ruido. La ecuación para la capacidad de canal es\cite{shannon}:
-
+El teorema de Shannon-Hartley establece la máxima cantidad de información que puede ser transmitida sin error con un ancho de banda específico y que está expuesto a la interferencia de ruido. La ecuación para la capacidad de canal es:
 
 \begin{equation}C= B\cdot log (1+\frac{S}{N}) 
 \end{equation}
 
 Donde C es la capacidad de canal, es decir, la velocidad máxima a 
 la que se puede transmitir la información a lo largo del canal sin error, medida en bits por 
-segundo, B es el ancho de banda en hertz, S es la potencia de la señal útil en watts y N es la potencia de ruido presente en el canal expresada en watts. Al término S/N se le conoce como relación señal a ruido.
+segundo, B es el ancho de banda en hertz, S es la potencia de la señal útil en watts y N es la potencia de ruido presente en el canal expresada en watts. Al término S/N se le conoce como relación señal a ruido \cite{shannon}.
 
 \subsubsection{Geolocalización}
 La Geolocalización consiste en la identificación de la posición de un dispositivo móvil en 
-el espacio real. El Sistema de Posicionamiento Global GPS por sus siglas en inglés es la forma más común y 
-precisa en que se realiza la localización geográfica, y es capaz de ubicar el aparato con 
+el espacio real. El Sistema de Posicionamiento Global GPS por sus siglas en inglés es la forma más común y precisa en que se realiza la localización geográfica, y es capaz de ubicar el aparato con 
 una precisión de unos pocos metros.
+\\\\
 El GPS es una red satelital que cuenta con al menos 30 satélites y que se mantienen en órbita alrededor de la tierra. Si bien el sistema en sus inicios tenía un propósito militar, en la actualidad cualquier persona puede ocuparlo.
-Cuando se solicita el posicionamiento por medio del GPS este envía señales de radio que permiten localizar a los satélites, el centro de comando transmite la información de la órbita, el tiempo y la posición de los otros satélites en el mismo sistema GPS. Estos satélites envían simultáneamente la información de tiempo y órbita a la tierra y finaliza cuando el dispositivo GPS utiliza la información recibida para determinar su localización la cual se interpreta mayormente en dos conjuntos: la latitud y longitud\cite{CoberturaNacional}.
-
+Cuando se solicita el posicionamiento por medio del GPS este envía señales de radio que permiten localizar a los satélites, el centro de comando transmite la información de la órbita, el tiempo y la posición de los otros satélites en el mismo sistema GPS. Estos satélites envían simultáneamente la información de tiempo y órbita a la tierra y finaliza cuando el dispositivo GPS utiliza la información recibida para determinar su localización la cual se interpreta mayormente en dos conjuntos: la latitud y longitud \cite{Geolocalizacion}.
 
 
 \newpage
-\subsection{Estado del Arte}  %Estado del arte 
+\subsection{Estado del Arte} 
 
 \subsubsection{\emph{Driver Drowsiness Detection Using Machine Learning with Visual Behaviour}}
-Este trabajo de investigación propone un sistema de detección de signos de somnolencia en conductores utilizando un modelo de Red Neuronal Convolucional para detectar la posición de los ojos, y OpenCV junto con Dlib para la detección de la boca y realizar el conteo del número de bostezos por minuto. Para alimetnar a la red Neuronal, se utilizaron el conjunto de datos de NTHU-DDD. También fue utilizado el método PERCLOS para obtener el número de parpadeos del sujeto de estudio. Este trabajo concluye que las mayores dificultades a la hora de detección de rostros fueron el uso de gafas oscuras, así como cambios en la iluminación.\cite{EstadodelAarte1}
+Este trabajo de investigación propone un sistema de detección de signos de somnolencia en conductores utilizando un modelo de Red Neuronal Convolucional para detectar la posición de los ojos, y OpenCV junto con Dlib para la detección de la boca y realizar el conteo del número de bostezos por minuto. Para alimetnar a la red Neuronal, se utilizaron el conjunto de datos de NTHU-DDD. También fue utilizado el método PERCLOS para obtener el número de parpadeos del sujeto de estudio. Este trabajo concluye que las mayores dificultades a la hora de detección de rostros fueron el uso de gafas oscuras, así como cambios en la iluminación \cite{EstadodelAarte1}.
 
 \subsubsection{\emph{Detection Of Drowsiness And Distraction Of Drivers Using CNN}}
 
-En este trabajo se implementó el aprendizaje automático y el paquete Keras para construir un modelo de CNN, el cual, clasifica si el conductor se encuentra somnoliento o distraído,el sistema emite un tono de alerta al detectar correctamente la somnolencia, dando al conductor una alerta temprana. Se utilizó el clasificador Open CV Haar-Cascade,un clasificador en cascada basado en características, usando sus funciones integradas, se detetó el rostro y la región de los ojos.\cite{EstadodelAarte2}
+En este trabajo se implementó el aprendizaje automático y el paquete Keras para construir un modelo de CNN, el cual, clasifica si el conductor se encuentra somnoliento o distraído,el sistema emite un tono de alerta al detectar correctamente la somnolencia, dando al conductor una alerta temprana. Se utilizó el clasificador Open CV Haar-Cascade,un clasificador en cascada basado en características, usando sus funciones integradas, se detetó el rostro y la región de los ojos \cite{EstadodelAarte2}.
 
 
 % https://www.trendytechjournals.com/files/issues/volume4/issue7-5.pdf
 
 \subsubsection{\emph{Driver Drowsiness Detection System Using Convolutional Neural Networks}}
-En este trabajo realizado en la Universidad Anurag se presenta una forma de analizar y anticipar la somnolencia del conductor mediante la aplicación de una red neuronal convolucional sobre la cara del conductor de un marco de secuencia. Se uso un conjunto de datos para dar forma y aprobar el modelo, usando redes convolucionales 3D basadas en modelos de múltiples capas de arquitectura de red neuronal repetitiva para detectar la somnolencia del conductor. Tras una sesión de entrenamiento, se obtuvo una precisión que se acerca al 92\% de aceptación.\cite{EstadodelAarte3}
+En este trabajo realizado en la Universidad Anurag se presenta una forma de analizar y anticipar la somnolencia del conductor mediante la aplicación de una red neuronal convolucional sobre la cara del conductor de un marco de secuencia. Se uso un conjunto de datos para dar forma y aprobar el modelo, usando redes convolucionales 3D basadas en modelos de múltiples capas de arquitectura de red neuronal repetitiva para detectar la somnolencia del conductor. Tras una sesión de entrenamiento, se obtuvo una precisión que se acerca al 92\% de aceptación \cite{EstadodelAarte3}.
 
 
-\subsubsection{Rasperry Pi based System for Visual Object Detection and Tracking}
+\subsubsection{\emph{Rasperry Pi based System for Visual Object Detection and Tracking}}
 Este trabajo aborda la implementación de un sistema capaz de realizar el seguimiento de varios objetos mediante una cámara digital conectada a una Rasperry Pi. El motor de este sistema fue desarrollado utilizando C++ y se ejecuta sobre un sistema operativo basado en GNU/Linux.
-Este sistema también logra transmitir las coordenadas y el tamaño de los objetos detectados a otras computadores dentro de una red de local de Internet.\cite{EstadodelAarte4}
+Este sistema también logra transmitir las coordenadas y el tamaño de los objetos detectados a otras computadores dentro de una red de local de Internet \cite{EstadodelAarte4}.
 
 %https://a-lab.ee/edu/sites/default/files/Ivask_BSc.pdf
 
 % https://ijarsct.co.in/Paper3399.pdf
 
 \subsubsection{Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos}
-En este trabajo realizado en la facultad de Ingeniería de la Universidad Nacional de Trujillo, se desarrolló un sistema de extracción de características faciales tales como pestañeo, cabeceo y bostezos. Para la extracción de regiones de interés se utilizaron cascadas Haar, y la clasificación de estas características se realizó utilizando un modelo de red LeNet. Además el trabajo incluye la creación de una base de datos de las regiones de interés de la cara utilizando imágenes propias y también utilizando conjunto de datos externos. Para el desarrollo de este trabajo se utilizó el lenguaje de programación Python, junto con las librerías de OpenCV, Tensorflow y Keras.\cite{EstadodelAarte5}
+En este trabajo realizado en la facultad de Ingeniería de la Universidad Nacional de Trujillo, se desarrolló un sistema de extracción de características faciales tales como pestañeo, cabeceo y bostezos. Para la extracción de regiones de interés se utilizaron cascadas Haar, y la clasificación de estas características se realizó utilizando un modelo de red LeNet. Además el trabajo incluye la creación de una base de datos de las regiones de interés de la cara utilizando imágenes propias y también utilizando conjunto de datos externos. Para el desarrollo de este trabajo se utilizó el lenguaje de programación Python, junto con las librerías de OpenCV, Tensorflow y Keras \cite{EstadodelAarte5}.
 
-\subsubsection{Aplicación de visión por computador y \emph{machine learning} al guiado de un robot móvil basado en Rasperry Pi}
+\subsubsection{Aplicación de visión por computador y machine learning al guiado de un robot móvil basado en Rasperry Pi}
 
-Esta investigación realizada en la Universidad de Sevilla, detalla el desarrollo de un vehículo con guiado autónomo basado en visión artificial. Se utilizó una red neuronal convolucional para realizar el seguimiento de objetos. El sistema desarrollado consta de una integración de una computadora remota a la par de una Rasperry Pi\cite{EstadodelAarte6}.
+Esta investigación realizada en la Universidad de Sevilla, detalla el desarrollo de un vehículo con guiado autónomo basado en visión artificial. Se utilizó una red neuronal convolucional para realizar el seguimiento de objetos. El sistema desarrollado consta de una integración de una computadora remota a la par de una Rasperry Pi \cite{EstadodelAarte6}.
 
 \subsubsection{Evaluación de la plataforma Nvidia Jetson Nano para aplicaciones de visión artificial}
 
-Este trabajo de investigación aborda distintos proyectos tales como: Estimación de pose humana en tiempo real y Reconocimiento de matrícula en tiempo real sobre una Nvidia Jetson Nano. Se realizaron pruebas de rendimiento para conocer las limitaciones de la Jetson Nano. Los resultados presentados muestran que la Jetson Nano permite trabajar tanto como imágenes como con vídeos de forma fluida, aunque con ciertas limitaciones en el uso de redes neuronales profundas. Sin embargo, al utilizar la aceleración de hardware ofrecida por Nvdia, se redujo considerablemente los tiempos de ejecución de los procesos\cite{EstadodelAarte7}.
+Este trabajo de investigación aborda distintos proyectos tales como: Estimación de pose humana en tiempo real y Reconocimiento de matrícula en tiempo real sobre una Nvidia Jetson Nano. Se realizaron pruebas de rendimiento para conocer las limitaciones de la Jetson Nano. Los resultados presentados muestra que la Jetson Nano permite trabajar tanto como imágenes como con vídeos de forma fluida, aunque con ciertas limitaciones en el uso de redes neuronales profundas. Sin embargo, al utilizar la aceleración de hardware ofrecida por Nvdia, se redujo considerablemente los tiempos de ejecución de los procesos \cite{EstadodelAarte7}.
 %https://repositorio.uam.es/bitstream/handle/10486/698381/jimenez_varela_natalia_tfg.pdf?sequence=1
 
 \subsubsection{\emph{Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Jetson Nano}}
-Esta investigación realiza una comparación del rendimiento entre la Rasperry Pi y la Jetson Nano aplicado a un sistema de guía utilizando líneas rectas en el suelo. Los resultados de este trabajo muestran que ambas ofrecen un buen rendimiento. Sin embargo, la Jetson Nano demostró ser 20 segundos más rápida en cuanto al procesamiento de imágnes, y obtuvo un porcentaje del 100\% de efectividad al recorrer el trayecto trazado por el circuito de líneas. Por otro lado, la Rasperry Pi, obtuvo un porcentaje de 98\% de efectividad en cuanto al seguimiento del circuito. Por lo anterior, el estudio concluyó que la Jetson Nano ofrece un mejor rendimiento y efectividad en tareas de visión artificial\cite{EstadodelAarte8}.
+Esta investigación realiza una comparación del rendimiento entre la Rasperry Pi y la Jetson Nano aplicado a un sistema de guía utilizando líneas rectas en el suelo. Los resultados de este trabajo muestran que ambas ofrecen un buen rendimiento. Sin embargo, la Jetson Nano demostró ser 20 segundos más rápida en cuanto al procesamiento de imágnes, y obtuvo un porcentaje del 100\% de efectividad al recorrer el trayecto trazado por el circuito de líneas. Por otro lado, la Rasperry Pi, obtuvo un porcentaje de 98\% de efectividad en cuanto al seguimiento del circuito. Por lo anterior, el estudio concluyó que la Jetson Nano ofrece un mejor rendimiento y efectividad en tareas de visión artificial \cite{EstadodelAarte8}.
 
-%https://jurnal.unsyiah.ac.id/JRE/article/view/21324/17_4_7_239_246
 
 \subsubsection{Sistema de detección de somnolencia mediante inteligencia artificial en conductores de vehículos para alertar la ocurrencia de accidentes de tránsito}
 
-Este proyecto fue realizado por estudiantes de la Escuela Profesional de Ingeniería de Perú y consistió en llevar a cabo un sistema para la detección de la somnolencia y la distracción del conductor. El sistema se desarrolló utilizando C\# con EmguCV para detectar la distracción y orientación de los ojos utilizando técnicas de visión artificial. Además, cuenta con un sistema de alarma compuesto por un zumbador de 12v, que se activa a recibir la orden el microcontrolador al procesar el sistema de visión artificial junto a una red neuronal.\cite{EstadodelAarte9}
+Este proyecto fue realizado por estudiantes de la Escuela Profesional de Ingeniería de Perú y consistió en llevar a cabo un sistema para la detección de la somnolencia y la distracción del conductor. El sistema se desarrolló utilizando C\# con EmguCV para detectar la distracción y orientación de los ojos utilizando técnicas de visión artificial. Además, cuenta con un sistema de alarma compuesto por un zumbador de 12v, que se activa a recibir la orden el microcontrolador al procesar el sistema de visión artificial junto a una red neuronal \cite{EstadodelAarte9}.
 
 \subsubsection{Diseño de un sistema electrónico para detectar la somnolencia en automovilistas por medio de la actividad ocular}
-Este trabajo realizado por alumnos de la ESIME Culhuacán en el año 2019 detalla el diseño y la implementación de un sistema que se basa en la fusión de dos señales. Una de ellas proviene de la detección del estado de los ojos utilizando información proveniente de una cámara digital. Para lo anterior, se realiza una segmentación de las regiones de la piel y posteriormente se obtiene la ubicación y el rastero de los ojos. La segunda señal se obtiene a partir de los datos proveniente de un acelerómetro colocado sobre la cabeza del conductor, cuya función es detectar los cabeceos asociados con somnolencia. El procesamiento de dicha señal del acelerómetro se lleva a cabo con la ayuda de la Transformada Wavelet Discreta. Estas dos señales son correlacionadas para tener como salida dos alarmas secuenciales que son percibidas por el conductor. La primera le alerta sobre un primer estado de posible somnolencia y la segunda acciona un control difuso para el control momentáneo del auto y la corrección del volante para el seguimiento del carril. Los resultados obtenidos por este trabajo demuestran una eficacia para la detección de ojos cerrados del 86\% y para la detección de cabeceo superior al 90\%.\cite{EstadodelAarte10}
+
+Este trabajo realizado por alumnos de la ESIME Culhuacán en el año 2019 detalla el diseño y la implementación de un sistema que se basa en la fusión de dos señales. Una de ellas proviene de la detección del estado de los ojos utilizando información proveniente de una cámara digital. Para lo anterior, se realiza una segmentación de las regiones de la piel y posteriormente se obtiene la ubicación y el rastero de los ojos. La segunda señal se obtiene a partir de los datos proveniente de un acelerómetro colocado sobre la cabeza del conductor, cuya función es detectar los cabeceos asociados con somnolencia. El procesamiento de dicha señal del acelerómetro se lleva a cabo con la ayuda de la Transformada Wavelet Discreta. Estas dos señales son correlacionadas para tener como salida dos alarmas secuenciales que son percibidas por el conductor. La primera le alerta sobre un primer estado de posible somnolencia y la segunda acciona un control difuso para el control momentáneo del auto y la corrección del volante para el seguimiento del carril. Los resultados obtenidos por este trabajo demuestran una eficacia para la detección de ojos cerrados del 86\% y para la detección de cabeceo superior al 90\% \cite{EstadodelAarte10}.
 
 
 \subsubsection{Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones }
 
 En este artículo se muestra la implementación de un sistema de detección del estado de somnolencia en
 seres humanos, a través de la identificación de patrones faciales y la frecuencia de parpadeo de los ojos. Utilizando técnicas de inteligencia artificial, visión por computadora y un sistema embebido con cámara integrada para la adquisición de imágenes.El cual permite detectar en tiempo real el estado de fatiga de un conductor automovilístico y su grado de somnolencia, todo con el objetivo de disminuir la tasa de accidentes viales causados precisamente por la somnolencia en México. Se hizo uso del lenguaje de programación Python, bibliotecas como OpenCV, Dlib y Scipy, las cuales, fueron requeridas debido a los modelos predefinidos que
-establecen una mayor precisión en la detección de puntos faciales específicos, utilizando como referencia el método de predicción de 68 puntos específicos del rostro. El sistema propuesto tiene la característica de funcionar con luz de día en una primera etapa, y la idea es poder implementarlo en cualquier tipo de vehículo automotriz a un costo accesible a la mayoría de los propietarios de vehículos automotrices.\cite{EstadodelAarte11}
+establecen una mayor precisión en la detección de puntos faciales específicos, utilizando como referencia el método de predicción de 68 puntos específicos del rostro. El sistema propuesto tiene la característica de funcionar con luz de día en una primera etapa, y la idea es poder implementarlo en cualquier tipo de vehículo automotriz a un costo accesible a la mayoría de los propietarios de vehículos automotrices \cite{EstadodelAarte11}.
 
 
 %https://uptexcoco.edomex.gob.mx/sites/uptexcoco.edomex.gob.mx/files/files/2020/articulos-Tesis/sistema_somnolencia.pdf
 
 \subsubsection{Sistema de Detección de Somnolencia}
-En este trabajo de fin de grado, realizado por un alumno de la Universidad de La Laguna en el año 2022 se estudió el uso de los modelos de Redes Neuronales para la clasificación de imágenes. Enfocado en la resolución del problema de la somnolencia en los conductores. En el cual se utilizó el lenguaje de programación Python, junto con diversas librerías que facilitan la integración del modelo, y otras que ayudan en la captura de las imágenes.\cite{EstadodelAarte12}
+En este trabajo de fin de grado, realizado por un alumno de la Universidad de La Laguna en el año 2022 se estudió el uso de los modelos de Redes Neuronales para la clasificación de imágenes. Enfocado en la resolución del problema de la somnolencia en los conductores. En el cual se utilizó el lenguaje de programación Python, junto con diversas librerías que facilitan la integración del modelo, y otras que ayudan en la captura de las imágenes \cite{EstadodelAarte12}.
 
 %https://riull.ull.es/xmlui/bitstream/handle/915/30312/Sistema%20de%20deteccion%20de%20somnolencia.pdf?sequence=1&isAllowed=y
 
+\subsubsection{Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte} 
 
-\subsubsection{Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. }
-
-En este trabajo, realizado por alumnos de la Universidad de GUAYAQUIL en el año 2020-2021 se plantea el desarrollo un prototipo para la detección de la somnolencia del conductor de una cooperativa de transporte el cual dicho conductor se había sobrepasado el límite de horas de trabajo, usando la técnica de reconocimiento facial, basándose específicamente en el estado de los ojos. Para ello se realizó una investigación bibliográfica relacionada con patrones biométricos, inteligencia artificial y programación mediante Machine Learning, así como, las principales variables que permiten identificar un estado de somnolencia. Dentro de esta investigación también se determinan cuáles son los algoritmos a utilizar (CV2, Imutils, etc.) siendo la herramienta Python y su librería principal Visión por Computadora las seleccionadas para el estudio.\cite{EstadodelAarte13}
-
-
-\subsubsection{Sistema basado en la detección y notificación de somnolencia en conductores de autos }
-En este trabajo, realizado por alumnos de la Universidad de Córdoba en el año 2015 se plantea el desarrollo que permite alertar a los conductores en estado de somnolencia leve, utilizando la tecnología de reconocimiento de objetos de Kinect y la librería OpenCV con el lenguaje C\# para el reconocimiento de imágenes. Además, se diseña una aplicación móvil del sistema operativo Android para la notificación de somnolencia utilizando una conexión socket tipo TCP. Para el procesamiento de imágenes, se utilizó el algoritmo Viola-Jones, el cual se basa en una nueva forma de representación de imágenes llamada Integral Image, permitiendo que las características del detector se conmuten rápidamente.\cite{EstadodelAarte14}
+En este trabajo, realizado por alumnos de la Universidad de GUAYAQUIL en el año 2020-2021 se plantea el desarrollo un prototipo para la detección de la somnolencia del conductor de una cooperativa de transporte el cual dicho conductor se había sobrepasado el límite de horas de trabajo, usando la técnica de reconocimiento facial, basándose específicamente en el estado de los ojos. Para ello se realizó una investigación bibliográfica relacionada con patrones biométricos, inteligencia artificial y programación mediante Machine Learning, así como, las principales variables que permiten identificar un estado de somnolencia. Dentro de esta investigación también se determinan cuáles son los algoritmos a utilizar (CV2, Imutils, etc.) siendo la herramienta Python y su librería principal Visión por Computadora las seleccionadas para el estudio \cite{EstadodelAarte13}.
 
 
+\subsubsection{Sistema basado en la detección y notificación de somnolencia en conductores de autos}
+En este trabajo, realizado por alumnos de la Universidad de Córdoba en el año 2015 se plantea el desarrollo que permite alertar a los conductores en estado de somnolencia leve, utilizando la tecnología de reconocimiento de objetos de Kinect y la librería OpenCV con el lenguaje C\# para el reconocimiento de imágenes. Además, se diseña una aplicación móvil del sistema operativo Android para la notificación de somnolencia utilizando una conexión socket tipo TCP. Para el procesamiento de imágenes, se utilizó el algoritmo Viola-Jones, el cual se basa en una nueva forma de representación de imágenes llamada Integral Image, permitiendo que las características del detector se conmuten rápidamente \cite{EstadodelAarte14}.
 
 \subsubsection{Detección de somnolencia para conducción sin accidentes}
-En este trabajo de fin de grado, realizado por un alumno de la Universidad de Alicante en el año 2022 se propuso crear una aplicación real para detectar la somnolencia al volante haciendo énfasis a un bajo coste económico. Donde se realizó una comparativa entre una solución mediante Machine Learning (ML) y Principal Component Analysis (PCA).\cite{EstadodelAarte15}
-
+En este trabajo de fin de grado, realizado por un alumno de la Universidad de Alicante en el año 2022 se propuso crear una aplicación real para detectar la somnolencia al volante haciendo énfasis a un bajo coste económico. Donde se realizó una comparativa entre una solución mediante Machine Learning (ML) y Principal Component Analysis (PCA) \cite{EstadodelAarte15}.
 
 %http://hdl.handle.net/10045/124695
-
-
-
 
 \subsubsection{Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android vía la red enterprise WLAN de la PUCP}
 En este proyecto de titulación de la Pontifica Universidad Católica Del 
@@ -614,7 +598,7 @@ se encuentran en un escenario para luego asociarlos a una localización y
 almacenarlos en una base de datos, para estimar la localización más probable se 
 utilizó el algoritmo de ML basado en el teorema de Bayes de probabilidad. En las 
 conclusiones señalan que este sistema obtuvo una precisión del 100\% en la 
-estimación del ambiente con un error menor de 2.4m en las pruebas realizadas.\cite{EstadodelAarte16}
+estimación del ambiente con un error menor de 2.4m en las pruebas realizadas \cite{EstadodelAarte16}.
 
 
 \subsubsection{Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades cardiovasculares}
@@ -624,35 +608,34 @@ cardiaco el cual proporciona información en tiempo real de los latidos del coraz
 mientras que un microcontrolador procesa los datos y, en caso de que se obtengan 
 los datos de que se está presentando una taquicardia, el microcontrolador solicita la 
 ubicación al módulo GPS y envía un mensaje de texto a través de GSM/GPRS a la 
-persona designada.\cite{EstadodelAarte17}
+persona designada \cite{EstadodelAarte17}.
 
 \subsubsection{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}
-Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de manera profunda las características y detalles de la tecnología GPS para determinar la influencia de un sistema de geolocalización en el control y monitoreo de vehículos con esta tecnología en una empresa logística. \cite{EstadodelAarte18}
-
+Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de manera profunda las características y detalles de la tecnología GPS para determinar la influencia de un sistema de geolocalización en el control y monitoreo de vehículos con esta tecnología en una empresa logística \cite{EstadodelAarte18}. 
 
 
 \newpage
 \section{Capítulo III: Análisis}
 
-Partiendo de la propuesta de solución y la metodología \emph{Top-down}, que nos permite dividir un sistema en módulos para un análisis por partes, el sistema se dividirá en tres principales módulos: el Módulo de Comunicaciones, el Módulo Central de Procesamiento y el Módulo de la Estación Base, figura \ref{fig:topdown}.  
+Partiendo de la propuesta de solución y la metodología \emph{Srum}, que nos permite dividir un sistemaa para un análisis por partes, el sistema se dividirá en tres principales módulos: el Módulo de Comunicaciones, el Módulo Central de Procesamiento y el Módulo de la Estación Base, figura \ref{fig:modulos1}. 
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/topdowngeneral}
-\captionof{figure}{Diagrama del sistema basado en la metodología Top-Down}
- \label{fig:topdown}
+\captionof{figure}{Diagrama del sistema dividido en módulos.}
+ \label{fig:modulos1}
 \end{center} 
 
 A continuación, se desglosan cada uno de los módulos: \\
 
 \textbf{Módulo Central de Procesamiento:}\\
 
-El módulo Central de procesamiento estará compuesto por un microordenador que será colocado dentro de un automóvil. Este microordenador será alimentado por el corriente proporcionado por dicho automóvil. Además, contará con una cámara digital que analizará el rostro del conductor después de que este encienda el automóvil. A este microordenador también le será acoplado un dispositivo que sea capaz de utilizar redes de telecomunicaciones móviles, esto para que sea posible la conexión con la Estación Base. Finalmente, también contará con una alarma para alertar al conductor si este presenta un estado de somnolencia. \\
+El módulo Central de procesamiento estará compuesto por un microordenador que será colocado dentro de un automóvil. Este microordenador será alimentado por la corriente proporcionado por dicho automóvil. Además, contará con una cámara digital que analizará el rostro del conductor después de que este encienda el automóvil. A este microordenador también le será acoplado un dispositivo que sea capaz de utilizar redes de telecomunicaciones móviles, esto para que sea posible la conexión con la Estación Base. Finalmente, también contará con una alarma para alertar al conductor si este presenta un estado de somnolencia. \\
 
 \textbf{Módulo de Visión Artificial}\\
 
 Este submódulo se hará cargo de analizar el rostro del conductor utilizando técnicas de visión
 artificial. Se tomarán en cuenta los siguientes parámetros para determinar si el conductor presenta
-o no signos de somnolencia: 
+o no signos de somnolencia:
 
 \begin{itemize}
 \item estado de los ojos (cerrados, abiertos).
@@ -660,23 +643,18 @@ o no signos de somnolencia:
 \end{itemize}  
   
 Si el conductor presenta un estado de ojos cerrados por más de 5 segundos, se considerará como
-un estado de somnolencia, por lo que se activará una alarma para alertar al conductor.Así mismo se evaluará el grado de apertura de la boca para determinar si el conductor bosteza, si el conductor presenta más de un bostezo dentro de un minuto el sistema lo clasificará como somnolencia. A su vez
-el sistema tomará un videoclip dónde se aprecie el momento en que el conductor presentó un estado de somnolencia.
-
+un estado de somnolencia, por lo que se activará una alarma para alertar al conductor.Así mismo se evaluará el grado de apertura de la boca para determinar si el conductor bosteza y el promedio de bostezos por minuto, si el conductor presenta más de un bostezo dentro de un minuto el sistema lo clasificará como somnolencia. A su vez el sistema tomará un breve videoclip dónde se aprecie el momento en que el conductor presentó un estado de somnolencia. \\
 
 \textbf{Módulo de Comunicaciones}\\
 
-Una vez que se tengan los datos recibidos por el módulo de procesamiento, este módulo se encargará de la transmisión de los datos hacia el módulo de estación base por medio de la tecnología  4G/LTE. Donde la información recibida por el módulo de procesamiento se enviará en forma de paquetes hacia las antenas 4G y serán subidas a la nube para después ser descargadas o consultadas por el módulo de Estación Base. La tasa de datos con la que el transceptor funcionará se especifica en la sección \ref{sec:ASD} y se cumplirán los parámetros establecidos en el teorema de Shannon-Hartley para garantizar la probabilidad de error en la transmisión. En caso de no contar con cobertura, quedarán almacenados las incidencias en una unidad externa para que puedan seguir los mismos pasos antes mencionados teniendo en cuenta el retraso de estos una vez que esta se restablezca. \\
-
+Una vez que se tengan los datos recibidos por el módulo de procesamiento, este módulo se encargará de la transmisión de los datos hacia el módulo de estación base por medio de la tecnología 4G/LTE. Donde la información recibida por el módulo de procesamiento se enviará por medio de la red celular y será subida a la base de datos para después ser descargadas o consultadas por el módulo de Estación Base. La tasa de datos con la que el transceptor funcionará se especifica en la sección \ref{sec:ASD}. En caso de no contar con cobertura, quedarán almacenadas las incidencias en en la unidad externa hasta que puedan ser almacenadas una vez que esta se restablezca la comunicación. \\
  
 \textbf{Módulo de Estación Base}\\
 
-Este módulo estará compuesto por una aplicación web y una base de datos que se encargará de almacenar las incidencias de los conductores para ser corroborados por un administrador posteriormente, esto con la intención de descartar un falso positivo y realizar los ajustes necesarios al sistema. 
+Este módulo estará compuesto por una aplicación web y una base de datos que se encargará de almacenar las incidencias de los conductores para ser corroborados por un administrador posteriormente, esto con la intención de descartar un falso positivo y realizar los ajustes necesarios al sistema. La plicación web brindará una base de datos con registros de incidencias por conductor y estadisctica semanal de incidencias que se presenten durante dicho periodo. Asi mismo se podrá consultar la posición gps del conductor. 
 
-
-
-\subsection{Análisis y delimitación de la zona geográfica  }
-El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas. Debido a que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Por tanto, se decidió utilizar redes móviles celulares para cumplir con dicho requerimiento.  
+\subsection{Análisis y delimitación de la zona geográfica}
+El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas dentro de la Ciudad de México. Debido a que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Por tanto, se decidió utilizar redes móviles celulares para cumplir con dicho requerimiento.
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/MapaCoberturaMexico}
@@ -684,7 +662,7 @@ El sistema está dirigido principalmente para empresas cuya actividad esté enfoca
  \label{fig:mapacoberturaN}
 \end{center} 
 
-Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura \ref{fig:mapacoberturaN}, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes.
+Tomando en cuenta la información del mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura \ref{fig:mapacoberturaN}, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes.
 
 \begin{center}
   \includegraphics[scale=0.7]{imagenes/CoberturaCDMX}
@@ -698,34 +676,15 @@ Tomando en cuenta la información del Mapa de cobertura 3G/4G/5G, de redes móvile
 \subsection{Análisis del Módulo Central de Procesamiento}
 
 \textbf{Análisis de Requerimientos Funcionales}
-\begin{table}[H]
-\centering
-\caption{RF01- Verificar estado funcional de periféricos}
-\begin{tabular}{|ll|}
-\hline
-\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF01}}                                              & \emph{Verificar estado funcional de periféricos}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema verificará el estado funcional de los distintos periféricos utilizados en el Módulo Central de Procesamiento\\ \\ \textbf{Elementos:}
-\\
-\quad $\bullet$ Microodenador\\
-\quad $\bullet$ Cámara Digital\\
-\quad $\bullet$ Zumbador\\
-\quad $\bullet$ Antena
-\end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de los periféricos, se comprobará que funcionen de manera correcta, en caso contrario se enviará una alerta al módulo de Estación Base.
-\end{tabular}}                                                    \\ \hline
-\end{tabular}
-\end{table}
 
 
 \begin{table}[H]
 \centering
-\caption{RF02- Establecer conexión con la base de datos }
+\caption{RF01- Establecer conexión con la base de datos }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF02}}                                              & \emph{Establecer conexión con la base de datos}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF01}}                                              & \emph{Establecer conexión con la base de datos}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:} Se realizará conexión con la Base de Datos.\\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Microodenador\\
@@ -741,15 +700,15 @@ Se podrá acceder a la información almacenada y registrar nuevos datos en la base
 
 \begin{table}[H]
 \centering
-\caption{RF03- Activar Alarma}
+\caption{RF02- Activar Alarma}
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Activar Alarma}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF02}}                                              & \emph{Activar Alarma}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  El sistema activará el zumbador en caso de que el Submódulo de Visión Artificial detecte somnolencia en el conductor. \\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Microodenador\\
-\quad $\bullet$ Zumbador Pasivo
+\quad $\bullet$ Alarma
 
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
@@ -761,11 +720,11 @@ Utilizando métodos de comprobación ofrecidos por cada uno de las libererías de l
 
 \begin{table}[H]
 \centering
-\caption{RF04- Enviar Video de Incidencia }
+\caption{RF03- Enviar Video de Incidencia }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Enviar Video de Incidencia}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF03}}                                              & \emph{Enviar Video de Incidencia}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}  Se enviará el video de la incidencia hacia un servicio de almacenamiento en la nube.  \\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Video\\
@@ -781,11 +740,11 @@ El video será almacenado y se obtendrá un ID del video.
 
 \begin{table}[H]
 \centering
-\caption{RF05- Realizar Reporte de Incidencia }
+\caption{RF04- Realizar Reporte de Incidencia }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Realizar Reporte de Incidencia}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF04}}                                              & \emph{Realizar Reporte de Incidencia}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:} Se realizará una consulta previa a la Base de Datos para obtener el nombre y apellidos del conductor de acuerdo al id del conductor. Se registrará la fecha, hora y ubicación geográfica del momento en que se detectó la somnolencia. Los datos recabados serán usados en la creación de un documento que contenga los datos de la incidencia. \\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Id del Conductor  \\
@@ -806,11 +765,11 @@ El documento de la incidencia contendrá los campos necesarios para registrar la 
 
 \begin{table}[H]
 \centering
-\caption{RF06- Enviar Reporte de Incidencia a la Base de Datos }
+\caption{RF05- Enviar Reporte de Incidencia a la Base de Datos }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF06}}                                              & \emph{Enviar Reporte de Incidencia a la Base de Datos}                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF05}}                                              & \emph{Enviar Reporte de Incidencia a la Base de Datos}                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se enviará el reporte de incidencia hacia la Base de Datos. \\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Reporte de Incidencia  \\
@@ -826,11 +785,11 @@ El Reporte de Incidencia será almacenado en la Base de Datos.
 
 \begin{table}[H]
 \centering
-\caption{RF07- Eliminar Video de Incidencia  }
+\caption{RF06- Eliminar Video de Incidencia  }
 \begin{tabular}{|ll|}
 \hline
 \multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF07}}                                              & \emph{Eliminar Video de Incidencia }                                                             \\ \hline
+\multicolumn{1}{|l|}{\emph{RF06}}                                              & \emph{Eliminar Video de Incidencia }                                                             \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se eliminará el video de Incidencia del almacenamiento externo después de ser almacenado en la nube.   \\ \\ \textbf{Elementos:}
 \\
 \quad $\bullet$ Reporte de Incidencia  \\
@@ -846,7 +805,7 @@ El video de la incidencia será eliminado.
 
 \subsubsection{Análisis y Elección del microordenador}\label{sec:microordenador}
 
-Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenador para permitir que el sistema sea portátil y pueda funcionar dentro de un automóvil.Por tanto, se realizó una investigación de los modelos disponibles y de mayor aceptación en el mercado, figura \ref{tab:microordenador}.
+Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenador para permitir que el sistema sea portátil y pueda funcionar dentro de un automóvil. Por tanto, se realizó una investigación de los modelos disponibles enfocados a proyectos de visión artificial, figura \ref{tab:microordenador}.
 
 \begin{table}[h]
 \centering
@@ -861,6 +820,7 @@ NVIDIA Jetson Nano & ARM A57 2.1 GHz de cuatro núcleos & 4 GB de LPDDR4 de 64 bi
 \end{tabular}
 \end{table}
 
+
 Los parámetros que se tomaron en cuenta para la elección de que microordenador utilizar fueron los siguientes:
 \begin{itemize}
 \item Precio
@@ -869,11 +829,8 @@ Los parámetros que se tomaron en cuenta para la elección de que microordenador u
 \item Módulos compatibles
 \end{itemize}
 
-Si bien la Rasperry Pi es uno de los microordenadores con más aceptación por parte de la comunidad, esta no cuenta con una GPU, lo cual reduce significativamente su rendimiento en tareas relacionadas con IA que requieren de mayor procesamiento. Por lo que al buscar alternativas de microordenadores que contaran una GPU, y basándose en él estudio \cite{nanovspi} se concluyó , que la Nvidia Jetson Nano, ofrece una mayor ventaja en comparación a la rasperry Pi en cuanto a procesamiento y eficacia en tareas que involucran visión artificial. A pesar de que Asus y Google Coral Dev Board  cuenta con una GPU, su potencia no supera a la ofrecida por Jetson Nano \cite{deepedgebench}  y su precio es considerablemente mayor como se puede apreciar en la tabla \ref{tab:microordenador}, por lo cual se descartaron como opción viable. 
-Debido a lo anterior, se concluyó que la Jetson Nano representa la mejor opción para el desarrollo del presente proyecto debido a su bajo costo, bajo consumo de energía y mejor rendimiento en comparación a sus alternativas. 
-
-
-
+Si bien la Raspberry Pi es uno de los microordenadores con mayor aceptación por parte de la comunidad, esta no cuenta con una GPU, lo cual reduce significativamente su rendimiento en tareas relacionadas con IA que requieren mayor procesamiento. Por lo tanto, al buscar alternativas de microordenadores que cuenten con una GPU y basándose en el estudio \cite{EstadodelAarte8}, se concluyó que la Nvidia Jetson Nano ofrece una ventaja superior en comparación con la Raspberry Pi en cuanto a procesamiento y eficacia en tareas que involucran visión artificial. A pesar de que Asus y Google Coral Dev Board cuentan con una GPU, su potencia no supera a la ofrecida por Jetson Nano \cite{deepedgebench} y su precio es considerablemente mayor, como se puede apreciar en la tabla \ref{tab:microordenador}, por lo cual se descartaron como opciones viables.
+Debido a lo anterior, se concluyó que la Jetson Nano representa la mejor opción para el desarrollo del presente proyecto debido a su bajo costo, bajo consumo de energía y mejor rendimiento en comparación con sus alternativas.
 
 
 \subsubsection{Análisis y Elección de la alarma }\label{sec:alarma}
@@ -914,16 +871,16 @@ Para utilizar una NVIDIA Jetson Nano, se requiere una tarjeta SD que contenga el
 Micro SD  & Almacenamiento  & Speed class  & Video class  & Velocidad de escritura  & Velocidad de Lectura  & Precio \\ \hline
 SanDisk Extreme A2 & 32-256 (MAX 1T)GB  & Clase 30/U3  & V30 & 90 MB/s  & 160 MB/s  & \$1041  \\ \hline
 Kingston ENDURANCE  & 32-256 (MAX 1T)GB  & Clase 10/U1   & - & 45 MB/s  & 95 MB/s  & \$628  \\ \hline
-Samsung PRO Plus  & 128-512 GB  & Clase 10/U3   & V30  & 120 MB/s  & 160 MB/s  & 160 MB/s \$883 (128) \\ \hline
+Samsung EVO Plus  & 256 GB  & Clase 10/U3   & V30  & 130 MB/s  & 160 MB/s  & 160 MB/s \$ (592) \\ \hline
 Kingston Canvas React Plus V90 Card  & 64-256 GB  & Clase 10/U3  & V90  & 90 MB/s  & 180 MB/s  & \$3596 \\ \hline
 
 \end{tabular}
 \end{table}
 
-Tomando en cuenta la capacidad mínima de almacenamiento y el costo de la misma se decidió usar una unidad de almacenamiento \emph{Kingston ENDURANCE} de 32 GB para el almacenamiento externo.   
+Tomando en cuenta la capacidad mínima de almacenamiento y el costo de la misma se decidió usar una unidad de almacenamiento \emph{Samsung Evo Plus} de 256 GB para la instalación del sistema operativo para la Jetson Nano.   
 
 \clearpage
-\subsubsection{Análisis y Elección de lenguajes de programación para el microordenador}
+\subsubsection{Análisis y elección de lenguajes de programación para el microordenador}
 
 Lo que se debe de considerar para la elección de un lenguaje de programación, es que la programación orientada a la inteligencia artificial es diferente al paradigma de la programación convencional. En esta última, el usuario le indica a la máquina exactamente lo que tiene que hacer, mientras que en Machine learning, se le enseña a programarse sola. Lo cúal se ejemplifica en el siguiente gráfico:
 \\
@@ -1307,13 +1264,18 @@ Se guardará el video de incidencia en caso de no contar con conexión inalámbrica
 
 Es una biblioteca de procesamiento de imágenes de código abierto, ampliamente utilizada en la investigación académica y la industria. Permite el análisis de imágenes, la detección de objetos, el reconocimiento de patrones y la segmentación de imágenes.
 
-\item \textbf{Tensorflow}
+\item \textbf{Numpy}
+
+Es una librería de Python especializada en el cálculo numérico y el análisis de datos, especialmente para un gran volumen de datos. La ventaja de Numpy frente a las listas predefinidas en Python es que el procesamiento de los arrays se realiza mucho más rápido (hasta 50 veces más) que las listas, lo cual la hace ideal para el procesamiento de vectores y matrices de grandes dimensiones \cite{Numpy}.
+
+
+%\item \textbf{Tensorflow}
 
 Es una plataforma de código abierto para el aprendizaje automático y el procesamiento de datos. Permite  definir, optimizar y ejecutar operaciones matemáticas, especialmente aquellas que involucran tensores, que son arrays multidimensionales de datos.Una de las principales ventajas de esta herramienta es su capacidad para ejecutarse en diferentes plataformas, desde dispositivos móviles hasta servidores de alta capacidad y sistemas en la nube.
 
-\item \textbf{Keras}
+%\item \textbf{Keras}
 
-Es una biblioteca de software de código abierto para el desarrollo de redes neuronales escrita en Python.Permite la construcción de modelos mediante la definición de capas y la conexión de estas capas para crear una red neuronal completa. También proporciona una serie de funciones de alto nivel para la configuración de optimizadores, pérdidas y métricas, lo que facilita el proceso de entrenamiento y evaluación de un modelo.
+%Es una biblioteca de software de código abierto para el desarrollo de redes neuronales escrita en Python.Permite la construcción de modelos mediante la definición de capas y la conexión de estas capas para crear una red neuronal completa. También proporciona una serie de funciones de alto nivel para la configuración de optimizadores, pérdidas y métricas, lo que facilita el proceso de entrenamiento y evaluación de un modelo.
 \end{itemize}
  
 
@@ -1333,147 +1295,149 @@ Se optó por utilizar la cámara IMX219-160, ya que cuenta con hasta 8 Megapixeles
 \clearpage 
 \subsubsection{Análisis y Elección de algoritmos de visión artificial}
 
-Existen varios métodos utilizados para detectar rostros en imágenes y videos, algunos de los más comunes son:
+Existen varios métodos y blibliotecas utilizadas para detectar rostros en imágenes y videos en tiempo real, algunos de los más comunes son:
 
 \begin{itemize}
 
-\item \textbf{Detección de cascada de Haar:} Este método utiliza una cascada de clasificadores basados en características Haar para detectar rostros. El método es rápido y eficiente en términos de recursos, pero puede ser menos preciso que otros métodos.
+\item \textbf{OpenCV con Haar Cascade:} Utilizar el clasificador Haar Cascade de OpenCV para la detección facial en tiempo real. Este método es rápido y puede implementarse fácilmente.
 
+\item \textbf{Face Recognition Library:} Utiliza bibliotecas específicas para reconocimiento facial, como la biblioteca face\_recognition en Python, que utiliza el detector HOG de dlib.
+ 
+\item \textbf{MTCNN (Multi-Task Cascaded Convolutional Networks):} Implementa MTCNN para la detección facial y la localización de puntos de referencia. Este método es eficiente y puede detectar múltiples rostros en una sola imagen.
 
-\item \textbf{Métodos basados en aprendizaje automático:} Se utilizan algoritmos de aprendizaje automático para detectar rostros en imágenes y videos. Estos métodos suelen ser más precisos que los métodos basados en cascadas de Haar, pero requieren un gran conjunto de datos para el entrenamiento.
+\item \textbf{SSD (Single Shot Multibox Detector):} Emplea modelos SSD para la detección de objetos en tiempo real, incluidos los rostros. Utiliza bibliotecas como TensorFlow o PyTorch con modelos SSD preentrenados.
 
-\item \textbf{Métodos basados en deep learning}: utilizan redes neuronales profundas para detectar rostros en imágenes y videos. Estos métodos suelen ser más precisos que los métodos anteriores, pero requieren un gran conjunto de datos para el entrenamiento y un gran poder de procesamiento.
-
-
-\end{itemize}
-
-Debido a que el presente proyecto busca conseguir un ahorro en procesamiento, se decidió a utilizar cascadas Haar para la detección de rostro, ya que estas tienen un tiempo de respuesta mayor y requieren menos procesamiento que los demás métodos mencionados.
-
-
-\begin{table}[H]
-\caption{Cuadro Comparativo - Algoritmos de Aprendizaje}
-\begin{tabular}{{|m{0.1\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|}}
-\hline
-  & \emph{Aplicaciones} & \emph{Ventajas}  & \emph{Desventajas} \\ \hline
-\emph{Neural Networks (CNNs)} & Se utiliza principalmente en las tareas de reconocimiento de imágenes y detección de objetos. Además de sistemas de recomendación y tareas de procesamiento de lenguaje.   & los resultados son más precisos, especialmente para los casos de uso de reconocimiento de imágenes/objetos, en comparación con otros algoritmos  & ara entrenarla se requiere una potencia de cálculo muy alta. Por lo tanto, no es muy rentable. \\ \hline
-\emph{Long Short-Term Memory Networks} & Ideal para tareas como autocompletado de oraciones, generación de subtítulos y análisis de cuadros de video.  & Puede manejar la información en la memoria durante un largo período de tiempo en comparación con RNN.  & Se requiere una gran cantidad de computación y recursos para entrenar el modelo. \\ \hline
-\emph{General Adversarial Networks (GANs)} & Utilizado en la industria creativa para la generación de objetos 3D. 
-
-Útil en la edición de imágenes (Deepfake), generación de personajes de dibujos animados, ilustraciones para novelas, artículos, etc.  & Capaz de aprender la representación interna (distribuciones desordenadas y complejas) en cualquier dato.  & Cuando genera nuevos datos a partir de datos originales, no hay métrica de evaluación para juzgar la precisión de la salida. 
-
-Se requiere mucho cómputo y tiempo para el entrenamiento del modelo  \\ \hline
-\emph{Recurrent Neural Networks (RNNs) } & Se utiliza principalmente en los campos del procesamiento del lenguaje natural y el reconocimiento de voz. También es ideal para tareas como autocompletado de palabras, reconocimiento de texto y análisis de cuadros de video.  & Capacidad de recordar información a lo largo del período de entrenamiento. Posibilidad de procesar entradas de cualquier longitud   & Los cálculos requieren mucho tiempo debido a su naturaleza recurrente. 
-
-Dificultad de acceder a la información desde hace mucho tiempo.  \\ \hline
-\emph{Multilayer Perceptron?s (MLP?s)} & Problemas de clasificación.  
-
-Voz, reconocimiento de imágenes y compresión de datos.  & Puede distinguir datos que no son linealmente separables. 
-
-No hace ninguna suposición con respecto a las funciones de densidad de probabilidad  & Al actualizar los pesos en capas, la red puede atascarse en un mínimo local que puede dificultar la precisión.  \\ \hline
-
-\end{tabular}
-\end{table}
-
-Debido a que el presente proyecto se basará en el reconocimiento de imágenes y de clasificación de información, se tomó la de decisión de utilizar una CNN o Red Neuronal Convolucional para el reconocimiento de ojos abiertos o cerrados dentro de la imagen, esta aprende directamente de los datos, sin necesidad de extraer características manualmente.  Estas redes son particularmente útiles para encontrar patrones en imágenes para reconocer objetos, caras y escenas, además de permitir su implementación en video en tiempo real, lo cual es indispensable para el presente proyecto.  
-
-\subsubsection{Análisis y Elección del modelo de Red Neuronal}
-
-Debido a que el presente proyecto se plantea resolver un problema de clasificación, a continuación se analizará que tipos de modelos de redes neuronales son los más aptos para la resolución de los mismos.
-
-\begin{itemize}
-\item Redes Neuronales Unicapa
-En el caso mas simple de una red neuronal, las neuronas de la capa de entrada se limitan a recibir las señales de entrada. Estas se encargan de redistribuir estas señales a las neuronas de la capa de salida. A esto se le llama una red neuronal unicapa.
-
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/unicapa}
-\captionof{figure}{Redes Unicapa}
- \label{fig:boost}
-\end{center}
-
-
-Utilizando la herramienta de \emph{PlayGround Tensorflow} podemos observar la eficacia de este tipo de redes al resolver problemas de clasifiación.
-Si se le pide a esta Red Neuronal que sombree el área del color de los puntos mostrados dentro de la gráfica, se puede observar que es incapaz de realizarlo de manera correcta.
-
-\begin{center}
-  \includegraphics[scale=0.35]{imagenes/unicapa2}
-\captionof{figure}{Red Neuronal Unicapa}
- \label{fig:boost}
-\end{center}
-
-
-\item Redes Neuronales Multicapa
-
-
-Existe otro tipo de módelo de red neuronal que utiliza capas intermedias entre la capa de salida y la capa de entrada, a estas redes se les conoce como redes profundas o redes multicapa.
-
-\begin{center}
-  \includegraphics[scale=0.7]{imagenes/multicapa}
-\captionof{figure}{Redes Neuronales Multicapa}
- \label{fig:boost}
-\end{center}
-
-En la siguiente figura se puede apreciar que las redes neuronales multicapa tienen una eficiencia mayor a la hora de realizar el mismo problema de clasificación de puntos.Sin embargo, aún no puede resolver este problema correctamente. 
-
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/capasocultas}
-\captionof{figure}{Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una}
- \label{fig:boost}
-\end{center}
-
-\item \textbf{Funciones de Activación}
-
-Una función de activación es un filtro o umbral que modifica o impone límites en los valores resultantes de una capa en una red neuronal. A continucación se muestran los resultados al resolver el mismo problema de clasificación de puntos de colores utilizando distintas funciones de activación.
-
-\begin{itemize}
-\item \textbf{ReLU}
-Esta función de activación consiste en anular los valores de entrada negativos y conservar los valores positivos con sus valores originales.
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/funrelu}
-\captionof{figure}{Representación Gráfica de la Función ReLu}
- \label{fig:boost}
-\end{center}
-
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/relu}
-\captionof{figure}{Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la función de Activación ReLu}
- \label{fig:boost}
-\end{center}
-
-\item \textbf{Tanh}
-La función de la tangente hiperbólica toma cualquier valor real como valores de entrada y de salida en el rango de -1 a 1. Cuanto mayor sea la entrada, más cerca estará del valor de salida de 1.0. Por otro lado, mientras sea menor sea la entrada, el valor de salida se aproximará mas a -1.0
-
-
-\begin{center}
-  \includegraphics[scale=0.2]{imagenes/funtanh}
-\captionof{figure}{Representación gráfica de la función Tangente Hiperbólica}
- \label{fig:boost}
-\end{center}
-
-
-
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/tanh}
-\captionof{figure}{Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la función de Activación Tanh}
- \label{fig:boost}
-\end{center}
-
-\end{itemize}
-Existe un tipo de Red Neuronal que integra los puntos anteriormente vistos: capas ocultas y funciones de activación. Este tipo de red se le conoce como Red Neuronal Convolucional. Cómo su nombre lo indica, estas redes se basan en el uso de la operación de convolución, además de hacer uso de las capas de ocultas y funciones de activación. Estas redes son de las mas eficientes en el campo de visión artificial. \cite{Referencia2}. Por lo tanto, se decidió hacer uso de una red convolucional para cumplir los requisitos previamente planteados.
+\item \textbf{YOLO (You Only Look Once):} Utiliza YOLO para la detección de objetos, incluidos los rostros. YOLO es conocido por su velocidad y eficiencia en tiempo real.
+ 
 
 \end{itemize}
 
-\newpage
+%Debido a que el presente proyecto busca conseguir un ahorro en procesamiento, se decidió a utilizar cascadas Haar para la detección de rostro, ya que estas tienen un tiempo de respuesta mayor y requieren menos procesamiento que los demás métodos mencionados.
+
+Debido a los requerimientos el sistema, Face Recognition Library, utiliza el detector HOG de dlib, es una elección sólida para detectar el rostro, los ojos y la boca. Sus principales ventajas incluyen una detección precisa de rostros, la capacidad de localizar puntos faciales específicos, flexibilidad y facilidad de uso. 
+
+
+%\begin{table}[H]
+%\caption{Cuadro Comparativo - Algoritmos de Aprendizaje}
+%\begin{tabular}{{|m{0.1\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|m{0.25\linewidth}|}}
+%\hline
+%  & \emph{Aplicaciones} & \emph{Ventajas}  & \emph{Desventajas} \\ \hline
+%\emph{Neural Networks (CNNs)} & Se utiliza principalmente en las tareas de reconocimiento de imágenes y detección de objetos. Además de sistemas de recomendación y tareas de procesamiento de lenguaje.   & los resultados son más precisos, especialmente para los casos de uso de reconocimiento de imágenes/objetos, en comparación con otros algoritmos  & ara entrenarla se requiere una potencia de cálculo muy alta. Por lo tanto, no es muy rentable. \\ \hline
+%\emph{Long Short-Term Memory Networks} & Ideal para tareas como autocompletado de oraciones, generación de subtítulos y análisis de cuadros de video.  & Puede manejar la información en la memoria durante un largo período de tiempo en comparación con RNN.  & Se requiere una gran cantidad de computación y recursos para entrenar el modelo. \\ \hline
+%\emph{General Adversarial Networks (GANs)} & Utilizado en la industria creativa para la generación de objetos 3D. 
+
+%Útil en la edición de imágenes (Deepfake), generación de personajes de dibujos animados, ilustraciones para novelas, artículos, etc.  & Capaz de aprender la representación interna (distribuciones desordenadas y complejas) en cualquier dato.  & Cuando genera nuevos datos a partir de datos originales, no hay métrica de evaluación para juzgar la precisión de la salida. 
+
+%Se requiere mucho cómputo y tiempo para el entrenamiento del modelo  \\ \hline
+%\emph{Recurrent Neural Networks (RNNs) } & Se utiliza principalmente en los campos del procesamiento del lenguaje natural y el reconocimiento de voz. También es ideal para tareas como autocompletado de palabras, reconocimiento de texto y análisis de cuadros de video.  & Capacidad de recordar información a lo largo del período de entrenamiento. Posibilidad de procesar entradas de cualquier longitud   & Los cálculos requieren mucho tiempo debido a su naturaleza recurrente. 
+
+%Dificultad de acceder a la información desde hace mucho tiempo.  \\ \hline
+%\emph{Multilayer Perceptron?s (MLP?s)} & Problemas de clasificación.  
+
+%Voz, reconocimiento de imágenes y compresión de datos.  & Puede distinguir datos que no son linealmente separables. 
+
+%No hace ninguna suposición con respecto a las funciones de densidad de probabilidad  & Al actualizar los pesos en capas, la red puede atascarse en un mínimo local que puede dificultar la precisión.  \\ \hline
+
+%\end{tabular}
+%\end{table}
+
+%Debido a que el presente proyecto se basará en el reconocimiento de imágenes y de clasificación de información, se tomó la de decisión de utilizar una CNN o Red Neuronal Convolucional para el reconocimiento de ojos abiertos o cerrados dentro de la imagen, esta aprende directamente de los datos, sin necesidad de extraer características manualmente.  Estas redes son particularmente útiles para encontrar patrones en imágenes para reconocer objetos, caras y escenas, además de permitir su implementación en video en tiempo real, lo cual es indispensable para el presente proyecto.  
+
+%\subsubsection{Análisis y Elección del modelo de Red Neuronal}
+
+%Debido a que el presente proyecto se plantea resolver un problema de clasificación, a continuación se analizará que tipos de modelos de redes neuronales son los más aptos para la resolución de los mismos.
+
+%\begin{itemize}
+%\item Redes Neuronales Unicapa
+%En el caso mas simple de una red neuronal, las neuronas de la capa de entrada se limitan a recibir las señales de entrada. Estas se encargan de redistribuir estas señales a las neuronas de la capa de salida. A esto se le llama una red neuronal unicapa.
+
+
+%\begin{center}
+%  \includegraphics[scale=0.4]{imagenes/unicapa}
+%\captionof{figure}{Redes Unicapa}
+% \label{fig:boost}
+%\end{center}
+
+
+%Utilizando la herramienta de \emph{PlayGround Tensorflow} podemos observar la eficacia de este tipo de redes al resolver problemas de clasifiación.
+%Si se le pide a esta Red Neuronal que sombree el área del color de los puntos mostrados dentro de la gráfica, se puede observar que es incapaz de realizarlo de manera correcta.
+
+%\begin{center}
+%  \includegraphics[scale=0.35]{imagenes/unicapa2}
+%\captionof{figure}{Red Neuronal Unicapa}
+% \label{fig:boost}
+%\end{center}
+
+
+%\item Redes Neuronales Multicapa
+
+
+%Existe otro tipo de módelo de red neuronal que utiliza capas intermedias entre la capa de salida y la capa de entrada, a estas redes se les conoce como redes profundas o redes multicapa.
+
+%\begin{center}
+%  \includegraphics[scale=0.7]{imagenes/multicapa}
+%\captionof{figure}{Redes Neuronales Multicapa}
+% \label{fig:boost}
+%\end{center}
+
+%En la siguiente figura se puede apreciar que las redes neuronales multicapa tienen una eficiencia mayor a la hora de realizar el mismo problema de clasificación de puntos.Sin embargo, aún no puede resolver este problema correctamente. 
+
+
+%\begin{center}
+%  \includegraphics[scale=0.4]{imagenes/capasocultas}
+%\captionof{figure}{Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una}
+% \label{fig:boost}
+%\end{center}
+
+%\item \textbf{Funciones de Activación}
+
+%Una función de activación es un filtro o umbral que modifica o impone límites en los valores resultantes de una capa en una red neuronal. A continucación se muestran los resultados al resolver el mismo problema de clasificación de puntos de colores utilizando distintas funciones de activación.
+
+%\begin{itemize}
+%\item \textbf{ReLU}
+%Esta función de activación consiste en anular los valores de entrada negativos y conservar los valores positivos con sus valores originales.
+
+%\begin{center}
+%  \includegraphics[scale=0.4]{imagenes/funrelu}
+%\captionof{figure}{Representación Gráfica de la Función ReLu}
+% \label{fig:boost}
+%\end{center}
+
+
+%\begin{center}
+%  \includegraphics[scale=0.4]{imagenes/relu}
+%\captionof{figure}{Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la función de Activación ReLu}
+% \label{fig:boost}
+%\end{center}
+
+%\item \textbf{Tanh}
+%La función de la tangente hiperbólica toma cualquier valor real como valores de entrada y de salida en el rango de -1 a 1. Cuanto mayor sea la entrada, más cerca estará del valor de salida de 1.0. Por otro lado, mientras sea menor sea la entrada, el valor de salida se aproximará mas a -1.0
+
+
+%\begin{center}
+%  \includegraphics[scale=0.2]{imagenes/funtanh}
+%\captionof{figure}{Representación gráfica de la función Tangente Hiperbólica}
+% \label{fig:boost}
+%\end{center}
+
+
+%\begin{center}
+%  \includegraphics[scale=0.4]{imagenes/tanh}
+%\captionof{figure}{Redes Neuronal con 2 Capas Ocultas de 4 Neuronas cada una utilizando la función de Activación Tanh}
+% \label{fig:boost}
+%\end{center}
+
+%\end{itemize}
+%Existe un tipo de Red Neuronal que integra los puntos anteriormente vistos: capas ocultas y funciones de activación. Este tipo de red se le conoce como Red Neuronal Convolucional. Cómo su nombre lo indica, estas redes se basan en el uso de la operación de convolución, además de hacer uso de las capas de ocultas y funciones de activación. Estas redes son de las mas eficientes en el campo de visión artificial. \cite{Referencia2}. Por lo tanto, se decidió hacer uso de una red convolucional para cumplir los requisitos previamente planteados.
+
+%\end{itemize}
+
+\clearpage
 
 \subsection{Análisis del Módulo de Comunicaciones}
 Los sistemas automatizados de comunicación, mayormente inalámbricos, se encargan de recopilar datos remotos y transmitir la información.
-La tecnología previamente elegida para la implementación de este módulo es la red 4G/LTE, su estándar es establecido por el 3GPP (Proyecto de asociación de tercera generación) donde establece sus especificaciones en la versión 8 de sus estándares, el cual clasifica hasta 13 categorías LTE\cite{Referencian14}. En estas categorías se especifica la velocidad máxima de carga y descarga, siendo la categoría 0 la velocidad más baja.
+La tecnología previamente elegida para la implementación de este módulo es la red 4G/LTE, su estándar es establecido por el 3GPP (Proyecto de asociación de tercera generación) donde establece sus especificaciones en la versión 8 de sus estándares, el cual clasifica hasta 13 categorías LTE\cite{categorias}. En estas categorías se especifica la velocidad máxima de carga y descarga, siendo la categoría 0 la velocidad más baja.
 En la Tabla \ref{tab:CLTE} se observan las categorías LTE que existen junto con su velocidad máxima de bajada y subida,de la categoría 0 a la 5 se definen para equipos de usuarios, es decir, telefonía celular. 
-Las antenas de la red 4G pueden conectarse a la red LTE-M que forma parte de la tecnología LPWAN sin necesidad de una puerta de enlace y con una velocidad de hasta 5Mbps. 
 
 \begin{table}[H]
 	\begin{center}
@@ -1510,7 +1474,7 @@ Este análisis se divide en:
 
 \item Datos:\\ El encargado de recopilar, procesar y transmitir los fotogramas que el sistema identifica como somnolencia en el conductor, así como un mensaje informativo.
 
-\item Telemetría:\\ Encargado de revisar la cobertura de la zona o regiones presentes en el alcance del sistema.
+\item Cobertura:\\ Encargado de revisar la cobertura de la zona o regiones presentes en el alcance del sistema.
 \end{itemize}
 
 \subsubsection{Análisis del Submódulo de Telemetría }
@@ -1663,34 +1627,38 @@ Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las vel
 Por lo anterior, se decidió a utilizar el estándar LTE-M. 
 
 \clearpage
+
 \subsubsection{Análisis del Submódulo de Datos }\label{sec:ASD}
-El objetivo que tiene el análisis de los datos es mandar fotogramas a la estación base para su futura gestión y validación, así como el almacenamiento de estos; de igual manera se pretende el envío de mensajes informativos para la estación base.
-Anteriormente se establecen las especificaciones que debe tener el material multimedia a utilizar, las características que debe tener el clip grabado es una profundidad de bits de mínimo 8  y una resolución de mínimo 960 x 540 píxeles comúnmente conocido como QHD o \emph{Quarter of High Definition} por sus siglas en inglés, que es lo mínimo necesario que requiere el sistema, todo esto en una secuencia de 30fps.
-Tenemos que:
 
-\begin{equation*}
-960 \; x \; 540 \; x \; 8=4,147,200 \; bits
-\end{equation*}
 
-Cada imagen tiene 4,147,200 bits entonces en 1 segundo se transmiten:
-\begin{equation*}
-4,147,200 \; x \; 30 fps=124.41 \; Mbps
-\end{equation*}
-Que rebasa la capacidad de canal de red establecida, por lo que se implementa el uso de un compresor de video MP4 que tiene una relación de compresión de 16:1 \cite{Referencian16} para así modificar la resolución en la que se almacena el video en la estación base, por otro lado, se envían al menos 2 fotogramas por segundo para no sobrepasar la capacidad de canal.   
-Tenemos que:
+%El objetivo que tiene el análisis de los datos es mandar fotogramas a la estación base para su futura gestión y validación, así como el almacenamiento de estos; de igual manera se pretende el envío de mensajes informativos para la estación base.
+%Anteriormente se establecen las especificaciones que debe tener el material multimedia a utilizar, las características que debe tener el clip grabado es una profundidad de bits de mínimo 8  y una resolución de mínimo 960 x 540 píxeles comúnmente conocido como QHD o \emph{Quarter of High Definition} por sus siglas en inglés, que es lo mínimo necesario que requiere el sistema, todo esto en una secuencia de 30fps.
+%Tenemos que:
 
-\begin{equation*}
-640 \; x \; 480 \; x \; 8=2,457,600 \; bits
-\end{equation*}
-Cada imagen tiene 2,457,600 bits entonces en 1 segundo se transmiten:
-\begin{equation*}
-2,457,600 \; x \; 2 fps=4.91 \; Mbps
-\end{equation*}
-Cumpliéndose nuevamente la relación establecida $R < C$.
-\begin{equation*}
-4.91 Mbps<5 Mbps
-\end{equation*}
-Más 3 kbps de la tasa de bits a utilizar del texto informativo.
+%\begin{equation*}
+%960 \; x \; 540 \; x \; 8=4,147,200 \; bits
+%\end{equation*}
+
+%Cada imagen tiene 4,147,200 bits entonces en 1 segundo se transmiten:
+%\begin{equation*}
+%4,147,200 \; x \; 30 fps=124.41 \; Mbps
+%\end{equation*}
+%Que rebasa la capacidad de canal de red establecida, por lo que se implementa el uso de un compresor de video MP4 que tiene una relación de compresión de 16:1 \cite{Referencian16} para así modificar la resolución en la que se almacena el video en la estación base, por otro lado, se envían al menos 2 fotogramas por segundo para no sobrepasar la capacidad de canal.   
+%Tenemos que:
+
+%\begin{equation*}
+%640 \; x \; 480 \; x \; 8=2,457,600 \; bits
+%\end{equation*}
+%Cada imagen tiene 2,457,600 bits entonces en 1 segundo se transmiten:
+%\begin{equation*}
+%2,457,600 \; x \; 2 fps=4.91 \; Mbps
+%\end{equation*}
+%Cumpliéndose nuevamente la relación establecida $R < C$.
+%\begin{equation*}
+%4.91 Mbps<5 Mbps
+%\end{equation*}
+%Más 3 kbps de la tasa de bits a utilizar del texto informativo.
+
 
 \subsubsection{Análisis del Submódulo de Cobertura}
 
@@ -2009,8 +1977,6 @@ El sistema, con la ayuda un servicio de administración de acceso e identidad del
 \end{tabular}
 
 \end{table}
-
-
 
 
 \begin{table}[H]
@@ -2615,7 +2581,8 @@ Después de haber analizado los distintos proveedores de alojamiento así como sus
 \section{Capítulo IV: Diseño}
 
 \subsection{Diseño del Módulo Central de Procesamiento}
-El sistema principal comenzará por verificar el estado del Submódulo de Visón Artificial, así como el de Comunicaciones y el estado de los periféricos. En caso de que cualquiera de estos presente alguna falla, se enviará un aviso a la Estación Base de que el sistema no podrá funcionar correctamente, y se etiquetará como "mantenimiento requerido". Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Visión Artificial. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
+
+Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Visión Artificial. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
 Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Comunicaciones se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
 Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. \\\\
 
@@ -3501,8 +3468,82 @@ Conexi?n a AWS Amplify utilizando Boto3
 
 \subsubsection{Definición de rutas del frontend}
 
+\textbf{Rutas públicas vs rutas protegidas}
+
+Cuando se habla de una ruta protegida en React, se referiere a programar un bloqueo en ciertas rutas a la cual se le restringe el acceso al usuario. Esto comunmente se realiza para la validación de inicio de sesión de usuarios. Sí el usuario no tiene una sesión iniciada, no podrá acceder a las rutas protegidas de la aplicación. Por otro lado, las rutas públicas son todas aquellas las cuales no requieren contar con una sesión iniciada, y pueden ser accesadas por cualquier tipo de usuario\cite{dom}.
+
+
+Como primer paso, se creo un proyecto de React utilizando el siguiente comando:
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/create}
+\captionof{figure}{Creación proyecto de react}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+Posteriomente, se realizó la instalación del modelo \emph{React Router Dom} utilizando el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/router}
+\captionof{figure}{Instalación React Router DOM}
+ \label{fig:MongoA} 
+\end{center} 
+
+Utilizando la librería \emph{useAuthenticator} ofrecida por el paquete de React Dom se creó un archivo de nombre \emph{RequireAuth.js} el cuál contiene una función la cual se encargará de validar si existe una sesión iniciada previamente.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/auth}
+\captionof{figure}{Función RequireAuth}
+ \label{fig:auth} 
+\end{center} 
+
+Posteriormente, se necesita contar con una página de Login, la cuál permite validar que se encuentre una sesión inciada por parte del usuario, para así poder acceder a las rutas protegidas.
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/loginjs}
+\captionof{figure}{Componente Login}
+ \label{fig:loginjs} 
+\end{center} 
+
+
+Para indicar a React, que se desea implementar una ruta protegida, se necesita ir al componente de dicha ruta e ingresar el siguiente código:
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/homejs}
+\captionof{figure}{Ruta protegida del componente Home}
+ \label{fig:homejs} 
+\end{center} 
+
+En dicho componente, se hace uso de las librerías \emph{useAuthenticator} y \emph{Authenticator} las cuales son ofrecidas por los servicios de Amazon Amplify. Se realizó esto para todos los componentes que se requirieron mantener como rutas protegidas.
+
+
+Finalmente, dentro de nuestro componente \textbf{App.js}, se creó una función que contiene el directorio de rutas tanto públicas como protegidas:
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/routesjs}
+\captionof{figure}{Directorio de rutas}
+ \label{fig:routesjs} 
+\end{center} 
+
+Las rutas protedigas, están dentro de las etiquetas \textbf{<RequireAuth></RequireAuth>}, mientras que las públicas, se encuentran dentro de las etiquetas \textbf{<Route></Route>}.
+
+
+Como resultado de todo lo anterior, se obtuvo una página de Login que utilizando los servicios de AWS Amplify y Cognito, permitirá iniciar sesión así como registrar a nuevos usuarios.
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/loginpage}
+\captionof{figure}{Página de Login}
+ \label{fig:loginpage} 
+\end{center} 
+
+Si intentamos ingresar a las paginas de Conductores, Incidencias o Ubicacion, nos redigirá a la página de Login, debido a que estas páginas fueron definidas como rutas protegidas. Por lo tanto el usuario debe haber inciado sesión para poder acceder a las mismas.
+
+
 \begin{itemize}
-\item \textbf{Path:} "/\\ \textbf{Descripción:} En esta dirección se encontará la el formulario para poder iniciar sesión o registrarse
+\item \textbf{Path:} "/\\ \textbf{Descripción:} En esta dirección se encontrará la el formulario para poder iniciar sesión o registrarse
 
 \item \textbf{Path:} "/home \\  \textbf{Descripción:} Esta dirección será la página principal de la aplicación dónde se mostrarán las incidencias más recientes así como una lista de todos los conductores
 
@@ -3522,44 +3563,167 @@ Conexi?n a AWS Amplify utilizando Boto3
 
 \subsubsection{Definición de rutas del backend}
 
-Para poder utilizar los servicios de Amazon Amplify, sebe estar en el  directorio raíz del proyecto y ejectutar el siguiente comando:
+La creación de rutas mediante las que el cliente realizará las peticiones y tendrá acceso a las operaciones, así como su funcionamiento en cuanto a obtención de datos y comunicación con el resto de la aplicación.
+
+Para poder utilizar los servicios de Amazon Amplify, es necesario ir al directorio root del proyecto y ejectutar el siguiente comando:
 
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/cli}
 \captionof{figure}{Instalación Amplify CLI}
- \label{fig:acli} 
+ \label{fig:MongoA} 
 \end{center} 
 
-El comando mostrado en la figura \ref{fig:acli} permitirá utilizar la terminal de nuestro computador para poder interactuar con los servicios de AWS Amplify.
+Posteriormente, se necesita especificar la región en la cual queremos alojar nuestra aplicación web:
 
-Para indicar a Amplify que estaremos utilizando una API en el backend, se ejecuta el siguiente comando: 
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/region}
+\captionof{figure}{Configuración del proyecto}
+ \label{fig:MongoA} 
+\end{center} 
+
+
+Utilizando un editor de código, se necesita especificar que estará utilizando el \emph{SDK} de Amazon Amplify:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/sdk}
+\captionof{figure}{Implementación del SDK de Amplify}
+ \label{fig:MongoA} 
+\end{center} 
+
+Posteriormente, declaramos una aplicación de ExpressJs la cuál nos permitirá ejecutar entre otras cosas, peticiones HTTP para la comunicación con la base de datos.
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/expressjs}
+\captionof{figure}{Creación de aplicación de Express}
+ \label{fig:MongoA} 
+\end{center} 
+
+Finalmente, se necesitan definir las rutas de las APIs que se estarán utilizando en el proyecto, las cuales serán dos, la primera se encargará de la aplicación web, y la segunda de realizar la comunicación con el Módulo Central de Procesamiento.
+
+Para agregar una api, se necesita ejecutar el siguiente comando desde el directorio raíz del proyecto.
+
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/addapi}
 \captionof{figure}{Amplify add api}
- \label{fig:add api} 
+ \label{fig:MongoA} 
 \end{center} 
 
-La consola de AWS requerirá que se introduzcan parámetros de configuración como el tipo de lenguaje de consultas a utilizar, en este caso, será GraphQL.
+La consola de AWS Amplify requiere introducir parámetros con los cuales serán construida nuestra API, para el presente proyecto se estará utilizando una arquitectura mediante GraphQL, por lo cual seleccionaremos dicha opción.
 
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/graphql}
 \captionof{figure}{Configuración de parámetros de GraphQL}
- \label{fig:graphqlcli} 
+ \label{fig:MongoA} 
 \end{center} 
 
-Como resultado, se tiene un endpoint provisionado por AWS Amplify el cuál utilizaremos para realizar las operaciones necesarias en la API previamente creada.
+Antes de poder publicar nuestra API en AWS Amplify, se necesita definir el Schema con el cuál se hará el manejo de datos. A contiuación se muestran dichos schemas:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/schema}
+\captionof{figure}{Definición de Schemas para el manejo de datos}
+ \label{fig:MongoA} 
+\end{center} 
+
+Finalmente, ejecutaremos el comando \emph{amplify push}, el cuál publicará la API hacáa AWS amplify, generando el endpoint correspondiente a dicha API
 
 
-\subsubsection{Conexión Backend con DynamoDB}
 
-DynamoDb es un servicio de base de datos NoSQL ofrecido en la misma suite de AWS Amplify.
+Como resultado, tenemos el endpoint de nuestro modelo de GraphQL y nuestra API Key generada por Amplify
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/endpoints}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
+\subsubsection{Creación de la base de datos no relacional}
+
+Debido a problemas de integración junto con los servicios de autenticación y de despliegue de Amplify, se decidió utilizar el sistema de gestión de bases de datos DynamoDB.
+
+DynamoDB es un servicio de base de datos NoSQL Ofrecido por Amazon Web Services. DynamoDB trabaja con tablas. Estas a su vez, contienen parámetros importantes que se mencionarón a continuación.
+
+
+
+\begin{itemize}
+\item \textbf{\emph{Primary Key}}: Se trada de una clave primaria simple, compuesta por un solo atributo denominado clave de partición. Una clave primaria puede ser una clave de partición o una combinación de clave de partición y clave de ordenación. La clave primaria debe ser única en toda la tabla.
+\begin{itemize}
+\item \textbf{\emph{Parition Key}}: Es la llave principal por la cual se agruparán los datos, y determina cómo se particiona la información.
+
+\item \textbf{\emph{Sort Key}}: Es llave de ordenamiento de los datos.
+
+\end{itemize}
+
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/dynamo}
+\captionof{figure}{Tablas en DynamoDB}
+ \label{fig:cognito} 
+\end{center} 
+
+
+DynamoDB almacena los datos como grupos de atributos, conocidos como elementos. Los elementos son similares a las filas o registros de otros sistemas de bases de datos. DynamoDB almacena y recupera cada elemento en función del valor de la clave principal, que debe ser único.
+
+DynamoDB utiliza el valor de la clave de partición como parámetro de entrada para una función hash interna. El resultado de la función hash determina la partición en la que se almacena el elemento. La ubicación de cada elemento viene determinada por el valor hash de su clave de partición
+
+Todos los elementos con la misma clave de partición se almacenan juntos y, para las claves de partición compuestas, se ordenan por el valor de la clave de ordenación. DynamoDB divide las particiones por clave de ordenación si el tamaño de la colección crece más de 10 GB\cite{dynamo}.
+
+
+Crear la base de datos en MongoDB.
+
+
+Para crear nuestras tablas de DynamoDB, se debe ingresar a la consola de AWS.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/aws}
+\captionof{figure}{Consola de AWS}
+ \label{fig:cognito} 
+\end{center} 
+
+
+Una vez dentro, ingresamos a la sección del servicio de DynamoDB
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/tables}
+\captionof{figure}{Tablas generadas mediante los schemas definidos}
+ \label{fig:cognito} 
+\end{center} 
+
+Como se puede observar, gracias a los pasos realizados en la sección \ref{Backend}, DynamoDB crea automáticamente las tablas creadas en base a los schemas definidos previamente.
+
+\subsubsection{Conexión backend con la base de datos}
+
+Realizar la conexión de NodeJs con la base de datos MongoDb.
+
+
+Para realizar la conexión y la integración de los servicios de DynamoDB hacáa nuestra API, se hará uso de AppSync. Las API de GraphQL creadas con AWS AppSync brindan a los desarrolladores frontend la capacidad de consultar varias bases de datos, microservicios y API desde un único punto de conexión de GraphQL. 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/appsync}
+\captionof{figure}{Funcionamiento de Appsync}
+ \label{fig:MongoA} 
+\end{center} 
+
+AWS AppSync crea las API sin servidor de GraphQL y de publicación o suscripción que simplifican el desarrollo de aplicaciones a través de un único punto de conexión para consultar, actualizar o publicar datos.
+
+
+
+Despues de haber realizado los pasos de la sección \ref{Backend}, si ejecutamos el comando \emph{amplify status}, la consola de Amplify nos retornara el endpoint de GraphQL junto con AppSync correspondiente, el cuál se utilizará para realizar todas las operaciones con respecto al almacenamiento de datos
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/appsyncendpoint}
+\captionof{figure}{Generación de endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
 
 
 \subsubsection{Implementación de sistema de acceso con credenciales}
 
 
-\subsubsection{Creación de la base de datos no relacional}
+
 
 \textbf{Definición del Esquema}
 
@@ -3807,118 +3971,21 @@ Para el desarrollo de la Estación base, se decidió utilizar la suite de herramie
 El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas de somnolencia y alertar al conductor, además de poder obtener la ubicación del conductor en tiempo real la cual será monitoreada desde la aplicación web, que a su vez gestionará la información de los conductores y los reportes de incidencias enviados desde el módulo central de procesamiento. 
 
 
-
-
-\newpage
+\clearpage
 \section{Referencias}
 
-%\bibliographystyle{apacite}
+\bibliographystyle{ieeetran}
 
-\begin{thebibliography}{100} %10 significa el número máximo de items
+\bibliography{Referencias}
+
+\begin{thebibliography}{500} %10 significa el número máximo de items
 %Aquí ponga la bibliografía y referencias usadas
-
-%Artículo:
-
-\bibitem{WHO} World Health Organization. "Global status report on road safety 2018". World Health Organization (WHO). http://www.who.int/publications/i/item/9789241565684 (accedido el 26 de enero de 2022). 
-
-\bibitem{IMT} Paez Mario, Abarca Emilio. \emph{Herramientas para la seguridad en la movilidad, modelos predictivos de somnolencia en conductores}, Instituto Mexicano del Transporte, Septiembre 2017
-
-\bibitem{TastreoSatelital} Rastreo satelital de vehículos: ¿qué es mejor que el GPS tradicional? (s/f). Beetrack.com. Recuperado de https://www.beetrack.com/es/blog/rastreo-satelital-de-vehiculos 
-
-\bibitem{iot} Jim Chase, \emph{The Evolution of Internet of Things}, 
-
-\bibitem{Sistemasdesomnolencia}  "Sistemas de detección de somnolencia en conductores:Inicio, desarrollo y futuro", Revista Ingeniería y Región., vol. 13, n.º 1, pp. 159?168, 2015. Disponible: https://journalusco.edu.co/index.php/iregion/article/view/717/1372 
-
-\bibitem{Referencia9} Vilca Espinoza, R.A, \emph{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}, 2007
-
-\bibitem{TopDown} Metodología top-down. (s.f.) \url{http://163.10.22.82/OAS/modularizacion/metodologa_topdown.html}
-
 
 \bibitem{kendall} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
 
 
-\bibitem{intensidad} Roehrs T, Carskadon MA, Dement WC, Roth \emph{T. Daytime 
-Sleepiness and alertness}. Publicado en: Kryger MH, Roth T, Dement WC, 
-eds. \emph{Principles and Practice of Sleep Medicine}, 4th ed: Saunders; 
-2005:39-49.
-
-\bibitem{JetsonNano} nvidia. (s.f.). NVIDIA jetson nano. https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano/
-
-\bibitem {vision} David A. Forsyth, Jean Ponce, \emph{Computer Vision a Modern Approach}, Second Edition, Pearson, 2012
 
 
-\bibitem{Referencia0} Fernando Berzal, \emph{ Redes Neuronales y Deep Learning}, Granada, 2018
-
-
-\bibitem {CNNpresentacion} Todt, E., Krinski, B. A. (2019, 30 de noviembre). Convolutional neural network - CNN. \url{https://www.inf.ufpr.br/todt/IAaplicada/CNN_Presentation.pdf}
-
-
-\bibitem{viola}Viola P.; Jones M, \emph{Rapid Object Detection
-using a Boosted Cascade of Simple Features}. IEEE International Conference on Computer Vision and Pattern Recognition,2001
-
-\bibitem{Referencian4} Mell, P., \& Grance, \emph{The NIST definition of Cloud Computing}, NIST special publication, 2011
-
-\bibitem{Referencian5}Tarify.Win!\emph {Red WWAN ¿Qué es, para qué sirve y cómo
-funcionan?}https://tarify.win/definiciones/red-wwan/
-
-
-
-\bibitem{Referencian6}La Rosa, A. (2021, 13 julio). \emph{LPWAN como base de comunicaciones para IoT} Pandora 
-FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com/blog/es/que-eslpwan/?msclkid=08006fc5cf4611ecbc00aa3b275ed2b5
-
-
-\bibitem{Referencian7}\emph{LTE-M, el despegue esperado para IoT. Hablemos de empresas.} https://hablemosdeempresas.com/grandes-empresas/lte-m-despliegue-soluciones-iot/
-
-
-\bibitem{shannon} Gianluca Cornetta, \emph{Compromiso entre Modulación y Codificación}, Universidad San Pablo, Dep. de Ingeniería de Sistemas de Información y Telecomunicación
-
-
-
-
-\bibitem{EstadodelAarte1} Pachouly, S., Bhondve, N., Dalvi, A., Dhande, V., \& Bhamare, N. (2020, 6 de junio). Driver drowsiness detection using machine learning with visual behaviour. www.ijcrt.org. https://ijcrt.org/papers/IJCRT2006408.pdf
-
-\bibitem{EstadodelAarte2} Kanojia, G., Kanojiya, V., \& Mendonza, G. (2020, diciembre). Detection of drowsiness and distraction of drivers using cnn. https://www.trendytechjournals.com/files/issues/volume4/issue7-5.pdf
-
-\bibitem{EstadodelAarte3} Sri, M. K., \& Annamani, T. (2022, abril). Driver drowsiness detection system using convolutional neural networks. https://ijarsct.co.in/Paper3399.pdf 
-
-\bibitem{EstadodelAarte4} Mayank Chauhan, Mukesh Sakle, \emph{Study \& Analysis of Different Face Detecion Techniques}
-
-
-\bibitem{EstadodelAarte5} Rodriguez, A., \& Luis, D. J. (2021, mayo). Diseño e implementación de sistema de visión artificial para alerta y detección de somnolencia mediante aprendizaje profundo aplicable en conductores de vehículos. https://dspace.unitru.edu.pe/handle/UNITRU/16872
-
-
-\bibitem{EstadodelAarte6} M. Limaquispe y E. Sánchez. "SISTEMA DE DETECCIÓN DE SOMNOLENCIA MEDIANTE INTELIGENCIA ARTIFICIAL EN CONDUCTORES DE VEHÍCULOS PARA ALERTAR LA OCURRENCIA DE ACCIDENTES DE TRÁNSITO"". Repository. http://repositorio.unh.edu.pe/handle/UNH/2327
-
-\bibitem{EstadodelAarte7} Eugenio, B. L. H., Alejandra, G. P. K., \& Pichardo Iniesta José Alejandro. (2019, junio). Diseño de un sistema electrónico para detectar somnolencia en automovilistas por medio de la actividad ocular. https://tesis.ipn.mx/handle/123456789/27287
-
-\bibitem{EstadodelAarte8} Becerril, E. L., Ramírez, A. M., \& Velázquez, E. T. J. (s.f.). Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones. $https://uptexcoco.edomex.gob.mx/sites/uptexcoco.edomex.gob.mx/files/files/2020/articulos-Tesis/sistema_somnolencia.pdf$
-
-\bibitem{EstadodelAarte9} Solís, H. F. (2022, 13 de septiembre). Sistema de detección de somnolencia. https://riull.ull.es/xmlui/bitstream/handle/915/30312/Sistema%20de%20deteccion%20de%20somnolencia.pdf?sequence=1&amp;isAllowed=y
-
-\bibitem{EstadodelAarte10} Pacay, C., \& Blanca Fanny. (2020). Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte. http://repositorio.ug.edu.ec/handle/redug/49449?mode=full
-
-\bibitem{EstadodelAarte11} E. L. Benavides y M. M. Medina. "Sistema Basado en la Detección y notificación de somnolencia para conductores de autos". Repositorio Universidad de Córdoba. https://repositorio.unicordoba.edu.co/bitstream/handle/ucordoba/536/Trabajo%20de%20grado.pdf?sequence=1&amp;isAllowed=y
-
-\bibitem{EstadodelAarte12} Adrián, Ñ. H. (2022, 30 de junio). Detección de somnolencia para conducción sin accidentes. http://hdl.handle.net/10045/124695
-
-\bibitem{EstadodelAarte13} Avila, R., \& Arturo, W. (2016). Geolocalización transaccionalidad mapa ecuador cne democracia localización ubicación. http://repositorio.ug.edu.ec/handle/redug/16806
-
-\bibitem{EstadodelAarte14} Vilca, G., \& Eduardo, J. (2016, 3 de agosto). Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android via la red Enterprise WLAN de la PUCP. https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7156
-
-\bibitem{EstadodelAarte15} Federico, A., Guillermo, C., \& Guzmán, P. (2018). Geolocalizacoón con LoRa mediante multilateración. https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/20293
-
-\bibitem{EstadodelAarte16} Ramírez, C. E. E., Flores, R. E. R., \& Hernández, J. A. V. (2018). Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades vasculares. https://tesis.ipn.mx/handle/123456789/27690
-
-\bibitem{EstadodelAarte17} Espinoza, B. R. A. V. (2017). Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística.
-
-
-\bibitem{EstadodelAarte18} Juan Carlos, C. P. (2017, 15 de febrero). Diseño de la red de acceso LTE en el distrito de Jesús María ¡https://tesis.pucp.edu.pe/repositorio/handle/20.500.12404/7847
-
-
-\bibitem{nanovspi} Gunan Dewantoro, Jamil Mansuri, \emph{Comparative Study of Computer Vision Based Line Followers using Rasperry Pi and Jeston Nano}
-
-
-\bibitem {deepedgebench} Stepahn Baller, Anshul Jindal \emph{DeepEdgeBench: Benchmarking Deep Neural Networks on Edge Devices}
 
 
 \bibitem{python} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
@@ -3926,15 +3993,15 @@ FMS-The Monitoring Blog. Recuperado 8 de mayo de 2022, de https://pandorafms.com
 \bibitem{Referencia2}
 V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
 
-\bibitem{Referencian14} M. Cid. \emph{Categorías LTE o 4G: qué son y qué velocidades máximas ofrece cada una de ellas.} Xataka Móvil - Teléfonos móviles, tarifas, operadores de telefonía. https://www.xatakamovil.com/conectividad/categorias-lte-o-4g-que-son-y-que-velocidades-maximas-ofrece-cada-una-de-ellas
 
-\bibitem{Referencian15}\emph{¡No aceleres! Estos son los nuevos límites de velocidad 2022 en México.} ADNPolítico. https://politica.expansion.mx/mexico/2022/05/19/estos-son-nuevos-limites-velocidad-2022 
+
+ 
 
 \bibitem{Referencian16}\emph{MP4 - EcuRed.} EcuRed. https://www.ecured.cu/MP4\#:~:text=Un\%20archivo\%20de\%20MP4\%20lleva\%20sonido\%20y\%20video,de\%2020\%20segundos\%20de\%20clips\%20de\%20audio\%20(MP4/20s).
 
 \bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
 
-\bibitem{CoberturaNacional} "Cobertura 3G / 4G / 5G Telcel Mobile - nPerf.com". Internet Speed test : Test your broadband connection - nPerf.com. https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/ (accedido el 22 de diciembre de 2022).
+
 
 
 \bibitem {mongo} Kyle Banker, \emph{MondoDB in Action}, Second Edition, Manning, 20216
@@ -3952,28 +4019,13 @@ Feature Extraction}, International Journal for research in emergin science and t
 \bibitem {NodeJs} Jonathan Wexler, \emph{Get Programming with Node.js}, Manning, 2019
 
 
-
-
-
-
-
 \bibitem{algoritmosdeaprendizaje} https://www.alteryx.com/es-419/glossary/supervised-vs-unsupervised-learning\#:~:text=Hay\%20una\%20diferencia\%20clave\%20entre,etiquetados\%20con\%20la\%20respuesta\%20correcta
-
 
 
 \bibitem{conapra} M. Paez y Emilio Abarca. \emph{Resumen Boletines}, Instituto Mexicano del Transporte.
 https://imt.mx/resumen-boletines.html?IdArticulo=449\&amp;IdBoletin=168 (accedido 
 el 18 de marzo de 2022).
 
-
-
-
-
-
-
-
-
-%Libro
 
 
 \bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
@@ -4002,6 +4054,19 @@ el 18 de marzo de 2022).
 
 \bibitem{CUDA} Nakai-Omer. "GitHub - mdegans/nano\_build\_opencv: Build opencv on nvidia jetson nano". GitHub. https://github.com/mdegans/nano\_build\_opencv (accedido el 20 de junio de 2023).
 
+\bibitem {react} React Dev Team, \emph{React}, React. https://react.dev/ (accedido el 1 de abril de 2023).
+
+\bibitem {waveshare} Waveshare Electronics, \emph{SIM7600G-H 4G for Jetson Nano - Waveshare Wiki}, Waveshare Electronics\url{https://www.waveshare.com/wiki/SIM7600G-H_4G_for_Jetson_Nano_4G_connecting} (accedido el 16 de abril de 2023).
+
+\bibitem {graphql} Facebook Dev Team, \emph{Introduction to GraphQL | GraphQL | A query language for your API} https://graphql.org/learn/ (accedido el 4 de abril de 2023).
+
+
+
+\bibitem{Nvidia} NVIDIA, "Get Started with the Jetson Nano Developer Kit", NVIDIA Developer, 2019. [Online]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro. [Accedido: Abril 02 2023].
+
+\bibitem{sdimage} Nvidia Developer, "Get Started with Jetson Nano Devkit," Nvidia Developer. [En línea]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#write. [Accedido: 2 de abril de 2023].
+
+\bibitem{JetsonInf}Dusty, N. "Building the Repo - NVIDIA Jetson Inference," GitHub. [Online]. Disponible en: https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md. [Accedido en: 02-abr-2023].
 
 \end{thebibliography}
 

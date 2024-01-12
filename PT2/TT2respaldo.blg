@@ -1,0 +1,115 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: TT2respaldo.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: ieeetran.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: Referencias.bib
+Warning--entry type for "GeolocalizacionVehiculos" isn't style-file defined
+--line 46 of file Referencias.bib
+I was expecting a `,' or a `}'---line 326 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 334 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Sistemasdesomnolencia"
+Warning--I didn't find a database entry for "TopDown"
+Warning--I didn't find a database entry for "kendall"
+Warning--I didn't find a database entry for "vision"
+Warning--I didn't find a database entry for "Referencian7"
+Warning--I didn't find a database entry for "nanovspi"
+Warning--I didn't find a database entry for "python"
+Warning--I didn't find a database entry for "Referencia2"
+Warning--I didn't find a database entry for "Referencian14"
+Warning--I didn't find a database entry for "Referencian15"
+Warning--I didn't find a database entry for "Referencian16"
+Warning--I didn't find a database entry for "Referencian17"
+Warning--I didn't find a database entry for "mongo"
+Warning--I didn't find a database entry for "AWS"
+Warning--I didn't find a database entry for "mor"
+Warning--I didn't find a database entry for "tracking"
+Warning--I didn't find a database entry for "NodeJs"
+Warning--I didn't find a database entry for "Nvidia"
+Warning--I didn't find a database entry for "JetPackSDK"
+Warning--I didn't find a database entry for "Tensorflow"
+Warning--I didn't find a database entry for "JetStats"
+Warning--I didn't find a database entry for "SwapFile"
+Warning--I didn't find a database entry for "CUDA"
+Warning--I didn't find a database entry for "Waveshare"
+Warning--I didn't find a database entry for "Boto3"
+Warning--I didn't find a database entry for "dom"
+Warning--I didn't find a database entry for "dynamo"
+Warning--I didn't find a database entry for "AwsAmplify"
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Too many commas in name 1 of "Roehrs T, Carskadon MA, Dement WC, Roth" for entry intensidad
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Eugenio, B. L. H., Alejandra, G. P. K., and Pichardo Iniesta José Alejandro" has a comma at the end for entry EstadodelAarte10
+while executing---line 2403 of file ieeetran.bst
+Too many commas in name 1 of "Eugenio, B. L. H., Alejandra, G. P. K., and Pichardo Iniesta José Alejandro" for entry EstadodelAarte10
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Becerril, E. L., Ramírez, A. M., and Velázquez, E. T. J." has a comma at the end for entry EstadodelAarte11
+while executing---line 2403 of file ieeetran.bst
+Too many commas in name 1 of "Becerril, E. L., Ramírez, A. M., and Velázquez, E. T. J." for entry EstadodelAarte11
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Pacay, C., and Blanca Fanny." has a comma at the end for entry EstadodelAarte13
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Vilca, G., and Eduardo, J." has a comma at the end for entry EstadodelAarte16
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Ramírez, C. E. E., Flores, R. E. R., and Hernández, J. A. V." has a comma at the end for entry EstadodelAarte17
+while executing---line 2403 of file ieeetran.bst
+Too many commas in name 1 of "Ramírez, C. E. E., Flores, R. E. R., and Hernández, J. A. V." for entry EstadodelAarte17
+while executing---line 2403 of file ieeetran.bst
+
+Done.
+You've used 33 entries,
+            4087 wiz_defined-function locations,
+            1041 strings with 14896 characters,
+and the built_in function-call counts, 13728 in all, are:
+= -- 1180
+> -- 199
+< -- 0
++ -- 94
+- -- 47
+* -- 481
+:= -- 2484
+add.period$ -- 66
+call.type$ -- 33
+change.case$ -- 65
+chr.to.int$ -- 0
+cite$ -- 33
+duplicate$ -- 1152
+empty$ -- 1276
+format.name$ -- 58
+if$ -- 3065
+int.to.chr$ -- 0
+int.to.str$ -- 33
+missing$ -- 277
+newline$ -- 122
+num.names$ -- 33
+pop$ -- 722
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1106
+stack$ -- 0
+substring$ -- 97
+swap$ -- 684
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 33
+warning$ -- 0
+while$ -- 33
+width$ -- 35
+write$ -- 312
+(There were 11 error messages)

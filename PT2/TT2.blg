@@ -1,47 +1,118 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TT2.aux
-I found no \bibdata command---while reading file TT2.aux
-I found no \bibstyle command---while reading file TT2.aux
-You've used 59 entries,
-            0 wiz_defined-function locations,
-            189 strings with 1703 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: ieeetran.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: Referencias.bib
+Warning--entry type for "GeolocalizacionVehiculos" isn't style-file defined
+--line 46 of file Referencias.bib
+I was expecting a `,' or a `}'---line 326 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 334 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 342 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+Repeated entry---line 346 of file Referencias.bib
+ : @misc{categorias
+ :                 ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 358 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "python"
+Warning--I didn't find a database entry for "Numpy"
+Warning--I didn't find a database entry for "Referencian17"
+Warning--I didn't find a database entry for "mongo"
+Warning--I didn't find a database entry for "AWS"
+Warning--I didn't find a database entry for "mor"
+Warning--I didn't find a database entry for "tracking"
+Warning--I didn't find a database entry for "NodeJs"
+Warning--I didn't find a database entry for "Nvidia"
+Warning--I didn't find a database entry for "JetPackSDK"
+Warning--I didn't find a database entry for "Tensorflow"
+Warning--I didn't find a database entry for "JetStats"
+Warning--I didn't find a database entry for "SwapFile"
+Warning--I didn't find a database entry for "CUDA"
+Warning--I didn't find a database entry for "Waveshare"
+Warning--I didn't find a database entry for "Boto3"
+Warning--I didn't find a database entry for "dom"
+Warning--I didn't find a database entry for "dynamo"
+Warning--I didn't find a database entry for "AwsAmplify"
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Too many commas in name 1 of "Roehrs T, Carskadon MA, Dement WC, Roth" for entry Intensidad
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Eugenio, B. L. H., Alejandra, G. P. K., and Pichardo Iniesta José Alejandro" has a comma at the end for entry EstadodelAarte10
+while executing---line 2403 of file ieeetran.bst
+Too many commas in name 1 of "Eugenio, B. L. H., Alejandra, G. P. K., and Pichardo Iniesta José Alejandro" for entry EstadodelAarte10
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Becerril, E. L., Ramírez, A. M., and Velázquez, E. T. J." has a comma at the end for entry EstadodelAarte11
+while executing---line 2403 of file ieeetran.bst
+Too many commas in name 1 of "Becerril, E. L., Ramírez, A. M., and Velázquez, E. T. J." for entry EstadodelAarte11
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Pacay, C., and Blanca Fanny." has a comma at the end for entry EstadodelAarte13
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Vilca, G., and Eduardo, J." has a comma at the end for entry EstadodelAarte16
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Ramírez, C. E. E., Flores, R. E. R., and Hernández, J. A. V." has a comma at the end for entry EstadodelAarte17
+while executing---line 2403 of file ieeetran.bst
+Too many commas in name 1 of "Ramírez, C. E. E., Flores, R. E. R., and Hernández, J. A. V." for entry EstadodelAarte17
+while executing---line 2403 of file ieeetran.bst
+
+Done.
+You've used 44 entries,
+            4087 wiz_defined-function locations,
+            1084 strings with 16698 characters,
+and the built_in function-call counts, 18653 in all, are:
+= -- 1609
+> -- 268
+< -- 10
++ -- 130
+- -- 62
+* -- 660
+:= -- 3360
+add.period$ -- 88
+call.type$ -- 44
+change.case$ -- 85
+chr.to.int$ -- 21
+cite$ -- 44
+duplicate$ -- 1555
+empty$ -- 1720
+format.name$ -- 75
+if$ -- 4179
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
+int.to.str$ -- 44
+missing$ -- 368
+newline$ -- 157
+num.names$ -- 44
+pop$ -- 949
+preamble$ -- 1
 purify$ -- 0
-quote$ -- 0
-skip$ -- 0
+quote$ -- 2
+skip$ -- 1504
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 175
+swap$ -- 941
+text.length$ -- 3
 text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
+top$ -- 5
+type$ -- 44
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+while$ -- 47
+width$ -- 46
+write$ -- 413
+(There were 14 error messages)
