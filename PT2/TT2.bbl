@@ -21,14 +21,14 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Espiral}
+Sitesbay, ``What is spiral model,'' Disponible en:
+  \url{https://www.sitesbay.com/software-engineering/se-spiral-model}, s/f,
+  consultado el 26 de enero de 2022.
+
 \bibitem{JetsonNano}
 NVIDIA, ``Nvidia jetson nano,'' Disponible en:
   \url{https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano/},
-  consultado el 26 de enero de 2022.
-
-\bibitem{CNNpresentacion}
-K.~B.~A. Todt~E., ``Convolutional neural network - cnn,'' Disponible en:
-  \url{https://www.inf.ufpr.br/todt/IAaplicada/CNN_Presentation.pdf}, 2019,
   consultado el 26 de enero de 2022.
 
 \bibitem{CDNimg}
@@ -78,11 +78,9 @@ V.~E.~R. A., ``Influencia de un sistema de geolocalizacion en el control y
   2017,
   \url{https://repositorio.ucv.edu.pe/bitstream/handle/20.500.12692/17105/Vilca_ERA.pdf?sequence=1&isAllowed=y}.
 
-\bibitem{Scrum}
-G.~S. Sandra, ``Las metodologías ágiles más utilizadas y sus ventajas dentro
-  de la empresa,'' Disponible en:
-  \url{https://www.iebschool.com/blog/que-son-metodologias-agiles-agile-scrum/},
-  2023, consultado el 26 de enero de 2022.
+\bibitem{Metodologia}
+B.~W. Boehm, ``A spiral model of software development and enhancement,''
+  \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
 
 \bibitem{Intensidad}
 D.~W.~R. Roehrs~T, Carskadon~MA, ``T. daytime sleepiness and alertness,''
@@ -100,17 +98,8 @@ aws, ``Que es la vision artificial,'' Disponible en:
   \url{https://aws.amazon.com/es/what-is/computer-vision/}, s/f, consultado el
   26 de enero de 2022.
 
-\bibitem{Referencia0}
-F.~Berzal, ``Redes neuronales y deep learning,'' 2018, consultado el 26 de
-  enero de 2022.
-
-\bibitem{viola}
-J.~M. Viola~P, ``Rapid object detection using a boosted cascade of simple
-  features,'' IEEE International Conference on Computer Vision and Pattern
-  Recognition, 2001, consultado el 26 de enero de 2022.
-
 \bibitem{CDN}
-aws, ``Que es una cdn,'' Disponible en:
+------, ``Que es una cdn,'' Disponible en:
   \url{https://aws.amazon.com/es/what-is/cdn/}, 2023, consultado el 26 de enero
   de 2022.
 
@@ -243,7 +232,7 @@ G.~Vilca and J.~Eduardo, ``Diseno e implementacion de un sistema de
   consultado el 26 de enero de 2022.
 
 \bibitem{EstadodelAarte17}
-F.~R. E.~R. Ramírez, C. E.~E. and J.~A.~V. Hernández, ``Propuesta de un
+C.~E.~E. Ramírez, R.~E.~R. Flores, and J.~A.~V. Hernández, ``Propuesta de un
   sistema de geolocalizacion y monitoreo via gps/gsm/gprs aplicado a un
   pulsometro para personas con enfermedades vasculares,'' Disponible en:
   \url{https://tesis.ipn.mx/handle/123456789/27690}, 2018, consultado el 26 de
@@ -259,6 +248,15 @@ A.~J. Stepahn~Baller, ``Deepedgebench: Benchmarking deep neural networks on
   edge devices,'' Disponible en: \url{https://arxiv.org/abs/2108.09457},
   accedido el 22 de diciembre de 2022.
 
+\bibitem{python}
+I.~Kalb, \emph{Object-Oriented Python}, 1st~ed.\hskip 1em plus 0.5em minus
+  0.4em\relax No Starch-Press, 2021.
+
+\bibitem{Numpy}
+A.~con Alf, ``La librería numpy,'' Disponible en:
+  \url{https://aprendeconalf.es/docencia/python/manual/numpy/}, accedido el 22
+  de diciembre de 2022.
+
 \bibitem{categorias}
 M.~Cid, ``Categorías lte o 4g: que son y que velocidades maximas ofrece cada
   una de ellas,'' Disponible en:
@@ -270,5 +268,17 @@ ADNPolítico, ``¡no aceleres! estos son los nuevos límites de velocidad 2022
   en méxico,'' Disponible en:
   \url{https://politica.expansion.mx/mexico/2022/05/19/estos-son-nuevos-limites-velocidad-2022},
   accedido el 22 de diciembre de 2022.
+
+\bibitem{Referencian17}
+M.~M. M.~N. C.~Brunner, A.~Garavaglia and J.~V. Bautista, ``Inter-system
+  handover parameter optimization,'' Disponible en:
+  \url{https://www.researchgate.net/publication/224761739_Inter-System_Handover_Parameter_Optimization},
+  accedido el 22 de diciembre de 2022.
+
+\bibitem{AWS}
+\BIBentryALTinterwordspacing
+Amazon. Amazon amplify. Accedido el 25 de diciembre de 2022. [Online].
+  Available: \url{https://aws.amazon.com/es/amplify/}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

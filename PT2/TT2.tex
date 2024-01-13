@@ -12,6 +12,7 @@
 \usepackage{float}
 \usepackage{tabularx}
 \usepackage{multicol}
+\usepackage{verbatim}
 
 \marginsize{2cm}{2cm}{1cm}{1cm}
 \usepackage{fancyhdr}
@@ -67,14 +68,13 @@
 El sistema propuesto para la detección de somnolencia en conductores utiliza técnicas de visión artificial para analizar en tiempo real la posición del rostro, los ojos y la boca a través de un flujo de video. Se clasifican los estados de los ojos y la boca para identificar síntomas de somnolencia mediante puntos de referencia faciales. La medición de la relación de apertura en los ojos y la boca se realiza mediante el seguimiento de parpadeos y bostezos. En caso de detectar somnolencia, el sistema activa una alarma y genera un reporte de incidencia enviado a una base de datos. Se emplea una Jetson Nano para la portabilidad del sistema. A su vez, se ha desarrollado una aplicación web que ofrece el monitoreo en tiempo real de la ubicación del conductor, además de proporcionar un sistema de administración que permite a los usuarios acceder y visualizar la información de los reportes de incidencia, así como detalles específicos de cada conductor.
 \\
 
-\emph{\textbf{Palabras Clave:}} Somnolencia, Visión artificial, Geolocalización, Alerta, Aplicación web, Sistema de administración.
+\emph{\textbf{Palabras Clave:}} Somnolencia, Visión Artificial, Geolocalización, Alerta, Aplicación web, Sistema de Administración.
 
 \section{Abstract}
 The proposed system for detecting drowsiness in drivers uses artificial vision techniques to analyze in real-time the position of the face, eyes, and mouth through a video stream. The states of the eyes and mouth are classified to identify drowsiness symptoms using facial reference points. The measurement of the opening ratio in the eyes and mouth is carried out through tracking blinks and yawns. If drowsiness is detected, the system activates an alarm and generates an incident report sent to a database. A Jetson Nano is used for system portability. Additionally, a web application has been developed that provides real-time monitoring of the driver's location, along with offering an administration system that allows users to access and visualize information from incident reports, as well as specific details for each driver.\\
 
 
 \emph{\textbf{Keywords:} Drowsiness, Artificial Vision, Geolocation, Alert, Web Application, Management System.} 
-
 
 \newpage
 \section{Capítulo I: Introducción}
@@ -227,13 +227,26 @@ Ofreciendo así un sistema portátil de monitoreo, detección de somnolencia y aler
 
 \subsection{Metodología}
 
-\textbf{Scrum}
+\textbf{Espiral} 
 
-La metodología ágil permite adaptar la forma de trabajo a las condiciones del proyecto, consiguiendo flexibilidad e inmediatez en la respuesta para amoldar el proyecto y su desarrollo a las circunstancias específicas del entorno.
-\\\\
-La metodología ágil utilizada en el presente proyecto es \emph{Scrum}, la cual se caracteriza por ser la «metodología del caos» que se basa en una estructura de desarrollo incremental; esto es, cualquier ciclo de desarrollo del producto y/o servicio se desgrana en «pequeños proyectos» divididos en distintas etapas: análisis, desarrollo y testing. En la etapa de desarrollo encontramos lo que se conoce como interacciones del proceso o Sprint, es decir, entregas regulares y parciales del producto final. Esta metodología permite abordar proyectos complejos que exigen una flexibilidad y una rapidez esencial a la hora de ejecutar los resultados. La estrategia irá orientada a gestionar y normalizar los errores que se puedan producir en desarrollos demasiado largos, a través de reuniones frecuentes para asegurar el cumplimiento de los objetivos establecidos \cite{Scrum}.
+El artículo de Barry Boehm \cite{Metodologia}, publicado en 1986, introduce la Metodología Espiral como un enfoque para el desarrollo de software que combina elementos de modelos de desarrollo en cascada y prototipos. La metodología espiral se destaca por su enfoque flexible y adaptativo, permitiendo ajustes a lo largo del ciclo de desarrollo.
 \\
-El sistema se dividió en módulos que se trabajaron en diferentes etapas: análisis, desarrollo y finalmente pruebas. Las actividades para cada módulo se distribuyeron en periodos de entrega de tal manera que se pudiera trabajar en todos los módulos y avanzar en cada uno de ellos.
+La Metodología Espiral se basa en la premisa de que el desarrollo de software es un proceso iterativo y evolutivo. Se propone un modelo en espiral dividido en cuatro cuadrantes: determinación de objetivos, evaluación de riesgos, desarrollo y planificación. Cada iteración aborda estos cuadrantes de manera secuencial. 
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/spiral-model.png}
+\captionof{figure}{Modelo en espiral \cite{Espiral}.}
+ \label{fig:JetsonNano} 
+\end{center} 
+
+\begin{itemize}
+\item En la fase de \textbf{determinación de objetivos}, se establecen metas específicas para la iteración.
+\item La \textbf{evaluación de riesgos} implica identificar y gestionar proactivamente los riesgos asociados con los objetivos establecidos.
+\item   La fase de \textbf{desarrollo} implica la implementación de funcionalidades, utilizando enfoques como prototipos y desarrollo incremental.
+\item  La \textbf{planificación} implica revisar el progreso, ajustar planes según sea necesario y prepararse para la próxima iteración.
+\end{itemize}
+  
+El sistema se dividió en módulos, lo que permitió analizarlo por partes. Para cada módulo, se determinaron los objetivos o requisitos que debía cumplir, así como la delimitación, la implementación y la evaluación de los resultados obtenidos.
 
 \subsection{Objetivos}
 
@@ -296,123 +309,123 @@ La visión artificial es un campo de la IA que permite que las computadoras y los
 
 La visión artificial es una tecnología que utilizan las máquinas para reconocer automáticamente las imágenes y describirlas de manera precisa y eficiente.Las aplicaciones de visión artificial utilizan inteligencia artificial y el machine learning (IA/ML) para procesar estos datos con precisión para la identificación de objetos y el reconocimiento facial, así como para la clasificación, la recomendación, el monitoreo y la detección \cite{IAaws}
 
-\subsubsection{Red Neuronal}
+%\subsubsection{Red Neuronal}
 
-Una red neuronal es un sistema que pretende emular ciertas características propias de los seres humanos, tales como la capacidad de memorizar o y asociar hechos o características. Este sistema está se basa en el concepto de \emph{neurona}.
+%Una red neuronal es un sistema que pretende emular ciertas características propias de los seres humanos, tales como la capacidad de memorizar o y asociar hechos o características. Este sistema está se basa en el concepto de \emph{neurona}.
 
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/neurona}
-\captionof{figure}{Módelo estándar de una neurona artificial}
- \label{fig:neurona}
-\end{center}
+%\begin{center}
+%  \includegraphics[scale=0.5]{imagenes/neurona}
+%\captionof{figure}{Módelo estándar de una neurona artificial}
+% \label{fig:neurona}
+%\end{center}
 
-Un módelo simplificado de una neurona artificial consta de dos etapas.
-En la primera etapa, las entradas provenientes de otras neuronas son combinadas tomando en cuenta los pesos de las sinapsis. Como resultado de esta etapa surge la entrada neta o \emph{excitación} de la neurona. En la segunda etapa, la entrada neta se utiliza para determinar el valor de salida de la neurona, que posteriormente será propagada a otras neuronas.
+%Un módelo simplificado de una neurona artificial consta de dos etapas.
+%En la primera etapa, las entradas provenientes de otras neuronas son combinadas tomando en cuenta los pesos de las sinapsis. Como resultado de esta etapa surge la entrada neta o \emph{excitación} de la neurona. En la segunda etapa, la entrada neta se utiliza para determinar el valor de salida de la neurona, que posteriormente será propagada a otras neuronas.
 
-En la etapa de integración de las entradas, una neurona combina las distintas entradas $ x_i$ con sus pesos para así determinar su entrada neta $z_j$: 
+%En la etapa de integración de las entradas, una neurona combina las distintas entradas $ x_i$ con sus pesos para así determinar su entrada neta $z_j$: 
 
-\begin{equation}
-zj = \sum_{i}w_{ij}x_i
-\end{equation}
+%\begin{equation}
+%zj = \sum_{i}w_{ij}x_i
+%\end{equation}
 
-Dónde $w_{ij}$ representan los pesos sinápticos asociadas desde la \emph{i}-ésima neurona hasta la \emph{j}-ésima. Estos pesos tendrán valores real. Positivos para modelar conexiones excitatorias y negativos para conexiones inhibitorias.
+%Dónde $w_{ij}$ representan los pesos sinápticos asociadas desde la \emph{i}-ésima neurona hasta la \emph{j}-ésima. Estos pesos tendrán valores real. Positivos para modelar conexiones excitatorias y negativos para conexiones inhibitorias.
 
-Por otra parte, en la etapa de activación de una neurona, esta utiliza el valor asociado a su entrada neta para generar una salida $y_j$:
+%Por otra parte, en la etapa de activación de una neurona, esta utiliza el valor asociado a su entrada neta para generar una salida $y_j$:
 
-\begin{equation}
-y_j(t)= F(y_j(t-1), z_j(t)) = F(y_j(t-1),net_j(t))
-\end{equation}
+%\begin{equation}
+%y_j(t)= F(y_j(t-1), z_j(t)) = F(y_j(t-1),net_j(t))
+%\end{equation}
 
-\subsubsection{Redes Neuronales Convolucionales}
+%\subsubsection{Redes Neuronales Convolucionales}
 
-Las redes neuronales convolucionales, tambien conocidas como \emph{redes convolutivas}, son redes neuronales artificiales que se utilizan comunmente para resolver problemas que requieren el procesamiento de imágenes. Sus casos de uso más frecuentes van desde la detección de objetos, hasta generar una descripción textual del contenido de una imagen. Particularmente, sus entradas y salidas pueden ser estructuradas. Esto quiere decir, que en lugar de recibir un vector de entradas, se puede recibir un vector (1D), matriz (2D) o tensor($>2D$). En el caso de señales bidimensionales, las entradas pueden pertenecer a los pixeles de una imágen capturada por una cámara \cite{Referencia0}.
+%Las redes neuronales convolucionales, tambien conocidas como \emph{redes convolutivas}, son redes neuronales artificiales que se utilizan comunmente para resolver problemas que requieren el procesamiento de imágenes. Sus casos de uso más frecuentes van desde la detección de objetos, hasta generar una descripción textual del contenido de una imagen. Particularmente, sus entradas y salidas pueden ser estructuradas. Esto quiere decir, que en lugar de recibir un vector de entradas, se puede recibir un vector (1D), matriz (2D) o tensor($>2D$). En el caso de señales bidimensionales, las entradas pueden pertenecer a los pixeles de una imágen capturada por una cámara \cite{Referencia0}.
 
-Como su nombre lo indica, esta red neuronal utiliza la operación de convolución. La convolución es una operación matemática que se realiza sobre dos funciones para producir una tercera que se suele interpretar versión modificada (filtrada) de las funciones originales \cite{Referencia0}.
-\\
+%Como su nombre lo indica, esta red neuronal utiliza la operación de convolución. La convolución es una operación matemática que se realiza sobre dos funciones para producir una tercera que se suele interpretar versión modificada (filtrada) de las funciones originales \cite{Referencia0}.
+%\\
 
-La convolución entre las funciones \emph{f} y {g} se representa de la siguiente manera:
-\begin{equation}
-(f\star g)(t) = \int_{-\infty}^{\infty} f(\tau )g(t-\tau )d\tau = \int_{-\infty}^{\infty} f(t-\tau)g(\tau)d\tau
-\end{equation}
-
-
-En el caso particular de procesamiento digital de imágenes, las variables $[n_1,n_2]$ corresponden a cordenadas $[x,y]$ de los píxeles de una imagen. Además, el signo menos que aparece en la Ecuación 8, se suele sustituir por un signo más, por lo cual la definición de convolución se expresaría como:
-
-\begin{equation}
-(x\star h)[x,y] = \sum_{k_1=0}^{K_1-1}\sum_{k_2=0}^{K_2-1} h[k_1,k_2] x[x+k_1,y +k_2]
-\end{equation}
+%La convolución entre las funciones \emph{f} y {g} se representa de la siguiente manera:
+%\begin{equation}
+%(f\star g)(t) = \int_{-\infty}^{\infty} f(\tau )g(t-\tau )d\tau = \int_{-\infty}^{\infty} f(t-\tau)g(\tau)d\tau
+%\end{equation}
 
 
-\emph{Capas convolutivas}\\
-El componente clave de las redes neuronales convolucionales son las capas, que sustituyen la tradicional multiplicación de pesos por entradas. La entrada de una capa convolutiva es una señal,en el caso de imágenes, una señal bidimensional. Dicha señal es procesada realizando una convolución con una máscara o \emph{kernel}. Los pesos correspondientes al \emph{kernel} serán los parámetros de la capa convolutiva que será entrenada.
-A continuación se presenta la representación más simple de las capas de una red neuronal convolucional.
+%En el caso particular de procesamiento digital de imágenes, las variables $[n_1,n_2]$ corresponden a %cordenadas $[x,y]$ de los píxeles de una imagen. Además, el signo menos que aparece en la Ecuación 8, %se suele sustituir por un signo más, por lo cual la definición de convolución se expresaría como:
 
-\begin{center}
-  \includegraphics[scale=0.45]{imagenes/cnn2} 
-\captionof{figure}{Arquitectura general de una Red Neuronal Convolucional \cite{CNNpresentacion}.}
- \label{fig:boost}
-\end{center}
+%\begin{equation}
+%(x\star h)[x,y] = \sum_{k_1=0}^{K_1-1}\sum_{k_2=0}^{K_2-1} h[k_1,k_2] x[x+k_1,y +k_2]
+%\end{equation}
 
-\begin{itemize}
-	\item Capa Convolucional
+
+%\emph{Capas convolutivas}\\
+%El componente clave de las redes neuronales convolucionales son las capas, que sustituyen la tradicional multiplicación de pesos por entradas. La entrada de una capa convolutiva es una señal,en el caso de imágenes, una señal bidimensional. Dicha señal es procesada realizando una convolución con una máscara o \emph{kernel}. Los pesos correspondientes al \emph{kernel} serán los parámetros de la capa convolutiva que será entrenada.
+%A continuación se presenta la representación más simple de las capas de una red neuronal convolucional.
+
+%\begin{center}
+%  \includegraphics[scale=0.45]{imagenes/cnn2} 
+%\captionof{figure}{Arquitectura general de una Red Neuronal Convolucional \cite{CNNpresentacion}.}
+% \label{fig:boost}
+%\end{center}
+
+%\begin{itemize}
+%	\item Capa Convolucional
 	
-Esta capa se utiliza para extraer las diversas características de las imágenes de entrada. En esta capa se realiza la convolución entre la imagen de entrada y un \emph{kernel} de un tamaño particular $MxM$.
+%Esta capa se utiliza para extraer las diversas características de las imágenes de entrada. En esta capa se realiza la convolución entre la imagen de entrada y un \emph{kernel} de un tamaño particular $MxM$.
 
-La salida se denomina mapa de características, que nos brinda información sobre la imagen, como las esquinas y los bordes. Posteiormente, este mapa de características se alimenta a otras capas para aprender otras características de la imagen de entrada.
+%La salida se denomina mapa de características, que nos brinda información sobre la imagen, como las esquinas y los bordes. Posteiormente, este mapa de características se alimenta a otras capas para aprender otras características de la imagen de entrada.
 
-La capa de convolución en CNN entrega el resultado a la siguiente capa una vez que se aplica la  en la entrada.
+%La capa de convolución en CNN entrega el resultado a la siguiente capa una vez que se aplica la  en la entrada.
 
-\item Capa de \emph{Pooling}
+%\item Capa de \emph{Pooling}
 
-El objetivo principal de esta capa es disminuir el tamaño del mapa de características convolucionado para reducir los costos computacionales. Esto se realiza disminuyendo las conexiones entre capas y opera de forma independiente en cada mapa de características. Según el método utilizado, existen varios tipos de operaciones de agrupación. Básicamente resume las características generadas por una capa de convolución. El tipo de pooling más utilizado es el \emph{max-pooling}. Este devuelve el valor máximo del fragmento de la imágen filtrada por el kernel.
+%El objetivo principal de esta capa es disminuir el tamaño del mapa de características convolucionado para reducir los costos computacionales. Esto se realiza disminuyendo las conexiones entre capas y opera de forma independiente en cada mapa de características. Según el método utilizado, existen varios tipos de operaciones de agrupación. Básicamente resume las características generadas por una capa de convolución. El tipo de pooling más utilizado es el \emph{max-pooling}. Este devuelve el valor máximo del fragmento de la imágen filtrada por el kernel.
 
-\begin{center}
-  \includegraphics[scale=1]{imagenes/maxpool} 
-\captionof{figure}{Ejemplo de Max Pooling}
- \label{fig:boost}
-\end{center}
+%\begin{center}
+%  \includegraphics[scale=1]{imagenes/maxpool} 
+%\captionof{figure}{Ejemplo de Max Pooling}
+% \label{fig:boost}
+%\end{center}
 
-\item \emph{Fully Connected Layer}
+%\item \emph{Fully Connected Layer}
 
-La capa totalmente conectada  consta de los pesos y sesgos junto con las neuronas y se utiliza para conectar las neuronas entre dos capas diferentes.La imagen de entrada de las capas anteriores se aplana y se alimenta esta capa. Luego, el vector aplanado pasa por unas pocas capas  más donde normalmente tienen lugar las operaciones de las funciones matemáticas. En esta etapa comienza el proceso de clasificación.
+%La capa totalmente conectada  consta de los pesos y sesgos junto con las neuronas y se utiliza para conectar las neuronas entre dos capas diferentes.La imagen de entrada de las capas anteriores se aplana y se alimenta esta capa. Luego, el vector aplanado pasa por unas pocas capas  más donde normalmente tienen lugar las operaciones de las funciones matemáticas. En esta etapa comienza el proceso de clasificación.
 
-\item \emph{Output Layer}
+%\item \emph{Output Layer}
 
-Esta capa se encarga de mejorar el rendimiento de un modelo de aprendizaje automático, ya que evita el sobreajuste al simplificar la red. Descarta neuronas no escenciales de la red neuronal durante el entrenamiento.
+%Esta capa se encarga de mejorar el rendimiento de un modelo de aprendizaje automático, ya que evita el sobreajuste al simplificar la red. Descarta neuronas no escenciales de la red neuronal durante el entrenamiento.
 
-\item \emph{Funciones de activación}
+%\item \emph{Funciones de activación}
 
-Son funciones matemáticas que determinan la salida de una capa de la red neuronal, y se utilizan en capas convolucionales así cómo en las capas completamente conectadas. Estas funciones se utilizan para asignar los valores de las salidas de cada capa entre valores definidos, para así facilitar que el modelo se adapte a una gran variedad de datos. 
+%Son funciones matemáticas que determinan la salida de una capa de la red neuronal, y se utilizan en capas convolucionales así cómo en las capas completamente conectadas. Estas funciones se utilizan para asignar los valores de las salidas de cada capa entre valores definidos, para así facilitar que el modelo se adapte a una gran variedad de datos. 
 
-\item \emph{Flattening}
+%\item \emph{Flattening}
 
-Flattening consiste en convertir los datos de salida de la capa convolucional a una matriz unidimensional para ser llevada a la capa siguiente.
-
-
-\end{itemize}
-\subsubsection{Cascadas Haar}
-Existen técnicas de visión artificial que permiten el reconocimiento de objetos en una imágen o cuadros en un video. Entre los que más destacan, se encuentran las Cascadas Haar. Esta técnica fue presentada por primera vez por Viola y Jones. Las Cascadas Haar implica entrenar una serie de clasificadores simples  y luego combinar su salida \cite{viola}.\\
-
-Posteiormente estas salidas de transforman en un \emph{clasificador h(x)} como una suma de valores de \emph{aprendices débiles}:
+%Flattening consiste en convertir los datos de salida de la capa convolucional a una matriz unidimensional para ser llevada a la capa siguiente.
 
 
+%\end{itemize}
+%\subsubsection{Cascadas Haar}
+%Existen técnicas de visión artificial que permiten el reconocimiento de objetos en una imágen o cuadros en un video. Entre los que más destacan, se encuentran las Cascadas Haar. Esta técnica fue presentada por primera vez por Viola y Jones. Las Cascadas Haar implica entrenar una serie de clasificadores simples  y luego combinar su salida \cite{viola}.\\
 
-\begin{equation}
-h(x) = sgn \left [  \sum_{j=0}^{m-1} \alpha_{j}h_j(\bold{x}) \right ]
-\end{equation}
+%Posteiormente estas salidas de transforman en un \emph{clasificador h(x)} como una suma de valores de \emph{aprendices débiles}:
 
 
-los aprendices débiles $h_j(\bold{x})$ son funciones extremadamente simples de la entrada.
-En la mayoría de las variantes de Cascadas Haar, los aprendices débiles son funciones umbrales,
-que también son conocidos como \emph{desicion stumps} consideradas como la forma más simple de un árbol de decisiones.
 
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/clasificadores}
-\captionof{figure}{Boosting}
- \label{fig:boost}
-\end{center}
+%\begin{equation}
+%h(x) = sgn \left [  \sum_{j=0}^{m-1} \alpha_{j}h_j(\bold{x}) \right ]
+%\end{equation}
 
-Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles \cite{viola}.
+
+%los aprendices débiles $h_j(\bold{x})$ son funciones extremadamente simples de la entrada.
+%En la mayoría de las variantes de Cascadas Haar, los aprendices débiles son funciones umbrales,
+%que también son conocidos como \emph{desicion stumps} consideradas como la forma más simple de un árbol de decisiones.
+
+%\begin{center}
+%  \includegraphics[scale=0.5]{imagenes/clasificadores}
+%\captionof{figure}{Boosting}
+% \label{fig:boost}
+%\end{center}
+
+%Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles \cite{viola}.
 
 
 \subsubsection{\emph{Content Delivery Network}}
@@ -617,7 +630,7 @@ Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de
 \newpage
 \section{Capítulo III: Análisis}
 
-Partiendo de la propuesta de solución y la metodología \emph{Srum}, que nos permite dividir un sistemaa para un análisis por partes, el sistema se dividirá en tres principales módulos: el Módulo de Comunicaciones, el Módulo Central de Procesamiento y el Módulo de la Estación Base, figura \ref{fig:modulos1}. 
+Partiendo de la propuesta de solución, se dividió el sistema en tres módulos principales: el Módulo de Comunicaciones, el Módulo Central de Procesamiento y el Módulo de la Estación Base, figura \ref{fig:modulos1}. 
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/topdowngeneral}
@@ -642,8 +655,8 @@ o no signos de somnolencia:
 \item estado de la boca (cerrada o abierta).
 \end{itemize}  
   
-Si el conductor presenta un estado de ojos cerrados por más de 5 segundos, se considerará como
-un estado de somnolencia, por lo que se activará una alarma para alertar al conductor.Así mismo se evaluará el grado de apertura de la boca para determinar si el conductor bosteza y el promedio de bostezos por minuto, si el conductor presenta más de un bostezo dentro de un minuto el sistema lo clasificará como somnolencia. A su vez el sistema tomará un breve videoclip dónde se aprecie el momento en que el conductor presentó un estado de somnolencia. \\
+Si el conductor presenta un estado de ojos cerrados por un tiempo prolongado, se considerará como
+un estado de somnolencia, por lo que se activará una alarma para alertar al conductor. Así mismo se evaluará el grado de apertura de la boca para determinar si el conductor bosteza y el promedio de bostezos por minuto, si el conductor presenta más de un bostezo dentro de un minuto el sistema lo clasificará como somnolencia. A su vez el sistema tomará un breve videoclip dónde se aprecie el momento en que el conductor presentó un estado de somnolencia. \\
 
 \textbf{Módulo de Comunicaciones}\\
 
@@ -813,10 +826,10 @@ Como ya se mencionó en la sección \ref{solucion}, se hará uso de un microordenad
 \begin{tabular}{{|m{0.12\linewidth}|m{0.2\linewidth}|m{0.15\linewidth}|m{0.15\linewidth}|m{0.15\linewidth}|m{0.08\linewidth}|}}
 \hline
 \textbf{Nombre}& \textbf{CPU} & \textbf{RAM}  & \textbf{GPU} & \textbf{Alimentación}                                                 & \textbf{Precio} \\ \hline
-Google Coral Dev Board & NXPiMX 8M SoC Dual Core 1.2 GHz & 2GB DDR3                                                &  Hexa Core A-72 2GHz & 5V DC & \$4289 \\ \hline
-Rasperry Pi 4B & 1.5 GHZ 64 bit QuadCore Cortex A-72 & 1GB, 2GB, 4GB, 8GB DDR4 & No cuenta con GPU & 5V vía USB-C o puerto GPIO& \$3956\\ \hline
-Asus TinkerBoard 2S & Mali-G52 MP6  con 6 núcleos & 2GB/4GB dual- channel LPDDR4 & Integrated GC7000 Lite Graphics  & 12V-19V   & \$7169  \\ \hline
-NVIDIA Jetson Nano & ARM A57 2.1 GHz de cuatro núcleos & 4 GB de LPDDR4 de 64 bits & NVIDIA Maxwell de 128 núcleos CUDA & 5V/4A & \$3,799 \\ \hline
+Google Coral Dev Board & NXPiMX 8M SoC Dual Core 1.2 GHz & 2GB DDR3                                                &  Hexa Core A-72 2GHz & 5V DC & \$9439 \\ \hline
+Rasperry Pi 4B & 1.5 GHZ 64 bit QuadCore Cortex A-72 & 1GB, 2GB, 4GB, 8GB DDR4 & No cuenta con GPU & 5V vía USB-C o puerto GPIO& \$1700\\ \hline
+Asus TinkerBoard 2S & Mali-G52 MP6  con 6 núcleos & 2GB/4GB dual- channel LPDDR4 & Integrated GC7000 Lite Graphics  & 12V-19V   & \$4100  \\ \hline
+NVIDIA Jetson Nano & ARM A57 2.1 GHz de cuatro núcleos & 4 GB de LPDDR4 de 64 bits & NVIDIA Maxwell de 128 núcleos CUDA & 5V/4A & \$3,699 \\ \hline
 \end{tabular}
 \end{table}
 
@@ -829,7 +842,7 @@ Los parámetros que se tomaron en cuenta para la elección de que microordenador u
 \item Módulos compatibles
 \end{itemize}
 
-Si bien la Raspberry Pi es uno de los microordenadores con mayor aceptación por parte de la comunidad, esta no cuenta con una GPU, lo cual reduce significativamente su rendimiento en tareas relacionadas con IA que requieren mayor procesamiento. Por lo tanto, al buscar alternativas de microordenadores que cuenten con una GPU y basándose en el estudio \cite{EstadodelAarte8}, se concluyó que la Nvidia Jetson Nano ofrece una ventaja superior en comparación con la Raspberry Pi en cuanto a procesamiento y eficacia en tareas que involucran visión artificial. A pesar de que Asus y Google Coral Dev Board cuentan con una GPU, su potencia no supera a la ofrecida por Jetson Nano \cite{deepedgebench} y su precio es considerablemente mayor, como se puede apreciar en la tabla \ref{tab:microordenador}, por lo cual se descartaron como opciones viables.
+Si bien la Raspberry Pi es uno de los microordenadores con mayor aceptación por parte de la comunidad, esta no cuenta con una GPU, lo cual reduce significativamente su rendimiento en tareas relacionadas con IA que requieren mayor procesamiento. Por lo tanto, al buscar alternativas de microordenadores que cuenten con una GPU y basándose en el estudio \cite{EstadodelAarte8}, se concluyó que la Nvidia Jetson Nano ofrece una ventaja superior en comparación con la Raspberry Pi en cuanto a procesamiento y eficacia en tareas que involucran visión artificial. A pesar de que Asus y Google Coral Dev Board cuentan con una GPU, su potencia no supera a la ofrecida por Jetson Nano \cite{deepedgebench} y su precio es considerablemente mayor, como se puede apreciar en la tabla \ref{tab:microordenador}, por lo cual se descartaron como opciones.
 Debido a lo anterior, se concluyó que la Jetson Nano representa la mejor opción para el desarrollo del presente proyecto debido a su bajo costo, bajo consumo de energía y mejor rendimiento en comparación con sus alternativas.
 
 
@@ -871,13 +884,13 @@ Para utilizar una NVIDIA Jetson Nano, se requiere una tarjeta SD que contenga el
 Micro SD  & Almacenamiento  & Speed class  & Video class  & Velocidad de escritura  & Velocidad de Lectura  & Precio \\ \hline
 SanDisk Extreme A2 & 32-256 (MAX 1T)GB  & Clase 30/U3  & V30 & 90 MB/s  & 160 MB/s  & \$1041  \\ \hline
 Kingston ENDURANCE  & 32-256 (MAX 1T)GB  & Clase 10/U1   & - & 45 MB/s  & 95 MB/s  & \$628  \\ \hline
-Samsung EVO Plus  & 256 GB  & Clase 10/U3   & V30  & 130 MB/s  & 160 MB/s  & 160 MB/s \$ (592) \\ \hline
+Samsung EVO Plus  & 256 GB  & Clase 10/U3   & V30  & 130 MB/s  & 160 MB/s  &  \$592 \\ \hline
 Kingston Canvas React Plus V90 Card  & 64-256 GB  & Clase 10/U3  & V90  & 90 MB/s  & 180 MB/s  & \$3596 \\ \hline
 
 \end{tabular}
 \end{table}
-
-Tomando en cuenta la capacidad mínima de almacenamiento y el costo de la misma se decidió usar una unidad de almacenamiento \emph{Samsung Evo Plus} de 256 GB para la instalación del sistema operativo para la Jetson Nano.   
+  
+Tomando en cuenta la capacidad mínima de almacenamiento y el costo de la misma, se decidió usar una unidad de almacenamiento Samsung Evo Plus de 256 GB para la instalación del sistema operativo en la Jetson Nano. Esta elección se fundamenta en las destacadas características de la tarjeta, como su excelente velocidad de escritura, competitiva velocidad de lectura, clasificación de velocidad adecuada y una buena relación entre capacidad y precio.
 
 \clearpage
 \subsubsection{Análisis y elección de lenguajes de programación para el microordenador}
@@ -930,19 +943,17 @@ Java        & Moderada             & Moderada              & Baja               
 \end{table}
 
 
-Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje permite desarrollar ambos ámbitos de una manera integral\cite{python}.Por lo cual será utilizado a lo largo del proyecto.
+Debido a que en el presente proyecto se realizará la integración de sistemas enfocados a Machine Learning y a su vez a la programación orientada a objetos, Python representa la mejor opción para ser implementado, ya que este lenguaje permite desarrollar ambos ámbitos de una manera integral \cite{python}. Por lo cual será utilizado a lo largo del proyecto.
 
 
 \clearpage
-
-
 
 \subsubsection{Análisis del Submódulo Visión Artificial}
 
 
 \textbf{Submódulo de Visión Artificial:}\\
 
-El submódulo de visión artificial tiene como objetivo realizar la detección de somnolencia del conductor, analizando el rostro con distintas técnicas y algoritmos de visión artificial. 
+El submódulo de visión artificial tiene como objetivo realizar la detección de somnolencia del conductor, analizando el rostro con algoritmos de visión artificial. 
 
 \begin{itemize}
 
@@ -1021,7 +1032,7 @@ Con el uso de una cámara digital, se capturará video en tiempo real.
  
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El sistema obtendrá la imagen del rostro y en base a esta se obtendrán las imágenes de la boca y ojos del conductor detectados por dicho método.  
+El sistema obtendrá la posición del rostro y, en base a esta, las posiciones de la boca y los ojos del conductor detectados.
 \end{tabular}}                                                    \\ \hline
 \end{tabular}
 
@@ -1271,7 +1282,7 @@ Es una librería de Python especializada en el cálculo numérico y el análisis de 
 
 %\item \textbf{Tensorflow}
 
-Es una plataforma de código abierto para el aprendizaje automático y el procesamiento de datos. Permite  definir, optimizar y ejecutar operaciones matemáticas, especialmente aquellas que involucran tensores, que son arrays multidimensionales de datos.Una de las principales ventajas de esta herramienta es su capacidad para ejecutarse en diferentes plataformas, desde dispositivos móviles hasta servidores de alta capacidad y sistemas en la nube.
+%Es una plataforma de código abierto para el aprendizaje automático y el procesamiento de datos. Permite  definir, optimizar y ejecutar operaciones matemáticas, especialmente aquellas que involucran tensores, que son arrays multidimensionales de datos.Una de las principales ventajas de esta herramienta es su capacidad para ejecutarse en diferentes plataformas, desde dispositivos móviles hasta servidores de alta capacidad y sistemas en la nube.
 
 %\item \textbf{Keras}
 
@@ -1436,8 +1447,8 @@ Debido a los requerimientos el sistema, Face Recognition Library, utiliza el det
 
 \subsection{Análisis del Módulo de Comunicaciones}
 Los sistemas automatizados de comunicación, mayormente inalámbricos, se encargan de recopilar datos remotos y transmitir la información.
-La tecnología previamente elegida para la implementación de este módulo es la red 4G/LTE, su estándar es establecido por el 3GPP (Proyecto de asociación de tercera generación) donde establece sus especificaciones en la versión 8 de sus estándares, el cual clasifica hasta 13 categorías LTE\cite{categorias}. En estas categorías se especifica la velocidad máxima de carga y descarga, siendo la categoría 0 la velocidad más baja.
-En la Tabla \ref{tab:CLTE} se observan las categorías LTE que existen junto con su velocidad máxima de bajada y subida,de la categoría 0 a la 5 se definen para equipos de usuarios, es decir, telefonía celular. 
+La tecnología elegida para la implementación de este módulo es la red 4G/LTE, su estándar es establecido por el 3GPP (Proyecto de asociación de tercera generación) donde establece sus especificaciones en la versión 8 de sus estándares, el cual clasifica hasta 13 categorías LTE \cite{categorias}. En estas categorías se especifica la velocidad máxima de carga y descarga, siendo la categoría 0 la velocidad más baja.
+En la Tabla \ref{tab:CLTE} se observan las categorías LTE que existen junto con su velocidad máxima de bajada y subida, de la categoría 0 a la 5 se definen para equipos de usuarios, es decir, telefonía celular. 
 
 \begin{table}[H]
 	\begin{center}
@@ -1470,15 +1481,15 @@ Para este sistema, el análisis debe cumplir con los parámetros que dicta el teor
 
 Este análisis se divide en:
 \begin{itemize}
-\item Telemetría:\\ El módulo de telemetría es el encargado de recopilar, procesar y transmitir las coordenadas de la ubicación geográfica del conductor a la estación base que se encarga de monitorear los datos obtenidos.
+\item \emph{Telemetría:}\\ El módulo de telemetría es el encargado de recopilar, procesar y transmitir las coordenadas de la ubicación geográfica del conductor a la estación base que se encarga de monitorear los datos obtenidos.
 
-\item Datos:\\ El encargado de recopilar, procesar y transmitir los fotogramas que el sistema identifica como somnolencia en el conductor, así como un mensaje informativo.
+\item \emph{Datos:}\\ El encargado de recopilar, procesar y transmitir los fotogramas que el sistema identifica como somnolencia en el conductor, así como un mensaje informativo.
 
-\item Cobertura:\\ Encargado de revisar la cobertura de la zona o regiones presentes en el alcance del sistema.
+\item \emph{Cobertura:}\\ Encargado de revisar la cobertura de la zona o regiones presentes en el alcance del sistema.
 \end{itemize}
 
 \subsubsection{Análisis del Submódulo de Telemetría }
-El objetivo que tiene el módulo de telemetría es mandar el posicionamiento mediante coordenadas (latitud y longitud) del vehículo en movimiento en tiempo real. Las coordenadas serán mandadas en forma de cadena de texto, teniendo un aproximado de hasta 300 bits, otro punto a considerar es el periodo de tiempo entre el envío de cada posición, al tratarse de un vehículo en movimiento y la velocidad máxima siendo regida por Semovi (Secretaría de movilidad de la ciudad de México) que dicta una velocidad promedio de entre 50-80 km/h\cite{Referencian15}.
+El objetivo que tiene el módulo de telemetría es mandar el posicionamiento mediante coordenadas (latitud y longitud) del vehículo en movimiento en tiempo real. Las coordenadas serán mandadas en forma de cadena de texto, teniendo un aproximado de hasta 300 bits, otro punto a considerar es el periodo de tiempo entre el envío de cada posición, al tratarse de un vehículo en movimiento y la velocidad máxima siendo regida por Semovi (Secretaría de movilidad de la ciudad de México) que dicta una velocidad promedio de entre 50-80 km/h \cite{Referencian15}.
 
 Se propone una velocidad de 60 km/h:
 
@@ -1499,170 +1510,43 @@ Cumpliéndose la relación establecida de $R<C$.
 3kbps<5 Mbps
 \end{equation*}
 
-\subsubsection{Análisis y Elección de Protocolos de comunicación inalámbrica  }
-Debido a que el presente proyecto tiene como parte fundamental la portabilidad y la transferencia de contenido multimedia, y habiendo definido que para su desarollo se utilizará un microordenador, se requiere una interfaz de comunicación inálmbrica con amplia cobertura. A continuación se muestra una comparación de los estándares de comunicación inalámbrica más utilizados enfocados a sistemas portátiles.
-
-\begin{table}[h]
-\caption{\label{tab:redes} Comparación entre Redes Inalámbricas}
-\begin{tabular}{|l|l|l|l|l|l|l|}
-\hline
-        & Espectro                                                                 & \begin{tabular}[c]{@{}l@{}}Ancho de\\ Banda\end{tabular} & Costo    & \emph{BitRate} & Escalabilidad & \begin{tabular}[c]{@{}l@{}}Inmunidad a \\ la Interferencia\end{tabular} \\ \hline
-LTE-M   & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 869 MHz\\ 915 MHz\end{tabular} & 100kHz                                                   & Moderado & 1Mbps   & Alta          & Moderada                                                                \\ \hline
-NB-IoT  & \begin{tabular}[c]{@{}l@{}}Sin licencia\\ 433 MHz\end{tabular}           & \textless{}500kHz                                        & Moderado & 200kbps & Alta          & Baja                                                                    \\ \hline
-SigFox  & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 200kHz                                                   & Bajo     & 100bps & Baja          & Baja                                                                    \\ \hline
-LoraWan & \begin{tabular}[c]{@{}l@{}}Con licencia\\ 700-900 MHz\end{tabular}       & 1.4MHz                                                   & Bajo     & 10kbps  & Moderada      & Muy Alta                                                                \\ \hline
-\end{tabular}
-
-\end{table}
-
-De la Tabla 1\ref{tab:redes} las interfaces de comunicación que mas destacan por su cobertura y su tasa de transferencia de datos son LTE-M y NB-IoT. A continuación se realiza una comparación entre estas interfaces para poder definir cual será utilizada a lo largo del proyecto.
-
-
-\textbf{LTE-M}
-
-Es una tecnología de área amplia de baja potencia que admite IoT a través de dispositivos poco complejos y proporciona una cobertura extendida, al tiempo que permite la reutilización de la base instalada de LTE\\
-
-Las redes LTE-M coexisten con las redes móviles 2G, 3G y 4G y se beneficiaan de todas las características de seguridad y privacidad de las redes móviles, como la confidencialidad de la identidad del usuario, la autenticación de la entidad, la privacidad, la integridad de los datos y la identificación del equipo móvil.
-
-A continuación se describen las ventajas principales de LTE-M
-
-\begin{itemize}
-\item \textbf{Ahorro de Energía}
-
-LTE-M permite que los dispositivos en los que operan utilicen un modo de ahorro de energía. Consumiendo energía sólo cuando los dispositivos requiren su uso.
-
-\item \textbf{Cobertura}
-
-
-Las redes LTE-M/Cat-M1/Cat-M2 pueden utilizar la infraestructura 4G LTE existente. Esta es una ventaja significativa, ya que más del 50 por ciento de las conexiones móviles globales se realizan en redes 4G. 
-
-Con una pérdida de acoplamiento máxima (MCL) de 156 decibelios (dB), 14 dB más alta que LTE, las redes LTE-M también ofrecen mayor cobertura y mejor penetración en interiores. La señal puede manejar muchas interferencias de edificios y otras estructuras que obstruyen su camino.
-
-\item \textbf{Velocidad de Transferencia}
-
-LTE-M cuenta con un estándar base de 1 megabit por segundo para transmisiones de enlace subida y descarga. Su uso es factible para aplicaciones con necesidades de  transmisión datos menores a los 50MBps e incluso casos de uso que involucran transmisión de contenido multimedia.
-
-
-En el contexto de IoT, el alto rendimiento de datos significa que los dispositivos que usan LTE-M pueden recibir fácilmente actualizaciones por aire (OTA), y las transmisiones de datos consumirán menos energía, porque el dispositivo puede volver al modo de ahorro de energía más rápido.
-
-
-\item \textbf{Costo}
-
-Las redes 4G se construyeron principalmente para teléfonos inteligentes. Las redes LTE-M se construyeron principalmente para dispositivos IoT. Como tal, los componentes necesarios para los dispositivos LTE-M son menos complejos y más asequibles que los componentes que necesitaría para un dispositivo 4G tradicional, aunque ambos utilizan la infraestructura 4G LTE.
-
-
-
-
-\end{itemize}
-
-\textbf{NB-IoT}
-
-Es un protocolo inalámbrico de Internet de las cosas (IoT) que también utiliza tecnología de red de área amplia de baja potencia (LPWAN). Fue desarrollado por 3GPP para comunicación inalámbrica celular que permite una amplia gama de nuevos dispositivos y servicios NB-IoT. NB-IoT es uno de los tres principales estándares 3GPP LPWAN.\\
-
-El estándar de comunicación NB-IoT tiene como objetivo permitir que los dispositivos IoT funcionen a través de redes de operador, ya sea dentro de una onda portadora de comunicación del Sistema Global para Móviles (GSM) existente, en una "banda de protección" no utilizada entre canales LTE o de forma independiente.\\
-
-Uno de los objetivos de NB-IoT es impulsar la extensión de la cobertura más allá de lo que ofrecen las tecnologías celulares existentes. Para ello, NB-IoT ofrece repeticiones de transmisión y diferentes configuraciones de asignación de ancho de banda en la transmisión de enlace ascendente.\\
-
-La tecnología NB-IoT utiliza señales de bajo ancho de banda para comunicarse dentro de las tecnologías GSM y LTE existentes.
-
-Los dispositivos y sensores especialmente diseñados son los componentes básicos de los sistemas NB-IoT. Estos dispositivos recopilan información de su entorno y la transmiten a estaciones base NB-IoT o nodos de transmisión.
-
-Las estaciones base individuales están conectadas a una puerta de enlace de IoT y servidores de aplicaciones en la nube de IoT para el monitoreo centralizado y el análisis de datos.
-
-NB-IoT emplea una nueva capa física con señales y canales para cumplir con los requisitos de cobertura extendida en áreas rurales e interiores profundos, al tiempo que permite una complejidad de dispositivo muy baja. La tecnología subyacente es mucho menos compleja que la de los módulos GSM/GPRS.\\
-
-A continuación se describen las ventajas más importantes de NB-IoT:
-\begin{itemize}
-
-\item \textbf{ Ahorro de Energía}
-
-NB-IoT no necesita ejecutar un sistema operativo pesado, y no require procesamiento de señales, lo que lo hace más eficiente en términos de energía en comparación con LTE-M.
-
-\item \textbf{Cobertura}
-
-
-NB-IoT puede ayudar a admitir una gran cantidad de dispositivos mediante el establecimiento de redes NB-IoT que pueden conectarse a miles de millones de nodos. Diseñado para cobertura extendida en interiores, la menor complejidad de los dispositivos proporciona conectividad y comunicación de largo alcance.
-
-\item \textbf{Costo}
-
-Debido a que es más fácil crear dispositivos con menor complejidad, el costo de los dispositivos es significativamente bajo, alrededor de 5 dolares por módulo.
-
-\item \textbf{Seguridad}
-
-
-NB-IoT está protegido de manera muy similar a 4G, incluidas todas las funciones de autenticación basadas en cifrado y SIM.
-
-Comparado a NB-IoT las velocidades de transferencia de datos de LTE-M son más de 10 veces más rápidas, su latencia es de 10 a 100 veces menor y cuenta con una cobertura mucho mayor, ya que utiliza la infraestructura 4G LTE existente. Sin embargo, aunque ambas LPWAN funcionan bien en interiores, NB-IoT tiene una pérdida máxima de acoplamiento (MCL) ligeramente más alta, lo que significa que puede manejar un poco más de interferencia.
-
-LTE-M también puede usar una gama más amplia de frecuencias, aunque, como su nombre lo indica, Narrowband-IoT usa bandas de frecuencia más estrechas, lo que permite que esta tecnología use el espectro de radiofrecuencia (RF) de manera más eficiente.
-
-\begin{table}[h]
-\begin{adjustbox}{width=\columnwidth,center}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-       & \begin{tabular}[c]{@{}l@{}}Velocidad \\ Máxima de Subida\end{tabular} & \begin{tabular}[c]{@{}l@{}}Velocidad Máxima \\ de Descarga\end{tabular} & Latencia & \begin{tabular}[c]{@{}l@{}}Perdida Máxima\\ de Acoplamiento(dBs)\end{tabular} & Ancho de Banda \\ \hline
-LTE-M  & 1Mbps                                                                 & 1Mps                                                                    & 10-15 ms & 156                                                                           & 1.4MHz a 5MHz  \\ \hline
-NB-IoT & 127 kbit                                                              & 159 kbit                                                                & 1.6-10s  & 164                                                                           & 180KHz         \\ \hline
-\end{tabular}
-\end{adjustbox}
-\caption{\label{tab:interfaces} Comparación entre LTE-M y NB-IoT}
-\end{table}
-
-Pocos operadores han establecido acuerdos de roaming para sus redes NB-IoT, por lo que LTE-M ofrece una mejor cobertura y tiene menos circunstancias en las que necesita cambiar de SIM.
-Actualemente, la compañia Telcel cuenta con la mayor cobertura de tecnología LTE en México.
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/lte-mcobertura}
-\captionof{figure}{Mapa de Cobertura LTE-Telcel}
- \label{fig:prot}
-\end{center}
-
-
-\item\textbf{NB-IoT consume más energía en algunos casos}
-
-Cuando los dispositivos necesitan transmitir grandes volúmenes de datos, las velocidades de datos más bajas de NB-IoT requieren estos permanezcan en línea por más tiempo, lo que resulta en un mayor consumo de energía. En casos de uso móvil, NB-IoT también usa más energía
-
-\end{itemize}
-
-Por lo anterior, se decidió a utilizar el estándar LTE-M. 
-
-\clearpage
 
 \subsubsection{Análisis del Submódulo de Datos }\label{sec:ASD}
 
+El objetivo que tiene el análisis de los datos es enviar fotogramas a la estación base para su futura gestión y validación, así como el almacenamiento de estos; de igual manera, se pretende el envío de mensajes informativos a la estación base.
+\\
+Para la transmisión del material multimedia a utilizar, se propone que el clip grabado tenga una profundidad de bits de mínimo 8 y una resolución de mínimo 960 x 540 píxeles, comúnmente conocido como QHD o "Quarter of High Definition" por sus siglas en inglés, todo esto en una secuencia de 30 fps.
+\\
+Tenemos que:
 
-%El objetivo que tiene el análisis de los datos es mandar fotogramas a la estación base para su futura gestión y validación, así como el almacenamiento de estos; de igual manera se pretende el envío de mensajes informativos para la estación base.
-%Anteriormente se establecen las especificaciones que debe tener el material multimedia a utilizar, las características que debe tener el clip grabado es una profundidad de bits de mínimo 8  y una resolución de mínimo 960 x 540 píxeles comúnmente conocido como QHD o \emph{Quarter of High Definition} por sus siglas en inglés, que es lo mínimo necesario que requiere el sistema, todo esto en una secuencia de 30fps.
-%Tenemos que:
+\begin{equation*}
+960 \; x \; 540 \; x \; 8=4,147,200 \; bits
+\end{equation*}
 
-%\begin{equation*}
-%960 \; x \; 540 \; x \; 8=4,147,200 \; bits
-%\end{equation*}
+Cada imagen tiene 4,147,200 bits entonces en 1 segundo se transmiten:
+\begin{equation*}
+4,147,200 \; x \; 30 fps=124.41 \; Mbps
+\end{equation*}
 
-%Cada imagen tiene 4,147,200 bits entonces en 1 segundo se transmiten:
-%\begin{equation*}
-%4,147,200 \; x \; 30 fps=124.41 \; Mbps
-%\end{equation*}
-%Que rebasa la capacidad de canal de red establecida, por lo que se implementa el uso de un compresor de video MP4 que tiene una relación de compresión de 16:1 \cite{Referencian16} para así modificar la resolución en la que se almacena el video en la estación base, por otro lado, se envían al menos 2 fotogramas por segundo para no sobrepasar la capacidad de canal.   
-%Tenemos que:
+Que rebasa la capacidad del canal de red establecida, por lo que se implementa el uso de un compresor de video MP4 para así modificar la resolución en la que se almacena el video en la estación base. Por otro lado, se envían al menos 2 fotogramas por segundo para no sobrepasar la capacidad del canal para este caso.
 
-%\begin{equation*}
-%640 \; x \; 480 \; x \; 8=2,457,600 \; bits
-%\end{equation*}
-%Cada imagen tiene 2,457,600 bits entonces en 1 segundo se transmiten:
-%\begin{equation*}
-%2,457,600 \; x \; 2 fps=4.91 \; Mbps
-%\end{equation*}
-%Cumpliéndose nuevamente la relación establecida $R < C$.
-%\begin{equation*}
-%4.91 Mbps<5 Mbps
-%\end{equation*}
-%Más 3 kbps de la tasa de bits a utilizar del texto informativo.
+\begin{equation*}
+640 \; x \; 480 \; x \; 8=2,457,600 \; bits
+\end{equation*}
+Cada imagen tiene 2,457,600 bits entonces en 1 segundo se transmiten:
+\begin{equation*}
+2,457,600 \; x \; 2 fps=4.91 \; Mbps
+\end{equation*}
+Cumpliéndose nuevamente la relación establecida $R < C$.
+\begin{equation*}
+4.91 Mbps<5 Mbps
+\end{equation*}
+Más 3 kbps de la tasa de bits a utilizar del texto informativo.
 
 
 \subsubsection{Análisis del Submódulo de Cobertura}
 
-La red de telefonía celular funciona mediante celdas (véase la Figura \ref{fig:handover}), estas celdas tienen el objetivo de mantener conectados a los dispositivos en las diferentes áreas de cobertura y cada una de ellas contiene una estación base o antena. El \emph{handover}  o \emph{handoff} es el proceso de transferir el servicio de una celda a otra\cite{Referencian17} y se tiene la siguiente métrica:
+La red de telefonía celular funciona mediante celdas, figura \ref{fig:handover}), estas celdas tienen el objetivo de mantener conectados a los dispositivos en las diferentes áreas de cobertura y cada una de ellas contiene una estación base o antena. El \emph{handover}  o \emph{handoff} es el proceso de transferir el servicio de una celda a otra\cite{Referencian17} y se tiene la siguiente métrica:
 \begin{itemize}
 \item Se considera un \emph{handoff} fuerte cuando al ir cambiando de celdas  se presente algún problema en la velocidad de la red logrando así la pérdida de la misma.
 \item Se considera un \emph{handoff} suave cuando al ir cambiando de celdas no se presente algún problema de la red o este sea mínimo.
@@ -1684,33 +1568,12 @@ La cobertura de LTE por Telcel es la más amplia del país \cite{CoberturaNacional
  \label{fig:mapaLTE}
 \end{center}
 
-En el mapa de cobertura la zona verde hace referencia a zonas con cobertura garantizada y la zona amarilla cobertura no garantizada, en caso de realizar pruebas en las zonas amarillas del mapa se va a notar un cambio en la velocidad del dispositivo móvil ya sea para la transferencia de archivos o la conectividad a la red
+En el mapa de cobertura la zona verde hace referencia a zonas con cobertura y la zona amarilla cobertura no garantizada, en caso de realizar pruebas en las zonas amarillas del mapa se va a notar un cambio en la velocidad del dispositivo móvil ya sea para la transferencia de archivos o la conectividad a la red
 ocasionando un \emph{handoff fuerte}; por el otro lado, al estar realizando pruebas en la zona verde del mapa su \emph{handoff} será más suave.
 
 \clearpage
-\textbf{Alcances:}
-\begin{itemize}
-\item Envío de las coordenadas y mensaje informativo del posicionamiento del vehículo a la estación base.
-\item Envío del fotograma y mensaje informativo del vehículo a la estación base.
-\item Compresión a MP4 para la transmisión y almacenamiento del fotograma.
-\item Recepción del estatus del envío de la información transmitida.
-\end{itemize}
-
-\textbf{Restricciones:}
-\begin{itemize}
-\item La velocidad de transmisión es de hasta 5Mbps.
-\item El envío de las coordenadas en periodos de 10 segundos.
-\item El envío de fotogramas a la estación base se mantiene limitado a 2 fps.
-\item El envío de la cadena de texto se mantiene limitada a 300 bits.
-\item El sistema de comunicación transmite la información solamente en zonas que cuenten con cobertura garantizada.
-\end{itemize}
- 
-
-
 \subsection{Análisis del Módulo de Estación Base}
-El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.  
-
-
+El módulo de la estación base tiene como objetivo que el usuario administrador, visualice y confirme el estado de los reportes de incidencia que se hayan presentado por parte del conductor, por tal motivo, se realizará una aplicación web, la cual se conectará a una base de datos NoSQL. En ella se guardarán los reportes de incidencias y se podrán visualizar por medio de la aplicación web. Cabe aclarar que el video de la incidencia se almacenará en la nube, ya que al ser contenido multimedia no se puede guardar en la base de datos, únicamente se guardará el URL para acceder al video. Las credenciales del usuario serán almacenadas en Amazon Cognito, con la cuales podrán iniciar sesión dentro de la Aplicación Web, la cual estará alojada en un servidor web.
 
 
 El sistema contará con los siguientes requerimientos:   \\
@@ -1799,7 +1662,7 @@ El usuario administrador puede acceder a la interfaz de la aplicación web, hacie
 \end{tabular}
 
 \end{table}
-
+\clearpage
 
 \begin{table}[h]
 \centering
@@ -1818,10 +1681,8 @@ El usuario administrador podrá iniciar sesión en la aplicación web utilizando un
 
 \end{table}
 
-\clearpage
+
 \textbf{Requerimientos No Funcionales del Módulo de Estación Base}
-
-
 
 \begin{table}[H]
 \caption{Requerimientos No Funcionales del Módulo de Estación Base}
@@ -1837,7 +1698,7 @@ El usuario administrador podrá iniciar sesión en la aplicación web utilizando un
 
 \end{table}
 
-
+\clearpage
 \textbf{Análisis de Casos de Uso}
 
 Con base en los requerimientos se realizó el siguiente diagrama de casos de uso, el cual muestra las actividades y la interacción con el Módulo de Estación base y el Módulo Central de Procesamiento. 
@@ -1928,7 +1789,7 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 
 \end{table}
 
-
+\clearpage 
 \begin{table}[h]
 \centering
 \caption{Caso de Uso 05 - Guardar Credenciales de Usuario Administrador }
@@ -1948,7 +1809,7 @@ Con base en los requerimientos se realizó el siguiente diagrama de casos de uso,
 \end{table}
 
 
-\clearpage 
+
 \subsubsection{Análisis de la Aplicación Web}
 
 
@@ -2183,27 +2044,6 @@ El sistema le permitirá al eliminar los datos de conductores de la base de datos
 
 \end{table}
 
-\begin{table}[H]
-\centering
-\begin{tabular}{|ll|}
-\hline
-\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF12}}                                              & \emph{Generar Mensaje de Alerta}                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El sistema alertará con un mensaje en caso de que algún componente en alguna Unidad Contenedora no funcione correctamente.\\ \\ \textbf{Elementos:}
-\\
-\quad $\bullet$ Módulo Central de Procesamiento\\
-\quad $\bullet$ Administrador\\
-\quad $\bullet$ Alerta
-
-
-\end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El sistema enviará un mensaje de alerta al administrador indicando que Unidad presenta algún desperfecto, esto con la intención de sea reparada posteriormente.\end{tabular}}                                                    \\ \hline
-\end{tabular}
-\caption{RF12- Generar Mensaje de Alerta}
-\end{table}
-
-
 	        
 \item \textbf{Análisis de Requerimientos no Funcionales}
 
@@ -2222,9 +2062,9 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \end{tabular}
 
 \end{table}
-
+cupera
+\clearpage
 \item \textbf{Análsis de Casos de Uso}
-
 
 \begin{center}
   \includegraphics[scale=.5]{imagenes/casosdeusoweb}
@@ -2337,8 +2177,8 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \quad $\bullet$ Correo \\
 \quad $\bullet$ Contraseña\\\end{tabular}}                                                    \\ \hline
 \end{tabular}
-
 \end{table}
+
 
 \begin{table}[h]
 \centering
@@ -2355,9 +2195,7 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas}\\
 \quad $\bullet$ ID incidencia\end{tabular}}                                                    \\ \hline
 \end{tabular}
-
 \end{table}
-
 
 \begin{table}[h]
 \centering
@@ -2369,7 +2207,6 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}El administrador podrá recuperar contraseña en caso de olvidarla \\ \\ \textbf{Precondiciones:}
 \\
 \quad $\bullet$ Contar con credenciales de administrador
-
 \end{tabular}} \\ \hline
 \multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Entradas}\\
 \quad $\bullet$ Email\\
@@ -2399,14 +2236,11 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \end{tabular}
 
 \end{table}
-
 \end{itemize}
 
 
 \subsubsection{Análisis y Elección del manejador de bases de datos  }
-Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y flexibilidad que ofrece los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo, cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Estas modificaciones (en caso de ser necesarias) podrán ser fácilmente aplicadas usando un SGBD NoSQL ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema a diferencia de un SGBD SQL.  \\
-
-
+Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y flexibilidad que ofrecen los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Las modificaciones necesarias podrán ser fácilmente aplicadas usando un SGBD NoSQL, ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema, a diferencia de un SGBD SQL.
 
 \begin{table}[h]
 \caption{Cuadro Comparativo de los Sistemas de Gestión de Bases de Datos No Relacionales}
@@ -2418,15 +2252,13 @@ Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y 
  \textbf{Cumplimiento ACID }& No & Si  &  Si &  Si \\ \hline
  \textbf{Lenguaje de consulta principal }& CQL  & JavaScript  & Permite el uso de varios lenguajes  & DQL  \\ \hline
  \textbf{Principales casos de uso }& Análisis social, análisis en tiempo real, venta al por menor y mensajería & Gestión de IOT, análisis en tiempo real, desarrollo de aplicaciones, inventario y personalización & Almacenamiento en caché, colas, filtrado y estadísticas  & Juegos, comercio minorista, servicios financieros, publicidad y transmisión de medios  \\ \hline
- \textbf{Seguridad  }& Seguridad integrada para la autorización, el cifrado y la autenticación, pero la seguridad está desactivada de forma predeterminada para facilitar su uso dentro de los clústeres  & Seguridad incorporada para autorización, autenticación y encriptación  & Se inicia automáticamente en modo de protección y ofrece sugerencias de seguridad  & Seguridad integrada para datos y aplicaciones; software, hardware, instalaciones y red seguros del proveedor  \\ \hline
+ \textbf{Seguridad  }& Seguridad integrada para la autorización, cifrado y autenticación, la seguridad está desactivada de forma predeterminada para facilitar su uso dentro de los clústeres  & Seguridad incorporada para autorización, autenticación y encriptación  & Se inicia automáticamente en modo de protección y ofrece sugerencias de seguridad  & Seguridad integrada para datos y aplicaciones; software, hardware, instalaciones y red seguros del proveedor  \\ \hline
  \textbf{Escalabilidad }& Horizontal  & Horizontal  & Horizontal  & Horizontal  \\ \hline
-\end{tabular}
 
+\end{tabular}
 \end{table}
 
-\clearpage
-
-Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación  como base el lenguaje JavaScript y  Node.js para realizar el \emph{backend} de la aplicación, por lo cual MongoDB complementa y facilita el desarrollo del proyecto en herramientas basados en JavaScript. Además, MongoDB es de código abierto, y es una herramienta gratuita hasta cierto punto, por lo cual no se requerirá una licencia para la implementación\cite{mongo}. Otra característica importante es que es una base de datos multiplataforma, esto para que se realice información desde el sistema operativo Linux, que será utilizado en la Nvidia Jetson Nano.
+Se eligió Amazon DynamoDB como SGBD NoSQL debido a su facilidad de integración con los servicios de autenticación y despliegue de AWS Amplify que se usarán para el alojamiento de la aplicación \ref{server}. DynamoDB ofrece una solución escalable y totalmente administrada, lo que complementa eficientemente la arquitectura de la aplicación, permitiendo una gestión sencilla y eficaz de los datos junto con características clave de autenticación y despliegue proporcionadas por AWS Amplify.
 
 
 \subsubsection{Análisis y Elección de lenguajes de programación web}
@@ -2434,8 +2266,6 @@ Dentro de los SGBD NoSQL se eligió MongoDB, ya que la aplicación  como base el l
 Al igual que en el desarrollo del \emph{backend}, existen diversas opciones para el desarrollo del frontend, e incluso en mayor medida. En este caso, los elementos fundamentales para el desarrollo del frontend de una aplicación son HTML, JavaScript y CSS. 
 
 JavaScript ha experimentado una evolución significativa y cuenta con una comunidad considerable, lo cual lo posiciona como uno de los principales lenguajes para el desarrollo frontend. 
-
-
 
 
 A continuación se describen sus características más importantes:
@@ -2455,16 +2285,14 @@ El procesamiento asíncrono es una de las características más útiles del lenguaje
 
 \item \textbf{Poca carga de Procesamiento del servidor}
 
-JavaScript permite realizar funcionalidades básicas en el lado del cliente. Esto significa que el servidor no tendrá que procesar las funcionalidades básicas que mejoran el rendimiento del servidor.
+JavaScript permite realizar funcionalidades básicas en el lado del cliente. Por tanto el servidor no tendrá que procesar las funcionalidades básicas que mejoran el rendimiento del servidor.
 
 \end{itemize}
 
 
-
-
 \clearpage
 
-\subsubsection{Análisis y Elección del servidor de alojamiento}
+\subsubsection{Análisis y Elección del servidor de alojamiento} \label{server}
 Para el presente proyecto se requiere una capacidad de almacenamiento que nos permita el uso de archivos multimedia, concretamente archivos de video.
 
 \begin{table}[H]
@@ -2582,9 +2410,9 @@ Después de haber analizado los distintos proveedores de alojamiento así como sus
 
 \subsection{Diseño del Módulo Central de Procesamiento}
 
-Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Visión Artificial. En caso de que este último envíe una señal de alerta de Somnolencia, el Módulo Central activará la alarma en forma de buzzer. 
-Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Comunicaciones se realizará un reporte de Incidencia que contendrá la fecha, hora, ubicación, y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base que se encargará de almacenarlo en su respectiva base de datos. Para evitar que el almacenamiento Interno del Módulo Central de Procesamiento se llene, se eliminará el reporte de incidencia siempre y cuando la Estación Base confirme que ha recibido dicho reporte.
-Como se indicó inicialmente el sistema estará disponible mientras el sistema se encuentre conectado a una fuente de alimentación, esto significa que el estado del sistema se encuentra conectado. \\\\
+Si todos los sistemas funcionan correctamente, el Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Visión Artificial. En caso de que este último envíe una señal de alerta de somnolencia, el Módulo Central activará la alarma en forma de buzzer.
+
+Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Comunicaciones. Se realizará un reporte de incidencia que contendrá la fecha, hora, ubicación y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base, que se encargará de almacenarlo en su respectiva base de datos. Como se indicó inicialmente, el sistema estará disponible mientras se encuentre conectado a una fuente de alimentación; esto significa que el estado del sistema se encuentra conectado.\\
 
 \begin{center}
   \includegraphics[scale=.5]{imagenes/diagrama_secuenciamc}
@@ -2661,44 +2489,9 @@ Dimensiones: 15 x 11 x 1 mm.
 \end{center}
 
 
-\item \textbf{LTE Base HAT}
-
-\begin{center}
-  \includegraphics[scale=.3]{imagenes/sixfabhat}
-\captionof{figure}{LTE Base HAT}
- \label{fig:scaraindust}
-\end{center}
-
-Este HAT celular proporciona una conexión de datos simplificada para proyectos de IoT remotos, en el campo, en todo el mundo, en todas partes. Comience a usar una conexión LTE de alta velocidad con bajo consumo de energía, además de contar con todo el software necesario para desarrollar en una Jetson Nano.
-
-\item \textbf{LE 910Cx Mini PCIe Series Linux}
-
-\begin{center}
-  \includegraphics[scale=.5]{imagenes/LE910}
-\captionof{figure}{LE 910Cx Mini PCIe Series Linux}
- \label{fig:scaraindust}
-\end{center}
-
-
-Los módulos Mini PCIe (mPCIe) de la serie LE910Cx son
-optimizadas para redes LTE de baja categoría y están disponibles
-en modo único de LTE o con opciones de respaldo 3G/2G.
-
-
-\item \textbf{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
-
-\begin{center}
-  \includegraphics[scale=.3]{imagenes/lteantena}
-\captionof{figure}{LTE Main Diversity GNSS Triple Port u.FL Antenna de 100mm}
- \label{fig:scaraindust}
-\end{center}
-
-
-Antenas LTE principal y Diversity combinadas con una antena GNSS en una sola antena formada. Ajuste directo para el módulo Mini PCIe LTE de Quectel EC25, Telit LE910C1 y Telit LE910C4.
-
 \end{itemize}
 
-\newpage
+\clearpage
 
 En un principio se tenía propuesto diseñar la unidad contenedora de procesamiento. Sin embargo, al buscar alternativas, se encontró una carcase especificamente diseñada para la Nvidia Jetson Nano, que cuenta con una plataforma para colocar una cámara digital además de orificios para antenas 4G, por lo que se decidió a utilizar esta carcasa para proteger los componentes.
 
@@ -2740,12 +2533,9 @@ En el siguiente Diagrama de Actividades se describen las actividades y sus inter
  \label{fig:landmark}
 \end{center}
 
+La cámara digital capturará la imagen en tiempo real a una resolución de 640x480 píxeles. Dado que buscamos ahorrar recursos de procesamiento, el uso de una mayor resolución o una tasa de cuadros por segundo más alta podría resultar en un funcionamiento ineficiente de los procesos en los distintos módulos.
 
-
-La cámara digital capturará la imagen en tiempo real a una resolución de 640x480 pixeles a 30 cuadros por segundo. Esto debido a que dicha es la resolución mínima que la cámara digital seleccionada permite realizar el streaming de video. Dado que se busca un ahorro de recursos de procesamiento, utilizar una mayor resolución o tasa de cuadros por segundo podría resultar en el funcionamiento ineficaz en los procesos de los distintos módulos.
-Para la detección de rostro, se utilizarán la librería de Cascadas Haar \emph{haarcascade\_frontalface\_alt.xml} ofrecida por OpenCV. Para la detección de ojos, se utilizará la librería \emph{haarcascade\_eye\_tree\_eyeglasses.xml},  que ofrece datasets para poder detectar ojos incluso con el uso de anteojos. Posteriormente se utilizará un modelo de red neuronal convolucional previamente entrenado con el datasets EyesClosed/CNN  que cuenta con un directorio de prueba y otro de entrenamiento. La red neuronal convolucional determinará si el conductor se encuentra con los ojos abiertos o cerrados. En caso de encontrarse con los ojos cerrados se inciará un contador. Si este contador llega a los 4 segundos de detectar ojos cerrados el sistema determinará que el conductor presenta un caso de somnolencia y se activará la alama para alertar al conductor. Posteriormente se realizará un reporte de incidencia que incluirá datos del conducto y de la incidencia cómo: fecha, hora y ubicación, así como un videoclip menor a 1 minuto que muestre el momento en que se detectó la incidencia. El sistema continuará activando la alerta hasta que se detecte un cambio en el estado de los ojos (de cerrados a abiertos). Finalmente, el reporte de incidencia será enviado a la Estación Base para su posterior revisión. 
-
-
+Para la detección de rostro, ojos y boca, se utilizarán las librerías Dlib y OpenCV. Posteriormente, se determinará si el conductor tiene los ojos abiertos o cerrados mediante la medición de distancias utilizando puntos de referencia. En caso de detectar ojos cerrados, se iniciará un contador. Si este contador llega a los 4 segundos de detectar ojos cerrados, el sistema determinará que el conductor presenta un caso de somnolencia y activará la alarma para alertar al conductor. Posteriormente, se generará un reporte de incidencia que incluirá datos del conductor y de la incidencia, como fecha, hora y ubicación, así como un videoclip de menos de 1 minuto que muestre el momento en que se detectó la incidencia. El sistema continuará activando la alerta hasta que se detecte un cambio en el estado de los ojos (de cerrados a abiertos). Finalmente, el reporte de incidencia será enviado a la Estación Base para su posterior revisión.
 
 \begin{itemize}
 
@@ -2815,8 +2605,9 @@ A continuación se muestra el diagrama de Flujo del Módulo de Comunicaciones
 \captionof{figure}{Diagrama de Flujo del Módulo de Comunicaciones}
  \label{fig:DF-modCom}
 \end{center}
+
 \newpage
-La ubicación del conductor será obtenida por el Módulo de Telemetría cada 10 segundos, esto con la intención de no consumir demasiados recursos de procesamiento y energía. Posteriormente será enviada a la Estación Base utilizando la interfaz SixFab-LTE\cite{tracking}. En caso de no contar con cobertura que permita la conexión a la estación base, la ubicación del  conductor será guardada en el almacenamiento interno de la Unidad de Procesamiento Central. Se realizaran handhshakes a la espera de respuesta de la Estación Base hasta que se obtenga una respuesta de enlace, posteriormente enviarán la o las ubicaciones almacenadas temporalmente hacia  a la Estación Base.
+a ubicación del conductor se obtendrá mediante el Módulo de Telemetría cada 10 segundos, con la intención de no consumir demasiados recursos de procesamiento y energía. Posteriormente, esta información será enviada a la Estación Base utilizando el módulo SIM27600G. En caso de no contar con cobertura que permita la conexión a la estación base, la ubicación del conductor permanecerá en la última obtenida hasta que se actualice desde la Unidad de Procesamiento Central.
 
 
 
@@ -2833,7 +2624,7 @@ La ubicación del conductor será obtenida por el Módulo de Telemetría cada 10 seg
 
 Con base en los requerimientos, se plantea realizar el diseño de la arquitectura del Módulo de Estación Base, integrando el Módulo de Procesamiento Central. El cual hará énfasis en la organización y comunicación de los elementos que lo conforman.  \\
 
-La Figura \ref{fig:DisenoMEB} a muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en Mongo DB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credenciales de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{frontend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
+La Figura \ref{fig:DisenoMEB} a muestra la arquitectura del sistema de Estación base, el cual se compone de las interacciones de los elementos que permitirán al usuario acceder e interactuar con la aplicación web. El diagrama también muestra la participación del Módulo de Procesamiento Central ya que el registro de incidencias y el envío del video de incidencia serán realizados por dicho módulo. La información de los reportes de incidencias y el registro de los conductores serán almacenados en DynamoDB, mientras que los videos de incidencia se almacenarán en Amazon S3. Las credenciales de los Usuarios Administradores que tendrán permitido acceder a la aplicación se almacenarán en Amazon Cognito. Para la aplicación web, el \emph{backend} será desarrollado en node.js mientras que el \emph{frontend} será desarrollado en React, posteriormente los archivos se almacenarán en un repositorio dentro de Github. La aplicación web será alojada y desplegada desde AWS Amplify, lo cual le permitirá al cliente acceder a la aplicación desde una URL.   
 
 
 \begin{center} 
@@ -2843,7 +2634,7 @@ La Figura \ref{fig:DisenoMEB} a muestra la arquitectura del sistema de Estación 
 \end{center} 
 
 
-El diagrama de comunicación muestra las interacciones entre elementos que se involucran en cada requerimiento funcional.  Así mismo, dan profundidad al diagrama de Arquitectura del Módulo de Estación Base. La aplicación web hará uso de la Base de Datos (MongoDB) y el \emph{backend} de la aplicación web, que se realizará con Node.js. Mientras que para el despliegue de la aplicación web se requiere del servidor AWS Amplify para permitirle al usuario entrar a la aplicación web. El sistema almacenará el video de incidencia en Amazon S3, enviado desde el Módulo Central de Procesamiento, al cual se podrá acceder por medio del ID. El envío de incidencia requiere la interacción del Módulo Central de Procesamiento el cual se encargará de realizar y enviar el Reporte de Incidencia, posteriormente será almacenado en la Base de Datos (MongoDB).
+El diagrama de comunicación muestra las interacciones entre elementos que se involucran en cada requerimiento funcional.  Así mismo, dan profundidad al diagrama de Arquitectura del Módulo de Estación Base. La aplicación web hará uso de la Base de Datos y el \emph{backend} de la aplicación web, que se realizará con Node.js. Mientras que para el despliegue de la aplicación web se requiere del servidor AWS Amplify para permitirle al usuario entrar a la aplicación web. El sistema almacenará el video de incidencia en Amazon S3, enviado desde el Módulo Central de Procesamiento, al cual se podrá acceder por medio del ID. El envío de incidencia requiere la interacción del Módulo Central de Procesamiento el cual se encargará de realizar y enviar el Reporte de Incidencia, posteriormente será almacenado en la Base de Datos.
 
 \begin{center} 
   \includegraphics[scale=.7]{imagenes/diagramaMEB} 
@@ -2879,7 +2670,7 @@ En la Figura \ref{fig:clasesaw} se pueden observar las clases que estarán dentro
  \label{fig:scaraindust}
 \end{center}
 
-El Administrador podrá consultar el reporte de incidencia de cada uno de los conductores. Accediendo a la base de de datos de MongoDB
+El Administrador podrá consultar el reporte de incidencia de cada uno de los conductores. Accediendo a la base de de datos.
  
 
 \begin{center}
@@ -2988,34 +2779,81 @@ En la Figura \ref{fig:location} se muestra la página web dónde el Administrador 
 
 \subsubsection{Diseño de la Base de Datos}
 
+DynamoDB es un servicio de base de datos NoSQL proporcionado por Amazon Web Services (AWS). Su modelo de datos difiere del modelo relacional tradicional y se basa en conceptos clave como tablas, índices y claves primarias. 
 
-Basado en la estructura NOSQL de MongoDB, se propone el siguiente modelo para la base de datos, la cual contará con dos colecciones: Conductores e Incidencias. Cabe mencionar que en dicho modelo no se contempla a los administradores, debido a que se utilizará el sistema de Amazon Cognito, que ofrece herramientas de autenticación, registro, verificación e inicio de sesión para el usuario. 
+\begin{enumerate}
+    \item \textbf{Tablas:}
+    \begin{itemize}
+        \item DynamoDB almacena datos en tablas. Cada tabla es un conjunto de ítems (datos) relacionados.
+        \item Las tablas no tienen un esquema fijo; cada ítem en una tabla puede tener diferentes atributos.
+    \end{itemize}
+    
+    \item \textbf{Atributos:}
+    \begin{itemize}
+        \item Cada ítem en una tabla es un conjunto de atributos. Los atributos son pares clave-valor.
+        \item Los atributos pueden ser de diferentes tipos de datos, como texto, número, binario, lista y mapa.
+    \end{itemize}
+    
+    \item \textbf{Claves Primarias:}
+    \begin{itemize}
+        \item Cada tabla en DynamoDB debe tener una clave primaria, que puede ser simple o compuesta.
+        \item La clave primaria puede consistir en uno o dos atributos: la clave de partición y, opcionalmente, la clave de ordenación.
+        \item La clave de partición determina la ubicación física de los datos en DynamoDB, mientras que la clave de ordenación ordena los ítems con la misma clave de partición.
+    \end{itemize}
+    
+    \item \textbf{Índices:}
+    \begin{itemize}
+        \item DynamoDB admite índices locales y globales.
+        \item Los índices locales están limitados a una única clave de partición y pueden tener una o varias claves de ordenación.
+        \item Los índices globales pueden tener cualquier clave, ya sea solo de partición o compuesta de partición y ordenación.
+    \end{itemize}
+\end{enumerate}
 
-\begin{center}
-  \includegraphics[scale=.3]{imagenes/ModeladoBD}
-\captionof{figure}{Modelo propuesto para la base de datos en MongoDB}
- \label{fig:ModeloBD}
-\end{center}
+\begin{verbatim}
+{
+  "TableName": "Conductores",
+  "KeySchema": [
+    { "AttributeName": "IDConductor", "KeyType": "HASH" }
+  ],
+  "AttributeDefinitions": [
+    { "AttributeName": "IDConductor", "AttributeType": "N" },
+    { "AttributeName": "Nombre", "AttributeType": "S" },
+    { "AttributeName": "Apellido", "AttributeType": "S" },
+    { "AttributeName": "Incidencias", "AttributeType": "N" },
+    { "AttributeName": "ContadorEnMarcha", "AttributeType": "N" }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 5,
+    "WriteCapacityUnits": 5
+  }
+}
+\end{verbatim}
 
-El modelo de documento para la colección Conductores, se usará para registrar el nombre y apellido de cada conductor, así mismo se contabilizará el número de incidencias que presenté cada uno de ellos, el contador del conductor en marcha aumentará cada vez que el Módulo Central de Procesamiento envié un reporte de incidencia a la base de datos. Si el Usuario Administrador del Módulo de la Estación Base revisa el video de la incidencia y lo cataloga como Descartar entonces se restará la incidencia, si esta es catalogada como Confirmar, el contador permanecerá igual.  Es importante mencionar que el registro de cada conductor se realizará desde la Aplicación Web. A continuación, se muestran los campos y un ejemplo de los valores que pueden ser ingresados dentro del documento de registro de conductores. 
+El modelo de la tabla para Conductores, se usará para registrar el nombre y apellido de cada conductor, así mismo se contabilizará el número de incidencias que presenté cada uno de ellos, el contador del conductor en marcha aumentará cada vez que el Módulo Central de Procesamiento envié un reporte de incidencia a la base de datos. Si el Usuario Administrador del Módulo de la Estación Base revisa el video de la incidencia y lo cataloga como Descartar entonces se restará la incidencia, si esta es catalogada como Confirmar, el contador permanecerá igual.  Es importante mencionar que el registro de cada conductor se realizará desde la Aplicación Web.
 
-\begin{center}
-  \includegraphics[scale=.9]{imagenes/ModeloConductores}
-\captionof{figure}{Documento de Registro de Conductores}
- \label{fig:DocumentoConductores}
-\end{center}
+\begin{verbatim}
+{
+  "TableName": "Incidencias",
+  "KeySchema": [
+    { "AttributeName": "IdIncidencia", "KeyType": "HASH" }
+  ],
+  "AttributeDefinitions": [
+    { "AttributeName": "IdIncidencia", "AttributeType": "N" },
+    { "AttributeName": "IdConductor", "AttributeType": "N" },
+    { "AttributeName": "FechaHora", "AttributeType": "S" },
+    { "AttributeName": "NombreConductor", "AttributeType": "S" },
+    { "AttributeName": "ApellidoConductor", "AttributeType": "S" },
+    { "AttributeName": "EstadoIncidencia", "AttributeType": "S" }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 5,
+    "WriteCapacityUnits": 5
+  }
+}
 
-El modelo de documento para la colección Incidencias, se usará para registrar el Reporte de Incidencia que presente un conductor, el cual será enviado desde el Módulo Central de Procesamiento, por tanto, se realizará una consulta previa a la colección Conductores para obtener el id, nombre y apellido del conductor en marcha. Posteriormente se realizará el reporte de la incidencia, el cual contendrá el Id del conductor, la fecha y hora de la incidencia, el nombre y apellido del conductor, y el estado de incidencia, este último muestra si la incidencia fue catalogada como descartada o confirmada por parte del Usuario Administrador después de revisar el video de la incidencia. Como se mencionó anteriormente, MongoDB permite anidar documentos, por lo que, dentro de este documento se encontrará anidado un segundo documento llamado Detalles, el cual registrará la Ubicación donde sé detectó la incidencia y el ID donde se encontrará almacenado el video.  
+\end{verbatim}
 
-
-\begin{center}
-  \includegraphics[scale=.9]{imagenes/ModeloIncidencias}
-\captionof{figure}{Documento de registro de Incidencias}
- \label{fig:DocumentoIncidencias}
-\end{center}
-
-Cabe señalar que los anteriores modelos muestran el campo Id, sin embargo, MongoDB asigna automáticamente un Id, si el id no es especificado, esto lo realiza cada vez que se crea un nuevo documento dentro de una colección, el cual es un valor hexadecimal de 12 bytes representado en 24 caracteres. Por tanto, se utilizará el id que proporcione Mongo DB en los documentos. \\
-
+El modelo de la tabla de Incidencias, se usará para registrar el Reporte de Incidencia que presente un conductor, el cual será enviado desde el Módulo Central de Procesamiento, por tanto, se realizará una consulta previa a la colección Conductores para obtener el id, nombre y apellido del conductor en marcha. Posteriormente se realizará el reporte de la incidencia, el cual contendrá el Id del conductor, la fecha y hora de la incidencia, el nombre y apellido del conductor, y el estado de incidencia, este último muestra si la incidencia fue catalogada como descartada o confirmada por parte del Usuario Administrador después de revisar el video de la incidencia.  
 
 \textbf{Amazon Cognito \\}
 
@@ -3044,7 +2882,7 @@ Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilizado 
 
 
 
-\newpage
+\clearpage
 \section{Implementación}
 
 \subsection{Módulo Central de Procesamiento}
@@ -3986,37 +3824,24 @@ El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas d
 
 
 
-
-
-\bibitem{python} Irv Kalb, \emph{Object-Oriented Python}, Primera Edición ,No Starch-Press, 2021
-
 \bibitem{Referencia2}
 V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
 
 
 
- 
-
-\bibitem{Referencian16}\emph{MP4 - EcuRed.} EcuRed. https://www.ecured.cu/MP4\#:~:text=Un\%20archivo\%20de\%20MP4\%20lleva\%20sonido\%20y\%20video,de\%2020\%20segundos\%20de\%20clips\%20de\%20audio\%20(MP4/20s).
-
-\bibitem{Referencian17}C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista \emph{Inter-System Handover Parameter Optimization. In: Proceedings of IEEE Vehicular Technology Conf.} 2006.
 
 
 
 
-\bibitem {mongo} Kyle Banker, \emph{MondoDB in Action}, Second Edition, Manning, 20216
 
-\bibitem {js} Marjin Haverbeke \emph{Eloquent Javascript}, Third Edition, No Starch Press, 2020
-
-\bibitem {AWS} Amazon, \emph{Amazon Amplify}, https://aws.amazon.com/es/amplify/
 
 \bibitem{mor} Chandrakant Chandewar, Ashlesha Singh, \emph{Driver Drowsiness Alert System with Effective 
 Feature Extraction}, International Journal for research in emergin science and technology, 2018
 
-\bibitem{tracking} Quectel, \emph{Lte Standard- GNSS Application Note}, LTE Standard Sixfab Module Series, 2019
 
 
-\bibitem {NodeJs} Jonathan Wexler, \emph{Get Programming with Node.js}, Manning, 2019
+
+
 
 
 \bibitem{algoritmosdeaprendizaje} https://www.alteryx.com/es-419/glossary/supervised-vs-unsupervised-learning\#:~:text=Hay\%20una\%20diferencia\%20clave\%20entre,etiquetados\%20con\%20la\%20respuesta\%20correcta

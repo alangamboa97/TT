@@ -11,34 +11,36 @@ Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: Referencias.bib
 Warning--entry type for "GeolocalizacionVehiculos" isn't style-file defined
---line 46 of file Referencias.bib
-I was expecting a `,' or a `}'---line 326 of file Referencias.bib
+--line 55 of file Referencias.bib
+I was expecting a `,' or a `}'---line 336 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 334 of file Referencias.bib
+I was expecting a `,' or a `}'---line 344 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 342 of file Referencias.bib
+I was expecting a `,' or a `}'---line 352 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-Repeated entry---line 346 of file Referencias.bib
- : @misc{categorias
- :                 ,
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 358 of file Referencias.bib
+I was expecting a `,' or a `}'---line 360 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "python"
-Warning--I didn't find a database entry for "Numpy"
-Warning--I didn't find a database entry for "Referencian17"
-Warning--I didn't find a database entry for "mongo"
-Warning--I didn't find a database entry for "AWS"
+I was expecting a `,' or a `}'---line 368 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 384 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+Repeated entry---line 388 of file Referencias.bib
+ : @misc{Referencian17
+ :                    ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "mor"
-Warning--I didn't find a database entry for "tracking"
 Warning--I didn't find a database entry for "NodeJs"
 Warning--I didn't find a database entry for "Nvidia"
 Warning--I didn't find a database entry for "JetPackSDK"
@@ -68,51 +70,51 @@ Name 1 in "Pacay, C., and Blanca Fanny." has a comma at the end for entry Estado
 while executing---line 2403 of file ieeetran.bst
 Name 1 in "Vilca, G., and Eduardo, J." has a comma at the end for entry EstadodelAarte16
 while executing---line 2403 of file ieeetran.bst
-Name 1 in "Ramírez, C. E. E., Flores, R. E. R., and Hernández, J. A. V." has a comma at the end for entry EstadodelAarte17
+Name 1 in "C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista" has a comma at the end for entry Referencian17
 while executing---line 2403 of file ieeetran.bst
-Too many commas in name 1 of "Ramírez, C. E. E., Flores, R. E. R., and Hernández, J. A. V." for entry EstadodelAarte17
+Too many commas in name 1 of "C. Brunner, A. Garavaglia, M. Mittal, M. Narang, and J. Vargas Bautista" for entry Referencian17
 while executing---line 2403 of file ieeetran.bst
 
 Done.
-You've used 44 entries,
+You've used 46 entries,
             4087 wiz_defined-function locations,
-            1084 strings with 16698 characters,
-and the built_in function-call counts, 18653 in all, are:
-= -- 1609
-> -- 268
-< -- 10
-+ -- 130
-- -- 62
-* -- 660
-:= -- 3360
-add.period$ -- 88
-call.type$ -- 44
-change.case$ -- 85
-chr.to.int$ -- 21
-cite$ -- 44
-duplicate$ -- 1555
-empty$ -- 1720
-format.name$ -- 75
-if$ -- 4179
+            1089 strings with 16791 characters,
+and the built_in function-call counts, 19789 in all, are:
+= -- 1691
+> -- 292
+< -- 20
++ -- 142
+- -- 66
+* -- 709
+:= -- 3533
+add.period$ -- 93
+call.type$ -- 46
+change.case$ -- 87
+chr.to.int$ -- 42
+cite$ -- 46
+duplicate$ -- 1643
+empty$ -- 1823
+format.name$ -- 80
+if$ -- 4448
 int.to.chr$ -- 0
-int.to.str$ -- 44
-missing$ -- 368
-newline$ -- 157
-num.names$ -- 44
-pop$ -- 949
+int.to.str$ -- 46
+missing$ -- 383
+newline$ -- 165
+num.names$ -- 46
+pop$ -- 990
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1504
+skip$ -- 1588
 stack$ -- 0
-substring$ -- 175
-swap$ -- 941
-text.length$ -- 3
+substring$ -- 215
+swap$ -- 1003
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 44
+type$ -- 46
 warning$ -- 0
-while$ -- 47
-width$ -- 46
-write$ -- 413
-(There were 14 error messages)
+while$ -- 53
+width$ -- 48
+write$ -- 431
+(There were 16 error messages)
