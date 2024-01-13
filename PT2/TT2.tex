@@ -2886,14 +2886,14 @@ Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilizado 
 \section{Implementación}
 
 \subsection{Módulo Central de Procesamiento}
-\subsubsection{Diseño de una red neuronal convolucional capaz de detectar ojos cerrados y abiertos}
-\subsubsection{Entorno de desarrollo en la NVIDIA Jetson Nano}
 
-El Jetson Nano Developer Kit utiliza una tarjeta microSD como dispositivo de arranque y almacenamiento principal. Por tanto, fue necesario instalar una entorno de desarrollo en la propia placa, para lo cual se requirió una tarjeta microSD de un mínimo recomendado de 32 GB de acuerdo a la documentación de Nvidia \cite{Nvidia}.\\
+\subsubsection{Instalación del entorno de desarrollo en la NVIDIA Jetson Nano}
 
-Como primer paso, se descargó el \emph{JetPack SDK 4.6.3} \cite{JetPackSDK},el cual se refiere a un archivo de imagen del sistema operativo específicamente diseñado y optimizado para ser utilizado en la placa de desarrollo NVIDIA Jetson Nano, la imagen incluye un sistema operativo Linux, controladores de hardware específicos para la Jetson Nano y una configuración predefinida. Para el presente proyecto se utilizó la última versión disponible para la Jetson Nano 4GB, JetPack SDK 4.6.3 \cite{JetPackSDK}.\\
+El Jetson Nano Developer Kit utiliza una tarjeta microSD como dispositivo de arranque y almacenamiento principal. Por tanto, fue necesario instalar un entorno de desarrollo en la propia placa, para lo cual se requirió una tarjeta microSD de un mínimo recomendado de 32 GB, según la documentación de Nvidia \cite{Nvidia}.\
 
-Posteriormente se instaló la imagen en la tarjeta microSD con el apoyo de BalenaEtcher 1.7.9 que se utilizó para crear una unidad de arranque. 
+Como primer paso, se descargó el \emph{JetPack SDK 4.6.3} \cite{JetPackSDK}, que es un archivo de imagen del sistema operativo específicamente diseñado y optimizado para ser utilizado en la placa de desarrollo NVIDIA Jetson Nano. La imagen incluye un sistema operativo Linux, controladores de hardware específicos para la Jetson Nano y una configuración predefinida. Para el presente proyecto, se utilizó la última versión disponible para la Jetson Nano 4GB, JetPack SDK 4.6.3 \cite{JetPackSDK}.\
+
+Posteriormente, se instaló la imagen en la tarjeta microSD con el apoyo de BalenaEtcher 1.7.9, que se utilizó para crear una unidad de arranque.
 
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/Balena.JPG}
@@ -2909,18 +2909,18 @@ Posteriormente se instaló la imagen en la tarjeta microSD con el apoyo de Balena
 
 \textbf{Configuración y primer arranque}\\
 
-Para iniciar e interactuaar con el kit de desarrollo, se reqquirió conectar un mouse, pantalla, teclado y una fuente de alimentación, cabe mencionar que estos elementos no se incluyen en con la compra del kit de desarrollo Jetson Nano. Posteriormente, se realizó la configuración inicial del sistema operativo, el cual incluyó los siguientes pasos:
+Para iniciar e interactuar con el kit de desarrollo, se requirió conectar un mouse, pantalla, teclado y una fuente de alimentación. Cabe mencionar que estos elementos no se incluyen con la compra del kit de desarrollo Jetson Nano. Posteriormente, se realizó la configuración inicial del sistema operativo, la cual incluyó los siguientes pasos:
 
 \begin{itemize}
 \item Revisar y aceptar el EULA del software NVIDIA Jetson.
 \item Seleccionar el idioma del sistema, la distribución del teclado y la zona horaria.
 \item Crear un nombre de usuario, contraseña y nombre de la computadora.
-\item Selecionar el tamaño de partición de la aplicación, se utilizó el tamaño máximo sugerido.
+\item Seleccionar el tamaño de partición de la aplicación; se utilizó el tamaño máximo sugerido.
 \end{itemize}
 
-\textbf{Intalación de librerias y dependencias}\\
+\textbf{Instalación de librerías y dependencias}\
 
-Después de haber iniciado la Jetson Nano, se abrió una terminal y se ingresaron los siguientes comandos para la instalación de las librerias a utilizar:
+Después de haber iniciado la Jetson Nano, se abrió una terminal y se ingresaron los siguientes comandos para la instalación de las librerías a utilizar:
 
 \begin{enumerate}
 \item Actualizar el sistema
@@ -2967,16 +2967,16 @@ pip3 install keras==2.7.0
 \end{verbatim}
 \end{enumerate}
 
-Se importaron las librerias con Python3 para verificar que hayan sido correctamente instaladas.
+Se importaron las librerías con Python 3 para verificar que hayan sido correctamente instaladas.
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/librerias2.jpeg}
 \captionof{figure}{Importación de librerías instaladas con Python.}
  \label{fig:Librerias} 
 \end{center}  
 
-
-Se instalo Jetson Stats,la cual es una herramienta de monitoreo del sistema que proporciona información de rendimiento de Jetson en tiempo real. Muestra información sobre el uso de la CPU, la GPU, la memoria y otros recursos del sistema. jtop muestra la salida de los monitores de energía Jetson y los sensores de temperatura \cite{JetStats}.
-Comandos usados para la intalación de Jetson Stats: 
+Se instaló Jetson Stats, la cual es una herramienta de monitoreo del sistema que proporciona información de rendimiento de Jetson en tiempo real. Muestra información sobre el uso de la CPU, la GPU, la memoria y otros recursos del sistema. jtop muestra la salida de los monitores de energía Jetson y los sensores de temperatura \cite{JetStats}.
+\\
+Comandos usados para la instalación de Jetson Stats:
 
 \begin{verbatim}
 sudo apt install python3-pip
@@ -2993,8 +2993,8 @@ jtop
 
 Archivo Swap
 
-El swap es un espacio de intercambio, que bien puede ser una partición lógica en el disco o simplemente un archivo. En lugar de utilizar espacio en memoria RAM, el swap utiliza espacio en disco duro para almacenar datos temporales, reduciendo así el uso de la RAM. El conjunto combinado de memoria RAM y swap crean una memoria virtual mayor a la que trae el ordenador por defecto. Así, el Kernel de Linux puede ejecutar procesos que requieren de más memoria de la que se encuentra físicamente disponible \cite{SwapFile}.
-Comandos utilizados para configrar memoria virtual:
+El swap es un espacio de intercambio, que bien puede ser una partición lógica en el disco o simplemente un archivo. En lugar de utilizar espacio en la memoria RAM, el swap utiliza espacio en el disco duro para almacenar datos temporales, reduciendo así el uso de la RAM. El conjunto combinado de la memoria RAM y el swap crea una memoria virtual mayor a la que trae el ordenador por defecto. Así, el Kernel de Linux puede ejecutar procesos que requieren más memoria de la que se encuentra físicamente disponible \cite{SwapFile}.
+Comandos utilizados para configurar memoria virtual:
 
 \begin{verbatim}
 sudo systemctl disable nvzramconfig
@@ -3009,12 +3009,12 @@ cd etc/
 sudo gedit fstab
 \end{verbatim}
 
-El comando gedit abre un archivo el cual se debe modificar añadiendo la siguiente linea y posteriormente guardando los cambios realizados. 
+El comando gedit abre un archivo que se debe modificar añadiendo la siguiente línea y posteriormente guardando los cambios realizados.
 \begin{verbatim}
 /mnt/4G.swap	none	swap	sw	0	0
 \end{verbatim}
 
-Luego, se verifico el tamaño de todos los intercambios:
+Luego, se verificó el tamaño de todos los intercambios:
 \begin{verbatim}
 free -h
 \end{verbatim}
@@ -3030,9 +3030,8 @@ sudo systemctl enable nvzramconfig
  \label{fig:Swap} 
 \end{center}  
 
-
 OpenCV con CUDA (Arquitectura de dispositivo unificado de cómputo)
-Por defecto la versión del JetPack SDK 4.6.3 viene instalado con OpenCV 4.1.1 sin CUDA, el cual es un marco que permite la computación paralela en la GPU. Para activar CUDA se utilizó el sript proporcionado en el repositiorio de github \cite{CUDA} que ademas instala la version 4.5 de OpenCV:
+Por defecto, la versión del JetPack SDK 4.6.3 viene instalada con OpenCV 4.1.1 sin CUDA, el cual es un marco que permite la computación paralela en la GPU. Para activar CUDA, se utilizó el script proporcionado en el repositorio de GitHub \cite{CUDA}, el cual además instala la versión 4.5 de OpenCV:
 
 \begin{verbatim}
 git clone https://github.com/mdegans/nano_build_opencv.git
@@ -3040,7 +3039,8 @@ cd nano_build_opencv/
 gedit build_opencv.sh
 \end{verbatim}
 
-El archivo se modificó colocando la variable JOBS=4 despues de haber modificado el archivo de intercambio (\textit{swapfile}), posteriormente se corrió el archivo.
+El archivo se modificó colocando la variable JOBS=4 después de haber modificado el archivo de intercambio (\textit{swapfile}). Posteriormente, se ejecutó el archivo.
+
 \begin{verbatim}
 ./build_opencv.sh 4.5.4
 \end{verbatim}
@@ -3052,35 +3052,146 @@ El archivo se modificó colocando la variable JOBS=4 despues de haber modificado 
 \end{center}  
 
 
-\subsubsection{Implementación de puntos faciales para detectar el nivel de apertura de los ojos y boca}
+\subsubsection{Implementar algoritmo para la detección del rostro y ojos }
 
 
+\clearpage
+\subsubsection{Implementar puntos faciales en el rostro y la metrica MOR}
 
-se definió una función 
 
-\subsubsection{Detección de somnolecia}
 
 \subsubsection{Integración de los periféricos y accesorios al Módulo Central de Procesamiento}
 
 
-Se integraron los periféricos dentro del contenedor para la Jetson Nano.\\
+Se integraron los periféricos dentro del contenedor para la Jetson Nano.
 
 El contenedor de la Jetson Nano es una carcasa de metal con un ventilador de refrigeración de 5 V, diseñado específicamente para ser compatible con la placa de desarrollo NVIDIA Jetson Nano (versión B01 con 4 GB de RAM).\\
 
-Esta carcasa ofrece varias características adicionales, como soporte para reinicio de cámara, un botón de encendido y una compatibilidad específica con la cámara Waveshare IMX219 Series. Además, el contenedor también tiene soporte para adaptadores inalámbricos Wireless-AC8265, lo que permite la conectividad Wi-Fi y Bluetooth en la Jetson Nano. Otra característica destacada es la compatibilidad con el módulo de placa de expansión LTE CAT4 basado en SIM7600G-H. Este módulo proporciona capacidades de comunicación inalámbrica, como llamadas telefónicas, mensajes de texto (SMS) y posicionamiento GPS utilizando los sistemas BeiDou y Glonass.
+Esta carcasa ofrece varias características adicionales, como soporte para reinicio de cámara, un botón de encendido y compatibilidad específica con la cámara Waveshare IMX219 Series. Además, el contenedor también tiene soporte para adaptadores inalámbricos Wireless-AC8265, lo que permite la conectividad Wi-Fi y Bluetooth en la Jetson Nano. Otra característica destacada es la compatibilidad con el módulo de placa de expansión LTE CAT4 basado en SIM7600G-H. Este módulo proporciona capacidades de comunicación inalámbrica, como llamadas telefónicas, mensajes de texto (SMS) y posicionamiento GPS utilizando los sistemas BeiDou y Glonass.
 
-Contenedor de la Jetson nano junto con los periféricos integrados:
+\begin{center}
+  \includegraphics[scale=0.25]{imagenes/Perifericos1.jpeg}
+\captionof{figure}{Carcasa sin armar}
+ \label{fig:crearConductor} 
+\end{center} 
 
+
+Contenedor de la Jetson Nano junto con los periféricos integrados:
 
 \begin{center}
   \includegraphics[scale=0.3]{imagenes/Perifericos2.jpeg}
 \captionof{figure}{Carcasa armada con la Jetson Nano y periféricos integrados}
  \label{fig:crearConductor} 
 \end{center} 
-\subsubsection{Integración del subsistema}
+
+\newpage
+\subsubsection{Aplicar el algoritmo de detección con el módulo central de procesamiento}
+
+Se cargó el modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. sinembargo,debido a los recursos limitados de la jetson nano, los fps resultantes en tiempo real al correr el script fueron de 1 a 3 fps. Como resultado perdemos capturas por segundo del rostro que brindan información para la predicción en tiempo real. Por tanto se optó por una alternativa que utiliza menos recursos de la GPU para poder realizar más capturas por segundo y no perder información que permita detectar de una forma correcta los ojos y la boca del conductor y que a su vez permita medir la somnolencia.  
+Se realizó una captura del video y se procedió a detectar el rostro del conductor, posteriormente se aplicó una malla de puntos faciales la cual nos permite tomar los puntos requeridos, en este caso se uso los puntos que referencian el ojo derecho, el ojo izquierdo y la boca para medir la distancia entre puntos y detectar si se encuentran abiertos o cerrados. Posteriormente se aplicó la logica que permite medir la duración de los parpadeos y bostezos, tomando en cuenta la duración se establecieron parámetros definidos que permitan detectar un posible caso de somnolencia. 
+
+\begin{center}
+  \includegraphics[scale=0.7]{imagenes/CodigoSomnolencia1.JPG}
+\captionof{figure}{Código de somnolencia parte 1}
+ \label{fig:Somnolencia1} 
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia2.JPG}
+\captionof{figure}{Código de somnolencia parte 2}
+ \label{fig:Somnolencia1} 
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia3.JPG}
+\captionof{figure}{Código de somnolencia parte 3}
+ \label{fig:Somnolencia1} 
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia4.JPG}
+\captionof{figure}{Código de somnolencia parte 4}
+ \label{fig:Somnolencia1} 
+\end{center}
+
+El archivo respecto a la métrica MOR \cite{68LandPoints}, se complementó con la grabación del video y el envió del video hacía la página web.
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/MORcodigo1.JPG}
+\captionof{figure}{ Grabación del video y el envió del video hacía la página web}
+ \label{fig:Somnolencia1} 
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/MOR2.jpeg}
+\captionof{figure}{Prueba de la metrica MOR 1}
+ \label{fig:crearConductor} 
+\end{center} 
+
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/MOR1.jpeg}
+\captionof{figure}{Prueba de la metrica MOR 2}
+ \label{fig:crearConductor} 
+\end{center} 
+
 
 
 \subsection{Módulo de Comunicaciones}
+
+\subsubsection{Investigación de la documentación del módulo 3G/4G LTE-Base Hat} \label{base_hat}
+
+Para el presente proyecto, se hará uso del Base-Hat SIM7600G-H 4G para Jetson Nano. 
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/hat}
+\captionof{figure}{Módulo Base-Hat SIM7600G-H}
+ \label{fig:hat} 
+\end{center} 
+
+En primer lugar, utilizando la terminal del sistema operativo Ubuntu, se ingresan los siguientes comandos:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/libraries}
+\captionof{figure}{Instalación de librerías}
+ \label{fig:libraries} 
+\end{center} 
+
+Los comandos ingresados en la figura \ref{fig:libraries} se encargan de instalar todas las bibliotecas y el software necesario para poder comenzar a utilizar la red LTE mediante el módulo SIM7600G-H. Además, también se crea un directorio que contendrá la configuración de usuario, así como una cuenta enlazada al módulo.
+
+Posteriormente, probamos que el puerto GPIO de nuestra Jetson Nano esté funcionando con los siguientes comandos:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/gpio}
+\captionof{figure}{Instalación de librerías}
+ \label{fig:gpio} 
+\end{center}
+
+Después de haber realizado los pasos anteriores, el pin con el nombre NET deberá parpadear constantemente, lo que significa que el módulo está listo para ser utilizado.
+
+Para realizar la comunicación LTE, primero se ingresa a la librería minicom utilizando los siguientes comandos:
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/minicom}
+\captionof{figure}{Minicom}
+ \label{fig:gpio} 
+\end{center}
+
+Posteriormente, se necesita actualizar los drivers:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/drivers}
+\captionof{figure}{Actualización de drivers}
+ \label{fig:gpio} 
+\end{center}
+
+Finalmente se establece una dirección IP con el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/modulo}
+\captionof{figure}{Establecer dirección IP}
+ \label{fig:gpio} 
+\end{center}
+
 
 \subsubsection{Implemetación del sistema de Geolocalización}
 \textbf{Habilitar GPS y obtener datos de posición GPS desde la Jetson Nano \cite{Waveshare}}
@@ -3101,8 +3212,7 @@ Se remplaza your\_user\_name con el nombre de usuario nano.
  \label{fig:SIM7600G-2.JPG} 
 \end{center} 
 
-
-Se coloca el DIP en ON y se ejecut? minicom con el comando AT para probar la SIM7600.
+Se coloca el DIP en ON y se ejecuta minicom con el comando AT para probar el SIM7600.
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/SIM7600G-3.JPG}
@@ -3110,7 +3220,7 @@ Se coloca el DIP en ON y se ejecut? minicom con el comando AT para probar la SIM
  \label{fig:SIM7600G-3.JPG} 
 \end{center} 
 
-Ejemplos de GPS: Se conect? la antena GPS y se coloc? el receptor en un lugar abierto. Se ejecutaron los siguientes comandos para probar el GPS.
+Ejemplo de GPS: Se conectó la antena GPS y se colocó el receptor en un lugar abierto. Se ejecutaron los siguientes comandos para probar el GPS.
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/SIM7600G-4.JPG}
@@ -3120,46 +3230,45 @@ Ejemplos de GPS: Se conect? la antena GPS y se coloc? el receptor en un lugar ab
 
 Comunicación por Minicom:
 
-
-Para obtener los datos de posici?n GPS, fue necesario interactuar con el módulo SIM7600X a través del programa en Python:
+Para obtener los datos de posición GPS, fue necesario interactuar con el módulo SIM7600X a través del programa en Python:
 
 \begin{center}
   \includegraphics[scale=0.62]{imagenes/GPSpy1.JPG}
-\captionof{figure}{C?digo que permite obtener la posici?n GPS parte 1}
+\captionof{figure}{C?digo que permite obtener la posición GPS parte 1}
  \label{fig:GPSpy1} 
 \end{center} 
 
 \begin{center}
   \includegraphics[scale=0.62]{imagenes/GPSpy2.JPG}
-\captionof{figure}{C?digo que permite obtener la posici?n GPS parte 2}
+\captionof{figure}{Código que permite obtener la posición GPS parte 2}
  \label{fig:GPSpy2} 
 \end{center} 
 
 \begin{center}
   \includegraphics[scale=0.62]{imagenes/GPSpy3.JPG}
-\captionof{figure}{C?digo que permite oibtener la posici?n GPS parte 3}
+\captionof{figure}{C?digo que permite oibtener la posici+on GPS parte 3}
  \label{fig:GPSpy3} 
 \end{center} 
 
 \begin{center}
   \includegraphics[scale=0.7]{imagenes/GPSpy4.JPG}
-\captionof{figure}{C?digo que permite obtener la posici?n GPS parte 4}
+\captionof{figure}{Código que permite obtener la posición GPS parte 4}
  \label{fig:GPSpy4} 
 \end{center} 
 
 \textbf{AWS Maps}\\
 
-AWS Maps es un servicio de Amazon Web Services que proporciona capacidades de mapas y geolocalizaci?n en la nube. Permite a crear, visualizar y analizar datos geoespaciales en aplicaciones y servicios.\\
+AWS Maps es un servicio de Amazon Web Services que proporciona capacidades de mapas y geolocalización en la nube. Permite crear, visualizar y analizar datos geoespaciales en aplicaciones y servicios.
+\\
+Se creó un mapa en AWS Maps donde se configuró la apariencia y funcionalidad del mismo, incluyendo los estilos de visualización, las capas de datos y las interacciones del usuario. El propósito de este mapa es mostrar información geográfica, como ubicaciones, rutas, geovallas, puntos de interés, entre otros. La configuración del mapa permitió personalizar su aspecto y adaptarlo a las necesidades del proyecto.\\
 
-Se cre? un mapa en AWS Maps donde se configur? la apariencia y funcionalidad del mismo, incluyendo los estilos de visualizaci?n, las capas de datos y las interacciones del usuario. El prop?sito de este mapa es mostrar informaci?n geogr?fica, como ubicaciones, rutas, geovallas, puntos de inter?s, entre otros. La configuraci?n del mapa permiti? personalizar su aspecto y adaptarlo a las necesidades del proyecto.\\
+Para crear el mapa, se inició sesión en la Consola de administración de AWS. Luego, se accedió a la página de AWS Maps Service en la consola de administración. A continuación, se hizo clic en "Crear mapa" para comenzar a crearlo. En el proceso de creación, se seleccionó un nombre para el mapa y se especificó la región de AWS donde se deseaba crearlo. Seguidamente, se eligió el estilo de mapa y posteriormente se configuraron las capas del mapa, pudiendo agregar capas para mostrar datos como carreteras, edificios, ríos, y también se pudieron agregar datos geoespaciales personalizados como capas personalizadas. Finalmente, se creó el mapa.\\
 
-Para crear el mapa se inici? sesi?n en la Consola de administraci?n de AWS. Luego,se accedi? a la p?gina de AWS Maps Service en la consola de administraci?n. A continuaci?n, se hizo clic en "Crear mapa" para comenzar a crear el mapa.En el proceso de creaci?n, se seleccion? un nombre para el mapa y se especific? la regi?n de AWS donde se deseaba crearlo. Seguidamente, se eligi? el estilo de mapa y posteriormente  se configurar?n las capas del mapa, pudiendo agregar capas para mostrar datos como carreteras, edificios, r?os, y tambi?n pudo agregar sus propios datos geoespaciales como capas personalizadas, finalmente, se  de creo el mapa.\\
+Una vez creado el mapa en AWS Maps, se agregó y configuró un rastreador para realizar el seguimiento del dispositivo llamado "mydevice" en el mapa. Los rastreadores se encargaron de recopilar y actualizar la ubicación de los dispositivos, brindando información en tiempo real.\\
 
-Una vez que creado el mapa en AWS Maps, se agrego y configuro un rastreador para realizar el seguimiento del dispositivo llamado "mydevice" en el mapa. Los rastreadores se encargaron de recopilar y actualizar la ubicaci?n de los dispositivos, brindando informaci?n en tiempo real.\\
+A continuación, se presenta un resumen de cómo se creó un rastreador en AWS Maps:\\
 
-A continuaci?n, se presenta un resumen de c?mo se cre? un rastreador en AWS Maps:\\
-
-En la p?gina del mapa en la consola de administraci?n de AWS Maps, se hizo clic en "Crear rastreador". Se seleccion? un nombre para el rastreador y se especific? la regi?n de AWS donde se deseaba crear. Se procedi? a configurar los detalles del rastreador, como la frecuencia de actualizaci?n de la ubicaci?n de los dispositivos en este caso cada 10m env?a las coordenadas. Finalmente, se hizo clic en "Crear rastreador" para finalizar la configuraci?n del mismo.
+En la página del mapa en la consola de administración de AWS Maps, se hizo clic en "Crear rastreador". Se seleccionó un nombre para el rastreador y se especificó la región de AWS donde se deseaba crearlo. Se procedió a configurar los detalles del rastreador, como la frecuencia de actualización de la ubicación de los dispositivos, en este caso, cada 10 minutos se envían las coordenadas. Finalmente, se hizo clic en "Crear rastreador" para finalizar la configuración del mismo.
 
 
 \begin{center}
@@ -3169,21 +3278,21 @@ En la p?gina del mapa en la consola de administraci?n de AWS Maps, se hizo clic 
 \end{center} 
 
 
-\textbf{Ubicaci?n geogr?fica en la Aplicaci?n web}\\
+\textbf{Ubicación geográfica en la Aplicación web}\\
 
-Para obtener el historial de posiciones de un dispositivo, se defini? la funci?n llamada "getDevicePosition". Posteriormente, se utiliz? la funci?n "client.getDevicePositionHistory" con el argumento "params" para solicitar el historial de posiciones del dispositivo. Despu?s, se cre? la variable "tempPosMarkers" para almacenar los resultados obtenidos al mapear los elementos de "data.DevicePositions". Para cada elemento "devPos" en "data.DevicePositions", se imprimi? su posici?n en la consola y se gener? un nuevo objeto con propiedades "index", "Long" y "lat", que representaban los valores de la posici?n del dispositivo. Este archivo se guard? con la extensi?n .jsx.
+Para obtener el historial de posiciones de un dispositivo, se definió la función llamada "getDevicePosition". Posteriormente, se utilizó la función "client.getDevicePositionHistory" con el argumento "params" para solicitar el historial de posiciones del dispositivo. Después, se creó la variable "tempPosMarkers" para almacenar los resultados obtenidos al mapear los elementos de "data.DevicePositions". Para cada elemento "devPos" en "data.DevicePositions", se imprimió su posición en la consola y se generó un nuevo objeto con propiedades "index", "Long" y "lat", que representaban los valores de la posición del dispositivo. Este archivo se guardó con la extensión .jsx.
 
 \begin{center}
   \includegraphics[scale=0.35]{imagenes/RealTimeMap}
-\captionof{figure}{C?digo para obtener la ubicaci?n geogr?fica en la aplicaci?n web}
+\captionof{figure}{Código para obtener la ubicación geográfica en la aplicación web}
  \label{fig:RealTimeMap} 
 \end{center} 
 
-Obtenci?n de coordenadas geogr?ficas desde la Jetson Nano 
+Obtención de coordenadas geográficas desde la Jetson Nano 
 
 \begin{center}
   \includegraphics[scale=0.53]{imagenes/Mymapaws2.png}
-\captionof{figure}{Coordenadas geogr?ficas en la Jetson Nano}
+\captionof{figure}{Coordenadas geográficas en la Jetson Nano}
  \label{fig:Mymapadet} 
 \end{center} 
 
@@ -3206,10 +3315,10 @@ coordenadas geográficas que recibe la página web
 \end{center} 
 
 
-\subsubsection{Realizar la conexión de la aplicación web con el Módulo Central de Procesamiento}
-La primer configuraci?n que se realiza, fue la habilitación y activación de la red 4G Lte en la Jetson Nano por medio de la interfaz wwan0 \cite{Waveshare} , que nos permite conectarnos a internet por medio de la red celular, se utiliza una SIM Telcel para adquirir GB y poder acceder a internet.\\
+\subsubsection{Conexión de la aplicación web con el Módulo Central de Procesamiento}
+La primer configuración que se realiza, fue la habilitación y activación de la red 4G Lte en la Jetson Nano por medio de la interfaz wwan0 \cite{Waveshare} , que nos permite conectarnos a internet por medio de la red celular, se utiliza una SIM Telcel para adquirir GB y poder acceder a internet.\\
 
-Se abri? una terminal y se ejecutaron los siguinete comandos para abrir minicom por comando:
+Se abre una terminal y se ejecutaron los siguinete comandos para abrir minicom por comando:
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/4glte1.JPG}
@@ -3218,11 +3327,11 @@ Se abri? una terminal y se ejecutaron los siguinete comandos para abrir minicom 
 \end{center} 
 
 
-El siguiente comando se utiliza para verificar la conexi?n.
+El siguiente comando se utiliza para verificar la conexión.
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/4glte2.JPG}
-\captionof{figure}{Verificar conexi?n.}
+\captionof{figure}{Verificar conexión.}
  \label{fig:4glte2} 
 \end{center} 
 
@@ -3291,7 +3400,7 @@ ed 4G LTE activa en la Jetson Nano
  \label{fig:4GLTE} 
 \end{center} 
 
-Conexi?n a AWS Amplify utilizando Boto3
+Conexión a AWS Amplify utilizando Boto3
 
 \begin{center}
   \includegraphics[scale=0.87]{imagenes/ConexionPw.JPG}
@@ -3465,8 +3574,6 @@ Antes de poder publicar nuestra API en AWS Amplify, se necesita definir el Schem
 
 Finalmente, ejecutaremos el comando \emph{amplify push}, el cuál publicará la API hacáa AWS amplify, generando el endpoint correspondiente a dicha API
 
-
-
 Como resultado, tenemos el endpoint de nuestro modelo de GraphQL y nuestra API Key generada por Amplify
 
 \begin{center}
@@ -3558,10 +3665,7 @@ Despues de haber realizado los pasos de la sección \ref{Backend}, si ejecutamos 
 
 
 
-\subsubsection{Implementación de sistema de acceso con credenciales}
-
-
-
+\subsubsection{Sistema de acceso con credenciales}
 
 \textbf{Definición del Esquema}
 
@@ -3599,7 +3703,7 @@ Obteniendo el siguiente menú:
  \label{fig:cognito} 
 \end{center} 
 
-Entrando a nuestra consola de AWS, en la secci?n de Amazon Cognito, se puede observar dos grupos de usuarios, uno de tipo Administrador, el cual puede realizar cambios a la configuración de la aplicación, y otro de tipo de Usuario, el cual sólo puede hacer uso del sistema de inició de sesión y registro ofrecido por Cognito.
+Entrando a nuestra consola de AWS, en la sección de Amazon Cognito, se puede observar dos grupos de usuarios, uno de tipo Administrador, el cual puede realizar cambios a la configuración de la aplicación, y otro de tipo de Usuario, el cual sólo puede hacer uso del sistema de inició de sesión y registro ofrecido por Cognito.
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/pools}
@@ -3625,7 +3729,7 @@ Para comenzar con el archivo de \emph{Queries}se tienen las siguientes funciones
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/getconductor}
-\captionof{figure}{Funci?n getConductor}
+\captionof{figure}{Función getConductor}
  \label{fig:getConductor} 
 \end{center}
 
@@ -3642,7 +3746,7 @@ La función de la figura \ref{fig:listConductors} obtiene todos los datos de todo
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/getincidencia}
-\captionof{figure}{Funci?n getIncidencia}
+\captionof{figure}{Función getIncidencia}
  \label{fig:getIncidencia} 
 \end{center}
 
@@ -3650,7 +3754,7 @@ La función de la figura \ref{fig:getIncidencia} obtiene los datos de una sola In
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/listIncidencias}
-\captionof{figure}{Funci?n listIncidencias}
+\captionof{figure}{Función listIncidencias}
  \label{fig:listIncidencias} 
 \end{center}
 
@@ -3668,25 +3772,25 @@ La función de la figura \ref{fig:createConductor} se encarga de crear el registr
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/updateConductor}
-\captionof{figure}{Funci?n updateConductor}
+\captionof{figure}{Función updateConductor}
  \label{fig:updateConductor} 
 \end{center}
 
-La funci?n de la figura \ref{fig:updateConductor} se encarga de modificar datos del registro de un conductor.
+La función de la figura \ref{fig:updateConductor} se encarga de modificar datos del registro de un conductor.
 
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/deleteconductor}
-\captionof{figure}{Funci?n deleteConductor}
+\captionof{figure}{Función deleteConductor}
  \label{fig:deleteConductor} 
 \end{center}
 
-La funci?n de la figura \ref{fig:deleteConductor} se encarga de eliminar un conductor de la base de datos.
+La función de la figura \ref{fig:deleteConductor} se encarga de eliminar un conductor de la base de datos.
 
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/createIncidencia}
-\captionof{figure}{Funci?n createIncidencia}
+\captionof{figure}{Función createIncidencia}
  \label{fig:createIncidencia} 
 \end{center}
 
@@ -3696,17 +3800,17 @@ Para el archivo de \emph{subscriptions} se tienen la siguiente función:
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/oncreateIncidencia}
-\captionof{figure}{Funci?n oncreateIncidencia}
+\captionof{figure}{Función oncreateIncidencia}
  \label{fig:oncreateIncidencia} 
 \end{center}	
 
-La funci?n de la figura \ref{fig:oncreateIncidencia} se encarga de realizar una consulta cada vez que una Incidencia nueva es dada de alta en la base de datos.
+La función de la figura \ref{fig:oncreateIncidencia} se encarga de realizar una consulta cada vez que una Incidencia nueva es dada de alta en la base de datos.
 
 
 
 Al estar trabajando con GraphQL dentro del proyecto, la manera en que se podrán realizar las operaciones \emph{CRUD - (Create, Read, Update, Delete)}, será mediante funciones JSON.
 
-Para comprobar que la API permite dichas operaciones, se debe ingresar a la consola de AWS y dirigirse a la secci?n de AWS AppSync. 
+Para comprobar que la API permite dichas operaciones, se debe ingresar a la consola de AWS y dirigirse a la sección de AWS AppSync. 
 
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/consola}
@@ -3724,7 +3828,7 @@ Posteriormente se necesita ingresar a la sección de consultas.
 \end{center} 
 
 
-AWS permite elegir si realizar un \emph{query}, \emph{mutation}, o \emph{subscription} mediante c?digo JSON
+AWS permite elegir si realizar un \emph{query}, \emph{mutation}, o \emph{subscription} mediante código JSON
 
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/crear}
@@ -3734,14 +3838,135 @@ AWS permite elegir si realizar un \emph{query}, \emph{mutation}, o \emph{subscri
 
 En la figura \ref{fig:crearConductor} se puede apreciar una sentencia JSON que permite utilizar las funciones previamente creadas para dar de alta un conductor.
 
+\clearpage
+\subsubsection{Maquetación web}
+\textbf{ReactJs}
+
+Para el desarrollo del front-end del presente proyecto, se hará uso de la librería de diseño de ReactJs. ReactJs facilia la creación de componentes reutilizables e interactivos para las interfaces de usuario.
+
+Los componentes que darán lugar a las vistas del presente proyecto son los siguientes:
+
+\begin{itemize}
+
+\item Layout.jsx: Este componente será la vista principal de la Aplicación Web. Se trata de un diseño tipo \emph{dashboard} que contendrá una sección principal que contendrá etiquetas para poder ingresar a las diferentes vistas de la aplicación. Además estará compuesta también de una sección secundaría que mostrará el contenido de dichas vistas.
+
+\item Incidencias.jsx: Este componente se encargará de mostrar todas las incidencias registradas en la base de datos. Las incidencias serán desplegadas en forma de lista.
+
+
+\item Incidencias.jsx: Este componente de mostrar un reporte de incidencia a detalle. Contendrá una ventana que permitirá ver el video del momento de la incidencia registrada. Así como los datos de la fecha y hora. Además de botones para poder confirmar o rechazar la incidencia. Finalmente contendrá el nombre del conductor además de una opción para poder consultar la ubicación en tiempo real del conductor.
+
+\item Ubicación.jsx: Este componente mostrará la ubicación en tiempo real del conductor con ayuda del servicio de diseño de mapas Leaflet.
+
+\item Conductores.jsx: Este componente mostrará todos los conductores registrados en la base de datos en forma de lista. 
+
+\end{itemize}
+
+De acuerdo con los componentes explicados anteriormente, las vistas que contendrá la aplicación web son las siguientes:
+
+\begin{itemize}
+
+\item Página Principal
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/principal}
+\captionof{figure}{Página Principal - Layout.jsx}
+ \label{fig:vista_principal} 
+\end{center} 
+
+\item Reporte de Incidencia
+	
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/incidencia}
+\captionof{figure}{Vista Reporte Incidencia Incidencia - Incidencia.jsx}
+ \label{fig:vista_incidencia} 
+\end{center} 
+
+\item Ubicación
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/ubicacion}
+\captionof{figure}{Vista Ubicacion}
+ \label{fig:vista_ubicacion} 
+\end{center} 
+
+\item Conductores
+
+\begin{center}
+  \includegraphics[scale=0.3]{imagenes/conductores}
+\captionof{figure}{Vista Conductores - Conductores.jsx}
+ \label{fig:vista_conductores} 
+\end{center} 
 
 
 
-\newpage
+\end{itemize}
+\clearpage
+\subsubsection{Enlace de Amazon S3 con el sistema backend}
+
+Utilizando un editor de código, y desde el directorio raíz de la aplicación, se deberá introducir el siguiente comando:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/addstorage}
+\captionof{figure}{Configuración de servicio de almacenamiento S3}
+ \label{fig:addstorage} 
+\end{center} 
+
+Posteriormente, se requiere especificar que tipo de servicio de almacenamiento se integrará a la aplicación (multimedia o base de datos NoSQL). Para el presente proyecto, se utilizará el almacenamiento de contenido multimedia, por lo tanto, se seleccionará dicha opción.
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/content}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center} 
+
+Ingresamos el nombre de nuestro espacio de almacenamiento:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/name}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+Después, se necesita establecer cuantos usuarios, así como cuales podrán acceder a dicho servicio:
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/rules}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/rulesauth}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/guestrules}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+\begin{center}
+  \includegraphics[scale=0.55]{imagenes/push}
+\captionof{figure}{Generación de Endpoint de GraphQL}
+ \label{fig:MongoA} 
+\end{center}
+
+Al ingresar a la consola de servicios de AWS, en la sección de buckets de S3, se puede observar que se encuentra el bucket recién creado llamado \emph{videos175126-dev}.
+
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/buckets}
+\captionof{figure}{Tablas generadas mediante los schemas definidos}
+ \label{fig:cognito} 
+\end{center} 
+
+\clearpage
 
 \subsubsection{Despliegue de la aplicación web}
 
-Para poder alojar y desplegar la aplicaci?n web en un servicio de \emph{hosting}, se utilizar? Amplify Hosting \cite{AwsAmplify}.	
+Para poder alojar y desplegar la aplicación web en un servicio de \emph{hosting}, se utilizará Amplify Hosting \cite{AwsAmplify}.	
 
 Se necesita ingresar a la consola de AWS y seleccionar el servicio de Amplify Hosting
 
@@ -3753,13 +3978,13 @@ Se necesita ingresar a la consola de AWS y seleccionar el servicio de Amplify Ho
 \end{center} 
 
 
-Hosting requiere alg?na fuente de alojamiento de c?digo para poder desplegar la apliaci?n web. En este caso, la aplicaci?n web fue alojada utilizando \emph{Github}, por lo tanto, se selecciona esta opci?n.
+Hosting requiere alguna fuente de alojamiento de código para poder desplegar la apliación web. En este caso, la aplicación web fue alojada utilizando \emph{Github}, por lo tanto, se selecciona esta opción.
 
-Posteriormente, se requiere seleccionar el repositorio el cual ser? alojado, en este caso, el nombre de dicho repositorio es \emph{eb}. A su vez, se selecciona la ramificaci?n \emph{main} para ser desplegada.
+Posteriormente, se requiere seleccionar el repositorio el cual será alojado, en este caso, el nombre de dicho repositorio es \emph{eb}. A su vez, se selecciona la ramificación \emph{main} para ser desplegada.
 
 \begin{center}
   \includegraphics[scale=0.5]{imagenes/repo}
-\captionof{figure}{ramificaci?n de repositorio de Github}
+\captionof{figure}{ramificación de repositorio de Github}
  \label{fig:libraries} 
 \end{center} 
 
@@ -3790,23 +4015,38 @@ https://main.dcst1c83llut3.amplifyapp.com/login
 
 \newpage
 
-\section{Validación y Resultados}
+\section{Validación}
 
 
 
-\subsubsection{Proceso de Validación}
+\subsubsection{Resultados}
 
 
 
 \newpage
 
 
-\section{Conclusiones y aportaciones}
-Con base en los objetivos planteados, se realizó el diseño y análisis del sistema, utilizando la metodología top-down se dividió en módulos y submódulos que nos permitieron profundizar en cada uno de ellos, delimitando los elementos a utilizar y los algoritmos o herramientas que se utilizarán en la implementación del sistema para trabajo terminal 1, en el presente trabajo se obtuvieron los resultados de las investigaciones realizadas para la elección de cada uno de los elementos principales que conforman el sistema y posteriormente el resultado del diseño de cada módulo planteado.
-En el caso del Submódulo de Visión artificial, se decidió desarrollar de manera conjunta la detección decaracterísticas faciales y la clasificación de somnolencia. En un principio estas se plantearon de manera separada, este cambio significó la simplificación del modelo para el análisis y diseño. Para el reconocimiento del rostro, ojos y boca dentro de la imagen se decidió utilizar las funciones Haar que se implementarán a través de las librarías de Open CV mientras que para el reconocimiento de signos de somnolencia se utilizarán las redes neuronales convolucionales en el caso de los ojos y para la boca se hará uso de la relación MOR y puntos de referencia faciales.
-En un principio, se tenía contemplado utilizar la red LoRaWan para la comunicación y transferencia de archivos. Sin embargo, después de las actividades de investigación, se llegó a la conclusión de que esta opción no es viable, ya que el \emph{bitrate} soportado por LoRaWan es insuficiente para la transferencia de archivos multimedia, que es una parte fundamental de nuestro sistema. Por tanto, se optó por utilizar la interfaz de LTE-M, una opción más costosa, pero que cumple los requisitos de una alta tasa de transferencia, buena cobertura, así como una buena integración con la Jetson Nano. De igual manera, al realizar los cálculos para el envío de fotogramas a la estación base sobrepasaba la máxima tasa de datos propuesta con anterioridad así que optamos por el uso de un compresor de video MP4 que tiene una relación de hasta 16:1 pero que no baja la calidad cómo para no poder cumplir con lo requerido en el funcionamiento del sistema y que varias fuentes mencionan que es el mejor formato para la compresión de videos. Para el envío del posicionamiento del GPS, se llegó a un intervalo de tiempo de 10 segundos que garantiza el correcto trazo de la ruta en el mapa de la página web al consultar las velocidades permitidas en la ciudad de México.
-Para el desarrollo de la Estación base, se decidió utilizar la suite de herramientas de Amazon Amplify la cual hace uso de Amplify Hosting y tiene integración directa con Github, esto quiere decir, que los cambios que se realicen en el repositorio se reflejarán de manera automática en la aplicación web. Además AWS Amplify ofrece su servicio de almacenamiento en la nube S3, que será utilizado para el almacenamiento del contenido multimedia mientras que el manejo de credenciales, se eligió Amazon Cognito, que se encargará de administrar las credenciales de acceso a la aplicación. Por otra parte, el gestor de base de datos a implementar será MongoDB el cual nos permite una modelar la base de datos de una manera sencilla y flexible. Para la aplicación web se utilizará Node.js y React los cuales nos permitirán realizar el frontend y backend de dicha aplicación. 
-El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas de somnolencia y alertar al conductor, además de poder obtener la ubicación del conductor en tiempo real la cual será monitoreada desde la aplicación web, que a su vez gestionará la información de los conductores y los reportes de incidencias enviados desde el módulo central de procesamiento. 
+\section{Conclusion y aportaciones}
+
+Con base en los objetivos planteados, se llevó a cabo el diseño y análisis del sistema utilizando la metodología en espiral, que implica un enfoque iterativo y progresivo en el desarrollo. El sistema se dividió en módulos y submódulos, permitiendo un enfoque más detallado en cada uno de ellos. Esta aproximación ayudó a definir los elementos y algoritmos necesarios para la implementación del sistema. En este trabajo, se presentan los resultados de las investigaciones que para la elección de los elementos principales del sistema y, posteriormente, los resultados del diseño de cada módulo propuesto.\\
+
+En el Submódulo de Visión Artificial, se logró la detección del rostro, los ojos y la boca, seguida de la clasificación de la somnolencia. Este proceso consideró la apertura de los ojos y la boca, así como la duración de dichos estados. La utilización de dlib para la detección facial y la relación MOR y EOR a través de puntos de referencia faciales contribuyeron a la implementación para el reconocimiento de signos de somnolencia.\\
+
+En cuanto a la comunicación y transferencia de archivos, se optó por el módulo SIM7600G para Jetson Nano, que integra GNSS para el posicionamiento GPS. La conectividad LTE fue seleccionada, y se configuró un intervalo de tiempo de 10 segundos para el envío de información de posicionamiento GPS.\\
+
+En el proceso de desarrollo de la Estación Base, se tomó la decisión estratégica de implementar la suite de herramientas proporcionada por Amazon Amplify. Esta elección se fundamentó en la eficacia y versatilidad que ofrece Amplify Hosting, al mismo tiempo que permite una integración fluida con GitHub. De esta manera, los cambios realizados en el repositorio se reflejan de manera automática en la aplicación web, agilizando el ciclo de desarrollo y asegurando una sincronización eficiente entre el código fuente y la implementación en producción.\\
+
+Para abordar la gestión de contenido multimedia, se optó por el servicio de almacenamiento en la nube S3 de Amazon Web Services (AWS). Esta solución proporciona una infraestructura escalable y segura para el almacenamiento de archivos, garantizando un acceso rápido y confiable a los recursos multimedia necesarios para la aplicación.\\
+
+En cuanto a la seguridad y gestión de credenciales, la responsabilidad recayó en Amazon Cognito. Este servicio facilita la autenticación de usuarios y la gestión de identidades de manera segura, ofreciendo un entorno robusto para la administración de permisos y credenciales de acceso. La elección de Amazon Cognito contribuye a garantizar la integridad y confidencialidad de la información sensible manejada por la Estación Base.\\
+
+Para el manejo eficiente de la base de datos, se eligió DynamoDB como el sistema de gestión de bases de datos. La elección se basó en su sólida compatibilidad con las herramientas de AWS y su capacidad para integrarse sin problemas en el ecosistema de servicios en la nube.\\
+
+En lo que respecta a la aplicación web, se implementaron tecnologías líderes en el desarrollo web moderno. Node.js fue seleccionado para el desarrollo del backend, proporcionando un entorno de ejecución eficiente y orientado a eventos. Por otro lado, React se utilizó en el frontend, permitiendo la construcción de interfaces de usuario dinámicas y reactivas. Esta combinación de tecnologías garantiza un rendimiento óptimo, así como una experiencia de usuario fluida y atractiva.\\
+
+La implementación del sistema se llevó a cabo de manera iterativa, siguiendo los principios de la metodología en espiral. En cada fase del desarrollo, se llevaron a cabo pruebas y validaciones para asegurar la funcionalidad del sistema. Los resultados obtenidos de estas pruebas fueron evaluados y utilizados como base para realizar ajustes en el diseño como en la implementación.\\
+
+El sistema final permitió detectar síntomas de somnolencia y emitir alertas al conductor. Además, proporciona la ubicación del conductor en tiempo real, permitiendo el monitoreo desde la aplicación web asociada. Esta aplicación desempeña un papel integral al gestionar la información de los conductores y supervisar los reportes de incidencias enviados desde el módulo central de procesamiento. La interacción entre la infraestructura de AWS y las tecnologías Node.js y React en el frontend y backend, respectivamente, contribuyó significativamente a la implementación y resiliencia del sistema en conjunto.
 
 
 \clearpage
@@ -3816,84 +4056,6 @@ El sistema de manera conjunta fue diseñado para ser capaz de detectar síntomas d
 
 \bibliography{Referencias}
 
-\begin{thebibliography}{500} %10 significa el número máximo de items
-%Aquí ponga la bibliografía y referencias usadas
-
-\bibitem{kendall} Kenneth E. Kendall, Julie E. Kendall, \emph{Análisis y Diseño de Sistemas}, Octava Edición , Pearson Educación de México, 2011
-
-
-
-
-\bibitem{Referencia2}
-V.Moret Bonillo, \emph{Fundamentos de Inteligencia Artificial}, Segunda Edición,Santiago de Compostela: Universidad de La Coruña Servicio de Publicaciones, 2005.
-
-
-
-
-
-
-
-
-
-\bibitem{mor} Chandrakant Chandewar, Ashlesha Singh, \emph{Driver Drowsiness Alert System with Effective 
-Feature Extraction}, International Journal for research in emergin science and technology, 2018
-
-
-
-
-
-
-
-\bibitem{algoritmosdeaprendizaje} https://www.alteryx.com/es-419/glossary/supervised-vs-unsupervised-learning\#:~:text=Hay\%20una\%20diferencia\%20clave\%20entre,etiquetados\%20con\%20la\%20respuesta\%20correcta
-
-
-\bibitem{conapra} M. Paez y Emilio Abarca. \emph{Resumen Boletines}, Instituto Mexicano del Transporte.
-https://imt.mx/resumen-boletines.html?IdArticulo=449\&amp;IdBoletin=168 (accedido 
-el 18 de marzo de 2022).
-
-
-
-\bibitem{Referencia3} Ian Sommerville, \emph{Ingeniería de Software}, Novena Edición , Pearson Eduación de México, 2011
-
-
-\bibitem{Referencia5} Aurélien Géron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow}, Segunda Edición , O'Reilly, 2009
-
-
-\bibitem{Referencia7} Kurt Demaagd, Anthony Oliver, Nathan Oostendorp y Katherine Scott \emph{Practical Computer Vision with OpenCV}, Tercera Edición, O'Reilly, 2017
-
-\bibitem{Referncia8}Cuno Plister, \emph{Getting Started with Internet of Things},Primera Edición, O'Reilly, 2011
-
-
-
-\bibitem{Referencia10} S. Pachouly, N. Bhondve, A. Dalvi, V. Dhande y N. Bhamare. "Driver drowsiness detection using machine learning with visual behaviour". https://ijcrt.org/papers/IJCRT2006408.pdf (accedido el 2 de noviembre de 2022).
-
-\bibitem{Nvidia} NVIDIA, "Get Started with the Jetson Nano Developer Kit", NVIDIA Developer, 2019. [Online]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro. [Accedido: Abril 02 2023].
-
-\bibitem{JetPackSDK} nvidia. "JetPack SDK 4.6.3". NVIDIA Developer. https://developer.nvidia.com/jetpack-sdk-463 (accedido el 17 de junio de 2023).
-
-\bibitem{JetStats} Kangalow. "Jtop: The ultimate tool for monitoring NVIDIA jetson devices - jetsonhacks". JetsonHacks. https://jetsonhacks.com/2023/02/07/jtop-the-ultimate-tool-for-monitoring-nvidia-jetson-devices/ (accedido el 17 de junio de 2023).
-
-\bibitem{SwapFile} N. Escobar. "Para qué sirve el Swap en Linux y cómo cambiarlo". Hipertextual. https://hipertextual.com/2015/09/swap-en-linux (accedido el 19 de junio de 2023).
-
-\bibitem{Tensorflow} nvidia. "JetPack SDK 4.6.3". NVIDIA Developer. https://developer.nvidia.com/jetpack-sdk-463 (accedido el 17 de junio de 2023).
-
-\bibitem{CUDA} Nakai-Omer. "GitHub - mdegans/nano\_build\_opencv: Build opencv on nvidia jetson nano". GitHub. https://github.com/mdegans/nano\_build\_opencv (accedido el 20 de junio de 2023).
-
-\bibitem {react} React Dev Team, \emph{React}, React. https://react.dev/ (accedido el 1 de abril de 2023).
-
-\bibitem {waveshare} Waveshare Electronics, \emph{SIM7600G-H 4G for Jetson Nano - Waveshare Wiki}, Waveshare Electronics\url{https://www.waveshare.com/wiki/SIM7600G-H_4G_for_Jetson_Nano_4G_connecting} (accedido el 16 de abril de 2023).
-
-\bibitem {graphql} Facebook Dev Team, \emph{Introduction to GraphQL | GraphQL | A query language for your API} https://graphql.org/learn/ (accedido el 4 de abril de 2023).
-
-
-
-\bibitem{Nvidia} NVIDIA, "Get Started with the Jetson Nano Developer Kit", NVIDIA Developer, 2019. [Online]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro. [Accedido: Abril 02 2023].
-
-\bibitem{sdimage} Nvidia Developer, "Get Started with Jetson Nano Devkit," Nvidia Developer. [En línea]. Disponible: https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#write. [Accedido: 2 de abril de 2023].
-
-\bibitem{JetsonInf}Dusty, N. "Building the Repo - NVIDIA Jetson Inference," GitHub. [Online]. Disponible en: https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md. [Accedido en: 02-abr-2023].
-
-\end{thebibliography}
 
 \end{document}
 
