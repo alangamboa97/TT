@@ -92,7 +92,32 @@
 \contentsline {subsubsection}{\numberline {8.3.8}Enlace de Amazon S3 con el sistema backend}{143}{subsubsection.8.3.8}%
 \contentsline {subsubsection}{\numberline {8.3.9}Despliegue de la aplicaci\'on web}{146}{subsubsection.8.3.9}%
 \contentsline {section}{\numberline {9}Pruebas}{148}{section.9}%
-\contentsline {section}{\numberline {10}Validaci\'on}{149}{section.10}%
-\contentsline {subsubsection}{\numberline {10.0.1}Resultados}{149}{subsubsection.10.0.1}%
-\contentsline {section}{\numberline {11}Conclusion y aportaciones}{150}{section.11}%
-\contentsline {section}{\numberline {12}Referencias}{152}{section.12}%
+\contentsline {subsection}{\numberline {9.1}M\'odulo de Visi\'on Artificial}{148}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Prueba de Detecci\'on Facial:}{148}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}Prueba de Clasificaci\'on de Somnolencia:}{148}{subsubsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.2}M\'odulo de Comunicaciones}{148}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Prueba de Conectividad LTE:}{148}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}Prueba de Posicionamiento GPS:}{148}{subsubsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.3}Estaci\'on Base (Amazon Amplify)}{148}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}Prueba de Integraci\'on con GitHub:}{148}{subsubsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.4}Gesti\'on de Contenido Multimedia y Seguridad}{148}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}Prueba de Almacenamiento en S3:}{148}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}Prueba de Autenticaci\'on y Gesti\'on de Identidades (Amazon Cognito):}{149}{subsubsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.5}Base de Datos (DynamoDB)}{149}{subsection.9.5}%
+\contentsline {subsubsection}{\numberline {9.5.1}Prueba de Rendimiento de DynamoDB:}{149}{subsubsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.6}Aplicaci\'on Web (Amplify y React)}{149}{subsection.9.6}%
+\contentsline {subsubsection}{\numberline {9.6.1}Prueba de Rendimiento del Backend:}{149}{subsubsection.9.6.1}%
+\contentsline {subsubsection}{\numberline {9.6.2}Prueba de Interfaz de Usuario (Frontend React):}{149}{subsubsection.9.6.2}%
+\contentsline {subsection}{\numberline {9.7}Pruebas de Integraci\'on del Sistema}{149}{subsection.9.7}%
+\contentsline {subsubsection}{\numberline {9.7.1}Prueba de Interacci\'on entre M\'odulos:}{149}{subsubsection.9.7.1}%
+\contentsline {subsubsection}{\numberline {9.7.2}Prueba de Alertas y Monitoreo en Tiempo Real:}{149}{subsubsection.9.7.2}%
+\contentsline {subsection}{\numberline {9.8}Evaluaci\'on del Sistema Final}{149}{subsection.9.8}%
+\contentsline {subsubsection}{\numberline {9.8.1}Prueba de Funcionalidad Integral:}{149}{subsubsection.9.8.1}%
+\contentsline {subsubsection}{\numberline {9.8.2}Prueba de Resiliencia del Sistema:}{149}{subsubsection.9.8.2}%
+\contentsline {subsubsection}{\numberline {9.8.3}Prueba de Seguridad Integral:}{150}{subsubsection.9.8.3}%
+\contentsline {subsubsection}{\numberline {9.8.4}Prueba de Usabilidad:}{150}{subsubsection.9.8.4}%
+\contentsline {subsection}{\numberline {9.9}Resultados y Ajustes:}{150}{subsection.9.9}%
+\contentsline {section}{\numberline {10}Validaci\'on}{151}{section.10}%
+\contentsline {subsubsection}{\numberline {10.0.1}Resultados}{151}{subsubsection.10.0.1}%
+\contentsline {section}{\numberline {11}Conclusion y aportaciones}{152}{section.11}%
+\contentsline {section}{\numberline {12}Referencias}{154}{section.12}%
