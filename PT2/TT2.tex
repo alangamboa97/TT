@@ -162,6 +162,17 @@ A continuación, se describen los alcances de la propuesta de solución:
 \clearpage
 \subsection{Escenario de pruebas}
 
+De acuerdo a los objetivos especificos se evaluara. 
+
+\begin{itemize}
+\item El sistema de visión artificial sea capaz de detectar somnolencia.
+\item Alertar al conductor en caso de detectar incidencia.
+\item Elaboración de incidencia.
+\item Coneción entre el sistema de visión artificial y el sistema de administración. 
+\item Visualización en tiempo real de la ubicación GPS del conductos usando redes de telecomunicaciones móviles.
+\item Funcionalidad del sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
+\end{itemize}
+
 Las pruebas se dividirán en dos fases:\\
  
 \textbf{Fase 1:}
@@ -169,27 +180,6 @@ Las pruebas se dividirán en dos fases:\\
 En la primera fase se probará el sistema de somnolencia y el sistema de comunicaciones de manera separada, con el propósito de analizar los resultados obtenidos. El sistema de detección de somnolencia será colocado dentro del vehículo, sin embargo, dicho vehículo permanecerá estacionado y con el motor apago, esto con el fin de realizar pruebas de la precisión del sistema y poder ajustar parámetros en caso de ser necesario.\\   
 
 Estado de los ojos:  
-
--bostezos por minuto 
--arpadeos por minuto 
--ojos cerrados 
--duracion de los ojos 
-
-De acuerdo a los objetivos especificos se evaluara. 
-
-\begin{itemize}
-\item El sistema de visión artificial sea capaz de detectar somnolencia.
-\item alertar al conductor en caso de detectar incidencia 
-\item Evaluar incidencia 
-
-\item  interconexión entre el sistema de visión artificial y el sistema de administración. 
-
-\item Visualización en tiempo real de la ubicación GPS del conductos usando redes de telecomunicaciones móviles.
-\item Funcionalidad del sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
-
-\end{itemize}
-
-
 
 \begin{itemize}
 \item Abiertos, cerrados. 
@@ -211,7 +201,7 @@ Para el sistema de administración, se probará la aplicación web que incluye el a
 
 En la segunda fase, se probará el sistema completo con el vehículo en movimiento, donde el sistema estará monitoreando el estado de somnolencia del conductor durante el trayecto. 
 \\
-Para el sistema de administración, se corroborará que, en los casos en que el sistema de somnolencia detecte una incidencia, esta será enviada correctamente y podrá ser visualizada desde el sistema de administración. A su vez, se constatará que la información de la ubicación geográfica del sujeto de prueba esté disponible en tiempo real.a información de la ubicación geográfica del sujeto de prueba esté disponible en tiempo real.  
+Para el sistema de administración, se corroborará que, en los casos en que el sistema de somnolencia detecte una incidencia, esta será enviada correctamente y podrá ser visualizada desde el sistema de administración. A su vez, se constatará que la información de la ubicación geográfica del sujeto de prueba esté disponible en tiempo real. 
 
 \subsection{Justificación}
 
@@ -305,9 +295,16 @@ Jetson Nano es una computadora pequeña y poderosa que permite ejecutar múltiples
 
 \subsubsection{Visión Artificial}
 
-La visión artificial es un campo de la IA que permite que las computadoras y los sistemas obtengan información significativa de imágenes digitales, videos y otras entradas visuales, y tomen acciones o hagan recomendaciones basadas en esa información. La visión artificial necesita de muchos datos. Ejecuta análisis de datos una y otra vez hasta identificar diferencias y, finalmente, reconocer imágenes \cite{IBMvision}.
+La visión artificial constituye un dominio de la inteligencia artificial dedicado a capacitar a las computadoras y sistemas para extraer información valiosa de imágenes digitales, videos y otras fuentes visuales, con el propósito de tomar decisiones o realizar recomendaciones. Este campo depende en gran medida de la disponibilidad de datos abundantes. A través de iterativos análisis de datos, la visión artificial realiza comparaciones repetidas hasta lograr identificar discrepancias y, en última instancia, reconocer patrones visuales en las imágenes. \cite{IBMvision}.
 
-La visión artificial es una tecnología que utilizan las máquinas para reconocer automáticamente las imágenes y describirlas de manera precisa y eficiente.Las aplicaciones de visión artificial utilizan inteligencia artificial y el machine learning (IA/ML) para procesar estos datos con precisión para la identificación de objetos y el reconocimiento facial, así como para la clasificación, la recomendación, el monitoreo y la detección \cite{IAaws}
+La visión artificial se refiere a la habilidad de los sistemas computacionales para analizar y obtener información significativa a partir de imágenes y videos. Al emplear técnicas de aprendizaje profundo, las computadoras pueden interpretar las imágenes de manera análoga a la capacidad humana \cite{AP}. Este campo de estudio presenta diversas aplicaciones prácticas, algunas de las cuales incluyen: 
+
+\begin{itemize}
+  \item Moderación de contenido: eliminación automática de material inseguro o inapropiado en archivos de imágenes y videos.
+  \item Reconocimiento facial: identificación de rostros y reconocimiento de características como la apertura de los ojos, la presencia de gafas y la existencia de vello facial.
+  \item Clasificación de imágenes: identificación de elementos como logotipos de marcas, prendas de vestir, equipo de seguridad y otros detalles visuales en la imagen.
+\end{itemize}
+
 
 %\subsubsection{Red Neuronal}
 
@@ -426,6 +423,13 @@ La visión artificial es una tecnología que utilizan las máquinas para reconocer 
 %\end{center}
 
 %Después de que cada clasificador débil es seleccionado, los \emph{data points} que han sido clasificados de manera incorrecta aumentan su peso. El clasificador final es una combinacion lineal de los clasificadores débiles \cite{viola}.
+\subsubsection{Aprendizaje Profundo}
+
+El aprendizaje profundo constituye un enfoque dentro del ámbito de la inteligencia artificial (IA) que busca capacitar a las computadoras para procesar información de manera análoga al cerebro humano.  Los modelos de aprendizaje profundo son capaces de reconocer patrones complejos en imágenes, textos, sonidos y otros datos, a fin de generar información y predicciones precisas. Es posible utilizar métodos de aprendizaje profundo para automatizar tareas que habitualmente requieren inteligencia humana, como la descripción de imágenes o la transcripción a texto de un archivo de sonido. Los modelos de aprendizaje profundo son archivos informáticos que los científicos de datos han entrenado para realizar tareas específicas mediante un algoritmo o conjunto predefinido de pasos. Estas herramientas son empleadas por empresas para analizar datos y realizar predicciones en diversas aplicaciones \cite{AP}.
+%\subsubsection{MOR}
+
+%\subsubsection{EOR} 
+
 
 
 \subsubsection{\emph{Content Delivery Network}}
@@ -664,7 +668,7 @@ Una vez que se tengan los datos recibidos por el módulo de procesamiento, este m
  
 \textbf{Módulo de Estación Base}\\
 
-Este módulo estará compuesto por una aplicación web y una base de datos que se encargará de almacenar las incidencias de los conductores para ser corroborados por un administrador posteriormente, esto con la intención de descartar un falso positivo y realizar los ajustes necesarios al sistema. La plicación web brindará una base de datos con registros de incidencias por conductor y estadisctica semanal de incidencias que se presenten durante dicho periodo. Asi mismo se podrá consultar la posición gps del conductor. 
+Este módulo estará compuesto por una aplicación web y una base de datos que se encargará de almacenar las incidencias de los conductores para ser corroborados por un administrador posteriormente, esto con la intención de descartar un falso positivo y realizar los ajustes necesarios al sistema. La plicación web brindará una base de datos con registros de incidencias por conductor y estadisctica semanal de incidencias que se presenten durante dicho periodo. Asi mismo se podrá consultar la posición gps del conductor.
 
 \subsection{Análisis y delimitación de la zona geográfica}
 El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas dentro de la Ciudad de México. Debido a que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Por tanto, se decidió utilizar redes móviles celulares para cumplir con dicho requerimiento.
@@ -1817,7 +1821,6 @@ A continuación se listan los requerimientos Funcionales obtenidos
 
 \begin{itemize}
 
-
 \item \textbf{Análisis de Requerimientos Funcionales}
 \begin{table}[H]
 \centering
@@ -2528,7 +2531,7 @@ En el siguiente Diagrama de Actividades se describen las actividades y sus inter
 \end{center}
 
 \begin{center}
-  \includegraphics[scale=.5]{imagenes/flujo_vision}
+  \includegraphics[scale=.5]{imagenes/DiagramaFlujo_Vision.png}
 \captionof{figure}{Diagrama de Flujo - Submódulo de Visión Artificial}
  \label{fig:landmark}
 \end{center}
@@ -3052,16 +3055,155 @@ El archivo se modificó colocando la variable JOBS=4 después de haber modificado 
 \end{center}  
 
 
-\subsubsection{Implementar algoritmo para la detección del rostro y ojos }
+\subsubsection{Implementar algoritmo para la detección del rostro}
+
+En este fragmento de código, se lleva a cabo la inicialización de la cámara y se configura la instancia para la captura de video. Adicionalmente, se realiza la inicialización del detector de rostros, un componente esencial para el análisis de imágenes en el contexto de la aplicación. La configuración de la cámara se realiza mediante la cadena gst\_str utilizando GStreamer, y posteriormente se establece la instancia de captura de video. Además, se emplea el detector de rostros proporcionado por la biblioteca Dlib, el cual desempeñará un papel fundamental en la detección y análisis de rostros en los fotogramas capturados por la cámara.
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/DetecRostro1.JPG}
+\captionof{figure}{Inicialización de cámara y detector.}
+ \label{fig:FaceDetec} 
+\end{center}  
+
+gst\_str contiene una cadena de configuración para la cámara utilizando GStreamer, una herramienta para construir flujos multimedia. Esta configuración está diseñada para trabajar con cámaras Nvidia Jetson, específicamente para el formato de memoria "NV12", el cual es un formato de píxeles comúnmente utilizado en dispositivos Nvidia y con una resolución de 1280x720 píxeles. Esto indica que cada fotograma capturado tendrá una dimensión de 1280 píxeles de ancho por 720 píxeles de alto.
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/detecrostro2.JPG}
+\captionof{figure}{Implementación del detector de rostro.}
+ \label{fig:FaceDetec2} 
+\end{center}  
+
+El código anterior implementa un bucle infinito para capturar continuamente frames de video desde una cámara. Para cada frame capturado, realiza las siguientes acciones:
+
+\begin{enumerate}
+    \item Calcula el tiempo actual y el número de fotogramas por segundo (FPS) con el objetivo de mostrar esta información en la esquina superior derecha del video.
+    
+    \item Convierte el frame a escala de grises para facilitar la detección de rostros.
+    
+    \item Utiliza un detector de rostros para identificar caras en el frame en escala de grises.
+    
+    \item Itera sobre las caras detectadas y dibuja un rectángulo verde alrededor de cada cara en el frame original.
+\end{enumerate}
+
+Este conjunto de operaciones se repite de forma continua, lo que resulta en un análisis en tiempo real de los frames de video para la detección y resaltado de rostros mediante rectángulos verdes en cada cara encontrada. Además, se muestra el FPS en el video para proporcionar información adicional sobre la velocidad de captura de los frames. El bucle se detiene si no se puede capturar un nuevo frame.
 
 
 \clearpage
-\subsubsection{Implementar puntos faciales en el rostro y la metrica MOR}
+\subsubsection{Implementar puntos de referencia en boca y ojos}
 
+Esta sección del código se encarga de detectar y marcar puntos de referencia faciales, conocidos como "landmarks", en las regiones de la boca y los ojos de cada cara detectada. Los landmarks se obtienen utilizando un predictor específico y se representan como coordenadas en un formato NumPy. Luego, se seleccionan los landmarks correspondientes a la boca, desde el índice 48 hasta el índice 59, lo cual abarca la región de la boca, y se dibuja un contorno alrededor de esta en el frame original. Además, se evalúa si los ojos están parpadeando mediante una función llamada blinked. Para el ojo izquierdo, se utilizan los landmarks desde el índice 36 hasta el índice 41, y para el ojo derecho, se emplean los landmarks desde el índice 42 hasta el índice 47 para calcular una métrica de parpadeo.
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/puntosreferencia.JPG}
+\captionof{figure}{Puntos de referencia facial.}
+ \label{fig:FaceDetec3} 
+\end{center}  
+
+
+\subsubsection{Implementar metrica MOR y medición de parpadeos}
+
+Se crearon las siguientes funciones que tienen como objetivo realizar análisis relacionados con la detección de parpadeo y la medición de la apertura de la boca.
+
+\begin{itemize}
+\item Función \texttt{cal\_yawn}:
+Esta función toma los \emph{landmarks} faciales como entrada, identifica y extrae los \emph{landmarks} que representan la parte superior e inferior de los labios, calcula el promedio de las posiciones de estos landmarks superiores e inferiores, y finalmente, calcula la distancia euclidiana entre estos dos puntos promedio, proporcionando así una medida de la apertura de la boca.
+
+\item Función \texttt{compute}
+Esta función calcula la distancia euclidiana entre dos puntos dados, representados por las variables \texttt{ptA} y \texttt{ptB}.
+
+\item Función blinked
+La función \texttt{blinked} toma como entrada seis \emph{landmarks} correspondientes a los ojos, calcula las distancias entre puntos específicos para evaluar si el ojo está parpadeando, y retorna un valor numérico. Devuelve:
+\begin{itemize}
+\item 2 si el parpadeo es significativo.
+\item 1 si el parpadeo es moderado.
+\item 0 si no se detecta un parpadeo significativo.
+\end{itemize}
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/funcionesdetec.JPG}
+\captionof{figure}{Implementación de la metrica MOR y medición de parpadeos.}
+ \label{fig:FaceDetec4} 
+\end{center}  
+
+\newpage
+\subsubsection{Implementar algoritmo para la detección somnolencia}
+
+Esta sección implementa el código para realizar el seguimiento y análisis en tiempo real de un flujo de video capturado por una cámara para clasificar un estado de somnolencia.
+
+\begin{enumerate}
+\item Cálculo de la Apertura de la Boca:
+
+\begin{itemize}
+  \item Utiliza la función \texttt{cal\_yawn} para calcular la distancia entre los landmarks asociados a la parte superior e inferior de los labios, proporcionando una medida de la apertura de la boca.
+  \item Compara esta medida con un umbral (\texttt{yawn\_thresh}) para determinar si se ha superado, indicando la posibilidad de un bostezo.
+  \item Registra el inicio y finalización de un bostezo, calculando su duración.
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/Somnolencia1.JPG}
+\captionof{figure}{Cálculo de la Apertura de la Boca.}
+ \label{fig:Somnolencia1} 
+\end{center} 
+
+Detección de Parpadeo:
+
+\begin{itemize}
+  \item Utiliza la función \texttt{blinked} para evaluar si los ojos están parpadeando.
+  \item Registra el número de parpadeos significativos y realiza acciones específicas según el estado de alerta del sujeto (dormido, somnoliento o activo).
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/Somnolencia2.JPG}
+\captionof{figure}{Detección de Parpadeo.}
+ \label{fig:Somnolencia2} 
+\end{center} 
+
+Alertas y Grabación de Video:
+
+\begin{itemize}
+  \item Genera alertas en casos específicos, como detectar más de dos bostezos por minuto.
+  \item Inicia la grabación de video en situaciones de interés, como cuando somnolencia.
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/Somnolencia12.JPG}
+\captionof{figure}{Detección de Parpadeo.}
+ \label{fig:Somnolencia2} 
+\end{center} 
+
+
+Visualización en Tiempo Real:
+
+\begin{itemize}
+  \item Dibuja un círculo en cada landmark facial detectado para visualizar los puntos de referencia en el rostro.
+  \item Muestra el estado actual (dormido, somnoliento, activo) y la duración de los bostezos en el video.
+\end{itemize}
+
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/Somnolencia3.JPG}
+\captionof{figure}{Visualización en Tiempo Real.}
+ \label{fig:Somnolencia2} 
+\end{center} 
+
+Conteo de Bostezos y FPS:
+
+\begin{itemize}
+  \item Realiza un seguimiento del conteo de bostezos por minuto.
+  \item Muestra los fotogramas por segundo (FPS) en la esquina superior derecha del video.
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/Somnolencia4.JPG}
+\captionof{figure}{Visualización de FPS.}
+ \label{fig:Somnolencia2} 
+\end{center} 
+
+\end{enumerate}
 
 
 \subsubsection{Integración de los periféricos y accesorios al Módulo Central de Procesamiento}
-
 
 Se integraron los periféricos dentro del contenedor para la Jetson Nano.
 
@@ -3070,8 +3212,8 @@ El contenedor de la Jetson Nano es una carcasa de metal con un ventilador de ref
 Esta carcasa ofrece varias características adicionales, como soporte para reinicio de cámara, un botón de encendido y compatibilidad específica con la cámara Waveshare IMX219 Series. Además, el contenedor también tiene soporte para adaptadores inalámbricos Wireless-AC8265, lo que permite la conectividad Wi-Fi y Bluetooth en la Jetson Nano. Otra característica destacada es la compatibilidad con el módulo de placa de expansión LTE CAT4 basado en SIM7600G-H. Este módulo proporciona capacidades de comunicación inalámbrica, como llamadas telefónicas, mensajes de texto (SMS) y posicionamiento GPS utilizando los sistemas BeiDou y Glonass.
 
 \begin{center}
-  \includegraphics[scale=0.25]{imagenes/Perifericos1.jpeg}
-\captionof{figure}{Carcasa sin armar}
+  \includegraphics[scale=0.11]{imagenes/Perifericos1.jpeg}
+\captionof{figure}{Carcasa sin armar.}
  \label{fig:crearConductor} 
 \end{center} 
 
@@ -3079,62 +3221,10 @@ Esta carcasa ofrece varias características adicionales, como soporte para reinic
 Contenedor de la Jetson Nano junto con los periféricos integrados:
 
 \begin{center}
-  \includegraphics[scale=0.3]{imagenes/Perifericos2.jpeg}
-\captionof{figure}{Carcasa armada con la Jetson Nano y periféricos integrados}
+  \includegraphics[scale=0.11]{imagenes/Perifericos2.jpeg}
+\captionof{figure}{Carcasa armada con la Jetson Nano y periféricos integrados.}
  \label{fig:crearConductor} 
 \end{center} 
-
-\newpage
-\subsubsection{Aplicar el algoritmo de detección con el módulo central de procesamiento}
-
-Se cargó el modelo de red neuronal convolucional (CNN) previamente entrenado para la detección de ojos cerrados y abiertos. sinembargo,debido a los recursos limitados de la jetson nano, los fps resultantes en tiempo real al correr el script fueron de 1 a 3 fps. Como resultado perdemos capturas por segundo del rostro que brindan información para la predicción en tiempo real. Por tanto se optó por una alternativa que utiliza menos recursos de la GPU para poder realizar más capturas por segundo y no perder información que permita detectar de una forma correcta los ojos y la boca del conductor y que a su vez permita medir la somnolencia.  
-Se realizó una captura del video y se procedió a detectar el rostro del conductor, posteriormente se aplicó una malla de puntos faciales la cual nos permite tomar los puntos requeridos, en este caso se uso los puntos que referencian el ojo derecho, el ojo izquierdo y la boca para medir la distancia entre puntos y detectar si se encuentran abiertos o cerrados. Posteriormente se aplicó la logica que permite medir la duración de los parpadeos y bostezos, tomando en cuenta la duración se establecieron parámetros definidos que permitan detectar un posible caso de somnolencia. 
-
-\begin{center}
-  \includegraphics[scale=0.7]{imagenes/CodigoSomnolencia1.JPG}
-\captionof{figure}{Código de somnolencia parte 1}
- \label{fig:Somnolencia1} 
-\end{center}
-
-\begin{center}
-  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia2.JPG}
-\captionof{figure}{Código de somnolencia parte 2}
- \label{fig:Somnolencia1} 
-\end{center}
-
-\begin{center}
-  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia3.JPG}
-\captionof{figure}{Código de somnolencia parte 3}
- \label{fig:Somnolencia1} 
-\end{center}
-
-\begin{center}
-  \includegraphics[scale=0.6]{imagenes/CodigoSomnolencia4.JPG}
-\captionof{figure}{Código de somnolencia parte 4}
- \label{fig:Somnolencia1} 
-\end{center}
-
-El archivo respecto a la métrica MOR \cite{68LandPoints}, se complementó con la grabación del video y el envió del video hacía la página web.
-
-\begin{center}
-  \includegraphics[scale=0.6]{imagenes/MORcodigo1.JPG}
-\captionof{figure}{ Grabación del video y el envió del video hacía la página web}
- \label{fig:Somnolencia1} 
-\end{center}
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/MOR2.jpeg}
-\captionof{figure}{Prueba de la metrica MOR 1}
- \label{fig:crearConductor} 
-\end{center} 
-
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/MOR1.jpeg}
-\captionof{figure}{Prueba de la metrica MOR 2}
- \label{fig:crearConductor} 
-\end{center} 
-
 
 
 \subsection{Módulo de Comunicaciones}
@@ -3999,17 +4089,8 @@ https://main.dcst1c83llut3.amplifyapp.com/login
 \end{center} 
 
 
-\newpage
 
-
-
-\newpage
-
-
-
-
-
-\newpage
+\clearpage
 
 \section{Pruebas}
 \subsection{Módulo de Visión Artificial}

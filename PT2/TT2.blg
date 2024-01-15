@@ -11,37 +11,35 @@ Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: Referencias.bib
 Warning--entry type for "GeolocalizacionVehiculos" isn't style-file defined
---line 56 of file Referencias.bib
+--line 65 of file Referencias.bib
 Warning--entry type for "shannon" isn't style-file defined
---line 173 of file Referencias.bib
-I was expecting a `,' or a `}'---line 338 of file Referencias.bib
+--line 182 of file Referencias.bib
+I was expecting a `,' or a `}'---line 347 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 346 of file Referencias.bib
+I was expecting a `,' or a `}'---line 355 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 354 of file Referencias.bib
+I was expecting a `,' or a `}'---line 363 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 362 of file Referencias.bib
+I was expecting a `,' or a `}'---line 371 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 370 of file Referencias.bib
+I was expecting a `,' or a `}'---line 379 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-Repeated entry---line 391 of file Referencias.bib
+Repeated entry---line 400 of file Referencias.bib
  : @misc{Referencian17
  :                    ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "IAaws"
 Warning--I didn't find a database entry for "mor"
 Warning--I didn't find a database entry for "Nvidia"
-Warning--I didn't find a database entry for "68LandPoints"
 Warning--I didn't find a database entry for "Boto3"
 Warning--I didn't find a database entry for "dom"
 Warning--I didn't find a database entry for "dynamo"
@@ -64,45 +62,45 @@ Name 1 in "Vilca, G., and Eduardo, J." has a comma at the end for entry Estadode
 while executing---line 2403 of file ieeetran.bst
 
 Done.
-You've used 53 entries,
+You've used 54 entries,
             4087 wiz_defined-function locations,
-            1113 strings with 17517 characters,
-and the built_in function-call counts, 22254 in all, are:
-= -- 1890
-> -- 332
+            1113 strings with 17590 characters,
+and the built_in function-call counts, 22639 in all, are:
+= -- 1925
+> -- 336
 < -- 20
-+ -- 162
-- -- 76
-* -- 707
-:= -- 3998
-add.period$ -- 137
-call.type$ -- 53
-change.case$ -- 99
++ -- 164
+- -- 77
+* -- 714
+:= -- 4070
+add.period$ -- 141
+call.type$ -- 54
+change.case$ -- 101
 chr.to.int$ -- 42
-cite$ -- 53
-duplicate$ -- 1818
-empty$ -- 2050
-format.name$ -- 90
-if$ -- 4999
+cite$ -- 54
+duplicate$ -- 1849
+empty$ -- 2086
+format.name$ -- 91
+if$ -- 5086
 int.to.chr$ -- 0
-int.to.str$ -- 53
-missing$ -- 441
-newline$ -- 198
-num.names$ -- 53
-pop$ -- 1156
+int.to.str$ -- 54
+missing$ -- 449
+newline$ -- 201
+num.names$ -- 54
+pop$ -- 1176
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1791
+skip$ -- 1824
 stack$ -- 0
-substring$ -- 215
-swap$ -- 1139
+substring$ -- 217
+swap$ -- 1160
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 53
+type$ -- 54
 warning$ -- 0
-while$ -- 60
-width$ -- 55
-write$ -- 500
+while$ -- 61
+width$ -- 56
+write$ -- 509
 (There were 13 error messages)
