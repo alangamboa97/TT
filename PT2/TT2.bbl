@@ -21,10 +21,9 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{Espiral}
-Sitesbay, ``What is spiral model,'' Disponible en:
-  \url{https://www.sitesbay.com/software-engineering/se-spiral-model}, s/f,
-  consultado el 26 de enero de 2022.
+\bibitem{Metodologia}
+B.~W. Boehm, ``A spiral model of software development and enhancement,''
+  \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
 
 \bibitem{JetsonNano}
 NVIDIA, ``Nvidia jetson nano,'' Disponible en:
@@ -76,10 +75,6 @@ G.~M. Agustina, S.~J. D., C.~J. A., and C.~W. H., ``Sistemas de deteccion de
 V.~E.~R. A., ``Influencia de un sistema de geolocalizacion en el control y
   monitoreo de vehiculos con dispositivos gps en una empresa logistica,'' 2017,
   \url{https://repositorio.ucv.edu.pe/bitstream/handle/20.500.12692/17105/Vilca_ERA.pdf?sequence=1&isAllowed=y}.
-
-\bibitem{Metodologia}
-B.~W. Boehm, ``A spiral model of software development and enhancement,''
-  \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
 
 \bibitem{Intensidad}
 D.~W.~R. Roehrs~T, Carskadon~MA, ``T. daytime sleepiness and alertness,''

@@ -160,6 +160,60 @@ A continuación, se describen los alcances de la propuesta de solución:
 \end{itemize}
 
 \clearpage
+
+
+\subsection{Justificación}
+
+Actualmente, se han desarrollado diferentes avances tecnológicos tales como el internet de las cosas (IoT) el cual permite la comunicación con dispositivos y da pauta al desarrollo de sistemas inteligentes que resuelven problemas complejos de manera automática y eficaz en ambientes específicos, la inteligencia artificial, el machine learning, el procesamiento masivo de datos en menor tiempo, entre muchos otros. 
+\\\\
+El sistema propuesto será capaz de detectar la somnolencia apoyado en el análisis de los aspectos fisiológicos del rostro, donde se delimitan los datos biométricos del estado de somnolencia mediante el uso de visión artificial. Estos datos serán posteriormente enviados a una estación base con ayuda de redes inalámbricas. 
+\\
+Al haber accidentes de tránsito por somnolencia en México, este proyecto tiene como objetivo implementar un sistema de detección de somnolencia mediante visión artificial y el uso de una alarma auditiva para que el conductor se mantenga alerta. Además, se busca integrar un sistema que permita el monitoreo del vehículo mediante la geolocalización del mismo y un sistema interactivo con el usuario. Este sistema permitirá visualizar las incidencias que puedan presentarse por parte de los conductores, con el fin de obtener registros que nos permitan realizar estadísticas y recabar información relevante para retroalimentar el rendimiento de cada conductor.
+\\ 
+
+Ofreciendo así un sistema portátil de monitoreo, detección de somnolencia y alerta, que incluye una aplicación web con registros detallados de incidencias y estadísticas para evaluar la eficiencia de los conductores.
+
+
+
+\subsection{Objetivos}
+
+\subsubsection{Objetivo General}
+
+Diseñar un sistema portátil para la detección de síntomas de somnolencia y alerta del conductor. Además de ser capaz de obtener la ubicación del conductor en tiempo real para ser monitoreada desde una aplicación web que a su vez permita gestionar y visualizar los reportes de incidencias del mismo. 
+
+\subsubsection{Objetivos Específicos}
+
+\begin{itemize}
+\item Diseñar un sistema de visión artificial que sea capaz de detectar y alertar la somnolencia en conductores.
+\item Integrar herramienttas de geolocalización en tiempo real usando redes de telecomunicaciones móviles.
+\item Diseñar un sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
+\item Integrar un sistema de comunicaciones que permita la interconexión entre el sistema de visión artificial y el sistema de administración. 
+\end{itemize}
+
+
+\subsection{Metodología}
+
+\textbf{Espiral} 
+
+El artículo de Barry Boehm \cite{Metodologia}, publicado en 1986, introduce la Metodología Espiral como un enfoque para el desarrollo de software que combina elementos de modelos de desarrollo en cascada y prototipos. La metodología espiral se destaca por su enfoque flexible y adaptativo, permitiendo ajustes a lo largo del ciclo de desarrollo.
+\\
+La Metodología Espiral se basa en la premisa de que el desarrollo de software es un proceso iterativo y evolutivo. Se propone un modelo en espiral dividido en cuatro cuadrantes: determinación de objetivos, evaluación de riesgos, desarrollo y planificación. Cada iteración aborda estos cuadrantes de manera secuencial. 
+ 
+\begin{itemize}
+\item En la fase de \textbf{determinación de objetivos}, se establecen metas específicas para la iteración.
+\item La \textbf{evaluación de riesgos} implica identificar y gestionar proactivamente los riesgos asociados con los objetivos establecidos.
+\item   La fase de \textbf{desarrollo} implica la implementación de funcionalidades, utilizando enfoques como prototipos y desarrollo incremental.
+\item  La \textbf{planificación} implica revisar el progreso, ajustar planes según sea necesario y prepararse para la próxima iteración.
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.4]{imagenes/spiral-model.png}
+\captionof{figure}{Modelo espiral del proceso de software. \cite{Metodologia}.}
+ \label{fig:JetsonNano} 
+\end{center} 
+
+De manera general el proyecto se dividió en tres principales módulos los cuales pasarón por las cuatro fases de la metodología. En la primera fase se especificaron los objetivos particulares de cada módulo, posteriormente se propuso un prototipo a partir de la elección de los componentes y algoritmos de cada módulo, en la tercera fase se implementaron los modelos propuestos y finalmente en la última fase se revisaron los resultados. A partir de los resultados obtenidos se realizarón los ajustes necesarios para cumplir el objetivo principal y los objetivos específicos. Los puntos anteriores se desglozan a lo largo del siguiente documento. 
+
 \subsection{Escenario de pruebas}
 
 De acuerdo a los objetivos especificos se evaluara. 
@@ -203,58 +257,7 @@ En la segunda fase, se probará el sistema completo con el vehículo en movimiento
 \\
 Para el sistema de administración, se corroborará que, en los casos en que el sistema de somnolencia detecte una incidencia, esta será enviada correctamente y podrá ser visualizada desde el sistema de administración. A su vez, se constatará que la información de la ubicación geográfica del sujeto de prueba esté disponible en tiempo real. 
 
-\subsection{Justificación}
-
-Actualmente, se han desarrollado diferentes avances tecnológicos tales como el internet de las cosas (IoT) el cual permite la comunicación con dispositivos y da pauta al desarrollo de sistemas inteligentes que resuelven problemas complejos de manera automática y eficaz en ambientes específicos, la inteligencia artificial, el machine learning, el procesamiento masivo de datos en menor tiempo, entre muchos otros. 
-\\\\
-El sistema propuesto será capaz de detectar la somnolencia apoyado en el análisis de los aspectos fisiológicos del rostro, donde se delimitan los datos biométricos del estado de somnolencia mediante el uso de visión artificial. Estos datos serán posteriormente enviados a una estación base con ayuda de redes inalámbricas. 
-\\
-Al haber accidentes de tránsito por somnolencia en México, este proyecto tiene como objetivo implementar un sistema de detección de somnolencia mediante visión artificial y el uso de una alarma auditiva para que el conductor se mantenga alerta. Además, se busca integrar un sistema que permita el monitoreo del vehículo mediante la geolocalización del mismo y un sistema interactivo con el usuario. Este sistema permitirá visualizar las incidencias que puedan presentarse por parte de los conductores, con el fin de obtener registros que nos permitan realizar estadísticas y recabar información relevante para retroalimentar el rendimiento de cada conductor.
-\\ 
-
-Ofreciendo así un sistema portátil de monitoreo, detección de somnolencia y alerta, que incluye una aplicación web con registros detallados de incidencias y estadísticas para evaluar la eficiencia de los conductores.
-
-
-\subsection{Metodología}
-
-\textbf{Espiral} 
-
-El artículo de Barry Boehm \cite{Metodologia}, publicado en 1986, introduce la Metodología Espiral como un enfoque para el desarrollo de software que combina elementos de modelos de desarrollo en cascada y prototipos. La metodología espiral se destaca por su enfoque flexible y adaptativo, permitiendo ajustes a lo largo del ciclo de desarrollo.
-\\
-La Metodología Espiral se basa en la premisa de que el desarrollo de software es un proceso iterativo y evolutivo. Se propone un modelo en espiral dividido en cuatro cuadrantes: determinación de objetivos, evaluación de riesgos, desarrollo y planificación. Cada iteración aborda estos cuadrantes de manera secuencial. 
-
-\begin{center}
-  \includegraphics[scale=0.4]{imagenes/spiral-model.png}
-\captionof{figure}{Modelo en espiral \cite{Espiral}.}
- \label{fig:JetsonNano} 
-\end{center} 
-
-\begin{itemize}
-\item En la fase de \textbf{determinación de objetivos}, se establecen metas específicas para la iteración.
-\item La \textbf{evaluación de riesgos} implica identificar y gestionar proactivamente los riesgos asociados con los objetivos establecidos.
-\item   La fase de \textbf{desarrollo} implica la implementación de funcionalidades, utilizando enfoques como prototipos y desarrollo incremental.
-\item  La \textbf{planificación} implica revisar el progreso, ajustar planes según sea necesario y prepararse para la próxima iteración.
-\end{itemize}
-  
-El sistema se dividió en módulos, lo que permitió analizarlo por partes. Para cada módulo, se determinaron los objetivos o requisitos que debía cumplir, así como la delimitación, la implementación y la evaluación de los resultados obtenidos.
-
-\subsection{Objetivos}
-
-\subsubsection{Objetivo General}
-
-Diseñar un sistema portátil para la detección de síntomas de somnolencia y alerta del conductor. Además de ser capaz de obtener la ubicación del conductor en tiempo real para ser monitoreada desde una aplicación web que a su vez permita gestionar y visualizar los reportes de incidencias del mismo. 
-
-\subsubsection{Objetivos Específicos}
-
-\begin{itemize}
-\item Diseñar un sistema de visión artificial que sea capaz de detectar y alertar la somnolencia en conductores.
-\item Integrar herramienttas de geolocalización en tiempo real usando redes de telecomunicaciones móviles.
-\item Diseñar un sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
-\item Integrar un sistema de comunicaciones que permita la interconexión entre el sistema de visión artificial y el sistema de administración. 
-\end{itemize}
-
-
-\newpage
+\clearpage 
 \section{Capítulo II: Marco de Referencia}
 
 \subsection{Marco Teórico}
@@ -292,6 +295,7 @@ Jetson Nano es una computadora pequeña y poderosa que permite ejecutar múltiples
  \label{fig:JetsonNano} 
 \end{center} 
 
+\subsubsection{Dispositivo Portátil}
 
 \subsubsection{Visión Artificial}
 
@@ -429,7 +433,13 @@ El aprendizaje profundo constituye un enfoque dentro del ámbito de la inteligenc
 %\subsubsection{MOR}
 
 %\subsubsection{EOR} 
-
+\subsubsection{Lenguaje de programación}
+\subsubsection{Librerías}
+\subsubsection{Aplicación}
+\subsubsection{Frontend}
+\subsubsection{Backend}
+\subsubsection{End point}
+\subsubsection{Web hosting}
 
 
 \subsubsection{\emph{Content Delivery Network}}
@@ -521,6 +531,8 @@ El GPS es una red satelital que cuenta con al menos 30 satélites y que se mantie
 Cuando se solicita el posicionamiento por medio del GPS este envía señales de radio que permiten localizar a los satélites, el centro de comando transmite la información de la órbita, el tiempo y la posición de los otros satélites en el mismo sistema GPS. Estos satélites envían simultáneamente la información de tiempo y órbita a la tierra y finaliza cuando el dispositivo GPS utiliza la información recibida para determinar su localización la cual se interpreta mayormente en dos conjuntos: la latitud y longitud \cite{Geolocalizacion}.
 
 
+
+
 \newpage
 \subsection{Estado del Arte} 
 
@@ -569,7 +581,6 @@ Este proyecto fue realizado por estudiantes de la Escuela Profesional de Ingenie
 \subsubsection{Diseño de un sistema electrónico para detectar la somnolencia en automovilistas por medio de la actividad ocular}
 
 Este trabajo realizado por alumnos de la ESIME Culhuacán en el año 2019 detalla el diseño y la implementación de un sistema que se basa en la fusión de dos señales. Una de ellas proviene de la detección del estado de los ojos utilizando información proveniente de una cámara digital. Para lo anterior, se realiza una segmentación de las regiones de la piel y posteriormente se obtiene la ubicación y el rastero de los ojos. La segunda señal se obtiene a partir de los datos proveniente de un acelerómetro colocado sobre la cabeza del conductor, cuya función es detectar los cabeceos asociados con somnolencia. El procesamiento de dicha señal del acelerómetro se lleva a cabo con la ayuda de la Transformada Wavelet Discreta. Estas dos señales son correlacionadas para tener como salida dos alarmas secuenciales que son percibidas por el conductor. La primera le alerta sobre un primer estado de posible somnolencia y la segunda acciona un control difuso para el control momentáneo del auto y la corrección del volante para el seguimiento del carril. Los resultados obtenidos por este trabajo demuestran una eficacia para la detección de ojos cerrados del 86\% y para la detección de cabeceo superior al 90\% \cite{EstadodelAarte10}.
-
 
 \subsubsection{Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones }
 
@@ -629,6 +640,20 @@ persona designada \cite{EstadodelAarte17}.
 
 \subsubsection{Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística}
 Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de manera profunda las características y detalles de la tecnología GPS para determinar la influencia de un sistema de geolocalización en el control y monitoreo de vehículos con esta tecnología en una empresa logística \cite{EstadodelAarte18}. 
+
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{0.4\linewidth}|p{0.12\linewidth}|p{0.08\linewidth}|p{0.12\linewidth}|p{0.15\linewidth}|}
+        \hline
+        Proyecto & Detección de somnolencia & Portátil  & Monitoreo GPS en tiempo real & Sistema de admnistración \\
+        \hline
+        Driver Drowsiness Detection Using Machine Learning with Visual Behaviour & sí & No & No & No \\
+        \hline
+        
+    \end{tabular}
+\end{table}
+
 
 
 \newpage
@@ -4088,23 +4113,16 @@ https://main.dcst1c83llut3.amplifyapp.com/login
  \label{fig:libraries} 
 \end{center} 
 
-
-
 \clearpage
 
 \section{Pruebas}
 \subsection{Módulo de Visión Artificial}
 
-\subsubsection{Prueba de Detección Facial:}
+\subsubsection{Prueba de detección y clasificación de somnolencia:}
 \begin{itemize}
-  \item Verificar la capacidad de \texttt{dlib} para la detección precisa de rostros, ojos y boca en diferentes condiciones de iluminación y fondos.
-  \item Evaluar la velocidad y precisión de la detección en tiempo real.
-\end{itemize}
-
-\subsubsection{Prueba de Clasificación de Somnolencia:}
-\begin{itemize}
-  \item Simular estados de apertura y cierre de ojos y boca para confirmar la precisión en la clasificación de la somnolencia.
-  \item Evaluar la respuesta del sistema ante cambios rápidos en los estados faciales.
+ \item Verificar la capacidad de \texttt{dlib} para la detección de rostros, ojos y boca en diferentes condiciones de iluminación y fondos.
+ \item Simular estados de apertura y cierre de ojos y boca para confirmar la precisión en la clasificación de la somnolencia.
+ \item Evaluar la respuesta del sistema ante cambios rápidos en los estados faciales.
 \end{itemize}
 
 \subsection{Módulo de Comunicaciones}
@@ -4113,7 +4131,7 @@ https://main.dcst1c83llut3.amplifyapp.com/login
 \begin{itemize}
   \item Verificar la estabilidad y velocidad de la conexión LTE para la transferencia de información de posicionamiento GPS.
   \item Evaluar la capacidad de recuperación en casos de pérdida temporal de conectividad.
-\end{itemize}
+\end{itemize} 
 
 \subsubsection{Prueba de Posicionamiento GPS:}
 \begin{itemize}
@@ -4133,6 +4151,7 @@ https://main.dcst1c83llut3.amplifyapp.com/login
 \subsubsection{Prueba de Almacenamiento en S3:}
 \begin{itemize}
   \item Evaluar la velocidad de acceso y la escalabilidad del almacenamiento en la nube S3 para contenido multimedia.
+  
   \item Verificar la disponibilidad y confiabilidad de los archivos almacenados.
 \end{itemize}
 

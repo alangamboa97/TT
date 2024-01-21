@@ -62,45 +62,45 @@ Name 1 in "Vilca, G., and Eduardo, J." has a comma at the end for entry Estadode
 while executing---line 2403 of file ieeetran.bst
 
 Done.
-You've used 54 entries,
+You've used 53 entries,
             4087 wiz_defined-function locations,
-            1113 strings with 17590 characters,
-and the built_in function-call counts, 22639 in all, are:
-= -- 1925
-> -- 336
+            1108 strings with 17466 characters,
+and the built_in function-call counts, 22238 in all, are:
+= -- 1889
+> -- 332
 < -- 20
-+ -- 164
-- -- 77
-* -- 714
-:= -- 4070
-add.period$ -- 141
-call.type$ -- 54
-change.case$ -- 101
++ -- 162
+- -- 76
+* -- 701
+:= -- 3995
+add.period$ -- 139
+call.type$ -- 53
+change.case$ -- 99
 chr.to.int$ -- 42
-cite$ -- 54
-duplicate$ -- 1849
-empty$ -- 2086
-format.name$ -- 91
-if$ -- 5086
+cite$ -- 53
+duplicate$ -- 1815
+empty$ -- 2048
+format.name$ -- 90
+if$ -- 4996
 int.to.chr$ -- 0
-int.to.str$ -- 54
-missing$ -- 449
-newline$ -- 201
-num.names$ -- 54
-pop$ -- 1176
+int.to.str$ -- 53
+missing$ -- 441
+newline$ -- 198
+num.names$ -- 53
+pop$ -- 1156
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1824
+skip$ -- 1791
 stack$ -- 0
-substring$ -- 217
-swap$ -- 1160
+substring$ -- 214
+swap$ -- 1140
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 54
+type$ -- 53
 warning$ -- 0
-while$ -- 61
-width$ -- 56
-write$ -- 509
+while$ -- 60
+width$ -- 55
+write$ -- 500
 (There were 13 error messages)
