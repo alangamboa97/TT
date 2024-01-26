@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.3)  19 JAN 2024 12:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.3)  25 JAN 2024 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -630,195 +630,6 @@ LaTeX Info: Redefining \% on input line 23.
 
 LaTeX Warning: Label `fig:JetsonNano' multiply defined.
 
-
-LaTeX Warning: Label `fig:DiagramadeactividadMEB' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:actividades' multiply defined.
-
-
-LaTeX Warning: Label `fig:landmark' multiply defined.
-
-
-LaTeX Warning: Label `fig:landmark' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:scaraindust' multiply defined.
-
-
-LaTeX Warning: Label `fig:Swap' multiply defined.
-
-
-LaTeX Warning: Label `fig:Somnolencia2' multiply defined.
-
-
-LaTeX Warning: Label `fig:Somnolencia2' multiply defined.
-
-
-LaTeX Warning: Label `fig:Somnolencia2' multiply defined.
-
-
-LaTeX Warning: Label `fig:crearConductor' multiply defined.
-
-
-LaTeX Warning: Label `fig:gpio' multiply defined.
-
-
-LaTeX Warning: Label `fig:gpio' multiply defined.
-
-
-LaTeX Warning: Label `fig:gpio' multiply defined.
-
-
-LaTeX Warning: Label `fig:Mymapadet' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:cognito' multiply defined.
-
-
-LaTeX Warning: Label `fig:cognito' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:DocumentoIncidencias' multiply defined.
-
-
-LaTeX Warning: Label `fig:cognito' multiply defined.
-
-
-LaTeX Warning: Label `fig:cognito' multiply defined.
-
-
-LaTeX Warning: Label `fig:cognito' multiply defined.
-
-
-LaTeX Warning: Label `fig:cognito' multiply defined.
-
-
-LaTeX Warning: Label `fig:cognito' multiply defined.
-
-
-LaTeX Warning: Label `fig:cognito' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:crearConductor' multiply defined.
-
-
-LaTeX Warning: Label `fig:addstorage' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:MongoA' multiply defined.
-
-
-LaTeX Warning: Label `fig:cognito' multiply defined.
-
-
-LaTeX Warning: Label `fig:hat' multiply defined.
-
-
-LaTeX Warning: Label `fig:libraries' multiply defined.
-
-
-LaTeX Warning: Label `fig:libraries' multiply defined.
-
 )
 \openout1 = `TT2.aux'.
 
@@ -882,71 +693,22 @@ Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-) (TT2.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
-.
-
-(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-6.
-
-(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-6.
-
-(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 6.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 6.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 6.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
-
-(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
-
-(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-[1{C:/Users/unknown/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/
-unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}
-
-]
-Overfull \hbox (5.12357pt too wide) in paragraph at lines 52--52
- [][] [][][]\OT1/lmr/m/n/12 Propuesta de un sis-te-ma de geo-lo-ca-li-za-ci^^So
-n y mo-ni-to-reo v^^S^^Pa GPS/GSM/GPRS 
- []
-
-[2] [3])
+) (TT2.toc)
 \tf@toc=\write4
 \openout4 = `TT2.toc'.
 
- [4] (TT2.lof
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [5] [6] [7])
+ [1{C:/Users/unknown/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users
+/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}
+
+] (TT2.lof)
 \tf@lof=\write5
 \openout5 = `TT2.lof'.
 
- [8] (TT2.lot
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [9])
+ [2] (TT2.lot)
 \tf@lot=\write6
 \openout6 = `TT2.lot'.
 
- [10] [11]
+ [3] [4]
 Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
  []
@@ -956,7 +718,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-[12]
+[5]
+
+LaTeX Warning: Citation `WHO' on page 6 undefined on input line 82.
+
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
+4.
+(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+84.
+
+(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+84.
+
+(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 84.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 84.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
+
+
+(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
+
+
+(C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Citation `IMT' on page 6 undefined on input line 84.
+
+
+LaTeX Warning: Citation `RastreoSatelital' on page 6 undefined on input line 88
+.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 82--90
 
  []
@@ -976,10 +784,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-[13]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
+
+
+LaTeX Warning: Citation `iot' on page 7 undefined on input line 104.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
@@ -997,11 +808,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--112
  []
 
 
+LaTeX Warning: Citation `Sisdesomnolencia' on page 7 undefined on input line 11
+3.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
-[14]
+
+LaTeX Warning: Citation `GeolocalizacionVehiculos' on page 7 undefined on input
+ line 116.
+
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 123--125
 
  []
@@ -1011,13 +830,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-<imagenes/diagramageneral2.jpg, id=1169, 460.72125pt x 286.06876pt>
+<imagenes/diagramageneral2.jpg, id=239, 460.72125pt x 286.06876pt>
 File: imagenes/diagramageneral2.jpg Graphic file (type jpg)
 <use imagenes/diagramageneral2.jpg>
 Package pdftex.def Info: imagenes/diagramageneral2.jpg  used on input line 141.
 
 (pdftex.def)             Requested size: 414.6453pt x 257.45949pt.
-[15] [16 <./imagenes/diagramageneral2.jpg>]
+[8] [9 <./imagenes/diagramageneral2.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 167--173
 
  []
@@ -1027,15 +846,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--173
 
  []
 
-[17
+[10
 
 ]
-<imagenes/spiral-model.png, id=1184, 903.375pt x 752.8125pt>
+
+LaTeX Warning: Citation `Metodologia' on page 11 undefined on input line 198.
+
+<imagenes/spiral-model.png, id=253, 903.375pt x 752.8125pt>
 File: imagenes/spiral-model.png Graphic file (type png)
 <use imagenes/spiral-model.png>
 Package pdftex.def Info: imagenes/spiral-model.png  used on input line 210.
 (pdftex.def)             Requested size: 361.3436pt x 301.11966pt.
- [18 <./imagenes/spiral-model.png>]
+
+LaTeX Warning: Citation `Metodologia' on page 11 undefined on input line 211.
+
+[11 <./imagenes/spiral-model.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
@@ -1050,28 +875,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--253
 
  []
 
-[19] [20]
+[12] [13]
+
+LaTeX Warning: Citation `Intensidad' on page 14 undefined on input line 267.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 267--269
 
  []
 
-<imagenes/JetsonNano.jpg, id=1202, 632.3625pt x 355.3275pt>
+
+LaTeX Warning: Citation `JetsonNano' on page 14 undefined on input line 290.
+
+<imagenes/JetsonNano.jpg, id=269, 632.3625pt x 355.3275pt>
 File: imagenes/JetsonNano.jpg Graphic file (type jpg)
 <use imagenes/JetsonNano.jpg>
 Package pdftex.def Info: imagenes/JetsonNano.jpg  used on input line 293.
 (pdftex.def)             Requested size: 252.94052pt x 142.12846pt.
-[21
 
- <./imagenes/JetsonNano.jpg>] [22]
-<imagenes/cdn-diagram.png, id=1219, 722.7pt x 406.51875pt>
+LaTeX Warning: Citation `JetsonNano' on page 14 undefined on input line 294.
+
+
+LaTeX Warning: Citation `IBMvision' on page 14 undefined on input line 302.
+
+[14
+
+ <./imagenes/JetsonNano.jpg>]
+
+LaTeX Warning: Citation `AP' on page 15 undefined on input line 304.
+
+
+LaTeX Warning: Citation `AP' on page 15 undefined on input line 432.
+
+
+LaTeX Warning: Citation `CDN' on page 15 undefined on input line 447.
+
+[15]
+<imagenes/cdn-diagram.png, id=279, 722.7pt x 406.51875pt>
 File: imagenes/cdn-diagram.png Graphic file (type png)
 <use imagenes/cdn-diagram.png>
 Package pdftex.def Info: imagenes/cdn-diagram.png  used on input line 450.
 (pdftex.def)             Requested size: 361.3491pt x 203.25887pt.
- [23 <./imagenes/cdn-diagram.png>]
+
+
+LaTeX Warning: Citation `CDNimg' on page 16 undefined on input line 451.
+
+
+LaTeX Warning: Citation `IBMCC' on page 16 undefined on input line 458.
+
+[16 <./imagenes/cdn-diagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
+
+
+LaTeX Warning: Citation `Referencian5' on page 17 undefined on input line 473.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 471--474
@@ -1079,334 +937,518 @@ Underfull \hbox (badness 10000) in paragraph at lines 471--474
  []
 
 
+LaTeX Warning: Citation `Referencian6' on page 17 undefined on input line 487.
+
+
+LaTeX Warning: Citation `LTE' on page 17 undefined on input line 493.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 493--496
 
  []
 
-[24] [25]
+[17] [18]
+
+LaTeX Warning: Citation `shannon' on page 19 undefined on input line 523.
+
+
+LaTeX Warning: Citation `Geolocalizacion' on page 19 undefined on input line 53
+1.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 526--532
 
  []
 
-[26
+[19
 
 {C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
 c}{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.
-enc}] [27] [28] [29]
-Overfull \hbox (4.54134pt too wide) in paragraph at lines 632--632
+enc}]
+
+LaTeX Warning: Citation `EstadodelAarte1' on page 20 undefined on input line 54
+0.
+
+
+LaTeX Warning: Citation `EstadodelAarte2' on page 20 undefined on input line 54
+4.
+
+
+LaTeX Warning: Citation `EstadodelAarte3' on page 20 undefined on input line 54
+9.
+
+
+LaTeX Warning: Citation `EstadodelAarte4' on page 20 undefined on input line 55
+3.
+
+
+LaTeX Warning: Citation `EstadodelAarte5' on page 20 undefined on input line 56
+0.
+
+[20]
+
+LaTeX Warning: Citation `EstadodelAarte6' on page 21 undefined on input line 56
+4.
+
+
+LaTeX Warning: Citation `EstadodelAarte7' on page 21 undefined on input line 56
+8.
+
+
+LaTeX Warning: Citation `EstadodelAarte8' on page 21 undefined on input line 57
+2.
+
+
+LaTeX Warning: Citation `EstadodelAarte9' on page 21 undefined on input line 57
+7.
+
+
+LaTeX Warning: Citation `EstadodelAarte10' on page 21 undefined on input line 5
+81.
+
+[21]
+
+LaTeX Warning: Citation `EstadodelAarte11' on page 22 undefined on input line 5
+87.
+
+
+LaTeX Warning: Citation `EstadodelAarte12' on page 22 undefined on input line 5
+93.
+
+
+LaTeX Warning: Citation `EstadodelAarte13' on page 22 undefined on input line 5
+99.
+
+[22]
+
+LaTeX Warning: Citation `EstadodelAarte14' on page 23 undefined on input line 6
+03.
+
+
+LaTeX Warning: Citation `EstadodelAarte15' on page 23 undefined on input line 6
+06.
+
+
+LaTeX Warning: Citation `EstadodelAarte16' on page 23 undefined on input line 6
+27.
+
+
+Overfull \hbox (4.54134pt too wide) in paragraph at lines 630--630
 |[]\OT1/lmr/bx/n/12 Propuesta de un sis-te-ma de geo-lo-ca-li-za-ci^^Son y mo-n
 i-to-reo v^^S^^Pa GPS/GSM/GPRS
  []
 
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 649--649
-[]|\OT1/lmr/m/n/12 Detecci^^Son
+
+LaTeX Warning: Citation `EstadodelAarte17' on page 23 undefined on input line 6
+37.
+
+[23]
+
+LaTeX Warning: Citation `EstadodelAarte18' on page 24 undefined on input line 6
+40.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--646
+[]|\OT1/lmr/bx/n/12 Detecci^^Son
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 649--649
-\OT1/lmr/m/n/12 de som-no-
+Underfull \hbox (badness 10000) in paragraph at lines 646--646
+[]|\OT1/lmr/bx/n/12 Sistema
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--649
-[]|\OT1/lmr/m/n/12 Monitoreo
+Overfull \hbox (1.17433pt too wide) in paragraph at lines 646--646
+[]|\OT1/lmr/bx/n/12 Monitoreo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--649
-\OT1/lmr/m/n/12 GPS en
+Underfull \hbox (badness 10000) in paragraph at lines 646--646
+\OT1/lmr/bx/n/12 GPS en
  []
 
-[31]
-<imagenes/topdowngeneral.png, id=1312, 924.45375pt x 290.08376pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--646
+\OT1/lmr/bx/n/12 tiem-po
+ []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.647         \hline
+                     1 & Sí & Sí& Sí & Sí\\
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
+[]|\OT1/lmr/bx/n/12 Sistema
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
+\OT1/lmr/bx/n/12 de ad-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
+\OT1/lmr/bx/n/12 mnis-tra-
+ []
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.647         \hline 1 &
+                         Sí & Sí& Sí & Sí\\
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+
+Overfull \hbox (2.32904pt too wide) in paragraph at lines 645--659
+ [][] 
+ []
+
+[24]
+! Misplaced alignment tab character &.
+l.672 ...owers using Rasperry Pi and Jetson Nano &
+                                                   No
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[25]
+
+LaTeX Warning: Reference `fig:modulos1' on page 26 undefined on input line 694.
+
+
+<imagenes/topdowngeneral.png, id=339, 924.45375pt x 290.08376pt>
 File: imagenes/topdowngeneral.png Graphic file (type png)
 <use imagenes/topdowngeneral.png>
-Package pdftex.def Info: imagenes/topdowngeneral.png  used on input line 665.
+Package pdftex.def Info: imagenes/topdowngeneral.png  used on input line 697.
 (pdftex.def)             Requested size: 508.45114pt x 159.54655pt.
 
-Overfull \hbox (7.96715pt too wide) in paragraph at lines 665--666
+Overfull \hbox (7.96715pt too wide) in paragraph at lines 697--698
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--671
+Underfull \hbox (badness 10000) in paragraph at lines 702--703
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--673
+Underfull \hbox (badness 10000) in paragraph at lines 704--705
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--675
+Underfull \hbox (badness 10000) in paragraph at lines 706--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 676--677
+Underfull \hbox (badness 10000) in paragraph at lines 708--709
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--689
+Underfull \hbox (badness 10000) in paragraph at lines 719--721
 
  []
 
-[32 <./imagenes/topdowngeneral.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 690--691
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 692--693
+[26 <./imagenes/topdowngeneral.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 722--723
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 694--695
+LaTeX Warning: Reference `sec:ASD' on page 27 undefined on input line 724.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 724--725
 
  []
 
-<imagenes/MapaCoberturaMexico.jpg, id=1320, 907.13907pt x 568.37344pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--727
+
+ []
+
+<imagenes/MapaCoberturaMexico.jpg, id=348, 907.13907pt x 568.37344pt>
 File: imagenes/MapaCoberturaMexico.jpg Graphic file (type jpg)
 <use imagenes/MapaCoberturaMexico.jpg>
 Package pdftex.def Info: imagenes/MapaCoberturaMexico.jpg  used on input line 7
-02.
+34.
 (pdftex.def)             Requested size: 453.56842pt x 284.18602pt.
-[33]
-<imagenes/CoberturaCDMX.jpg, id=1327, 392.96812pt x 347.04657pt>
+
+LaTeX Warning: Citation `CoberturaNacional' on page 27 undefined on input line 
+735.
+
+[27]
+
+LaTeX Warning: Reference `fig:mapacoberturaN' on page 28 undefined on input lin
+e 739.
+
+<imagenes/CoberturaCDMX.jpg, id=354, 392.96812pt x 347.04657pt>
 File: imagenes/CoberturaCDMX.jpg Graphic file (type jpg)
 <use imagenes/CoberturaCDMX.jpg>
-Package pdftex.def Info: imagenes/CoberturaCDMX.jpg  used on input line 710.
+Package pdftex.def Info: imagenes/CoberturaCDMX.jpg  used on input line 742.
 (pdftex.def)             Requested size: 275.07579pt x 242.93094pt.
- [34 <./imagenes/MapaCoberturaMexico.jpg> <./imagenes/CoberturaCDMX.jpg>]
-[35
 
-] [36]
-Overfull \hbox (3.00526pt too wide) in paragraph at lines 857--857
+LaTeX Warning: Citation `CoberturaNacional' on page 28 undefined on input line 
+743.
+
+[28 <./imagenes/MapaCoberturaMexico.jpg> <./imagenes/CoberturaCDMX.jpg>]
+[29
+
+] [30]
+
+LaTeX Warning: Reference `tab:microordenador' on page 31 undefined on input lin
+e 882.
+
+
+Overfull \hbox (3.00526pt too wide) in paragraph at lines 889--889
 []|\OT1/lmr/bx/n/12 Alimentaci^^Son| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 858--858
+Underfull \hbox (badness 10000) in paragraph at lines 890--890
 []|\OT1/lmr/m/n/12 Google
  []
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 858--858
+Underfull \hbox (badness 6001) in paragraph at lines 890--890
 \OT1/lmr/m/n/12 Co-ral Dev
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
-58.
+90.
 (C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 859--859
+Underfull \hbox (badness 10000) in paragraph at lines 891--891
 []|\OT1/lmr/m/n/12 Rasperry
  []
 
 
-Underfull \hbox (badness 5260) in paragraph at lines 859--859
+Underfull \hbox (badness 5260) in paragraph at lines 891--891
 []|\OT1/lmr/m/n/12 1.5 GHZ 64 bit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--859
+Underfull \hbox (badness 10000) in paragraph at lines 891--891
 \OT1/lmr/m/n/12 Quad-Co-re Cor-tex
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--859
+Underfull \hbox (badness 10000) in paragraph at lines 891--891
 []|\OT1/lmr/m/n/12 1GB, 2GB,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--859
+Underfull \hbox (badness 10000) in paragraph at lines 891--891
 \OT1/lmr/m/n/12 4GB, 8GB
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 860--860
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 []|\OT1/lmr/m/n/12 Asus Tin-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 860--860
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 \OT1/lmr/m/n/12 ker-Board
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 860--860
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 []|\OT1/lmr/m/n/12 2GB/4GB
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 860--860
+Underfull \hbox (badness 3168) in paragraph at lines 892--892
 \OT1/lmr/m/n/12 dual- chan-nel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 860--860
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 []|\OT1/lmr/m/n/12 Integrated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 860--860
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 \OT1/lmr/m/n/12 GC7000 Li-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--861
+Underfull \hbox (badness 10000) in paragraph at lines 893--893
 []|\OT1/lmr/m/n/12 NVIDIA
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--861
+Underfull \hbox (badness 10000) in paragraph at lines 893--893
 \OT1/lmr/m/n/12 Jetson
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--861
+Underfull \hbox (badness 10000) in paragraph at lines 893--893
 []|\OT1/lmr/m/n/12 4 GB de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--861
+Underfull \hbox (badness 10000) in paragraph at lines 893--893
 \OT1/lmr/m/n/12 LPDDR4 de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--861
+Underfull \hbox (badness 10000) in paragraph at lines 893--893
 \OT1/lmr/m/n/12 well de 128
  []
 
-[37
+
+LaTeX Warning: Citation `EstadodelAarte8' on page 31 undefined on input line 90
+6.
+
+
+LaTeX Warning: Citation `deepedgebench' on page 31 undefined on input line 906.
+
+
+
+LaTeX Warning: Reference `tab:microordenador' on page 31 undefined on input lin
+e 906.
+
+[31
 
 {C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 
-Underfull \hbox (badness 10000) in paragraph at lines 880--881
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
 
  []
 
-[38]
-Overfull \hbox (10.44028pt too wide) in paragraph at lines 913--913
+[32]
+Overfull \hbox (10.44028pt too wide) in paragraph at lines 945--945
 []|\OT1/lmr/m/n/12 Almacenamiento| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 913--913
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
 []|\OT1/lmr/m/n/12 Speed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 913--913
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
 []|\OT1/lmr/m/n/12 Video
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 914--914
+Underfull \hbox (badness 10000) in paragraph at lines 946--946
 []|\OT1/lmr/m/n/12 SanDisk
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 914--914
+Underfull \hbox (badness 10000) in paragraph at lines 946--946
 \OT1/lmr/m/n/12 Ex-tre-me
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 914--914
+Underfull \hbox (badness 1571) in paragraph at lines 946--946
 []|\OT1/lmr/m/n/12 32-256 (MAX
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 914--914
+Underfull \hbox (badness 10000) in paragraph at lines 946--946
 []|\OT1/lmr/m/n/12 Clase
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 915--915
+Underfull \hbox (badness 10000) in paragraph at lines 947--947
 []|\OT1/lmr/m/n/12 Kingston
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 915--915
+Underfull \hbox (badness 10000) in paragraph at lines 947--947
 \OT1/lmr/m/n/12 EN-DU-
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 915--915
+Underfull \hbox (badness 1571) in paragraph at lines 947--947
 []|\OT1/lmr/m/n/12 32-256 (MAX
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 915--915
+Underfull \hbox (badness 10000) in paragraph at lines 947--947
 []|\OT1/lmr/m/n/12 Clase
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 916--916
+Underfull \hbox (badness 10000) in paragraph at lines 948--948
 []|\OT1/lmr/m/n/12 Samsung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 916--916
+Underfull \hbox (badness 10000) in paragraph at lines 948--948
 []|\OT1/lmr/m/n/12 Clase
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--917
+Underfull \hbox (badness 10000) in paragraph at lines 949--949
 []|\OT1/lmr/m/n/12 Kingston
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--917
+Underfull \hbox (badness 10000) in paragraph at lines 949--949
 \OT1/lmr/m/n/12 Can-vas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--917
+Underfull \hbox (badness 10000) in paragraph at lines 949--949
 []|\OT1/lmr/m/n/12 Clase
  []
 
 
-Overfull \hbox (2.12619pt too wide) in paragraph at lines 911--920
+Overfull \hbox (2.12619pt too wide) in paragraph at lines 943--952
 [][] 
  []
 
-[39
+[33
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 927--929
+Underfull \hbox (badness 10000) in paragraph at lines 959--961
 
  []
 
-<imagenes/programaclasico.png, id=1361, 770.88pt x 578.16pt>
+<imagenes/programaclasico.png, id=396, 770.88pt x 578.16pt>
 File: imagenes/programaclasico.png Graphic file (type png)
 <use imagenes/programaclasico.png>
-Package pdftex.def Info: imagenes/programaclasico.png  used on input line 930.
+Package pdftex.def Info: imagenes/programaclasico.png  used on input line 962.
 (pdftex.def)             Requested size: 231.26578pt x 173.44933pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 936--937
+Underfull \hbox (badness 10000) in paragraph at lines 968--969
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--939
+Underfull \hbox (badness 10000) in paragraph at lines 970--971
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 940--941
+Underfull \hbox (badness 10000) in paragraph at lines 972--973
 
  []
 
-[40
+[34
 
- <./imagenes/programaclasico.png>] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 983--984
+ <./imagenes/programaclasico.png>]
+
+LaTeX Warning: Citation `python' on page 35 undefined on input line 1007.
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1016
 
  []
 
@@ -1419,13 +1461,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[42
+[36
 
-] [43]
-<imagenes/casosuso_vision.jpeg, id=1382, 711.65875pt x 727.71875pt>
+] [37]
+<imagenes/casosuso_vision.jpeg, id=424, 711.65875pt x 727.71875pt>
 File: imagenes/casosuso_vision.jpeg Graphic file (type jpg)
 <use imagenes/casosuso_vision.jpeg>
-Package pdftex.def Info: imagenes/casosuso_vision.jpeg  used on input line 1132
+Package pdftex.def Info: imagenes/casosuso_vision.jpeg  used on input line 1164
 .
 (pdftex.def)             Requested size: 355.8285pt x 363.85847pt.
 
@@ -1445,7 +1487,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (6.39964pt too wide) in paragraph at lines 1253--1271
+Overfull \hbox (6.39964pt too wide) in paragraph at lines 1285--1303
  [][] 
  []
 
@@ -1455,33 +1497,59 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[44
+[38
 
- <./imagenes/casosuso_vision.jpeg>] [45] [46] [47]
-<imagenes/imx.jpg, id=1400, 431.36156pt x 359.84438pt>
+ <./imagenes/casosuso_vision.jpeg>] [39] [40] [41]
+
+LaTeX Warning: Citation `Numpy' on page 42 undefined on input line 1341.
+
+<imagenes/imx.jpg, id=450, 431.36156pt x 359.84438pt>
 File: imagenes/imx.jpg Graphic file (type jpg)
 <use imagenes/imx.jpg>
-Package pdftex.def Info: imagenes/imx.jpg  used on input line 1329.
+Package pdftex.def Info: imagenes/imx.jpg  used on input line 1361.
 (pdftex.def)             Requested size: 215.68025pt x 179.92174pt.
- [48
+[42
 
- <./imagenes/imx.jpg>] [49
+ <./imagenes/imx.jpg>] [43
 
-] [50
+]
 
-] [51]
-<imagenes/handover.png, id=1426, 813.0375pt x 589.4522pt>
+LaTeX Warning: Citation `categorias' on page 44 undefined on input line 1511.
+
+
+LaTeX Warning: Reference `tab:CLTE' on page 44 undefined on input line 1512.
+
+
+LaTeX Warning: Citation `Referencian15' on page 44 undefined on input line 1553
+.
+
+[44
+
+] [45]
+
+LaTeX Warning: Reference `fig:handover' on page 46 undefined on input line 1610
+.
+
+
+LaTeX Warning: Citation `Referencian17' on page 46 undefined on input line 1610
+.
+
+<imagenes/handover.png, id=476, 813.0375pt x 589.4522pt>
 File: imagenes/handover.png Graphic file (type png)
 <use imagenes/handover.png>
-Package pdftex.def Info: imagenes/handover.png  used on input line 1587.
+Package pdftex.def Info: imagenes/handover.png  used on input line 1619.
 (pdftex.def)             Requested size: 243.91313pt x 176.83702pt.
-<imagenes/mapaLTE.png, id=1428, 367.3725pt x 215.30438pt>
+
+LaTeX Warning: Citation `CoberturaNacional' on page 46 undefined on input line 
+1624.
+
+<imagenes/mapaLTE.png, id=477, 367.3725pt x 215.30438pt>
 File: imagenes/mapaLTE.png Graphic file (type png)
 <use imagenes/mapaLTE.png>
-Package pdftex.def Info: imagenes/mapaLTE.png  used on input line 1595.
+Package pdftex.def Info: imagenes/mapaLTE.png  used on input line 1627.
 (pdftex.def)             Requested size: 330.63217pt x 193.77214pt.
- [52 <./imagenes/handover.png>] [53 <./imagenes/mapaLTE.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1608--1609
+[46 <./imagenes/handover.png>] [47 <./imagenes/mapaLTE.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1640--1641
 
  []
 
@@ -1494,15 +1562,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[54
+[48
 
-] [55] [56
+] [49] [50
 
 ]
-<imagenes/CasosdeusosMEB.png, id=1453, 720.6925pt x 512.91624pt>
+<imagenes/CasosdeusosMEB.png, id=511, 720.6925pt x 512.91624pt>
 File: imagenes/CasosdeusosMEB.png Graphic file (type png)
 <use imagenes/CasosdeusosMEB.png>
-Package pdftex.def Info: imagenes/CasosdeusosMEB.png  used on input line 1736.
+Package pdftex.def Info: imagenes/CasosdeusosMEB.png  used on input line 1768.
 (pdftex.def)             Requested size: 396.38211pt x 282.1048pt.
 
 
@@ -1514,15 +1582,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[57
+[51
 
- <./imagenes/CasosdeusosMEB.png>] [58] [59
+ <./imagenes/CasosdeusosMEB.png>] [52] [53
 
-] [60] [61] [62] [63] [64]
-<imagenes/casosdeusoweb.png, id=1488, 703.62875pt x 603.25375pt>
+] [54] [55] [56] [57] [58]
+<imagenes/casosdeusoweb.png, id=565, 703.62875pt x 603.25375pt>
 File: imagenes/casosdeusoweb.png Graphic file (type png)
 <use imagenes/casosdeusoweb.png>
-Package pdftex.def Info: imagenes/casosdeusoweb.png  used on input line 2098.
+Package pdftex.def Info: imagenes/casosdeusoweb.png  used on input line 2130.
 (pdftex.def)             Requested size: 351.8135pt x 301.62613pt.
 
 
@@ -1543,1275 +1611,1399 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[65
+[59
 
- <./imagenes/casosdeusoweb.png>] [66] [67]
-Underfull \hbox (badness 10000) in paragraph at lines 2278--2278
+ <./imagenes/casosdeusoweb.png>] [60] [61]
+Underfull \hbox (badness 10000) in paragraph at lines 2310--2310
 []|\OT1/lmr/m/n/12 NoSQL \OT1/lmr/m/it/12 wide-
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 2278--2278
+Underfull \hbox (badness 2495) in paragraph at lines 2310--2310
 []|\OT1/lmr/m/n/12 NoSQL Orien-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2278--2278
+Underfull \hbox (badness 10000) in paragraph at lines 2310--2310
 []|\OT1/lmr/m/n/12 NoSQL clave-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2278--2278
+Underfull \hbox (badness 10000) in paragraph at lines 2310--2310
 []|\OT1/lmr/m/n/12 NoSQL clave-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2279--2279
+Underfull \hbox (badness 10000) in paragraph at lines 2311--2311
 []|\OT1/lmr/m/n/12 Codigo abier-to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2279--2279
+Underfull \hbox (badness 10000) in paragraph at lines 2311--2311
 []|\OT1/lmr/m/n/12 Codigo abier-to
  []
 
 
-Overfull \hbox (3.70572pt too wide) in paragraph at lines 2280--2280
+Overfull \hbox (3.70572pt too wide) in paragraph at lines 2312--2312
 []|\OT1/lmr/bx/n/12 Cumplimiento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2281--2281
+Underfull \hbox (badness 10000) in paragraph at lines 2313--2313
 []|\OT1/lmr/bx/n/12 Lenguaje
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2281--2281
+Underfull \hbox (badness 10000) in paragraph at lines 2313--2313
 \OT1/lmr/bx/n/12 de con-sul-ta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
 []|\OT1/lmr/bx/n/12 Principales
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
 []|\OT1/lmr/m/n/12 An^^Sali-sis so-cial,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
 \OT1/lmr/m/n/12 po real, ven-ta
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 2282--2282
+Underfull \hbox (badness 1270) in paragraph at lines 2314--2314
 \OT1/lmr/m/n/12 al por me-nor y
  []
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 2282--2282
+Underfull \hbox (badness 1558) in paragraph at lines 2314--2314
 \OT1/lmr/m/n/12 llo de apli-ca-cio-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
 []|\OT1/lmr/m/n/12 Almacenamiento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
 \OT1/lmr/m/n/12 en cach^^Se, co-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
 \OT1/lmr/m/n/12 las, fil-tra-do y
  []
 
 
-Underfull \hbox (badness 4024) in paragraph at lines 2282--2282
+Underfull \hbox (badness 4024) in paragraph at lines 2314--2314
 \OT1/lmr/m/n/12 mi-no-ris-ta, ser-vi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
 \OT1/lmr/m/n/12 cios fi-nan-cie-ros,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
 \OT1/lmr/m/n/12 pu-bli-ci-dad y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2314
 \OT1/lmr/m/n/12 trans-mi-si^^Son de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 []|\OT1/lmr/m/n/12 Seguridad in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 te-gra-da pa-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 la au-to-ri-za-ci^^Son,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 ci-fra-do y au-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 ten-ti-ca-ci^^Son, la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 se-gu-ri-dad est^^Sa
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 des-ac-ti-va-da de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 for-ma pre-de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 ter-mi-na-da pa-ra
  []
 
 
-Underfull \hbox (badness 5119) in paragraph at lines 2283--2283
+Underfull \hbox (badness 5119) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 fa-ci-li-tar su uso
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 den-tro de los
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 2283--2283
+Underfull \hbox (badness 2689) in paragraph at lines 2315--2315
 []|\OT1/lmr/m/n/12 Seguridad in-cor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 []|\OT1/lmr/m/n/12 Se ini-cia au-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 tom^^Sati-ca-men-te
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 2283--2283
+Underfull \hbox (badness 1895) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 tec-ci^^Son y ofre-ce
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 su-ge-ren-cias de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 []|\OT1/lmr/m/n/12 Seguridad in-te-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 y apli-ca-cio-nes;
  []
 
 
-Underfull \hbox (badness 7740) in paragraph at lines 2283--2283
+Underfull \hbox (badness 7740) in paragraph at lines 2315--2315
 \OT1/lmr/m/n/12 re, ins-ta-la-cio-nes
  []
 
 
-Overfull \hbox (2.32904pt too wide) in paragraph at lines 2275--2287
+Overfull \hbox (2.32904pt too wide) in paragraph at lines 2307--2319
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[68
 
-] [69] [70
+LaTeX Warning: Reference `server' on page 62 undefined on input line 2321.
+
+[62
+
+] [63]
+
+LaTeX Warning: Citation `AWS' on page 64 undefined on input line 2397.
+
+[64
 
 ]
-<imagenes/amplify.png, id=1518, 821.31844pt x 335.00156pt>
+<imagenes/amplify.png, id=606, 821.31844pt x 335.00156pt>
 File: imagenes/amplify.png Graphic file (type png)
 <use imagenes/amplify.png>
-Package pdftex.def Info: imagenes/amplify.png  used on input line 2381.
+Package pdftex.def Info: imagenes/amplify.png  used on input line 2413.
 (pdftex.def)             Requested size: 410.6582pt x 167.50037pt.
- [71 <./imagenes/amplify.png>]
-<imagenes/respuesta.png, id=1524, 376.40625pt x 96.36pt>
+ [65 <./imagenes/amplify.png>]
+<imagenes/respuesta.png, id=613, 376.40625pt x 96.36pt>
 File: imagenes/respuesta.png Graphic file (type png)
 <use imagenes/respuesta.png>
-Package pdftex.def Info: imagenes/respuesta.png  used on input line 2412.
+Package pdftex.def Info: imagenes/respuesta.png  used on input line 2444.
 (pdftex.def)             Requested size: 188.20265pt x 48.17987pt.
- [72 <./imagenes/respuesta.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2443--2444
+ [66 <./imagenes/respuesta.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2475--2476
 
  []
 
-<imagenes/diagrama_secuenciamc.jpeg, id=1530, 865.2325pt x 1284.8pt>
+<imagenes/diagrama_secuenciamc.jpeg, id=620, 865.2325pt x 1284.8pt>
 File: imagenes/diagrama_secuenciamc.jpeg Graphic file (type jpg)
 <use imagenes/diagrama_secuenciamc.jpeg>
 Package pdftex.def Info: imagenes/diagrama_secuenciamc.jpeg  used on input line
- 2446.
+ 2478.
 (pdftex.def)             Requested size: 432.61519pt x 642.39844pt.
-[73
+[67
 
-] [74 <./imagenes/diagrama_secuenciamc.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 2461--2463
+] [68 <./imagenes/diagrama_secuenciamc.jpeg>]
+
+LaTeX Warning: Reference `sec:microordenador' on page 69 undefined on input lin
+e 2487.
+
+
+LaTeX Warning: Reference `sec:camara' on page 69 undefined on input line 2487.
+
+
+LaTeX Warning: Reference `sec:alarma' on page 69 undefined on input line 2487.
+
+
+LaTeX Warning: Reference `sec:almacenamientoexterno' on page 69 undefined on in
+put line 2487.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2493--2495
 
  []
 
-<imagenes/nanodim.jpg, id=1544, 752.8125pt x 421.575pt>
+<imagenes/nanodim.jpg, id=633, 752.8125pt x 421.575pt>
 File: imagenes/nanodim.jpg Graphic file (type jpg)
 <use imagenes/nanodim.jpg>
-Package pdftex.def Info: imagenes/nanodim.jpg  used on input line 2467.
+Package pdftex.def Info: imagenes/nanodim.jpg  used on input line 2499.
 (pdftex.def)             Requested size: 451.69098pt x 252.94695pt.
-<imagenes/nano.jpg, id=1545, 517.18219pt x 405.76593pt>
+<imagenes/nano.jpg, id=634, 517.18219pt x 405.76593pt>
 File: imagenes/nano.jpg Graphic file (type jpg)
 <use imagenes/nano.jpg>
-Package pdftex.def Info: imagenes/nano.jpg  used on input line 2474.
+Package pdftex.def Info: imagenes/nano.jpg  used on input line 2506.
 (pdftex.def)             Requested size: 206.8692pt x 162.3035pt.
-[75 <./imagenes/nanodim.jpg>]
-<imagenes/KY-006.jpg, id=1550, 803.0pt x 803.0pt>
+[69 <./imagenes/nanodim.jpg> <./imagenes/nano.jpg>]
+<imagenes/KY-006.jpg, id=641, 803.0pt x 803.0pt>
 File: imagenes/KY-006.jpg Graphic file (type jpg)
 <use imagenes/KY-006.jpg>
-Package pdftex.def Info: imagenes/KY-006.jpg  used on input line 2484.
+Package pdftex.def Info: imagenes/KY-006.jpg  used on input line 2516.
 (pdftex.def)             Requested size: 160.59715pt x 160.59715pt.
 File: imagenes/imx.jpg Graphic file (type jpg)
 <use imagenes/imx.jpg>
-Package pdftex.def Info: imagenes/imx.jpg  used on input line 2493.
+Package pdftex.def Info: imagenes/imx.jpg  used on input line 2525.
 (pdftex.def)             Requested size: 172.54156pt x 143.9352pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2499--2500
+Underfull \hbox (badness 10000) in paragraph at lines 2531--2532
 
  []
 
-[76 <./imagenes/nano.jpg> <./imagenes/KY-006.jpg>]
-<imagenes/Jumpers.jpg, id=1555, 570.13pt x 503.8825pt>
+<imagenes/Jumpers.jpg, id=642, 570.13pt x 503.8825pt>
 File: imagenes/Jumpers.jpg Graphic file (type jpg)
 <use imagenes/Jumpers.jpg>
-Package pdftex.def Info: imagenes/Jumpers.jpg  used on input line 2502.
+Package pdftex.def Info: imagenes/Jumpers.jpg  used on input line 2534.
 (pdftex.def)             Requested size: 114.02397pt x 100.7747pt.
-<imagenes/MicroSD.png, id=1556, 220.825pt x 91.34125pt>
+[70 <./imagenes/KY-006.jpg> <./imagenes/Jumpers.jpg>]
+<imagenes/MicroSD.png, id=651, 220.825pt x 91.34125pt>
 File: imagenes/MicroSD.png Graphic file (type png)
 <use imagenes/MicroSD.png>
-Package pdftex.def Info: imagenes/MicroSD.png  used on input line 2514.
+Package pdftex.def Info: imagenes/MicroSD.png  used on input line 2546.
 (pdftex.def)             Requested size: 88.32843pt x 36.53584pt.
- [77 <./imagenes/Jumpers.jpg> <./imagenes/MicroSD.png>]
-<imagenes/waveshare.jpg, id=1562, 584.1825pt x 432.86719pt>
+ [71 <./imagenes/MicroSD.png>]
+<imagenes/waveshare.jpg, id=658, 584.1825pt x 432.86719pt>
 File: imagenes/waveshare.jpg Graphic file (type jpg)
 <use imagenes/waveshare.jpg>
-Package pdftex.def Info: imagenes/waveshare.jpg  used on input line 2527.
+Package pdftex.def Info: imagenes/waveshare.jpg  used on input line 2559.
 (pdftex.def)             Requested size: 350.51219pt x 259.7223pt.
-<imagenes/wavecompo.jpg, id=1563, 587.94656pt x 179.16937pt>
+<imagenes/wavecompo.jpg, id=659, 587.94656pt x 179.16937pt>
 File: imagenes/wavecompo.jpg Graphic file (type jpg)
 <use imagenes/wavecompo.jpg>
-Package pdftex.def Info: imagenes/wavecompo.jpg  used on input line 2535.
+Package pdftex.def Info: imagenes/wavecompo.jpg  used on input line 2567.
 (pdftex.def)             Requested size: 470.3579pt x 143.33568pt.
- [78
+ [72
 
  <./imagenes/waveshare.jpg> <./imagenes/wavecompo.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 2547--2549
+Underfull \hbox (badness 10000) in paragraph at lines 2579--2581
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2547--2549
+Underfull \hbox (badness 10000) in paragraph at lines 2579--2581
 
  []
 
-<imagenes/actividades_vision.jpeg, id=1568, 819.06pt x 1284.8pt>
+<imagenes/actividades_vision.jpeg, id=666, 819.06pt x 1284.8pt>
 File: imagenes/actividades_vision.jpeg Graphic file (type jpg)
 <use imagenes/actividades_vision.jpeg>
 Package pdftex.def Info: imagenes/actividades_vision.jpeg  used on input line 2
-552.
+584.
 (pdftex.def)             Requested size: 368.5736pt x 578.15466pt.
-[79]
-<imagenes/DiagramaFlujo_Vision.png, id=1574, 540.0175pt x 573.14125pt>
+[73]
+<imagenes/DiagramaFlujo_Vision.png, id=673, 540.0175pt x 573.14125pt>
 File: imagenes/DiagramaFlujo_Vision.png Graphic file (type png)
 <use imagenes/DiagramaFlujo_Vision.png>
 Package pdftex.def Info: imagenes/DiagramaFlujo_Vision.png  used on input line 
-2559.
+2591.
 (pdftex.def)             Requested size: 270.00809pt x 286.56992pt.
- [80 <./imagenes/actividades_vision.jpeg>]
-<imagenes/landmark.png, id=1579, 415.5525pt x 395.4775pt>
+ [74 <./imagenes/actividades_vision.jpeg>]
+<imagenes/landmark.png, id=679, 415.5525pt x 395.4775pt>
 File: imagenes/landmark.png Graphic file (type png)
 <use imagenes/landmark.png>
-Package pdftex.def Info: imagenes/landmark.png  used on input line 2574.
+Package pdftex.def Info: imagenes/landmark.png  used on input line 2606.
 (pdftex.def)             Requested size: 174.53085pt x 166.09941pt.
- [81 <./imagenes/DiagramaFlujo_Vision.png>]
-<imagenes/MOR.png, id=1585, 209.28188pt x 164.86594pt>
+ [75 <./imagenes/DiagramaFlujo_Vision.png>]
+<imagenes/MOR.png, id=686, 209.28188pt x 164.86594pt>
 File: imagenes/MOR.png Graphic file (type png)
 <use imagenes/MOR.png>
-Package pdftex.def Info: imagenes/MOR.png  used on input line 2606.
+Package pdftex.def Info: imagenes/MOR.png  used on input line 2638.
 (pdftex.def)             Requested size: 104.64067pt x 82.43275pt.
- [82 <./imagenes/landmark.png (PNG copy)> <./imagenes/MOR.png>]
+ [76 <./imagenes/landmark.png (PNG copy)> <./imagenes/MOR.png>]
 
-LaTeX Warning: Citation `mor' on page 83 undefined on input line 2622.
+LaTeX Warning: Citation `mor' on page 77 undefined on input line 2654.
 
-[83]
-<imagenes/DF-modCom.jpeg, id=1598, 492.84125pt x 914.41624pt>
+[77]
+<imagenes/DF-modCom.jpeg, id=702, 492.84125pt x 914.41624pt>
 File: imagenes/DF-modCom.jpeg Graphic file (type jpg)
 <use imagenes/DF-modCom.jpeg>
-Package pdftex.def Info: imagenes/DF-modCom.jpeg  used on input line 2632.
+Package pdftex.def Info: imagenes/DF-modCom.jpeg  used on input line 2664.
 (pdftex.def)             Requested size: 295.70702pt x 548.65398pt.
- [84
+ [78
 
  <./imagenes/DF-modCom.jpeg>]
-<imagenes/DG-modCom.jpeg, id=1603, 814.04124pt x 835.12pt>
+<imagenes/DG-modCom.jpeg, id=709, 814.04124pt x 835.12pt>
 File: imagenes/DG-modCom.jpeg Graphic file (type jpg)
 <use imagenes/DG-modCom.jpeg>
-Package pdftex.def Info: imagenes/DG-modCom.jpeg  used on input line 2643.
+Package pdftex.def Info: imagenes/DG-modCom.jpeg  used on input line 2675.
 (pdftex.def)             Requested size: 407.01962pt x 417.55898pt.
- [85 <./imagenes/DG-modCom.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 2653--2654
+ [79 <./imagenes/DG-modCom.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 2685--2686
 
  []
 
-<imagenes/DisenoMEB.png, id=1610, 1064.97874pt x 533.995pt>
+
+LaTeX Warning: Reference `fig:DisenoMEB' on page 80 undefined on input line 268
+7.
+
+<imagenes/DisenoMEB.png, id=716, 1064.97874pt x 533.995pt>
 File: imagenes/DisenoMEB.png Graphic file (type png)
 <use imagenes/DisenoMEB.png>
-Package pdftex.def Info: imagenes/DisenoMEB.png  used on input line 2659.
+Package pdftex.def Info: imagenes/DisenoMEB.png  used on input line 2691.
 (pdftex.def)             Requested size: 532.48807pt x 266.99684pt.
 
-Overfull \hbox (32.00407pt too wide) in paragraph at lines 2659--2660
+Overfull \hbox (32.00407pt too wide) in paragraph at lines 2691--2692
  [] 
  []
 
-[86 <./imagenes/DisenoMEB.png>]
-<imagenes/diagramaMEB.jpeg, id=1616, 442.65375pt x 293.095pt>
+[80 <./imagenes/DisenoMEB.png>]
+<imagenes/diagramaMEB.jpeg, id=724, 442.65375pt x 293.095pt>
 File: imagenes/diagramaMEB.jpeg Graphic file (type jpg)
 <use imagenes/diagramaMEB.jpeg>
-Package pdftex.def Info: imagenes/diagramaMEB.jpeg  used on input line 2668.
+Package pdftex.def Info: imagenes/diagramaMEB.jpeg  used on input line 2700.
 (pdftex.def)             Requested size: 309.8555pt x 205.16508pt.
- [87 <./imagenes/diagramaMEB.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 2681--2682
+ [81 <./imagenes/diagramaMEB.jpeg>]
+
+LaTeX Warning: Citation `NodeJs' on page 82 undefined on input line 2711.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2713--2714
 
  []
 
-<imagenes/diagramaclasesaw.jpg, id=1622, 763.85374pt x 643.40375pt>
+<imagenes/diagramaclasesaw.jpg, id=730, 763.85374pt x 643.40375pt>
 File: imagenes/diagramaclasesaw.jpg Graphic file (type jpg)
 <use imagenes/diagramaclasesaw.jpg>
-Package pdftex.def Info: imagenes/diagramaclasesaw.jpg  used on input line 2687
+Package pdftex.def Info: imagenes/diagramaclasesaw.jpg  used on input line 2719
 .
 (pdftex.def)             Requested size: 458.31578pt x 386.04523pt.
-[88
+
+LaTeX Warning: Reference `fig:clasesaw' on page 82 undefined on input line 2724
+.
+
+[82
 
  <./imagenes/diagramaclasesaw.jpg>]
-<imagenes/sec_reporte_incidencia.png, id=1629, 438.63875pt x 232.87pt>
+<imagenes/sec_reporte_incidencia.png, id=737, 438.63875pt x 232.87pt>
 File: imagenes/sec_reporte_incidencia.png Graphic file (type png)
 <use imagenes/sec_reporte_incidencia.png>
 Package pdftex.def Info: imagenes/sec_reporte_incidencia.png  used on input lin
-e 2696.
+e 2728.
 (pdftex.def)             Requested size: 263.18527pt x 139.72307pt.
-<imagenes/sec_ubicacion.png, id=1630, 536.0025pt x 221.82875pt>
+<imagenes/sec_ubicacion.png, id=738, 536.0025pt x 221.82875pt>
 File: imagenes/sec_ubicacion.png Graphic file (type png)
 <use imagenes/sec_ubicacion.png>
-Package pdftex.def Info: imagenes/sec_ubicacion.png  used on input line 2705.
+Package pdftex.def Info: imagenes/sec_ubicacion.png  used on input line 2737.
 (pdftex.def)             Requested size: 375.19919pt x 155.27905pt.
-<imagenes/sec_rcontrasena.jpg, id=1631, 507.8975pt x 319.1925pt>
+<imagenes/sec_rcontrasena.jpg, id=739, 507.8975pt x 319.1925pt>
 File: imagenes/sec_rcontrasena.jpg Graphic file (type jpg)
 <use imagenes/sec_rcontrasena.jpg>
-Package pdftex.def Info: imagenes/sec_rcontrasena.jpg  used on input line 2713.
+Package pdftex.def Info: imagenes/sec_rcontrasena.jpg  used on input line 2745.
 
 (pdftex.def)             Requested size: 304.74086pt x 191.51697pt.
- [89 <./imagenes/sec_reporte_incidencia.png> <./imagenes/sec_ubicacion.png> <./
+ [83 <./imagenes/sec_reporte_incidencia.png> <./imagenes/sec_ubicacion.png> <./
 imagenes/sec_rcontrasena.jpg>]
-<imagenes/sec_confirmar.jpg, id=1638, 443.6575pt x 293.095pt>
+<imagenes/sec_confirmar.jpg, id=748, 443.6575pt x 293.095pt>
 File: imagenes/sec_confirmar.jpg Graphic file (type jpg)
 <use imagenes/sec_confirmar.jpg>
-Package pdftex.def Info: imagenes/sec_confirmar.jpg  used on input line 2721.
+Package pdftex.def Info: imagenes/sec_confirmar.jpg  used on input line 2753.
 (pdftex.def)             Requested size: 266.19655pt x 175.85834pt.
-<imagenes/sec_perfil.jpg, id=1639, 554.07pt x 293.095pt>
+<imagenes/sec_perfil.jpg, id=749, 554.07pt x 293.095pt>
 File: imagenes/sec_perfil.jpg Graphic file (type jpg)
 <use imagenes/sec_perfil.jpg>
-Package pdftex.def Info: imagenes/sec_perfil.jpg  used on input line 2729.
+Package pdftex.def Info: imagenes/sec_perfil.jpg  used on input line 2761.
 (pdftex.def)             Requested size: 332.44456pt x 175.85834pt.
-<imagenes/sec_registrar.jpg, id=1640, 420.57124pt x 293.095pt>
+<imagenes/sec_registrar.jpg, id=750, 420.57124pt x 293.095pt>
 File: imagenes/sec_registrar.jpg Graphic file (type jpg)
 <use imagenes/sec_registrar.jpg>
-Package pdftex.def Info: imagenes/sec_registrar.jpg  used on input line 2736.
+Package pdftex.def Info: imagenes/sec_registrar.jpg  used on input line 2768.
 (pdftex.def)             Requested size: 252.3447pt x 175.85834pt.
- [90 <./imagenes/sec_confirmar.jpg> <./imagenes/sec_perfil.jpg>]
-<imagenes/sec_modificar.jpg, id=1645, 507.8975pt x 293.095pt>
+ [84 <./imagenes/sec_confirmar.jpg> <./imagenes/sec_perfil.jpg>]
+<imagenes/sec_modificar.jpg, id=758, 507.8975pt x 293.095pt>
 File: imagenes/sec_modificar.jpg Graphic file (type jpg)
 <use imagenes/sec_modificar.jpg>
-Package pdftex.def Info: imagenes/sec_modificar.jpg  used on input line 2742.
+Package pdftex.def Info: imagenes/sec_modificar.jpg  used on input line 2774.
 (pdftex.def)             Requested size: 304.74086pt x 175.85834pt.
-<imagenes/sec_eliminar.jpg, id=1646, 516.93124pt x 313.17pt>
+<imagenes/sec_eliminar.jpg, id=759, 516.93124pt x 313.17pt>
 File: imagenes/sec_eliminar.jpg Graphic file (type jpg)
 <use imagenes/sec_eliminar.jpg>
-Package pdftex.def Info: imagenes/sec_eliminar.jpg  used on input line 2750.
+Package pdftex.def Info: imagenes/sec_eliminar.jpg  used on input line 2782.
 (pdftex.def)             Requested size: 310.16113pt x 187.90344pt.
-<imagenes/sec_estado.jpg, id=1647, 653.44125pt x 303.1325pt>
+<imagenes/sec_estado.jpg, id=760, 653.44125pt x 303.1325pt>
 File: imagenes/sec_estado.jpg Graphic file (type jpg)
 <use imagenes/sec_estado.jpg>
-Package pdftex.def Info: imagenes/sec_estado.jpg  used on input line 2758.
+Package pdftex.def Info: imagenes/sec_estado.jpg  used on input line 2790.
 (pdftex.def)             Requested size: 392.06776pt x 181.8809pt.
- [91 <./imagenes/sec_registrar.jpg> <./imagenes/sec_modificar.jpg> <./imagenes/
+ [85 <./imagenes/sec_registrar.jpg> <./imagenes/sec_modificar.jpg> <./imagenes/
 sec_eliminar.jpg>]
-<imagenes/login.png, id=1653, 1445.4pt x 903.375pt>
+<imagenes/login.png, id=769, 1445.4pt x 903.375pt>
 File: imagenes/login.png Graphic file (type png)
 <use imagenes/login.png>
-Package pdftex.def Info: imagenes/login.png  used on input line 2768.
+Package pdftex.def Info: imagenes/login.png  used on input line 2800.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
-<imagenes/homescreen.png, id=1655, 1445.4pt x 903.375pt>
+
+
+LaTeX Warning: Reference `fig:login' on page 86 undefined on input line 2804.
+
+<imagenes/homescreen.png, id=770, 1445.4pt x 903.375pt>
 File: imagenes/homescreen.png Graphic file (type png)
 <use imagenes/homescreen.png>
-Package pdftex.def Info: imagenes/homescreen.png  used on input line 2775.
+Package pdftex.def Info: imagenes/homescreen.png  used on input line 2807.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
+[86 <./imagenes/sec_estado.jpg> <./imagenes/login.png>]
 
-[92 <./imagenes/sec_estado.jpg> <./imagenes/login.png>]
-<imagenes/profile.png, id=1661, 1445.4pt x 903.375pt>
+LaTeX Warning: Reference `fig:homescreen' on page 87 undefined on input line 28
+12.
+
+<imagenes/profile.png, id=777, 1445.4pt x 903.375pt>
 File: imagenes/profile.png Graphic file (type png)
 <use imagenes/profile.png>
-Package pdftex.def Info: imagenes/profile.png  used on input line 2783.
+Package pdftex.def Info: imagenes/profile.png  used on input line 2815.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
- [93 <./imagenes/homescreen.png> <./imagenes/profile.png>]
-<imagenes/incident.png, id=1668, 1445.4pt x 903.375pt>
+
+LaTeX Warning: Reference `fig:profile' on page 87 undefined on input line 2820.
+
+
+[87 <./imagenes/homescreen.png> <./imagenes/profile.png>]
+<imagenes/incident.png, id=785, 1445.4pt x 903.375pt>
 File: imagenes/incident.png Graphic file (type png)
 <use imagenes/incident.png>
-Package pdftex.def Info: imagenes/incident.png  used on input line 2791.
+Package pdftex.def Info: imagenes/incident.png  used on input line 2823.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
-<imagenes/location.png, id=1670, 1445.4pt x 903.375pt>
+
+
+LaTeX Warning: Reference `fig:incident' on page 88 undefined on input line 2828
+.
+
+<imagenes/location.png, id=786, 1445.4pt x 903.375pt>
 File: imagenes/location.png Graphic file (type png)
 <use imagenes/location.png>
-Package pdftex.def Info: imagenes/location.png  used on input line 2799.
+Package pdftex.def Info: imagenes/location.png  used on input line 2831.
 (pdftex.def)             Requested size: 433.62335pt x 271.01459pt.
- [94 <./imagenes/incident.png> <./imagenes/location.png>]
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-2840.
+[88 <./imagenes/incident.png> <./imagenes/location.png>]
 
+LaTeX Warning: Reference `fig:location' on page 89 undefined on input line 2837
+.
+
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
+2872.
 (C:\Users\unknown\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-[95{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.e
+[89{C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.e
 nc}]
-Underfull \hbox (badness 10000) in paragraph at lines 2886--2887
+Underfull \hbox (badness 10000) in paragraph at lines 2918--2919
 
  []
 
-[96]
-<imagenes/cognito.png, id=1691, 573.14125pt x 520.94624pt>
+[90]
+<imagenes/cognito.png, id=809, 573.14125pt x 520.94624pt>
 File: imagenes/cognito.png Graphic file (type png)
 <use imagenes/cognito.png>
-Package pdftex.def Info: imagenes/cognito.png  used on input line 2893.
+Package pdftex.def Info: imagenes/cognito.png  used on input line 2925.
 (pdftex.def)             Requested size: 286.56992pt x 260.47249pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2904--2905
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2937
 
  []
 
-[97 <./imagenes/cognito.png>]
+[91 <./imagenes/cognito.png>]
 
-LaTeX Warning: Citation `Nvidia' on page 98 undefined on input line 2920.
+LaTeX Warning: Citation `Nvidia' on page 92 undefined on input line 2952.
 
-<imagenes/Balena.JPG, id=1703, 602.25pt x 380.17032pt>
+
+LaTeX Warning: Citation `JetPackSDK' on page 92 undefined on input line 2954.
+
+
+LaTeX Warning: Citation `JetPackSDK' on page 92 undefined on input line 2954.
+
+<imagenes/Balena.JPG, id=820, 602.25pt x 380.17032pt>
 File: imagenes/Balena.JPG Graphic file (type jpg)
 <use imagenes/Balena.JPG>
-Package pdftex.def Info: imagenes/Balena.JPG  used on input line 2927.
+Package pdftex.def Info: imagenes/Balena.JPG  used on input line 2959.
 (pdftex.def)             Requested size: 361.35278pt x 228.10394pt.
-<imagenes/JNconexiones.jpeg, id=1704, 1284.8pt x 1272.755pt>
+<imagenes/JNconexiones.jpeg, id=821, 1284.8pt x 1272.755pt>
 File: imagenes/JNconexiones.jpeg Graphic file (type jpg)
 <use imagenes/JNconexiones.jpeg>
-Package pdftex.def Info: imagenes/JNconexiones.jpeg  used on input line 2933.
+Package pdftex.def Info: imagenes/JNconexiones.jpeg  used on input line 2965.
 (pdftex.def)             Requested size: 256.95544pt x 254.5465pt.
-[98
+[92
 
  <./imagenes/Balena.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 2938--2939
+Underfull \hbox (badness 10000) in paragraph at lines 2970--2971
 
  []
 
-[99 <./imagenes/JNconexiones.jpeg>]
-Overfull \hbox (300.76608pt too wide) in paragraph at lines 2984--2984
+[93 <./imagenes/JNconexiones.jpeg>]
+
+LaTeX Warning: Citation `Tensorflow' on page 94 undefined on input line 3013.
+
+
+Overfull \hbox (300.76608pt too wide) in paragraph at lines 3016--3016
  []\OT1/lmtt/m/n/12 sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-
 dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran[] 
  []
 
 
-Overfull \hbox (405.73413pt too wide) in paragraph at lines 2988--2988
+Overfull \hbox (405.73413pt too wide) in paragraph at lines 3020--3020
  []\OT1/lmtt/m/n/12 sudo pip3 install -U numpy==1.19.4 future mock keras_prepro
 cessing keras_applications gast==0.2.1 protobuf pybind11 cython pkgconfig packa
 ging[] 
  []
 
 
-Overfull \hbox (189.60902pt too wide) in paragraph at lines 2989--2989
+Overfull \hbox (189.60902pt too wide) in paragraph at lines 3021--3021
  []\OT1/lmtt/m/n/12 sudo pip3 install --extra-index-url https://developer.downl
 oad.nvidia.com/compute/redist/jp/v461 tensorflow[] 
  []
 
-<imagenes/librerias2.jpeg, id=1717, 646.415pt x 246.9225pt>
+<imagenes/librerias2.jpeg, id=837, 646.415pt x 246.9225pt>
 File: imagenes/librerias2.jpeg Graphic file (type jpg)
 <use imagenes/librerias2.jpeg>
-Package pdftex.def Info: imagenes/librerias2.jpeg  used on input line 3000.
+Package pdftex.def Info: imagenes/librerias2.jpeg  used on input line 3032.
 (pdftex.def)             Requested size: 387.85199pt x 148.15462pt.
-<imagenes/Jtop.jpeg, id=1719, 736.7525pt x 463.7325pt>
+
+LaTeX Warning: Citation `JetStats' on page 94 undefined on input line 3037.
+
+<imagenes/Jtop.jpeg, id=838, 736.7525pt x 463.7325pt>
 File: imagenes/Jtop.jpeg Graphic file (type jpg)
 <use imagenes/Jtop.jpeg>
-Package pdftex.def Info: imagenes/Jtop.jpeg  used on input line 3017.
+Package pdftex.def Info: imagenes/Jtop.jpeg  used on input line 3049.
 (pdftex.def)             Requested size: 442.05492pt x 278.24164pt.
-[100 <./imagenes/librerias2.jpeg>] [101 <./imagenes/Jtop.jpeg>]
-<imagenes/swap.jpeg, id=1737, 646.415pt x 156.585pt>
+[94 <./imagenes/librerias2.jpeg>]
+
+LaTeX Warning: Citation `SwapFile' on page 95 undefined on input line 3056.
+
+[95 <./imagenes/Jtop.jpeg>]
+<imagenes/swap.jpeg, id=854, 646.415pt x 156.585pt>
 File: imagenes/swap.jpeg Graphic file (type jpg)
 <use imagenes/swap.jpeg>
-Package pdftex.def Info: imagenes/swap.jpeg  used on input line 3056.
+Package pdftex.def Info: imagenes/swap.jpeg  used on input line 3088.
 (pdftex.def)             Requested size: 387.85199pt x 93.95172pt.
-<imagenes/OpencvCuda.jpeg, id=1739, 646.415pt x 445.665pt>
+
+
+LaTeX Warning: Citation `CUDA' on page 96 undefined on input line 3094.
+
+<imagenes/OpencvCuda.jpeg, id=855, 646.415pt x 445.665pt>
 File: imagenes/OpencvCuda.jpeg Graphic file (type jpg)
 <use imagenes/OpencvCuda.jpeg>
-Package pdftex.def Info: imagenes/OpencvCuda.jpeg  used on input line 3077.
+Package pdftex.def Info: imagenes/OpencvCuda.jpeg  used on input line 3109.
 (pdftex.def)             Requested size: 387.85199pt x 267.40106pt.
- [102 <./imagenes/swap.jpeg> <./imagenes/OpencvCuda.jpeg>]
-<imagenes/DetecRostro1.JPG, id=1745, 835.62187pt x 160.34906pt>
+[96 <./imagenes/swap.jpeg> <./imagenes/OpencvCuda.jpeg>]
+<imagenes/DetecRostro1.JPG, id=861, 835.62187pt x 160.34906pt>
 File: imagenes/DetecRostro1.JPG Graphic file (type jpg)
 <use imagenes/DetecRostro1.JPG>
-Package pdftex.def Info: imagenes/DetecRostro1.JPG  used on input line 3088.
+Package pdftex.def Info: imagenes/DetecRostro1.JPG  used on input line 3120.
 (pdftex.def)             Requested size: 501.37698pt x 96.21017pt.
 
-Overfull \hbox (0.89299pt too wide) in paragraph at lines 3088--3089
+Overfull \hbox (0.89299pt too wide) in paragraph at lines 3120--3121
  [] 
  []
 
-<imagenes/detecrostro2.JPG, id=1746, 691.83469pt x 384.6872pt>
+<imagenes/detecrostro2.JPG, id=862, 691.83469pt x 384.6872pt>
 File: imagenes/detecrostro2.JPG Graphic file (type jpg)
 <use imagenes/detecrostro2.JPG>
-Package pdftex.def Info: imagenes/detecrostro2.JPG  used on input line 3096.
+Package pdftex.def Info: imagenes/detecrostro2.JPG  used on input line 3128.
 (pdftex.def)             Requested size: 415.104pt x 230.81409pt.
-[103 <./imagenes/DetecRostro1.JPG> <./imagenes/detecrostro2.JPG>] [104]
-<imagenes/puntosreferencia.JPG, id=1760, 573.64313pt x 257.46187pt>
+[97 <./imagenes/DetecRostro1.JPG> <./imagenes/detecrostro2.JPG>] [98]
+<imagenes/puntosreferencia.JPG, id=880, 573.64313pt x 257.46187pt>
 File: imagenes/puntosreferencia.JPG Graphic file (type jpg)
 <use imagenes/puntosreferencia.JPG>
-Package pdftex.def Info: imagenes/puntosreferencia.JPG  used on input line 3122
+Package pdftex.def Info: imagenes/puntosreferencia.JPG  used on input line 3154
 .
 (pdftex.def)             Requested size: 344.18852pt x 154.4783pt.
-<imagenes/funcionesdetec.JPG, id=1761, 461.47406pt x 437.38406pt>
+<imagenes/funcionesdetec.JPG, id=881, 461.47406pt x 437.38406pt>
 File: imagenes/funcionesdetec.JPG Graphic file (type jpg)
 <use imagenes/funcionesdetec.JPG>
-Package pdftex.def Info: imagenes/funcionesdetec.JPG  used on input line 3149.
+Package pdftex.def Info: imagenes/funcionesdetec.JPG  used on input line 3181.
 (pdftex.def)             Requested size: 276.88655pt x 262.43245pt.
+ [99
 
-[105
-
- <./imagenes/puntosreferencia.JPG>] [106 <./imagenes/funcionesdetec.JPG>]
-<imagenes/Somnolencia1.JPG, id=1770, 460.72125pt x 217.5628pt>
+ <./imagenes/puntosreferencia.JPG>] [100 <./imagenes/funcionesdetec.JPG>]
+<imagenes/Somnolencia1.JPG, id=894, 460.72125pt x 217.5628pt>
 File: imagenes/Somnolencia1.JPG Graphic file (type jpg)
 <use imagenes/Somnolencia1.JPG>
-Package pdftex.def Info: imagenes/Somnolencia1.JPG  used on input line 3169.
+Package pdftex.def Info: imagenes/Somnolencia1.JPG  used on input line 3201.
 (pdftex.def)             Requested size: 276.43488pt x 130.53868pt.
-<imagenes/Somnolencia2.JPG, id=1771, 423.08063pt x 464.4853pt>
+<imagenes/Somnolencia2.JPG, id=895, 423.08063pt x 464.4853pt>
 File: imagenes/Somnolencia2.JPG Graphic file (type jpg)
 <use imagenes/Somnolencia2.JPG>
-Package pdftex.def Info: imagenes/Somnolencia2.JPG  used on input line 3182.
+Package pdftex.def Info: imagenes/Somnolencia2.JPG  used on input line 3214.
 (pdftex.def)             Requested size: 253.85033pt x 278.69333pt.
-
-[107 <./imagenes/Somnolencia1.JPG>]
-<imagenes/Somnolencia12.JPG, id=1777, 662.475pt x 383.18156pt>
+ [101 <./imagenes/Somnolencia1.JPG>]
+<imagenes/Somnolencia12.JPG, id=903, 662.475pt x 383.18156pt>
 File: imagenes/Somnolencia12.JPG Graphic file (type jpg)
 <use imagenes/Somnolencia12.JPG>
-Package pdftex.def Info: imagenes/Somnolencia12.JPG  used on input line 3195.
+Package pdftex.def Info: imagenes/Somnolencia12.JPG  used on input line 3227.
 (pdftex.def)             Requested size: 397.48807pt x 229.9107pt.
- [108 <./imagenes/Somnolencia2.JPG> <./imagenes/Somnolencia12.JPG>]
-<imagenes/Somnolencia3.JPG, id=1782, 670.00313pt x 182.18062pt>
+ [102 <./imagenes/Somnolencia2.JPG> <./imagenes/Somnolencia12.JPG>]
+<imagenes/Somnolencia3.JPG, id=910, 670.00313pt x 182.18062pt>
 File: imagenes/Somnolencia3.JPG Graphic file (type jpg)
 <use imagenes/Somnolencia3.JPG>
-Package pdftex.def Info: imagenes/Somnolencia3.JPG  used on input line 3210.
+Package pdftex.def Info: imagenes/Somnolencia3.JPG  used on input line 3242.
 (pdftex.def)             Requested size: 402.00497pt x 109.3092pt.
-<imagenes/Somnolencia4.JPG, id=1783, 660.96938pt x 206.27063pt>
+<imagenes/Somnolencia4.JPG, id=911, 660.96938pt x 206.27063pt>
 File: imagenes/Somnolencia4.JPG Graphic file (type jpg)
 <use imagenes/Somnolencia4.JPG>
-Package pdftex.def Info: imagenes/Somnolencia4.JPG  used on input line 3223.
+Package pdftex.def Info: imagenes/Somnolencia4.JPG  used on input line 3255.
 (pdftex.def)             Requested size: 396.58469pt x 123.76332pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3235--3236
+Underfull \hbox (badness 10000) in paragraph at lines 3267--3268
 
  []
 
-<imagenes/Perifericos1.jpeg, id=1784, 1606.0pt x 1204.5pt>
+<imagenes/Perifericos1.jpeg, id=912, 1606.0pt x 1204.5pt>
 File: imagenes/Perifericos1.jpeg Graphic file (type jpg)
 <use imagenes/Perifericos1.jpeg>
-Package pdftex.def Info: imagenes/Perifericos1.jpeg  used on input line 3240.
+Package pdftex.def Info: imagenes/Perifericos1.jpeg  used on input line 3272.
 (pdftex.def)             Requested size: 176.66054pt x 132.4954pt.
-[109 <./imagenes/Somnolencia3.JPG> <./imagenes/Somnolencia4.JPG>]
-<imagenes/Perifericos2.jpeg, id=1790, 1606.0pt x 1204.5pt>
+[103 <./imagenes/Somnolencia3.JPG> <./imagenes/Somnolencia4.JPG>]
+<imagenes/Perifericos2.jpeg, id=921, 1606.0pt x 1204.5pt>
 File: imagenes/Perifericos2.jpeg Graphic file (type jpg)
 <use imagenes/Perifericos2.jpeg>
-Package pdftex.def Info: imagenes/Perifericos2.jpeg  used on input line 3249.
+Package pdftex.def Info: imagenes/Perifericos2.jpeg  used on input line 3281.
 (pdftex.def)             Requested size: 176.66054pt x 132.4954pt.
-<imagenes/hat.png, id=1791, 348.30125pt x 338.26375pt>
+<imagenes/hat.png, id=922, 348.30125pt x 338.26375pt>
 File: imagenes/hat.png Graphic file (type png)
 <use imagenes/hat.png>
-Package pdftex.def Info: imagenes/hat.png  used on input line 3262.
+Package pdftex.def Info: imagenes/hat.png  used on input line 3294.
 (pdftex.def)             Requested size: 208.98236pt x 202.95981pt.
- [110 <./imagenes/Perifericos1.jpeg> <./imagenes/Perifericos2.jpeg> <./imagenes
+ [104 <./imagenes/Perifericos1.jpeg> <./imagenes/Perifericos2.jpeg> <./imagenes
 /hat.png>]
-<imagenes/libraries.png, id=1797, 904.37875pt x 327.2225pt>
+<imagenes/libraries.png, id=933, 904.37875pt x 327.2225pt>
 File: imagenes/libraries.png Graphic file (type png)
 <use imagenes/libraries.png>
-Package pdftex.def Info: imagenes/libraries.png  used on input line 3270.
+Package pdftex.def Info: imagenes/libraries.png  used on input line 3302.
 (pdftex.def)             Requested size: 542.63144pt x 196.335pt.
 
-Overfull \hbox (42.14745pt too wide) in paragraph at lines 3270--3271
+Overfull \hbox (42.14745pt too wide) in paragraph at lines 3302--3303
  [] 
  []
 
-<imagenes/gpio.png, id=1799, 896.34875pt x 140.525pt>
+
+LaTeX Warning: Reference `fig:libraries' on page 105 undefined on input line 33
+07.
+
+<imagenes/gpio.png, id=934, 896.34875pt x 140.525pt>
 File: imagenes/gpio.png Graphic file (type png)
 <use imagenes/gpio.png>
-Package pdftex.def Info: imagenes/gpio.png  used on input line 3280.
+Package pdftex.def Info: imagenes/gpio.png  used on input line 3312.
 (pdftex.def)             Requested size: 537.8134pt x 84.31564pt.
 
-Overfull \hbox (37.3294pt too wide) in paragraph at lines 3280--3281
+Overfull \hbox (37.3294pt too wide) in paragraph at lines 3312--3313
  [] 
  []
 
-<imagenes/minicom.png, id=1800, 462.72874pt x 113.42375pt>
+<imagenes/minicom.png, id=935, 462.72874pt x 113.42375pt>
 File: imagenes/minicom.png Graphic file (type png)
 <use imagenes/minicom.png>
-Package pdftex.def Info: imagenes/minicom.png  used on input line 3289.
+Package pdftex.def Info: imagenes/minicom.png  used on input line 3321.
 (pdftex.def)             Requested size: 277.63939pt x 68.05476pt.
-<imagenes/drivers.png, id=1801, 575.14874pt x 199.74625pt>
+<imagenes/drivers.png, id=936, 575.14874pt x 199.74625pt>
 File: imagenes/drivers.png Graphic file (type png)
 <use imagenes/drivers.png>
-Package pdftex.def Info: imagenes/drivers.png  used on input line 3297.
+Package pdftex.def Info: imagenes/drivers.png  used on input line 3329.
 (pdftex.def)             Requested size: 345.0919pt x 119.84866pt.
-[111 <./imagenes/libraries.png> <./imagenes/gpio.png> <./imagenes/minicom.png>]
-<imagenes/modulo.png, id=1809, 917.4275pt x 137.51375pt>
+[105 <./imagenes/libraries.png> <./imagenes/gpio.png> <./imagenes/minicom.png>]
+<imagenes/modulo.png, id=947, 917.4275pt x 137.51375pt>
 File: imagenes/modulo.png Graphic file (type png)
 <use imagenes/modulo.png>
-Package pdftex.def Info: imagenes/modulo.png  used on input line 3305.
+Package pdftex.def Info: imagenes/modulo.png  used on input line 3337.
 (pdftex.def)             Requested size: 550.46075pt x 82.50888pt.
 
-Overfull \hbox (49.97676pt too wide) in paragraph at lines 3305--3306
+Overfull \hbox (49.97676pt too wide) in paragraph at lines 3337--3338
  [] 
  []
 
-<imagenes/SIM7600G-1.JPG, id=1811, 439.6425pt x 221.32687pt>
+
+LaTeX Warning: Citation `Waveshare' on page 106 undefined on input line 3344.
+
+<imagenes/SIM7600G-1.JPG, id=948, 439.6425pt x 221.32687pt>
 File: imagenes/SIM7600G-1.JPG Graphic file (type jpg)
 <use imagenes/SIM7600G-1.JPG>
-Package pdftex.def Info: imagenes/SIM7600G-1.JPG  used on input line 3319.
+Package pdftex.def Info: imagenes/SIM7600G-1.JPG  used on input line 3351.
 (pdftex.def)             Requested size: 395.67459pt x 199.19232pt.
-<imagenes/SIM7600G-2.JPG, id=1812, 442.65375pt x 88.07906pt>
+<imagenes/SIM7600G-2.JPG, id=949, 442.65375pt x 88.07906pt>
 File: imagenes/SIM7600G-2.JPG Graphic file (type jpg)
 <use imagenes/SIM7600G-2.JPG>
-Package pdftex.def Info: imagenes/SIM7600G-2.JPG  used on input line 3325.
+Package pdftex.def Info: imagenes/SIM7600G-2.JPG  used on input line 3357.
 (pdftex.def)             Requested size: 398.38467pt x 79.2704pt.
-[112 <./imagenes/drivers.png> <./imagenes/modulo.png> <./imagenes/SIM7600G-1.JP
+[106 <./imagenes/drivers.png> <./imagenes/modulo.png> <./imagenes/SIM7600G-1.JP
 G>]
-<imagenes/SIM7600G-3.JPG, id=1820, 444.15938pt x 40.65187pt>
+<imagenes/SIM7600G-3.JPG, id=960, 444.15938pt x 40.65187pt>
 File: imagenes/SIM7600G-3.JPG Graphic file (type jpg)
 <use imagenes/SIM7600G-3.JPG>
-Package pdftex.def Info: imagenes/SIM7600G-3.JPG  used on input line 3333.
+Package pdftex.def Info: imagenes/SIM7600G-3.JPG  used on input line 3365.
 (pdftex.def)             Requested size: 399.73973pt x 36.58633pt.
-<imagenes/SIM7600G-4.JPG, id=1821, 449.42906pt x 55.70813pt>
+<imagenes/SIM7600G-4.JPG, id=961, 449.42906pt x 55.70813pt>
 File: imagenes/SIM7600G-4.JPG Graphic file (type jpg)
 <use imagenes/SIM7600G-4.JPG>
-Package pdftex.def Info: imagenes/SIM7600G-4.JPG  used on input line 3341.
+Package pdftex.def Info: imagenes/SIM7600G-4.JPG  used on input line 3373.
 (pdftex.def)             Requested size: 404.4824pt x 50.13683pt.
-<imagenes/GPSpy1.JPG, id=1822, 678.28406pt x 478.78876pt>
+<imagenes/GPSpy1.JPG, id=962, 678.28406pt x 478.78876pt>
 File: imagenes/GPSpy1.JPG Graphic file (type jpg)
 <use imagenes/GPSpy1.JPG>
-Package pdftex.def Info: imagenes/GPSpy1.JPG  used on input line 3351.
+Package pdftex.def Info: imagenes/GPSpy1.JPG  used on input line 3383.
 (pdftex.def)             Requested size: 420.53177pt x 296.84596pt.
- [113 <./imagenes/SIM7600G-2.JPG> <./imagenes/SIM7600G-3.JPG> <./imagenes/SIM76
+ [107 <./imagenes/SIM7600G-2.JPG> <./imagenes/SIM7600G-3.JPG> <./imagenes/SIM76
 00G-4.JPG> <./imagenes/GPSpy1.JPG>]
-<imagenes/GPSpy2.JPG, id=1827, 611.28375pt x 476.53032pt>
+<imagenes/GPSpy2.JPG, id=970, 611.28375pt x 476.53032pt>
 File: imagenes/GPSpy2.JPG Graphic file (type jpg)
 <use imagenes/GPSpy2.JPG>
-Package pdftex.def Info: imagenes/GPSpy2.JPG  used on input line 3357.
+Package pdftex.def Info: imagenes/GPSpy2.JPG  used on input line 3389.
 (pdftex.def)             Requested size: 378.992pt x 295.44574pt.
-<imagenes/GPSpy3.JPG, id=1828, 557.08125pt x 467.49657pt>
+<imagenes/GPSpy3.JPG, id=971, 557.08125pt x 467.49657pt>
 File: imagenes/GPSpy3.JPG Graphic file (type jpg)
 <use imagenes/GPSpy3.JPG>
-Package pdftex.def Info: imagenes/GPSpy3.JPG  used on input line 3363.
+Package pdftex.def Info: imagenes/GPSpy3.JPG  used on input line 3395.
 (pdftex.def)             Requested size: 345.38681pt x 289.84488pt.
-<imagenes/GPSpy4.JPG, id=1829, 435.12563pt x 234.1247pt>
+<imagenes/GPSpy4.JPG, id=972, 435.12563pt x 234.1247pt>
 File: imagenes/GPSpy4.JPG Graphic file (type jpg)
 <use imagenes/GPSpy4.JPG>
-Package pdftex.def Info: imagenes/GPSpy4.JPG  used on input line 3369.
+Package pdftex.def Info: imagenes/GPSpy4.JPG  used on input line 3401.
 (pdftex.def)             Requested size: 304.58586pt x 163.88615pt.
- [114 <./imagenes/GPSpy2.JPG> <./imagenes/GPSpy3.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 3374--3375
+ [108 <./imagenes/GPSpy2.JPG> <./imagenes/GPSpy3.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 3406--3407
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3376--3379
+Underfull \hbox (badness 10000) in paragraph at lines 3408--3411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3380--3381
+Underfull \hbox (badness 10000) in paragraph at lines 3412--3413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3382--3383
+Underfull \hbox (badness 10000) in paragraph at lines 3414--3415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3384--3385
+Underfull \hbox (badness 10000) in paragraph at lines 3416--3417
 
  []
 
-<imagenes/Mymapaws.png, id=1834, 938.75719pt x 461.47406pt>
+<imagenes/Mymapaws.png, id=980, 938.75719pt x 461.47406pt>
 File: imagenes/Mymapaws.png Graphic file (type png)
 <use imagenes/Mymapaws.png>
-Package pdftex.def Info: imagenes/Mymapaws.png  used on input line 3390.
+Package pdftex.def Info: imagenes/Mymapaws.png  used on input line 3422.
 (pdftex.def)             Requested size: 516.31805pt x 253.81151pt.
 
-Overfull \hbox (15.83406pt too wide) in paragraph at lines 3390--3391
+Overfull \hbox (15.83406pt too wide) in paragraph at lines 3422--3423
  [] 
  []
 
-[115 <./imagenes/GPSpy4.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 3396--3397
+[109 <./imagenes/GPSpy4.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 3428--3429
 
  []
 
-<imagenes/RealTimeMap.jpeg, id=1840, 1389.19pt x 893.3375pt>
+<imagenes/RealTimeMap.jpeg, id=987, 1389.19pt x 893.3375pt>
 File: imagenes/RealTimeMap.jpeg Graphic file (type jpg)
 <use imagenes/RealTimeMap.jpeg>
-Package pdftex.def Info: imagenes/RealTimeMap.jpeg  used on input line 3401.
+Package pdftex.def Info: imagenes/RealTimeMap.jpeg  used on input line 3433.
 (pdftex.def)             Requested size: 486.22379pt x 312.6728pt.
-[116 <./imagenes/Mymapaws.png>]
-<imagenes/Mymapaws2.png, id=1846, 912.40875pt x 367.3725pt>
+[110 <./imagenes/Mymapaws.png>]
+<imagenes/Mymapaws2.png, id=994, 912.40875pt x 367.3725pt>
 File: imagenes/Mymapaws2.png Graphic file (type png)
 <use imagenes/Mymapaws2.png>
-Package pdftex.def Info: imagenes/Mymapaws2.png  used on input line 3409.
+Package pdftex.def Info: imagenes/Mymapaws2.png  used on input line 3441.
 (pdftex.def)             Requested size: 483.57434pt x 194.70648pt.
 File: imagenes/Mymapaws2.png Graphic file (type png)
 <use imagenes/Mymapaws2.png>
-Package pdftex.def Info: imagenes/Mymapaws2.png  used on input line 3418.
+Package pdftex.def Info: imagenes/Mymapaws2.png  used on input line 3450.
 (pdftex.def)             Requested size: 483.57434pt x 194.70648pt.
- [117 <./imagenes/RealTimeMap.jpeg> <./imagenes/Mymapaws2.png>]
-<imagenes/RealTimeMap2.jpeg, id=1852, 350.05782pt x 94.85437pt>
+ [111 <./imagenes/RealTimeMap.jpeg> <./imagenes/Mymapaws2.png>]
+<imagenes/RealTimeMap2.jpeg, id=1002, 350.05782pt x 94.85437pt>
 File: imagenes/RealTimeMap2.jpeg Graphic file (type jpg)
 <use imagenes/RealTimeMap2.jpeg>
-Package pdftex.def Info: imagenes/RealTimeMap2.jpeg  used on input line 3427.
+Package pdftex.def Info: imagenes/RealTimeMap2.jpeg  used on input line 3459.
 (pdftex.def)             Requested size: 350.05695pt x 94.85413pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3434--3435
+
+LaTeX Warning: Citation `Waveshare' on page 112 undefined on input line 3466.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3466--3467
 
  []
 
-<imagenes/4glte1.JPG, id=1854, 445.665pt x 68.50594pt>
+<imagenes/4glte1.JPG, id=1003, 445.665pt x 68.50594pt>
 File: imagenes/4glte1.JPG Graphic file (type jpg)
 <use imagenes/4glte1.JPG>
-Package pdftex.def Info: imagenes/4glte1.JPG  used on input line 3439.
+Package pdftex.def Info: imagenes/4glte1.JPG  used on input line 3471.
 (pdftex.def)             Requested size: 401.09479pt x 61.65477pt.
-<imagenes/4glte2.JPG, id=1855, 441.14813pt x 101.62968pt>
+<imagenes/4glte2.JPG, id=1004, 441.14813pt x 101.62968pt>
 File: imagenes/4glte2.JPG Graphic file (type jpg)
 <use imagenes/4glte2.JPG>
-Package pdftex.def Info: imagenes/4glte2.JPG  used on input line 3448.
+Package pdftex.def Info: imagenes/4glte2.JPG  used on input line 3480.
 (pdftex.def)             Requested size: 397.02965pt x 91.46585pt.
-[118 <./imagenes/RealTimeMap2.jpeg> <./imagenes/4glte1.JPG>]
-<imagenes/4glte3.JPG, id=1860, 444.91219pt x 118.19156pt>
+[112 <./imagenes/RealTimeMap2.jpeg> <./imagenes/4glte1.JPG>]
+<imagenes/4glte3.JPG, id=1013, 444.91219pt x 118.19156pt>
 File: imagenes/4glte3.JPG Graphic file (type jpg)
 <use imagenes/4glte3.JPG>
-Package pdftex.def Info: imagenes/4glte3.JPG  used on input line 3456.
+Package pdftex.def Info: imagenes/4glte3.JPG  used on input line 3488.
 (pdftex.def)             Requested size: 400.41725pt x 106.37141pt.
-<imagenes/4glte4.JPG, id=1861, 443.40656pt x 69.25874pt>
+<imagenes/4glte4.JPG, id=1014, 443.40656pt x 69.25874pt>
 File: imagenes/4glte4.JPG Graphic file (type jpg)
 <use imagenes/4glte4.JPG>
-Package pdftex.def Info: imagenes/4glte4.JPG  used on input line 3464.
+Package pdftex.def Info: imagenes/4glte4.JPG  used on input line 3496.
 (pdftex.def)             Requested size: 399.06221pt x 62.33228pt.
-<imagenes/4glte5.JPG, id=1862, 452.4403pt x 39.89906pt>
+<imagenes/4glte5.JPG, id=1015, 452.4403pt x 39.89906pt>
 File: imagenes/4glte5.JPG Graphic file (type jpg)
 <use imagenes/4glte5.JPG>
-Package pdftex.def Info: imagenes/4glte5.JPG  used on input line 3472.
+Package pdftex.def Info: imagenes/4glte5.JPG  used on input line 3504.
 (pdftex.def)             Requested size: 407.19252pt x 35.9088pt.
-<imagenes/4glte6.JPG, id=1863, 447.92343pt x 44.41594pt>
+<imagenes/4glte6.JPG, id=1016, 447.92343pt x 44.41594pt>
 File: imagenes/4glte6.JPG Graphic file (type jpg)
 <use imagenes/4glte6.JPG>
-Package pdftex.def Info: imagenes/4glte6.JPG  used on input line 3480.
+Package pdftex.def Info: imagenes/4glte6.JPG  used on input line 3512.
 (pdftex.def)             Requested size: 403.12737pt x 39.97395pt.
-<imagenes/4glte7.JPG, id=1864, 444.15938pt x 55.70813pt>
+<imagenes/4glte7.JPG, id=1017, 444.15938pt x 55.70813pt>
 File: imagenes/4glte7.JPG Graphic file (type jpg)
 <use imagenes/4glte7.JPG>
-Package pdftex.def Info: imagenes/4glte7.JPG  used on input line 3488.
+Package pdftex.def Info: imagenes/4glte7.JPG  used on input line 3520.
 (pdftex.def)             Requested size: 399.73973pt x 50.13683pt.
- [119 <./imagenes/4glte2.JPG> <./imagenes/4glte3.JPG> <./imagenes/4glte4.JPG> <
+ [113 <./imagenes/4glte2.JPG> <./imagenes/4glte3.JPG> <./imagenes/4glte4.JPG> <
 ./imagenes/4glte5.JPG> <./imagenes/4glte6.JPG>]
-<imagenes/4glte8.JPG, id=1869, 447.92343pt x 60.97781pt>
+<imagenes/4glte8.JPG, id=1027, 447.92343pt x 60.97781pt>
 File: imagenes/4glte8.JPG Graphic file (type jpg)
 <use imagenes/4glte8.JPG>
-Package pdftex.def Info: imagenes/4glte8.JPG  used on input line 3496.
+Package pdftex.def Info: imagenes/4glte8.JPG  used on input line 3528.
 (pdftex.def)             Requested size: 403.12737pt x 54.8795pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3502--3503
+Underfull \hbox (badness 10000) in paragraph at lines 3534--3535
 
  []
 
 
-LaTeX Warning: Citation `Boto3' on page 120 undefined on input line 3504.
+LaTeX Warning: Citation `Boto3' on page 114 undefined on input line 3536.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3504--3505
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3506--3507
+Underfull \hbox (badness 10000) in paragraph at lines 3536--3537
 
  []
 
-<imagenes/4glte.jpeg, id=1870, 730.73pt x 461.725pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 3538--3539
+
+ []
+
+<imagenes/4glte.jpeg, id=1028, 730.73pt x 461.725pt>
 File: imagenes/4glte.jpeg Graphic file (type jpg)
 <use imagenes/4glte.jpeg>
-Package pdftex.def Info: imagenes/4glte.jpeg  used on input line 3513.
+Package pdftex.def Info: imagenes/4glte.jpeg  used on input line 3545.
 (pdftex.def)             Requested size: 438.44138pt x 277.03714pt.
-[120 <./imagenes/4glte7.JPG> <./imagenes/4glte8.JPG>]
-<imagenes/ConexionPw.JPG, id=1875, 556.32843pt x 258.9675pt>
+[114 <./imagenes/4glte7.JPG> <./imagenes/4glte8.JPG>]
+<imagenes/ConexionPw.JPG, id=1035, 556.32843pt x 258.9675pt>
 File: imagenes/ConexionPw.JPG Graphic file (type jpg)
 <use imagenes/ConexionPw.JPG>
-Package pdftex.def Info: imagenes/ConexionPw.JPG  used on input line 3521.
+Package pdftex.def Info: imagenes/ConexionPw.JPG  used on input line 3553.
 (pdftex.def)             Requested size: 484.00183pt x 225.29988pt.
- [121 <./imagenes/4glte.jpeg> <./imagenes/ConexionPw.JPG>]
+ [115 <./imagenes/4glte.jpeg> <./imagenes/ConexionPw.JPG>]
 
-LaTeX Warning: Citation `dom' on page 122 undefined on input line 3535.
+LaTeX Warning: Citation `dom' on page 116 undefined on input line 3567.
 
-<imagenes/create.png, id=1881, 676.5275pt x 70.2625pt>
+<imagenes/create.png, id=1043, 676.5275pt x 70.2625pt>
 File: imagenes/create.png Graphic file (type png)
 <use imagenes/create.png>
-Package pdftex.def Info: imagenes/create.png  used on input line 3542.
+Package pdftex.def Info: imagenes/create.png  used on input line 3574.
 (pdftex.def)             Requested size: 338.26291pt x 35.13115pt.
-<imagenes/router.png, id=1882, 623.32875pt x 356.33125pt>
+<imagenes/router.png, id=1044, 623.32875pt x 356.33125pt>
 File: imagenes/router.png Graphic file (type png)
 <use imagenes/router.png>
-Package pdftex.def Info: imagenes/router.png  used on input line 3551.
+Package pdftex.def Info: imagenes/router.png  used on input line 3583.
 (pdftex.def)             Requested size: 311.6636pt x 178.16518pt.
-<imagenes/auth.png, id=1883, 955.57pt x 289.08pt>
+<imagenes/auth.png, id=1045, 955.57pt x 289.08pt>
 File: imagenes/auth.png Graphic file (type png)
 <use imagenes/auth.png>
-Package pdftex.def Info: imagenes/auth.png  used on input line 3559.
+Package pdftex.def Info: imagenes/auth.png  used on input line 3591.
 (pdftex.def)             Requested size: 477.78383pt x 144.53964pt.
-[122 <./imagenes/create.png> <./imagenes/router.png> <./imagenes/auth.png>]
-<imagenes/loginjs.png, id=1891, 800.9925pt x 437.635pt>
+[116 <./imagenes/create.png> <./imagenes/router.png> <./imagenes/auth.png>]
+<imagenes/loginjs.png, id=1057, 800.9925pt x 437.635pt>
 File: imagenes/loginjs.png Graphic file (type png)
 <use imagenes/loginjs.png>
-Package pdftex.def Info: imagenes/loginjs.png  used on input line 3567.
+Package pdftex.def Info: imagenes/loginjs.png  used on input line 3599.
 (pdftex.def)             Requested size: 480.5992pt x 262.58302pt.
-<imagenes/homejs.png, id=1892, 870.25125pt x 497.86pt>
+<imagenes/homejs.png, id=1058, 870.25125pt x 497.86pt>
 File: imagenes/homejs.png Graphic file (type png)
 <use imagenes/homejs.png>
-Package pdftex.def Info: imagenes/homejs.png  used on input line 3577.
+Package pdftex.def Info: imagenes/homejs.png  used on input line 3609.
 (pdftex.def)             Requested size: 435.12456pt x 248.92938pt.
 
-[123 <./imagenes/loginjs.png> <./imagenes/homejs.png>]
-<imagenes/routesjs.png, id=1899, 485.815pt x 496.85625pt>
+[117 <./imagenes/loginjs.png> <./imagenes/homejs.png>]
+<imagenes/routesjs.png, id=1068, 485.815pt x 496.85625pt>
 File: imagenes/routesjs.png Graphic file (type png)
 <use imagenes/routesjs.png>
-Package pdftex.def Info: imagenes/routesjs.png  used on input line 3588.
+Package pdftex.def Info: imagenes/routesjs.png  used on input line 3620.
 (pdftex.def)             Requested size: 242.9069pt x 248.4275pt.
-<imagenes/loginpage.png, id=1900, 1353.055pt x 589.20125pt>
+<imagenes/loginpage.png, id=1069, 1353.055pt x 589.20125pt>
 File: imagenes/loginpage.png Graphic file (type png)
 <use imagenes/loginpage.png>
-Package pdftex.def Info: imagenes/loginpage.png  used on input line 3599.
+Package pdftex.def Info: imagenes/loginpage.png  used on input line 3631.
 (pdftex.def)             Requested size: 541.21242pt x 235.67632pt.
 
-Overfull \hbox (40.72842pt too wide) in paragraph at lines 3599--3600
+Overfull \hbox (40.72842pt too wide) in paragraph at lines 3631--3632
  [] 
  []
 
-[124 <./imagenes/routesjs.png> <./imagenes/loginpage.png>] [125]
-<imagenes/cli.png, id=1911, 813.0375pt x 74.2775pt>
+[118 <./imagenes/routesjs.png> <./imagenes/loginpage.png>] [119]
+<imagenes/cli.png, id=1082, 813.0375pt x 74.2775pt>
 File: imagenes/cli.png Graphic file (type png)
 <use imagenes/cli.png>
-Package pdftex.def Info: imagenes/cli.png  used on input line 3633.
+Package pdftex.def Info: imagenes/cli.png  used on input line 3665.
 (pdftex.def)             Requested size: 487.82626pt x 44.56683pt.
-<imagenes/region.png, id=1912, 682.55pt x 211.79124pt>
+<imagenes/region.png, id=1083, 682.55pt x 211.79124pt>
 File: imagenes/region.png Graphic file (type png)
 <use imagenes/region.png>
-Package pdftex.def Info: imagenes/region.png  used on input line 3641.
+Package pdftex.def Info: imagenes/region.png  used on input line 3673.
 (pdftex.def)             Requested size: 409.53316pt x 127.07571pt.
-<imagenes/sdk.png, id=1913, 891.33pt x 157.58875pt>
+<imagenes/sdk.png, id=1084, 891.33pt x 157.58875pt>
 File: imagenes/sdk.png Graphic file (type png)
 <use imagenes/sdk.png>
-Package pdftex.def Info: imagenes/sdk.png  used on input line 3650.
+Package pdftex.def Info: imagenes/sdk.png  used on input line 3682.
 (pdftex.def)             Requested size: 490.23302pt x 86.67407pt.
-<imagenes/expressjs.png, id=1914, 622.325pt x 115.43124pt>
+<imagenes/expressjs.png, id=1085, 622.325pt x 115.43124pt>
 File: imagenes/expressjs.png Graphic file (type png)
 <use imagenes/expressjs.png>
-Package pdftex.def Info: imagenes/expressjs.png  used on input line 3658.
+Package pdftex.def Info: imagenes/expressjs.png  used on input line 3690.
 (pdftex.def)             Requested size: 342.2798pt x 63.48737pt.
- [126 <./imagenes/cli.png> <./imagenes/region.png> <./imagenes/sdk.png> <./imag
+ [120 <./imagenes/cli.png> <./imagenes/region.png> <./imagenes/sdk.png> <./imag
 enes/expressjs.png>]
-<imagenes/addapi.png, id=1923, 571.13374pt x 106.3975pt>
+<imagenes/addapi.png, id=1099, 571.13374pt x 106.3975pt>
 File: imagenes/addapi.png Graphic file (type png)
 <use imagenes/addapi.png>
-Package pdftex.def Info: imagenes/addapi.png  used on input line 3669.
+Package pdftex.def Info: imagenes/addapi.png  used on input line 3701.
 (pdftex.def)             Requested size: 314.12453pt x 58.5188pt.
-<imagenes/graphql.png, id=1924, 1044.90375pt x 327.2225pt>
+<imagenes/graphql.png, id=1100, 1044.90375pt x 327.2225pt>
 File: imagenes/graphql.png Graphic file (type png)
 <use imagenes/graphql.png>
-Package pdftex.def Info: imagenes/graphql.png  used on input line 3677.
+Package pdftex.def Info: imagenes/graphql.png  used on input line 3709.
 (pdftex.def)             Requested size: 417.9541pt x 130.88667pt.
-<imagenes/schema.png, id=1925, 661.47125pt x 613.29124pt>
+<imagenes/schema.png, id=1101, 661.47125pt x 613.29124pt>
 File: imagenes/schema.png Graphic file (type png)
 <use imagenes/schema.png>
-Package pdftex.def Info: imagenes/schema.png  used on input line 3685.
+Package pdftex.def Info: imagenes/schema.png  used on input line 3717.
 (pdftex.def)             Requested size: 363.8103pt x 337.31122pt.
- [127 <./imagenes/addapi.png> <./imagenes/graphql.png>]
-<imagenes/endpoints.jpg, id=1933, 874.26625pt x 581.17125pt>
+ [121 <./imagenes/addapi.png> <./imagenes/graphql.png>]
+<imagenes/endpoints.jpg, id=1111, 874.26625pt x 581.17125pt>
 File: imagenes/endpoints.jpg Graphic file (type jpg)
 <use imagenes/endpoints.jpg>
-Package pdftex.def Info: imagenes/endpoints.jpg  used on input line 3695.
+Package pdftex.def Info: imagenes/endpoints.jpg  used on input line 3727.
 (pdftex.def)             Requested size: 480.84793pt x 319.64517pt.
- [128 <./imagenes/schema.png>]
-<imagenes/dynamo.jpg, id=1939, 803.0pt x 487.8225pt>
+ [122 <./imagenes/schema.png>]
+<imagenes/dynamo.jpg, id=1118, 803.0pt x 487.8225pt>
 File: imagenes/dynamo.jpg Graphic file (type jpg)
 <use imagenes/dynamo.jpg>
-Package pdftex.def Info: imagenes/dynamo.jpg  used on input line 3720.
+Package pdftex.def Info: imagenes/dynamo.jpg  used on input line 3752.
 (pdftex.def)             Requested size: 401.49902pt x 243.91064pt.
- [129 <./imagenes/endpoints.jpg>]
+ [123 <./imagenes/endpoints.jpg>]
 
-LaTeX Warning: Citation `dynamo' on page 130 undefined on input line 3730.
+LaTeX Warning: Citation `dynamo' on page 124 undefined on input line 3762.
 
-<imagenes/aws.png, id=1944, 755.82375pt x 465.74pt>
+<imagenes/aws.png, id=1125, 755.82375pt x 465.74pt>
 File: imagenes/aws.png Graphic file (type png)
 <use imagenes/aws.png>
-Package pdftex.def Info: imagenes/aws.png  used on input line 3739.
+Package pdftex.def Info: imagenes/aws.png  used on input line 3771.
 (pdftex.def)             Requested size: 377.91095pt x 232.86943pt.
-[130 <./imagenes/dynamo.jpg>]
-<imagenes/tables.png, id=1949, 1062.97125pt x 351.3125pt>
+[124 <./imagenes/dynamo.jpg>]
+<imagenes/tables.png, id=1131, 1062.97125pt x 351.3125pt>
 File: imagenes/tables.png Graphic file (type png)
 <use imagenes/tables.png>
-Package pdftex.def Info: imagenes/tables.png  used on input line 3749.
+Package pdftex.def Info: imagenes/tables.png  used on input line 3781.
 (pdftex.def)             Requested size: 531.48433pt x 175.6558pt.
 
-Overfull \hbox (31.00034pt too wide) in paragraph at lines 3749--3750
+Overfull \hbox (31.00034pt too wide) in paragraph at lines 3781--3782
  [] 
  []
 
 
-LaTeX Warning: Reference `Backend' on page 131 undefined on input line 3754.
+LaTeX Warning: Reference `Backend' on page 125 undefined on input line 3786.
 
-<imagenes/appsync.png, id=1950, 1184.425pt x 471.7625pt>
+<imagenes/appsync.png, id=1132, 1184.425pt x 471.7625pt>
 File: imagenes/appsync.png Graphic file (type png)
 <use imagenes/appsync.png>
-Package pdftex.def Info: imagenes/appsync.png  used on input line 3764.
+Package pdftex.def Info: imagenes/appsync.png  used on input line 3796.
 (pdftex.def)             Requested size: 473.76161pt x 188.70164pt.
-[131 <./imagenes/aws.png> <./imagenes/tables.png>]
+[125 <./imagenes/aws.png> <./imagenes/tables.png>]
 
-LaTeX Warning: Reference `Backend' on page 132 undefined on input line 3773.
+LaTeX Warning: Reference `Backend' on page 126 undefined on input line 3805.
 
-<imagenes/appsyncendpoint.png, id=1957, 584.1825pt x 358.33875pt>
+<imagenes/appsyncendpoint.png, id=1142, 584.1825pt x 358.33875pt>
 File: imagenes/appsyncendpoint.png Graphic file (type png)
 <use imagenes/appsyncendpoint.png>
-Package pdftex.def Info: imagenes/appsyncendpoint.png  used on input line 3776.
+Package pdftex.def Info: imagenes/appsyncendpoint.png  used on input line 3808.
 
 (pdftex.def)             Requested size: 321.30136pt x 197.08691pt.
-<imagenes/as.png, id=1958, 1736.4875pt x 1431.3475pt>
+<imagenes/as.png, id=1143, 1736.4875pt x 1431.3475pt>
 File: imagenes/as.png Graphic file (type png)
 <use imagenes/as.png>
-Package pdftex.def Info: imagenes/as.png  used on input line 3788.
+Package pdftex.def Info: imagenes/as.png  used on input line 3820.
 (pdftex.def)             Requested size: 347.29135pt x 286.26442pt.
-[132 <./imagenes/appsync.png> <./imagenes/appsyncendpoint.png>]
-<imagenes/add.png, id=1964, 719.68875pt x 69.25874pt>
+[126 <./imagenes/appsync.png> <./imagenes/appsyncendpoint.png>]
+<imagenes/add.png, id=1152, 719.68875pt x 69.25874pt>
 File: imagenes/add.png Graphic file (type png)
 <use imagenes/add.png>
-Package pdftex.def Info: imagenes/add.png  used on input line 3801.
+Package pdftex.def Info: imagenes/add.png  used on input line 3833.
 (pdftex.def)             Requested size: 503.77869pt x 48.48077pt.
 
-Overfull \hbox (3.2947pt too wide) in paragraph at lines 3801--3802
+Overfull \hbox (3.2947pt too wide) in paragraph at lines 3833--3834
  [] 
  []
 
-<imagenes/menu.png, id=1965, 1029.8475pt x 271.0125pt>
+<imagenes/menu.png, id=1153, 1029.8475pt x 271.0125pt>
 File: imagenes/menu.png Graphic file (type png)
 <use imagenes/menu.png>
-Package pdftex.def Info: imagenes/menu.png  used on input line 3809.
+Package pdftex.def Info: imagenes/menu.png  used on input line 3841.
 (pdftex.def)             Requested size: 514.9225pt x 135.5059pt.
 
-Overfull \hbox (14.4385pt too wide) in paragraph at lines 3809--3810
+Overfull \hbox (14.4385pt too wide) in paragraph at lines 3841--3842
  [] 
  []
 
-<imagenes/console.png, id=1966, 860.21375pt x 557.08125pt>
+<imagenes/console.png, id=1154, 860.21375pt x 557.08125pt>
 File: imagenes/console.png Graphic file (type png)
 <use imagenes/console.png>
-Package pdftex.def Info: imagenes/console.png  used on input line 3816.
+Package pdftex.def Info: imagenes/console.png  used on input line 3848.
 (pdftex.def)             Requested size: 430.10582pt x 278.53995pt.
-[133 <./imagenes/as.png> <./imagenes/add.png> <./imagenes/menu.png>]
-<imagenes/pools.png, id=1975, 1034.86626pt x 442.65375pt>
+[127 <./imagenes/as.png> <./imagenes/add.png> <./imagenes/menu.png>]
+<imagenes/pools.png, id=1165, 1034.86626pt x 442.65375pt>
 File: imagenes/pools.png Graphic file (type png)
 <use imagenes/pools.png>
-Package pdftex.def Info: imagenes/pools.png  used on input line 3824.
+Package pdftex.def Info: imagenes/pools.png  used on input line 3856.
 (pdftex.def)             Requested size: 517.43185pt x 221.32632pt.
 
-Overfull \hbox (16.94786pt too wide) in paragraph at lines 3824--3825
+Overfull \hbox (16.94786pt too wide) in paragraph at lines 3856--3857
  [] 
  []
 
-<imagenes/admin.png, id=1976, 1111.15125pt x 529.98pt>
+<imagenes/admin.png, id=1166, 1111.15125pt x 529.98pt>
 File: imagenes/admin.png Graphic file (type png)
 <use imagenes/admin.png>
-Package pdftex.def Info: imagenes/admin.png  used on input line 3830.
+Package pdftex.def Info: imagenes/admin.png  used on input line 3862.
 (pdftex.def)             Requested size: 444.45262pt x 211.98824pt.
-[134 <./imagenes/console.png> <./imagenes/pools.png>]
-<imagenes/users.png, id=1983, 1028.84375pt x 466.74374pt>
+[128 <./imagenes/console.png> <./imagenes/pools.png>]
+<imagenes/users.png, id=1176, 1028.84375pt x 466.74374pt>
 File: imagenes/users.png Graphic file (type png)
 <use imagenes/users.png>
-Package pdftex.def Info: imagenes/users.png  used on input line 3836.
+Package pdftex.def Info: imagenes/users.png  used on input line 3868.
 (pdftex.def)             Requested size: 411.53021pt x 186.69418pt.
-<imagenes/getconductor.png, id=1984, 415.5525pt x 507.8975pt>
+<imagenes/getconductor.png, id=1177, 415.5525pt x 507.8975pt>
 File: imagenes/getconductor.png Graphic file (type png)
 <use imagenes/getconductor.png>
-Package pdftex.def Info: imagenes/getconductor.png  used on input line 3846.
+Package pdftex.def Info: imagenes/getconductor.png  used on input line 3878.
 (pdftex.def)             Requested size: 207.77574pt x 253.94814pt.
- [135 <./imagenes/admin.png> <./imagenes/users.png>]
+ [129 <./imagenes/admin.png> <./imagenes/users.png>]
 
-LaTeX Warning: Reference `getConductor' on page 136 undefined on input line 385
-1.
+LaTeX Warning: Reference `getConductor' on page 130 undefined on input line 388
+3.
 
-<imagenes/listconductors.png, id=1991, 729.72626pt x 446.66875pt>
+<imagenes/listconductors.png, id=1187, 729.72626pt x 446.66875pt>
 File: imagenes/listconductors.png Graphic file (type png)
 <use imagenes/listconductors.png>
-Package pdftex.def Info: imagenes/listconductors.png  used on input line 3855.
+Package pdftex.def Info: imagenes/listconductors.png  used on input line 3887.
 (pdftex.def)             Requested size: 364.86224pt x 223.33382pt.
-<imagenes/getincidencia.png, id=1993, 448.67625pt x 499.8675pt>
+
+LaTeX Warning: Reference `fig:listConductors' on page 130 undefined on input li
+ne 3892.
+
+<imagenes/getincidencia.png, id=1188, 448.67625pt x 499.8675pt>
 File: imagenes/getincidencia.png Graphic file (type png)
 <use imagenes/getincidencia.png>
-Package pdftex.def Info: imagenes/getincidencia.png  used on input line 3863.
+Package pdftex.def Info: imagenes/getincidencia.png  used on input line 3895.
 (pdftex.def)             Requested size: 224.33757pt x 249.93314pt.
-[136 <./imagenes/getconductor.png> <./imagenes/listconductors.png>]
-<imagenes/listIncidencias.png, id=2001, 428.60126pt x 561.09625pt>
+[130 <./imagenes/getconductor.png> <./imagenes/listconductors.png>]
+
+LaTeX Warning: Reference `fig:getIncidencia' on page 131 undefined on input lin
+e 3900.
+
+<imagenes/listIncidencias.png, id=1197, 428.60126pt x 561.09625pt>
 File: imagenes/listIncidencias.png Graphic file (type png)
 <use imagenes/listIncidencias.png>
-Package pdftex.def Info: imagenes/listIncidencias.png  used on input line 3871.
+Package pdftex.def Info: imagenes/listIncidencias.png  used on input line 3903.
 
 (pdftex.def)             Requested size: 214.3001pt x 280.54744pt.
-<imagenes/createconductor.png, id=2003, 583.17876pt x 555.07375pt>
+
+LaTeX Warning: Reference `fig:listIncidencias' on page 131 undefined on input l
+ine 3908.
+
+<imagenes/createconductor.png, id=1198, 583.17876pt x 555.07375pt>
 File: imagenes/createconductor.png Graphic file (type png)
 <use imagenes/createconductor.png>
-Package pdftex.def Info: imagenes/createconductor.png  used on input line 3881.
+Package pdftex.def Info: imagenes/createconductor.png  used on input line 3913.
 
 (pdftex.def)             Requested size: 291.58867pt x 277.53618pt.
- [137 <./imagenes/getincidencia.png> <./imagenes/listIncidencias.png>]
-<imagenes/updateConductor.png, id=2011, 583.17876pt x 555.07375pt>
+[131 <./imagenes/getincidencia.png> <./imagenes/listIncidencias.png>]
+
+LaTeX Warning: Reference `fig:createConductor' on page 132 undefined on input l
+ine 3918.
+
+<imagenes/updateConductor.png, id=1207, 583.17876pt x 555.07375pt>
 File: imagenes/updateConductor.png Graphic file (type png)
 <use imagenes/updateConductor.png>
-Package pdftex.def Info: imagenes/updateConductor.png  used on input line 3889.
+Package pdftex.def Info: imagenes/updateConductor.png  used on input line 3921.
 
 (pdftex.def)             Requested size: 291.58867pt x 277.53618pt.
-<imagenes/deleteconductor.png, id=2013, 583.17876pt x 555.07375pt>
+
+LaTeX Warning: Reference `fig:updateConductor' on page 132 undefined on input l
+ine 3926.
+
+<imagenes/deleteconductor.png, id=1208, 583.17876pt x 555.07375pt>
 File: imagenes/deleteconductor.png Graphic file (type png)
 <use imagenes/deleteconductor.png>
-Package pdftex.def Info: imagenes/deleteconductor.png  used on input line 3898.
+Package pdftex.def Info: imagenes/deleteconductor.png  used on input line 3930.
 
 (pdftex.def)             Requested size: 291.58867pt x 277.53618pt.
- [138 <./imagenes/createconductor.png> <./imagenes/updateConductor.png>]
-<imagenes/createIncidencia.png, id=2021, 593.21625pt x 566.115pt>
+[132 <./imagenes/createconductor.png> <./imagenes/updateConductor.png>]
+
+LaTeX Warning: Reference `fig:deleteConductor' on page 133 undefined on input l
+ine 3935.
+
+<imagenes/createIncidencia.png, id=1217, 593.21625pt x 566.115pt>
 File: imagenes/createIncidencia.png Graphic file (type png)
 <use imagenes/createIncidencia.png>
-Package pdftex.def Info: imagenes/createIncidencia.png  used on input line 3907
+Package pdftex.def Info: imagenes/createIncidencia.png  used on input line 3939
 .
 (pdftex.def)             Requested size: 296.60739pt x 283.05681pt.
- [139 <./imagenes/deleteconductor.png> <./imagenes/createIncidencia.png>]
-<imagenes/oncreateIncidencia.png, id=2030, 517.935pt x 540.0175pt>
+
+LaTeX Warning: Reference `fig:createIncidencia' on page 133 undefined on input 
+line 3944.
+
+[133 <./imagenes/deleteconductor.png> <./imagenes/createIncidencia.png>]
+<imagenes/oncreateIncidencia.png, id=1227, 517.935pt x 540.0175pt>
 File: imagenes/oncreateIncidencia.png Graphic file (type png)
 <use imagenes/oncreateIncidencia.png>
 Package pdftex.def Info: imagenes/oncreateIncidencia.png  used on input line 39
-17.
+49.
 (pdftex.def)             Requested size: 258.96686pt x 270.00809pt.
-<imagenes/consola.png, id=2032, 764.8575pt x 458.71375pt>
+
+
+LaTeX Warning: Reference `fig:oncreateIncidencia' on page 134 undefined on inpu
+t line 3954.
+
+<imagenes/consola.png, id=1228, 764.8575pt x 458.71375pt>
 File: imagenes/consola.png Graphic file (type png)
 <use imagenes/consola.png>
-Package pdftex.def Info: imagenes/consola.png  used on input line 3931.
+Package pdftex.def Info: imagenes/consola.png  used on input line 3963.
 (pdftex.def)             Requested size: 305.93758pt x 183.48224pt.
-<imagenes/funciones.png, id=2033, 933.4875pt x 557.08125pt>
+<imagenes/funciones.png, id=1229, 933.4875pt x 557.08125pt>
 File: imagenes/funciones.png Graphic file (type png)
 <use imagenes/funciones.png>
-Package pdftex.def Info: imagenes/funciones.png  used on input line 3940.
+Package pdftex.def Info: imagenes/funciones.png  used on input line 3972.
 (pdftex.def)             Requested size: 373.38838pt x 222.82855pt.
- [140 <./imagenes/oncreateIncidencia.png> <./imagenes/consola.png>]
-<imagenes/crear.png, id=2040, 625.33624pt x 509.905pt>
+[134 <./imagenes/oncreateIncidencia.png> <./imagenes/consola.png>]
+<imagenes/crear.png, id=1238, 625.33624pt x 509.905pt>
 File: imagenes/crear.png Graphic file (type png)
 <use imagenes/crear.png>
-Package pdftex.def Info: imagenes/crear.png  used on input line 3949.
+Package pdftex.def Info: imagenes/crear.png  used on input line 3981.
 (pdftex.def)             Requested size: 250.13007pt x 203.95837pt.
- [141 <./imagenes/funciones.png> <./imagenes/crear.png>]
-<imagenes/principal.png, id=2048, 1361.085pt x 670.505pt>
+
+
+LaTeX Warning: Reference `fig:crearConductor' on page 135 undefined on input li
+ne 3986.
+
+[135 <./imagenes/funciones.png> <./imagenes/crear.png>]
+<imagenes/principal.png, id=1247, 1361.085pt x 670.505pt>
 File: imagenes/principal.png Graphic file (type png)
 <use imagenes/principal.png>
-Package pdftex.def Info: imagenes/principal.png  used on input line 3985.
+Package pdftex.def Info: imagenes/principal.png  used on input line 4017.
 (pdftex.def)             Requested size: 408.32866pt x 201.15305pt.
-<imagenes/incidencia.png, id=2049, 774.895pt x 353.32pt>
+<imagenes/incidencia.png, id=1248, 774.895pt x 353.32pt>
 File: imagenes/incidencia.png Graphic file (type png)
 <use imagenes/incidencia.png>
-Package pdftex.def Info: imagenes/incidencia.png  used on input line 3993.
+Package pdftex.def Info: imagenes/incidencia.png  used on input line 4025.
 (pdftex.def)             Requested size: 387.44655pt x 176.65956pt.
- [142
+ [136
 
  <./imagenes/principal.png>]
-<imagenes/ubicacion.png, id=2055, 998.73125pt x 538.01pt>
+<imagenes/ubicacion.png, id=1256, 998.73125pt x 538.01pt>
 File: imagenes/ubicacion.png Graphic file (type png)
 <use imagenes/ubicacion.png>
-Package pdftex.def Info: imagenes/ubicacion.png  used on input line 4001.
+Package pdftex.def Info: imagenes/ubicacion.png  used on input line 4033.
 (pdftex.def)             Requested size: 399.48541pt x 215.20018pt.
-<imagenes/conductores.png, id=2056, 1340.00626pt x 561.09625pt>
+<imagenes/conductores.png, id=1257, 1340.00626pt x 561.09625pt>
 File: imagenes/conductores.png Graphic file (type png)
 <use imagenes/conductores.png>
-Package pdftex.def Info: imagenes/conductores.png  used on input line 4009.
+Package pdftex.def Info: imagenes/conductores.png  used on input line 4041.
 (pdftex.def)             Requested size: 402.00497pt x 168.33017pt.
- [143 <./imagenes/incidencia.png> <./imagenes/ubicacion.png>] [144 <./imagenes/
+ [137 <./imagenes/incidencia.png> <./imagenes/ubicacion.png>] [138 <./imagenes/
 conductores.png>]
-<imagenes/addstorage.png, id=2068, 613.29124pt x 98.3675pt>
+<imagenes/addstorage.png, id=1272, 613.29124pt x 98.3675pt>
 File: imagenes/addstorage.png Graphic file (type png)
 <use imagenes/addstorage.png>
-Package pdftex.def Info: imagenes/addstorage.png  used on input line 4023.
+Package pdftex.def Info: imagenes/addstorage.png  used on input line 4055.
 (pdftex.def)             Requested size: 337.31122pt x 54.10226pt.
-<imagenes/content.png, id=2069, 654.445pt x 158.5925pt>
+<imagenes/content.png, id=1273, 654.445pt x 158.5925pt>
 File: imagenes/content.png Graphic file (type png)
 <use imagenes/content.png>
-Package pdftex.def Info: imagenes/content.png  used on input line 4031.
+Package pdftex.def Info: imagenes/content.png  used on input line 4063.
 (pdftex.def)             Requested size: 359.94586pt x 87.22612pt.
-<imagenes/name.png, id=2070, 856.19875pt x 182.6825pt>
+<imagenes/name.png, id=1274, 856.19875pt x 182.6825pt>
 File: imagenes/name.png Graphic file (type png)
 <use imagenes/name.png>
-Package pdftex.def Info: imagenes/name.png  used on input line 4039.
+Package pdftex.def Info: imagenes/name.png  used on input line 4071.
 (pdftex.def)             Requested size: 470.91077pt x 100.47568pt.
-<imagenes/rules.png, id=2071, 812.03375pt x 195.73125pt>
+<imagenes/rules.png, id=1275, 812.03375pt x 195.73125pt>
 File: imagenes/rules.png Graphic file (type png)
 <use imagenes/rules.png>
-Package pdftex.def Info: imagenes/rules.png  used on input line 4047.
+Package pdftex.def Info: imagenes/rules.png  used on input line 4079.
 (pdftex.def)             Requested size: 446.61995pt x 107.65251pt.
-<imagenes/rulesauth.png, id=2072, 820.06375pt x 302.12875pt>
+<imagenes/rulesauth.png, id=1276, 820.06375pt x 302.12875pt>
 File: imagenes/rulesauth.png Graphic file (type png)
 <use imagenes/rulesauth.png>
-Package pdftex.def Info: imagenes/rulesauth.png  used on input line 4054.
+Package pdftex.def Info: imagenes/rulesauth.png  used on input line 4086.
 (pdftex.def)             Requested size: 451.03645pt x 166.17131pt.
- [145
+ [139
 
  <./imagenes/addstorage.png> <./imagenes/content.png> <./imagenes/name.png> <./
 imagenes/rules.png>]
-<imagenes/guestrules.png, id=2082, 974.64125pt x 167.62625pt>
+<imagenes/guestrules.png, id=1291, 974.64125pt x 167.62625pt>
 File: imagenes/guestrules.png Graphic file (type png)
 <use imagenes/guestrules.png>
-Package pdftex.def Info: imagenes/guestrules.png  used on input line 4060.
+Package pdftex.def Info: imagenes/guestrules.png  used on input line 4092.
 (pdftex.def)             Requested size: 536.05435pt x 92.1947pt.
 
-Overfull \hbox (35.57036pt too wide) in paragraph at lines 4060--4061
+Overfull \hbox (35.57036pt too wide) in paragraph at lines 4092--4093
  [] 
  []
 
-<imagenes/push.png, id=2083, 871.255pt x 389.455pt>
+<imagenes/push.png, id=1292, 871.255pt x 389.455pt>
 File: imagenes/push.png Graphic file (type png)
 <use imagenes/push.png>
-Package pdftex.def Info: imagenes/push.png  used on input line 4066.
+Package pdftex.def Info: imagenes/push.png  used on input line 4098.
 (pdftex.def)             Requested size: 479.19174pt x 214.2009pt.
-<imagenes/buckets.png, id=2084, 1009.7725pt x 551.05875pt>
+<imagenes/buckets.png, id=1293, 1009.7725pt x 551.05875pt>
 File: imagenes/buckets.png Graphic file (type png)
 <use imagenes/buckets.png>
-Package pdftex.def Info: imagenes/buckets.png  used on input line 4075.
+Package pdftex.def Info: imagenes/buckets.png  used on input line 4107.
 (pdftex.def)             Requested size: 504.88501pt x 275.52869pt.
 
-Overfull \hbox (4.40102pt too wide) in paragraph at lines 4075--4076
+Overfull \hbox (4.40102pt too wide) in paragraph at lines 4107--4108
  [] 
  []
 
-[146 <./imagenes/rulesauth.png> <./imagenes/guestrules.png> <./imagenes/push.pn
-g>] [147 <./imagenes/buckets.png>]
-<imagenes/hosting.png, id=2098, 917.4275pt x 596.2275pt>
+[140 <./imagenes/rulesauth.png> <./imagenes/guestrules.png> <./imagenes/push.pn
+g>] [141 <./imagenes/buckets.png>]
+
+LaTeX Warning: Citation `AwsAmplify' on page 142 undefined on input line 4116.
+
+<imagenes/hosting.png, id=1310, 917.4275pt x 596.2275pt>
 File: imagenes/hosting.png Graphic file (type png)
 <use imagenes/hosting.png>
-Package pdftex.def Info: imagenes/hosting.png  used on input line 4089.
+Package pdftex.def Info: imagenes/hosting.png  used on input line 4121.
 (pdftex.def)             Requested size: 458.71263pt x 298.11302pt.
-<imagenes/repo.png, id=2099, 945.5325pt x 543.02875pt>
+<imagenes/repo.png, id=1311, 945.5325pt x 543.02875pt>
 File: imagenes/repo.png Graphic file (type png)
 <use imagenes/repo.png>
-Package pdftex.def Info: imagenes/repo.png  used on input line 4101.
+Package pdftex.def Info: imagenes/repo.png  used on input line 4133.
 (pdftex.def)             Requested size: 472.76509pt x 271.5137pt.
- [148
+[142
 
  <./imagenes/hosting.png>]
-<imagenes/paginaweb.JPG, id=2106, 1028.34187pt x 548.80031pt>
+<imagenes/paginaweb.JPG, id=1319, 1028.34187pt x 548.80031pt>
 File: imagenes/paginaweb.JPG Graphic file (type jpg)
 <use imagenes/paginaweb.JPG>
-Package pdftex.def Info: imagenes/paginaweb.JPG  used on input line 4111.
+Package pdftex.def Info: imagenes/paginaweb.JPG  used on input line 4143.
 (pdftex.def)             Requested size: 462.74957pt x 246.95784pt.
- [149 <./imagenes/repo.png> <./imagenes/paginaweb.JPG>] [150
+ [143 <./imagenes/repo.png> <./imagenes/paginaweb.JPG>] [144
 
-] [151] [152]
+] [145] [146]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4235.
+(hyperref)                than one, level fixed on input line 4267.
 
-[153]
-Underfull \hbox (badness 10000) in paragraph at lines 4244--4245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4246--4247
+[147]
+Underfull \hbox (badness 10000) in paragraph at lines 4276--4277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4248--4249
+Underfull \hbox (badness 10000) in paragraph at lines 4278--4279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4250--4251
+Underfull \hbox (badness 10000) in paragraph at lines 4280--4281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4252--4253
+Underfull \hbox (badness 10000) in paragraph at lines 4282--4283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4254--4255
+Underfull \hbox (badness 10000) in paragraph at lines 4284--4285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4256--4257
+Underfull \hbox (badness 10000) in paragraph at lines 4286--4287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4258--4259
+Underfull \hbox (badness 10000) in paragraph at lines 4288--4289
 
  []
 
-[154]
-Underfull \hbox (badness 10000) in paragraph at lines 4260--4261
+
+Underfull \hbox (badness 10000) in paragraph at lines 4290--4291
 
  []
 
-[155] (TT2.bbl
+[148]
+Underfull \hbox (badness 10000) in paragraph at lines 4292--4293
+
+ []
+
+[149] (TT2.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 29--32
 []\OT1/lmr/m/n/12 NVIDIA, ``Nvi-dia jetson nano,'' Dis-po-ni-ble en: [][]$https
  : / / www . nvidia . com / es-[]la /
@@ -2823,7 +3015,7 @@ Underfull \hbox (badness 3199) in paragraph at lines 29--32
 ], con-sul-ta-do el 26 de enero de
  []
 
-[156
+[150
 
 ]
 Underfull \hbox (badness 4967) in paragraph at lines 110--113
@@ -2855,7 +3047,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--175
 e[]Followers[]Using[]Raspberry[]
  []
 
-[157]
+[151]
 Underfull \hbox (badness 1005) in paragraph at lines 191--196
 []\OT1/lmr/m/n/12 R. A. M. Be-ce-rril, E. L. and E. T. J. Vel[]A!`zquez, ``Sis-
 te-ma pa-ra la de-tec-cion del
@@ -2879,7 +3071,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--214
  % 20grado . pdf ? sequence = 1 & amp ;
  []
 
-[158]
+[152]
 Underfull \hbox (badness 4254) in paragraph at lines 254--258
 []\OT1/lmr/m/n/12 M. Cid, ``Ca-te-go-rias lte o 4g: que son y que ve-lo-ci-da-d
 es ma-xi-mas ofre-ce ca-
@@ -2915,7 +3107,7 @@ Underfull \hbox (badness 1127) in paragraph at lines 272--275
 ][]$https : / / aws . amazon . com / es / what-[]is /
  []
 
-) [159] (TT2.aux
+) [153] (TT2.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
@@ -2925,17 +3117,23 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `TT2.out' has not changed.
-(rerunfilecheck)             Checksum: F3A9CB958A8E1D6877EAD899A58791A9;37105.
+
+Package rerunfilecheck Warning: File `TT2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TT2.out':
+(rerunfilecheck)             Before: DB8771CE7F85167AD13F98A13D6990E9;14535
+(rerunfilecheck)             After:  F3A9CB958A8E1D6877EAD899A58791A9;37105.
  ) 
 Here is how much of TeX's memory you used:
- 16559 strings out of 478339
- 282517 string characters out of 2835756
- 567297 words of memory out of 3000000
- 33991 multiletter control sequences out of 15000+600000
+ 16483 strings out of 478339
+ 281005 string characters out of 2835756
+ 557710 words of memory out of 3000000
+ 33910 multiletter control sequences out of 15000+600000
  508638 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,18n,77p,1263b,784s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,18n,77p,1272b,682s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.
 pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi
 10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
@@ -2947,9 +3145,9 @@ m/lmri12.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /lm/lmsy10.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/lm/lmsy8.pfb><C:/Users/unknown/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmtt12.pfb>
-Output written on TT2.pdf (159 pages, 8432650 bytes).
+Output written on TT2.pdf (153 pages, 8298213 bytes).
 PDF statistics:
- 2408 PDF objects out of 2487 (max. 8388607)
- 572 named destinations out of 1000 (max. 500000)
- 1784 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1707 PDF objects out of 1728 (max. 8388607)
+ 577 named destinations out of 1000 (max. 500000)
+ 1136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
