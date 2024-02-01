@@ -13,19 +13,7 @@ Database file #1: Referencias.bib
 Warning--entry type for "GeolocalizacionVehiculos" isn't style-file defined
 --line 65 of file Referencias.bib
 Warning--entry type for "shannon" isn't style-file defined
---line 175 of file Referencias.bib
-I was expecting a `,' or a `}'---line 340 of file Referencias.bib
- :   note={accedido el 22 de diciembre de 2022}
- :                                             .
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 348 of file Referencias.bib
- :   note={accedido el 22 de diciembre de 2022}
- :                                             .
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 356 of file Referencias.bib
- :   note={accedido el 22 de diciembre de 2022}
- :                                             .
-I'm skipping whatever remains of this entry
+--line 199 of file Referencias.bib
 I was expecting a `,' or a `}'---line 364 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
@@ -34,7 +22,19 @@ I was expecting a `,' or a `}'---line 372 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-Repeated entry---line 393 of file Referencias.bib
+I was expecting a `,' or a `}'---line 380 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 388 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 396 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+Repeated entry---line 417 of file Referencias.bib
  : @misc{Referencian17
  :                    ,
 I'm skipping whatever remains of this entry
@@ -62,45 +62,45 @@ Name 1 in "Vilca, G., and Eduardo, J." has a comma at the end for entry Estadode
 while executing---line 2403 of file ieeetran.bst
 
 Done.
-You've used 53 entries,
+You've used 56 entries,
             4087 wiz_defined-function locations,
-            1108 strings with 17466 characters,
-and the built_in function-call counts, 22238 in all, are:
-= -- 1889
-> -- 332
+            1122 strings with 17966 characters,
+and the built_in function-call counts, 23393 in all, are:
+= -- 1994
+> -- 344
 < -- 20
-+ -- 162
-- -- 76
-* -- 701
-:= -- 3995
-add.period$ -- 139
-call.type$ -- 53
-change.case$ -- 99
++ -- 168
+- -- 79
+* -- 722
+:= -- 4210
+add.period$ -- 151
+call.type$ -- 56
+change.case$ -- 105
 chr.to.int$ -- 42
-cite$ -- 53
-duplicate$ -- 1815
-empty$ -- 2048
-format.name$ -- 90
-if$ -- 4996
+cite$ -- 56
+duplicate$ -- 1908
+empty$ -- 2156
+format.name$ -- 93
+if$ -- 5258
 int.to.chr$ -- 0
-int.to.str$ -- 53
-missing$ -- 441
-newline$ -- 198
-num.names$ -- 53
-pop$ -- 1156
+int.to.str$ -- 56
+missing$ -- 465
+newline$ -- 207
+num.names$ -- 56
+pop$ -- 1216
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1791
+skip$ -- 1890
 stack$ -- 0
-substring$ -- 214
-swap$ -- 1140
+substring$ -- 220
+swap$ -- 1203
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 53
+type$ -- 56
 warning$ -- 0
-while$ -- 60
-width$ -- 55
-write$ -- 500
+while$ -- 63
+width$ -- 58
+write$ -- 527
 (There were 13 error messages)

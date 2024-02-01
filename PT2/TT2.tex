@@ -93,10 +93,10 @@ Teniendo en cuenta este contexto, resulta relevante analizar y diseñar un sistem
 
 El desarrollo de este sistema busca aprovechar los avances tecnológicos recientes en el campo de la visión artificial y el aprendizaje automático, así como la disponibilidad de microordenadores eficientes y las mejoras en las tecnologías de telecomunicaciones, como el 4G y el Internet de las Cosas (IoT). Estas tecnologías permitirán detectar y alertar los síntomas de somnolencia en los conductores, brindando una solución más asequible en comparación con las opciones tradicionales de rastreo satelital. \\
 
-En resumen, el objetivo principal del presente trabajo es desarrollar un sistema portátil que pueda detectar la somnolencia al conducir, alertar al conductor y monitorear la ubicación en tiempo real, además de gestionar las incidencias detectadas. \\
+En resumen, el objetivo principal del presente trabajo es desarrollar un sistema portátil que pueda detectar la somnolencia al conducir, alertar al conductor y monitorear la ubicación en tiempo real, además de gestionar las incidencias detectadas. 
   
 
-\newpage
+\clearpage
 \subsection{Planteamiento del problema} \label{planteamientodelproblema}
 
 La somnolencia es un fenómeno complejo de analizar debido a los factores que pueden intervenir. Algunas de las características más notorias de un estado de somnolencia se pueden apreciar principalmente en el rostro de las personas: frecuencia de parpadeo, bostezos, movimientos faciales y cabeceos, los cuales son parámetros clave para determinar si una persona está en estado de somnolencia o vigilia.\\
@@ -433,11 +433,55 @@ El aprendizaje profundo constituye un enfoque dentro del ámbito de la inteligenc
 
 %\subsubsection{EOR} 
 \subsubsection{Lenguaje de programación}
+
+Un lenguaje de programación es una herramienta que permite desarrollar software o programas para computadora. Los lenguajes de programación son empleados para diseñar e implementar programas encargados de definir y administrar el comportamiento de los dispositivos físicos y lógicos de una computadora. Lo anterior se logra mediante la creación e implementación de algoritmos de precisión que se utilizan como una forma de comunicación humana con la computadora. Un lenguaje de programación se conforma de una serie de símbolos y reglas de sintaxis y semántica que definen la estructura principal del lenguaje y le dan un significado a sus elementos y expresiones \cite{lenprogram}. 
+
 \subsubsection{Librerías}
-\subsubsection{Aplicación}
-\subsubsection{Frontend}
-\subsubsection{Backend}
-\subsubsection{End point}
+
+Las librerías de programación son recursos que facilitan el proceso de desarrollo de software al ofrecer bloques de código reutilizables. Estos fragmentos de código permiten a los desarrolladores escribir programas de manera más rápida y sencilla, evitando la necesidad de construir cada funcionalidad desde cero. Cada librería está diseñada para proporcionar una solución a una necesidad o un problema de desarrollo específico, barcando áreas como autenticación de usuario, conexión al servidor, interfaces de usuario, gestión de datos, algoritmos, animaciones, entre otros \cite{libreria}.
+\subsubsection{Aplicación web}
+
+Una aplicación web se define como un software que se ejecuta en un navegador web, permitiendo a las empresas llevar a cabo el intercambio de información y proporcionar servicios de manera remota. Dichas aplicaciones son empleadas por las organizaciones para establecer comunicación con sus clientes de manera segura y bajo demanda. Aspectos fundamentales de los sitios web, como carros de compra, funciones de búsqueda y filtrado de productos, mensajería instantánea y canales de noticias en redes sociales, comparten el mismo diseño que las aplicaciones web. Estas herramientas posibilitan el acceso a funciones complejas sin la necesidad de instalar o configurar un software adicional.
+
+Las aplicaciones web siguen una arquitectura cliente-servidor, dividiendo su código en dos componentes principales: \emph{scripts} del lado del cliente y scripts del lado del servidor.
+
+En la arquitectura del lado del cliente, el script se encarga de la interfaz de usuario, gestionando elementos visuales como botones y menús desplegables. Cuando el usuario accede a la aplicación web, el navegador carga el script del lado del cliente, permitiendo la visualización de elementos gráficos y texto para la interacción del usuario, como leer contenidos, ver videos o completar formularios. Las acciones del usuario, como hacer clic en botones, generan solicitudes al servidor.
+
+En la arquitectura del lado del servidor, el \emph{script} maneja el procesamiento de datos. El servidor procesa las solicitudes del cliente y envía respuestas correspondientes. Estas solicitudes pueden implicar obtener más datos, editar existentes o guardar nuevos datos. Por ejemplo, al hacer clic en "Leer más", el servidor envía contenido adicional, mientras que al hacer clic en "Enviar", el servidor guarda los datos del usuario en la base de datos. En ocasiones, el servidor completa la solicitud y envía la página HTML completa al cliente, un proceso conocido como renderizado del lado del servidor \cite{aplicacionWeb}.
+
+\subsubsection{\emph{Front end}}
+
+El \emph{front end} es aquello que ven los usuarios e incluye elementos visuales, como botones, casillas de verificación, gráficos y mensajes de texto. Permite a los usuarios interactuar con la aplicación. 
+
+El término front end hace referencia a la interfaz gráfica de usuario (GUI) con la que los usuarios pueden interactuar de forma directa, como los menús de navegación, los elementos de diseño, los botones, las imágenes y los gráficos. En términos técnicos, una página o pantalla que el usuario ve con varios componentes de la interfaz de usuario se denomina modelo de objetos del documento (DOM).
+
+Hay tres lenguajes de computación principales que afectan a la forma en que los usuarios interactúan con el \emph{front end}:
+
+\begin{itemize}
+\item HTML (Lenguaje de Marcado de Hipertexto): Define la estructura del \emph{front end} y los diversos elementos del DOM.
+\item CSS (Hojas de Estilo en Cascada): Define el estilo de la aplicación web, abarcando aspectos como el diseño, las fuentes, los colores y el estilo visual.
+\item JavaScript: Añade una capa de funcionalidad dinámica mediante la manipulación del DOM. JavaScript posibilita cambios en una página y la presentación de nueva información. Con ello, el \emph{front end} puede gestionar interacciones fundamentales de los usuarios, como visualizar un calendario o verificar la validez de una dirección de correo electrónico. Las solicitudes más complejas se trasladan al \emph{back end}.
+\end{itemize}
+
+
+\subsubsection{\emph{Back end}}
+El \emph{back end} son los datos y la infraestructura que permiten que la aplicación funcione. Almacena y procesa los datos de las aplicaciones para los usuarios.
+
+El \emph{back end} de la aplicación administra la funcionalidad general de la aplicación web. Cuando el usuario interactúa con el \emph{front end}, la interacción envía una solicitud al \emph{back end} en formato HTTP. El \emph{back end} procesa la solicitud y devuelve una respuesta.
+
+Cuando el \emph{back end} procesa una solicitud, normalmente interactúa con los siguiente elementos:
+
+\begin{itemize}
+\item Servidores de bases de datos para recuperar o modificar datos relevantes
+\item Microservicios que realizan un subconjunto de las tareas solicitadas por el usuario
+\item API de terceros para recopilar información adicional o realizar funciones adicionales
+\end{itemize}
+
+El \emph{back end} utiliza varios protocolos y tecnologías de comunicación para completar una solicitud. Además, gestiona miles de solicitudes distintas de forma simultánea. El \emph{back end} combina técnicas de concurrencia y paralelismo, como la distribución de solicitudes en muchos servidores, el almacenamiento en caché y la duplicación de datos.
+
+
+\subsubsection{\emph{End point}}
+
 \subsubsection{Web hosting}
 
 
@@ -643,7 +687,7 @@ Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de
     \centering
     \begin{tabular}{|p{0.15\linewidth}|p{0.17\linewidth}|p{0.12\linewidth}|p{0.2\linewidth}|p{0.18\linewidth}|}
         \hline
-        \textbf{Proyecto propuesto} & \textbf{Detección de somnolencia} & \textbf{Sistema Portátil}  & \textbf{Monitoreo GPS en tiempo real} & \textbf{Sistema de admnistración} \\ \hline
+        \textbf{Proyecto} & \textbf{Detección de somnolencia} & \textbf{Sistema Portátil}  & \textbf{Monitoreo GPS en tiempo real} & \textbf{Sistema de admnistración} \\ \hline
         1 & Sí & Sí& Sí & Sí \\ \hline
         2 & sí & No & No & No \\ \hline
         3 & sí & No & No & No \\ \hline
@@ -658,6 +702,11 @@ Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de
         12 & Sí & Sí & No & No \\ \hline
         13 & Sí & No & No & No \\ \hline
         14 & Sí & No & No & No \\ \hline
+        15 & Sí & Sí & No & No \\ \hline
+        16 & Sí & No & No & No \\ \hline
+        17 & No & Sí & Sí & No \\ \hline
+        18 & Sí & No & No & No \\ \hline
+        19 & Sí & No & No & No \\ \hline
   \end{tabular}
     \captionof{table}{Comparación entre proyectos y/o sistemas con semanjanza.}
 \end{table}
@@ -678,9 +727,13 @@ Sistema de detección de somnolencia mediante inteligencia artificial en conducto
 \item Sistema para la detección del estado de somnolencia en seres humanos, con reconocimiento de patrones. 
 \item Sistema de Detección de Somnolencia
 \item Desarrollar un prototipo de reconocimiento facial basado en Machine Learning para detectar estado de Somnolencia en conductores de una cooperativa de transporte
-\end{enumerate}
+\item Sistema basado en la detección y notificación de somnolencia en conductores de autos
+\item Detección de somnolencia para conducción sin accidentes
+\item Diseño e implementación de un sistema de geolocalización en interiores para plataforma Android vía la red enterprise WLAN de la PUCP
+\item Propuesta de un sistema de geolocalización y monitoreo vía GPS/GSM/GPRS aplicado a un pulsómetro para personas con enfermedades cardiovasculares
+\item Influencia de un sistema de geolocalización en el control y monitoreo de vehículos con dispositivos GPS en una empresa logística
 
-s
+\end{enumerate}
 
 \newpage
 \section{Capítulo III: Análisis}

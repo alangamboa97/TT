@@ -21,25 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{Metodologia}
-B.~W. Boehm, ``A spiral model of software development and enhancement,''
-  \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
-
-\bibitem{JetsonNano}
-NVIDIA, ``Nvidia jetson nano,'' Disponible en:
-  \url{https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano/},
-  consultado el 26 de enero de 2022.
-
-\bibitem{CDNimg}
-N.~Bhat. (s/f) Content delivery network. Disponible en:
-  \url{https://learn.microsoft.com/es-es/power-apps/maker/portals/configure/configure-cdn}.
-  Consultado el 26 de enero de 2022.
-
-\bibitem{CoberturaNacional}
-nPerf, ``Cobertura 3g / 4g / 5g telcel mobile,'' Disponible en:
-  \url{https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/},
-  accedido el 22 de diciembre de 2022.
-
 \bibitem{WHO}
 W.~H. Organization. (2018) Global status report on road safety 2018. Disponible
   en: \url{http://www.who.int/publications/i/item/9789241565684}. Consultado el
@@ -76,11 +57,20 @@ V.~E.~R. A., ``Influencia de un sistema de geolocalizacion en el control y
   monitoreo de vehiculos con dispositivos gps en una empresa logistica,'' 2017,
   \url{https://repositorio.ucv.edu.pe/bitstream/handle/20.500.12692/17105/Vilca_ERA.pdf?sequence=1&isAllowed=y}.
 
+\bibitem{Metodologia}
+B.~W. Boehm, ``A spiral model of software development and enhancement,''
+  \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
+
 \bibitem{Intensidad}
 D.~W.~R. Roehrs~T, Carskadon~MA, ``T. daytime sleepiness and alertness,''
   Disponible en:
   \url{https://www.researchgate.net/publication/312502433_Daytime_Sleepiness_and_Alertness},
   2017, consultado el 26 de enero de 2022.
+
+\bibitem{JetsonNano}
+NVIDIA, ``Nvidia jetson nano,'' Disponible en:
+  \url{https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano/},
+  consultado el 26 de enero de 2022.
 
 \bibitem{IBMvision}
 IBM, ``Como funciona la vision artificial,'' Disponible en:
@@ -92,10 +82,31 @@ aws. (s/f) ¿qué es el aprendizaje profundo? Disponible en:
   \url{https://aws.amazon.com/es/what-is/deep-learning/}. Consultado el 26 de
   enero de 2022.
 
+\bibitem{lenprogram}
+F.~J. Ceballos. (2004) Lenguajes de programacion. Disponible en:
+  \url{https://programas.cuaed.unam.mx/repositorio/moodle/pluginfile.php/1023/mod_resource/content/1/contenido/index.html}.
+  Consultado el 20 de diciembre de 2023.
+
+\bibitem{libreria}
+UNIR. (2023) ¿que son las librerias en programacion y para que sirven?
+  Disponible en:
+  \url{https://www.unir.net/ingenieria/revista/librerias-programacion/}.
+  Consultado el 20 de diciembre de 2023.
+
+\bibitem{aplicacionWeb}
+AWS. (s/f) Que es una aplicacion web. Disponible en:
+  \url{https://aws.amazon.com/es/what-is/web-application/}. Consultado el 20 de
+  diciembre de 2023.
+
 \bibitem{CDN}
-AWS. (2023) Qué es una cdn. Disponible en:
+------. (2023) Qué es una cdn. Disponible en:
   \url{https://aws.amazon.com/es/what-is/cdn/}. Consultado el 26 de enero de
   2022.
+
+\bibitem{CDNimg}
+N.~Bhat. (s/f) Content delivery network. Disponible en:
+  \url{https://learn.microsoft.com/es-es/power-apps/maker/portals/configure/configure-cdn}.
+  Consultado el 26 de enero de 2022.
 
 \bibitem{IBMCC}
 M.~P. and Grance, ``The nist definition of cloud computing,'' NIST special
@@ -235,6 +246,11 @@ C.~E.~E. Ramírez, R.~E.~R. Flores, and J.~A.~V. Hernández, ``Propuesta de un
 B.~R. A.~V. Espinoza, ``Influencia de un sistema de geolocalizacion en el
   control y monitoreo de vehiculos con dispositivos gps en una empresa
   logistica,'' Disponible en: \url{}, 2017, consultado el 26 de enero de 2022.
+
+\bibitem{CoberturaNacional}
+nPerf, ``Cobertura 3g / 4g / 5g telcel mobile,'' Disponible en:
+  \url{https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/},
+  accedido el 22 de diciembre de 2022.
 
 \bibitem{deepedgebench}
 A.~J. Stepahn~Baller, ``Deepedgebench: Benchmarking deep neural networks on
