@@ -13,34 +13,28 @@ Database file #1: Referencias.bib
 Warning--entry type for "GeolocalizacionVehiculos" isn't style-file defined
 --line 65 of file Referencias.bib
 Warning--entry type for "shannon" isn't style-file defined
---line 199 of file Referencias.bib
-I was expecting a `,' or a `}'---line 364 of file Referencias.bib
+--line 218 of file Referencias.bib
+I was expecting a `,' or a `}'---line 383 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 372 of file Referencias.bib
+I was expecting a `,' or a `}'---line 391 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 380 of file Referencias.bib
+I was expecting a `,' or a `}'---line 399 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 388 of file Referencias.bib
+I was expecting a `,' or a `}'---line 407 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 396 of file Referencias.bib
+I was expecting a `,' or a `}'---line 415 of file Referencias.bib
  :   note={accedido el 22 de diciembre de 2022}
  :                                             .
-I'm skipping whatever remains of this entry
-Repeated entry---line 417 of file Referencias.bib
- : @misc{Referencian17
- :                    ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "mor"
-Warning--I didn't find a database entry for "Nvidia"
-Warning--I didn't find a database entry for "Boto3"
 Warning--I didn't find a database entry for "dom"
 Warning--I didn't find a database entry for "dynamo"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
@@ -62,45 +56,45 @@ Name 1 in "Vilca, G., and Eduardo, J." has a comma at the end for entry Estadode
 while executing---line 2403 of file ieeetran.bst
 
 Done.
-You've used 56 entries,
+You've used 61 entries,
             4087 wiz_defined-function locations,
-            1122 strings with 17966 characters,
-and the built_in function-call counts, 23393 in all, are:
-= -- 1994
-> -- 344
+            1138 strings with 18686 characters,
+and the built_in function-call counts, 25164 in all, are:
+= -- 2146
+> -- 364
 < -- 20
-+ -- 168
-- -- 79
-* -- 722
-:= -- 4210
-add.period$ -- 151
-call.type$ -- 56
-change.case$ -- 105
++ -- 178
+- -- 84
+* -- 736
+:= -- 4547
+add.period$ -- 175
+call.type$ -- 61
+change.case$ -- 114
 chr.to.int$ -- 42
-cite$ -- 56
-duplicate$ -- 1908
-empty$ -- 2156
-format.name$ -- 93
-if$ -- 5258
+cite$ -- 61
+duplicate$ -- 2043
+empty$ -- 2322
+format.name$ -- 98
+if$ -- 5655
 int.to.chr$ -- 0
-int.to.str$ -- 56
-missing$ -- 465
-newline$ -- 207
-num.names$ -- 56
-pop$ -- 1216
+int.to.str$ -- 61
+missing$ -- 504
+newline$ -- 228
+num.names$ -- 61
+pop$ -- 1326
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1890
+skip$ -- 2037
 stack$ -- 0
-substring$ -- 220
-swap$ -- 1203
+substring$ -- 224
+swap$ -- 1296
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 56
+type$ -- 61
 warning$ -- 0
-while$ -- 63
-width$ -- 58
-write$ -- 527
-(There were 13 error messages)
+while$ -- 68
+width$ -- 63
+write$ -- 575
+(There were 12 error messages)

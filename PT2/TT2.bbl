@@ -21,6 +21,32 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Metodologia}
+B.~W. Boehm, ``A spiral model of software development and enhancement,''
+  \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
+
+\bibitem{JetsonNano}
+NVIDIA. Nvidia jetson nano. Disponible en:
+  \url{https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano/}.
+  Consultado el 26 de enero de 2022.
+
+\bibitem{CDNimg}
+N.~Bhat. (s/f) Content delivery network. Disponible en:
+  \url{https://learn.microsoft.com/es-es/power-apps/maker/portals/configure/configure-cdn}.
+  Consultado el 26 de enero de 2022.
+
+\bibitem{CoberturaNacional}
+nPerf, ``Cobertura 3g / 4g / 5g telcel mobile,'' Disponible en:
+  \url{https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/},
+  accedido el 22 de diciembre de 2022.
+
+\bibitem{waveshare}
+\BIBentryALTinterwordspacing
+W.~Electronics. Sim7600g-h 4g for jetson nano - waveshare wiki. Accedido el 16
+  de abril de 2023. [Online]. Available:
+  \url{https://www.waveshare.com/wiki/SIM7600G-H_4G_for_Jetson_Nano}
+\BIBentrySTDinterwordspacing
+
 \bibitem{WHO}
 W.~H. Organization. (2018) Global status report on road safety 2018. Disponible
   en: \url{http://www.who.int/publications/i/item/9789241565684}. Consultado el
@@ -57,25 +83,16 @@ V.~E.~R. A., ``Influencia de un sistema de geolocalizacion en el control y
   monitoreo de vehiculos con dispositivos gps en una empresa logistica,'' 2017,
   \url{https://repositorio.ucv.edu.pe/bitstream/handle/20.500.12692/17105/Vilca_ERA.pdf?sequence=1&isAllowed=y}.
 
-\bibitem{Metodologia}
-B.~W. Boehm, ``A spiral model of software development and enhancement,''
-  \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
-
 \bibitem{Intensidad}
-D.~W.~R. Roehrs~T, Carskadon~MA, ``T. daytime sleepiness and alertness,''
+D.~W.~R. Roehrs~T, Carskadon~MA. (2017) T. daytime sleepiness and alertness.
   Disponible en:
-  \url{https://www.researchgate.net/publication/312502433_Daytime_Sleepiness_and_Alertness},
-  2017, consultado el 26 de enero de 2022.
-
-\bibitem{JetsonNano}
-NVIDIA, ``Nvidia jetson nano,'' Disponible en:
-  \url{https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano/},
-  consultado el 26 de enero de 2022.
+  \url{https://www.researchgate.net/publication/312502433_Daytime_Sleepiness_and_Alertness}.
+  Consultado el 26 de enero de 2022.
 
 \bibitem{IBMvision}
-IBM, ``Como funciona la vision artificial,'' Disponible en:
-  \url{https://www.ibm.com/mx-es/topics/computer-vision}, s/f, consultado el 26
-  de enero de 2022.
+IBM. (s/f) Como funciona la vision artificial. Disponible en:
+  \url{https://www.ibm.com/mx-es/topics/computer-vision}. Consultado el 26 de
+  enero de 2022.
 
 \bibitem{AP}
 aws. (s/f) ¿qué es el aprendizaje profundo? Disponible en:
@@ -95,18 +112,24 @@ UNIR. (2023) ¿que son las librerias en programacion y para que sirven?
 
 \bibitem{aplicacionWeb}
 AWS. (s/f) Que es una aplicacion web. Disponible en:
+  \url{https://aws.amazon.com/es/compare/the-difference-between-frontend-and-backend/#:~:text=El%20front%20end%20es%20aquello,permiten%20que%20la%20aplicaci%C3%B3n%20funcione.}
+  Consultado el 20 de diciembre de 2023.
+
+\bibitem{frontBack}
+------. (s/f) Cual es la diferencia entre el front end y back end en el
+  desarrollo de aplicaciones. Disponible en:
   \url{https://aws.amazon.com/es/what-is/web-application/}. Consultado el 20 de
   diciembre de 2023.
 
+\bibitem{webhosting}
+IBM. (s/f) Que es el hosting web. Disponible en:
+  \url{https://www.ibm.com/mx-es/topics/web-hosting}. Consultado el 20 de
+  diciembre de 2023.
+
 \bibitem{CDN}
-------. (2023) Qué es una cdn. Disponible en:
+AWS. (2023) Qué es una cdn. Disponible en:
   \url{https://aws.amazon.com/es/what-is/cdn/}. Consultado el 26 de enero de
   2022.
-
-\bibitem{CDNimg}
-N.~Bhat. (s/f) Content delivery network. Disponible en:
-  \url{https://learn.microsoft.com/es-es/power-apps/maker/portals/configure/configure-cdn}.
-  Consultado el 26 de enero de 2022.
 
 \bibitem{IBMCC}
 M.~P. and Grance, ``The nist definition of cloud computing,'' NIST special
@@ -247,11 +270,6 @@ B.~R. A.~V. Espinoza, ``Influencia de un sistema de geolocalizacion en el
   control y monitoreo de vehiculos con dispositivos gps en una empresa
   logistica,'' Disponible en: \url{}, 2017, consultado el 26 de enero de 2022.
 
-\bibitem{CoberturaNacional}
-nPerf, ``Cobertura 3g / 4g / 5g telcel mobile,'' Disponible en:
-  \url{https://www.nperf.com/es/map/MX/-/2004799.Telcel-Mobile/signal/},
-  accedido el 22 de diciembre de 2022.
-
 \bibitem{deepedgebench}
 A.~J. Stepahn~Baller, ``Deepedgebench: Benchmarking deep neural networks on
   edge devices,'' Disponible en: \url{https://arxiv.org/abs/2108.09457},
@@ -285,17 +303,24 @@ C.~Brunner, A.~Garavaglia, M.~Mittal, M.~Narang, and J.~V. Bautista,
   2006, accedido el 22 de diciembre de 2022.
 
 \bibitem{AWS}
-aws, ``Que es la vision artificial,'' Disponible en:
-  \url{https://aws.amazon.com/es/what-is/computer-vision/}, s/f, consultado el
-  26 de enero de 2022.
+aws. (s/f) Que es la vision artificial. Disponible en:
+  \url{https://aws.amazon.com/es/what-is/computer-vision/}. Consultado el 26 de
+  enero de 2022.
 
 \bibitem{NodeJs}
 J.~Wexler, \emph{Get Programming with Node.js}.\hskip 1em plus 0.5em minus
   0.4em\relax Manning, 2019.
 
-\bibitem{JetPackSDK}
+\bibitem{Nvidia1}
 \BIBentryALTinterwordspacing
-NVIDIA. Jetpack sdk 4.6.3. Accedido el 17 de junio de 2023. [Online].
+NVIDIA. (2019) Get started with the jetson nano developer kit. [Online].
+  Available:
+  \url{https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Jetpacksdk}
+\BIBentryALTinterwordspacing
+------. Jetpack sdk 4.6.3. Accedido el 17 de junio de 2023. [Online].
   Available: \url{https://developer.nvidia.com/jetpack-sdk-463}
 \BIBentrySTDinterwordspacing
 
@@ -305,7 +330,7 @@ NVIDIA. Jetpack sdk 4.6.3. Accedido el 17 de junio de 2023. [Online].
   Available: \url{https://developer.nvidia.com/jetpack-sdk-463}
 \BIBentrySTDinterwordspacing
 
-\bibitem{JetStats}
+\bibitem{Jetstats}
 \BIBentryALTinterwordspacing
 Kangalow. Jtop: The ultimate tool for monitoring nvidia jetson devices -
   jetsonhacks. Accedido el 17 de junio de 2023. [Online]. Available:
@@ -326,11 +351,17 @@ Nakai-Omer. Github - mdegans/nano\_build\_opencv: Build opencv on nvidia jetson
   \url{https://github.com/mdegans/nano\_build\_opencv}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Waveshare}
+\bibitem{simcomGit}
 \BIBentryALTinterwordspacing
-W.~Electronics. Sim7600g-h 4g for jetson nano - waveshare wiki. Accedido el 16
-  de abril de 2023. [Online]. Available:
-  \url{https://www.waveshare.com/wiki/SIM7600G-H_4G_for_Jetson_Nano_4G_connecting}
+aws. Setup the waveshare sim7600g for jetson nano. Accedido en: 02-abr-2023.
+  [Online]. Available:
+  \url{https://github.com/phillipdavidstearns/simcom_wwan-setup}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Boto3}
+\BIBentryALTinterwordspacing
+P.~D. Stearns. Aws sdk para python (boto3). Accedido en: 02-abr-2023. [Online].
+  Available: \url{https://aws.amazon.com/es/sdk-for-python/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{AwsAmplify}
