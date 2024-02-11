@@ -102,28 +102,32 @@
 \contentsline {section}{\numberline {9}Pruebas}{152}{section.9}%
 \contentsline {subsection}{\numberline {9.1}M\'odulo Central de Procesamiento}{152}{subsection.9.1}%
 \contentsline {subsubsection}{\numberline {9.1.1}Prueba de Detecci\'on de Somnolencia en Condiciones Normales}{152}{subsubsection.9.1.1}%
-\contentsline {subsubsection}{\numberline {9.1.2}Prueba de Detecci\'on de Somnolencia en Condiciones Normales}{152}{subsubsection.9.1.2}%
-\contentsline {subsubsection}{\numberline {9.1.3}Prueba de Alerta}{154}{subsubsection.9.1.3}%
-\contentsline {subsection}{\numberline {9.2}M\'odulo de Estaci\'on Base}{154}{subsection.9.2}%
-\contentsline {subsubsection}{\numberline {9.2.1}Prueba de Integraci\'on con GitHub:}{154}{subsubsection.9.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2}Gesti\'on de Contenido Multimedia y Seguridad}{155}{subsubsection.9.2.2}%
-\contentsline {subsubsection}{\numberline {9.2.3}Prueba de Almacenamiento en S3:}{155}{subsubsection.9.2.3}%
-\contentsline {subsubsection}{\numberline {9.2.4}Prueba de Autenticaci\'on y Gesti\'on de Identidades (Amazon Cognito):}{155}{subsubsection.9.2.4}%
-\contentsline {subsubsection}{\numberline {9.2.5}Aplicaci\'on Web (Amplify y React)}{157}{subsubsection.9.2.5}%
-\contentsline {subsubsection}{\numberline {9.2.6}Prueba de Rendimiento del Backend:}{157}{subsubsection.9.2.6}%
-\contentsline {subsubsection}{\numberline {9.2.7}Prueba de Interfaz de Usuario (Frontend React):}{157}{subsubsection.9.2.7}%
-\contentsline {subsection}{\numberline {9.3}M\'odulo de Comunicaciones}{157}{subsection.9.3}%
-\contentsline {subsubsection}{\numberline {9.3.1}Prueba de Conectividad LTE:}{157}{subsubsection.9.3.1}%
-\contentsline {subsubsection}{\numberline {9.3.2}Prueba de Posicionamiento GPS:}{158}{subsubsection.9.3.2}%
-\contentsline {subsubsection}{\numberline {9.3.3}Monitoreo en Tiempo Real:}{158}{subsubsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.4}Evaluaci\'on del Sistema Final}{159}{subsection.9.4}%
-\contentsline {subsubsection}{\numberline {9.4.1}Prueba de Funcionalidad Integral:}{159}{subsubsection.9.4.1}%
-\contentsline {subsubsection}{\numberline {9.4.2}Prueba de Resiliencia del Sistema:}{160}{subsubsection.9.4.2}%
-\contentsline {subsubsection}{\numberline {9.4.3}Prueba de Seguridad Integral:}{160}{subsubsection.9.4.3}%
-\contentsline {subsubsection}{\numberline {9.4.4}Prueba de Usabilidad:}{160}{subsubsection.9.4.4}%
-\contentsline {section}{\numberline {10}Validaci\'on}{161}{section.10}%
-\contentsline {subsubsection}{\numberline {10.0.1}Resultados}{163}{subsubsection.10.0.1}%
-\contentsline {subsection}{\numberline {10.1}Resultados y Ajustes:}{163}{subsection.10.1}%
-\contentsline {section}{\numberline {11}Conclusion y aportaciones}{164}{section.11}%
-\contentsline {section}{\numberline {12}Trabajo a futuro}{165}{section.12}%
-\contentsline {section}{\numberline {13}Anexos}{170}{section.13}%
+\contentsline {subsubsection}{\numberline {9.1.2}Prueba de Alerta}{152}{subsubsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.2}M\'odulo de Estaci\'on Base}{152}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Prueba de acceso a la aplicaci\'on a trav\'es del navegador:}{152}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}Prueba de registro de usuario:}{153}{subsubsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.3}Prueba de recuperaci\'on de contrase\~na:}{157}{subsubsection.9.2.3}%
+\contentsline {subsubsection}{\numberline {9.2.4}Prueba de visualizaci\'on de incidencias:}{158}{subsubsection.9.2.4}%
+\contentsline {subsubsection}{\numberline {9.2.5}Prueba de visualizaci\'on y reproducci\'on de video de una incidencia:}{160}{subsubsection.9.2.5}%
+\contentsline {subsubsection}{\numberline {9.2.6}Prueba de incidencia confirmada e incidencia rechazada:}{160}{subsubsection.9.2.6}%
+\contentsline {subsubsection}{\numberline {9.2.7}Prueba de visualizaci\'on del perfil del conductor:}{161}{subsubsection.9.2.7}%
+\contentsline {subsubsection}{\numberline {9.2.8}Prueba para agregar conductor:}{162}{subsubsection.9.2.8}%
+\contentsline {subsubsection}{\numberline {9.2.9}Prueba de visualizaci\'on de la ubicaci\'on geogr\'afica en tiempo real del conductor:}{162}{subsubsection.9.2.9}%
+\contentsline {subsubsection}{\numberline {9.2.10}Prueba de editar conductor:}{163}{subsubsection.9.2.10}%
+\contentsline {subsubsection}{\numberline {9.2.11}Prueba de eliminar conductor:}{163}{subsubsection.9.2.11}%
+\contentsline {subsection}{\numberline {9.3}M\'odulo de Comunicaciones}{164}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}Prueba de Conectividad LTE:}{164}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}Prueba de Posicionamiento GPS:}{164}{subsubsection.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.3}Monitoreo en Tiempo Real:}{165}{subsubsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.4}Evaluaci\'on del Sistema Final}{166}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}Prueba de Funcionalidad Integral:}{166}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}Prueba de Resiliencia del Sistema:}{167}{subsubsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.3}Prueba de Seguridad Integral:}{167}{subsubsection.9.4.3}%
+\contentsline {subsubsection}{\numberline {9.4.4}Prueba de Usabilidad:}{167}{subsubsection.9.4.4}%
+\contentsline {section}{\numberline {10}Validaci\'on}{168}{section.10}%
+\contentsline {subsubsection}{\numberline {10.0.1}Prueba de Detecci\'on de Somnolencia }{168}{subsubsection.10.0.1}%
+\contentsline {subsubsection}{\numberline {10.0.2}Resultados}{172}{subsubsection.10.0.2}%
+\contentsline {subsection}{\numberline {10.1}Resultados y Ajustes:}{172}{subsection.10.1}%
+\contentsline {section}{\numberline {11}Conclusion y aportaciones}{173}{section.11}%
+\contentsline {section}{\numberline {12}Trabajo a futuro}{174}{section.12}%
+\contentsline {section}{\numberline {13}Anexos}{179}{section.13}%

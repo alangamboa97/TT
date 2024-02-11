@@ -256,7 +256,7 @@ Para el sistema de administración, se corroborará que, en los casos en que el si
 
 \subsubsection{Somnolencia}
 
-La somnolencia es la necesidad o tendencia que tiene una persona a quedarse dormido. La intensidad de somnolencia está determinada por la calidad de sueño, la cantidad, y el ritmo circadiano de la persona    \cite{Intensidad}. 
+La somnolencia es la necesidad o tendencia que tiene una persona a quedarse dormido. La intensidad de somnolencia está determinada por la calidad de sueño, la cantidad, y el ritmo circadiano de la persona \cite{Intensidad}. 
 \\
 
 Se han propuesto tres clases de métodos para poder medir el grado de somnolencia en una persona:
@@ -2148,9 +2148,8 @@ A continuación se mencionan los requerimientos no funcionales de la aplicación w
 \textbf{Requerimiento No Funcional} & \textbf{Descripción}                                                                                                                                                                   &  \\ \cline{1-2}
 Disponibilidad                      & \begin{tabular}[c]{@{}l@{}}La aplicación web deberá estar \\ disponible las 24 horas del día\end{tabular}                                                                              &  \\ \cline{1-2}
 Interoperabilidad                   & \begin{tabular}[c]{@{}l@{}}La aplicación deberá ser accesible desde \\ cualquier sistema operativo \\ mientras se cuenta con un \\ navegador web en su versión más actual\end{tabular} &  \\ \cline{1-2}
-Eficiencia                          & \begin{tabular}[c]{@{}l@{}}La aplicación tendrá tiempos de respuesta\\ menores a 100ms.\end{tabular}                                                                                   &  \\ \cline{1-2}
 Escalabilidad                       & \begin{tabular}[c]{@{}l@{}}La aplicación web deberá ofrecer la oportunidad de \\ agregar nuevas funcionalidades y \\ soportar un mayor número de usuarios a \\ futuro\end{tabular}     &  \\ \cline{1-2}
-Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación deberá ofrecer un buen \\ funcionamiento mientras se tenga \\ una conexión a internet mínima de 1Mbps\end{tabular}                                      &  \\ \cline{1-2}
+Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación deberá ofrecer un buen \\ funcionamiento mientras se tenga \\ una conexión a internet\end{tabular}                                      &  \\ \cline{1-2}
 \end{tabular}
 
 \end{table}
@@ -4149,26 +4148,377 @@ Posteriormente, se requiere seleccionar el repositorio el cual será alojado, en 
 
 \section{Pruebas}
 
-
 \subsection{Módulo Central de Procesamiento}
 
 \subsubsection{Prueba de Detección de Somnolencia en Condiciones Normales}
-
-\begin{itemize}
-
- \item Pruebas de estados de apertura y cierre de ojos y boca para la detección de somnolencia en diferentes condiciones de iluminación: 
+ 
  \begin{itemize}
- \item Detectar un estado "activo" en la que el conductor se encuentre despierto.
+ \item Detectar el estado "activo" cuando el conductor se encuentre despierto.
  
- \item Detectar un estado "somnoliento" en la que el conductor presente signos de somnolencia debido al cierre de los ojos por más de 2 segundos. 
+ \item Detectar un estado "somnoliento" cuando el conductor presente signos de somnolencia debido al parpadeo de ojos poco significativos.  
  
- \item Detectar un estado "somnoliento" en la que el conductor presente signos de somnolencia debido a los bostezos frecuentes
+ \item Detectar un estado "somnoliento" en la que el conductor presente signos de somnolencia debido a los bostezos frecuentes. 
+ 
+ \item Detectar un estado "dormido" cuando el conductor presente signos de somnolencia debido al cierre de los ojos por más de 2 segundos.  
  
  \end{itemize}
+
+\subsubsection{Prueba de Alerta}
+\begin{itemize}
+\item Prueba de emisión de alerta ante la detección de síntomas de somnolencia. 
+
+\end{itemize}
+
+Obtener inscidencia 
+
+\subsection{Módulo de Estación Base}
+
+\subsubsection{Prueba de acceso a la aplicación a través del navegador:}
+\begin{itemize}
+    \item Verifica que la página de inicio de sesión es accesible por medio de \url{https://main.dcst1c83llut3.amplifyapp.com/login}
+     
+       \begin{center}
+        \includegraphics[scale=.3]{imagenes/Prueba-url.jpeg}
+        \captionof{figure}{Acceso a la página web desde el navegador}
+        \label{fig:libraries} 
+       \end{center} 
+    
+    \item Ingresa credenciales válidas y asegúrate de que se permita el acceso.
+    
+       \begin{center}
+        \includegraphics[scale=.3]{imagenes/Prueba-login.jpeg} 
+        \captionof{figure}{Acceso valido}
+        \label{fig:libraries} 
+       \end{center} 
+    
+    \item Intenta acceder con credenciales inválidas y confirma que se muestra un mensaje de error adecuado.
+    
+       \begin{center}
+        \includegraphics[scale=.3]{imagenes/Prueba-RegistroNoValido.jpeg}
+        \captionof{figure}{Acceso no valido}
+        \label{fig:libraries} 
+       \end{center}
+    
+\end{itemize}
+
+\subsubsection{Prueba de registro de usuario:}
+\begin{itemize}
+    \item Confirmar que el formulario de registro es accesible.
+    
+      \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-formulario0.JPG}
+       \captionof{figure}{Acceso al formulario de registro de usuario.}
+       \label{fig:libraries} 
+      \end{center}
+    
+    \item Completar el formulario con datos válidos.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-formulario1.jpeg}
+       \captionof{figure}{Formulario con datos validos.}
+       \label{fig:libraries} 
+      \end{center}
+      
+    \item Enviar el codigo de registro al correo proporcionado.
+      
+      \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-formulario2.jpeg}
+       \captionof{figure}{Código enviado al correo registrado.}
+       \label{fig:libraries} 
+      \end{center}
+      
+    \item Ingresar al correo y obtener el codigo de registro.
+      
+      \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-formulario3.jpeg}
+       \captionof{figure}{Código recibido.}
+       \label{fig:libraries} 
+      \end{center}
+      
+     \item Confirmar codigo recibido.
+     
+     \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-formulario4.jpeg}
+       \captionof{figure}{Confirmación del código.}
+       \label{fig:libraries} 
+      \end{center}
+     
+     \item Accesar como nuevo usuario registrado.
+     
+     \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-formulario5.jpeg}
+       \captionof{figure}{Acceso a la página web.}
+       \label{fig:libraries} 
+      \end{center}
+    
+    \item Intenta registrarte con datos ya registrados.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-formulario6.jpeg}
+       \captionof{figure}{Registro no permitido.}
+       \label{fig:libraries} 
+      \end{center}
+      
+\end{itemize}
+
+\subsubsection{Prueba de recuperación de contraseña:}
+\begin{itemize}
+    \item Verifica que la opción de recuperación de contraseña esté disponible.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-RecuperarContrasena.jpeg}
+       \captionof{figure}{Enlace para recuperar contraseña.}
+       \label{fig:libraries} 
+      \end{center}
+
+    \item Ingresar correo registrado.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-RecuperarContrasenaFormulario.jpeg}
+       \captionof{figure}{Recuperación de contraseña por correo.}
+       \label{fig:libraries} 
+      \end{center}
+      
+    \item Verificar código recibido.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-verificarCodigo.jpeg}
+       \captionof{figure}{Código recibido para recuperar contraseña.}
+       \label{fig:libraries} 
+      \end{center}
+      
+     \item Ingresar datos solicitados en el formulario.
+     
+     \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-IngresarCodigoyCambiarContrasena.jpeg}
+       \captionof{figure}{Formulario para recuperar contraseña.}
+       \label{fig:libraries} 
+      \end{center}
+      
+\end{itemize}
+
+\subsubsection{Prueba de visualización de incidencias:}
+\begin{itemize}
+    \item Visualizar el historial de incidencias al iniciar sesión.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-Incidencias.jpeg}
+       \captionof{figure}{Historial de incidencias.}
+       \label{fig:libraries} 
+     \end{center}
+    
+    \item Acceder a una incidencia específica y visualizar la disponibilidad de los datos: ID de incidencia, estatus (pendiente, confirmada o rechazada), nombre del conductor, video, fecha, botón para confirmar o rechazar, y mapa con el marcador de las coordenadas del momento en que se registro la incidencia.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-VideoIncidencia.jpeg}
+       \captionof{figure}{Datos disponibles de la incidencia.}
+       \label{fig:libraries} 
+     \end{center}
+     
+     \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-IncidenciaEspecifica.JPG}
+       \captionof{figure}{Datos disponibles de la incidencia.}
+       \label{fig:libraries} 
+     \end{center}
+
+\end{itemize}
+
+\subsubsection{Prueba de visualización y reproducción de video de una incidencia:}
+\begin{itemize}
+    \item Acceder a una incidencia específica y visualizar el video de la incidencia.
+      
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-VideoIncidencia.jpeg}
+       \captionof{figure}{Video de incidencia.}
+       \label{fig:libraries} 
+     \end{center}
+\end{itemize}
+
+\subsubsection{Prueba de incidencia confirmada e incidencia rechazada:}
+
+\begin{itemize}
+    \item Visualizar la opción CONFIRMAR y RECHAZAR incidencia. Estas opciones permiten confirmar la incidencia cuando se visualice en el video un caso positivo de somnolecia o rechazar cuando se visualice en el video un caso falso de somnolecia.
+    
+    \begin{center}
+       \includegraphics[scale=.8]{imagenes/Prueba-Botones.JPG}
+       \captionof{figure}{Botones para confirmar o rechazar una incidencia.}
+       \label{fig:libraries} 
+     \end{center} 
+    
+    \item Realizar la confirmación y verificar que se refleje correctamente en la interfaz. 
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-Confirmar.JPG}
+       \captionof{figure}{Incidencia confirmada.}
+       \label{fig:libraries} 
+     \end{center} 
+       
+    \item Descartar una incidencia y verificar que se actualice adecuadamente en la interfaz.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-Rechazar.JPG}
+       \captionof{figure}{Incidencia rechazada.}
+       \label{fig:libraries} 
+     \end{center} 
+    
+\end{itemize}
+
+
+\subsubsection{Prueba de visualización del perfil del conductor:}
+\begin{itemize}
+    \item Visualizar la sección de conductores en la pagina principal.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-Conductores.JPG}
+       \captionof{figure}{Sección de conductores.}
+       \label{fig:libraries} 
+     \end{center} 
+    
+    \item Acceder a la sección de conductores y vizualizar los conductores registrados.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-ConductoresVisualizacion.JPG}
+       \captionof{figure}{Conductores registrados.}
+       \label{fig:libraries} 
+     \end{center}  
+        
+    \item Confirmar que el perfil se muestre correctamente con la información relevante.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-ConductoresPerfil.JPG}
+       \captionof{figure}{Perfil de conductor.}
+       \label{fig:libraries} 
+     \end{center}    
+    
+\end{itemize}
+
+\subsubsection{Prueba para agregar conductor:}
+\begin{itemize}   
+    \item Llenar la información de un conductor no registrado.
+    
+    
+    \item Verifica que los cambios se guarden correctamente y se reflejen en el perfil.  
+    
+\end{itemize}
+
+\subsubsection{Prueba de visualización de la ubicación geográfica en tiempo real del conductor:}
+\begin{itemize}
+    
+    \item Mostrar la ubicación en un mapa de las coordenadas registradas en tiempo real.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-GPSTiempoReal.jpeg}
+       \captionof{figure}{Ubicación en tiempo real del conductor.}
+       \label{fig:libraries} 
+     \end{center}  
+    
+\end{itemize}
+
+\subsubsection{Prueba de editar conductor:}
+\begin{itemize}
+    \item Modifica la información de un conductor. 
+        
+    \item Verifica que los cambios se guarden correctamente y se reflejen en el perfil.
+
+     
+\end{itemize}
+
+\subsubsection{Prueba de eliminar conductor:}
+
+\begin{itemize}
+    \item Elimina la información de un conductor. 
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-EliminarConductor.jpeg}
+       \captionof{figure}{Confirmación para eliminar conductor.}
+       \label{fig:libraries} 
+     \end{center}  
+        
+    \item Verificar que los cambios se guarden correctamente y se reflejen en la sección de condutores.
+     
+\end{itemize}
+
+
+\subsection{Módulo de Comunicaciones}
+
+\subsubsection{Prueba de Conectividad LTE:}
+
+\begin{itemize}
+  \item Prueba de conexión LTE para la transferencia de información por medio de red celular.
+  
+  \begin{center}
+  \includegraphics[scale=0.6]{imagenes/4Gconexion.png}
+\captionof{figure}{Interfaz de red 4G LTE wwan0 activa.}
+ \label{fig:addstorage} 
+\end{center} 
  
- \subsubsection{Prueba de Detección de Somnolencia en Condiciones Normales}
+\end{itemize} 
+\subsubsection{Prueba de Posicionamiento GPS:}
+\begin{itemize}
+  \item Prueba obtención de coordenadas de posicionamiento GPS.
+  
+  \begin{center}
+  \includegraphics[scale=0.6]{imagenes/gps2.png}
+	\captionof{figure}{Coordenadas en longitud y latitud.}
+  \label{fig:addstorage} 
+  \end{center} 
+
+\end{itemize}
+
+\subsubsection{Monitoreo en Tiempo Real:}
+\begin{itemize}
+  
+  \item Prueba de visualización en tiempo real de la ubicación del conductor desde la aplicación web.
+
+  \begin{center}
+  \includegraphics[scale=0.6]{imagenes/evidencia.png}
+	\captionof{figure}{Mapa y marcador de posicionamiento GPS en tiempo real.}
+  \label{fig:addstorage} 
+  \end{center} 
+
+  \begin{center}
+  \includegraphics[scale=0.9]{imagenes/logsposicion.png}
+	\captionof{figure}{Logs de las coordenadas GPS en tiempo real.}
+  \label{fig:addstorage} 
+  \end{center}     
+  
+\end{itemize}
+
+
+\newpage
+\section{Validación}
+
+
+\subsection{Evaluación del Sistema Final}
+
+\subsubsection{Prueba de Funcionalidad Integral:}
+\begin{itemize}
+  \item Prueba del sistema para validar su funcionalidad global en condiciones simuladas y reales.
+\end{itemize}
+
+\subsubsection{Prueba de Resiliencia del Sistema:}
+\begin{itemize}
+  \item Evaluar la capacidad del sistema para recuperarse de posibles fallas o interrupciones en los servicios y módulos.
+\end{itemize}
+
+\subsubsection{Prueba de Seguridad Integral:}
+\begin{itemize}
+  \item Realizar análisis de seguridad para identificar posibles vulnerabilidades en la comunicación, autenticación y almacenamiento de datos. 
+\end{itemize}
+
+\subsubsection{Prueba de Usabilidad:}
+\begin{itemize}
+  \item Obtener retroalimentación sobre la experiencia del usuario en la aplicación web y la interacción con las alertas.
+\end{itemize}
+
+
+
+
+%\item Confirma que la información sea precisa y esté formateada correctamente.
+%\item Reproduce el video y asegúrate de que la reproducción sea fluida y sin problemas.
+ \subsubsection{Prueba de Detección de Somnolencia }
  
- \item Prubas dentro de un vehiculo y el uso de lentes. 
+ Pruebas dentro de un vehiculo y el uso de lentes. 
  
  \begin{itemize} 
  \item Deteccion de un estado activo del conductor.
@@ -4204,164 +4554,19 @@ Posteriormente, se requiere seleccionar el repositorio el cual será alojado, en 
 \end{center}
 
  \end{itemize}
- 
-\end{itemize}
 
-\subsubsection{Prueba de Alerta}
-\begin{itemize}
-\item Prueba de emisión de alerta ante la detección de síntomas de somnolencia. 
-
-
-\end{itemize}
-
-\subsection{Módulo de Estación Base}
-
-\subsubsection{Prueba de Integración con GitHub:}
-\begin{itemize}
-  
-  \item Probar el despliegue de la aplicación ingresando con la URL.
-  
-  Acceso a la pagina web desde el buscador con la siguiente URL: \\
-https://main.dcst1c83llut3.amplifyapp.com/login
-
-\begin{center}
-  \includegraphics[scale=.45]{imagenes/paginaweb.JPG}
-\captionof{figure}{Acceso a la página web desde el navegador}
- \label{fig:libraries} 
-\end{center} 
-\end{itemize}
-
-\subsubsection{Gestión de Contenido Multimedia y Seguridad}
-
-\subsubsection{Prueba de Almacenamiento en S3:}
-\begin{itemize}
-  \item Prueba de acceso al almacenamiento en la nube S3 para contenido multimedia al subir un video grabado debido a la detección de somnolencia.
-  
-  \item Prueba de disponibilidad y confiabilidad de los archivos almacenados desde la aplicación.
-  
-\end{itemize}
-
-\subsubsection{Prueba de Autenticación y Gestión de Identidades (Amazon Cognito):}
-\begin{itemize}
-  \item Prueba de registro de usuario.
-  
- \begin{center}
-  \includegraphics[scale=.45]{imagenes/paginaweb.JPG}
-  \captionof{figure}{Acceso a la página web desde el navegador}
-  \label{fig:libraries} 
- \end{center} 
-  
-  \item Prueba de autenticación y acceso a la aplicación web.
-
- \begin{center}
-  \includegraphics[scale=.45]{imagenes/paginaweb.JPG}
-  \captionof{figure}{Acceso a la página web desde el navegador}
-  \label{fig:libraries} 
- \end{center} 
- 
-  \item Prueba de recuperación de contraseña del usuario.
-  \item Prueba de eliminación de usuario.
-
-\end{itemize}
-
-\subsubsection{Aplicación Web (Amplify y React)}
-
-\subsubsection{Prueba de Rendimiento del Backend:}
-\begin{itemize}
-  \item Evaluar la capacidad de respuesta y eficiencia del backend.
-  \item Verificar la gestión adecuada de las solicitudes concurrentes.
-\end{itemize}
-
-\subsubsection{Prueba de Interfaz de Usuario (Frontend React):}
-\begin{itemize}
-  \item Prueba de visualización de usuarios
-  \item Prueba de visualización de incidencias 
-  \item Prueba de visualización de incidencias por mes  
-  \item Prueba de modificación de usuario 
-  \item Prueba de confirmacion de incidencia 
-  \item Prueba de modificación de usuario  
-\end{itemize}
-
-\subsection{Módulo de Comunicaciones}
-
-\subsubsection{Prueba de Conectividad LTE:}
-\begin{itemize}
-  \item Prueba de conexión LTE para la transferencia de información.
-  
-  \begin{center}
-  \includegraphics[scale=0.6]{imagenes/4Gconexion.png}
-\captionof{figure}{Interfaz de red 4G LTE wwan0 activa.}
- \label{fig:addstorage} 
-\end{center} 
- 
- 
-\end{itemize} 
-\subsubsection{Prueba de Posicionamiento GPS:}
-\begin{itemize}
-  \item Prueba obtención de coordenadas de posicionamiento GPS.
-  
-  \begin{center}
-  \includegraphics[scale=0.6]{imagenes/gps2.png}
-	\captionof{figure}{Coordenadas en longitud y latitud.}
-  \label{fig:addstorage} 
-  \end{center} 
-
-\end{itemize}
-
-
-\subsubsection{Monitoreo en Tiempo Real:}
-\begin{itemize}
-  
-  \item Prueba de visualización en tiempo real de la ubicación del conductor desde la aplicación web.
-
-  \begin{center}
-  \includegraphics[scale=0.6]{imagenes/evidencia.png}
-	\captionof{figure}{Mapa y marcador de posicionamiento GPS en tiempo real 1.}
-  \label{fig:addstorage} 
-  \end{center} 
-
-  \begin{center}
-  \includegraphics[scale=0.9]{imagenes/logsposicion.png}
-	\captionof{figure}{Mapa y marcador de posicionamiento GPS en tiempo real 2.}
-  \label{fig:addstorage} 
-  \end{center}     
-  
-\end{itemize}
-
-
-\subsection{Evaluación del Sistema Final}
-
-\subsubsection{Prueba de Funcionalidad Integral:}
-\begin{itemize}
-  \item Prueba del sistema para validar su funcionalidad global en condiciones simuladas y reales.
-\end{itemize}
-
-\subsubsection{Prueba de Resiliencia del Sistema:}
-\begin{itemize}
-  \item Evaluar la capacidad del sistema para recuperarse de posibles fallas o interrupciones en los servicios y módulos.
-\end{itemize}
-
-\subsubsection{Prueba de Seguridad Integral:}
-\begin{itemize}
-  \item Realizar análisis de seguridad para identificar posibles vulnerabilidades en la comunicación, autenticación y almacenamiento de datos. 
-\end{itemize}
-
-\subsubsection{Prueba de Usabilidad:}
-\begin{itemize}
-  \item Obtener retroalimentación sobre la experiencia del usuario en la aplicación web y la interacción con las alertas.
-\end{itemize}
-
-
-
-\newpage
-
-\section{Validación}
 
 La validación implica confirmar que el sistema cumple con los requisitos y expectativas establecidos.  La validación asegura que el sistema funcione correctamente y cumpla con su propósito previsto.
 
 
 
 Detección de Somnolencia:
+
+Validación:
+Validación con Datos Reales de Somnolencia
+
+Acción: Comparar las lecturas del módulo con registros de personas que han demostrado signos evidentes de somnolencia.
+Resultado Esperado: El módulo detecta y refleja correctamente la somnolencia.
 
 Verificar la precisión de la detección de síntomas de somnolencia utilizando conjuntos de datos variados que representen diferentes niveles de somnolencia.
 Evaluar la capacidad del sistema para alertar al conductor de manera efectiva ante la detección de somnolencia.
@@ -4452,6 +4657,29 @@ La implementación del sistema se llevó a cabo de manera iterativa, siguiendo los
 
 El sistema final permitió detectar síntomas de somnolencia y emitir alertas al conductor. Además, proporciona la ubicación del conductor en tiempo real, permitiendo el monitoreo desde la aplicación web asociada. Esta aplicación desempeña un papel integral al gestionar la información de los conductores y supervisar los reportes de incidencias enviados desde el módulo central de procesamiento. La interacción entre la infraestructura de AWS y las tecnologías Node.js y React en el frontend y backend, respectivamente, contribuyó significativamente a la implementación y resiliencia del sistema en conjunto.
 \section{Trabajo a futuro}
+Análisis de Datos de Conducción a Largo Plazo:
+
+Implementar un sistema de análisis de datos a largo plazo que registre y analice patrones de somnolencia a lo largo del tiempo. Esto podría ayudar a los conductores y a las empresas de transporte a identificar tendencias y tomar medidas preventivas.
+
+Personalización de Alertas Acústicas:
+
+Ampliar la variedad de sonidos de alerta disponibles y permitir a los usuarios personalizar la alarma según sus preferencias. Esto puede incluir sonidos suaves, tonos personalizados o incluso mensajes de voz.
+
+Mejora de Algoritmos de Redes Neuronales:
+
+Continuar refinando y entrenando los algoritmos de redes neuronales para la detección de somnolencia. La inclusión de conjuntos de datos más grandes y diversos puede mejorar la precisión del modelo.
+
+Gestión de Flotas en Tiempo Real:
+
+Si la aplicación se utiliza en flotas de vehículos, incorporar una función de gestión de flotas en tiempo real. Permite a los supervisores rastrear la somnolencia de varios conductores simultáneamente, facilitando la toma de decisiones coordinadas.
+
+Zonas de Riesgo Personalizadas:
+
+Implementar la capacidad de que los usuarios definan zonas geográficas específicas como "zonas de riesgo" donde la probabilidad de somnolencia puede ser mayor. La aplicación web puede proporcionar alertas y sugerencias específicas para estas áreas.
+
+Capacitación en Seguridad Vial:
+
+Ofrecer módulos de capacitación en seguridad vial directamente a través de la aplicación web. Esto podría incluir consejos sobre cómo combatir la fatiga, la importancia de los descansos y las mejores prácticas para mantenerse alerta al conducir.
 
 \clearpage
 

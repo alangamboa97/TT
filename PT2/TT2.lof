@@ -138,18 +138,41 @@
 \contentsline {figure}{\numberline {137}{\ignorespaces Tablas generadas mediante los schemas definidos}}{149}{figure.137}%
 \contentsline {figure}{\numberline {138}{\ignorespaces Amplify Hosting }}{150}{figure.138}%
 \contentsline {figure}{\numberline {139}{\ignorespaces ramificaci\'on de repositorio de Github}}{151}{figure.139}%
-\contentsline {figure}{\numberline {140}{\ignorespaces Estado activo del conductor.}}{152}{figure.140}%
-\contentsline {figure}{\numberline {141}{\ignorespaces Estado activo del conductor con lentes.}}{153}{figure.141}%
-\contentsline {figure}{\numberline {142}{\ignorespaces Estado somnoliento del conductor.}}{153}{figure.142}%
-\contentsline {figure}{\numberline {143}{\ignorespaces Estado somnoliento del conductor con lentes.}}{154}{figure.143}%
-\contentsline {figure}{\numberline {144}{\ignorespaces Acceso a la p\'agina web desde el navegador}}{155}{figure.144}%
-\contentsline {figure}{\numberline {145}{\ignorespaces Acceso a la p\'agina web desde el navegador}}{156}{figure.145}%
-\contentsline {figure}{\numberline {146}{\ignorespaces Acceso a la p\'agina web desde el navegador}}{156}{figure.146}%
-\contentsline {figure}{\numberline {147}{\ignorespaces Interfaz de red 4G LTE wwan0 activa.}}{157}{figure.147}%
-\contentsline {figure}{\numberline {148}{\ignorespaces Coordenadas en longitud y latitud.}}{158}{figure.148}%
-\contentsline {figure}{\numberline {149}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 1.}}{159}{figure.149}%
-\contentsline {figure}{\numberline {150}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 2.}}{159}{figure.150}%
-\contentsline {figure}{\numberline {151}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 1.}}{161}{figure.151}%
-\contentsline {figure}{\numberline {152}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 2.}}{162}{figure.152}%
-\contentsline {figure}{\numberline {153}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 3.}}{162}{figure.153}%
-\contentsline {figure}{\numberline {154}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 2.}}{163}{figure.154}%
+\contentsline {figure}{\numberline {140}{\ignorespaces Acceso a la p\'agina web desde el navegador}}{152}{figure.140}%
+\contentsline {figure}{\numberline {141}{\ignorespaces Acceso valido}}{153}{figure.141}%
+\contentsline {figure}{\numberline {142}{\ignorespaces Acceso no valido}}{153}{figure.142}%
+\contentsline {figure}{\numberline {143}{\ignorespaces Acceso al formulario de registro de usuario.}}{153}{figure.143}%
+\contentsline {figure}{\numberline {144}{\ignorespaces Formulario con datos validos.}}{154}{figure.144}%
+\contentsline {figure}{\numberline {145}{\ignorespaces C\'odigo enviado al correo registrado.}}{154}{figure.145}%
+\contentsline {figure}{\numberline {146}{\ignorespaces C\'odigo recibido.}}{155}{figure.146}%
+\contentsline {figure}{\numberline {147}{\ignorespaces Confirmaci\'on del c\'odigo.}}{156}{figure.147}%
+\contentsline {figure}{\numberline {148}{\ignorespaces Acceso a la p\'agina web.}}{156}{figure.148}%
+\contentsline {figure}{\numberline {149}{\ignorespaces Registro no permitido.}}{157}{figure.149}%
+\contentsline {figure}{\numberline {150}{\ignorespaces Enlace para recuperar contrase\~na.}}{157}{figure.150}%
+\contentsline {figure}{\numberline {151}{\ignorespaces Recuperaci\'on de contrase\~na por correo.}}{157}{figure.151}%
+\contentsline {figure}{\numberline {152}{\ignorespaces C\'odigo recibido para recuperar contrase\~na.}}{158}{figure.152}%
+\contentsline {figure}{\numberline {153}{\ignorespaces Formulario para recuperar contrase\~na.}}{158}{figure.153}%
+\contentsline {figure}{\numberline {154}{\ignorespaces Historial de incidencias.}}{159}{figure.154}%
+\contentsline {figure}{\numberline {155}{\ignorespaces Datos disponibles de la incidencia.}}{159}{figure.155}%
+\contentsline {figure}{\numberline {156}{\ignorespaces Datos disponibles de la incidencia.}}{160}{figure.156}%
+\contentsline {figure}{\numberline {157}{\ignorespaces Video de incidencia.}}{160}{figure.157}%
+\contentsline {figure}{\numberline {158}{\ignorespaces Botones para confirmar o rechazar una incidencia.}}{161}{figure.158}%
+\contentsline {figure}{\numberline {159}{\ignorespaces Incidencia confirmada.}}{161}{figure.159}%
+\contentsline {figure}{\numberline {160}{\ignorespaces Incidencia rechazada.}}{161}{figure.160}%
+\contentsline {figure}{\numberline {161}{\ignorespaces Secci\'on de conductores.}}{161}{figure.161}%
+\contentsline {figure}{\numberline {162}{\ignorespaces Conductores registrados.}}{162}{figure.162}%
+\contentsline {figure}{\numberline {163}{\ignorespaces Perfil de conductor.}}{162}{figure.163}%
+\contentsline {figure}{\numberline {164}{\ignorespaces Ubicaci\'on en tiempo real del conductor.}}{163}{figure.164}%
+\contentsline {figure}{\numberline {165}{\ignorespaces Confirmaci\'on para eliminar conductor.}}{163}{figure.165}%
+\contentsline {figure}{\numberline {166}{\ignorespaces Interfaz de red 4G LTE wwan0 activa.}}{164}{figure.166}%
+\contentsline {figure}{\numberline {167}{\ignorespaces Coordenadas en longitud y latitud.}}{165}{figure.167}%
+\contentsline {figure}{\numberline {168}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 1.}}{166}{figure.168}%
+\contentsline {figure}{\numberline {169}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 2.}}{166}{figure.169}%
+\contentsline {figure}{\numberline {170}{\ignorespaces Estado activo del conductor.}}{168}{figure.170}%
+\contentsline {figure}{\numberline {171}{\ignorespaces Estado activo del conductor con lentes.}}{168}{figure.171}%
+\contentsline {figure}{\numberline {172}{\ignorespaces Estado somnoliento del conductor.}}{169}{figure.172}%
+\contentsline {figure}{\numberline {173}{\ignorespaces Estado somnoliento del conductor con lentes.}}{169}{figure.173}%
+\contentsline {figure}{\numberline {174}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 1.}}{170}{figure.174}%
+\contentsline {figure}{\numberline {175}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 2.}}{171}{figure.175}%
+\contentsline {figure}{\numberline {176}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 3.}}{171}{figure.176}%
+\contentsline {figure}{\numberline {177}{\ignorespaces Mapa y marcador de posicionamiento GPS en tiempo real 2.}}{172}{figure.177}%
