@@ -176,6 +176,7 @@ Ofreciendo así un sistema portátil de monitoreo, detección de somnolencia y aler
 
 \subsection{Objetivos}
 
+
 \subsubsection{Objetivo General}
 
 Diseñar un sistema portátil para la detección de síntomas de somnolencia y alerta del conductor. Además de ser capaz de obtener la ubicación del conductor en tiempo real para ser monitoreada desde una aplicación web que a su vez permita gestionar y visualizar los reportes de incidencias del mismo. 
@@ -2970,8 +2971,6 @@ Amazon Cognito se encuentra disponible en varias regiones alrededor del mundo. \
 Amazon S3, es un servicio de almacenamiento de objetos en la nube. Es utilizado para almacenar datos en la nube de una forma segura, eficienta y escalable. Este servicio utiliza elementos llamados \emph{buckets}, que se encargan de almacenar objetos. Un objeto es un archivo o cualquier metadato que describa dicho archivo. Para almacenar datos en S3, primero se debe especificar el nombre de un bucket y la región dónde se planea que opere la aplicación. Esto con la intención de que el acceso a los datos se realice de manera eficiente.
 
 
-
-
 \clearpage
 \section{Implementación}
 
@@ -4153,13 +4152,13 @@ Posteriormente, se requiere seleccionar el repositorio el cual será alojado, en 
 \subsubsection{Prueba de Detección de Somnolencia en Condiciones Normales}
  
  \begin{itemize}
- \item Detectar el estado "activo" cuando el conductor se encuentre despierto.
+ \item Detectar el estado Activo cuando el conductor se encuentre despierto.
  
- \item Detectar un estado "somnoliento" cuando el conductor presente signos de somnolencia debido al parpadeo de ojos poco significativos.  
+ \item Detectar un estado Somnoliento cuando el conductor presente signos de somnolencia debido al parpadeo de ojos poco significativos.  
  
- \item Detectar un estado "somnoliento" en la que el conductor presente signos de somnolencia debido a los bostezos frecuentes. 
+ \item Detectar un estado Somnoliento en la que el conductor presente signos de somnolencia debido a los bostezos frecuentes. 
  
- \item Detectar un estado "dormido" cuando el conductor presente signos de somnolencia debido al cierre de los ojos por más de 2 segundos.  
+ \item Detectar un estado Dormido cuando el conductor presente signos de somnolencia debido al cierre de los ojos por más de 2 segundos.  
  
  \end{itemize}
 
@@ -4488,35 +4487,11 @@ Obtener inscidencia
 \newpage
 \section{Validación}
 
+\subsection{Prueba de Funcionalidad Integral:}
 
-\subsection{Evaluación del Sistema Final}
-
-\subsubsection{Prueba de Funcionalidad Integral:}
-\begin{itemize}
-  \item Prueba del sistema para validar su funcionalidad global en condiciones simuladas y reales.
-\end{itemize}
-
-\subsubsection{Prueba de Resiliencia del Sistema:}
-\begin{itemize}
-  \item Evaluar la capacidad del sistema para recuperarse de posibles fallas o interrupciones en los servicios y módulos.
-\end{itemize}
-
-\subsubsection{Prueba de Seguridad Integral:}
-\begin{itemize}
-  \item Realizar análisis de seguridad para identificar posibles vulnerabilidades en la comunicación, autenticación y almacenamiento de datos. 
-\end{itemize}
-
-\subsubsection{Prueba de Usabilidad:}
-\begin{itemize}
-  \item Obtener retroalimentación sobre la experiencia del usuario en la aplicación web y la interacción con las alertas.
-\end{itemize}
-
-
-
-
-%\item Confirma que la información sea precisa y esté formateada correctamente.
-%\item Reproduce el video y asegúrate de que la reproducción sea fluida y sin problemas.
- \subsubsection{Prueba de Detección de Somnolencia }
+Probar el sistema para validar su funcionalidad global en condiciones reales en base a los objetivos del sistema.
+  
+\subsubsection{Validación de Detección de Somnolencia y Alerta}
  
  Pruebas dentro de un vehiculo y el uso de lentes. 
  
@@ -4552,32 +4527,30 @@ Obtener inscidencia
 \captionof{figure}{Estado somnoliento del conductor con lentes.}
  \label{fig:Prueba4} 
 \end{center}
-
  \end{itemize}
 
 
-La validación implica confirmar que el sistema cumple con los requisitos y expectativas establecidos.  La validación asegura que el sistema funcione correctamente y cumpla con su propósito previsto.
+%\item Confirma que la información sea precisa y esté formateada correctamente.
+%\item Reproduce el video y asegúrate de que la reproducción sea fluida y sin problemas.
+
+\subsubsection{Validación de la aplicación web}
+
+Integrar un sistema de comunicaciones que permita la interconexión entre el sistema de visión artificial y el sistema de administración. 
 
 
+Verificar la precisión de la detección de síntomas de somnolencia 
 
-Detección de Somnolencia:
 
-Validación:
-Validación con Datos Reales de Somnolencia
-
-Acción: Comparar las lecturas del módulo con registros de personas que han demostrado signos evidentes de somnolencia.
-Resultado Esperado: El módulo detecta y refleja correctamente la somnolencia.
-
-Verificar la precisión de la detección de síntomas de somnolencia utilizando conjuntos de datos variados que representen diferentes niveles de somnolencia.
 Evaluar la capacidad del sistema para alertar al conductor de manera efectiva ante la detección de somnolencia.
-Realizar pruebas en condiciones de iluminación variadas para confirmar la robustez del sistema.
-Geolocalización en Tiempo Real:
+
+
+\subsubsection{Validación de la Geolocalización en Tiempo Real y Conexión}
 
 Comprobar la actualización constante y precisa de la ubicación del conductor durante su desplazamiento.
-Validar la capacidad del sistema para obtener señales de redes móviles y proporcionar la ubicación en entornos urbanos y rurales.
-Verificar la consistencia en la precisión de la geolocalización en diferentes momentos y condiciones.
-Sistema de Administración:
 
+Verificar la consistencia en la precisión de la geolocalización en diferentes momentos y condiciones.
+
+Sistema de Administración:
 
 Desde la aplicación, se puede visualizar el mapa con un marcador de posicionamiento GPS en tiempo real. Se probó con un vehículo en movimiento en la Avenida Villa Panamericana, donde podemos observar su desplazamiento en las siguientes figuras:
 
@@ -4605,16 +4578,19 @@ Desde la aplicación, se puede visualizar el mapa con un marcador de posicionamie
   \label{fig:addstorage} 
   \end{center}
 
-Evaluar la eficacia del sistema de administración en la gestión de usuarios, incluyendo la creación, modificación y eliminación de perfiles.
-Verificar la capacidad de almacenamiento de datos, asegurándote de que la información se guarde correctamente y esté disponible cuando se requiera.
+
 Realizar pruebas de consultas de incidencias para confirmar la accesibilidad y la precisión de los datos almacenados.
+
 Comunicaciones entre Sistemas:
 
 Validar la comunicación eficiente y sin errores entre el sistema de visión artificial y el sistema de administración.
-Comprobar la transmisión precisa de datos relevantes, como alertas de somnolencia y ubicación del conductor.
+
+Comprobar la transmisión precisa de la ubicación del conductor.
 Evaluar la respuesta del sistema ante posibles interrupciones o fallos en la comunicación.
 
 \subsubsection{Resultados}
+
+El módulo detecta y refleja correctamente la somnolencia.
 
 \subsection{Resultados y Ajustes:}
 \begin{itemize}
@@ -4634,8 +4610,6 @@ Comunicación entre Sistemas: Verifica que la comunicación entre el sistema de vi
 
 
 \section{Conclusion y aportaciones}
-
-Los resultados son las salidas o conclusiones derivadas de las pruebas y validación. Los resultados indican el rendimiento y la eficacia del sistema en la detección de somnolencia.
 
 Con base en los objetivos planteados, se llevó a cabo el diseño y análisis del sistema utilizando la metodología en espiral, que implica un enfoque iterativo y progresivo en el desarrollo. El sistema se dividió en módulos y submódulos, permitiendo un enfoque más detallado en cada uno de ellos. Esta aproximación ayudó a definir los elementos y algoritmos necesarios para la implementación del sistema. En este trabajo, se presentan los resultados de las investigaciones que para la elección de los elementos principales del sistema y, posteriormente, los resultados del diseño de cada módulo propuesto.\\
 

@@ -119,15 +119,13 @@
 \contentsline {subsubsection}{\numberline {9.3.1}Prueba de Conectividad LTE:}{164}{subsubsection.9.3.1}%
 \contentsline {subsubsection}{\numberline {9.3.2}Prueba de Posicionamiento GPS:}{164}{subsubsection.9.3.2}%
 \contentsline {subsubsection}{\numberline {9.3.3}Monitoreo en Tiempo Real:}{165}{subsubsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.4}Evaluaci\'on del Sistema Final}{166}{subsection.9.4}%
-\contentsline {subsubsection}{\numberline {9.4.1}Prueba de Funcionalidad Integral:}{166}{subsubsection.9.4.1}%
-\contentsline {subsubsection}{\numberline {9.4.2}Prueba de Resiliencia del Sistema:}{167}{subsubsection.9.4.2}%
-\contentsline {subsubsection}{\numberline {9.4.3}Prueba de Seguridad Integral:}{167}{subsubsection.9.4.3}%
-\contentsline {subsubsection}{\numberline {9.4.4}Prueba de Usabilidad:}{167}{subsubsection.9.4.4}%
-\contentsline {section}{\numberline {10}Validaci\'on}{168}{section.10}%
-\contentsline {subsubsection}{\numberline {10.0.1}Prueba de Detecci\'on de Somnolencia }{168}{subsubsection.10.0.1}%
-\contentsline {subsubsection}{\numberline {10.0.2}Resultados}{172}{subsubsection.10.0.2}%
-\contentsline {subsection}{\numberline {10.1}Resultados y Ajustes:}{172}{subsection.10.1}%
+\contentsline {section}{\numberline {10}Validaci\'on}{167}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Prueba de Funcionalidad Integral:}{167}{subsection.10.1}%
+\contentsline {subsubsection}{\numberline {10.1.1}Validaci\'on de Detecci\'on de Somnolencia y Alerta}{167}{subsubsection.10.1.1}%
+\contentsline {subsubsection}{\numberline {10.1.2}Validaci\'on de la aplicaci\'on web}{169}{subsubsection.10.1.2}%
+\contentsline {subsubsection}{\numberline {10.1.3}Validaci\'on de la Geolocalizaci\'on en Tiempo Real y Conexi\'on}{169}{subsubsection.10.1.3}%
+\contentsline {subsubsection}{\numberline {10.1.4}Resultados}{172}{subsubsection.10.1.4}%
+\contentsline {subsection}{\numberline {10.2}Resultados y Ajustes:}{172}{subsection.10.2}%
 \contentsline {section}{\numberline {11}Conclusion y aportaciones}{173}{section.11}%
 \contentsline {section}{\numberline {12}Trabajo a futuro}{174}{section.12}%
 \contentsline {section}{\numberline {13}Anexos}{179}{section.13}%
