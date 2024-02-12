@@ -68,13 +68,13 @@
 El sistema propuesto para la detección de somnolencia en conductores utiliza técnicas de visión artificial para analizar en tiempo real la detección del rostro, ojos y boca a través de un flujo de video. Se clasifican los estados de los ojos y la boca para identificar síntomas de somnolencia mediante puntos de referencia faciales. La medición de la relación de apertura en los ojos y la boca se realiza mediante el seguimiento de parpadeos y bostezos. En caso de detectar somnolencia, el sistema activa una alarma y genera un informe de incidencia enviado a una base de datos en DynamoDB. Se emplea una Jetson Nano para la portabilidad del sistema. A su vez, se ha desarrollado una aplicación web que ofrece el monitoreo en tiempo real de la ubicación del conductor, además de proporcionar un sistema de administración que permite a los usuarios acceder y visualizar la información de los informes de incidencia, así como detalles específicos de cada conductor. Para el desarrollo del sistema se eligió la metodología en espiral debido a su naturaleza iterativa y flexible.
 \\
 
-\emph{\textbf{Palabras Clave:}} Somnolencia, Visión Artificial, Geolocalización, Alerta, Aplicación web, Sistema de Administración.
+\emph{\textbf{Palabras Clave:}} Somnolencia, Visión Artificial, Geolocalización en Tiempo Real, Alerta, Aplicación web, Sistema de Administración.
 
 \section{Abstract}
 
 The proposed system for detecting drowsiness in drivers utilizes artificial vision techniques to analyze real-time detection of the face, eyes, and mouth through a video stream. The states of the eyes and mouth are classified to identify drowsiness symptoms using facial landmarks. Measurement of the opening ratio in the eyes and mouth is carried out through the tracking of blinks and yawns. In the event of detecting drowsiness, the system activates an alarm and generates an incident report sent to a DynamoDB database. A Jetson Nano is employed for system portability. Additionally, a web application has been developed, providing real-time monitoring of the driver's location, along with an administration system that allows users to access and visualize information from incident reports, as well as specific details for each driver. The spiral methodology was chosen for the system development due to its iterative and flexible nature.\\
 
-\emph{\textbf{Keywords:} Drowsiness, Artificial Vision, Geolocation, Alert, Web Application, Management System.} 
+\emph{\textbf{Keywords:} Drowsiness, Artificial Vision, Real-time Geolocation, Alert, Web Application, Management System.} 
 
 \newpage
 \section{Capítulo I: Introducción}
@@ -103,17 +103,10 @@ La somnolencia es un fenómeno complejo de analizar debido a los factores que pue
 
 Gracias a los avances tecnológicos en los últimos años, se han desarrollado técnicas de visión artificial y aprendizaje automático que permiten detectar patrones de manera más eficiente. En el área del hardware, se han desarrollado microordenadores capaces de realizar tareas que requieran un nivel moderado de computación de manera eficaz. Finalmente, en el área de telecomunicaciones, tecnologías como el 4G y avances en el \emph{Internet of Things} han permitido mayores velocidades de transmisión de datos, así como mayor cobertura dentro del territorio nacional \cite{iot}. \\ 
 
-Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores.
-
-Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, del conductor y de la carretera repercuten en la eficacia del sistema. \\
-
-Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Se destacan los métodos basados en: electroencefalograma (EEG), electromiograma (EMG), electrocardiograma (ECG) y electrooculograma (EOG). Entre todos los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede entorpecer el desempeño del conductor. 
+Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores. Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, del conductor y de la carretera repercuten en la eficacia del sistema.Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Entre los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede entorpecer el desempeño del conductor. Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia. Se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficiencia \cite{Sisdesomnolencia}.
 \\
 
-Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia. Se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficiencia. \cite{Sisdesomnolencia}.
-\\
-
-Actualmente existen distintas opciones para la geolocalización de vehículos en tiempo real, pero con costos elevados, como lo es el rastreo satelital, el cual requiere un pago por servicio con una suscripción anual o mensual. Entonces, surge una oportunidad para desarrollar soluciones más asequibles y que sean igualmente eficaces, como es el caso de las redes móviles LTE \cite{GeolocalizacionVehiculos}.
+Actualmente existen distintas opciones para la geolocalización de vehículos en tiempo real, pero con costos elevados, como lo es el rastreo satelital, el cual requiere un pago por servicio con una suscripción anual o mensual. Entonces, surge una oportunidad para desarrollar soluciones más asequibles \cite{GeolocalizacionVehiculos}.
 \\
 Dadas las posibles soluciones antes mencionadas, se plantea la siguiente pregunta: ¿Cómo desarrollar un sistema portátil que pueda detectar la somnolencia, alertar al conductor, además de monitorear la ubicación en tiempo real y gestionar las incidencias detectadas en el conductor? 
 
@@ -4149,26 +4142,135 @@ Posteriormente, se requiere seleccionar el repositorio el cual será alojado, en 
 
 \subsection{Módulo Central de Procesamiento}
 
-\subsubsection{Prueba de Detección de Somnolencia en Condiciones Normales}
+\subsubsection{Prueba de Detección de Somnolencia}
+
+Se llevaron a cabo pruebas para la detección de somnolencia en distintos rostros, en algunos casos utilizando anteojos y prescindiendo de ellos, con el objetivo de observar la respuesta en un primer escenario. En este, se solicitó a los participantes que mantuvieran los ojos abiertos frente a la cámara, ubicados en una habitación con iluminación media, con la finalidad de confirmar que el sistema pudiera identificar el estado activo. 
+
+\begin{itemize} 
+ \item Prueba de detección del estado activo 1.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Prueba-EstadoActivoPersona1.png}
+\captionof{figure}{Estado activo de la persona 1.}
+ \label{fig:Prueba1} 
+\end{center}  
+
+\item Prueba de detección del estado activo 2.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Prueba-EstadoActivoPersona2.png}
+\captionof{figure}{Estado activo de la persona 2.}
+ \label{fig:Prueba1} 
+\end{center}  
+
+\item Prueba de detección del estado activo 3.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Prueba-EstadoActivoPersona3.png}
+\captionof{figure}{Estado activo de la persona 3.}
+ \label{fig:Prueba1} 
+\end{center}  
+
+\item Prueba de detección del estado activo 4.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Prueba-EstadoActivoPersona4.png}
+\captionof{figure}{Estado activo de la persona 4.}
+ \label{fig:Prueba1} 
+\end{center}  
+
+\end{itemize} 
  
- \begin{itemize}
- \item Detectar el estado Activo cuando el conductor se encuentre despierto.
+Posteriormente, se les pidió simular un estado somnoliento cerrando los ojos para evaluar la capacidad del sistema de detectar el estado de somnolencia.
+
+\begin{itemize} 
+ \item Prueba de detección del estado somnoliento 1.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Prueba-EstadoSomnolenciaPersona1.png}
+\captionof{figure}{Estado somnoliento de la persona 1.}
+ \label{fig:Prueba1} 
+\end{center}  
+
+ \item Prueba de detección del estado somnoliento 2.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Prueba-EstadoSomnolientoPersona2.JPG}
+\captionof{figure}{Estado somnoliento de la persona 2.}
+ \label{fig:Prueba1} 
+\end{center}  
+
+ \item Prueba de detección del estado somnoliento 3.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Prueba-EstadoSomnolenciaPersona3.png}
+\captionof{figure}{Estado somnoliento de la persona 3.}
+ \label{fig:Prueba1} 
+\end{center}  
  
- \item Detectar un estado Somnoliento cuando el conductor presente signos de somnolencia debido al parpadeo de ojos poco significativos.  
+
+\end{itemize} 
  
- \item Detectar un estado Somnoliento en la que el conductor presente signos de somnolencia debido a los bostezos frecuentes. 
  
- \item Detectar un estado Dormido cuando el conductor presente signos de somnolencia debido al cierre de los ojos por más de 2 segundos.  
+Se llevaron a cabo pruebas dentro de un vehículo, considerando el uso de lentes, con el propósito de evaluar la detección de somnolencia en diferentes condiciones e ilumiación. Se evaluó la capacidad del sistema para detectar signos de somnolencia en situaciones de conducción, teniendo en cuenta la posible influencia de los anteojos en los resultados. 
  
+ \begin{itemize} 
+ \item Deteccion de un estado activo del conductor.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/PruebaVehiculo1.png}
+\captionof{figure}{Estado activo del conductor.}
+ \label{fig:Prueba1} 
+\end{center}  
+
+ \item Deteccion de un estado activo del conductor con lentes.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/PruebaVehiculo2.png}
+\captionof{figure}{Estado activo del conductor con lentes.}
+ \label{fig:Prueba2} 
+\end{center}  
+
+ \item Deteccion de un estado somnoliento del conductor.
+ 
+ \begin{center}
+  \includegraphics[scale=0.5]{imagenes/PruebaVehiculo3.png}
+\captionof{figure}{Estado somnoliento del conductor.}
+ \label{fig:Prueba3} 
+\end{center}
+
+\item Deteccion de un estado somnoliento del conductor con lentes.
+
+ \begin{center}
+  \includegraphics[scale=0.5]{imagenes/PruebaVehiculo4.png}
+\captionof{figure}{Estado somnoliento del conductor con lentes.}
+ \label{fig:Prueba4} 
+\end{center}
  \end{itemize}
+
 
 \subsubsection{Prueba de Alerta}
 \begin{itemize}
 \item Prueba de emisión de alerta ante la detección de síntomas de somnolencia. 
 
+La figura \ref{fig:AlarmaCMD} presenta una impresión de la consola que emite un mensaje de alerta al detectar somnolencia. Este mensaje activa el buzzer durante un intervalo definido de 2 segundos y posteriormente lo desactiva.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Prueba-AlarmaConsola.jpeg}
+\captionof{figure}{Activación y desactivación del buzzer.}
+ \label{fig:AlarmaCMD} 
+\end{center}
+
+La figura \ref{fig:AlarmaJetson} muestra el buzzer sobre la carcasa conectado al sistema.
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/Prueba-AlarmaEnJN.jpeg}
+\captionof{figure}{Buzzer del sistema.}
+ \label{fig:AlarmaJetson} 
+\end{center}
+
 \end{itemize}
 
-Obtener inscidencia 
 
 \subsection{Módulo de Estación Base}
 
@@ -4395,8 +4497,20 @@ Obtener inscidencia
 \begin{itemize}   
     \item Llenar la información de un conductor no registrado.
     
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-AgregarConductor.jpeg}
+       \captionof{figure}{Perfil de conductor.}
+       \label{fig:libraries} 
+     \end{center} 
+    
     
     \item Verifica que los cambios se guarden correctamente y se reflejen en el perfil.  
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-VerificarAgregarConductor.jpeg}
+       \captionof{figure}{Perfil de conductor.}
+       \label{fig:libraries} 
+     \end{center} 
     
 \end{itemize}
 
@@ -4415,9 +4529,21 @@ Obtener inscidencia
 
 \subsubsection{Prueba de editar conductor:}
 \begin{itemize}
-    \item Modifica la información de un conductor. 
+    \item Modifica la información de un conductor.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-EditarCondutor.jpeg}
+       \captionof{figure}{Ubicación en tiempo real del conductor.}
+       \label{fig:libraries} 
+     \end{center}  
         
     \item Verifica que los cambios se guarden correctamente y se reflejen en el perfil.
+    
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Prueba-VerificarEditarConductor.jpeg}
+       \captionof{figure}{Ubicación en tiempo real del conductor.}
+       \label{fig:libraries} 
+     \end{center} 
 
      
 \end{itemize}
@@ -4436,6 +4562,14 @@ Obtener inscidencia
     \item Verificar que los cambios se guarden correctamente y se reflejen en la sección de condutores.
      
 \end{itemize}
+
+Google Lighthouse es una herramienta de código abierto para mejorar la calidad de las páginas web. Puede realizar auditorías automatizadas para el rendimiento, la accesibilidad, las mejores prácticas de SEO entre otras. En una prueba de rendimiento web utilizando Lighthouse, se obtuvieron resultados destacados en accesibilidad (100/100), mejores prácticas (100/100) y SEO (100/100), indicando una estructura sólida, conformidad con las directrices de desarrollo establecidas y optimización para motores de búsqueda. 
+
+    \begin{center}
+       \includegraphics[scale=.3]{imagenes/Pruebas-Lighthouse.jpeg}
+       \captionof{figure}{Confirmación para eliminar conductor.}
+       \label{fig:libraries} 
+     \end{center}  
 
 
 \subsection{Módulo de Comunicaciones}
@@ -4492,67 +4626,111 @@ Obtener inscidencia
 Probar el sistema para validar su funcionalidad global en condiciones reales en base a los objetivos del sistema.
   
 \subsubsection{Validación de Detección de Somnolencia y Alerta}
- 
- Pruebas dentro de un vehiculo y el uso de lentes. 
- 
- \begin{itemize} 
- \item Deteccion de un estado activo del conductor.
 
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/PruebaVehiculo1.png}
-\captionof{figure}{Estado activo del conductor.}
- \label{fig:Prueba1} 
-\end{center}  
+Para validar el funcionamiento del sistema de detección de somnolencia y asegurar el cumplimiento del primer objetivo específico, se llevó a cabo una prueba. En esta, se colocó el sistema cerca del conductor, orientando la cámara hacia él. Conectamos el sistema mediante un adaptador de corriente a la fuente de alimentación del microordenador Jetson Nano y ubicamos la antena del sistema cerca de la ventana del conductor para recopilar las coordenadas.
 
- \item Deteccion de un estado activo del conductor con lentes.
-
-\begin{center}
-  \includegraphics[scale=0.5]{imagenes/PruebaVehiculo2.png}
-\captionof{figure}{Estado activo del conductor con lentes.}
- \label{fig:Prueba2} 
-\end{center}  
-
- \item Deteccion de un estado somnoliento del conductor.
+\begin{itemize}
+ \item Sistema de detección de somnolencia instalado y conectado dentro del vehículo.
  
  \begin{center}
-  \includegraphics[scale=0.5]{imagenes/PruebaVehiculo3.png}
-\captionof{figure}{Estado somnoliento del conductor.}
- \label{fig:Prueba3} 
-\end{center}
+  \includegraphics[scale=0.9]{imagenes/Validacion-SistemaVistaFrontal.jpeg}
+	\captionof{figure}{Vista lateral del sistema.}
+  \label{fig:addstorage} 
+  \end{center}   
+  
+  \begin{center}
+  \includegraphics[scale=0.9]{imagenes/Validacion-SistemaVistaLateral.jpeg}
+	\captionof{figure}{Vista frontal del sistema.}
+  \label{fig:addstorage} 
+  \end{center}   
 
-\item Deteccion de un estado somnoliento del conductor con lentes.
-
- \begin{center}
-  \includegraphics[scale=0.5]{imagenes/PruebaVehiculo4.png}
-\captionof{figure}{Estado somnoliento del conductor con lentes.}
- \label{fig:Prueba4} 
-\end{center}
  \end{itemize}
 
+Se encendio el sistema y ejecutamos el archivo diseñado para la detección de somnolencia. El sistema capturó imágenes en tiempo real y evaluamos su capacidad para detectar correctamente el estado activo cuando el conductor estaba despierto, así como el estado somnoliento al manifestar signos como el cierre de ojos o bostezos constantes. En caso de detectar somnolencia, el sistema activa una alerta y envía la incidencia al sistema de administración.
 
-%\item Confirma que la información sea precisa y esté formateada correctamente.
+ \begin{itemize}
+ \item Estado activo donde el conductor se encuentra despierto.
+ 
+ \begin{center}
+  \includegraphics[scale=0.9]{imagenes/Validacion-EstadoActivo.png}
+	\captionof{figure}{Estado activo del conductor.}
+  \label{fig:addstorage} 
+  \end{center}   
+ 
+ \item Estado dormido donde el conductor cierre de los ojos por más de tres segundos.  
+  
+ 
+ \begin{center}
+  \includegraphics[scale=0.9]{imagenes/Validacion-EstadoDormido.JPG}
+	\captionof{figure}{Estado dormido del conductor.}
+  \label{fig:addstorage} 
+  \end{center} 
+ 
+ \item Estado somnoliento donde el conductor presenta signos de somnolencia. 
+ 
+ 
+ \begin{center}
+  \includegraphics[scale=0.9]{imagenes/Validacion-EstadoSomnoliento.JPG}
+	\captionof{figure}{Estado somnoliento del conductor.}
+  \label{fig:addstorage} 
+  \end{center}
+  
+   \item Aviso de Bostezo donde el conductor presenta más de dos bostezos. 
+   
+  \begin{center}
+  \includegraphics[scale=0.9]{imagenes/Validacion-EstadoBostezo.JPG}
+	\captionof{figure}{Estado somnoliento del conductor por bostezo.}
+  \label{fig:addstorage} 
+  \end{center}
+  
+  \item Alarma activa al presentarse el estado de somnolenica. 
+  
+  
+  \item Envio de incidencia. 
+ 
+ \end{itemize}
+ 
+
 %\item Reproduce el video y asegúrate de que la reproducción sea fluida y sin problemas.
 
 \subsubsection{Validación de la aplicación web}
 
-Integrar un sistema de comunicaciones que permita la interconexión entre el sistema de visión artificial y el sistema de administración. 
+Se ingreso a la aplicación correctamente y se ccedio a las incidencias registradas dado el ID del conductor.
 
+\begin{center}
+  \includegraphics[scale=0.9]{imagenes/Validacion-AccesoSistema.JPG}
+	\captionof{figure}{Perfil del conductor.}
+  \label{fig:addstorage} 
+  \end{center}
 
-Verificar la precisión de la detección de síntomas de somnolencia 
+Se verificó que las incidencias generadas por el estado de somnolencia y el estado dormido se recibieran correctamente en la aplicación web, con la información recopilada desde el sistema de detección de somnolencia. 
 
+\begin{itemize}
 
-Evaluar la capacidad del sistema para alertar al conductor de manera efectiva ante la detección de somnolencia.
+\item Incidencia recibida y accedida desde la aplicación.
 
+  \begin{center}
+  \includegraphics[scale=0.9]{imagenes/Validacion-IncidenciaVistaApp1.JPG}
+	\captionof{figure}{Vista de incidencia desde la aplicación web.}
+  \label{fig:addstorage} 
+  \end{center}
+  
+\item Incidencia recibida y accedida desde la aplicación.
+  
+  \begin{center}
+  \includegraphics[scale=0.9]{imagenes/Validacion-IncidenciaVistaApp2.JPG}
+	\captionof{figure}{Vista de incidencia desde la aplicación web.}
+  \label{fig:addstorage} 
+  \end{center}
+  
+\end{itemize}
 
 \subsubsection{Validación de la Geolocalización en Tiempo Real y Conexión}
 
-Comprobar la actualización constante y precisa de la ubicación del conductor durante su desplazamiento.
+%Comprobar la actualización constante y precisa de la ubicación del conductor durante su desplazamiento.
+%Verificar la consistencia en la precisión de la geolocalización en diferentes momentos y condiciones.
 
-Verificar la consistencia en la precisión de la geolocalización en diferentes momentos y condiciones.
-
-Sistema de Administración:
-
-Desde la aplicación, se puede visualizar el mapa con un marcador de posicionamiento GPS en tiempo real. Se probó con un vehículo en movimiento en la Avenida Villa Panamericana, donde podemos observar su desplazamiento en las siguientes figuras:
+Desde la aplicación, se visualizó el mapa con un marcador de posicionamiento GPS en tiempo real. Se probó con un vehículo en movimiento en la Avenida Villa Panamericana, donde se puede observar su desplazamiento en las siguientes figuras:
 
   \begin{center}
   \includegraphics[scale=0.6]{imagenes/posicion1.png}
@@ -4578,82 +4756,58 @@ Desde la aplicación, se puede visualizar el mapa con un marcador de posicionamie
   \label{fig:addstorage} 
   \end{center}
 
+\section{Resultados}
 
-Realizar pruebas de consultas de incidencias para confirmar la accesibilidad y la precisión de los datos almacenados.
+Se logró desarrollar un sistema portátil mediante el uso de una Jetson Nano que posibilitó la detección del rostro, los ojos y la boca, seguida de la clasificación de la somnolencia. En este proceso, se consideraron la apertura de los ojos y la boca, así como la duración de estos estados. La implementación para el reconocimiento de signos de somnolencia se vio favorecida por la utilización de dlib para la detección facial y la evaluación de la relación entre el Movimiento de Apertura de Ojos (MOR) y el Estiramiento de Apertura de Boca (EOR) a través de puntos de referencia faciales.\\
 
-Comunicaciones entre Sistemas:
+En el ámbito de la comunicación y transferencia de archivos, se incorporó el módulo SIM7600G a la Jetson Nano, el cual integra GNSS para el posicionamiento GPS. Esta acción culminó en la conexión entre la Jetson Nano y la página web para la transmisión de información a través de la red celular. Además, se logró obtener el posicionamiento GPS en tiempo real de la Jetson Nano, hecho que se reflejó en la aplicación web en la sección destinada a dar seguimiento al conductor.\\
 
-Validar la comunicación eficiente y sin errores entre el sistema de visión artificial y el sistema de administración.
+Durante el proceso de desarrollo de la Estación Base, se integraron las herramientas suministradas por Amazon Amplify. La decisión se basó en la eficacia y versatilidad proporcionadas por Amplify Hosting, permitiendo simultáneamente una integración fluida con GitHub. Esto posibilitó que los cambios efectuados en el repositorio se reflejaran de manera automática en la aplicación web, agilizando el ciclo de desarrollo y asegurando una sincronización eficiente entre el código fuente.\\
 
-Comprobar la transmisión precisa de la ubicación del conductor.
-Evaluar la respuesta del sistema ante posibles interrupciones o fallos en la comunicación.
-
-\subsubsection{Resultados}
-
-El módulo detecta y refleja correctamente la somnolencia.
-
-\subsection{Resultados y Ajustes:}
-\begin{itemize}
-  \item Evaluar los resultados de cada prueba y realizar ajustes en el diseño o implementación según sea necesario.
-  \item Utilizar los resultados como base para iteraciones adicionales en el desarrollo, siguiendo el enfoque de la metodología en espiral.
-\end{itemize}
-
-Resultados:
-
-Precisión en la Detección de Somnolencia: Analiza los resultados de las pruebas de detección de somnolencia para evaluar la precisión del sistema en la identificación de síntomas.
-Funcionalidad de Geolocalización: Examina la precisión y la actualización en tiempo real de la geolocalización durante las pruebas.
-Operación del Sistema de Administración: Evalúa la funcionalidad y eficacia del sistema de administración, asegurándote de que cumpla con los objetivos establecidos.
-Comunicación entre Sistemas: Verifica que la comunicación entre el sistema de visión artificial y el sistema de administración sea efectiva y sin problemas.
+El sistema finalizó permitiendo la detección de síntomas de somnolencia y la emisión de alertas al conductor. Además, proporcionó la ubicación del conductor en tiempo real, posibilitando el monitoreo desde la aplicación web asociada. Esta aplicación jugó un papel integral al gestionar la información de los conductores y supervisar los reportes de incidencias enviados desde el módulo central de procesamiento. La interacción entre la infraestructura de AWS contribuyó significativamente a la implementación y resiliencia del sistema en conjunto.
 
 
-\newpage
+\clearpage
+\section{Conclusión y Aportaciones}
 
+El proyecto se enfocó en el desarrollo de un sistema integral centrado en la detección de síntomas de somnolencia y el registro de incidencias para fines de retroalimentación de los conductores. Este enfoque implicó la implementación de tecnologías avanzadas, como la Jetson Nano para la detección facial y el módulo SIM7600G para la comunicación y posicionamiento GPS.
 
-\section{Conclusion y aportaciones}
+A lo largo del proceso, se enfrentaron diversas implicaciones y complicaciones, desde la precisión en la detección de síntomas de somnolencia hasta la optimización de la comunicación entre la Jetson Nano y la aplicación web. Superar estos desafíos fue crucial para alcanzar los objetivos del sistema y asegurar su utilidad práctica.
 
-Con base en los objetivos planteados, se llevó a cabo el diseño y análisis del sistema utilizando la metodología en espiral, que implica un enfoque iterativo y progresivo en el desarrollo. El sistema se dividió en módulos y submódulos, permitiendo un enfoque más detallado en cada uno de ellos. Esta aproximación ayudó a definir los elementos y algoritmos necesarios para la implementación del sistema. En este trabajo, se presentan los resultados de las investigaciones que para la elección de los elementos principales del sistema y, posteriormente, los resultados del diseño de cada módulo propuesto.\\
+Este sistema pretende ser aprovechado de varias maneras. En el ámbito de la seguridad vial, proporciona una herramienta valiosa para prevenir accidentes causados por la somnolencia del conductor. Además, las empresas de transporte podrían integrar esta tecnología para mejorar la calidad de sus conductores y la eficiencia de sus operaciones.
 
-En el Submódulo de Visión Artificial, se logró la detección del rostro, los ojos y la boca, seguida de la clasificación de la somnolencia. Este proceso consideró la apertura de los ojos y la boca, así como la duración de dichos estados. La utilización de dlib para la detección facial y la relación MOR y EOR a través de puntos de referencia faciales contribuyeron a la implementación para el reconocimiento de signos de somnolencia.\\
+A nivel social, la implementación de este sistema puede contribuir a la reducción de accidentes de tráfico, disminuyendo los costos asociados a accidentes automovilísticos. También puede generar conciencia sobre la importancia de la vigilancia del estado del conductor durante los viajes, fomentando hábitos de conducción más seguros y mejores hábitos de sueño.
 
-En cuanto a la comunicación y transferencia de archivos, se optó por el módulo SIM7600G para Jetson Nano, que integra GNSS para el posicionamiento GPS. La conectividad LTE fue seleccionada, y se configuró un intervalo de tiempo de 10 segundos para el envío de información de posicionamiento GPS.\\
+Adicionalmente, el sistema de registros implementado puede servir como una herramienta valiosa para la recopilación de estadísticas e información relevante. Esta base de datos puede ser utilizada en futuros proyectos, proporcionando información valiosa para el diseño y desarrollo de sistemas similares. Al analizar la información a lo largo del tiempo, se podrían identificar tendencias en los patrones de somnolencia al volante.
 
-En el proceso de desarrollo de la Estación Base, se tomó la decisión estratégica de implementar la suite de herramientas proporcionada por Amazon Amplify. Esta elección se fundamentó en la eficacia y versatilidad que ofrece Amplify Hosting, al mismo tiempo que permite una integración fluida con GitHub. De esta manera, los cambios realizados en el repositorio se reflejan de manera automática en la aplicación web, agilizando el ciclo de desarrollo y asegurando una sincronización eficiente entre el código fuente y la implementación en producción.\\
-
-Para abordar la gestión de contenido multimedia, se optó por el servicio de almacenamiento en la nube S3 de Amazon Web Services (AWS). Esta solución proporciona una infraestructura escalable y segura para el almacenamiento de archivos, garantizando un acceso rápido y confiable a los recursos multimedia necesarios para la aplicación.\\
-
-En cuanto a la seguridad y gestión de credenciales, la responsabilidad recayó en Amazon Cognito. Este servicio facilita la autenticación de usuarios y la gestión de identidades de manera segura, ofreciendo un entorno robusto para la administración de permisos y credenciales de acceso. La elección de Amazon Cognito contribuye a garantizar la integridad y confidencialidad de la información sensible manejada por la Estación Base.\\
-
-Para el manejo eficiente de la base de datos, se eligió DynamoDB como el sistema de gestión de bases de datos. La elección se basó en su sólida compatibilidad con las herramientas de AWS y su capacidad para integrarse sin problemas en el ecosistema de servicios en la nube.\\
-
-En lo que respecta a la aplicación web, se implementaron tecnologías líderes en el desarrollo web moderno. Node.js fue seleccionado para el desarrollo del backend, proporcionando un entorno de ejecución eficiente y orientado a eventos. Por otro lado, React se utilizó en el frontend, permitiendo la construcción de interfaces de usuario dinámicas y reactivas. Esta combinación de tecnologías garantiza un rendimiento óptimo, así como una experiencia de usuario fluida y atractiva.\\
-
-La implementación del sistema se llevó a cabo de manera iterativa, siguiendo los principios de la metodología en espiral. En cada fase del desarrollo, se llevaron a cabo pruebas y validaciones para asegurar la funcionalidad del sistema. Los resultados obtenidos de estas pruebas fueron evaluados y utilizados como base para realizar ajustes en el diseño como en la implementación.\\
-
-El sistema final permitió detectar síntomas de somnolencia y emitir alertas al conductor. Además, proporciona la ubicación del conductor en tiempo real, permitiendo el monitoreo desde la aplicación web asociada. Esta aplicación desempeña un papel integral al gestionar la información de los conductores y supervisar los reportes de incidencias enviados desde el módulo central de procesamiento. La interacción entre la infraestructura de AWS y las tecnologías Node.js y React en el frontend y backend, respectivamente, contribuyó significativamente a la implementación y resiliencia del sistema en conjunto.
 \section{Trabajo a futuro}
-Análisis de Datos de Conducción a Largo Plazo:
 
-Implementar un sistema de análisis de datos a largo plazo que registre y analice patrones de somnolencia a lo largo del tiempo. Esto podría ayudar a los conductores y a las empresas de transporte a identificar tendencias y tomar medidas preventivas.
+\begin{itemize}
+\item Desarrollo de Análisis a Largo Plazo de Datos de Conducción:
 
-Personalización de Alertas Acústicas:
+Se propone la implementación de un sistema de análisis de datos a largo plazo que examine patrones de comportamiento de un conductor dadas las incidencias a lo largo del tiempo, brindando a conductores y empresas de transporte la capacidad de identificar tendencias y adoptar medidas preventivas de manera efectiva.
 
-Ampliar la variedad de sonidos de alerta disponibles y permitir a los usuarios personalizar la alarma según sus preferencias. Esto puede incluir sonidos suaves, tonos personalizados o incluso mensajes de voz.
+\item Personalización de Alertas Sonoras:
 
-Mejora de Algoritmos de Redes Neuronales:
+Se sugiere ampliar la diversidad de alertas sonoras disponibles y otorgar a los usuarios la capacidad de personalizar la alarma según sus preferencias individuales. Esta mejora podría incluir opciones como sonidos suaves, tonos personalizados o incluso mensajes de voz, proporcionando una experiencia más adaptable.
 
-Continuar refinando y entrenando los algoritmos de redes neuronales para la detección de somnolencia. La inclusión de conjuntos de datos más grandes y diversos puede mejorar la precisión del modelo.
+\item Definición de Zonas de Riesgo:
 
-Gestión de Flotas en Tiempo Real:
+Se plantea la incorporación de la capacidad para que los usuarios definan zonas geográficas específicas como "zonas de riesgo", donde la probabilidad de somnolencia pueda ser más alta. La aplicación web podría proporcionar alertas y sugerencias específicas para estas áreas identificadas.
 
-Si la aplicación se utiliza en flotas de vehículos, incorporar una función de gestión de flotas en tiempo real. Permite a los supervisores rastrear la somnolencia de varios conductores simultáneamente, facilitando la toma de decisiones coordinadas.
+\item Módulos de Capacitación en Seguridad Vial:
 
-Zonas de Riesgo Personalizadas:
+Se sugiere la inclusión de módulos de capacitación en seguridad vial directamente a través de la aplicación web. Estos módulos podrían ofrecer consejos prácticos sobre cómo combatir la fatiga, la importancia de los descansos y las mejores prácticas para mantenerse alerta al conducir, fortaleciendo así la conciencia y educación en seguridad vial.
 
-Implementar la capacidad de que los usuarios definan zonas geográficas específicas como "zonas de riesgo" donde la probabilidad de somnolencia puede ser mayor. La aplicación web puede proporcionar alertas y sugerencias específicas para estas áreas.
+\item Optimización Continua de Algoritmos de Redes Neuronales:
 
-Capacitación en Seguridad Vial:
+Se plantea la implementación y el entrenamiento de algoritmos de redes neuronales para la detección de somnolencia. La incorporación de conjuntos de datos más extensos y diversos tiene el potencial de elevar la precisión del modelo, fortaleciendo así la eficacia del sistema.
 
-Ofrecer módulos de capacitación en seguridad vial directamente a través de la aplicación web. Esto podría incluir consejos sobre cómo combatir la fatiga, la importancia de los descansos y las mejores prácticas para mantenerse alerta al conducir.
+\item Gestión de Flotas en Tiempo Real:
+
+se propone la integración de una función de gestión de flotas en tiempo real. Esta característica permitiría a los supervisores monitorear múltiples conductores simultáneamente, facilitando la toma de decisiones coordinadas y mejorando la gestión general.
+
+\end{itemize} 
 
 \clearpage
 
