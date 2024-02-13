@@ -25,9 +25,9 @@
 B.~W. Boehm, ``A spiral model of software development and enhancement,''
   \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
 
-\bibitem{JetsonNano}
-NVIDIA. Nvidia jetson nano. Disponible en:
-  \url{https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano/}.
+\bibitem{JetsonN}
+NVIDIA. (s/f) Nvidia jetson nano. Disponible en:
+  \url{https://www.nvidia.com/es-la/autonomous-machines/embedded-systems/jetson-nano}.
   Consultado el 26 de enero de 2022.
 
 \bibitem{CDNimg}
@@ -59,8 +59,8 @@ A.~E. Paez~Mario. (2017) Herramientas para la seguridad en la movilidad,
   Consultado el 26 de enero de 2022.
 
 \bibitem{RastreoSatelital}
-Beetrack. (s/f) Rastreo satelital de vehiculos: ¿qué es mejor que el gps
-  tradicional? Disponible en:
+Beetrack. (s/f) Rastreo satelital de vehiculos que es mejor que el gps
+  tradicional. Disponible en:
   \url{https://www.beetrack.com/es/blog/rastreo-satelital-de-vehiculos}.
   Consultado el 26 de enero de 2022.
 
@@ -95,7 +95,7 @@ IBM. (s/f) Como funciona la vision artificial. Disponible en:
   enero de 2022.
 
 \bibitem{AP}
-aws. (s/f) ¿qué es el aprendizaje profundo? Disponible en:
+aws. (s/f) ¿que es el aprendizaje profundo? Disponible en:
   \url{https://aws.amazon.com/es/what-is/deep-learning/}. Consultado el 26 de
   enero de 2022.
 
@@ -105,7 +105,7 @@ F.~J. Ceballos. (2004) Lenguajes de programacion. Disponible en:
   Consultado el 20 de diciembre de 2023.
 
 \bibitem{libreria}
-UNIR. (2023) ¿que son las librerias en programacion y para que sirven?
+UNIR. (2023) Que son las librerias en programacion y para que sirven.
   Disponible en:
   \url{https://www.unir.net/ingenieria/revista/librerias-programacion/}.
   Consultado el 20 de diciembre de 2023.
@@ -116,8 +116,8 @@ AWS. (s/f) Que es una aplicacion web. Disponible en:
   Consultado el 20 de diciembre de 2023.
 
 \bibitem{frontBack}
-------. (s/f) Cual es la diferencia entre el front end y back end en el
-  desarrollo de aplicaciones. Disponible en:
+aws. (s/f) Cual es la diferencia entre el front end y back end en el desarrollo
+  de aplicaciones. Disponible en:
   \url{https://aws.amazon.com/es/what-is/web-application/}. Consultado el 20 de
   diciembre de 2023.
 
@@ -313,18 +313,12 @@ J.~Wexler, \emph{Get Programming with Node.js}.\hskip 1em plus 0.5em minus
 
 \bibitem{Nvidia1}
 \BIBentryALTinterwordspacing
-NVIDIA. (2019) Get started with the jetson nano developer kit. [Online].
+nvidia. (2019) Get started with the jetson nano developer kit. [Online].
   Available:
   \url{https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit\#intro}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Jetpacksdk}
-\BIBentryALTinterwordspacing
-------. Jetpack sdk 4.6.3. Accedido el 17 de junio de 2023. [Online].
-  Available: \url{https://developer.nvidia.com/jetpack-sdk-463}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Tensorflow}
 \BIBentryALTinterwordspacing
 ------. Jetpack sdk 4.6.3. Accedido el 17 de junio de 2023. [Online].
   Available: \url{https://developer.nvidia.com/jetpack-sdk-463}

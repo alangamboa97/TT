@@ -22,7 +22,7 @@
 \fancyhead[L]{\footnotesize UPIITA}
 %\fancyfoot[R]{\footnotesize Diseño}
 \fancyfoot[R]{\thepage}
-\fancyfoot[L]{\footnotesize Proyecto Terminal 1}
+\fancyfoot[L]{\footnotesize Proyecto Terminal II}
 \renewcommand{\footrulewidth}{0.4pt}
 \usepackage{graphics}
 \usepackage{capt-of}
@@ -85,8 +85,7 @@ Para abordar esta problemática, se busca prevenir la somnolencia al conducir, la
 \\ 
 En el desarrollo logístico de empresas que se encargan de transportar a pasajeros o que se encargan de repartir paquetería, los datos pueden verse de forma más alarmante o preocupante, ya que, usualmente, las personas designadas como conductores se enfrentan a largas horas de jornada sin descanso y, en muchos casos, rotan por horarios que pueden ser en el día o en la noche, aumentando el riesgo de accidentarse por el desbalance de tener un horario mixto.
 \\ 
-Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy en día son un recurso determinante para la planificación de rutas de distribución al optimizarlas y, lo más importante, al estar en constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{RastreoSatelital}.
-\\ 
+Muchas de estas empresas optan por sistemas de rastreo de vehículos, que hoy en día son un recurso determinante para la planificación de rutas de distribución al optimizarlas y, lo más importante, al estar en constante monitoreo se puede tener la certeza de que se está siguiendo la ruta marcada correctamente \cite{RastreoSatelital}.\\ 
 
 Teniendo en cuenta este contexto, resulta relevante analizar y diseñar un sistema que aborde la problemática de la somnolencia al conducir. Este sistema se basará en el uso de una cámara digital y algoritmos de visión artificial para detectar signos de somnolencia en el conductor. Además, se incluirá un sistema de administración que permitirá la geolocalización en tiempo real, así como la gestión de conductores y reportes de incidencias.
 \\ 
@@ -103,7 +102,7 @@ La somnolencia es un fenómeno complejo de analizar debido a los factores que pue
 
 Gracias a los avances tecnológicos en los últimos años, se han desarrollado técnicas de visión artificial y aprendizaje automático que permiten detectar patrones de manera más eficiente. En el área del hardware, se han desarrollado microordenadores capaces de realizar tareas que requieran un nivel moderado de computación de manera eficaz. Finalmente, en el área de telecomunicaciones, tecnologías como el 4G y avances en el \emph{Internet of Things} han permitido mayores velocidades de transmisión de datos, así como mayor cobertura dentro del territorio nacional \cite{iot}. \\ 
 
-Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores. Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, la presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, del conductor y de la carretera repercuten en la eficacia del sistema.Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Entre los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, maniobrabilidad y practicidad al conductor, además de poder llegar a ser invasivos, lo cual puede entorpecer el desempeño del conductor. Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que los cabeceos normalmente ocurren cuando el conductor se duerme. Por lo que estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia. Se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficiencia \cite{Sisdesomnolencia}.
+Hoy en día, se están comenzando a utilizar tecnologías para prevenir y detectar síntomas de fatiga y somnolencia en conductores. Uno de estos métodos está basado en el comportamiento del vehículo, el cual detecta el estado del conductor mediante el análisis de distintas métricas como son: movimientos del volante, posición del vehículo, presión del acelerador o del freno, cambio de velocidades, con los cuales se determina la posibilidad de que el conductor se encuentre en estado de somnolencia. El principal problema de dicho método es que las características individuales del vehículo, del conductor y de la carretera repercuten en la eficacia del sistema.Por otra parte, se encuentran los métodos que se basan en el análisis de variables fisiológicas, los cuales permiten la detección de somnolencia en sus fases tempranas con una baja tasa de falsos positivos. Entre los métodos, el EEG es el más común para la detección de la somnolencia, donde se analizan diferentes bandas de frecuencia. Todas estas señales brindan información adicional al momento de analizar el estado de somnolencia de una persona. Sin embargo, estos métodos requieren contacto con el conductor y el uso excesivo de canales de encefalogramas, lo cual resta comodidad, y practicidad al conductor, además de llegar a ser invasivos, lo cual puede entorpecer el desempeño del conductor. Finalmente, se encuentra el análisis de características visuales que puede presentar un conductor somnoliento, como los movimientos faciales, parpadeos rápidos y constantes, cabeceos y bostezos frecuentes. Sin embargo, los bostezos se presentan generalmente antes de que el conductor entre en somnolencia, mientras que los cabeceos normalmente ocurren cuando el conductor se duerme. Estos métodos no son capaces de detectar con exactitud cuando un conductor está empezando a entrar en un estado de somnolencia. Se debe tomar en cuenta las diferencias temporales entre los distintos signos visuales, por lo que realizar la combinación de varias de estas características aumentará la robustez final del sistema, logrando una mejor eficiencia \cite{Sisdesomnolencia}.
 \\
 
 Actualmente existen distintas opciones para la geolocalización de vehículos en tiempo real, pero con costos elevados, como lo es el rastreo satelital, el cual requiere un pago por servicio con una suscripción anual o mensual. Entonces, surge una oportunidad para desarrollar soluciones más asequibles \cite{GeolocalizacionVehiculos}.
@@ -125,13 +124,12 @@ Los problemas que resolverá el sistema se listan a continuación: \\
 \item Al mismo tiempo, el sistema realizará y almacenará un reporte de incidencia que contendrá datos como fecha, hora, ubicación geográfica y un pequeño videoclip que muestre el momento en que el conductor presentó signos de somnolencia.
 \item Posteriormente, el sistema hará uso de redes de telecomunicaciones móviles para enviar el reporte de incidencia previamente generado hacia una estación base que funcionará mediante una aplicación web, donde un administrador podrá verificar este reporte con el fin de confirmar que se trata de un caso de somnolencia y no un falso positivo.
 \item A su vez, el administrador podrá consultar la ubicación en tiempo real del conductor desde la misma estación base.
-\item En la Figura 1 se muestra la propuesta del diagrama general de diseño de la arquitectura del sistema.
+\item En la figura \ref{fig:Arquitecturapreliminar} se muestra la propuesta del diagrama general de diseño de la arquitectura del sistema.
 \end{itemize}
-
 
 \begin{center}
   \includegraphics[scale=0.9]{imagenes/diagramageneral2}
-\captionof{figure}{Diagrama general del diseño de la arquitectura del sistema.}
+\captionof{figure}{Arquitectura general del sistema.}
  \label{fig:Arquitecturapreliminar} 
 \end{center} 
 
@@ -243,7 +241,6 @@ En la segunda fase, se probará el sistema completo con el vehículo en movimiento
 \\
 Para el sistema de administración, se corroborará que, en los casos en que el sistema de somnolencia detecte una incidencia, esta será enviada correctamente y podrá ser visualizada desde el sistema de administración. A su vez, se constatará que la información de la ubicación geográfica del conductor de prueba esté disponible en tiempo real. 
 
-\clearpage 
 \section{Capítulo II: Marco de Referencia}
 
 \subsection{Marco Teórico}
@@ -273,11 +270,11 @@ Son diseñados bajo la premisa de cuantificar la somnolencia de manera objetiva.
 
 \subsubsection{Jetson Nano}
 
-Jetson Nano es una computadora compacta y potente diseñada para ejecutar simultáneamente varias redes neuronales. Esta versátil plataforma se utiliza en aplicaciones como la clasificación de imágenes, la detección de objetos, la segmentación y el procesamiento de voz. Destaca por ser fácil de usar y opera con una eficiencia energética de 5 vatios \cite{JetsonNano}.
+Jetson Nano es una computadora compacta y potente diseñada para ejecutar simultáneamente varias redes neuronales. Esta versátil plataforma se utiliza en aplicaciones como la clasificación de imágenes, la detección de objetos, la segmentación y el procesamiento de voz. Destaca por ser fácil de usar y opera con una eficiencia energética de 5 vatios \cite{JetsonN}.
 
 \begin{center}
   \includegraphics[scale=0.4]{imagenes/JetsonNano}
-\captionof{figure}{Kit para Desarrolladores Jetson Nano \cite{JetsonNano}. }
+\captionof{figure}{Kit para Desarrolladores Jetson Nano \cite{JetsonN}. }
  \label{fig:JetsonNano} 
 \end{center} 
 
@@ -287,12 +284,11 @@ Jetson Nano es una computadora compacta y potente diseñada para ejecutar simultá
 La visión artificial se encuentra dentro del ámbito de la inteligencia artificial y se dedica a entrenar sistemas computacionales para extraer información valiosa de imágenes digitales y videos, con el objetivo de tomar decisiones o hacer recomendaciones. La efectividad de la visión artificial depende en gran medida de la disponibilidad de datos abundantes. A través de análisis de datos iterativos, este campo realiza comparaciones repetidas hasta identificar discrepancias y, en última instancia, reconocer patrones visuales en las imágenes \cite{IBMvision}.
 
 La visión artificial se define como la capacidad de los sistemas computacionales para analizar e interpretar información relevante a partir de imágenes y videos. Utilizando técnicas de aprendizaje profundo, las computadoras pueden procesar las imágenes de manera similar a la capacidad humana. Este campo de estudio presenta diversas aplicaciones prácticas, entre las cuales se encuentran:
-
-Moderación de contenido: Automatización de la eliminación de material inseguro o inapropiado en archivos visuales, como imágenes y videos.
-
-Reconocimiento facial: Identificación de rostros y reconocimiento de características faciales como la apertura de los ojos, la presencia de gafas y la existencia de vello facial.
-
-Clasificación de imágenes: Identificación de elementos específicos en una imagen, como logotipos de marcas, prendas de vestir, equipo de seguridad y otros detalles visuales \cite{AP}.
+\begin{itemize}
+\item Moderación de contenido: Automatización de la eliminación de material inseguro o inapropiado en archivos visuales, como imágenes y videos.
+\item  Reconocimiento facial: Identificación de rostros y reconocimiento de características faciales como la apertura de los ojos, la presencia de gafas y la existencia de vello facial.
+\item Clasificación de imágenes: Identificación de elementos específicos en una imagen, como logotipos de marcas, prendas de vestir, equipo de seguridad y otros detalles visuales \cite{AP}.
+\end{itemize}
 
 
 %\subsubsection{Red Neuronal}
@@ -427,13 +423,7 @@ Un lenguaje de programación es una herramienta que permite desarrollar software 
 Las librerías de programación son recursos que facilitan el proceso de desarrollo de software al ofrecer bloques de código reutilizables. Estos fragmentos de código permiten a los desarrolladores escribir programas de manera más rápida y sencilla, evitando la necesidad de construir cada funcionalidad desde cero. Cada librería está diseñada para proporcionar una solución a una necesidad o un problema de desarrollo específico, barcando áreas como autenticación de usuario, conexión al servidor, interfaces de usuario, gestión de datos, algoritmos, animaciones, entre otros \cite{libreria}.
 \subsubsection{Aplicación web}
 
-Una aplicación web se define como un software que se ejecuta en un navegador web, permitiendo a las empresas llevar a cabo el intercambio de información y proporcionar servicios de manera remota. Dichas aplicaciones son empleadas por las organizaciones para establecer comunicación con sus clientes de manera segura y bajo demanda. Aspectos fundamentales de los sitios web, como carros de compra, funciones de búsqueda y filtrado de productos, mensajería instantánea y canales de noticias en redes sociales, comparten el mismo diseño que las aplicaciones web. Estas herramientas posibilitan el acceso a funciones complejas sin la necesidad de instalar o configurar un software adicional.
-
-Las aplicaciones web se estructuran en una arquitectura cliente-servidor, dividiendo su código en dos componentes principales: scripts del lado del cliente y scripts del lado del servidor.
-
-En la arquitectura del lado del cliente, el script se encarga de la interfaz de usuario, gestionando elementos visuales como botones y menús desplegables. Al acceder a la aplicación web, el navegador carga este script, permitiendo la visualización de elementos gráficos y texto para la interacción del usuario, como leer contenidos, ver videos o completar formularios. Las acciones del usuario generan solicitudes al servidor.
-
-En la arquitectura del lado del servidor, el script se encarga del procesamiento de datos. El servidor procesa las solicitudes del cliente y envía respuestas correspondientes, como obtener, editar o almacenar datos. Por ejemplo, al hacer clic en "Leer más", el servidor envía contenido adicional, mientras que al hacer clic en "Enviar", guarda los datos del usuario en la base de datos. En algunas instancias, el servidor completa la solicitud enviando la página HTML completa al cliente, un proceso conocido como renderizado del lado del servidor \cite{aplicacionWeb}.
+Una aplicación web se define como un software que se ejecuta en un navegador web, permitiendo a las empresas llevar a cabo el intercambio de información y proporcionar servicios de manera remota. Dichas aplicaciones son empleadas por las organizaciones para establecer comunicación con sus clientes de manera segura y bajo demanda. Aspectos fundamentales de los sitios web, como carros de compra, funciones de búsqueda y filtrado de productos, mensajería instantánea y canales de noticias en redes sociales, comparten el mismo diseño que las aplicaciones web. Estas herramientas posibilitan el acceso a funciones complejas sin la necesidad de instalar o configurar un software adicional. Las aplicaciones web se estructuran en una arquitectura cliente-servidor, dividiendo su código en dos componentes principales: scripts del lado del cliente y scripts del lado del servidor \cite{aplicacionWeb}.
 
 \subsubsection{\emph{Front end}}
 
@@ -521,13 +511,13 @@ LTE ofrece a los usuarios varias funciones, incluidas las siguientes:
 
 \begin{itemize}
 
-\item \textbf{Transmisión de audio y vídeo.} LTE tiene velocidades de descarga y carga más rápidas que 2G y 3G.
+\item Transmisión de audio y vídeo. LTE tiene velocidades de descarga y carga más rápidas que 2G y 3G.
 
-\item \textbf{Conexión a servicios en tiempo real.} Con voz sobre LTE, los usuarios pueden hablar con otras personas sin experimentar retrasos ni fluctuaciones.
+\item Conexión a servicios en tiempo real. Con voz sobre LTE, los usuarios pueden hablar con otras personas sin experimentar retrasos ni fluctuaciones.
 
-\item \textbf{Velocidades aún más rápidas con LTE-Advanced.} Las velocidades de descarga y carga con LTE-Advanced son dos o tres veces más rápidas que las de LTE estándar. Todos los dispositivos LTE Advanced son compatibles con versiones anteriores del estándar LTE.
+\item Velocidades aún más rápidas con LTE-Advanced. Las velocidades de descarga y carga con LTE-Advanced son dos o tres veces más rápidas que las de LTE estándar. Todos los dispositivos LTE Advanced son compatibles con versiones anteriores del estándar LTE.
 
-\item \textbf{Agregación de operadores.} Esta función LTE-Advanced mejoró la capacidad de la red, agregando ancho de banda de hasta 100 MHz en cinco operadores (bandas) componentes con un ancho de banda de 20 MHz cada uno. Los teléfonos LTE-A combinan frecuencias de múltiples operadores de componentes para mejorar la señal, la velocidad y la confiabilidad.
+\item Agregación de operadores. Esta función LTE-Advanced mejoró la capacidad de la red, agregando ancho de banda de hasta 100 MHz en cinco operadores (bandas) componentes con un ancho de banda de 20 MHz cada uno. Los teléfonos LTE-A combinan frecuencias de múltiples operadores de componentes para mejorar la señal, la velocidad y la confiabilidad.
 
 \end{itemize}
 
@@ -691,7 +681,7 @@ Tesis del año 2015 de la Universidad César Vallejo de Perú donde se investiga de
 \end{table}
        
 \begin{enumerate}
-\item Presente proyecto propuesto
+\item Proyecto propuesto
 \item Driver Drowsiness Detection Using Machine Learning with Visual Behaviour
 \item Detection Of Drowsiness And Distraction Of Drivers Using CNN 
 \item Driver Drowsiness Detection System Using Convolutional Neural Networks
@@ -717,7 +707,7 @@ Sistema de detección de somnolencia mediante inteligencia artificial en conducto
 \newpage
 \section{Capítulo III: Análisis}
 
-Partiendo de la propuesta de solución, se dividió el sistema en tres módulos principales: el Módulo de Comunicaciones, el Módulo Central de Procesamiento y el Módulo de la Estación Base, figura \ref{fig:modulos1}. 
+Partiendo de la propuesta de solución, se dividió el sistema en tres módulos principales: Módulo de Comunicaciones, Módulo Central de Procesamiento y Módulo de la Estación Base, figura \ref{fig:modulos1}. 
 
 \begin{center}
   \includegraphics[scale=0.55]{imagenes/topdowngeneral}
@@ -757,7 +747,7 @@ Este módulo estará compuesto por una aplicación web y una base de datos que se e
 El sistema está dirigido principalmente para empresas cuya actividad esté enfocada al transporte de material o personas dentro de la Ciudad de México. Debido a que una parte fundamental del proyecto es la portabilidad, el sistema requiere de un servicio de acceso al internet. Por tanto, se decidió utilizar redes móviles celulares para cumplir con dicho requerimiento.
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/MapaCoberturaMexico}
+  \includegraphics[scale=0.5]{imagenes/MapaCoberturaMexico.JPG}
 \captionof{figure}{Mapa de cobertura 3G/4G/5G en México.\cite{CoberturaNacional}}  
  \label{fig:mapacoberturaN}
 \end{center} 
@@ -765,7 +755,7 @@ El sistema está dirigido principalmente para empresas cuya actividad esté enfoca
 Tomando en cuenta la información del mapa de cobertura 3G/4G/5G, de redes móviles en México, mostrado en la figura \ref{fig:mapacoberturaN}, se observa que las zonas con mayor cobertura son principalmente las que cuentan con mayor densidad de población, por tanto, se plantea que su funcionamiento sea principalmente en la Ciudad de México, debido a que cuenta con mayor infraestructura en dichas redes.
 
 \begin{center}
-  \includegraphics[scale=0.7]{imagenes/CoberturaCDMX}
+  \includegraphics[scale=0.7]{imagenes/CoberturaCDMX.JPG}
 \captionof{figure}{Mapa de cobertura 3G/4G/5G en la Ciudad de México.\cite{CoberturaNacional}}
  \label{fig:mapacoberturaCDMX}
 \end{center}
@@ -882,25 +872,24 @@ El Reporte de Incidencia será almacenado en la Base de Datos.
 \end{table}
 
 \clearpage
+%\begin{table}[H]
+%\centering
+%\caption{RF06- Eliminar Video de Incidencia  }
+%\begin{tabular}{|ll|}
+%\hline
+%\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del %Requerimiento}                                             \\ \hline
+%\multicolumn{1}{|l|}{\emph{RF06}}                                              & \emph{Eliminar Video de Incidencia }                                                             \\ \hline
+%\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se eliminará el video de Incidencia del almacenamiento externo después de ser almacenado en la nube.   \\ \\ \textbf{Elementos:}
+%\\
+%\quad $\bullet$ Reporte de Incidencia  \\
+%\quad $\bullet$ URL del Video  \\
 
-\begin{table}[H]
-\centering
-\caption{RF06- Eliminar Video de Incidencia  }
-\begin{tabular}{|ll|}
-\hline
-\multicolumn{1}{|l|}{\textbf{ID}}                                                & \textbf{Nombre corto del Requerimiento}                                             \\ \hline
-\multicolumn{1}{|l|}{\emph{RF06}}                                              & \emph{Eliminar Video de Incidencia }                                                             \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Descripción:}Se eliminará el video de Incidencia del almacenamiento externo después de ser almacenado en la nube.   \\ \\ \textbf{Elementos:}
-\\
-\quad $\bullet$ Reporte de Incidencia  \\
-\quad $\bullet$ URL del Video  \\
-
-\end{tabular}} \\ \hline
-\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
-El video de la incidencia será eliminado.  
-\end{tabular}}                                                    \\ \hline
-\end{tabular}
-\end{table}
+%\end{tabular}} \\ \hline
+%\multicolumn{2}{|l|}{\begin{tabular}[c]{p{0.7\linewidth}@{}l@{}}\textbf{Solución del Requerimiento:}\\
+%El video de la incidencia será eliminado.  
+%\end{tabular}}                                                    \\ \hline
+%\end{tabular}
+%\end{table}
 
 
 \subsubsection{Análisis y Elección del microordenador}\label{sec:microordenador}
@@ -932,34 +921,33 @@ Los parámetros que se tomaron en cuenta para la elección de que microordenador u
 Si bien la Raspberry Pi es uno de los microordenadores con mayor aceptación por parte de la comunidad, esta no cuenta con una GPU, lo cual reduce significativamente su rendimiento en tareas relacionadas con IA que requieren mayor procesamiento. Por lo tanto, al buscar alternativas de microordenadores que cuenten con una GPU y basándose en el estudio \cite{EstadodelAarte8}, se concluyó que la Nvidia Jetson Nano ofrece una ventaja superior en comparación con la Raspberry Pi en cuanto a procesamiento y eficacia en tareas que involucran visión artificial. A pesar de que Asus y Google Coral Dev Board cuentan con una GPU, su potencia no supera a la ofrecida por Jetson Nano \cite{deepedgebench} y su precio es considerablemente mayor, como se puede apreciar en la tabla \ref{tab:microordenador}, por lo cual se descartaron como opciones.
 Debido a lo anterior, se concluyó que la Jetson Nano representa la mejor opción para el desarrollo del presente proyecto debido a su bajo costo, bajo consumo de energía y mejor rendimiento en comparación con sus alternativas.
 
-
+\clearpage
 \subsubsection{Análisis y Elección de la alarma }\label{sec:alarma}
 
 Dentro de la búsqueda de modelos de alarma se encontraron dos tipos de zumbadores, el zumbador activo y zumbador pasivo, donde el primero produce un tono audible fijo, al aplicar una tensión de corriente directa. Mientras que el segundo requiere de una señal oscilante, generalmente de tipo PWM, que indique la frecuencia y la duración de la señal.  \\
 
-Para la elección de la alarma se obtuvieron dos de los principales modelos comerciales de cada tipo de zumbador mencionado: 
-
-\textbf{Buzzer Pasivo KY-006}
+\textbf{Buzzer Pasivo}
 
 \begin{itemize}
-\item Voltaje: 1.5 V - 5 V 
-\item Rango de frecuencia: 1.5 Hz - 2.5kHz 
-\item Decibeles: 72 DB
-\item Precio: \$50 
+\item Funcionamiento: Requiere una señal de entrada (una corriente alterna) para producir sonido. No tiene un oscilador interno.
+\item Generación de sonido: Cuando se aplica una corriente eléctrica, el buzzer pasivo vibra mecánicamente para producir sonido.
+\item Control: Limitado control sobre la frecuencia y la duración del sonido. La frecuencia está determinada principalmente por la corriente de entrada.
+\item Niveles de Decibeles: Los buzzers pasivos tienden a tener niveles de decibeles más bajos en comparación con los activos.
 \end{itemize}
 
-\textbf{Buzzer Activo KY-012  }
+\textbf{Buzzer Activo}
 
 \begin{itemize}
-\item Voltaje: 3.5 V - 5.5 V 
-\item Rango de frecuencia: 300 Hz - 2.5kHz
-\item Decibeles: 85 DB
-\item Precio: \$71 
+\item Funcionamiento: Contiene un oscilador interno, por lo que no necesita una señal externa para generar sonido.
+\item Generación de sonido: Al recibir un voltaje, el buzzer activo genera su propia frecuencia de oscilación, produciendo el sonido de manera independiente.
+\item Control: Mayor control sobre la frecuencia y la duración del sonido, ya que se puede modular directamente mediante la entrada de voltaje.
+\item Niveles de Decibeles: Los buzzers activos generalmente pueden alcanzar niveles de decibeles más altos en comparación con los pasivos.
+
 \end{itemize}
 
-Debido a la posibilidad que ofrece el zumbador pasivo para controlar el tono y la duración del mismo, además de su bajo coste en comparación con el zumbador activo KY-012, se optó por el zumbador de tipo pasivo, específicamente el modelo KY-006, en cual se pueden configurar los tonos desde la Nvidia Jetson Nano por medio del lenguaje Python. 
+El Buzzer Activo produce niveles de decibeles significativamente mayores en comparación con el Buzzer Pasivo. Esta característica implica que el Buzzer Activo genera un sonido más fuerte que el Buzzer Pasivo. Esta cualidad podría hacer que el Buzzer Activo sea preferible en situaciones donde se necesita despertar a un conductor, ya que un sonido más alto resulta más efectivo para este propósito. Además, el Buzzer Activo no requiere una señal externa para generar sonido.
 
-\clearpage  
+
 \subsubsection{Análisis y Elección de la unidad de almacenamiento externa}\label{sec:almacenamientoexterno}
 
 Para utilizar una NVIDIA Jetson Nano, se requiere una tarjeta SD que contenga el sistema operativo y las aplicaciones. La tarjeta SD debe tener una capacidad de almacenamiento de al menos 8 GB. 
@@ -979,7 +967,7 @@ Kingston Canvas React Plus V90 Card  & 64-256 GB  & Clase 10/U3  & V90  & 90 MB/
   
 Tomando en cuenta la capacidad mínima de almacenamiento y el costo de la misma, se decidió usar una unidad de almacenamiento Samsung Evo Plus de 256 GB para la instalación del sistema operativo en la Jetson Nano. Esta elección se fundamenta en las destacadas características de la tarjeta, como su excelente velocidad de escritura, competitiva velocidad de lectura, clasificación de velocidad adecuada y una buena relación entre capacidad y precio.
 
-\clearpage
+
 \subsubsection{Análisis y elección de lenguajes de programación para el microordenador}
 
 Lo que se debe de considerar para la elección de un lenguaje de programación, es que la programación orientada a la inteligencia artificial es diferente al paradigma de la programación convencional. En esta última, el usuario le indica a la máquina exactamente lo que tiene que hacer, mientras que en Machine learning, se le enseña a programarse sola. Lo cúal se ejemplifica en el siguiente gráfico:
@@ -1390,7 +1378,6 @@ Se optó por utilizar la cámara IMX219-160, ya que cuenta con hasta 8 Megapixeles
 \end{center}
 
 
-\clearpage 
 \subsubsection{Análisis y Elección de algoritmos de visión artificial}
 
 Existen varios métodos y blibliotecas utilizadas para detectar rostros en imágenes y videos en tiempo real, algunos de los más comunes son:
@@ -1530,7 +1517,6 @@ Debido a los requerimientos el sistema, Face Recognition Library, utiliza el det
 
 %\end{itemize}
 
-\clearpage
 
 \subsection{Análisis del Módulo de Comunicaciones}
 Los sistemas automatizados de comunicación, mayormente inalámbricos, se encargan de recopilar datos remotos y transmitir la información.
@@ -1602,7 +1588,7 @@ Cumpliéndose la relación establecida de $R<C$.
 
 El objetivo que tiene el análisis de los datos es enviar fotogramas a la estación base para su futura gestión y validación, así como el almacenamiento de estos; de igual manera, se pretende el envío de mensajes informativos a la estación base.
 \\
-Para la transmisión del material multimedia a utilizar, se propone que el clip grabado tenga una profundidad de bits de mínimo 8 y una resolución de mínimo 960 x 540 píxeles, comúnmente conocido como QHD o "Quarter of High Definition" por sus siglas en inglés, todo esto en una secuencia de 30 fps.
+Para la transmisión del material multimedia a utilizar, se propone que el clip grabado tenga una profundidad de bits de mínimo 8 y una resolución de mínimo 960 x 540 píxeles, comúnmente conocido como QHD o "Quarter of High Definition" por sus siglas en inglés, todo esto en una secuencia propuesta de 30 fps.
 \\
 Tenemos que:
 
@@ -2147,12 +2133,12 @@ Estabilidad                         & \begin{tabular}[c]{@{}l@{}}La aplicación d
 \end{tabular}
 
 \end{table}
-cupera
+
 \clearpage
 \item \textbf{Análsis de Casos de Uso}
 
 \begin{center}
-  \includegraphics[scale=.5]{imagenes/casosdeusoweb}
+  \includegraphics[scale=.6]{imagenes/casosdeusoweb}
 \captionof{figure}{Diagrama de Casos de Uso - Aplicación Web }
  \label{fig:scaraindust}
 \end{center}
@@ -2299,11 +2285,11 @@ cupera
 
 \end{tabular}}                                                    \\ \hline
 \end{tabular}
-
 \end{table}
-\clearpage
 
+\clearpage
 \begin{table}[h]
+
 \centering
 \caption{Caso de Uso 08 - Visualizar Ubicación en Tiempo Real }
 \begin{tabular}{|ll|}
@@ -2323,8 +2309,8 @@ cupera
 \end{table}
 \end{itemize}
 
-\clearpage
-\subsubsection{Análisis y Elección del manejador de bases de datos  }
+\subsubsection{Análisis y Elección del manejador de bases de datos}
+
 Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y flexibilidad que ofrecen los gestores de bases de datos NoSQL para adaptarse a las necesidades del proyecto, se optó por la elección de un gestor de este tipo. Además, se contemplaron las posibles modificaciones dentro del modelado de la base de datos, las cuales tendrán como motivo cumplir los requisitos del sistema y presentar la información necesaria en la aplicación web. Las modificaciones necesarias podrán ser fácilmente aplicadas usando un SGBD NoSQL, ya que ofrecen una mayor facilidad de realizar cambios dentro del esquema, a diferencia de un SGBD SQL.
 
 \begin{table}[h]
@@ -2336,8 +2322,7 @@ Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y 
  \textbf{Licencia }& Codigo abierto  & Codigo abierto SSPL & Codigo abierto BSD 3-clause  & Vendor \\ \hline
  \textbf{Cumplimiento ACID }& No & Si  &  Si &  Si \\ \hline
  \textbf{Lenguaje de consulta principal }& CQL  & JavaScript  & Permite el uso de varios lenguajes  & DQL  \\ \hline
- \textbf{Principales casos de uso }& Análisis social, análisis en tiempo real, venta al por menor y mensajería & Gestión de IOT, análisis en tiempo real, desarrollo de aplicaciones, inventario y personalización & Almacenamiento en caché, colas, filtrado y estadísticas  & Juegos, comercio minorista, servicios financieros, publicidad y transmisión de medios  \\ \hline
- \textbf{Seguridad  }& Seguridad integrada para la autorización, cifrado y autenticación, la seguridad está desactivada de forma predeterminada para facilitar su uso dentro de los clústeres  & Seguridad incorporada para autorización, autenticación y encriptación  & Se inicia automáticamente en modo de protección y ofrece sugerencias de seguridad  & Seguridad integrada para datos y aplicaciones; software, hardware, instalaciones y red seguros del proveedor  \\ \hline
+ \textbf{Seguridad  }& Seguridad integrada para la autorización, cifrado y autenticación, la seguridad está desactivada de forma predeterminada  & Seguridad incorporada para autorización, autenticación y encriptación  & Se inicia automáticamente en modo de protección y ofrece sugerencias de seguridad  & Seguridad integrada para datos y aplicaciones; software, hardware, instalaciones y red seguros del proveedor  \\ \hline
  \textbf{Escalabilidad }& Horizontal  & Horizontal  & Horizontal  & Horizontal  \\ \hline
 
 \end{tabular}
@@ -2345,7 +2330,6 @@ Debido a la escalabilidad horizontal, facilidad de implementación, bajo coste y 
 
 Se eligió DynamoDB como SGBD NoSQL debido a su facilidad de integración con los servicios de autenticación y despliegue de AWS Amplify que se usarán para el alojamiento de la aplicación \ref{server}. DynamoDB ofrece una solución escalable y totalmente administrada, lo que complementa eficientemente la arquitectura de la aplicación, permitiendo una gestión sencilla y eficaz de los datos junto con características clave de autenticación y despliegue proporcionadas por AWS Amplify.
 
-\clearpage
 \subsubsection{Análisis y Elección de lenguajes de programación web}
 
 Al igual que en el desarrollo del \emph{backend}, existen diversas opciones para el desarrollo del frontend, e incluso en mayor medida. En este caso, los elementos fundamentales para el desarrollo del frontend de una aplicación son HTML, JavaScript y CSS. 
@@ -2456,7 +2440,7 @@ A2 Hosting no ofrece servicio de CDN, sin embargo, cualquiera de sus planes ofre
 
 \end{itemize}
 
-
+\clearpage
 \item \textbf{HosGator}
 \begin{itemize}
 
@@ -2466,7 +2450,7 @@ De acuerdo con el sitio Bitcatcha, que se dedica a evaluar los tiempos de respue
 
 
 \begin{center}
-  \includegraphics[scale=.5]{imagenes/respuesta}
+  \includegraphics[scale=.8]{imagenes/respuesta}
 \captionof{figure}{Tiempos de Respuesta de servidores de HostGator}
  \label{fig:DiagramadeactividadMEB}
 \end{center}
@@ -2479,23 +2463,17 @@ HosGator ofrece una disponibilidad del 99.9\%, esto quiere decir que los sitios 
 
 
 \end{itemize}
-
-
 \end{itemize}
-
-
-
 \end{itemize}
-
 
 Después de haber analizado los distintos proveedores de alojamiento así como sus características, se llegó a la conclusión de utilizar AWS Amplify. Ya que este contiene una suite de herramientas que facilitan la implementación de una aplicación web, como por ejemplo S3, que es un servicio de alojamiento en la nube utilizado para archivos multimedia de gran tamaño, además de contar con su propia CDN que facilitará el acceso a los datos almacenados.
 
-\clearpage
+
 \section{Capítulo IV: Diseño}
 
 \subsection{Diseño del Módulo Central de Procesamiento}
 
-El Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Visión Artificial. En caso de que este último envíe una señal de alerta de somnolencia, el Módulo Central activará la alarma por medio de un buzzer.
+El Módulo de Procesamiento Central entrará en modo de espera por los datos proporcionados por el Submódulo de Visión Artificial. En caso de que este último envíe una señal de alerta de somnolencia, el Módulo Central activará la alarma por medio de un buzzer.\\
 
 Posteriormente, se obtendrá la ubicación geográfica con la ayuda del Módulo de Comunicaciones. Se realizará un reporte de incidencia que contendrá la fecha, hora, ubicación y un pequeño videoclip del momento en que se detectó la somnolencia. Este será enviado a la Estación Base, que se encargará de almacenarlo en su respectiva base de datos. Como se indicó inicialmente, el sistema estará disponible mientras se encuentre conectado a una fuente de alimentación; esto significa que el estado del sistema se encuentra conectado.\\
 
@@ -2518,10 +2496,8 @@ Elementos físicos que contendrá la unidad:
 \item \textbf{Nvidia Jetson Nano}\\
 De acuerdo con las especificaciones físicas de la Jetson Nano se tiene las siguientes medidas en milímetros:\\
 
-
-
 \begin{center}
-  \includegraphics[scale=.6]{imagenes/nanodim}
+  \includegraphics[scale=.5]{imagenes/nanodim}
 \captionof{figure}{Dimensiones Nvidia Jetson Nano}
  \label{fig:scaraindust}
 \end{center}
@@ -2551,24 +2527,12 @@ Dimensiones de la placa: 11 x 5.11 x 2.39 cm.
 \captionof{figure}{Modulo de Cámara IMX219-160}
  \label{fig:scaraindust}
 \end{center}
- 
-
-\item Cable macho-hembra\\
-
-\begin{center}
-  \includegraphics[scale=.2]{imagenes/Jumpers}
-\captionof{figure}{Jumpers}
- \label{fig:scaraindust}
-\end{center}
-
-Se utilizarán 2 cables macho-hembra para la conexión del zumbador pasivo hacia los pines GND y Vcc de la Jetson Nano. 
-Largo 10 cm. 
 
 \item Micro SD\\  
 Dimensiones: 15 x 11 x 1 mm. 
 
 \begin{center}
-  \includegraphics[scale=.4]{imagenes/MicroSD}
+  \includegraphics[scale=.5]{imagenes/MicroSD}
 \captionof{figure}{Micro SD}
  \label{fig:scaraindust}
 \end{center}
@@ -2576,12 +2540,10 @@ Dimensiones: 15 x 11 x 1 mm.
 
 \end{itemize}
 
-\clearpage
-
 En un principio se tenía propuesto diseñar la unidad contenedora de procesamiento. Sin embargo, al buscar alternativas, se encontró una carcase especificamente diseñada para la Nvidia Jetson Nano, que cuenta con una plataforma para colocar una cámara digital además de orificios para antenas 4G, por lo que se decidió a utilizar esta carcasa para proteger los componentes.
 
 \begin{center}
-  \includegraphics[scale=.6]{imagenes/waveshare}
+  \includegraphics[scale=.45]{imagenes/waveshare}
 \captionof{figure}{Carcasa Waveshare}
  \label{fig:scaraindust}
 \end{center}
@@ -2595,8 +2557,6 @@ Esta carcasa está hecha de metal y además incluye un ventilador para disipar el 
 \end{center}
  
 
-
-\newpage
 \subsubsection{Diseño del Submódulo de Visión Artificial}
 Con base a los requerimientos definidos en la sección de Análsis, se procedió a realizar distintos diagramas que muestren las interacciónes y el funcionamiento de los distintos módulos.
 
@@ -2613,7 +2573,7 @@ En el siguiente Diagrama de Actividades se describen las actividades y sus inter
 \end{center}
 
 \begin{center}
-  \includegraphics[scale=.5]{imagenes/DiagramaFlujo_Vision.png}
+  \includegraphics[scale=.7]{imagenes/DiagramaFlujo_Vision.png}
 \captionof{figure}{Diagrama de Flujo - Submódulo de Visión Artificial}
  \label{fig:landmark}
 \end{center}
@@ -2676,10 +2636,9 @@ Utilizando nuestros puntos de referencia, se podrá calcular el MOR de la siguien
 MOR = \frac{\left \|P49-P59  \right \| +\left \|P51-P57  \right \|+\left \| P53-P55 \right \|}{2\left \| P48-P54\right \|}
 \end{equation}
 
-De tal manera, cuanto mayor sea el valor del \emph{MOR}, mayor será la apertura de la boca. Por lo cuál, se tomará un valor de 0.60, que es un estándar establecido para el valor de un bostezo.\cite{mor}
+De tal manera, cuanto mayor sea el valor del \emph{MOR}, mayor será la apertura de la boca.
 \end{itemize}
 
-\clearpage
 
 \subsection{Diseño del Módulo de Comunicaciones}
 Para el diseño de este módulo se tiene contemplado ejecutar dos procesos asíncronos, es decir, que se ejecutan al mismo tiempo o de manera paralela.
@@ -2726,7 +2685,7 @@ El diagrama de comunicación muestra las interacciones entre elementos que se inv
 \label{fig:DisenoMEB2} 
 \end{center} 
 
-\clearpage
+
 \subsubsection{Diseño de la Aplicación Web}
 
 Para el diseño y desarrollo de la Aplicación web, se  decidió utilizar el lenguaje Javascript, ya que este cuenta con las herramientas y/o frameworks que mejor se adaptan a los requisitos previamente definidos.
@@ -2782,7 +2741,7 @@ También podrá recuperar su contraseña en caso de que esta sea olvidada.
 Para evitar falsos positivos, el Administrador podrá confirmar una incidencia una vez mirando el videoclip del incidente.
 
 \begin{center}
-  \includegraphics[scale=.6]{imagenes/sec_perfil}
+  \includegraphics[scale=.5]{imagenes/sec_perfil}
 \captionof{figure}{Diagrama de Secuencia Consultar Perfil}
  \label{fig:scaraindust}
 \end{center}
@@ -2836,7 +2795,7 @@ En la Figura \ref{fig:login} se observa la página dónde el Administrador podrá i
 En la Figura \ref{fig:homescreen} se muestra la página principal, dónde se muestran la lista de las incidencias, dónde cada una tendrá un estado de confirmada, rechazada, o pendiente de revisión. También se mostrarán una lista de todos los conductores para poder acceder al perfil de cada uno.
 
 \begin{center}
-  \includegraphics[scale=.3]{imagenes/profile}
+  \includegraphics[scale=.28]{imagenes/profile}
 \captionof{figure}{Página Perfil del Conductor }
  \label{fig:profile}
 \end{center}
@@ -3551,7 +3510,7 @@ Para crear una conexión a AWS Amplify utilizando Boto3, se siguieron los siguien
 En primer lugar, se instalá Boto3 utilizando el comando: \emph{pip install boto3}. A continuación, se configuraron las credenciales de AWS, proporcionando las claves de acceso de IAM que otorgan acceso a los servicios de AWS. Estas credenciales se configuraron manualmente en el archivo de configuración. Luego, se importa el módulo Boto3 en el script de Python y se crea una conexión al servicio de AWS Amplify utilizando las credenciales configuradas anteriormente. A partir de la conexión establecida, se pudieron utilizar los métodos proporcionados por el cliente de Boto3 para interactuar con AWS Amplify.
 
 Conexión a AWS Amplify utilizando Boto3
-
+\clearpage
 \begin{center}
   \includegraphics[scale=0.87]{imagenes/ConexionPw.JPG}
 \captionof{figure}{Conexión con boto3 hacía AWS}
@@ -3559,7 +3518,6 @@ Conexión a AWS Amplify utilizando Boto3
 \end{center} 
 
 
-\clearpage
 \subsection{Módulo de Estación Base}
 
 \subsubsection{Definición de rutas del frontend}
@@ -3623,7 +3581,7 @@ Finalmente, dentro de nuestro componente \textbf{App.js}, se creó una función qu
  \label{fig:routesjs} 
 \end{center} 
 
-Las rutas protedigas, están dentro de las etiquetas \textbf{<RequireAuth></RequireAuth>}, mientras que las públicas, se encuentran dentro de las etiquetas \textbf{<Route></Route>}.
+Las rutas protedigas, están dentro de las etiquetas RequireAuth, mientras que las públicas, se encuentran dentro de las etiquetas Route.
 
 
 Como resultado de todo lo anterior, se obtuvo una página de Login que utilizando los servicios de AWS Amplify y Cognito, permitirá iniciar sesión así como registrar a nuevos usuarios.
@@ -3633,6 +3591,8 @@ Como resultado de todo lo anterior, se obtuvo una página de Login que utilizando
 \captionof{figure}{Página de Login}
  \label{fig:loginpage} 
 \end{center} 
+
+\clearpage
 
 Si intentamos ingresar a las paginas de Conductores, Incidencias o Ubicacion, nos redigirá a la página de Login, debido a que estas páginas fueron definidas como rutas protegidas. Por lo tanto el usuario debe haber inciado sesión para poder acceder a las mismas.
 
@@ -3654,7 +3614,6 @@ Si intentamos ingresar a las paginas de Conductores, Incidencias o Ubicacion, no
 \end{itemize}
 
 
-\newpage
 
 \subsubsection{Definición de rutas del backend}
 
@@ -4037,7 +3996,7 @@ De acuerdo con los componentes explicados anteriormente, las vistas que contendr
 \end{center} 
 
 \item Conductores
-
+\clearpage
 \begin{center}
   \includegraphics[scale=0.3]{imagenes/conductores}
 \captionof{figure}{Vista Conductores - Conductores.jsx}
@@ -4047,7 +4006,7 @@ De acuerdo con los componentes explicados anteriormente, las vistas que contendr
 
 
 \end{itemize}
-\clearpage
+
 \subsubsection{Enlace de Amazon S3 con el sistema backend}
 
 Utilizando un editor de código, y desde el directorio raíz de la aplicación, se deberá introducir el siguiente comando:
@@ -4136,7 +4095,7 @@ Posteriormente, se requiere seleccionar el repositorio el cual será alojado, en 
 \end{center} 
 
 
-\clearpage
+
 
 \section{Pruebas}
 
@@ -4145,7 +4104,7 @@ Posteriormente, se requiere seleccionar el repositorio el cual será alojado, en 
 \subsubsection{Prueba de Detección de Somnolencia}
 
 Se llevaron a cabo pruebas para la detección de somnolencia en distintos rostros, en algunos casos utilizando anteojos y prescindiendo de ellos, con el objetivo de observar la respuesta en un primer escenario. En este, se solicitó a los participantes que mantuvieran los ojos abiertos frente a la cámara, ubicados en una habitación con iluminación media, con la finalidad de confirmar que el sistema pudiera identificar el estado activo. 
-
+\clearpage
 \begin{itemize} 
  \item Prueba de detección del estado activo 1.
 
@@ -4256,7 +4215,7 @@ Se llevaron a cabo pruebas dentro de un vehículo, considerando el uso de lentes,
 La figura \ref{fig:AlarmaCMD} presenta una impresión de la consola que emite un mensaje de alerta al detectar somnolencia. Este mensaje activa el buzzer durante un intervalo definido de 2 segundos y posteriormente lo desactiva.
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/Prueba-AlarmaConsola.jpeg}
+  \includegraphics[scale=0.45]{imagenes/Prueba-AlarmaConsola.jpeg}
 \captionof{figure}{Activación y desactivación del buzzer.}
  \label{fig:AlarmaCMD} 
 \end{center}
@@ -4264,7 +4223,7 @@ La figura \ref{fig:AlarmaCMD} presenta una impresión de la consola que emite un 
 La figura \ref{fig:AlarmaJetson} muestra el buzzer sobre la carcasa conectado al sistema.
 
 \begin{center}
-  \includegraphics[scale=0.5]{imagenes/Prueba-AlarmaEnJN.jpeg}
+  \includegraphics[scale=0.2]{imagenes/Prueba-AlarmaEnJN.jpeg}
 \captionof{figure}{Buzzer del sistema.}
  \label{fig:AlarmaJetson} 
 \end{center}
@@ -4287,7 +4246,7 @@ La figura \ref{fig:AlarmaJetson} muestra el buzzer sobre la carcasa conectado al
     \item Ingresa credenciales válidas y asegúrate de que se permita el acceso.
     
        \begin{center}
-        \includegraphics[scale=.3]{imagenes/Prueba-login.jpeg} 
+        \includegraphics[scale=.4]{imagenes/Prueba-login.jpeg} 
         \captionof{figure}{Acceso valido}
         \label{fig:libraries} 
        \end{center} 
@@ -4307,7 +4266,7 @@ La figura \ref{fig:AlarmaJetson} muestra el buzzer sobre la carcasa conectado al
     \item Confirmar que el formulario de registro es accesible.
     
       \begin{center}
-       \includegraphics[scale=.3]{imagenes/Prueba-formulario0.JPG}
+       \includegraphics[scale=.6]{imagenes/Prueba-formulario0.JPG}
        \captionof{figure}{Acceso al formulario de registro de usuario.}
        \label{fig:libraries} 
       \end{center}
@@ -4315,7 +4274,7 @@ La figura \ref{fig:AlarmaJetson} muestra el buzzer sobre la carcasa conectado al
     \item Completar el formulario con datos válidos.
     
     \begin{center}
-       \includegraphics[scale=.3]{imagenes/Prueba-formulario1.jpeg}
+       \includegraphics[scale=.4]{imagenes/Prueba-formulario1.jpeg}
        \captionof{figure}{Formulario con datos validos.}
        \label{fig:libraries} 
       \end{center}
@@ -4323,7 +4282,7 @@ La figura \ref{fig:AlarmaJetson} muestra el buzzer sobre la carcasa conectado al
     \item Enviar el codigo de registro al correo proporcionado.
       
       \begin{center}
-       \includegraphics[scale=.3]{imagenes/Prueba-formulario2.jpeg}
+       \includegraphics[scale=.4]{imagenes/Prueba-formulario2.jpeg}
        \captionof{figure}{Código enviado al correo registrado.}
        \label{fig:libraries} 
       \end{center}
@@ -4367,7 +4326,7 @@ La figura \ref{fig:AlarmaJetson} muestra el buzzer sobre la carcasa conectado al
     \item Verifica que la opción de recuperación de contraseña esté disponible.
     
     \begin{center}
-       \includegraphics[scale=.3]{imagenes/Prueba-RecuperarContrasena.jpeg}
+       \includegraphics[scale=.4]{imagenes/Prueba-RecuperarContrasena.jpeg}
        \captionof{figure}{Enlace para recuperar contraseña.}
        \label{fig:libraries} 
       \end{center}
@@ -4375,7 +4334,7 @@ La figura \ref{fig:AlarmaJetson} muestra el buzzer sobre la carcasa conectado al
     \item Ingresar correo registrado.
     
     \begin{center}
-       \includegraphics[scale=.3]{imagenes/Prueba-RecuperarContrasenaFormulario.jpeg}
+       \includegraphics[scale=.4]{imagenes/Prueba-RecuperarContrasenaFormulario.jpeg}
        \captionof{figure}{Recuperación de contraseña por correo.}
        \label{fig:libraries} 
       \end{center}
@@ -4383,7 +4342,7 @@ La figura \ref{fig:AlarmaJetson} muestra el buzzer sobre la carcasa conectado al
     \item Verificar código recibido.
     
     \begin{center}
-       \includegraphics[scale=.3]{imagenes/Prueba-verificarCodigo.jpeg}
+       \includegraphics[scale=.4]{imagenes/Prueba-verificarCodigo.jpeg}
        \captionof{figure}{Código recibido para recuperar contraseña.}
        \label{fig:libraries} 
       \end{center}
@@ -4618,7 +4577,7 @@ Google Lighthouse es una herramienta de código abierto para mejorar la calidad d
 \end{itemize}
 
 
-\newpage
+\clearpage
 \section{Validación}
 
 \subsection{Prueba de Funcionalidad Integral:}
@@ -4633,13 +4592,13 @@ Para validar el funcionamiento del sistema de detección de somnolencia y asegura
  \item Sistema de detección de somnolencia instalado y conectado dentro del vehículo.
  
  \begin{center}
-  \includegraphics[scale=0.9]{imagenes/Validacion-SistemaVistaFrontal.jpeg}
+  \includegraphics[scale=0.25]{imagenes/Validacion-SistemaVistaFrontal.jpeg}
 	\captionof{figure}{Vista lateral del sistema.}
   \label{fig:addstorage} 
   \end{center}   
   
   \begin{center}
-  \includegraphics[scale=0.9]{imagenes/Validacion-SistemaVistaLateral.jpeg}
+  \includegraphics[scale=0.3]{imagenes/Validacion-SistemaVistaLateral.jpeg}
 	\captionof{figure}{Vista frontal del sistema.}
   \label{fig:addstorage} 
   \end{center}   
@@ -4652,7 +4611,7 @@ Se encendio el sistema y ejecutamos el archivo diseñado para la detección de som
  \item Estado activo donde el conductor se encuentra despierto.
  
  \begin{center}
-  \includegraphics[scale=0.9]{imagenes/Validacion-EstadoActivo.png}
+  \includegraphics[scale=0.5]{imagenes/Validacion-EstadoActivo.png}
 	\captionof{figure}{Estado activo del conductor.}
   \label{fig:addstorage} 
   \end{center}   
@@ -4698,11 +4657,11 @@ Se encendio el sistema y ejecutamos el archivo diseñado para la detección de som
 Se ingreso a la aplicación correctamente y se ccedio a las incidencias registradas dado el ID del conductor.
 
 \begin{center}
-  \includegraphics[scale=0.9]{imagenes/Validacion-AccesoSistema.JPG}
+  \includegraphics[scale=0.5]{imagenes/Validacion-AccesoSistema.JPG}
 	\captionof{figure}{Perfil del conductor.}
   \label{fig:addstorage} 
   \end{center}
-
+\clearpage
 Se verificó que las incidencias generadas por el estado de somnolencia y el estado dormido se recibieran correctamente en la aplicación web, con la información recopilada desde el sistema de detección de somnolencia. 
 
 \begin{itemize}
@@ -4710,7 +4669,7 @@ Se verificó que las incidencias generadas por el estado de somnolencia y el esta
 \item Incidencia recibida y accedida desde la aplicación.
 
   \begin{center}
-  \includegraphics[scale=0.9]{imagenes/Validacion-IncidenciaVistaApp1.JPG}
+  \includegraphics[scale=0.5]{imagenes/Validacion-IncidenciaVistaApp1.JPG}
 	\captionof{figure}{Vista de incidencia desde la aplicación web.}
   \label{fig:addstorage} 
   \end{center}
@@ -4718,7 +4677,7 @@ Se verificó que las incidencias generadas por el estado de somnolencia y el esta
 \item Incidencia recibida y accedida desde la aplicación.
   
   \begin{center}
-  \includegraphics[scale=0.9]{imagenes/Validacion-IncidenciaVistaApp2.JPG}
+  \includegraphics[scale=0.5]{imagenes/Validacion-IncidenciaVistaApp2.JPG}
 	\captionof{figure}{Vista de incidencia desde la aplicación web.}
   \label{fig:addstorage} 
   \end{center}
@@ -4733,13 +4692,13 @@ Se verificó que las incidencias generadas por el estado de somnolencia y el esta
 Desde la aplicación, se visualizó el mapa con un marcador de posicionamiento GPS en tiempo real. Se probó con un vehículo en movimiento en la Avenida Villa Panamericana, donde se puede observar su desplazamiento en las siguientes figuras:
 
   \begin{center}
-  \includegraphics[scale=0.6]{imagenes/posicion1.png}
+  \includegraphics[scale=0.4]{imagenes/posicion1.png}
 	\captionof{figure}{Mapa y marcador de posicionamiento GPS en tiempo real 1.}
   \label{fig:addstorage} 
   \end{center} 
 
   \begin{center}
-  \includegraphics[scale=0.6]{imagenes/posicion2.png}
+  \includegraphics[scale=0.55]{imagenes/posicion2.png}
 	\captionof{figure}{Mapa y marcador de posicionamiento GPS en tiempo real 2.}
   \label{fig:addstorage} 
   \end{center}   
@@ -4758,16 +4717,17 @@ Desde la aplicación, se visualizó el mapa con un marcador de posicionamiento GPS
 
 \section{Resultados}
 
-Se logró desarrollar un sistema portátil mediante el uso de una Jetson Nano que posibilitó la detección del rostro, los ojos y la boca, seguida de la clasificación de la somnolencia. En este proceso, se consideraron la apertura de los ojos y la boca, así como la duración de estos estados. La implementación para el reconocimiento de signos de somnolencia se vio favorecida por la utilización de dlib para la detección facial y la evaluación de la relación entre el Movimiento de Apertura de Ojos (MOR) y el Estiramiento de Apertura de Boca (EOR) a través de puntos de referencia faciales.\\
+Se obtuvó un sistema portátil mediante el uso de una Jetson Nano que posibilitó la detección del rostro, los ojos y la boca, seguida de la clasificación de la somnolencia. En este proceso, se consideraron la apertura de los ojos y la boca, así como la duración de estos estados. La implementación para el reconocimiento de signos de somnolencia se vio favorecida por la utilización de dlib para la detección facial y la evaluación de la relación entre el Movimiento de Apertura de Ojos (MOR) y el Estiramiento de Apertura de Boca (EOR) a través de puntos de referencia faciales.
+\\
 
-En el ámbito de la comunicación y transferencia de archivos, se incorporó el módulo SIM7600G a la Jetson Nano, el cual integra GNSS para el posicionamiento GPS. Esta acción culminó en la conexión entre la Jetson Nano y la página web para la transmisión de información a través de la red celular. Además, se logró obtener el posicionamiento GPS en tiempo real de la Jetson Nano, hecho que se reflejó en la aplicación web en la sección destinada a dar seguimiento al conductor.\\
+En el ámbito de la comunicación y transferencia de archivos, se incorporó el módulo SIM7600G a la Jetson Nano, el cual integra GNSS para el posicionamiento GPS. Esta acción culminó en la conexión entre la Jetson Nano y la página web para la transmisión de información a través de la red celular. Además, se logró obtener el posicionamiento GPS en tiempo real de la Jetson Nano, hecho que se reflejó en la aplicación web en la sección destinada a dar seguimiento al conductor.
+\\
 
 Durante el proceso de desarrollo de la Estación Base, se integraron las herramientas suministradas por Amazon Amplify. La decisión se basó en la eficacia y versatilidad proporcionadas por Amplify Hosting, permitiendo simultáneamente una integración fluida con GitHub. Esto posibilitó que los cambios efectuados en el repositorio se reflejaran de manera automática en la aplicación web, agilizando el ciclo de desarrollo y asegurando una sincronización eficiente entre el código fuente.\\
 
 El sistema finalizó permitiendo la detección de síntomas de somnolencia y la emisión de alertas al conductor. Además, proporcionó la ubicación del conductor en tiempo real, posibilitando el monitoreo desde la aplicación web asociada. Esta aplicación jugó un papel integral al gestionar la información de los conductores y supervisar los reportes de incidencias enviados desde el módulo central de procesamiento. La interacción entre la infraestructura de AWS contribuyó significativamente a la implementación y resiliencia del sistema en conjunto.
 
 
-\clearpage
 \section{Conclusión y Aportaciones}
 
 El proyecto se enfocó en el desarrollo de un sistema integral centrado en la detección de síntomas de somnolencia y el registro de incidencias para fines de retroalimentación de los conductores. Este enfoque implicó la implementación de tecnologías avanzadas, como la Jetson Nano para la detección facial y el módulo SIM7600G para la comunicación y posicionamiento GPS.
@@ -4799,24 +4759,17 @@ Se plantea la incorporación de la capacidad para que los usuarios definan zonas 
 
 Se sugiere la inclusión de módulos de capacitación en seguridad vial directamente a través de la aplicación web. Estos módulos podrían ofrecer consejos prácticos sobre cómo combatir la fatiga, la importancia de los descansos y las mejores prácticas para mantenerse alerta al conducir, fortaleciendo así la conciencia y educación en seguridad vial.
 
-\item Optimización Continua de Algoritmos de Redes Neuronales:
-
-Se plantea la implementación y el entrenamiento de algoritmos de redes neuronales para la detección de somnolencia. La incorporación de conjuntos de datos más extensos y diversos tiene el potencial de elevar la precisión del modelo, fortaleciendo así la eficacia del sistema.
-
 \item Gestión de Flotas en Tiempo Real:
 
 se propone la integración de una función de gestión de flotas en tiempo real. Esta característica permitiría a los supervisores monitorear múltiples conductores simultáneamente, facilitando la toma de decisiones coordinadas y mejorando la gestión general.
 
 \end{itemize} 
 
-\clearpage
-
 
 \bibliographystyle{ieeetran}
 
 \bibliography{Referencias}
 
-\section{Anexos}
 
 \end{document}
 
