@@ -1,47 +1,99 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TT2.aux
-I found no \bibdata command---while reading file TT2.aux
-I found no \bibstyle command---while reading file TT2.aux
-You've used 58 entries,
-            0 wiz_defined-function locations,
-            190 strings with 1680 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: ieeetran.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: Referencias.bib
+Warning--entry type for "GeolocalizacionVehiculos" isn't style-file defined
+--line 45 of file Referencias.bib
+Warning--entry type for "shannon" isn't style-file defined
+--line 215 of file Referencias.bib
+I was expecting a `,' or a `}'---line 380 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 388 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 396 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 404 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 412 of file Referencias.bib
+ :   note={accedido el 22 de diciembre de 2022}
+ :                                             .
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Tensorflow"
+Warning--I didn't find a database entry for "dom"
+Warning--I didn't find a database entry for "dynamo"
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Too many commas in name 1 of "Roehrs T, Carskadon MA, Dement WC, Roth" for entry Intensidad
+while executing---line 2403 of file ieeetran.bst
+Warning--empty journal in IBMCC
+Name 1 in "Eugenio, B. L. H., Alejandra, G. P. K., and Pichardo Iniesta José Alejandro" has a comma at the end for entry EstadodelAarte10
+while executing---line 2403 of file ieeetran.bst
+Too many commas in name 1 of "Eugenio, B. L. H., Alejandra, G. P. K., and Pichardo Iniesta José Alejandro" for entry EstadodelAarte10
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Becerril, E. L., Ramírez, A. M., and Velázquez, E. T. J." has a comma at the end for entry EstadodelAarte11
+while executing---line 2403 of file ieeetran.bst
+Too many commas in name 1 of "Becerril, E. L., Ramírez, A. M., and Velázquez, E. T. J." for entry EstadodelAarte11
+while executing---line 2403 of file ieeetran.bst
+Name 1 in "Pacay, C., and Blanca Fanny." has a comma at the end for entry EstadodelAarte13
+while executing---line 2403 of file ieeetran.bst
+
+Done.
+You've used 60 entries,
+            4087 wiz_defined-function locations,
+            1137 strings with 18646 characters,
+and the built_in function-call counts, 24577 in all, are:
+= -- 2103
+> -- 350
+< -- 15
++ -- 170
+- -- 82
+* -- 716
+:= -- 4450
+add.period$ -- 172
+call.type$ -- 60
+change.case$ -- 112
+chr.to.int$ -- 27
+cite$ -- 61
+duplicate$ -- 2007
+empty$ -- 2277
+format.name$ -- 95
+if$ -- 5523
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
+int.to.str$ -- 60
+missing$ -- 491
+newline$ -- 223
+num.names$ -- 60
+pop$ -- 1293
+preamble$ -- 1
 purify$ -- 0
-quote$ -- 0
-skip$ -- 0
+quote$ -- 2
+skip$ -- 2001
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 197
+swap$ -- 1266
+text.length$ -- 6
 text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+top$ -- 5
+type$ -- 60
+warning$ -- 1
+while$ -- 65
+width$ -- 62
+write$ -- 564
+(There were 11 error messages)
