@@ -41,21 +41,21 @@
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\listtablename}{Índice de tablas}
 
-\pagestyle{plain}
+\textbf{Agradecimientos}
 
-\paragraph{Agradecimientos}
+Quiero expresar mi agradecimiento a mi familia, quienes han sido mi apoyo incondicional a lo largo de este proyecto. Su amor, paciencia y aliento constante han sido la fuerza impulsora que me ha permitido llegar hasta este punto.
 
+Agradezco a mis asesores, M. en C. Niels Henrik Navarrete Manzanilla y Dr. Rodolfo Vera Amaro, por su orientación, apoyo y su valioso tiempo dedicado a revisar y mejorar el presente trabajo. Su sabiduría y experiencia han sido fundamentales para el desarrollo del proyecto.
 
-Quiero expresar mi profundo agradecimiento a mi familia, quienes han sido mi apoyo incondicional a lo largo de este proyecto. Su amor, paciencia y aliento constante han sido la fuerza impulsora que me ha permitido llegar hasta este punto. Agradezco a mis padres y hermanos por su inquebrantable apoyo emocional.
-
-Agradezco sinceramente a mis asesores, M. en C. Niels Henrik Navarrete Manzanilla y Dr. Roldofo Vera Amaro, por su orientación, apoyo y su valioso tiempo dedicado a revisar y mejorar el presente trabajo. Su sabiduría y experiencia han sido fundamentales para el desarrollo de esta tesis. Aprecio profundamente su compromiso y dedicación, que han sido ejemplares a lo largo del proyecto académico.
-
-No puedo pasar por alto el apoyo invaluable de mi compañero de trabajo quien ha compartido conmigo tanto los desafíos como los éxitos. Sus ideas, discusiones y colaboraciones han enriquecido significativamente el trabajo. A todos ustedes, gracias por ser mi red de apoyo y por compartir esta fase de aprendizaje y crecimiento conmigo.
+Agradezco principalmente el apoyo invaluable de mi compañero de trabajo, quien ha compartido conmigo tanto los desafíos como los éxitos. Sus ideas, discusiones y colaboraciones han enriquecido significativamente el trabajo.
 
 Finalmente, dedico este trabajo a aquellos que creyeron en mí desde el principio y a todos los que han contribuido de diversas maneras a mi crecimiento académico y personal.
 
+\begin{flushright}
+\textbf{Maite Díaz}
+\end{flushright}
 
-Quiero expresar mi sincero agradecimiento a...
+
 
 % Agrega aquí tus agradecimientos
 \newpage
@@ -3169,7 +3169,6 @@ Esta sección del código se encarga de detectar y marcar puntos de referencia fac
  \label{fig:FaceDetec3} 
 \end{center}  
 
-
 \subsubsection{Implementar metrica MOR y medición de parpadeos}
 
 Se crearon las siguientes funciones que tienen como objetivo realizar análisis relacionados con la detección de parpadeo y la medición de la apertura de la boca.
@@ -3234,12 +3233,30 @@ Esta sección implementa el código para realizar el seguimiento y análisis en tie
   \item Genera alertas en caso de detectar más de dos bostezos por minuto o el cierre de ojos por un intervalo de tiempo.
   \item Inicia la grabación de video en cuando somnolencia.
 \end{itemize}
-
 \begin{center}
   \includegraphics[scale=0.6]{imagenes/Somnolencia12.JPG}
 \captionof{figure}{Detección de Parpadeo.}
  \label{fig:Somnolencia2} 
-\end{center} 
+\end{center}
+
+
+\textbf{Detección de Somnolencia}
+
+
+
+\textbf{Activar una alarma cuando se detecte somnolencia}
+
+\begin{itemize}
+\item El siguiente script activa el zumbador pasivo al ser llamado por el script main al momendo de detectar somnolencia.
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.6]{imagenes/alarma_script.png}
+\captionof{figure}{Script para la activación del buzzer}
+ \label{fig:Somnolencia2} 
+\end{center}
+
+
 
 
 \textbf{Visualización en Tiempo Real:}
@@ -4746,17 +4763,15 @@ Desde la aplicación, se visualizó el mapa con un marcador de posicionamiento GPS
 \clearpage
 \section{Capitulo VIII: Resultados}
 
-Se obtuvo un sistema portátil mediante el uso de una Jetson Nano que posibilitó la detección del rostro, los ojos y la boca, seguida de la clasificación de la somnolencia. En este proceso, se consideraron la apertura de los ojos y la boca, así como la duración de estos estados.
-\\
-En el marco de un estudio de incidencias visuales con y sin el uso de lentes, se recopilaron datos significativos en cuatro escenarios distintos: sin lentes, con lentes, bajo luz directa y luz indirecta. El análisis se basa en una muestra total de 39 incidencias.
+Los resultados fueron obtenidos tras evaluar cuatro escenarios distintos: sin lentes, con lentes, bajo luz directa del sol dirigida hacia la cámara y finalmente sin reflejos de dicha luz directa. Este análisis se realizó utilizando una muestra total de 39 incidencias.
 
 
-
+La siguiente tabla muestra el registro de dichos resultados por cada incidencia:
 
 
 \begin{table}[htbp]
     \centering
-    \caption{Tabla de Datos}
+    \caption{Tabla de de resultados}
     \tiny % Cambia el tamaño de la fuente a extra pequeña
     \begin{tabular}{|c|c|c|c|c|c|}
         \hline
@@ -4817,7 +4832,7 @@ En el marco de un estudio de incidencias visuales con y sin el uso de lentes, se
 \end{table}
 
 \clearpage
-
+A continuación se presenta un desglose de los porcentajes de los resultados anteriores.
 
 \paragraph{Porcentaje de Incidencias Confirmadas}
 
@@ -4861,31 +4876,39 @@ En el marco de un estudio de incidencias visuales con y sin el uso de lentes, se
 \end{itemize}
 
 Estos resultados sugieren que las incidencias confirmadas predominan en comparación con las rechazadas, y la distribución varía significativamente según la presencia de lentes y las condiciones de luz.
-
-
-
-La implementación para el reconocimiento de signos de somnolencia se vio favorecida por la utilización de dlib para la detección facial y la evaluación de la relación entre el Movimiento de Apertura de Ojos (MOR) y el Estiramiento de Apertura de Boca (EOR) a través de puntos de referencia faciales.
 \\
+En el ámbito de la comunicación y transferencia de archivos, se implementó el módulo SIM7600H en la Jetson Nano, el cual incorpora GNSS para el posicionamiento GPS. Se logró obtener la ubicación en tiempo real de la Jetson Nano, lo cual se reflejó en la aplicación web en la sección destinada al seguimiento del conductor. No obstante, el sistema de geolocalización en tiempo real experimentó desconexiones con el sistema GPS, especialmente en condiciones climáticas adversas como cielos nublados o con viento intenso, así como en áreas con una alta densidad de edificaciones.
 
-En el ámbito de la comunicación y transferencia de archivos, se incorporó el módulo SIM7600G a la Jetson Nano, el cual integra GNSS para el posicionamiento GPS. Esta acción culminó en la conexión entre la Jetson Nano y la página web para la transmisión de información a través de la red celular. Además, se logró obtener el posicionamiento GPS en tiempo real de la Jetson Nano, hecho que se reflejó en la aplicación web en la sección destinada a dar seguimiento al conductor.
-\\
 
-Durante el proceso de desarrollo de la Estación Base, se integraron las herramientas suministradas por Amazon Amplify. La decisión se basó en la eficacia y versatilidad proporcionadas por Amplify Hosting, permitiendo simultáneamente una integración fluida con GitHub. Esto posibilitó que los cambios efectuados en el repositorio se reflejaran de manera automática en la aplicación web, agilizando el ciclo de desarrollo y asegurando una sincronización eficiente entre el código fuente.\\
+Con la ayuda de la aplicación \emph{Estado GNSS} podemos observar los satelites disponibles cerca de la ubicacióna actual:
 
-El sistema finalizó permitiendo la detección de síntomas de somnolencia y la emisión de alertas al conductor. Además, proporcionó la ubicación del conductor en tiempo real, posibilitando el monitoreo desde la aplicación web asociada. Esta aplicación jugó un papel integral al gestionar la información de los conductores y supervisar los reportes de incidencias enviados desde el módulo central de procesamiento. La interacción entre la infraestructura de AWS contribuyó significativamente a la implementación y resiliencia del sistema en conjunto.
+  \begin{center}
+  \includegraphics[scale=0.40]{imagenes/radar_gnss.jpeg}
+	\captionof{figure}{Posición de Satelites}
+  \label{fig:radar_gnss} 
+  \end{center} 
+  
+Las posiciones de los satélites, junto con las condiciones meteorológicas y la presencia de edificaciones altas, son factores que explican las desconexiones experimentadas en el sistema de geolocalización en tiempo real.\\
+Con respecto al proceso de desarrollo de la Estación Base, se integraron las herramientas suministradas por Amazon Amplify. La decisión se basó en la eficacia y versatilidad proporcionadas por Amplify Hosting, permitiendo simultáneamente una integración fluida con GitHub. Esto posibilitó que los cambios efectuados en el repositorio se reflejaran de manera automática en la aplicación web, agilizando el ciclo de desarrollo y asegurando una sincronización eficiente entre el código fuente.\\
+Finalmente, el sistema posibilitó la detección de signos de somnolencia, emitiendo alertas al conductor. Además, permitió el seguimiento en tiempo real de la ubicación del conductor, facilitando así el monitoreo a través de la aplicación web. Esta aplicación desempeñó un papel crucial al administrar la información de los conductores y supervisar los informes de incidentes enviados desde el módulo central de procesamiento. La colaboración con la infraestructura de AWS desempeñó un papel significativo en la exitosa implementación del sistema.
 
 \clearpage
 \section{Capítulo IX: Conclusión y Aportaciones}
 
-El proyecto se enfocó en el desarrollo de un sistema integral centrado en la detección de síntomas de somnolencia y el registro de incidencias para fines de retroalimentación de los conductores. Este enfoque implicó la implementación de tecnologías avanzadas, como la Jetson Nano para la detección facial y el módulo SIM7600G para la comunicación y posicionamiento GPS.
+El proyecto se centró en desarrollar un sistema integral enfocado en la detección de síntomas de somnolencia y el registro de incidencias para proporcionar retroalimentación a los conductores. Este enfoque implicó la implementación de tecnologías avanzadas, como la Jetson Nano para la detección facial y el módulo SIM7600G para la comunicación y posicionamiento GPS.
 
 A lo largo del proceso, se enfrentaron diversas implicaciones y complicaciones, desde la precisión en la detección de síntomas de somnolencia hasta la optimización de la comunicación entre la Jetson Nano y la aplicación web. Superar estos desafíos fue crucial para alcanzar los objetivos del sistema y asegurar su utilidad práctica.
 
-Este sistema pretende ser aprovechado de varias maneras. En el ámbito de la seguridad vial, proporciona una herramienta valiosa para prevenir accidentes causados por la somnolencia del conductor. Además, las empresas de transporte podrían integrar esta tecnología para mejorar la calidad de sus conductores y la eficiencia de sus operaciones.
+Este sistema busca ser utilizado de diversas maneras. En el ámbito de la seguridad vial, proporciona una herramienta valiosa para abordar los riesgos asociados a la somnolencia del conductor. Además, las empresas de transporte podrían considerar la integración de esta tecnología para mejorar la calidad de sus conductores y la eficiencia de sus operaciones.
 
-A nivel social, la implementación de este sistema puede contribuir a la reducción de accidentes de tráfico, disminuyendo los costos asociados a accidentes automovilísticos. También puede generar conciencia sobre la importancia de la vigilancia del estado del conductor durante los viajes, fomentando hábitos de conducción más seguros y mejores hábitos de sueño.
+A nivel social, la implementación de este sistema puede contribuir a la reducción de accidentes de tráfico, ayudando a disminuir los costos asociados a los accidentes automovilísticos. También puede generar conciencia sobre la importancia de la vigilancia del estado del conductor durante los viajes, fomentando hábitos de conducción más seguros y promoviendo mejores hábitos de sueño.
 
 Adicionalmente, el sistema de registros implementado puede servir como una herramienta valiosa para la recopilación de estadísticas e información relevante. Esta base de datos puede ser utilizada en futuros proyectos, proporcionando información valiosa para el diseño y desarrollo de sistemas similares. Al analizar la información a lo largo del tiempo, se podrían identificar tendencias en los patrones de somnolencia al volante.
+
+
+
+
+
 
 \section{Capitulo X: Trabajo a futuro}
 
