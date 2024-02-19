@@ -1,58 +1,59 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {table}{\numberline {1}{\ignorespaces Comparaci\'on entre proyectos y/o sistemas con semanjanza.}}{32}{table.1}%
-\contentsline {table}{\numberline {2}{\ignorespaces RF01- Establecer conexi\'on con la base de datos }}{37}{table.2}%
-\contentsline {table}{\numberline {3}{\ignorespaces RF02- Activar Alarma}}{37}{table.3}%
-\contentsline {table}{\numberline {4}{\ignorespaces RF03- Enviar Video de Incidencia }}{37}{table.4}%
-\contentsline {table}{\numberline {5}{\ignorespaces RF04- Realizar Reporte de Incidencia }}{38}{table.5}%
-\contentsline {table}{\numberline {6}{\ignorespaces RF05- Enviar Reporte de Incidencia a la Base de Datos }}{38}{table.6}%
-\contentsline {table}{\numberline {7}{\ignorespaces Comparaci\'on de microordenadores}}{39}{table.7}%
-\contentsline {table}{\numberline {8}{\ignorespaces Cuadro Comparativo de m\'odelos de MicroSD}}{41}{table.8}%
-\contentsline {table}{\numberline {9}{\ignorespaces Tabla Comparativa Lenguajes de Programaci\'on}}{42}{table.9}%
-\contentsline {table}{\numberline {10}{\ignorespaces RF01- Ingresar al Campo Visual}}{43}{table.10}%
-\contentsline {table}{\numberline {11}{\ignorespaces RF02- Capturar Video }}{43}{table.11}%
-\contentsline {table}{\numberline {12}{\ignorespaces RF03- Detectar Caracter\IeC {\'\i }sticas Faciales}}{44}{table.12}%
-\contentsline {table}{\numberline {13}{\ignorespaces RF04- Clasificar imagen}}{44}{table.13}%
-\contentsline {table}{\numberline {14}{\ignorespaces RF05- Enviar se\~nal de Alerta}}{44}{table.14}%
-\contentsline {table}{\numberline {15}{\ignorespaces RF06- Almacenar Incidencia}}{45}{table.15}%
-\contentsline {table}{\numberline {16}{\ignorespaces Caso de Uso 01 - Ingresar al campo visual de la C\'amara}}{46}{table.16}%
-\contentsline {table}{\numberline {17}{\ignorespaces Caso de Uso 02 - Capturar Video en Tiempo real}}{46}{table.17}%
-\contentsline {table}{\numberline {18}{\ignorespaces Caso de Uso 03 - Detectar Rostro}}{46}{table.18}%
-\contentsline {table}{\numberline {19}{\ignorespaces Caso de Uso 04 - Reconocer caracter\IeC {\'\i }sticas faciales}}{47}{table.19}%
-\contentsline {table}{\numberline {20}{\ignorespaces Caso de Uso 05 - Detectar Signos de Somnolencia}}{47}{table.20}%
-\contentsline {table}{\numberline {21}{\ignorespaces Caso de Uso 06 - Enviar Se\~nal de Alerta}}{48}{table.21}%
-\contentsline {table}{\numberline {22}{\ignorespaces Caso de Uso 07 - Identificar Incidencia}}{48}{table.22}%
-\contentsline {table}{\numberline {23}{\ignorespaces Categor\IeC {\'\i }as LTE}}{50}{table.23}%
-\contentsline {table}{\numberline {24}{\ignorespaces RF01- Guardar Incidencia }}{54}{table.24}%
-\contentsline {table}{\numberline {25}{\ignorespaces RF02- Guardar Video }}{55}{table.25}%
-\contentsline {table}{\numberline {26}{\ignorespaces RF03- Conectar Aplicaci\'on Web }}{55}{table.26}%
-\contentsline {table}{\numberline {27}{\ignorespaces RF04- Desplegar Aplicaci\'on Web}}{55}{table.27}%
-\contentsline {table}{\numberline {28}{\ignorespaces RF05- Guardar Credenciales de Usuario Administrador }}{56}{table.28}%
-\contentsline {table}{\numberline {29}{\ignorespaces Requerimientos No Funcionales del M\'odulo de Estaci\'on Base}}{56}{table.29}%
-\contentsline {table}{\numberline {30}{\ignorespaces Caso de Uso 01 - Guardar Incidencia}}{57}{table.30}%
-\contentsline {table}{\numberline {31}{\ignorespaces Caso de Uso 02 - Guardar Video }}{58}{table.31}%
-\contentsline {table}{\numberline {32}{\ignorespaces Caso de Uso 03 - Conectar Aplicaci\'on Web }}{58}{table.32}%
-\contentsline {table}{\numberline {33}{\ignorespaces Caso de Uso 04 - Desplegar Aplicaci\'on Web}}{58}{table.33}%
-\contentsline {table}{\numberline {34}{\ignorespaces Caso de Uso 05 - Guardar Credenciales de Usuario Administrador }}{59}{table.34}%
-\contentsline {table}{\numberline {35}{\ignorespaces RF01- Iniciar Sesi\'on}}{59}{table.35}%
-\contentsline {table}{\numberline {36}{\ignorespaces RF02- Mostrar el Historial de Reportes de Incidencia}}{60}{table.36}%
-\contentsline {table}{\numberline {37}{\ignorespaces RF03- Visualizar Reporte de Incidencia}}{60}{table.37}%
-\contentsline {table}{\numberline {38}{\ignorespaces RF04- Confirmar Incidencia}}{61}{table.38}%
-\contentsline {table}{\numberline {39}{\ignorespaces RF05 - Recuperar Contrase\~na}}{61}{table.39}%
-\contentsline {table}{\numberline {40}{\ignorespaces RF06- Mostrar perfil del Conductor}}{62}{table.40}%
-\contentsline {table}{\numberline {41}{\ignorespaces RF07- Mostrar ubicaci\'on Geogr\'afica}}{62}{table.41}%
-\contentsline {table}{\numberline {42}{\ignorespaces RF08- Descartar Incidencia}}{63}{table.42}%
-\contentsline {table}{\numberline {43}{\ignorespaces RF09- Registrar Usuario}}{63}{table.43}%
-\contentsline {table}{\numberline {44}{\ignorespaces RF10- Mostrar el Historial de Reportes de Incidencia}}{63}{table.44}%
-\contentsline {table}{\numberline {45}{\ignorespaces RF11- Mostrar el Historial de Reportes de Incidencia}}{64}{table.45}%
-\contentsline {table}{\numberline {46}{\ignorespaces Requerimientos No funcionales - Aplicaci\'on Web}}{64}{table.46}%
-\contentsline {table}{\numberline {47}{\ignorespaces Caso de Uso 01 - Iniciar Sesi\'on }}{65}{table.47}%
-\contentsline {table}{\numberline {48}{\ignorespaces Caso de Uso 02 - Registrar Usuario }}{66}{table.48}%
-\contentsline {table}{\numberline {49}{\ignorespaces Caso de Uso 03 - Modificar Usuario }}{66}{table.49}%
-\contentsline {table}{\numberline {50}{\ignorespaces Caso de Uso 04 - Eliminar Usuario}}{66}{table.50}%
-\contentsline {table}{\numberline {51}{\ignorespaces Caso de Uso 05 - Confirmar Incidencia}}{67}{table.51}%
-\contentsline {table}{\numberline {52}{\ignorespaces Caso de Uso 06 - Visualizar Incidencia }}{67}{table.52}%
-\contentsline {table}{\numberline {53}{\ignorespaces Caso de Uso 07 - Recuperar Contrase\~na}}{67}{table.53}%
-\contentsline {table}{\numberline {54}{\ignorespaces Caso de Uso 08 - Visualizar Ubicaci\'on en Tiempo Real }}{68}{table.54}%
-\contentsline {table}{\numberline {55}{\ignorespaces Cuadro Comparativo de los Sistemas de Gesti\'on de Bases de Datos No Relacionales}}{68}{table.55}%
-\contentsline {table}{\numberline {56}{\ignorespaces Tipos de Archivo Multimedia}}{70}{table.56}%
-\contentsline {table}{\numberline {57}{\ignorespaces Agrupaci\'on de Puntos de Referencia}}{79}{table.57}%
+\contentsline {table}{\numberline {1}{\ignorespaces Comparaci\'on entre proyectos y/o sistemas con semanjanza.}}{33}{table.1}%
+\contentsline {table}{\numberline {2}{\ignorespaces RF01- Establecer conexi\'on con la base de datos }}{38}{table.2}%
+\contentsline {table}{\numberline {3}{\ignorespaces RF02- Activar Alarma}}{38}{table.3}%
+\contentsline {table}{\numberline {4}{\ignorespaces RF03- Enviar Video de Incidencia }}{38}{table.4}%
+\contentsline {table}{\numberline {5}{\ignorespaces RF04- Realizar Reporte de Incidencia }}{39}{table.5}%
+\contentsline {table}{\numberline {6}{\ignorespaces RF05- Enviar Reporte de Incidencia a la Base de Datos }}{39}{table.6}%
+\contentsline {table}{\numberline {7}{\ignorespaces Comparaci\'on de microordenadores}}{40}{table.7}%
+\contentsline {table}{\numberline {8}{\ignorespaces Cuadro Comparativo de m\'odelos de MicroSD}}{42}{table.8}%
+\contentsline {table}{\numberline {9}{\ignorespaces Tabla Comparativa Lenguajes de Programaci\'on}}{43}{table.9}%
+\contentsline {table}{\numberline {10}{\ignorespaces RF01- Ingresar al Campo Visual}}{44}{table.10}%
+\contentsline {table}{\numberline {11}{\ignorespaces RF02- Capturar Video }}{44}{table.11}%
+\contentsline {table}{\numberline {12}{\ignorespaces RF03- Detectar Caracter\IeC {\'\i }sticas Faciales}}{45}{table.12}%
+\contentsline {table}{\numberline {13}{\ignorespaces RF04- Clasificar imagen}}{45}{table.13}%
+\contentsline {table}{\numberline {14}{\ignorespaces RF05- Enviar se\~nal de Alerta}}{45}{table.14}%
+\contentsline {table}{\numberline {15}{\ignorespaces RF06- Almacenar Incidencia}}{46}{table.15}%
+\contentsline {table}{\numberline {16}{\ignorespaces Caso de Uso 01 - Ingresar al campo visual de la C\'amara}}{47}{table.16}%
+\contentsline {table}{\numberline {17}{\ignorespaces Caso de Uso 02 - Capturar Video en Tiempo real}}{47}{table.17}%
+\contentsline {table}{\numberline {18}{\ignorespaces Caso de Uso 03 - Detectar Rostro}}{47}{table.18}%
+\contentsline {table}{\numberline {19}{\ignorespaces Caso de Uso 04 - Reconocer caracter\IeC {\'\i }sticas faciales}}{48}{table.19}%
+\contentsline {table}{\numberline {20}{\ignorespaces Caso de Uso 05 - Detectar Signos de Somnolencia}}{48}{table.20}%
+\contentsline {table}{\numberline {21}{\ignorespaces Caso de Uso 06 - Enviar Se\~nal de Alerta}}{49}{table.21}%
+\contentsline {table}{\numberline {22}{\ignorespaces Caso de Uso 07 - Identificar Incidencia}}{49}{table.22}%
+\contentsline {table}{\numberline {23}{\ignorespaces Categor\IeC {\'\i }as LTE}}{51}{table.23}%
+\contentsline {table}{\numberline {24}{\ignorespaces RF01- Guardar Incidencia }}{55}{table.24}%
+\contentsline {table}{\numberline {25}{\ignorespaces RF02- Guardar Video }}{56}{table.25}%
+\contentsline {table}{\numberline {26}{\ignorespaces RF03- Conectar Aplicaci\'on Web }}{56}{table.26}%
+\contentsline {table}{\numberline {27}{\ignorespaces RF04- Desplegar Aplicaci\'on Web}}{56}{table.27}%
+\contentsline {table}{\numberline {28}{\ignorespaces RF05- Guardar Credenciales de Usuario Administrador }}{57}{table.28}%
+\contentsline {table}{\numberline {29}{\ignorespaces Requerimientos No Funcionales del M\'odulo de Estaci\'on Base}}{57}{table.29}%
+\contentsline {table}{\numberline {30}{\ignorespaces Caso de Uso 01 - Guardar Incidencia}}{58}{table.30}%
+\contentsline {table}{\numberline {31}{\ignorespaces Caso de Uso 02 - Guardar Video }}{59}{table.31}%
+\contentsline {table}{\numberline {32}{\ignorespaces Caso de Uso 03 - Conectar Aplicaci\'on Web }}{59}{table.32}%
+\contentsline {table}{\numberline {33}{\ignorespaces Caso de Uso 04 - Desplegar Aplicaci\'on Web}}{59}{table.33}%
+\contentsline {table}{\numberline {34}{\ignorespaces Caso de Uso 05 - Guardar Credenciales de Usuario Administrador }}{60}{table.34}%
+\contentsline {table}{\numberline {35}{\ignorespaces RF01- Iniciar Sesi\'on}}{60}{table.35}%
+\contentsline {table}{\numberline {36}{\ignorespaces RF02- Mostrar el Historial de Reportes de Incidencia}}{61}{table.36}%
+\contentsline {table}{\numberline {37}{\ignorespaces RF03- Visualizar Reporte de Incidencia}}{61}{table.37}%
+\contentsline {table}{\numberline {38}{\ignorespaces RF04- Confirmar Incidencia}}{62}{table.38}%
+\contentsline {table}{\numberline {39}{\ignorespaces RF05 - Recuperar Contrase\~na}}{62}{table.39}%
+\contentsline {table}{\numberline {40}{\ignorespaces RF06- Mostrar perfil del Conductor}}{63}{table.40}%
+\contentsline {table}{\numberline {41}{\ignorespaces RF07- Mostrar ubicaci\'on Geogr\'afica}}{63}{table.41}%
+\contentsline {table}{\numberline {42}{\ignorespaces RF08- Descartar Incidencia}}{64}{table.42}%
+\contentsline {table}{\numberline {43}{\ignorespaces RF09- Registrar Usuario}}{64}{table.43}%
+\contentsline {table}{\numberline {44}{\ignorespaces RF10- Mostrar el Historial de Reportes de Incidencia}}{64}{table.44}%
+\contentsline {table}{\numberline {45}{\ignorespaces RF11- Mostrar el Historial de Reportes de Incidencia}}{65}{table.45}%
+\contentsline {table}{\numberline {46}{\ignorespaces Requerimientos No funcionales - Aplicaci\'on Web}}{65}{table.46}%
+\contentsline {table}{\numberline {47}{\ignorespaces Caso de Uso 01 - Iniciar Sesi\'on }}{66}{table.47}%
+\contentsline {table}{\numberline {48}{\ignorespaces Caso de Uso 02 - Registrar Usuario }}{67}{table.48}%
+\contentsline {table}{\numberline {49}{\ignorespaces Caso de Uso 03 - Modificar Usuario }}{67}{table.49}%
+\contentsline {table}{\numberline {50}{\ignorespaces Caso de Uso 04 - Eliminar Usuario}}{67}{table.50}%
+\contentsline {table}{\numberline {51}{\ignorespaces Caso de Uso 05 - Confirmar Incidencia}}{68}{table.51}%
+\contentsline {table}{\numberline {52}{\ignorespaces Caso de Uso 06 - Visualizar Incidencia }}{68}{table.52}%
+\contentsline {table}{\numberline {53}{\ignorespaces Caso de Uso 07 - Recuperar Contrase\~na}}{68}{table.53}%
+\contentsline {table}{\numberline {54}{\ignorespaces Caso de Uso 08 - Visualizar Ubicaci\'on en Tiempo Real }}{69}{table.54}%
+\contentsline {table}{\numberline {55}{\ignorespaces Cuadro Comparativo de los Sistemas de Gesti\'on de Bases de Datos No Relacionales}}{69}{table.55}%
+\contentsline {table}{\numberline {56}{\ignorespaces Tipos de Archivo Multimedia}}{71}{table.56}%
+\contentsline {table}{\numberline {57}{\ignorespaces Agrupaci\'on de Puntos de Referencia}}{80}{table.57}%
+\contentsline {table}{\numberline {58}{\ignorespaces Tabla de Datos}}{177}{table.58}%
