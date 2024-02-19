@@ -13,6 +13,9 @@
 \usepackage{tabularx}
 \usepackage{multicol}
 \usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{geometry}
+\usepackage{lscape}
 
 \marginsize{2cm}{2cm}{1cm}{1cm}
 \usepackage{fancyhdr}
@@ -38,13 +41,29 @@
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\listtablename}{Índice de tablas}
 
+\pagestyle{plain}
 
+\paragraph{Agradecimientos}
+
+Quiero expresar mi sincero agradecimiento a...
+
+% Agrega aquí tus agradecimientos
 \newpage
 \tableofcontents
 \newpage
 \listoffigures
 \newpage
 \listoftables
+
+\newpage
+\pagestyle{empty}
+
+
+
+\newpage
+
+
+
 
 \newpage
 \section{Glosario de Abreviaturas}
@@ -176,7 +195,7 @@ Diseñar un sistema portátil para la detección de síntomas de somnolencia y alert
 
 \begin{itemize}
 \item Diseñar un sistema de visión artificial que sea capaz de detectar y alertar la somnolencia en conductores.
-\item Integrar herramienttas de geolocalización en tiempo real usando redes de telecomunicaciones móviles.
+\item Integrar herramientas de geolocalización en tiempo real usando redes de telecomunicaciones móviles.
 \item Diseñar un sistema de administración para la gestión de usuarios, almacenamiento de datos y consultas de las incidencias de cada conductor. 
 \item Integrar un sistema de comunicaciones que permita la interconexión entre el sistema de visión artificial y el sistema de administración. 
 \end{itemize}
@@ -4714,10 +4733,128 @@ Desde la aplicación, se visualizó el mapa con un marcador de posicionamiento GPS
 	\captionof{figure}{Mapa y marcador de posicionamiento GPS en tiempo real 2.}
   \label{fig:addstorage} 
   \end{center}
+\clearpage
+\section{Capitulo VIII: Resultados}
 
-\section{Resultados}
+Se obtuvo un sistema portátil mediante el uso de una Jetson Nano que posibilitó la detección del rostro, los ojos y la boca, seguida de la clasificación de la somnolencia. En este proceso, se consideraron la apertura de los ojos y la boca, así como la duración de estos estados.
+\\
+En el marco de un estudio de incidencias visuales con y sin el uso de lentes, se recopilaron datos significativos en cuatro escenarios distintos: sin lentes, con lentes, bajo luz directa y luz indirecta. El análisis se basa en una muestra total de 39 incidencias.
 
-Se obtuvó un sistema portátil mediante el uso de una Jetson Nano que posibilitó la detección del rostro, los ojos y la boca, seguida de la clasificación de la somnolencia. En este proceso, se consideraron la apertura de los ojos y la boca, así como la duración de estos estados. La implementación para el reconocimiento de signos de somnolencia se vio favorecida por la utilización de dlib para la detección facial y la evaluación de la relación entre el Movimiento de Apertura de Ojos (MOR) y el Estiramiento de Apertura de Boca (EOR) a través de puntos de referencia faciales.
+
+
+
+
+\begin{table}[htbp]
+    \centering
+    \caption{Tabla de Datos}
+    \tiny % Cambia el tamaño de la fuente a extra pequeña
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{Sin Lentes} & \multirow{2}{*}{Con Lentes} & \multirow{2}{*}{Sol Directo} & \multirow{2}{*}{Sol Indirecto} & \multirow{2}{*}{Estatus} \\
+        & & & & \\
+        \hline
+        * & * & & & Confirmada \\
+        * & * & & & Rechazada \\
+        * & * & & & Rechazada \\
+         & * & * & & Rechazada \\
+        * & & * & & Confirmada \\
+        * & & * & & Rechazada \\
+        * & * & & & Confirmada \\
+        * & * & & & Confirmada \\
+         & * & & * & Confirmada \\
+        * & * & & & Rechazada \\
+        * & * & & & Rechazada \\
+        * & & * & & Confirmada \\
+        * & * & & & Confirmada \\
+         & * & & * & Confirmada \\
+         & * & * & & Rechazada \\
+        * & * & & & Confirmada \\
+         & * & * & & Rechazada \\
+        * & & & * & Confirmada \\
+         & * & * & & Confirmada \\
+        * & * & & & Confirmada \\
+        * & * & & & Rechazada \\
+         & & * & & Confirmada \\
+         & * & * & & Confirmada \\
+         & * & * & & Confirmada \\
+        * & & & * & Confirmada \\
+        * & * & & & Confirmada \\
+         & * & * & & Rechazada \\
+         & * & * & & Rechazada \\
+        * & * & & & Confirmada \\
+         & * & & * & Confirmada \\
+         & & * & * & Confirmada \\
+         & & * & * & Confirmada \\
+        * & & & * & Confirmada \\
+         & * & * & & Confirmada \\
+        * & & & * & Confirmada \\
+        * & & & * & Confirmada \\
+        * & & * & & Confirmada \\
+        * & & * & & Confirmada \\
+         & * & & * & Confirmada \\
+         & * & & * & Confirmada \\
+        * & & & * & Confirmada \\
+         & * & * & & Confirmada \\
+         & * & * & & Confirmada \\
+         & * & * & & Confirmada \\
+         & * & & * & Confirmada \\
+        * & & & * & Confirmada \\
+        * & & & * & Confirmada \\
+        \hline
+        Totales & 21 & 15 & 22 & 19 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\clearpage
+
+
+\paragraph{Porcentaje de Incidencias Confirmadas}
+
+\[
+\text{Porcentaje de incidencias confirmadas: } \frac{\text{Total Confirmadas}}{\text{Total Incidencias}} \times 100 = \frac{29}{39} \times 100 \approx 74.36\%
+\]
+
+\paragraph{Porcentaje de Incidencias Rechazadas}
+
+\[
+\text{Porcentaje de incidencias rechazadas: } \frac{\text{Total Rechazadas}}{\text{Total Incidencias}} \times 100 = \frac{10}{39} \times 100 \approx 25.64\%
+\]
+
+
+
+\paragraph{Porcentaje de Casos Confirmados}
+
+\begin{align*}
+&\text{Porcentaje de casos confirmados con lentes:} & \frac{\text{13}}{\text{29}} \times 100 & \approx 44.83\% \\
+&\text{Porcentaje de casos confirmados sin lentes:} & \frac{\text{16}}{\text{29}} \times 100 & \approx 55.17\% \\
+&\text{Porcentaje de casos confirmados con luz directa:} & \frac{\text{14}}{\text{29}} \times 100 & \approx 48.28\% \\
+&\text{Porcentaje de casos confirmados con luz indirecta:} & \frac{\text{14}}{\text{29}} \times 100 & \approx 48.28\%
+\end{align*}
+
+\paragraph{Porcentajes de Casos Rechazados}
+
+\begin{align*}
+&\text{Porcentaje de casos rechazados con lentes:} & \frac{\text{2}}{\text{10}} \times 100 & \approx 20\% \\
+&\text{Porcentaje de casos rechazados sin lentes:} & \frac{\text{5}}{\text{10}} \times 100 & \approx 50\% \\
+&\text{Porcentaje de casos rechazados con luz directa:} & \frac{\text{8}}{\text{10}} \times 100 & \approx 80\% \\
+&\text{Porcentaje de casos rechazados con luz indirecta:} & \frac{\text{4}}{\text{10}} \times 100 & \approx 40\%
+\end{align*}
+
+\begin{itemize}
+  \item El total de incidencias confirmadas fue de 29, representando aproximadamente el 74.36\% de la muestra total.
+  \item Las incidencias rechazadas fueron 10, lo que constituye alrededor del 25.64\% de la muestra.
+\item Cerca del 44.83\% de las incidencias confirmadas ocurrieron con el uso de lentes, mientras que el 55.17\% se registró sin lentes.
+  \item Respecto a las condiciones de iluminación, aproximadamente el 48.28\% de las incidencias confirmadas ocurrieron tanto bajo luz directa como luz indirecta.
+  \item El 50\% de las incidencias rechazadas se produjeron sin el uso de lentes, mientras que el 20\% se registró con lentes.
+  \item En cuanto a las condiciones de iluminación, el 80\% de las incidencias rechazadas se presentaron bajo luz directa, y el 40\% bajo luz indirecta.
+\end{itemize}
+
+Estos resultados sugieren que las incidencias confirmadas predominan en comparación con las rechazadas, y la distribución varía significativamente según la presencia de lentes y las condiciones de luz.
+
+
+
+La implementación para el reconocimiento de signos de somnolencia se vio favorecida por la utilización de dlib para la detección facial y la evaluación de la relación entre el Movimiento de Apertura de Ojos (MOR) y el Estiramiento de Apertura de Boca (EOR) a través de puntos de referencia faciales.
 \\
 
 En el ámbito de la comunicación y transferencia de archivos, se incorporó el módulo SIM7600G a la Jetson Nano, el cual integra GNSS para el posicionamiento GPS. Esta acción culminó en la conexión entre la Jetson Nano y la página web para la transmisión de información a través de la red celular. Además, se logró obtener el posicionamiento GPS en tiempo real de la Jetson Nano, hecho que se reflejó en la aplicación web en la sección destinada a dar seguimiento al conductor.
@@ -4727,8 +4864,8 @@ Durante el proceso de desarrollo de la Estación Base, se integraron las herramie
 
 El sistema finalizó permitiendo la detección de síntomas de somnolencia y la emisión de alertas al conductor. Además, proporcionó la ubicación del conductor en tiempo real, posibilitando el monitoreo desde la aplicación web asociada. Esta aplicación jugó un papel integral al gestionar la información de los conductores y supervisar los reportes de incidencias enviados desde el módulo central de procesamiento. La interacción entre la infraestructura de AWS contribuyó significativamente a la implementación y resiliencia del sistema en conjunto.
 
-
-\section{Conclusión y Aportaciones}
+\clearpage
+\section{Capítulo IX: Conclusión y Aportaciones}
 
 El proyecto se enfocó en el desarrollo de un sistema integral centrado en la detección de síntomas de somnolencia y el registro de incidencias para fines de retroalimentación de los conductores. Este enfoque implicó la implementación de tecnologías avanzadas, como la Jetson Nano para la detección facial y el módulo SIM7600G para la comunicación y posicionamiento GPS.
 
@@ -4740,7 +4877,7 @@ A nivel social, la implementación de este sistema puede contribuir a la reducció
 
 Adicionalmente, el sistema de registros implementado puede servir como una herramienta valiosa para la recopilación de estadísticas e información relevante. Esta base de datos puede ser utilizada en futuros proyectos, proporcionando información valiosa para el diseño y desarrollo de sistemas similares. Al analizar la información a lo largo del tiempo, se podrían identificar tendencias en los patrones de somnolencia al volante.
 
-\section{Trabajo a futuro}
+\section{Capitulo X: Trabajo a futuro}
 
 \begin{itemize}
 \item Desarrollo de Análisis a Largo Plazo de Datos de Conducción:
