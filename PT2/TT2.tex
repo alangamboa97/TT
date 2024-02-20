@@ -593,7 +593,8 @@ El GPS es una red satelital que cuenta con al menos 30 satélites y que se mantie
 \subsection{Estado del Arte} 
 
 \subsubsection{\emph{Driver Drowsiness Detection Using Machine Learning with Visual Behaviour}}
-Este trabajo de investigación propone un sistema de detección de signos de somnolencia en conductores utilizando un modelo de Red Neuronal Convolucional para detectar la posición de los ojos, y OpenCV junto con Dlib para la detección de la boca y realizar el conteo del número de bostezos por minuto. Para alimetnar a la red Neuronal, se utilizaron el conjunto de datos de NTHU-DDD. También fue utilizado el método PERCLOS para obtener el número de parpadeos del sujeto de estudio. Este trabajo concluye que las mayores dificultades a la hora de detección de rostros fueron el uso de gafas oscuras, así como cambios en la iluminación \cite{EstadodelAarte1}.
+Este trabajo de investigación propone un sistema de detección de signos de somnolencia en conductores utilizando un modelo de Red Neuronal Convolucional para detectar la posición de los ojos, y OpenCV junto con Dlib para la detección de la boca y realizar el conteo del número de 
+s por minuto. Para alimetnar a la red Neuronal, se utilizaron el conjunto de datos de NTHU-DDD. También fue utilizado el método PERCLOS para obtener el número de parpadeos del sujeto de estudio. Este trabajo concluye que las mayores dificultades a la hora de detección de rostros fueron el uso de gafas oscuras, así como cambios en la iluminación \cite{EstadodelAarte1}.
 
 \subsubsection{\emph{Detection Of Drowsiness And Distraction Of Drivers Using CNN}}
 
@@ -3223,7 +3224,7 @@ Esta sección implementa el código para realizar el seguimiento y análisis en tie
 \begin{itemize}
   \item Utiliza la función \texttt{cal\_yawn} para calcular la distancia entre los landmarks asociados a la parte superior e inferior de los labios, proporcionando una medida de la apertura de la boca.
   \item Compara esta medida con un umbral (\texttt{yawn\_thresh}) para determinar si se ha superado, indicando la posibilidad de un bostezo.
-  \item En base al promedio de la duración de un bostezo, que es entre 5 y 10 segundos\cite{teive2018}, se definió un umbral de 5 segundos de duración de apertura de boca para considerarse como un bostezo.
+  \item En base al promedio de la duración de un bostezo, que es entre 5 y 10 segundos\cite{teive2018}, se definió un umbral de 5 segundos de duración de apertura de boca para considerarse como un bostezo De la misma manera este estudio hace la clasificación de somnolencia cuando se presentan más de 1 bostezo por minuto.
   \item Registra el inicio y finalización de un bostezo, calculando su duración.
   
 \end{itemize}
